@@ -1,0 +1,24 @@
+{
+    "name": "EtherDomes.Core",
+    "rootNamespace": "EtherDomes.Core",
+    "references": [
+        "EtherDomes.Data",
+        "EtherDomes.Network",
+        "EtherDomes.Combat",
+        "EtherDomes.Classes",
+        "EtherDomes.Progression",
+        "EtherDomes.World",
+        "EtherDomes.Persistence",
+        "EtherDomes.Player",
+        "Unity.Netcode.Runtime"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

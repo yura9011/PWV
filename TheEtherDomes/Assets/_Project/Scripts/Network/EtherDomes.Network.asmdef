@@ -1,0 +1,19 @@
+{
+    "name": "EtherDomes.Network",
+    "rootNamespace": "EtherDomes.Network",
+    "references": [
+        "Unity.Netcode.Runtime",
+        "Unity.Transport",
+        "EtherDomes.Data",
+        "EtherDomes.Persistence"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

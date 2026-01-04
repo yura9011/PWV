@@ -1,0 +1,26 @@
+# Legacy project - no longer needed
+Legacy/
+
+# Kiro cache
+.smart-coding-cache/
+
+# Unity generated folders (keep in TheEtherDomes/.gitignore)
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+[Ll]ogs/
+[Uu]ser[Ss]ettings/
+
+# IDE
+.vs/
+.vscode/
+*.csproj
+*.sln
+*.suo
+*.user
+
+# OS
+.DS_Store
+Thumbs.db

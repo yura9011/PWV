@@ -1,0 +1,22 @@
+{
+    "name": "EtherDomes.UI",
+    "rootNamespace": "EtherDomes.UI",
+    "references": [
+        "EtherDomes.Data",
+        "EtherDomes.Combat",
+        "EtherDomes.Network",
+        "EtherDomes.World",
+        "EtherDomes.Enemy",
+        "Unity.Netcode.Runtime",
+        "Unity.TextMeshPro"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

@@ -1,0 +1,31 @@
+{
+    "name": "EtherDomes.Editor",
+    "rootNamespace": "EtherDomes.Editor",
+    "references": [
+        "EtherDomes.Core",
+        "EtherDomes.Data",
+        "EtherDomes.Network",
+        "EtherDomes.Combat",
+        "EtherDomes.Classes",
+        "EtherDomes.Progression",
+        "EtherDomes.World",
+        "EtherDomes.Persistence",
+        "EtherDomes.Player",
+        "EtherDomes.UI",
+        "EtherDomes.Enemy",
+        "Unity.Netcode.Runtime",
+        "Unity.Netcode.Components",
+        "Unity.TextMeshPro"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

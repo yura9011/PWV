@@ -1,0 +1,23 @@
+{
+    "name": "EtherDomes.Player",
+    "rootNamespace": "EtherDomes.Player",
+    "references": [
+        "Unity.Netcode.Runtime",
+        "Unity.Netcode.Components",
+        "Unity.Collections",
+        "Unity.InputSystem",
+        "EtherDomes.Data",
+        "EtherDomes.Combat",
+        "EtherDomes.Classes",
+        "EtherDomes.Input"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

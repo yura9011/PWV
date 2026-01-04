@@ -1,0 +1,20 @@
+{
+    "name": "EtherDomes.Player.Editor",
+    "rootNamespace": "EtherDomes.Player.Editor",
+    "references": [
+        "EtherDomes.Player",
+        "EtherDomes.Network",
+        "Mirror"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

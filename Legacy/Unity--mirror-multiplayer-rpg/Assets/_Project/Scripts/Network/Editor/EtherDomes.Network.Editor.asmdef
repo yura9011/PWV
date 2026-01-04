@@ -1,0 +1,19 @@
+{
+    "name": "EtherDomes.Network.Editor",
+    "rootNamespace": "EtherDomes.Network.Editor",
+    "references": [
+        "EtherDomes.Network",
+        "Mirror"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

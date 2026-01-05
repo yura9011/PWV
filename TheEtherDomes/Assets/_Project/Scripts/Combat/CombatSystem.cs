@@ -13,6 +13,9 @@ namespace EtherDomes.Combat
         public const float DEFAULT_RES_WINDOW = 60f;
         public const float DEFAULT_RESPAWN_HEALTH = 0.5f;
         public const float COMBAT_TIMEOUT = 5f;
+        public const float DEATH_STRIKE_DAMAGE_WINDOW = 5f; // Requirements 8.8: Track damage in last 5 seconds
+        public const float DEATH_STRIKE_MIN_HEAL_PERCENT = 0.1f; // Requirements 8.8: Minimum 10% max HP
+        public const float DEATH_STRIKE_HEAL_PERCENT = 0.25f; // Requirements 8.8: 25% of tracked damage
 
         [SerializeField] private float _resurrectionWindowSeconds = DEFAULT_RES_WINDOW;
         [SerializeField] private float _respawnHealthPercent = DEFAULT_RESPAWN_HEALTH;
@@ -29,6 +32,10 @@ namespace EtherDomes.Combat
         private readonly Dictionary<ulong, float> _lastCombatTime = new Dictionary<ulong, float>();
         private readonly HashSet<ulong> _inCombat = new HashSet<ulong>();
         private readonly HashSet<ulong> _playerIds = new HashSet<ulong>();
+
+        // Death Strike damage tracking (Requirements 8.8)
+        // Stores (timestamp, damage) pairs for each entity
+        private readonly Dictionary<ulong, List<(float timestamp, float damage)>> _recentDamageTaken = new Dictionary<ulong, List<(float, float)>>();
 
         public event Action<ulong> OnEntityDied;
         public event Action<ulong> OnEntityResurrected;
@@ -48,6 +55,7 @@ namespace EtherDomes.Combat
         {
             UpdateCombatState();
             CheckResurrectionTimeouts();
+            CleanupOldDamageRecords();
         }
 
         private void UpdateCombatState()
@@ -78,6 +86,21 @@ namespace EtherDomes.Combat
             // For now, players can release spirit at any time
         }
 
+        /// <summary>
+        /// Cleans up damage records older than the Death Strike window.
+        /// Requirements 8.8: Track damage taken in last 5 seconds
+        /// </summary>
+        private void CleanupOldDamageRecords()
+        {
+            float currentTime = Time.time;
+            float cutoffTime = currentTime - DEATH_STRIKE_DAMAGE_WINDOW;
+
+            foreach (var kvp in _recentDamageTaken)
+            {
+                kvp.Value.RemoveAll(record => record.timestamp < cutoffTime);
+            }
+        }
+
 
         public void ApplyDamage(ulong targetId, float damage, DamageType type, ulong sourceId = 0)
         {
@@ -88,6 +111,9 @@ namespace EtherDomes.Combat
             float currentHealth = GetHealth(targetId);
             float newHealth = Mathf.Max(0, currentHealth - damage);
             _currentHealth[targetId] = newHealth;
+
+            // Track damage for Death Strike healing (Requirements 8.8)
+            TrackDamageTaken(targetId, damage);
 
             // Enter combat
             EnterCombat(targetId);
@@ -107,6 +133,63 @@ namespace EtherDomes.Combat
             {
                 HandleDeath(targetId);
             }
+        }
+
+        /// <summary>
+        /// Tracks damage taken by an entity for Death Strike healing calculation.
+        /// Requirements 8.8: Track damage taken in last 5 seconds
+        /// </summary>
+        private void TrackDamageTaken(ulong entityId, float damage)
+        {
+            if (!_recentDamageTaken.ContainsKey(entityId))
+            {
+                _recentDamageTaken[entityId] = new List<(float, float)>();
+            }
+            _recentDamageTaken[entityId].Add((Time.time, damage));
+        }
+
+        /// <summary>
+        /// Gets the total damage taken by an entity in the last 5 seconds.
+        /// Requirements 8.8: Used for Death Strike healing calculation
+        /// </summary>
+        public float GetRecentDamageTaken(ulong entityId)
+        {
+            if (!_recentDamageTaken.TryGetValue(entityId, out var damageRecords))
+            {
+                return 0f;
+            }
+
+            float currentTime = Time.time;
+            float cutoffTime = currentTime - DEATH_STRIKE_DAMAGE_WINDOW;
+            float totalDamage = 0f;
+
+            foreach (var record in damageRecords)
+            {
+                if (record.timestamp >= cutoffTime)
+                {
+                    totalDamage += record.damage;
+                }
+            }
+
+            return totalDamage;
+        }
+
+        /// <summary>
+        /// Calculates Death Strike healing amount.
+        /// Requirements 8.8: Heal = 25% of damage taken in last 5 seconds (min 10% max HP)
+        /// </summary>
+        public float CalculateDeathStrikeHealing(ulong entityId)
+        {
+            float recentDamage = GetRecentDamageTaken(entityId);
+            float maxHealth = GetMaxHealth(entityId);
+            
+            // Calculate 25% of recent damage
+            float healFromDamage = recentDamage * DEATH_STRIKE_HEAL_PERCENT;
+            
+            // Minimum heal is 10% of max health
+            float minHeal = maxHealth * DEATH_STRIKE_MIN_HEAL_PERCENT;
+            
+            return Mathf.Max(healFromDamage, minHeal);
         }
 
         public void ApplyHealing(ulong targetId, float healing, ulong sourceId = 0)
@@ -271,6 +354,7 @@ namespace EtherDomes.Combat
             _deathTime.Remove(playerId);
             _inCombat.Remove(playerId);
             _lastCombatTime.Remove(playerId);
+            _recentDamageTaken.Remove(playerId);
         }
 
         /// <summary>

@@ -114,6 +114,38 @@ namespace EtherDomes.Tests.Generators
             return ability;
         }
 
+        /// <summary>
+        /// Generates a channeled ability with valid duration and tick interval.
+        /// Requirements: 2.1, 2.3
+        /// </summary>
+        public static AbilityData GenerateChanneledAbility()
+        {
+            var ability = GenerateAbilityData();
+            ability.CastTime = 0f;
+            ability.IsChanneled = true;
+            ability.ChannelDuration = Random.Range(1f, 10f);
+            ability.TickInterval = Random.Range(0.5f, 2f);
+            // Ensure at least 1 tick
+            if (ability.TickInterval > ability.ChannelDuration)
+            {
+                ability.TickInterval = ability.ChannelDuration;
+            }
+            return ability;
+        }
+
+        /// <summary>
+        /// Generates a channeled ability with specific duration and tick interval.
+        /// </summary>
+        public static AbilityData GenerateChanneledAbility(float duration, float tickInterval)
+        {
+            var ability = GenerateAbilityData();
+            ability.CastTime = 0f;
+            ability.IsChanneled = true;
+            ability.ChannelDuration = duration;
+            ability.TickInterval = tickInterval;
+            return ability;
+        }
+
         #endregion
 
         #region CharacterStats Generator
@@ -150,6 +182,48 @@ namespace EtherDomes.Tests.Generators
                 CriticalStrike = Random.Range(0, 50),
                 Haste = Random.Range(0, 50)
             };
+        }
+
+        #endregion
+
+        #region PetData Generator
+
+        /// <summary>
+        /// Generates a random PetData for testing.
+        /// Requirements: 3.4
+        /// </summary>
+        public static PetData GeneratePetData()
+        {
+            var petTypes = new[] { PetType.Beast, PetType.Demon, PetType.Voidwalker, PetType.Imp };
+
+            return new PetData
+            {
+                PetId = System.Guid.NewGuid().ToString(),
+                DisplayName = GenerateRandomPetName(),
+                PetType = petTypes[Random.Range(0, petTypes.Length)],
+                BaseHealth = Random.Range(50f, 500f),
+                BaseDamage = Random.Range(5f, 50f),
+                AttackSpeed = Random.Range(1f, 3f),
+                AttackRange = Random.Range(1f, 5f),
+                MoveSpeed = Random.Range(3f, 8f)
+            };
+        }
+
+        /// <summary>
+        /// Generates a PetData with specific pet type.
+        /// </summary>
+        public static PetData GeneratePetDataWithType(PetType petType)
+        {
+            var pet = GeneratePetData();
+            pet.PetType = petType;
+            return pet;
+        }
+
+        private static string GenerateRandomPetName()
+        {
+            string[] prefixes = { "Shadow", "Flame", "Frost", "Storm", "Void", "Fel", "Spirit", "Wild" };
+            string[] suffixes = { "fang", "claw", "howl", "bite", "stalker", "hunter", "guard", "fiend" };
+            return prefixes[Random.Range(0, prefixes.Length)] + suffixes[Random.Range(0, suffixes.Length)];
         }
 
         #endregion

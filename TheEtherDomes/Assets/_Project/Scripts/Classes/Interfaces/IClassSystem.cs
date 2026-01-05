@@ -51,8 +51,49 @@ namespace EtherDomes.Classes
         Specialization[] GetSpecializationsForClass(CharacterClass charClass);
 
         /// <summary>
+        /// Get the primary resource type for a class.
+        /// Requirements: 10.1, 10.2, 10.3
+        /// </summary>
+        PrimaryResourceType GetPrimaryResourceType(CharacterClass charClass);
+
+        /// <summary>
+        /// Get the secondary resource type for a class.
+        /// Requirements: 10.1, 10.2, 10.3
+        /// </summary>
+        SecondaryResourceType GetSecondaryResourceType(CharacterClass charClass);
+
+        /// <summary>
+        /// Check if a class uses combo points.
+        /// Requirements: 10.3, 5.3
+        /// </summary>
+        bool UsesComboPoints(CharacterClass charClass);
+
+        /// <summary>
+        /// Get the stat growth per level for a class.
+        /// Requirements: 12.6, 12.7
+        /// </summary>
+        CharacterStats GetStatGrowthPerLevel(CharacterClass charClass);
+
+        /// <summary>
+        /// Get the base stats for a class at level 1.
+        /// Requirements: 12.2, 12.3, 12.4, 12.5
+        /// </summary>
+        CharacterStats GetBaseStatsForClass(CharacterClass charClass);
+
+        /// <summary>
         /// Event fired when a player changes specialization.
         /// </summary>
         event Action<ulong, Specialization> OnSpecializationChanged;
+    }
+
+    /// <summary>
+    /// Primary resource types for classes.
+    /// </summary>
+    public enum PrimaryResourceType
+    {
+        None,       // No primary resource
+        Mana,       // Mage, Priest, Warlock, Death Knight, Paladin
+        Energy,     // Rogue
+        Focus       // Hunter
     }
 }

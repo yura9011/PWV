@@ -40,6 +40,12 @@ namespace EtherDomes.Progression
         CharacterStats GetBaseStats(int level, CharacterClass charClass);
 
         /// <summary>
+        /// Get stat growth per level for a class.
+        /// Requirements: 12.6, 12.7
+        /// </summary>
+        CharacterStats GetStatGrowthPerLevel(CharacterClass charClass);
+
+        /// <summary>
         /// Event fired when a player levels up.
         /// </summary>
         event Action<ulong, int> OnLevelUp;

@@ -116,5 +116,17 @@ namespace EtherDomes.Combat
         /// Health percentage when respawning at graveyard.
         /// </summary>
         float RespawnHealthPercent { get; }
+
+        /// <summary>
+        /// Gets the total damage taken by an entity in the last 5 seconds.
+        /// Requirements 8.8: Used for Death Strike healing calculation
+        /// </summary>
+        float GetRecentDamageTaken(ulong entityId);
+
+        /// <summary>
+        /// Calculates Death Strike healing amount.
+        /// Requirements 8.8: Heal = 25% of damage taken in last 5 seconds (min 10% max HP)
+        /// </summary>
+        float CalculateDeathStrikeHealing(ulong entityId);
     }
 }

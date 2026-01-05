@@ -228,6 +228,10 @@ namespace EtherDomes.Classes
                 CharacterClass.Priest => spec is Specialization.Holy or Specialization.Shadow,
                 CharacterClass.Paladin => spec is Specialization.ProtectionPaladin 
                     or Specialization.HolyPaladin or Specialization.Retribution,
+                CharacterClass.Rogue => spec is Specialization.Assassination or Specialization.Combat,
+                CharacterClass.Hunter => spec is Specialization.BeastMastery or Specialization.Marksmanship,
+                CharacterClass.Warlock => spec is Specialization.Affliction or Specialization.Destruction,
+                CharacterClass.DeathKnight => spec is Specialization.Blood or Specialization.FrostDK,
                 _ => false
             };
         }
@@ -241,6 +245,10 @@ namespace EtherDomes.Classes
                 CharacterClass.Priest => new[] { Specialization.Holy, Specialization.Shadow },
                 CharacterClass.Paladin => new[] { Specialization.ProtectionPaladin, 
                     Specialization.HolyPaladin, Specialization.Retribution },
+                CharacterClass.Rogue => new[] { Specialization.Assassination, Specialization.Combat },
+                CharacterClass.Hunter => new[] { Specialization.BeastMastery, Specialization.Marksmanship },
+                CharacterClass.Warlock => new[] { Specialization.Affliction, Specialization.Destruction },
+                CharacterClass.DeathKnight => new[] { Specialization.Blood, Specialization.FrostDK },
                 _ => Array.Empty<Specialization>()
             };
         }
@@ -273,6 +281,14 @@ namespace EtherDomes.Classes
                 Specialization.ProtectionPaladin => SpecRole.Tank,
                 Specialization.HolyPaladin => SpecRole.Healer,
                 Specialization.Retribution => SpecRole.DPS,
+                Specialization.Assassination => SpecRole.DPS,
+                Specialization.Combat => SpecRole.DPS,
+                Specialization.BeastMastery => SpecRole.DPS,
+                Specialization.Marksmanship => SpecRole.DPS,
+                Specialization.Affliction => SpecRole.DPS,
+                Specialization.Destruction => SpecRole.DPS,
+                Specialization.Blood => SpecRole.Tank,
+                Specialization.FrostDK => SpecRole.DPS,
                 _ => SpecRole.DPS
             };
         }
@@ -282,7 +298,8 @@ namespace EtherDomes.Classes
         /// </summary>
         public static bool IsHybridClass(CharacterClass charClass)
         {
-            return charClass is CharacterClass.Warrior or CharacterClass.Paladin;
+            return charClass is CharacterClass.Warrior or CharacterClass.Paladin 
+                or CharacterClass.Priest or CharacterClass.DeathKnight;
         }
 
         /// <summary>
@@ -295,6 +312,110 @@ namespace EtherDomes.Classes
                 _classAbilities[(charClass, spec)] = new List<AbilityData>();
             }
             _classAbilities[(charClass, spec)].AddRange(abilities);
+        }
+
+        /// <summary>
+        /// Get the primary resource type for a class.
+        /// Requirements: 10.1, 10.2, 10.3
+        /// </summary>
+        public PrimaryResourceType GetPrimaryResourceType(CharacterClass charClass)
+        {
+            return charClass switch
+            {
+                CharacterClass.Warrior => PrimaryResourceType.None,        // Warrior uses Rage (secondary)
+                CharacterClass.Mage => PrimaryResourceType.Mana,
+                CharacterClass.Priest => PrimaryResourceType.Mana,
+                CharacterClass.Paladin => PrimaryResourceType.Mana,
+                CharacterClass.Rogue => PrimaryResourceType.Energy,        // Requirements 5.2
+                CharacterClass.Hunter => PrimaryResourceType.Focus,        // Requirements 6.2
+                CharacterClass.Warlock => PrimaryResourceType.Mana,        // Requirements 7.2
+                CharacterClass.DeathKnight => PrimaryResourceType.Mana,    // Requirements 8.2 (simplified from runes)
+                _ => PrimaryResourceType.None
+            };
+        }
+
+        /// <summary>
+        /// Get the secondary resource type for a class.
+        /// Requirements: 10.1, 10.2, 10.3
+        /// </summary>
+        public SecondaryResourceType GetSecondaryResourceType(CharacterClass charClass)
+        {
+            return SecondaryResourceSystem.GetResourceTypeForClass(charClass);
+        }
+
+        /// <summary>
+        /// Check if a class uses combo points.
+        /// Requirements: 10.3, 5.3
+        /// </summary>
+        public bool UsesComboPoints(CharacterClass charClass)
+        {
+            return SecondaryResourceSystem.ClassUsesComboPoints(charClass);
+        }
+
+        /// <summary>
+        /// Get the stat growth per level for a class.
+        /// Requirements: 12.6, 12.7
+        /// </summary>
+        public CharacterStats GetStatGrowthPerLevel(CharacterClass charClass)
+        {
+            return charClass switch
+            {
+                CharacterClass.Warrior => new CharacterStats { Strength = 2, Stamina = 2 },
+                CharacterClass.Mage => new CharacterStats { Intellect = 2, Stamina = 1 },
+                CharacterClass.Priest => new CharacterStats { Intellect = 2, Stamina = 1 },
+                CharacterClass.Paladin => new CharacterStats { Strength = 1, Intellect = 1, Stamina = 1 },
+                CharacterClass.Rogue => new CharacterStats { Strength = 0, Stamina = 1 }, // Agility not in CharacterStats, use Strength placeholder
+                CharacterClass.Hunter => new CharacterStats { Strength = 0, Stamina = 1 }, // Agility not in CharacterStats
+                CharacterClass.Warlock => new CharacterStats { Intellect = 2, Stamina = 1 },
+                CharacterClass.DeathKnight => new CharacterStats { Strength = 2, Stamina = 2 },
+                _ => new CharacterStats()
+            };
+        }
+
+        /// <summary>
+        /// Get the base stats for a class at level 1.
+        /// Requirements: 12.2, 12.3, 12.4, 12.5
+        /// </summary>
+        public CharacterStats GetBaseStatsForClass(CharacterClass charClass)
+        {
+            return charClass switch
+            {
+                CharacterClass.Warrior => new CharacterStats 
+                { 
+                    MaxHealth = 100, Strength = 12, Intellect = 5, Stamina = 12 
+                },
+                CharacterClass.Mage => new CharacterStats 
+                { 
+                    MaxHealth = 80, MaxMana = 150, Strength = 5, Intellect = 15, Stamina = 8 
+                },
+                CharacterClass.Priest => new CharacterStats 
+                { 
+                    MaxHealth = 80, MaxMana = 150, Strength = 5, Intellect = 14, Stamina = 9 
+                },
+                CharacterClass.Paladin => new CharacterStats 
+                { 
+                    MaxHealth = 95, MaxMana = 100, Strength = 10, Intellect = 10, Stamina = 11 
+                },
+                CharacterClass.Rogue => new CharacterStats 
+                { 
+                    MaxHealth = 90, Strength = 8, Intellect = 5, Stamina = 10 
+                    // Note: Agility (15) not in CharacterStats
+                },
+                CharacterClass.Hunter => new CharacterStats 
+                { 
+                    MaxHealth = 95, Strength = 7, Intellect = 6, Stamina = 11 
+                    // Note: Agility (14) not in CharacterStats
+                },
+                CharacterClass.Warlock => new CharacterStats 
+                { 
+                    MaxHealth = 85, MaxMana = 150, Strength = 5, Intellect = 15, Stamina = 9 
+                },
+                CharacterClass.DeathKnight => new CharacterStats 
+                { 
+                    MaxHealth = 110, MaxMana = 100, Strength = 14, Intellect = 8, Stamina = 14 
+                },
+                _ => new CharacterStats()
+            };
         }
     }
 

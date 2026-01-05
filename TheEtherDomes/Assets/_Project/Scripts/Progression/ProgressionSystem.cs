@@ -170,21 +170,98 @@ namespace EtherDomes.Progression
             // Base stats at level 1
             var baseStats = GetLevel1Stats(charClass);
 
-            // Scale stats per level
-            float levelMultiplier = 1f + ((level - 1) * 0.05f);
+            // Apply class-specific stat growth per level (Requirements 12.6, 12.7)
+            var growth = GetStatGrowthPerLevel(charClass);
+            int levelsGained = level - 1;
 
             return new CharacterStats
             {
-                Health = Mathf.RoundToInt(baseStats.Health * levelMultiplier),
-                MaxHealth = Mathf.RoundToInt(baseStats.MaxHealth * levelMultiplier),
-                Mana = Mathf.RoundToInt(baseStats.Mana * levelMultiplier),
-                MaxMana = Mathf.RoundToInt(baseStats.MaxMana * levelMultiplier),
-                Strength = Mathf.RoundToInt(baseStats.Strength * levelMultiplier),
-                Intellect = Mathf.RoundToInt(baseStats.Intellect * levelMultiplier),
-                Stamina = Mathf.RoundToInt(baseStats.Stamina * levelMultiplier),
-                AttackPower = Mathf.RoundToInt(baseStats.AttackPower * levelMultiplier),
-                SpellPower = Mathf.RoundToInt(baseStats.SpellPower * levelMultiplier),
-                Armor = Mathf.RoundToInt(baseStats.Armor * levelMultiplier)
+                Health = baseStats.Health + (growth.Stamina * levelsGained * 10), // Stamina affects health
+                MaxHealth = baseStats.MaxHealth + (growth.Stamina * levelsGained * 10),
+                Mana = baseStats.Mana + (growth.Intellect * levelsGained * 5), // Intellect affects mana
+                MaxMana = baseStats.MaxMana + (growth.Intellect * levelsGained * 5),
+                Strength = baseStats.Strength + (growth.Strength * levelsGained),
+                Intellect = baseStats.Intellect + (growth.Intellect * levelsGained),
+                Stamina = baseStats.Stamina + (growth.Stamina * levelsGained),
+                AttackPower = baseStats.AttackPower + (growth.AttackPower * levelsGained),
+                SpellPower = baseStats.SpellPower + (growth.SpellPower * levelsGained),
+                Armor = baseStats.Armor + (growth.Armor * levelsGained),
+                CritChance = baseStats.CritChance + (growth.CritChance * levelsGained),
+                Haste = baseStats.Haste + (growth.Haste * levelsGained),
+                Mastery = baseStats.Mastery + (growth.Mastery * levelsGained)
+            };
+        }
+
+        /// <summary>
+        /// Get stat growth per level for a class.
+        /// Requirements: 12.6, 12.7
+        /// </summary>
+        public CharacterStats GetStatGrowthPerLevel(CharacterClass charClass)
+        {
+            return charClass switch
+            {
+                CharacterClass.Warrior => new CharacterStats
+                {
+                    Strength = 2, Stamina = 2, Intellect = 0,
+                    AttackPower = 3, SpellPower = 0, Armor = 5,
+                    CritChance = 0.1f, Haste = 0f, Mastery = 0f
+                },
+                CharacterClass.Mage => new CharacterStats
+                {
+                    Strength = 0, Stamina = 1, Intellect = 3,
+                    AttackPower = 0, SpellPower = 4, Armor = 1,
+                    CritChance = 0.15f, Haste = 0.1f, Mastery = 0f
+                },
+                CharacterClass.Priest => new CharacterStats
+                {
+                    Strength = 0, Stamina = 1, Intellect = 3,
+                    AttackPower = 0, SpellPower = 4, Armor = 1,
+                    CritChance = 0.1f, Haste = 0.1f, Mastery = 0f
+                },
+                CharacterClass.Paladin => new CharacterStats
+                {
+                    Strength = 2, Stamina = 2, Intellect = 1,
+                    AttackPower = 2, SpellPower = 2, Armor = 4,
+                    CritChance = 0.1f, Haste = 0f, Mastery = 0f
+                },
+                // Rogue: +2 Agility (AttackPower), +1 Stamina per level
+                // Requirements 12.2
+                CharacterClass.Rogue => new CharacterStats
+                {
+                    Strength = 0, Stamina = 1, Intellect = 0,
+                    AttackPower = 3, SpellPower = 0, Armor = 2, // Agility represented as AttackPower
+                    CritChance = 0.15f, Haste = 0.1f, Mastery = 0f
+                },
+                // Hunter: +2 Agility (AttackPower), +1 Stamina per level
+                // Requirements 12.3
+                CharacterClass.Hunter => new CharacterStats
+                {
+                    Strength = 0, Stamina = 1, Intellect = 0,
+                    AttackPower = 3, SpellPower = 0, Armor = 2, // Agility represented as AttackPower
+                    CritChance = 0.12f, Haste = 0.1f, Mastery = 0f
+                },
+                // Warlock: +2 Intellect, +1 Stamina per level
+                // Requirements 12.4
+                CharacterClass.Warlock => new CharacterStats
+                {
+                    Strength = 0, Stamina = 1, Intellect = 2,
+                    AttackPower = 0, SpellPower = 4, Armor = 1,
+                    CritChance = 0.1f, Haste = 0.1f, Mastery = 0f
+                },
+                // Death Knight: +2 Strength, +2 Stamina per level
+                // Requirements 12.5
+                CharacterClass.DeathKnight => new CharacterStats
+                {
+                    Strength = 2, Stamina = 2, Intellect = 0,
+                    AttackPower = 3, SpellPower = 1, Armor = 5,
+                    CritChance = 0.1f, Haste = 0f, Mastery = 0f
+                },
+                _ => new CharacterStats
+                {
+                    Strength = 1, Stamina = 1, Intellect = 1,
+                    AttackPower = 2, SpellPower = 2, Armor = 2,
+                    CritChance = 0.1f, Haste = 0f, Mastery = 0f
+                }
             };
         }
 
@@ -219,6 +296,50 @@ namespace EtherDomes.Progression
                     Mana = 100, MaxMana = 100,
                     Strength = 20, Intellect = 18, Stamina = 22,
                     AttackPower = 40, SpellPower = 35, Armor = 80
+                },
+                // Rogue: High Agility (represented as AttackPower), Medium Stamina, Low Strength/Intellect
+                // Requirements 12.2: High Agility (15), Medium Stamina (10), Low Strength/Intellect
+                // Growth: +2 Agility, +1 Stamina per level
+                CharacterClass.Rogue => new CharacterStats
+                {
+                    Health = 90, MaxHealth = 90,
+                    Mana = 0, MaxMana = 0, // Rogue uses Energy, not Mana
+                    Strength = 8, Intellect = 5, Stamina = 10,
+                    AttackPower = 45, SpellPower = 0, Armor = 40,
+                    CritChance = 8f // Rogues have higher base crit
+                },
+                // Hunter: High Agility (14), Medium Stamina (11), Low Strength/Intellect
+                // Requirements 12.3: High Agility (14), Medium Stamina (11), Low Strength/Intellect
+                // Growth: +2 Agility, +1 Stamina per level
+                CharacterClass.Hunter => new CharacterStats
+                {
+                    Health = 95, MaxHealth = 95,
+                    Mana = 0, MaxMana = 0, // Hunter uses Focus, not Mana
+                    Strength = 7, Intellect = 6, Stamina = 11,
+                    AttackPower = 42, SpellPower = 0, Armor = 45,
+                    CritChance = 6f // Hunters have moderate base crit
+                },
+                // Warlock: High Intellect (15), Medium Stamina (9), Low Strength/Agility
+                // Requirements 12.4: High Intellect (15), Medium Stamina (9), Low Strength/Agility
+                // Growth: +2 Intellect, +1 Stamina per level
+                CharacterClass.Warlock => new CharacterStats
+                {
+                    Health = 85, MaxHealth = 85,
+                    Mana = 200, MaxMana = 200, // Warlock uses Mana
+                    Strength = 5, Intellect = 15, Stamina = 9,
+                    AttackPower = 10, SpellPower = 55, Armor = 25,
+                    CritChance = 5f // Warlocks have standard base crit
+                },
+                // Death Knight: High Strength (14), High Stamina (14), Medium Intellect (8)
+                // Requirements 12.5: High Strength (14), High Stamina (14), Medium Intellect (8)
+                // Growth: +2 Strength, +2 Stamina per level
+                CharacterClass.DeathKnight => new CharacterStats
+                {
+                    Health = 110, MaxHealth = 110,
+                    Mana = 100, MaxMana = 100, // Death Knight uses Mana (simplified from runes)
+                    Strength = 14, Intellect = 8, Stamina = 14,
+                    AttackPower = 48, SpellPower = 20, Armor = 90,
+                    CritChance = 5f // Death Knights have standard base crit
                 },
                 _ => new CharacterStats
                 {

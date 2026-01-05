@@ -9,7 +9,7 @@ using UnityEngine;
 namespace EtherDomes.Persistence
 {
     /// <summary>
-    /// Handles character data persistence with encryption.
+    /// Handles character data persistence with encryption, session locking, and data migration.
     /// Saves to Application.persistentDataPath for Cross-World portability.
     /// </summary>
     public class CharacterPersistenceService : ICharacterPersistenceService
@@ -18,18 +18,46 @@ namespace EtherDomes.Persistence
         private const string FILE_EXTENSION = ".edc"; // Ether Domes Character
 
         private readonly IEncryptionService _encryption;
+        private readonly ISessionLockManager _sessionLock;
+        private readonly IDataMigrationService _migration;
         private readonly string _savePath;
 
-        public CharacterPersistenceService() : this(new EncryptionService())
+        /// <summary>
+        /// Event fired when a character load is denied due to session lock.
+        /// </summary>
+        public event Action<string> OnCharacterInUse;
+
+        public CharacterPersistenceService() 
+            : this(new EncryptionService(), new SessionLockManager(), new DataMigrationService())
         {
         }
 
-        public CharacterPersistenceService(IEncryptionService encryptionService)
+        public CharacterPersistenceService(IEncryptionService encryptionService) 
+            : this(encryptionService, new SessionLockManager(), new DataMigrationService())
+        {
+        }
+
+        public CharacterPersistenceService(
+            IEncryptionService encryptionService, 
+            ISessionLockManager sessionLockManager)
+            : this(encryptionService, sessionLockManager, new DataMigrationService())
+        {
+        }
+
+        public CharacterPersistenceService(
+            IEncryptionService encryptionService, 
+            ISessionLockManager sessionLockManager,
+            IDataMigrationService migrationService)
         {
             _encryption = encryptionService ?? throw new ArgumentNullException(nameof(encryptionService));
+            _sessionLock = sessionLockManager ?? throw new ArgumentNullException(nameof(sessionLockManager));
+            _migration = migrationService ?? throw new ArgumentNullException(nameof(migrationService));
             _savePath = Path.Combine(Application.persistentDataPath, SAVE_FOLDER);
             
             EnsureSaveDirectoryExists();
+            
+            // Cleanup stale locks on startup
+            _sessionLock.CleanupStaleLocks(_sessionLock.StaleLockThreshold);
         }
 
         private void EnsureSaveDirectoryExists()
@@ -38,6 +66,22 @@ namespace EtherDomes.Persistence
             {
                 Directory.CreateDirectory(_savePath);
             }
+        }
+
+        /// <summary>
+        /// Releases all session locks. Should be called on application quit.
+        /// </summary>
+        public void ReleaseAllLocks()
+        {
+            _sessionLock.ReleaseAllLocks();
+        }
+
+        /// <summary>
+        /// Releases the session lock for a specific character.
+        /// </summary>
+        public void ReleaseLock(string characterId)
+        {
+            _sessionLock.ReleaseLock(characterId);
         }
 
         public async Task<bool> SaveCharacterAsync(CharacterData data)
@@ -52,6 +96,12 @@ namespace EtherDomes.Persistence
             {
                 // Update save time
                 data.LastSaveTime = DateTime.UtcNow;
+                
+                // Ensure DataVersion is current (Requirement 1.5)
+                if (data.DataVersion < _migration.CurrentVersion)
+                {
+                    data.DataVersion = _migration.CurrentVersion;
+                }
 
                 // Serialize to JSON
                 string json = JsonUtility.ToJson(data, true);
@@ -95,10 +145,19 @@ namespace EtherDomes.Persistence
                 return null;
             }
 
+            // Try to acquire session lock first (Requirement 1.1, 1.2)
+            if (!_sessionLock.TryAcquireLock(characterId))
+            {
+                Debug.LogWarning($"[CharacterPersistence] Character in use: {characterId}");
+                OnCharacterInUse?.Invoke(characterId);
+                return null;
+            }
+
             string filePath = GetCharacterFilePath(characterId);
             if (!File.Exists(filePath))
             {
                 Debug.LogWarning($"[CharacterPersistence] Character file not found: {characterId}");
+                _sessionLock.ReleaseLock(characterId); // Release lock if file doesn't exist
                 return null;
             }
 
@@ -112,6 +171,7 @@ namespace EtherDomes.Persistence
                 if (decrypted == null)
                 {
                     Debug.LogError("[CharacterPersistence] Decryption failed - file may be corrupted");
+                    _sessionLock.ReleaseLock(characterId);
                     return null;
                 }
 
@@ -119,10 +179,21 @@ namespace EtherDomes.Persistence
                 string json = Encoding.UTF8.GetString(decrypted);
                 CharacterData data = JsonUtility.FromJson<CharacterData>(json);
 
+                // Check if migration is needed (Requirement 1.6)
+                if (_migration.NeedsMigration(data))
+                {
+                    Debug.Log($"[CharacterPersistence] Character needs migration: v{data.DataVersion} -> v{_migration.CurrentVersion}");
+                    data = _migration.Migrate(data);
+                    
+                    // Save migrated data immediately
+                    await SaveCharacterAsync(data);
+                }
+
                 // Validate integrity
                 if (!ValidateCharacterIntegrity(data))
                 {
                     Debug.LogError("[CharacterPersistence] Character data integrity check failed");
+                    _sessionLock.ReleaseLock(characterId);
                     return null;
                 }
 
@@ -132,6 +203,7 @@ namespace EtherDomes.Persistence
             catch (Exception ex)
             {
                 Debug.LogError($"[CharacterPersistence] Load failed: {ex.Message}");
+                _sessionLock.ReleaseLock(characterId);
                 return null;
             }
         }

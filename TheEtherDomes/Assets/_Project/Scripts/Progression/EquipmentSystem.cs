@@ -15,8 +15,16 @@ namespace EtherDomes.Progression
         private readonly Dictionary<ulong, int> _playerLevels = new();
         private readonly Dictionary<ulong, CharacterClass> _playerClasses = new();
 
+        // Durability system for stat penalties (Requirements: 8.6)
+        private readonly IDurabilitySystem _durabilitySystem = new DurabilitySystem();
+
         public event Action<ulong, ItemData, EquipmentSlot> OnItemEquipped;
         public event Action<ulong, ItemData, EquipmentSlot> OnItemUnequipped;
+
+        /// <summary>
+        /// Gets the durability system for external access.
+        /// </summary>
+        public IDurabilitySystem DurabilitySystem => _durabilitySystem;
 
         /// <summary>
         /// Register a player for equipment tracking.
@@ -139,50 +147,71 @@ namespace EtherDomes.Progression
             {
                 if (item?.Stats == null) continue;
 
-                foreach (var stat in item.Stats)
-                {
-                    AddStatToCharacterStats(ref totalStats, stat.Key, stat.Value);
-                }
+                // Get durability penalty (Requirements: 8.6)
+                float durabilityPenalty = _durabilitySystem.GetStatPenalty(item);
+
+                // Apply durability penalty to each stat
+                totalStats.Strength += (int)(item.Stats.Strength * durabilityPenalty);
+                totalStats.Intellect += (int)(item.Stats.Intellect * durabilityPenalty);
+                totalStats.Stamina += (int)(item.Stats.Stamina * durabilityPenalty);
+                totalStats.AttackPower += (int)(item.Stats.AttackPower * durabilityPenalty);
+                totalStats.SpellPower += (int)(item.Stats.SpellPower * durabilityPenalty);
+                totalStats.Armor += (int)(item.Stats.Armor * durabilityPenalty);
+                
+                // Stamina also adds health (10 HP per stamina)
+                int staminaBonus = (int)(item.Stats.Stamina * durabilityPenalty);
+                totalStats.MaxHealth += staminaBonus * 10;
+                totalStats.Health += staminaBonus * 10;
             }
 
             return totalStats;
         }
 
-        private void AddStatToCharacterStats(ref CharacterStats stats, string statName, int value)
+        /// <summary>
+        /// Gets equipment stats without durability penalty (for display purposes).
+        /// </summary>
+        public CharacterStats GetEquipmentStatsRaw(ulong playerId)
         {
-            switch (statName.ToLower())
+            var totalStats = new CharacterStats();
+
+            if (!_playerEquipment.TryGetValue(playerId, out var equipment))
+                return totalStats;
+
+            foreach (var item in equipment.Values)
             {
-                case "health":
-                case "maxhealth":
-                    stats.MaxHealth += value;
-                    stats.Health += value;
-                    break;
-                case "mana":
-                case "maxmana":
-                    stats.MaxMana += value;
-                    stats.Mana += value;
-                    break;
-                case "strength":
-                    stats.Strength += value;
-                    break;
-                case "intellect":
-                    stats.Intellect += value;
-                    break;
-                case "stamina":
-                    stats.Stamina += value;
-                    // Stamina also adds health (10 HP per stamina)
-                    stats.MaxHealth += value * 10;
-                    stats.Health += value * 10;
-                    break;
-                case "attackpower":
-                    stats.AttackPower += value;
-                    break;
-                case "spellpower":
-                    stats.SpellPower += value;
-                    break;
-                case "armor":
-                    stats.Armor += value;
-                    break;
+                if (item?.Stats == null) continue;
+
+                totalStats.Strength += item.Stats.Strength;
+                totalStats.Intellect += item.Stats.Intellect;
+                totalStats.Stamina += item.Stats.Stamina;
+                totalStats.AttackPower += item.Stats.AttackPower;
+                totalStats.SpellPower += item.Stats.SpellPower;
+                totalStats.Armor += item.Stats.Armor;
+                
+                // Stamina also adds health (10 HP per stamina)
+                totalStats.MaxHealth += item.Stats.Stamina * 10;
+                totalStats.Health += item.Stats.Stamina * 10;
+            }
+
+            return totalStats;
+        }
+
+        /// <summary>
+        /// Degrades durability of all equipped items for a player.
+        /// Called when player takes damage in combat.
+        /// Requirements: 8.5
+        /// </summary>
+        public void DegradeEquipmentDurability(ulong playerId, int amount = 1)
+        {
+            if (!_playerEquipment.TryGetValue(playerId, out var equipment))
+                return;
+
+            foreach (var item in equipment.Values)
+            {
+                if (item != null)
+                {
+                    _durabilitySystem.DegradeDurability(item, amount);
+                }
             }
         }
 

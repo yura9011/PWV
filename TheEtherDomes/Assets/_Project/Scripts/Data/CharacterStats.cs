@@ -19,6 +19,15 @@ namespace EtherDomes.Data
         public int SpellPower;
         public int Armor;
 
+        // Secondary stats affected by soft caps (Requirements: 8.2)
+        // Note: Use ISoftCapSystem.GetEffectiveValue() to get capped values
+        public float CritChance;
+        public float Haste;
+        public float Mastery;
+
+        // Delegate for soft cap calculation (injected by Progression system)
+        public static Func<float, float> SoftCapCalculator { get; set; } = value => value;
+
         public CharacterStats()
         {
             Health = 100;
@@ -31,7 +40,28 @@ namespace EtherDomes.Data
             AttackPower = 10;
             SpellPower = 10;
             Armor = 0;
+            CritChance = 5f;
+            Haste = 0f;
+            Mastery = 0f;
         }
+
+        /// <summary>
+        /// Gets the effective crit chance after soft caps.
+        /// Requirements: 8.2
+        /// </summary>
+        public float GetEffectiveCritChance() => SoftCapCalculator(CritChance);
+
+        /// <summary>
+        /// Gets the effective haste after soft caps.
+        /// Requirements: 8.2
+        /// </summary>
+        public float GetEffectiveHaste() => SoftCapCalculator(Haste);
+
+        /// <summary>
+        /// Gets the effective mastery after soft caps.
+        /// Requirements: 8.2
+        /// </summary>
+        public float GetEffectiveMastery() => SoftCapCalculator(Mastery);
 
         public CharacterStats Clone()
         {
@@ -46,7 +76,10 @@ namespace EtherDomes.Data
                 Stamina = Stamina,
                 AttackPower = AttackPower,
                 SpellPower = SpellPower,
-                Armor = Armor
+                Armor = Armor,
+                CritChance = CritChance,
+                Haste = Haste,
+                Mastery = Mastery
             };
         }
 
@@ -62,6 +95,9 @@ namespace EtherDomes.Data
             AttackPower += other.AttackPower;
             SpellPower += other.SpellPower;
             Armor += other.Armor;
+            CritChance += other.CritChance;
+            Haste += other.Haste;
+            Mastery += other.Mastery;
         }
     }
 }

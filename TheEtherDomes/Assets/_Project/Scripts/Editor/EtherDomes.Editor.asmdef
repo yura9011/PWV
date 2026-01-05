@@ -13,6 +13,7 @@
         "EtherDomes.Player",
         "EtherDomes.UI",
         "EtherDomes.Enemy",
+        "EtherDomes.Testing",
         "Unity.Netcode.Runtime",
         "Unity.Netcode.Components",
         "Unity.TextMeshPro"

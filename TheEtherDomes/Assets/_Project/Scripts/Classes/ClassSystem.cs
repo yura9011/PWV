@@ -1,7 +1,9 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using EtherDomes.Combat;
 using EtherDomes.Data;
+using EtherDomes.Classes.Abilities;
 using UnityEngine;
 
 namespace EtherDomes.Classes
@@ -9,6 +11,7 @@ namespace EtherDomes.Classes
     /// <summary>
     /// Manages character classes, specializations, and class abilities.
     /// Implements the Trinity system with hybrid class flexibility.
+    /// Requirement 2.1: Spec change completely replaces abilities.
     /// </summary>
     public class ClassSystem : MonoBehaviour, IClassSystem
     {
@@ -22,10 +25,18 @@ namespace EtherDomes.Classes
         private readonly Dictionary<ulong, Specialization> _playerSpecs = new();
         private readonly Dictionary<ulong, Specialization> _playerMainSpecs = new();
 
+        // Player abilities - loaded per spec (Requirement 2.1)
+        private readonly Dictionary<ulong, List<AbilityData>> _playerAbilities = new();
+
         // Class ability definitions (loaded from ScriptableObjects in production)
         private readonly Dictionary<(CharacterClass, Specialization), List<AbilityData>> _classAbilities = new();
 
         public event Action<ulong, Specialization> OnSpecializationChanged;
+        
+        /// <summary>
+        /// Event fired when a player's abilities are replaced due to spec change.
+        /// </summary>
+        public event Action<ulong, AbilityData[]> OnAbilitiesChanged;
 
         public void Initialize(ICombatSystem combatSystem)
         {
@@ -62,6 +73,9 @@ namespace EtherDomes.Classes
             _playerClasses[playerId] = charClass;
             _playerSpecs[playerId] = spec;
             _playerMainSpecs[playerId] = spec;
+            
+            // Load abilities for the initial spec (Requirement 2.1)
+            LoadAbilitiesForPlayer(playerId, charClass, spec);
 
             Debug.Log($"[ClassSystem] Registered player {playerId}: {charClass} - {spec}");
         }
@@ -74,6 +88,7 @@ namespace EtherDomes.Classes
             _playerClasses.Remove(playerId);
             _playerSpecs.Remove(playerId);
             _playerMainSpecs.Remove(playerId);
+            _playerAbilities.Remove(playerId);
         }
 
         public CharacterClass GetClass(ulong playerId)
@@ -106,10 +121,75 @@ namespace EtherDomes.Classes
             }
 
             var oldSpec = GetSpecialization(playerId);
+            if (oldSpec == spec)
+            {
+                Debug.Log($"[ClassSystem] Player {playerId} already has spec {spec}");
+                return;
+            }
+            
             _playerSpecs[playerId] = spec;
+            
+            // Requirement 2.1: Completely replace abilities when changing spec
+            // Clear old abilities and load new ones
+            LoadAbilitiesForPlayer(playerId, charClass, spec);
 
             Debug.Log($"[ClassSystem] Player {playerId} changed spec: {oldSpec} -> {spec}");
             OnSpecializationChanged?.Invoke(playerId, spec);
+        }
+        
+        /// <summary>
+        /// Loads abilities for a player based on their class and spec.
+        /// Requirement 2.1: Spec change completely replaces abilities.
+        /// </summary>
+        private void LoadAbilitiesForPlayer(ulong playerId, CharacterClass charClass, Specialization spec)
+        {
+            // Clear existing abilities
+            if (_playerAbilities.ContainsKey(playerId))
+            {
+                _playerAbilities[playerId].Clear();
+            }
+            else
+            {
+                _playerAbilities[playerId] = new List<AbilityData>();
+            }
+            
+            // Load new abilities from definitions
+            var newAbilities = ClassAbilityDefinitions.GetAllAbilitiesForSpec(charClass, spec);
+            _playerAbilities[playerId].AddRange(newAbilities);
+            
+            Debug.Log($"[ClassSystem] Loaded {newAbilities.Count} abilities for player {playerId} ({charClass}/{spec})");
+            OnAbilitiesChanged?.Invoke(playerId, newAbilities.ToArray());
+        }
+        
+        /// <summary>
+        /// Gets the current abilities for a player.
+        /// </summary>
+        public AbilityData[] GetPlayerAbilities(ulong playerId)
+        {
+            if (_playerAbilities.TryGetValue(playerId, out var abilities))
+            {
+                return abilities.ToArray();
+            }
+            return Array.Empty<AbilityData>();
+        }
+        
+        /// <summary>
+        /// Checks if two specs share any spec-specific abilities.
+        /// Used for Property 6: Spec Change Replaces Abilities.
+        /// </summary>
+        public static bool SpecsShareAbilities(CharacterClass charClass, Specialization spec1, Specialization spec2)
+        {
+            if (spec1 == spec2) return true;
+            
+            var abilities1 = ClassAbilityDefinitions.GetAllAbilitiesForSpec(charClass, spec1);
+            var abilities2 = ClassAbilityDefinitions.GetAllAbilitiesForSpec(charClass, spec2);
+            
+            // Get spec-specific abilities (exclude shared abilities)
+            var specAbilities1 = abilities1.Where(a => a.RequiredSpec == spec1).Select(a => a.AbilityId).ToHashSet();
+            var specAbilities2 = abilities2.Where(a => a.RequiredSpec == spec2).Select(a => a.AbilityId).ToHashSet();
+            
+            // Check for intersection of spec-specific abilities
+            return specAbilities1.Intersect(specAbilities2).Any();
         }
 
         public AbilityData[] GetClassAbilities(CharacterClass charClass, Specialization spec)

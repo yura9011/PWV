@@ -15,7 +15,8 @@
         "EtherDomes.Persistence",
         "EtherDomes.Player",
         "EtherDomes.Input",
-        "EtherDomes.Enemy"
+        "EtherDomes.Enemy",
+        "EtherDomes.UI"
     ],
     "includePlatforms": [
         "Editor"

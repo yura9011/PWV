@@ -7,7 +7,7 @@ using UnityEngine.InputSystem;
 namespace EtherDomes.Combat
 {
     /// <summary>
-    /// Manages ability execution with GCD, cooldowns, and cast times.
+    /// Manages ability execution with GCD, cooldowns, cast times, and mana costs.
     /// Uses Unity Input System for ability hotkeys.
     /// </summary>
     public class AbilitySystem : MonoBehaviour, IAbilitySystem
@@ -19,6 +19,8 @@ namespace EtherDomes.Combat
         [SerializeField] private int _slotCount = DEFAULT_SLOT_COUNT;
 
         private ITargetSystem _targetSystem;
+        private IManaSystem _manaSystem;
+        private ulong _localPlayerId;
         private AbilityState[] _abilities;
         private float _gcdRemaining;
         private float _castTimeRemaining;
@@ -113,6 +115,25 @@ namespace EtherDomes.Combat
         public void Initialize(ITargetSystem targetSystem)
         {
             _targetSystem = targetSystem;
+        }
+
+        /// <summary>
+        /// Initializes the ability system with target and mana systems.
+        /// </summary>
+        public void Initialize(ITargetSystem targetSystem, IManaSystem manaSystem, ulong localPlayerId)
+        {
+            _targetSystem = targetSystem;
+            _manaSystem = manaSystem;
+            _localPlayerId = localPlayerId;
+        }
+
+        /// <summary>
+        /// Sets the mana system for mana cost verification.
+        /// </summary>
+        public void SetManaSystem(IManaSystem manaSystem, ulong playerId)
+        {
+            _manaSystem = manaSystem;
+            _localPlayerId = playerId;
         }
 
         private void Update()
@@ -217,6 +238,17 @@ namespace EtherDomes.Combat
                 return false;
             }
 
+            // Check mana cost (Requirement 12.2, 12.3)
+            if (_manaSystem != null && ability.ManaCost > 0)
+            {
+                float currentMana = _manaSystem.GetCurrentMana(_localPlayerId);
+                if (currentMana < ability.ManaCost)
+                {
+                    OnAbilityError?.Invoke("Not enough mana");
+                    return false;
+                }
+            }
+
             // Start GCD if affected
             if (ability.AffectedByGCD)
             {
@@ -284,6 +316,12 @@ namespace EtherDomes.Combat
         private void ExecuteAbility(AbilityData ability)
         {
             var target = _targetSystem?.CurrentTarget;
+            
+            // Deduct mana cost (Requirement 12.2)
+            if (_manaSystem != null && ability.ManaCost > 0)
+            {
+                _manaSystem.TrySpendMana(_localPlayerId, ability.ManaCost);
+            }
             
             Debug.Log($"[AbilitySystem] Executed: {ability.AbilityName} on {target?.DisplayName ?? "no target"}");
             OnAbilityExecuted?.Invoke(ability, target);

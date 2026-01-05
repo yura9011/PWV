@@ -1,4 +1,3 @@
-using System.Collections.Generic;
 using UnityEngine;
 
 namespace EtherDomes.Data
@@ -38,28 +37,26 @@ namespace EtherDomes.Data
 
         public ItemData ToItemData()
         {
-            // Convert stats to Dictionary<string, int> format
-            var stats = new Dictionary<string, int>();
-            
-            if (BonusHealth > 0) stats["MaxHealth"] = BonusHealth;
-            if (BonusMana > 0) stats["MaxMana"] = BonusMana;
-            if (BonusStrength > 0) stats["Strength"] = BonusStrength;
-            if (BonusIntellect > 0) stats["Intellect"] = BonusIntellect;
-            if (BonusStamina > 0) stats["Stamina"] = BonusStamina;
-            if (BonusAttackPower > 0) stats["AttackPower"] = BonusAttackPower;
-            if (BonusSpellPower > 0) stats["SpellPower"] = BonusSpellPower;
-            if (BonusArmor > 0) stats["Armor"] = BonusArmor;
-
             return new ItemData
             {
                 ItemId = ItemId,
                 ItemName = ItemName,
+                Description = Description ?? "",
                 ItemLevel = ItemLevel,
                 Rarity = Rarity,
+                Type = ItemType.Equipment,
                 Slot = Slot,
                 RequiredLevel = RequiredLevel,
                 AllowedClasses = AllowedClasses ?? new CharacterClass[0],
-                Stats = stats
+                Stats = new ItemStats
+                {
+                    Strength = BonusStrength,
+                    Intellect = BonusIntellect,
+                    Stamina = BonusStamina,
+                    AttackPower = BonusAttackPower,
+                    SpellPower = BonusSpellPower,
+                    Armor = BonusArmor
+                }
             };
         }
 

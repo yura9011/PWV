@@ -193,10 +193,15 @@ namespace EtherDomes.Network
                 // Validate item stats
                 if (item.Stats != null)
                 {
-                    foreach (var stat in item.Stats)
-                    {
-                        if (!IsStatInRange(stat.Value, $"Item {stat.Key}", out error)) return false;
-                    }
+                    if (!IsStatInRange(item.Stats.Strength, "Item Strength", out error)) return false;
+                    if (!IsStatInRange(item.Stats.Agility, "Item Agility", out error)) return false;
+                    if (!IsStatInRange(item.Stats.Intellect, "Item Intellect", out error)) return false;
+                    if (!IsStatInRange(item.Stats.Stamina, "Item Stamina", out error)) return false;
+                    if (!IsStatInRange(item.Stats.AttackPower, "Item AttackPower", out error)) return false;
+                    if (!IsStatInRange(item.Stats.SpellPower, "Item SpellPower", out error)) return false;
+                    if (!IsStatInRange(item.Stats.Armor, "Item Armor", out error)) return false;
+                    if (!IsStatInRange(item.Stats.CriticalStrike, "Item CriticalStrike", out error)) return false;
+                    if (!IsStatInRange(item.Stats.Haste, "Item Haste", out error)) return false;
                 }
             }
 

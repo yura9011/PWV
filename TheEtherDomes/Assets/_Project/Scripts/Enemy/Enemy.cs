@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+using System.Linq;
 using Unity.Netcode;
 using UnityEngine;
 using EtherDomes.Combat;
@@ -7,6 +9,7 @@ namespace EtherDomes.Enemy
 {
     /// <summary>
     /// Basic enemy entity that implements ITargetable for Tab-Target combat.
+    /// Includes damage tracking for target selection based on highest damage dealer.
     /// </summary>
     public class Enemy : NetworkBehaviour, ITargetable, ITargetIndicator
     {
@@ -36,6 +39,9 @@ namespace EtherDomes.Enemy
         
         private bool _isTargeted;
         
+        // Damage tracking for target selection (Requirement 13.1, 13.2, 13.3)
+        private readonly Dictionary<ulong, float> _damageByPlayer = new();
+        
         // ITargetable implementation
         public ulong NetworkId => NetworkObjectId;
         public string DisplayName => _displayName;
@@ -49,6 +55,11 @@ namespace EtherDomes.Enemy
         // Public properties
         public float CurrentHealth => _currentHealth.Value;
         public float MaxHealth => _maxHealth;
+        
+        /// <summary>
+        /// Gets the damage tracking dictionary (read-only).
+        /// </summary>
+        public IReadOnlyDictionary<ulong, float> DamageByPlayer => _damageByPlayer;
         
         public override void OnNetworkSpawn()
         {
@@ -107,37 +118,110 @@ namespace EtherDomes.Enemy
         /// </summary>
         public void TakeDamage(float damage)
         {
+            TakeDamage(damage, 0);
+        }
+
+        /// <summary>
+        /// Apply damage to this enemy from a specific player.
+        /// Routes to server for authoritative damage application.
+        /// </summary>
+        public void TakeDamage(float damage, ulong sourcePlayerId)
+        {
             if (!_isAlive.Value) return;
             
             if (IsServer)
             {
                 // Server can apply damage directly
-                ApplyDamageInternal(damage);
+                ApplyDamageInternal(damage, sourcePlayerId);
             }
             else
             {
                 // Client requests damage via ServerRpc
-                TakeDamageServerRpc(damage);
+                TakeDamageServerRpc(damage, sourcePlayerId);
             }
         }
         
         [ServerRpc(RequireOwnership = false)]
         private void TakeDamageServerRpc(float damage)
         {
-            ApplyDamageInternal(damage);
+            ApplyDamageInternal(damage, 0);
+        }
+
+        [ServerRpc(RequireOwnership = false)]
+        private void TakeDamageServerRpc(float damage, ulong sourcePlayerId)
+        {
+            ApplyDamageInternal(damage, sourcePlayerId);
         }
         
         private void ApplyDamageInternal(float damage)
         {
+            ApplyDamageInternal(damage, 0); // 0 = unknown source
+        }
+
+        private void ApplyDamageInternal(float damage, ulong sourcePlayerId)
+        {
             if (!_isAlive.Value) return;
             
+            // Record damage for target selection (Requirement 13.2)
+            if (sourcePlayerId != 0)
+            {
+                RecordDamage(sourcePlayerId, damage);
+            }
+            
             _currentHealth.Value = Mathf.Max(0, _currentHealth.Value - damage);
-            Debug.Log($"[Enemy] {_displayName} took {damage} damage. Health: {_currentHealth.Value}/{_maxHealth}");
+            Debug.Log($"[Enemy] {_displayName} took {damage} damage from player {sourcePlayerId}. Health: {_currentHealth.Value}/{_maxHealth}");
             
             if (_currentHealth.Value <= 0)
             {
                 Die();
             }
+        }
+
+        /// <summary>
+        /// Records damage dealt by a player for target selection purposes.
+        /// Requirement 13.2: Track damage per player.
+        /// </summary>
+        public void RecordDamage(ulong playerId, float damage)
+        {
+            if (damage <= 0) return;
+            
+            if (_damageByPlayer.ContainsKey(playerId))
+            {
+                _damageByPlayer[playerId] += damage;
+            }
+            else
+            {
+                _damageByPlayer[playerId] = damage;
+            }
+        }
+
+        /// <summary>
+        /// Gets the total damage dealt by a specific player.
+        /// </summary>
+        public float GetTotalDamage(ulong playerId)
+        {
+            return _damageByPlayer.TryGetValue(playerId, out float damage) ? damage : 0f;
+        }
+
+        /// <summary>
+        /// Gets the player ID who has dealt the most damage to this enemy.
+        /// Requirement 13.3: Select target based on highest damage dealer.
+        /// </summary>
+        public ulong GetHighestDamageDealer()
+        {
+            if (_damageByPlayer.Count == 0)
+                return 0;
+
+            return _damageByPlayer.OrderByDescending(kvp => kvp.Value).First().Key;
+        }
+
+        /// <summary>
+        /// Clears all damage tracking data.
+        /// Requirement 13.4: Clear tracking on reset.
+        /// </summary>
+        public void ClearDamageTracking()
+        {
+            _damageByPlayer.Clear();
         }
         
         /// <summary>
@@ -224,6 +308,9 @@ namespace EtherDomes.Enemy
             
             _currentHealth.Value = _maxHealth;
             _isAlive.Value = true;
+            
+            // Clear damage tracking on reset (Requirement 13.4)
+            ClearDamageTracking();
             
             ResetClientRpc();
         }

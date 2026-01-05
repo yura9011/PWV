@@ -7,6 +7,9 @@
         "EtherDomes.Network",
         "EtherDomes.World",
         "EtherDomes.Enemy",
+        "EtherDomes.Persistence",
+        "EtherDomes.Progression",
+        "EtherDomes.Classes",
         "Unity.Netcode.Runtime",
         "Unity.TextMeshPro"
     ],

@@ -102,9 +102,9 @@ namespace EtherDomes.Progression
             };
         }
 
-        private Dictionary<string, int> GenerateItemStats(EquipmentSlot slot, int itemLevel, ItemRarity rarity)
+        private ItemStats GenerateItemStats(EquipmentSlot slot, int itemLevel, ItemRarity rarity)
         {
-            var stats = new Dictionary<string, int>();
+            var stats = new ItemStats();
             float rarityMultiplier = rarity switch
             {
                 ItemRarity.Epic => 1.5f,
@@ -120,28 +120,33 @@ namespace EtherDomes.Progression
                 case EquipmentSlot.Head:
                 case EquipmentSlot.Chest:
                 case EquipmentSlot.Legs:
-                    stats["Stamina"] = baseStat;
-                    stats["Armor"] = baseStat * 2;
+                    stats.Stamina = baseStat;
+                    stats.Armor = baseStat * 2;
                     break;
                 case EquipmentSlot.Shoulders:
                 case EquipmentSlot.Hands:
                 case EquipmentSlot.Feet:
-                    stats["Stamina"] = baseStat / 2;
-                    stats["Armor"] = baseStat;
+                    stats.Stamina = baseStat / 2;
+                    stats.Armor = baseStat;
                     break;
                 case EquipmentSlot.MainHand:
-                    stats["AttackPower"] = baseStat;
-                    stats["Strength"] = baseStat / 2;
+                    stats.AttackPower = baseStat;
+                    stats.Strength = baseStat / 2;
                     break;
                 case EquipmentSlot.OffHand:
-                    stats["Armor"] = baseStat;
-                    stats["Stamina"] = baseStat / 2;
+                    stats.Armor = baseStat;
+                    stats.Stamina = baseStat / 2;
                     break;
                 case EquipmentSlot.Trinket1:
                 case EquipmentSlot.Trinket2:
                     // Random primary stat
-                    string[] primaryStats = { "Strength", "Intellect", "Stamina" };
-                    stats[primaryStats[Random.Range(0, primaryStats.Length)]] = baseStat;
+                    int statChoice = Random.Range(0, 3);
+                    switch (statChoice)
+                    {
+                        case 0: stats.Strength = baseStat; break;
+                        case 1: stats.Intellect = baseStat; break;
+                        case 2: stats.Stamina = baseStat; break;
+                    }
                     break;
             }
 

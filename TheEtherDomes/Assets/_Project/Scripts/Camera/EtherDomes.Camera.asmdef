@@ -1,0 +1,17 @@
+{
+    "name": "EtherDomes.Camera",
+    "rootNamespace": "EtherDomes.Camera",
+    "references": [
+        "Mirror",
+        "Unity.Cinemachine"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

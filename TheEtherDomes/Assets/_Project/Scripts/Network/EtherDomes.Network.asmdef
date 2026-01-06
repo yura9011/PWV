@@ -1,0 +1,21 @@
+{
+    "name": "EtherDomes.Network",
+    "rootNamespace": "EtherDomes.Network",
+    "references": [
+        "EtherDomes.Data",
+        "EtherDomes.Persistence",
+        "EtherDomes.Core",
+        "EtherDomes.Player",
+        "Mirror",
+        "Mirror.Transports"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

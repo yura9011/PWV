@@ -1,0 +1,14 @@
+{
+  "mcpServers": {
+    "smart-coding-mcp": {
+      "command": "node",
+      "args": [
+        "c:\\Users\\Alpha\\AppData\\Roaming\\npm\\node_modules\\smart-coding-mcp\\index.js",
+        "--workspace",
+        "d:\\tareas\\PWV\\Legacy"
+      ],
+      "disabled": false,
+      "autoApprove": ["a_semantic_search", "b_index_codebase"]
+    }
+  }
+}

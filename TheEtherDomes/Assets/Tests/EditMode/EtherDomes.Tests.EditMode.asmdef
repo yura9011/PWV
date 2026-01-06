@@ -1,0 +1,37 @@
+{
+    "name": "EtherDomes.Tests.EditMode",
+    "rootNamespace": "EtherDomes.Tests",
+    "references": [
+        "UnityEngine.TestRunner",
+        "UnityEditor.TestRunner",
+        "Unity.InputSystem",
+        "Unity.InputSystem.TestFramework",
+        "EtherDomes.Data",
+        "EtherDomes.Combat",
+        "EtherDomes.Classes",
+        "EtherDomes.Progression",
+        "EtherDomes.World",
+        "EtherDomes.Persistence",
+        "EtherDomes.Player",
+        "EtherDomes.Input",
+        "EtherDomes.Enemy",
+        "EtherDomes.Network",
+        "EtherDomes.UI",
+        "Mirror"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": true,
+    "precompiledReferences": [
+        "nunit.framework.dll"
+    ],
+    "autoReferenced": false,
+    "defineConstraints": [
+        "UNITY_INCLUDE_TESTS"
+    ],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

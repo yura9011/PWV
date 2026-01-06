@@ -1,0 +1,19 @@
+{
+    "name": "EtherDomes.Combat",
+    "rootNamespace": "EtherDomes.Combat",
+    "references": [
+        "EtherDomes.Data",
+        "Unity.InputSystem",
+        "EtherDomes.Input",
+        "Mirror"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

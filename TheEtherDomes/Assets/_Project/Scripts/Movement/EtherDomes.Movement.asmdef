@@ -1,0 +1,16 @@
+{
+    "name": "EtherDomes.Movement",
+    "rootNamespace": "EtherDomes.Movement",
+    "references": [
+        "Mirror"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

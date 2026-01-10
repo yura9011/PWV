@@ -1,0 +1,70 @@
+// Unity Class: AnimatorStateInfo
+// Documentation: https://docs.unity3d.com/ScriptReference/AnimatorStateInfo.html
+
+// Description: Runtime information on the current or next animation state, managed by an Animator.
+
+// Properties:
+// - fullPathHash: The full path hash for this state.
+// - length: Current duration of the state.
+// - loop: Is the state looping.
+// - normalizedTime: Normalized time of the State.
+// - shortNameHash: The hash is generated using Animator.StringToHash. The hash does not include the name of the parent layer.
+// - speed: The playback speed of the animation. 1 is the normal playback speed.
+// - speedMultiplier: The speed multiplier for this state.
+// - tagHash: The Tag of the State.
+
+// Methods:
+// - IsName(): Checks if name matches the name of the active state in the state machine.
+// - IsTag(): Checks whether the animation state has the specified tag.
+
+// Code Examples:
+// Example 1:
+//   // This script demonstrate using AnimatorStateInfo to modify a parameter during animation.
+//   // Ensure Animator has a "Run" state in Base Layer and a "SpeedMultiplier" parameter.
+//   
+//   using UnityEngine;
+//   
+//   [RequireComponent(typeof(Animator))]
+//   public class AnimatorStateInfoExample : MonoBehaviour
+//   {
+//       private Animator m_Animator;
+//       private readonly int m_RunStateHash = Animator.StringToHash("Base Layer.Run");
+//   
+//       void Start()
+//       {
+//           m_Animator = GetComponent<Animator>();
+//       }
+//   
+//       void Update()
+//       {
+//           // Retrieve the current animation state information
+//           AnimatorStateInfo stateInfo = m_Animator.GetCurrentAnimatorStateInfo(0);
+//   
+//           // Use the hashed name for comparison with the current state's full path hash
+//           if (stateInfo.fullPathHash == m_RunStateHash)
+//           {
+//               Debug.Log("Running state active. Normalized time: " + stateInfo.normalizedTime);
+//   
+//               // Perform actions based on the animation's progress
+//               if (stateInfo.normalizedTime > 0.5f && stateInfo.normalizedTime < 0.75f)
+//               {
+//                   Debug.Log("Halfway through the Run animation.");
+//                   m_Animator.SetFloat("SpeedMultiplier", 1.5f); // Adjust the playback speed
+//               }
+//           }
+//       }
+//   }
+
+// Pseudo-code representation of AnimatorStateInfo
+public class AnimatorStateInfo {
+    public var fullPathHash; // The full path hash for this state.
+    public var length; // Current duration of the state.
+    public var loop; // Is the state looping.
+    public var normalizedTime; // Normalized time of the State.
+    public var shortNameHash; // The hash is generated using Animator.StringToHash. The hash does not include the name of the parent layer.
+    public var speed; // The playback speed of the animation. 1 is the normal playback speed.
+    public var speedMultiplier; // The speed multiplier for this state.
+    public var tagHash; // The Tag of the State.
+    public void IsName(); // Checks if name matches the name of the active state in the state machine.
+    public void IsTag(); // Checks whether the animation state has the specified tag.
+}

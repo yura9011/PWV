@@ -1,0 +1,84 @@
+{
+  "name": "api_physics2d_SliderJoint2D",
+  "type": "api",
+  "description": "Joint that restricts the motion of a Rigidbody2D object to a single line.",
+  "content": "// Unity Class: SliderJoint2D\n// Documentation: https://docs.unity3d.com/ScriptReference/SliderJoint2D.html\n\n// Description: Joint that restricts the motion of a Rigidbody2D object to a single line.\n\n// Properties:\n// - angle: The angle of the line in space (in degrees).\n// - autoConfigureAngle: Should the angle be calculated automatically?\n// - jointSpeed: The current joint speed.\n// - jointTranslation: The current joint translation.\n// - limits: Restrictions on how far the joint can slide in each direction along the line.\n// - limitState: Gets the state of the joint limit.\n// - motor: Parameters for a motor force that is applied automatically to the Rigibody2D along the line.\n// - referenceAngle: The angle (in degrees) referenced between the two bodies used as the constraint for the joint.\n// - useLimits: Should motion limits be used?\n// - useMotor: Should a motor force be applied automatically to the Rigidbody2D?\n\n// Methods:\n// - GetMotorForce: Gets the motor force of the joint given the specified timestep.\n// - Destroy: Removes a GameObject, component, or asset.\n// - DestroyImmediate: Destroys the specified object immediately. Use with caution and in Edit mode only.\n// - DontDestroyOnLoad: Do not destroy the target Object when loading a new Scene.\n// - FindAnyObjectByType: Retrieves any active loaded object of Type type.\n// - FindFirstObjectByType: Retrieves the first active loaded object of Type type.\n// - FindObjectsByType: Retrieves a list of all loaded objects of Type type.\n// - Instantiate: Clones the object original and returns the clone.\n// - InstantiateAsync: Captures a snapshot of the original object (that must be related to some GameObject) and returns the\n\npublic class SliderJoint2D {\n    public var angle;\n    public var autoConfigureAngle;\n    public var jointSpeed;\n    public var jointTranslation;\n    public var limits;\n    public var limitState;\n    public var motor;\n    public var referenceAngle;\n    public var useLimits;\n    public var useMotor;\n    public void GetMotorForce();\n    public void Destroy();\n    public void DestroyImmediate();\n    public void DontDestroyOnLoad();\n    public void FindAnyObjectByType();\n    public void FindFirstObjectByType();\n    public void FindObjectsByType();\n    public void Instantiate();\n    public void InstantiateAsync();\n}",
+  "properties": [
+    {
+      "name": "angle",
+      "description": "The angle of the line in space (in degrees)."
+    },
+    {
+      "name": "autoConfigureAngle",
+      "description": "Should the angle be calculated automatically?"
+    },
+    {
+      "name": "jointSpeed",
+      "description": "The current joint speed."
+    },
+    {
+      "name": "jointTranslation",
+      "description": "The current joint translation."
+    },
+    {
+      "name": "limits",
+      "description": "Restrictions on how far the joint can slide in each direction along the line."
+    },
+    {
+      "name": "limitState",
+      "description": "Gets the state of the joint limit."
+    },
+    {
+      "name": "motor",
+      "description": "Parameters for a motor force that is applied automatically to the Rigibody2D along the line."
+    },
+    {
+      "name": "referenceAngle",
+      "description": "The angle (in degrees) referenced between the two bodies used as the constraint for the joint."
+    },
+    {
+      "name": "useLimits",
+      "description": "Should motion limits be used?"
+    },
+    {
+      "name": "useMotor",
+      "description": "Should a motor force be applied automatically to the Rigidbody2D?"
+    },
+    {
+      "name": "GetMotorForce",
+      "description": "Gets the motor force of the joint given the specified timestep."
+    },
+    {
+      "name": "Destroy",
+      "description": "Removes a GameObject, component, or asset."
+    },
+    {
+      "name": "DestroyImmediate",
+      "description": "Destroys the specified object immediately. Use with caution and in Edit mode only."
+    },
+    {
+      "name": "DontDestroyOnLoad",
+      "description": "Do not destroy the target Object when loading a new Scene."
+    },
+    {
+      "name": "FindAnyObjectByType",
+      "description": "Retrieves any active loaded object of Type type."
+    },
+    {
+      "name": "FindFirstObjectByType",
+      "description": "Retrieves the first active loaded object of Type type."
+    },
+    {
+      "name": "FindObjectsByType",
+      "description": "Retrieves a list of all loaded objects of Type type."
+    },
+    {
+      "name": "Instantiate",
+      "description": "Clones the object original and returns the clone."
+    },
+    {
+      "name": "InstantiateAsync",
+      "description": "Captures a snapshot of the original object (that must be related to some GameObject) and returns the"
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "name": "api_animation_RuntimeAnimatorController",
+  "type": "api",
+  "description": "A representation of the Animator Controller, optimized for runtime.",
+  "content": "// Unity Class: RuntimeAnimatorController\n// Documentation: https://docs.unity3d.com/ScriptReference/RuntimeAnimatorController.html\n\n// Description: A representation of the Animator Controller, optimized for runtime.\n\n// Properties:\n// - animationClips: Retrieves all AnimationClip used by the controller.\n\n// Methods:\n// - GetInstanceID: Gets the instance ID of the object.\n// - ToString: Returns the name of the object.\n// - Destroy: Removes a GameObject, component, or asset.\n// - DestroyImmediate: Destroys the specified object immediately. Use with caution and in Edit mode only.\n// - DontDestroyOnLoad: Do not destroy the target Object when loading a new Scene.\n// - FindAnyObjectByType: Retrieves any active loaded object of Type type.\n// - FindFirstObjectByType: Retrieves the first active loaded object of Type type.\n// - FindObjectsByType: Retrieves a list of all loaded objects of Type type.\n// - Instantiate: Clones the object original and returns the clone.\n// - InstantiateAsync: Captures a snapshot of the original object (that must be related to some GameObject) and returns the\n\npublic class RuntimeAnimatorController {\n    public var animationClips;\n    public void GetInstanceID();\n    public void ToString();\n    public void Destroy();\n    public void DestroyImmediate();\n    public void DontDestroyOnLoad();\n    public void FindAnyObjectByType();\n    public void FindFirstObjectByType();\n    public void FindObjectsByType();\n    public void Instantiate();\n    public void InstantiateAsync();\n}",
+  "properties": [
+    {
+      "name": "animationClips",
+      "description": "Retrieves all AnimationClip used by the controller."
+    },
+    {
+      "name": "GetInstanceID",
+      "description": "Gets the instance ID of the object."
+    },
+    {
+      "name": "ToString",
+      "description": "Returns the name of the object."
+    },
+    {
+      "name": "Destroy",
+      "description": "Removes a GameObject, component, or asset."
+    },
+    {
+      "name": "DestroyImmediate",
+      "description": "Destroys the specified object immediately. Use with caution and in Edit mode only."
+    },
+    {
+      "name": "DontDestroyOnLoad",
+      "description": "Do not destroy the target Object when loading a new Scene."
+    },
+    {
+      "name": "FindAnyObjectByType",
+      "description": "Retrieves any active loaded object of Type type."
+    },
+    {
+      "name": "FindFirstObjectByType",
+      "description": "Retrieves the first active loaded object of Type type."
+    },
+    {
+      "name": "FindObjectsByType",
+      "description": "Retrieves a list of all loaded objects of Type type."
+    },
+    {
+      "name": "Instantiate",
+      "description": "Clones the object original and returns the clone."
+    },
+    {
+      "name": "InstantiateAsync",
+      "description": "Captures a snapshot of the original object (that must be related to some GameObject) and returns the"
+    }
+  ]
+}

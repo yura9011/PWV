@@ -1,0 +1,3703 @@
+[
+  {
+    "class_name": "GameObject",
+    "description": "Base class for all objects that can exist in a scene. Add components to a GameObject to control its appearance and behavior.",
+    "properties": [
+      {
+        "name": "activeInHierarchy",
+        "description": "The active state of the GameObject in the Scene hierarchy. True if active, false if inactive. (Read Only)"
+      },
+      {
+        "name": "activeSelf",
+        "description": "The local active state of the GameObject. True if active, false if inactive. (Read Only)"
+      },
+      {
+        "name": "isStatic",
+        "description": "Whether there are any Static Editor Flags set for the GameObject."
+      },
+      {
+        "name": "layer",
+        "description": "Integer identifying the layer the GameObject is assigned to."
+      },
+      {
+        "name": "scene",
+        "description": "The Scene that contains the GameObject."
+      },
+      {
+        "name": "sceneCullingMask",
+        "description": "The Scene culling mask defined for the GameObject. (Read Only)"
+      },
+      {
+        "name": "tag",
+        "description": "The tag assigned to the GameObject."
+      },
+      {
+        "name": "transform",
+        "description": "The Transform attached to the GameObject (Read Only)."
+      },
+      {
+        "name": "transformHandle",
+        "description": "The TransformHandle of the GameObject (Read Only)."
+      }
+    ],
+    "methods": [
+      {
+        "name": "AddComponent",
+        "description": "Adds a component of the specified type to the GameObject."
+      },
+      {
+        "name": "BroadcastMessage",
+        "description": "Calls the specified method on every MonoBehaviour attached to the GameObject or any of its children."
+      },
+      {
+        "name": "CompareTag",
+        "description": "Checks if the specified tag is attached to the GameObject."
+      },
+      {
+        "name": "GetComponent",
+        "description": "Retrieves a reference to a component of the specified type, by providing the component type as a type parameter to the generic method."
+      },
+      {
+        "name": "GetComponentAtIndex",
+        "description": "Retrieves a reference to a component at a specified index of the GameObject's array of components."
+      },
+      {
+        "name": "GetComponentCount",
+        "description": "Retrieves the total number of components currently attached to the GameObject."
+      },
+      {
+        "name": "GetComponentInChildren",
+        "description": "Retrieves a reference to a component of type T on the specified GameObject, or any child of the GameObject."
+      },
+      {
+        "name": "GetComponentIndex",
+        "description": "Retrieves the index of the specified component in the array of components attached to the GameObject."
+      },
+      {
+        "name": "GetComponentInParent",
+        "description": "Retrieves a reference to a component of type T on the specified GameObject, or any parent of the GameObject."
+      },
+      {
+        "name": "GetComponents",
+        "description": "Retrieves references to all components of type T on the specified GameObject."
+      },
+      {
+        "name": "GetComponentsInChildren",
+        "description": "Retrieves references to all components of type T on the specified GameObject, and any child of the GameObject."
+      },
+      {
+        "name": "GetComponentsInParent",
+        "description": "Retrieves references to all components of type T on the specified GameObject, and any parent of the GameObject."
+      },
+      {
+        "name": "SendMessage",
+        "description": "Calls the specified method on every MonoBehaviour attached to the GameObject."
+      },
+      {
+        "name": "SendMessageUpwards",
+        "description": "Calls the specified method on every MonoBehaviour attached to the GameObject and on every ancestor of the behaviour."
+      },
+      {
+        "name": "SetActive",
+        "description": "Activates or deactivates the GameObject locally, according to the value of the supplied parameter."
+      },
+      {
+        "name": "TryGetComponent",
+        "description": "Retrieves the component of the specified type, if it exists."
+      }
+    ],
+    "constructors": [
+      {
+        "name": "GameObject",
+        "description": "Creates a new GameObject, with optional parameters to specify a name and set of components to attach."
+      }
+    ],
+    "examples": [
+      "using UnityEngine;  public class Example_GameObject : MonoBehaviour\r\n  {\r\n      private void Start()\r\n      {\r\n          GameObject myExampleGO = new GameObject(\"myExampleGO\", typeof(AudioSource));\r\n      }\r\n  }"
+    ],
+    "url": "https://docs.unity3d.com/ScriptReference/GameObject.html"
+  },
+  {
+    "class_name": "Transform",
+    "description": "Position, rotation and scale of an object.",
+    "properties": [
+      {
+        "name": "childCount",
+        "description": "The number of children the parent Transform has."
+      },
+      {
+        "name": "eulerAngles",
+        "description": "The rotation as Euler angles in degrees."
+      },
+      {
+        "name": "forward",
+        "description": "Returns a normalized vector representing the blue axis of the transform in world space."
+      },
+      {
+        "name": "hasChanged",
+        "description": "Has the transform changed since the last time the flag was set to 'false'?"
+      },
+      {
+        "name": "hierarchyCapacity",
+        "description": "The transform capacity of the transform's hierarchy data structure."
+      },
+      {
+        "name": "hierarchyCount",
+        "description": "The number of transforms in the transform's hierarchy data structure."
+      },
+      {
+        "name": "localEulerAngles",
+        "description": "The rotation as Euler angles in degrees relative to the parent transform's rotation."
+      },
+      {
+        "name": "localPosition",
+        "description": "Position of the transform relative to the parent transform."
+      },
+      {
+        "name": "localRotation",
+        "description": "The rotation of the transform relative to the transform rotation of the parent."
+      },
+      {
+        "name": "localScale",
+        "description": "The scale of the transform relative to the GameObjects parent."
+      },
+      {
+        "name": "localToWorldMatrix",
+        "description": "Matrix that transforms a point from local space into world space (Read Only)."
+      },
+      {
+        "name": "lossyScale",
+        "description": "The global scale of the object (Read Only)."
+      },
+      {
+        "name": "parent",
+        "description": "The parent of the transform."
+      },
+      {
+        "name": "position",
+        "description": "The world space position of the Transform."
+      },
+      {
+        "name": "right",
+        "description": "The red axis of the transform in world space."
+      },
+      {
+        "name": "root",
+        "description": "Returns the topmost transform in the hierarchy."
+      },
+      {
+        "name": "rotation",
+        "description": "A Quaternion that stores the rotation of the Transform in world space."
+      },
+      {
+        "name": "up",
+        "description": "The green axis of the transform in world space."
+      },
+      {
+        "name": "worldToLocalMatrix",
+        "description": "Matrix that transforms a point from world space into local space (Read Only)."
+      }
+    ],
+    "methods": [
+      {
+        "name": "DetachChildren",
+        "description": "Unparents all of the target object's children."
+      },
+      {
+        "name": "Find",
+        "description": "Finds a child by name n and returns it."
+      },
+      {
+        "name": "GetChild",
+        "description": "Returns a transform child by index."
+      },
+      {
+        "name": "GetLocalPositionAndRotation",
+        "description": "Updates the value of the out parameters localPosition and localRotation with the transform's current position and rotation in local space (that is, relative to its parent's transform)."
+      },
+      {
+        "name": "GetPositionAndRotation",
+        "description": "Updates the value of the out parameters position and rotation with the transform's current position and rotation in world space (that is, relative to the scene's origin coordinates)."
+      },
+      {
+        "name": "GetSiblingIndex",
+        "description": "Gets the index of this Transform, relative to its siblings."
+      },
+      {
+        "name": "InverseTransformDirection",
+        "description": "Transforms a direction from world space to local space. The opposite of Transform.TransformDirection."
+      },
+      {
+        "name": "InverseTransformDirections",
+        "description": "Transforms multiple directions from world space to local space overwriting each original position with the transformed version. The opposite of Transform.TransformDirections."
+      },
+      {
+        "name": "InverseTransformPoint",
+        "description": "Transforms position from world space to local space."
+      },
+      {
+        "name": "InverseTransformPoints",
+        "description": "Transforms multiple positions from world space to local space overwriting each original position with the transformed version."
+      },
+      {
+        "name": "InverseTransformVector",
+        "description": "Transforms a vector from world space to local space. The opposite of Transform.TransformVector."
+      },
+      {
+        "name": "InverseTransformVectors",
+        "description": "Transforms multiple vectors from world space to local space overwriting each original position with the transformed version. The opposite of Transform.TransformVectors."
+      },
+      {
+        "name": "IsChildOf",
+        "description": "Is this transform a child of parent?"
+      },
+      {
+        "name": "LookAt",
+        "description": "Rotates the transform so the forward vector points at /target/'s current position."
+      },
+      {
+        "name": "Rotate",
+        "description": "Use Transform.Rotate to rotate GameObjects in a variety of ways. The rotation is often provided as an Euler angle and not a Quaternion."
+      },
+      {
+        "name": "RotateAround",
+        "description": "Rotates the transform about axis passing through point in world coordinates by angle degrees."
+      },
+      {
+        "name": "SetAsFirstSibling",
+        "description": "Move the transform to the start of the local transform list."
+      },
+      {
+        "name": "SetAsLastSibling",
+        "description": "Move the transform to the end of the local transform list."
+      },
+      {
+        "name": "SetLocalPositionAndRotation",
+        "description": "Sets the position and rotation of the Transform component in local space (i.e. relative to its parent transform)."
+      },
+      {
+        "name": "SetParent",
+        "description": "Set the parent of the transform."
+      },
+      {
+        "name": "SetPositionAndRotation",
+        "description": "Sets the world space position and rotation of the Transform component."
+      },
+      {
+        "name": "SetSiblingIndex",
+        "description": "Sets the sibling index."
+      },
+      {
+        "name": "TransformDirection",
+        "description": "Transforms direction from local space to world space."
+      },
+      {
+        "name": "TransformDirections",
+        "description": "Transforms multiple directions from local space to world space overwriting each original direction with the transformed version."
+      },
+      {
+        "name": "TransformPoint",
+        "description": "Transforms position from local space to world space."
+      },
+      {
+        "name": "TransformPoints",
+        "description": "Transforms multiple points from local space to world space overwriting each original point with the transformed version."
+      },
+      {
+        "name": "TransformVector",
+        "description": "Transforms vector from local space to world space."
+      },
+      {
+        "name": "TransformVectors",
+        "description": "Transforms multiple vectors from local space to world space overwriting each original vector with the transformed version."
+      },
+      {
+        "name": "Translate",
+        "description": "Moves the transform along its x, y, and z axes by the values of the translation parameter's x, y, and z components respectively."
+      }
+    ],
+    "constructors": [],
+    "examples": [
+      "using UnityEngine;public class Example : MonoBehaviour\r\n{\r\n    // Moves all transform children 10 units upwards!\r\n    void Start()\r\n    {\r\n        foreach (Transform child in transform)\r\n        {\r\n            child.position += Vector3.up * 10.0f;\r\n        }\r\n    }\r\n}"
+    ],
+    "url": "https://docs.unity3d.com/ScriptReference/Transform.html"
+  },
+  {
+    "class_name": "Component",
+    "description": "Base class for everything attached to a GameObject.",
+    "properties": [
+      {
+        "name": "gameObject",
+        "description": "The game object this component is attached to. A component is always attached to a game object."
+      },
+      {
+        "name": "tag",
+        "description": "The tag of this game object."
+      },
+      {
+        "name": "transform",
+        "description": "The Transform attached to this GameObject."
+      },
+      {
+        "name": "transformHandle",
+        "description": "The TransformHandle of this GameObject."
+      }
+    ],
+    "methods": [
+      {
+        "name": "BroadcastMessage",
+        "description": "Calls the method named methodName on every MonoBehaviour in this game object or any of its children."
+      },
+      {
+        "name": "CompareTag",
+        "description": "Checks the GameObject's tag against the defined tag."
+      },
+      {
+        "name": "GetComponent",
+        "description": "Gets a reference to a component of type T on the same GameObject as the component specified."
+      },
+      {
+        "name": "GetComponentInChildren",
+        "description": "Gets a reference to a component of type T on the same GameObject as the component specified, or any child of the GameObject."
+      },
+      {
+        "name": "GetComponentIndex",
+        "description": "Gets the index of the component on its parent GameObject."
+      },
+      {
+        "name": "GetComponentInParent",
+        "description": "Gets a reference to a component of type T on the same GameObject as the component specified, or any parent of the GameObject."
+      },
+      {
+        "name": "GetComponents",
+        "description": "Gets references to all components of type T on the same GameObject as the component specified."
+      },
+      {
+        "name": "GetComponentsInChildren",
+        "description": "Gets references to all components of type T on the same GameObject as the component specified, and any child of the GameObject."
+      },
+      {
+        "name": "GetComponentsInParent",
+        "description": "Gets references to all components of type T on the same GameObject as the component specified, and any parent of the GameObject."
+      },
+      {
+        "name": "SendMessage",
+        "description": "Calls the method named methodName on every MonoBehaviour in this game object."
+      },
+      {
+        "name": "SendMessageUpwards",
+        "description": "Calls the method named methodName on every MonoBehaviour in this game object and on every ancestor of the behaviour."
+      },
+      {
+        "name": "TryGetComponent",
+        "description": "Gets the component of the specified type, if it exists."
+      }
+    ],
+    "constructors": [],
+    "examples": [],
+    "url": "https://docs.unity3d.com/ScriptReference/Component.html"
+  },
+  {
+    "class_name": "MonoBehaviour",
+    "description": "MonoBehaviour is a base class that many Unity scripts derive from.",
+    "properties": [
+      {
+        "name": "destroyCancellationToken",
+        "description": "Cancellation token raised when the MonoBehaviour is destroyed (Read Only)."
+      },
+      {
+        "name": "didAwake",
+        "description": "Returns a boolean value which represents if Awake was called."
+      },
+      {
+        "name": "didStart",
+        "description": "Returns a boolean value which represents if Start was called."
+      },
+      {
+        "name": "runInEditMode",
+        "description": "Allow a specific instance of a MonoBehaviour to run in edit mode (only available in the editor)."
+      },
+      {
+        "name": "useGUILayout",
+        "description": "Disabling this lets you skip the GUI layout phase."
+      }
+    ],
+    "methods": [
+      {
+        "name": "CancelInvoke",
+        "description": "Cancels all Invoke calls on this MonoBehaviour."
+      },
+      {
+        "name": "Invoke",
+        "description": "Invokes the method methodName in time seconds."
+      },
+      {
+        "name": "InvokeRepeating",
+        "description": "Invokes the specified method after a specified delay, then repeatedly at the specified rate."
+      },
+      {
+        "name": "IsInvoking",
+        "description": "Is any invoke on methodName pending?"
+      },
+      {
+        "name": "StartCoroutine",
+        "description": "Starts a coroutine."
+      },
+      {
+        "name": "StopAllCoroutines",
+        "description": "Stops all coroutines running on this MonoBehaviour."
+      },
+      {
+        "name": "StopCoroutine",
+        "description": "Stops the first coroutine named methodName, or the coroutine stored in routine running on this behaviour."
+      }
+    ],
+    "constructors": [],
+    "examples": [],
+    "url": "https://docs.unity3d.com/ScriptReference/MonoBehaviour.html"
+  },
+  {
+    "class_name": "Camera",
+    "description": "A Camera is a device through which the player views the world.",
+    "properties": [
+      {
+        "name": "activeTexture",
+        "description": "Gets the temporary RenderTexture target for this Camera."
+      },
+      {
+        "name": "actualRenderingPath",
+        "description": "The rendering path that is currently being used (Read Only)."
+      },
+      {
+        "name": "allowDynamicResolution",
+        "description": "Dynamic Resolution Scaling."
+      },
+      {
+        "name": "allowHDR",
+        "description": "High dynamic range rendering."
+      },
+      {
+        "name": "allowMSAA",
+        "description": "MSAA rendering."
+      },
+      {
+        "name": "anamorphism",
+        "description": "The camera anamorphism. To use this property, enable UsePhysicalProperties."
+      },
+      {
+        "name": "aperture",
+        "description": "The camera aperture. To use this property, enable UsePhysicalProperties."
+      },
+      {
+        "name": "areVRStereoViewMatricesWithinSingleCullTolerance",
+        "description": "Determines whether the stereo view matrices are suitable to allow for a single pass cull."
+      },
+      {
+        "name": "aspect",
+        "description": "The aspect ratio (width divided by height)."
+      },
+      {
+        "name": "backgroundColor",
+        "description": "The color with which the screen will be cleared."
+      },
+      {
+        "name": "barrelClipping",
+        "description": "The camera barrel clipping. To use this property, enable UsePhysicalProperties."
+      },
+      {
+        "name": "bladeCount",
+        "description": "The blade count in the lens of the camera. To use this property, enable UsePhysicalProperties."
+      },
+      {
+        "name": "cameraToWorldMatrix",
+        "description": "Matrix that transforms from camera space to world space (Read Only)."
+      },
+      {
+        "name": "cameraType",
+        "description": "Identifies what kind of camera this is, using the CameraType enum."
+      },
+      {
+        "name": "clearFlags",
+        "description": "How the camera clears the background."
+      },
+      {
+        "name": "clearStencilAfterLightingPass",
+        "description": "Should the camera clear the stencil buffer after the deferred light pass?"
+      },
+      {
+        "name": "commandBufferCount",
+        "description": "Number of command buffers set up on this camera (Read Only)."
+      },
+      {
+        "name": "cullingMask",
+        "description": "This is used to render parts of the Scene selectively."
+      },
+      {
+        "name": "cullingMatrix",
+        "description": "Sets a custom matrix for the camera to use for all culling queries."
+      },
+      {
+        "name": "curvature",
+        "description": "The curvature of the blades. To use this property, enable UsePhysicalProperties."
+      },
+      {
+        "name": "depth",
+        "description": "Camera's depth in the camera rendering order."
+      },
+      {
+        "name": "depthTextureMode",
+        "description": "How and if camera generates a depth texture."
+      },
+      {
+        "name": "eventMask",
+        "description": "Mask to select which layers can trigger events on the camera."
+      },
+      {
+        "name": "farClipPlane",
+        "description": "The distance of the far clipping plane from the Camera, in world units."
+      },
+      {
+        "name": "fieldOfView",
+        "description": "The vertical field of view of the Camera, in degrees."
+      },
+      {
+        "name": "focalLength",
+        "description": "The camera focal length, expressed in millimeters. To use this property, enable UsePhysicalProperties."
+      },
+      {
+        "name": "focusDistance",
+        "description": "The focus distance of the lens. To use this property, enable UsePhysicalProperties."
+      },
+      {
+        "name": "forceIntoRenderTexture",
+        "description": "Should camera rendering be forced into a RenderTexture."
+      },
+      {
+        "name": "gateFit",
+        "description": "There are two gates for a camera, the sensor gate and the resolution gate. The physical camera sensor gate is defined by the sensorSize property, the resolution gate is defined by the render target area."
+      },
+      {
+        "name": "iso",
+        "description": "The sensor sensitivity of the camera. To use this property, enable UsePhysicalProperties."
+      },
+      {
+        "name": "isProcessingRenderRequest",
+        "description": "Whether the camera is currently processing a render request."
+      },
+      {
+        "name": "layerCullDistances",
+        "description": "Per-layer culling distances."
+      },
+      {
+        "name": "layerCullSpherical",
+        "description": "How to perform per-layer culling for a Camera."
+      },
+      {
+        "name": "lensShift",
+        "description": "The lens offset of the camera. The lens shift is relative to the sensor size. For example, a lens shift of 0.5 offsets the sensor by half its horizontal size."
+      },
+      {
+        "name": "nearClipPlane",
+        "description": "The distance of the near clipping plane from the Camera, in world units."
+      },
+      {
+        "name": "nonJitteredProjectionMatrix",
+        "description": "Get or set the raw projection matrix with no camera offset (no jittering)."
+      },
+      {
+        "name": "opaqueSortMode",
+        "description": "Opaque object sorting mode."
+      },
+      {
+        "name": "orthographic",
+        "description": "Is the camera orthographic (true) or perspective (false)?"
+      },
+      {
+        "name": "orthographicSize",
+        "description": "Camera's half-size when in orthographic mode."
+      },
+      {
+        "name": "overrideSceneCullingMask",
+        "description": "Sets the culling mask used to determine which objects from which Scenes to draw. See EditorSceneManager.SetSceneCullingMask."
+      },
+      {
+        "name": "pixelHeight",
+        "description": "How tall is the camera in pixels (not accounting for dynamic resolution scaling) (Read Only)."
+      },
+      {
+        "name": "pixelRect",
+        "description": "Where on the screen is the camera rendered in pixel coordinates."
+      },
+      {
+        "name": "pixelWidth",
+        "description": "How wide is the camera in pixels (not accounting for dynamic resolution scaling) (Read Only)."
+      },
+      {
+        "name": "previousViewProjectionMatrix",
+        "description": "Get the view projection matrix used on the last frame."
+      },
+      {
+        "name": "projectionMatrix",
+        "description": "The 4x4 matrix that's used to transform world space coordinates to clip space coordinates."
+      },
+      {
+        "name": "rect",
+        "description": "Where on the screen is the camera rendered in normalized coordinates."
+      },
+      {
+        "name": "renderCloudsInSceneView",
+        "description": "Whether Unity renders clouds in the Scene view for this camera."
+      },
+      {
+        "name": "renderingPath",
+        "description": "The rendering path that should be used, if possible."
+      },
+      {
+        "name": "scaledPixelHeight",
+        "description": "How tall is the camera in pixels (accounting for dynamic resolution scaling) (Read Only)."
+      },
+      {
+        "name": "scaledPixelWidth",
+        "description": "How wide is the camera in pixels (accounting for dynamic resolution scaling) (Read Only)."
+      },
+      {
+        "name": "scene",
+        "description": "If not null, the camera will only render the contents of the specified Scene."
+      },
+      {
+        "name": "sensorSize",
+        "description": "The size of the camera sensor, expressed in millimeters."
+      },
+      {
+        "name": "shutterSpeed",
+        "description": "The exposure time of the camera, in seconts. To use this property, enable UsePhysicalProperties."
+      },
+      {
+        "name": "stereoActiveEye",
+        "description": "Returns the eye that is currently rendering. If called when stereo is not enabled it will return Camera.MonoOrStereoscopicEye.Mono. If called during a camera rendering callback such as OnRenderImage it will return the currently rendering eye. If called outside of a rendering callback and stereo is enabled, it will return the default eye which is Camera.MonoOrStereoscopicEye.Left."
+      },
+      {
+        "name": "stereoConvergence",
+        "description": "Distance to a point where virtual eyes converge."
+      },
+      {
+        "name": "stereoEnabled",
+        "description": "Stereoscopic rendering."
+      },
+      {
+        "name": "stereoSeparation",
+        "description": "The distance between the virtual eyes. Use this to query or set the current eye separation. Note that most VR devices provide this value, in which case setting the value will have no effect."
+      },
+      {
+        "name": "stereoTargetEye",
+        "description": "Defines which eye of a VR display the Camera renders into."
+      },
+      {
+        "name": "targetDisplay",
+        "description": "Set the target display for this Camera."
+      },
+      {
+        "name": "targetTexture",
+        "description": "Destination render texture."
+      },
+      {
+        "name": "transparencySortAxis",
+        "description": "An axis that describes the direction along which the distances of objects are measured for the purpose of sorting."
+      },
+      {
+        "name": "transparencySortMode",
+        "description": "Transparent object sorting mode."
+      },
+      {
+        "name": "useJitteredProjectionMatrixForTransparentRendering",
+        "description": "Should the jittered matrix be used for transparency rendering?"
+      },
+      {
+        "name": "useOcclusionCulling",
+        "description": "Whether or not the Camera will use occlusion culling during rendering."
+      },
+      {
+        "name": "usePhysicalProperties",
+        "description": "Enable usePhysicalProperties to use physical camera properties to compute the field of view and the frustum."
+      },
+      {
+        "name": "velocity",
+        "description": "Get the world-space speed of the camera (Read Only)."
+      },
+      {
+        "name": "worldToCameraMatrix",
+        "description": "Matrix that transforms from world to camera space."
+      }
+    ],
+    "methods": [
+      {
+        "name": "AddCommandBuffer",
+        "description": "Add a command buffer to be executed at a specified place."
+      },
+      {
+        "name": "AddCommandBufferAsync",
+        "description": "Adds a command buffer to the GPU's async compute queues and executes that command buffer when graphics processing reaches a given point."
+      },
+      {
+        "name": "CalculateFrustumCorners",
+        "description": "Given viewport coordinates, calculates the view space vectors pointing to the four frustum corners at the specified camera depth."
+      },
+      {
+        "name": "CalculateObliqueMatrix",
+        "description": "Calculates and returns oblique near-plane projection matrix."
+      },
+      {
+        "name": "CopyFrom",
+        "description": "Makes this camera's settings match other camera."
+      },
+      {
+        "name": "CopyStereoDeviceProjectionMatrixToNonJittered",
+        "description": "Sets the non-jittered projection matrix, sourced from the VR SDK."
+      },
+      {
+        "name": "GetCommandBuffers",
+        "description": "Get command buffers to be executed at a specified place. This API is only available with the Built-in renderer."
+      },
+      {
+        "name": "GetGateFittedFieldOfView",
+        "description": "Retrieves the effective vertical field of view of the camera, including GateFit. Fitting the sensor gate and the resolution gate has an impact on the final field of view. If the sensor gate aspect ratio is the same as the resolution gate aspect ratio or if the camera is not in physical mode, then this method returns the same value as the fieldofview property."
+      },
+      {
+        "name": "GetGateFittedLensShift",
+        "description": "Retrieves the effective lens offset of the camera, including GateFit. Fitting the sensor gate and the resolution gate has an impact on the final obliqueness of the projection. If the sensor gate aspect ratio is the same as the resolution gate aspect ratio, then this method returns the same value as the lenshift property. If the camera is not in physical mode, then this methods returns Vector2.zero."
+      },
+      {
+        "name": "GetStereoNonJitteredProjectionMatrix",
+        "description": "Gets the non-jittered projection matrix of a specific left or right stereoscopic eye."
+      },
+      {
+        "name": "GetStereoProjectionMatrix",
+        "description": "Gets the projection matrix of a specific left or right stereoscopic eye."
+      },
+      {
+        "name": "GetStereoViewMatrix",
+        "description": "Gets the left or right view matrix of a specific stereoscopic eye."
+      },
+      {
+        "name": "RemoveAllCommandBuffers",
+        "description": "Remove all command buffers set on this camera."
+      },
+      {
+        "name": "RemoveCommandBuffer",
+        "description": "Remove command buffer from execution at a specified place."
+      },
+      {
+        "name": "RemoveCommandBuffers",
+        "description": "Remove command buffers from execution at a specified place."
+      },
+      {
+        "name": "Render",
+        "description": "Render the camera manually."
+      },
+      {
+        "name": "RenderToCubemap",
+        "description": "Render into a static cubemap from this camera."
+      },
+      {
+        "name": "RenderWithShader",
+        "description": "Render the camera with shader replacement."
+      },
+      {
+        "name": "Reset",
+        "description": "Revert all camera parameters to default."
+      },
+      {
+        "name": "ResetAspect",
+        "description": "Revert the aspect ratio to the screen's aspect ratio."
+      },
+      {
+        "name": "ResetCullingMatrix",
+        "description": "Make culling queries reflect the camera's built in parameters."
+      },
+      {
+        "name": "ResetProjectionMatrix",
+        "description": "Make the projection reflect normal camera's parameters."
+      },
+      {
+        "name": "ResetReplacementShader",
+        "description": "Remove shader replacement from camera."
+      },
+      {
+        "name": "ResetStereoProjectionMatrices",
+        "description": "Reset the camera to using the Unity computed projection matrices for all stereoscopic eyes."
+      },
+      {
+        "name": "ResetStereoViewMatrices",
+        "description": "Reset the camera to using the Unity computed view matrices for all stereoscopic eyes."
+      },
+      {
+        "name": "ResetTransparencySortSettings",
+        "description": "Resets this Camera's transparency sort settings to the default. Default transparency settings are taken from GraphicsSettings instead of directly from this Camera."
+      },
+      {
+        "name": "ResetWorldToCameraMatrix",
+        "description": "Make the rendering position reflect the camera's position in the Scene."
+      },
+      {
+        "name": "ScreenPointToRay",
+        "description": "Returns a ray going from camera through a screen point."
+      },
+      {
+        "name": "ScreenToViewportPoint",
+        "description": "Transforms position from screen space into viewport space."
+      },
+      {
+        "name": "ScreenToWorldPoint",
+        "description": "Transforms a point from screen space into world space, where world space is defined as the coordinate system at the very top of your game's hierarchy."
+      },
+      {
+        "name": "SetReplacementShader",
+        "description": "Make the camera render with shader replacement."
+      },
+      {
+        "name": "SetStereoProjectionMatrix",
+        "description": "Sets a custom projection matrix for a specific stereoscopic eye."
+      },
+      {
+        "name": "SetStereoViewMatrix",
+        "description": "Sets a custom view matrix for a specific stereoscopic eye."
+      },
+      {
+        "name": "SetTargetBuffers",
+        "description": "Sets the Camera to render to the chosen buffers of one or more RenderTextures."
+      },
+      {
+        "name": "SubmitRenderRequest",
+        "description": "Submits a render request to the camera outside of Unity render loop."
+      },
+      {
+        "name": "TryGetCullingParameters",
+        "description": "Get culling parameters for a camera."
+      },
+      {
+        "name": "ViewportPointToRay",
+        "description": "Returns a ray going from camera through a viewport point."
+      },
+      {
+        "name": "ViewportToScreenPoint",
+        "description": "Transforms position from viewport space into screen space."
+      },
+      {
+        "name": "ViewportToWorldPoint",
+        "description": "Transforms position from viewport space into world space."
+      },
+      {
+        "name": "WorldToScreenPoint",
+        "description": "Transforms position from world space into screen space."
+      },
+      {
+        "name": "WorldToViewportPoint",
+        "description": "Transforms position from world space into viewport space."
+      }
+    ],
+    "constructors": [],
+    "examples": [],
+    "url": "https://docs.unity3d.com/ScriptReference/Camera.html"
+  },
+  {
+    "class_name": "Renderer",
+    "description": "General functionality for all renderers.",
+    "properties": [
+      {
+        "name": "allowOcclusionWhenDynamic",
+        "description": "Controls if dynamic occlusion culling should be performed for this renderer."
+      },
+      {
+        "name": "bounds",
+        "description": "The bounding box of the renderer in world space."
+      },
+      {
+        "name": "enabled",
+        "description": "Makes the rendered 3D object visible if enabled."
+      },
+      {
+        "name": "forceMeshLod",
+        "description": "Force a specific Mesh LOD level for this renderer if the mesh has Mesh LODs. If the value is -1, Unity uses the default Mesh LOD selection method."
+      },
+      {
+        "name": "forceRenderingOff",
+        "description": "Allows turning off rendering for a specific component."
+      },
+      {
+        "name": "isLOD0",
+        "description": "Is the renderer the first LOD level in its group."
+      },
+      {
+        "name": "isPartOfStaticBatch",
+        "description": "Indicates whether the renderer is part of a static batch with other renderers."
+      },
+      {
+        "name": "isVisible",
+        "description": "Is this renderer visible in any camera? (Read Only)"
+      },
+      {
+        "name": "lightmapIndex",
+        "description": "The index of the baked lightmap applied to this renderer."
+      },
+      {
+        "name": "lightmapScaleOffset",
+        "description": "The UV scale & offset used for a lightmap."
+      },
+      {
+        "name": "lightProbeProxyVolumeOverride",
+        "description": "If set, the Renderer will use the Light Probe Proxy Volume component attached to the source GameObject."
+      },
+      {
+        "name": "lightProbeUsage",
+        "description": "The light probe interpolation type."
+      },
+      {
+        "name": "localBounds",
+        "description": "The bounding box of the renderer in local space."
+      },
+      {
+        "name": "localToWorldMatrix",
+        "description": "Matrix that transforms a point from local space into world space (Read Only)."
+      },
+      {
+        "name": "LODGroup",
+        "description": "The LODGroup for this Renderer."
+      },
+      {
+        "name": "material",
+        "description": "Returns the first instantiated Material assigned to the renderer."
+      },
+      {
+        "name": "materials",
+        "description": "Returns all the instantiated materials of this object."
+      },
+      {
+        "name": "meshLodSelectionBias",
+        "description": "Bias to add to the calculated value when selecting a Mesh LOD level."
+      },
+      {
+        "name": "motionVectorGenerationMode",
+        "description": "Specifies the mode for motion vector rendering."
+      },
+      {
+        "name": "probeAnchor",
+        "description": "If set, Renderer will use this Transform's position to find the light or reflection probe."
+      },
+      {
+        "name": "rayTracingAccelerationStructureBuildFlags",
+        "description": "The flags Unity uses when it builds acceleration structures associated with geometry used by renderers."
+      },
+      {
+        "name": "rayTracingAccelerationStructureBuildFlagsOverride",
+        "description": "Whether to override the default build flags specified when creating a RayTracingAccelerationStructure."
+      },
+      {
+        "name": "rayTracingMode",
+        "description": "Describes how this renderer is updated for ray tracing."
+      },
+      {
+        "name": "realtimeLightmapIndex",
+        "description": "The index of the real-time lightmap applied to this renderer."
+      },
+      {
+        "name": "realtimeLightmapScaleOffset",
+        "description": "The UV scale & offset used for a real-time lightmap."
+      },
+      {
+        "name": "receiveShadows",
+        "description": "Does this object receive shadows?"
+      },
+      {
+        "name": "reflectionProbeUsage",
+        "description": "Should reflection probes be used for this Renderer?"
+      },
+      {
+        "name": "rendererPriority",
+        "description": "This value sorts renderers by priority. Lower values are rendered first and higher values are rendered last."
+      },
+      {
+        "name": "renderingLayerMask",
+        "description": "Determines which rendering layer this renderer lives on, if you use a scriptable render pipeline."
+      },
+      {
+        "name": "shadowCastingMode",
+        "description": "Does this object cast shadows?"
+      },
+      {
+        "name": "sharedMaterial",
+        "description": "The shared material of this object."
+      },
+      {
+        "name": "sharedMaterials",
+        "description": "All the shared materials of this object."
+      },
+      {
+        "name": "sortingLayerID",
+        "description": "Unique ID of the Renderer's sorting layer."
+      },
+      {
+        "name": "sortingLayerName",
+        "description": "Name of the Renderer's sorting layer."
+      },
+      {
+        "name": "sortingOrder",
+        "description": "Renderer's order within a sorting layer."
+      },
+      {
+        "name": "staticShadowCaster",
+        "description": "Is this renderer a static shadow caster?"
+      },
+      {
+        "name": "worldToLocalMatrix",
+        "description": "Matrix that transforms a point from world space into local space (Read Only)."
+      }
+    ],
+    "methods": [
+      {
+        "name": "GetClosestReflectionProbes",
+        "description": "Returns an array of closest reflection probes with weights, weight shows how much influence the probe has on the renderer, this value is also used when blending between reflection probes occur."
+      },
+      {
+        "name": "GetMaterials",
+        "description": "Returns all the instantiated materials of this object."
+      },
+      {
+        "name": "GetPropertyBlock",
+        "description": "Get per-Renderer or per-Material property block."
+      },
+      {
+        "name": "GetSharedMaterials",
+        "description": "Returns all the shared materials of this object."
+      },
+      {
+        "name": "HasPropertyBlock",
+        "description": "Returns true if the Renderer has a material property block attached via SetPropertyBlock."
+      },
+      {
+        "name": "ResetBounds",
+        "description": "Reset custom world space bounds."
+      },
+      {
+        "name": "ResetLocalBounds",
+        "description": "Reset custom local space bounds."
+      },
+      {
+        "name": "SetMaterials",
+        "description": "Assigns the shared materials of this renderer using the list of materials provided."
+      },
+      {
+        "name": "SetPropertyBlock",
+        "description": "Lets you set or clear per-renderer or per-material parameter overrides."
+      },
+      {
+        "name": "SetSharedMaterials",
+        "description": "Assigns the shared materials of this renderer using the list of materials provided."
+      }
+    ],
+    "constructors": [],
+    "examples": [],
+    "url": "https://docs.unity3d.com/ScriptReference/Renderer.html"
+  },
+  {
+    "class_name": "MeshRenderer",
+    "description": "Renders the mesh from the MeshFilter component on the same GameObject.",
+    "properties": [
+      {
+        "name": "additionalVertexStreams",
+        "description": "Vertex attributes in this mesh will override or add attributes of the primary mesh in the MeshRenderer."
+      },
+      {
+        "name": "enlightenVertexStream",
+        "description": "Vertex attributes that override the primary mesh when the MeshRenderer uses lightmaps in the Realtime Global Illumination system."
+      },
+      {
+        "name": "globalIlluminationMeshLod",
+        "description": "Mesh LOD to use for Global Illumination."
+      },
+      {
+        "name": "receiveGI",
+        "description": "Determines how the object will receive global illumination. (Editor only)"
+      },
+      {
+        "name": "scaleInLightmap",
+        "description": "Specifies the relative lightmap resolution of this object. (Editor only)"
+      },
+      {
+        "name": "stitchLightmapSeams",
+        "description": "When enabled, seams in baked lightmaps will get smoothed. (Editor only)"
+      },
+      {
+        "name": "subMeshStartIndex",
+        "description": "Index of the first sub-mesh to use from the Mesh associated with this MeshRenderer (Read Only)."
+      }
+    ],
+    "methods": [
+      {
+        "name": "GetShaderUserValue",
+        "description": "Returns the custom value assigned to this renderer."
+      },
+      {
+        "name": "SetShaderUserValue",
+        "description": "Assign a custom value to this renderer."
+      }
+    ],
+    "constructors": [],
+    "examples": [
+      "using UnityEngine;\r\npublic class PlaceRandomCubes : MonoBehaviour\r\n{\r\n    void Start()\r\n    {\r\n        Mesh cubeMesh = Resources.GetBuiltinResource<Mesh>(\"Cube.fbx\");        for (int i = 0; i < 10; i++)\r\n        {\r\n            // Create a GameObject at a random position\r\n            GameObject go = new GameObject();\r\n            go.transform.position = Random.insideUnitSphere * 10;            // Add a MeshFilter to supply the mesh data\r\n            MeshFilter filter = go.AddComponent<MeshFilter>();\r\n            filter.sharedMesh = cubeMesh;            // Add a MeshRenderer to render the mesh, and assign a random color\r\n            MeshRenderer meshRenderer = go.AddComponent<MeshRenderer>();\r\n            meshRenderer.material.color = Random.ColorHSV();\r\n        }\r\n    }\r\n}"
+    ],
+    "url": "https://docs.unity3d.com/ScriptReference/MeshRenderer.html"
+  },
+  {
+    "class_name": "Light",
+    "description": "Script interface for light components.",
+    "properties": [
+      {
+        "name": "areaSize",
+        "description": "The size of the area light."
+      },
+      {
+        "name": "bakingOutput",
+        "description": "This property describes the output of the last Global Illumination bake."
+      },
+      {
+        "name": "bounceIntensity",
+        "description": "The multiplier that defines the strength of the bounce lighting."
+      },
+      {
+        "name": "boundingSphereOverride",
+        "description": "Bounding sphere used to override the regular light bounding sphere during culling."
+      },
+      {
+        "name": "color",
+        "description": "Specifies the color emitted by the light."
+      },
+      {
+        "name": "colorTemperature",
+        "description": "The color temperature of the light. Correlated Color Temperature (abbreviated as CCT) is multiplied with the color filter when calculating the final color of a light source. The color temperature of the electromagnetic radiation emitted from an ideal black body is defined as its surface temperature in Kelvin. White is 6500K according to the D65 standard. A candle light is 1800K and a soft warm light bulb is 2700K. If you want to use colorTemperature, GraphicsSettings.lightsUseLinearIntensity and Light.useColorTemperature has to be enabled. Additional resources: GraphicsSettings.lightsUseLinearIntensity, GraphicsSettings.useColorTemperature."
+      },
+      {
+        "name": "commandBufferCount",
+        "description": "Number of command buffers set up on this light (Read Only)."
+      },
+      {
+        "name": "cookie",
+        "description": "The cookie texture projected by the light."
+      },
+      {
+        "name": "cookieSize2D",
+        "description": "The size of a directional light's cookie."
+      },
+      {
+        "name": "cullingMask",
+        "description": "This is used to light certain objects in the Scene selectively."
+      },
+      {
+        "name": "dilatedRange",
+        "description": "The maximum distance the emitted light might travel from the position of the light. This property does not apply to directional lights."
+      },
+      {
+        "name": "enableSpotReflector",
+        "description": "Wether a Spot Light should simulate having a reflector."
+      },
+      {
+        "name": "flare",
+        "description": "The flare asset to use for this light."
+      },
+      {
+        "name": "forceVisible",
+        "description": "Force a light to be visible even if outside the view frustum."
+      },
+      {
+        "name": "innerSpotAngle",
+        "description": "The angle of the spot light's inner cone in degrees."
+      },
+      {
+        "name": "intensity",
+        "description": "The Intensity of a light is multiplied with the Light color."
+      },
+      {
+        "name": "layerShadowCullDistances",
+        "description": "Per-light, per-layer shadow culling distances. Directional lights only."
+      },
+      {
+        "name": "lightmapBakeType",
+        "description": "This property describes what part of a light's contribution can be baked (Editor only)."
+      },
+      {
+        "name": "lightShadowCasterMode",
+        "description": "Allows you to override the global Shadowmask Mode per light. Only use this with render pipelines that can handle per light Shadowmask modes. Incompatible with the legacy renderers."
+      },
+      {
+        "name": "lightUnit",
+        "description": "The unit Light.intensity should be displayed in."
+      },
+      {
+        "name": "luxAtDistance",
+        "description": "How far away to measure LightUnit.Lux from."
+      },
+      {
+        "name": "range",
+        "description": "The maximum distance that light travels from a point of emission. This property does not apply to directional lights."
+      },
+      {
+        "name": "renderingLayerMask",
+        "description": "Determines which rendering LayerMask this Light affects."
+      },
+      {
+        "name": "renderMode",
+        "description": "Controls how often the light's contribution is calculated during rendering."
+      },
+      {
+        "name": "shadowAngle",
+        "description": "Controls the amount of artificial softening applied to the edges of shadows cast by directional lights (Editor only)."
+      },
+      {
+        "name": "shadowBias",
+        "description": "Shadow mapping constant bias."
+      },
+      {
+        "name": "shadowCustomResolution",
+        "description": "The custom resolution of the shadow map."
+      },
+      {
+        "name": "shadowMatrixOverride",
+        "description": "Matrix that overrides the regular light projection matrix during shadow culling. Unity uses this matrix if you set Light.useShadowMatrixOverride to true."
+      },
+      {
+        "name": "shadowNearPlane",
+        "description": "Near plane value to use for shadow frustums."
+      },
+      {
+        "name": "shadowNormalBias",
+        "description": "Shadow mapping normal-based bias."
+      },
+      {
+        "name": "shadowRadius",
+        "description": "Controls the amount of artificial softening applied to the edges of shadows cast by the Point or Spot light (Editor only)."
+      },
+      {
+        "name": "shadowResolution",
+        "description": "The resolution of the shadow map. Change it to balance shadow visual quality and performance."
+      },
+      {
+        "name": "shadows",
+        "description": "Determines if this light will cast soft or hard shadows, or not cast shadows at all."
+      },
+      {
+        "name": "shadowStrength",
+        "description": "Strength of light's shadows."
+      },
+      {
+        "name": "spotAngle",
+        "description": "The angle of the spot light's cone in degrees."
+      },
+      {
+        "name": "type",
+        "description": "The type of the light."
+      },
+      {
+        "name": "useBoundingSphereOverride",
+        "description": "Set to true to override light bounding sphere for culling."
+      },
+      {
+        "name": "useColorTemperature",
+        "description": "Set to true to use the color temperature."
+      },
+      {
+        "name": "useShadowMatrixOverride",
+        "description": "Set to true to enable custom matrix for culling during shadows."
+      },
+      {
+        "name": "useViewFrustumForShadowCasterCull",
+        "description": "Whether to cull shadows for this Light when the Light is outside of the view frustum."
+      }
+    ],
+    "methods": [
+      {
+        "name": "AddCommandBuffer",
+        "description": "Add a command buffer to be executed at a specified place."
+      },
+      {
+        "name": "AddCommandBufferAsync",
+        "description": "Adds a command buffer to the GPU's async compute queues and executes that command buffer when graphics processing reaches a given point."
+      },
+      {
+        "name": "GetCommandBuffers",
+        "description": "Get command buffers to be executed at a specified place."
+      },
+      {
+        "name": "RemoveAllCommandBuffers",
+        "description": "Remove all command buffers set on this light."
+      },
+      {
+        "name": "RemoveCommandBuffer",
+        "description": "Remove command buffer from execution at a specified place."
+      },
+      {
+        "name": "RemoveCommandBuffers",
+        "description": "Remove command buffers from execution at a specified place."
+      },
+      {
+        "name": "Reset",
+        "description": "Revert all light parameters to default."
+      },
+      {
+        "name": "SetLightDirty",
+        "description": "Sets a light dirty to notify the light baking backends to update their internal light representation (Editor only)."
+      }
+    ],
+    "constructors": [],
+    "examples": [
+      "using UnityEngine;public class Example : MonoBehaviour\r\n{\r\n    void Start()\r\n    {\r\n        // Make a game object\r\n        GameObject lightGameObject = new GameObject(\"The Light\");        // Add the light component\r\n        Light lightComp = lightGameObject.AddComponent<Light>();        // Set color and position\r\n        lightComp.color = Color.blue;        // Set the position (or any transform property)\r\n        lightGameObject.transform.position = new Vector3(0, 5, 0);\r\n    }\r\n}"
+    ],
+    "url": "https://docs.unity3d.com/ScriptReference/Light.html"
+  },
+  {
+    "class_name": "Rigidbody",
+    "description": "Control of an object's position through physics simulation.",
+    "properties": [
+      {
+        "name": "angularDamping",
+        "description": "The angular damping of the object."
+      },
+      {
+        "name": "angularVelocity",
+        "description": "The angular velocity vector of the rigidbody measured in radians per second."
+      },
+      {
+        "name": "automaticCenterOfMass",
+        "description": "Whether or not to calculate the center of mass automatically."
+      },
+      {
+        "name": "automaticInertiaTensor",
+        "description": "Whether or not to calculate the inertia tensor automatically."
+      },
+      {
+        "name": "centerOfMass",
+        "description": "The center of mass relative to the transform's origin."
+      },
+      {
+        "name": "collisionDetectionMode",
+        "description": "The Rigidbody's collision detection mode."
+      },
+      {
+        "name": "constraints",
+        "description": "Controls which degrees of freedom are allowed for the simulation of this Rigidbody."
+      },
+      {
+        "name": "detectCollisions",
+        "description": "Should collision detection be enabled? (By default always enabled)."
+      },
+      {
+        "name": "excludeLayers",
+        "description": "The additional layers that all Colliders attached to this Rigidbody should exclude when deciding if the Collider can come into contact with another Collider."
+      },
+      {
+        "name": "freezeRotation",
+        "description": "Controls whether physics will change the rotation of the object."
+      },
+      {
+        "name": "includeLayers",
+        "description": "The additional layers that all Colliders attached to this Rigidbody should include when deciding if the Collider can come into contact with another Collider."
+      },
+      {
+        "name": "inertiaTensor",
+        "description": "The inertia tensor of this body, defined as a diagonal matrix in a reference frame positioned at this body's center of mass and rotated by Rigidbody.inertiaTensorRotation."
+      },
+      {
+        "name": "inertiaTensorRotation",
+        "description": "The rotation of the inertia tensor."
+      },
+      {
+        "name": "interpolation",
+        "description": "Interpolation provides a way to manage the appearance of jitter in the movement of your Rigidbody GameObjects at run time."
+      },
+      {
+        "name": "isKinematic",
+        "description": "Controls whether physics affects the rigidbody."
+      },
+      {
+        "name": "linearDamping",
+        "description": "The linear damping of the Rigidbody linear velocity."
+      },
+      {
+        "name": "linearVelocity",
+        "description": "The linear velocity vector of the rigidbody. It represents the rate of change of Rigidbody position."
+      },
+      {
+        "name": "mass",
+        "description": "The mass of the rigidbody."
+      },
+      {
+        "name": "maxAngularVelocity",
+        "description": "The maximum angular velocity of the rigidbody measured in radians per second. (Default 7) range { 0, infinity }."
+      },
+      {
+        "name": "maxDepenetrationVelocity",
+        "description": "Maximum velocity of a rigidbody when moving out of penetrating state."
+      },
+      {
+        "name": "maxLinearVelocity",
+        "description": "The maximum linear velocity of the rigidbody measured in meters per second."
+      },
+      {
+        "name": "position",
+        "description": "The position of the rigidbody."
+      },
+      {
+        "name": "rotation",
+        "description": "The rotation of the Rigidbody."
+      },
+      {
+        "name": "sleepThreshold",
+        "description": "The mass-normalized energy threshold, below which objects start going to sleep."
+      },
+      {
+        "name": "solverIterations",
+        "description": "The solverIterations determines how accurately Rigidbody joints and collision contacts are resolved. Overrides Physics.defaultSolverIterations. Must be positive."
+      },
+      {
+        "name": "solverVelocityIterations",
+        "description": "The solverVelocityIterations affects how how accurately Rigidbody joints and collision contacts are resolved. Overrides Physics.defaultSolverVelocityIterations. Must be positive."
+      },
+      {
+        "name": "useGravity",
+        "description": "Controls whether gravity affects this rigidbody."
+      },
+      {
+        "name": "worldCenterOfMass",
+        "description": "The center of mass of the rigidbody in world space (Read Only)."
+      }
+    ],
+    "methods": [
+      {
+        "name": "AddExplosionForce",
+        "description": "Applies a force to a rigidbody that simulates explosion effects."
+      },
+      {
+        "name": "AddForce",
+        "description": "Adds a force to the Rigidbody."
+      },
+      {
+        "name": "AddForceAtPosition",
+        "description": "Applies force at position. As a result this will apply a torque and force on the object."
+      },
+      {
+        "name": "AddRelativeForce",
+        "description": "Adds a force to the rigidbody relative to its coordinate system."
+      },
+      {
+        "name": "AddRelativeTorque",
+        "description": "Adds a torque to the rigidbody relative to its coordinate system."
+      },
+      {
+        "name": "AddTorque",
+        "description": "Adds a torque to the rigidbody."
+      },
+      {
+        "name": "ClosestPointOnBounds",
+        "description": "The closest point to the bounding box of the attached colliders."
+      },
+      {
+        "name": "GetAccumulatedForce",
+        "description": "Returns the force that the Rigidbody has accumulated before the simulation step."
+      },
+      {
+        "name": "GetAccumulatedTorque",
+        "description": "Returns the torque that the Rigidbody has accumulated before the simulation step."
+      },
+      {
+        "name": "GetPointVelocity",
+        "description": "The velocity of the rigidbody at the point worldPoint in global space."
+      },
+      {
+        "name": "GetRelativePointVelocity",
+        "description": "The velocity relative to the rigidbody at the point relativePoint."
+      },
+      {
+        "name": "IsSleeping",
+        "description": "Is the rigidbody sleeping?"
+      },
+      {
+        "name": "Move",
+        "description": "Moves the Rigidbody to position and rotates the Rigidbody to rotation."
+      },
+      {
+        "name": "MovePosition",
+        "description": "Moves the kinematic Rigidbody towards position."
+      },
+      {
+        "name": "MoveRotation",
+        "description": "Rotates the rigidbody to rotation."
+      },
+      {
+        "name": "PublishTransform",
+        "description": "Applies the position and rotation of the Rigidbody to the corresponding Transform component."
+      },
+      {
+        "name": "ResetCenterOfMass",
+        "description": "Reset the center of mass of the rigidbody."
+      },
+      {
+        "name": "ResetInertiaTensor",
+        "description": "Reset the inertia tensor value and rotation."
+      },
+      {
+        "name": "Sleep",
+        "description": "Forces a rigidbody to sleep until woken up."
+      },
+      {
+        "name": "SweepTest",
+        "description": "Tests if a rigidbody would collide with anything, if it was moved through the Scene."
+      },
+      {
+        "name": "SweepTestAll",
+        "description": "Like Rigidbody.SweepTest, but returns all hits."
+      },
+      {
+        "name": "WakeUp",
+        "description": "Forces a rigidbody to wake up."
+      }
+    ],
+    "constructors": [],
+    "examples": [],
+    "url": "https://docs.unity3d.com/ScriptReference/Rigidbody.html"
+  },
+  {
+    "class_name": "Collider",
+    "description": "A base class of all colliders.",
+    "properties": [
+      {
+        "name": "attachedArticulationBody",
+        "description": "The articulation body the collider is attached to."
+      },
+      {
+        "name": "attachedRigidbody",
+        "description": "The rigidbody the collider is attached to."
+      },
+      {
+        "name": "bounds",
+        "description": "The world space bounding volume of the collider (Read Only)."
+      },
+      {
+        "name": "contactOffset",
+        "description": "Contact offset value of this collider."
+      },
+      {
+        "name": "enabled",
+        "description": "Enabled Colliders will collide with other Colliders, disabled Colliders won't."
+      },
+      {
+        "name": "excludeLayers",
+        "description": "The additional layers that this Collider should exclude when deciding if the Collider can contact another Collider."
+      },
+      {
+        "name": "GeometryHolder",
+        "description": "The structure holding the geometric shape of the collider and its type. (Read Only)"
+      },
+      {
+        "name": "hasModifiableContacts",
+        "description": "Specify whether this Collider's contacts are modifiable or not."
+      },
+      {
+        "name": "includeLayers",
+        "description": "The additional layers that this Collider should include when deciding if the Collider can contact another Collider."
+      },
+      {
+        "name": "isTrigger",
+        "description": "Specify if this collider is configured as a trigger."
+      },
+      {
+        "name": "layerOverridePriority",
+        "description": "A decision priority assigned to this Collider used when there is a conflicting decision on whether a Collider can contact another Collider."
+      },
+      {
+        "name": "material",
+        "description": "The material used by the collider."
+      },
+      {
+        "name": "providesContacts",
+        "description": "Whether or not this Collider generates contacts for Physics.ContactEvent."
+      },
+      {
+        "name": "sharedMaterial",
+        "description": "The shared physics material of this collider."
+      }
+    ],
+    "methods": [
+      {
+        "name": "ClosestPoint",
+        "description": "The closest point on the collider given a specified location."
+      },
+      {
+        "name": "ClosestPointOnBounds",
+        "description": "The closest point to the bounding box of the attached collider."
+      },
+      {
+        "name": "GetGeometry",
+        "description": "Returns the geometric shape of the collider of the requested type."
+      },
+      {
+        "name": "Raycast",
+        "description": "Casts a Ray that ignores all Colliders except this one."
+      }
+    ],
+    "constructors": [],
+    "examples": [],
+    "url": "https://docs.unity3d.com/ScriptReference/Collider.html"
+  },
+  {
+    "class_name": "BoxCollider",
+    "description": "A box-shaped primitive collider.",
+    "properties": [
+      {
+        "name": "center",
+        "description": "The center of the box, measured in the object's local space."
+      },
+      {
+        "name": "size",
+        "description": "The size of the box, measured in the object's local space."
+      }
+    ],
+    "methods": [
+      {
+        "name": "ClosestPoint",
+        "description": "The closest point on the collider given a specified location."
+      },
+      {
+        "name": "ClosestPointOnBounds",
+        "description": "The closest point to the bounding box of the attached collider."
+      },
+      {
+        "name": "GetGeometry",
+        "description": "Returns the geometric shape of the collider of the requested type."
+      },
+      {
+        "name": "Raycast",
+        "description": "Casts a Ray that ignores all Colliders except this one."
+      },
+      {
+        "name": "BroadcastMessage",
+        "description": "Calls the method named methodName on every MonoBehaviour in this game object or any of its children."
+      },
+      {
+        "name": "CompareTag",
+        "description": "Checks the GameObject's tag against the defined tag."
+      },
+      {
+        "name": "GetComponent",
+        "description": "Gets a reference to a component of type T on the same GameObject as the component specified."
+      },
+      {
+        "name": "GetComponentInChildren",
+        "description": "Gets a reference to a component of type T on the same GameObject as the component specified, or any child of the GameObject."
+      },
+      {
+        "name": "GetComponentIndex",
+        "description": "Gets the index of the component on its parent GameObject."
+      },
+      {
+        "name": "GetComponentInParent",
+        "description": "Gets a reference to a component of type T on the same GameObject as the component specified, or any parent of the GameObject."
+      },
+      {
+        "name": "GetComponents",
+        "description": "Gets references to all components of type T on the same GameObject as the component specified."
+      },
+      {
+        "name": "GetComponentsInChildren",
+        "description": "Gets references to all components of type T on the same GameObject as the component specified, and any child of the GameObject."
+      },
+      {
+        "name": "GetComponentsInParent",
+        "description": "Gets references to all components of type T on the same GameObject as the component specified, and any parent of the GameObject."
+      },
+      {
+        "name": "SendMessage",
+        "description": "Calls the method named methodName on every MonoBehaviour in this game object."
+      },
+      {
+        "name": "SendMessageUpwards",
+        "description": "Calls the method named methodName on every MonoBehaviour in this game object and on every ancestor of the behaviour."
+      },
+      {
+        "name": "TryGetComponent",
+        "description": "Gets the component of the specified type, if it exists."
+      },
+      {
+        "name": "GetInstanceID",
+        "description": "Gets the instance ID of the object."
+      },
+      {
+        "name": "ToString",
+        "description": "Returns the name of the object."
+      }
+    ],
+    "constructors": [],
+    "examples": [],
+    "url": "https://docs.unity3d.com/ScriptReference/BoxCollider.html"
+  },
+  {
+    "class_name": "MeshCollider",
+    "description": "A mesh collider allows you to do collision detection between meshes and primitives.",
+    "properties": [
+      {
+        "name": "convex",
+        "description": "Use a convex collider from the mesh."
+      },
+      {
+        "name": "cookingOptions",
+        "description": "Options used to enable or disable certain features in mesh cooking."
+      },
+      {
+        "name": "sharedMesh",
+        "description": "The mesh object used for collision detection."
+      }
+    ],
+    "methods": [
+      {
+        "name": "ClosestPoint",
+        "description": "The closest point on the collider given a specified location."
+      },
+      {
+        "name": "ClosestPointOnBounds",
+        "description": "The closest point to the bounding box of the attached collider."
+      },
+      {
+        "name": "GetGeometry",
+        "description": "Returns the geometric shape of the collider of the requested type."
+      },
+      {
+        "name": "Raycast",
+        "description": "Casts a Ray that ignores all Colliders except this one."
+      },
+      {
+        "name": "BroadcastMessage",
+        "description": "Calls the method named methodName on every MonoBehaviour in this game object or any of its children."
+      },
+      {
+        "name": "CompareTag",
+        "description": "Checks the GameObject's tag against the defined tag."
+      },
+      {
+        "name": "GetComponent",
+        "description": "Gets a reference to a component of type T on the same GameObject as the component specified."
+      },
+      {
+        "name": "GetComponentInChildren",
+        "description": "Gets a reference to a component of type T on the same GameObject as the component specified, or any child of the GameObject."
+      },
+      {
+        "name": "GetComponentIndex",
+        "description": "Gets the index of the component on its parent GameObject."
+      },
+      {
+        "name": "GetComponentInParent",
+        "description": "Gets a reference to a component of type T on the same GameObject as the component specified, or any parent of the GameObject."
+      },
+      {
+        "name": "GetComponents",
+        "description": "Gets references to all components of type T on the same GameObject as the component specified."
+      },
+      {
+        "name": "GetComponentsInChildren",
+        "description": "Gets references to all components of type T on the same GameObject as the component specified, and any child of the GameObject."
+      },
+      {
+        "name": "GetComponentsInParent",
+        "description": "Gets references to all components of type T on the same GameObject as the component specified, and any parent of the GameObject."
+      },
+      {
+        "name": "SendMessage",
+        "description": "Calls the method named methodName on every MonoBehaviour in this game object."
+      },
+      {
+        "name": "SendMessageUpwards",
+        "description": "Calls the method named methodName on every MonoBehaviour in this game object and on every ancestor of the behaviour."
+      },
+      {
+        "name": "TryGetComponent",
+        "description": "Gets the component of the specified type, if it exists."
+      },
+      {
+        "name": "GetInstanceID",
+        "description": "Gets the instance ID of the object."
+      },
+      {
+        "name": "ToString",
+        "description": "Returns the name of the object."
+      }
+    ],
+    "constructors": [],
+    "examples": [],
+    "url": "https://docs.unity3d.com/ScriptReference/MeshCollider.html"
+  },
+  {
+    "class_name": "Material",
+    "description": "The material class.",
+    "properties": [
+      {
+        "name": "color",
+        "description": "The main color property of the Material."
+      },
+      {
+        "name": "doubleSidedGI",
+        "description": "Gets and sets whether the Double Sided Global Illumination setting is enabled for this material."
+      },
+      {
+        "name": "enabledKeywords",
+        "description": "An array containing the local shader keywords that are currently enabled for this material."
+      },
+      {
+        "name": "enableInstancing",
+        "description": "Gets and sets whether GPU instancing is enabled for this material."
+      },
+      {
+        "name": "globalIlluminationFlags",
+        "description": "Defines how the material should interact with lightmaps and lightprobes."
+      },
+      {
+        "name": "isVariant",
+        "description": "Returns true if this material is a material variant."
+      },
+      {
+        "name": "mainTexture",
+        "description": "The main texture."
+      },
+      {
+        "name": "mainTextureOffset",
+        "description": "Defines the UV offset for the main texture in the Material. This property adjusts the position of the texture mapping on a Mesh surface relative to its UV coordinates."
+      },
+      {
+        "name": "mainTextureScale",
+        "description": "The scale of the main texture."
+      },
+      {
+        "name": "parent",
+        "description": "Parent of this material."
+      },
+      {
+        "name": "passCount",
+        "description": "How many passes are in this material (Read Only)."
+      },
+      {
+        "name": "rawRenderQueue",
+        "description": "Raw render queue of this material."
+      },
+      {
+        "name": "renderQueue",
+        "description": "The render queue to use as an override on this material."
+      },
+      {
+        "name": "shader",
+        "description": "The shader used by the material."
+      },
+      {
+        "name": "shaderKeywords",
+        "description": "An array containing names of the local shader keywords that are currently enabled for this material."
+      }
+    ],
+    "methods": [
+      {
+        "name": "ApplyPropertyOverride",
+        "description": "Applies an override associated with a Material Variant to a target."
+      },
+      {
+        "name": "ComputeCRC",
+        "description": "Computes a CRC hash value from the content of the material."
+      },
+      {
+        "name": "CopyMatchingPropertiesFromMaterial",
+        "description": "Copies properties, keyword states and settings from mat to this material, but only if they exist in both materials."
+      },
+      {
+        "name": "CopyPropertiesFromMaterial",
+        "description": "Copy properties from other material into this material."
+      },
+      {
+        "name": "DisableKeyword",
+        "description": "Disables a local shader keyword for this material."
+      },
+      {
+        "name": "EnableKeyword",
+        "description": "Enables a local shader keyword for this material."
+      },
+      {
+        "name": "FindPass",
+        "description": "Returns the index of the pass passName."
+      },
+      {
+        "name": "GetBuffer",
+        "description": "Get a named Graphics Buffer value."
+      },
+      {
+        "name": "GetColor",
+        "description": "Get a named color value."
+      },
+      {
+        "name": "GetColorArray",
+        "description": "Get a named color array."
+      },
+      {
+        "name": "GetConstantBuffer",
+        "description": "Get a named Constant Buffer value."
+      },
+      {
+        "name": "GetFloat",
+        "description": "Get a named float value."
+      },
+      {
+        "name": "GetFloatArray",
+        "description": "Get a named float array."
+      },
+      {
+        "name": "GetInt",
+        "description": "This method is deprecated. Use GetFloat or GetInteger instead."
+      },
+      {
+        "name": "GetInteger",
+        "description": "Get a named integer value. If the integer property is not found an exception is thrown."
+      },
+      {
+        "name": "GetMatrix",
+        "description": "Get a named matrix value from the shader."
+      },
+      {
+        "name": "GetMatrixArray",
+        "description": "Get a named matrix array."
+      },
+      {
+        "name": "GetPassName",
+        "description": "Returns the name of the shader pass at index pass."
+      },
+      {
+        "name": "GetPropertyNames",
+        "description": "Retrieves a list of the named properties in the material that match the input property type."
+      },
+      {
+        "name": "GetShaderPassEnabled",
+        "description": "Checks whether a given Shader pass is enabled on this Material."
+      },
+      {
+        "name": "GetTag",
+        "description": "Get the value of material's shader tag."
+      },
+      {
+        "name": "GetTexture",
+        "description": "Get a named texture."
+      },
+      {
+        "name": "GetTextureOffset",
+        "description": "Gets the placement offset of texture propertyName."
+      },
+      {
+        "name": "GetTexturePropertyNameIDs",
+        "description": "Return the name IDs of all texture properties exposed on this material."
+      },
+      {
+        "name": "GetTexturePropertyNames",
+        "description": "Returns the names of all texture properties exposed on this material."
+      },
+      {
+        "name": "GetTextureScale",
+        "description": "Gets the placement scale of texture propertyName."
+      },
+      {
+        "name": "GetVector",
+        "description": "Get a named vector value."
+      },
+      {
+        "name": "GetVectorArray",
+        "description": "Get a named vector array."
+      },
+      {
+        "name": "HasBuffer",
+        "description": "Checks if the ShaderLab file assigned to the Material has a ComputeBuffer property with the given name."
+      },
+      {
+        "name": "HasColor",
+        "description": "Checks if the ShaderLab file assigned to the Material has a Color property with the given name."
+      },
+      {
+        "name": "HasConstantBuffer",
+        "description": "Checks if the ShaderLab file assigned to the Material has a ConstantBuffer property with the given name."
+      },
+      {
+        "name": "HasFloat",
+        "description": "Checks if the ShaderLab file assigned to the Material has a Float property with the given name. This also works with the Float Array property."
+      },
+      {
+        "name": "HasInt",
+        "description": "This method is deprecated. Use HasFloat or HasInteger instead."
+      },
+      {
+        "name": "HasInteger",
+        "description": "Checks if the ShaderLab file assigned to the Material has an Integer property with the given name."
+      },
+      {
+        "name": "HasMatrix",
+        "description": "Checks if the ShaderLab file assigned to the Material has a Matrix property with the given name. This also works with the Matrix Array property."
+      },
+      {
+        "name": "HasProperty",
+        "description": "Checks if the ShaderLab file assigned to the Material has a property with the given name."
+      },
+      {
+        "name": "HasTexture",
+        "description": "Checks if the ShaderLab file assigned to the Material has a Texture property with the given name."
+      },
+      {
+        "name": "HasVector",
+        "description": "Checks if the ShaderLab file assigned to the Material has a Vector property with the given name. This also works with the Vector Array property."
+      },
+      {
+        "name": "IsChildOf",
+        "description": "Returns True if the given material is an ancestor of this Material."
+      },
+      {
+        "name": "IsKeywordEnabled",
+        "description": "Checks whether a local shader keyword is enabled for this material."
+      },
+      {
+        "name": "IsPropertyLocked",
+        "description": "Checks whether a property is locked by this material."
+      },
+      {
+        "name": "IsPropertyLockedByAncestor",
+        "description": "Checks whether a property is locked by any of ancestor of this material."
+      },
+      {
+        "name": "IsPropertyOverriden",
+        "description": "Checks whether a property is overriden by this material."
+      },
+      {
+        "name": "Lerp",
+        "description": "Interpolate properties between two materials."
+      },
+      {
+        "name": "RevertAllPropertyOverrides",
+        "description": "Removes all property overrides on this material."
+      },
+      {
+        "name": "RevertPropertyOverride",
+        "description": "Removes the override on a property."
+      },
+      {
+        "name": "SetBuffer",
+        "description": "Sets a named buffer value."
+      },
+      {
+        "name": "SetColor",
+        "description": "Sets the value of a color- or vector-type property."
+      },
+      {
+        "name": "SetColorArray",
+        "description": "Sets a color array property."
+      },
+      {
+        "name": "SetConstantBuffer",
+        "description": "Sets a ComputeBuffer or GraphicsBuffer as a named constant buffer for the material."
+      },
+      {
+        "name": "SetFloat",
+        "description": "Sets a named float value."
+      },
+      {
+        "name": "SetFloatArray",
+        "description": "Sets a float array property."
+      },
+      {
+        "name": "SetInt",
+        "description": "This method is deprecated. Use SetFloat or SetInteger instead."
+      },
+      {
+        "name": "SetInteger",
+        "description": "Sets a named integer value."
+      },
+      {
+        "name": "SetKeyword",
+        "description": "Sets the state of a local shader keyword for this material."
+      },
+      {
+        "name": "SetMatrix",
+        "description": "Sets a named matrix for the shader."
+      },
+      {
+        "name": "SetMatrixArray",
+        "description": "Sets a matrix array property."
+      },
+      {
+        "name": "SetOverrideTag",
+        "description": "Sets an override tag/value on the material."
+      },
+      {
+        "name": "SetPass",
+        "description": "Activate the given pass for rendering."
+      },
+      {
+        "name": "SetPropertyLock",
+        "description": "Sets the lock state of a property for this material."
+      },
+      {
+        "name": "SetShaderPassEnabled",
+        "description": "Enables or disables a Shader pass on a per-Material level."
+      },
+      {
+        "name": "SetTexture",
+        "description": "Sets a named texture."
+      },
+      {
+        "name": "SetTextureOffset",
+        "description": "Sets the placement offset of a given texture. The name parameter is defined in the shader. This method creates a new Material instance."
+      },
+      {
+        "name": "SetTextureScale",
+        "description": "Sets the placement scale of texture propertyName."
+      },
+      {
+        "name": "SetVector",
+        "description": "Sets a value for a named vector in the material."
+      },
+      {
+        "name": "SetVectorArray",
+        "description": "Sets a vector array property."
+      }
+    ],
+    "constructors": [
+      {
+        "name": "Material",
+        "description": ""
+      }
+    ],
+    "examples": [],
+    "url": "https://docs.unity3d.com/ScriptReference/Material.html"
+  },
+  {
+    "class_name": "Texture",
+    "description": "Base class for Texture handling.",
+    "properties": [
+      {
+        "name": "anisoLevel",
+        "description": "Defines the anisotropic filtering level of the Texture."
+      },
+      {
+        "name": "dimension",
+        "description": "Dimensionality (type) of the Texture."
+      },
+      {
+        "name": "filterMode",
+        "description": "Filtering mode of the Texture."
+      },
+      {
+        "name": "graphicsFormat",
+        "description": "Returns the GraphicsFormat format or color format of a Texture object."
+      },
+      {
+        "name": "graphicsTexture",
+        "description": "GraphicsTexture that represents the texture resource uploaded to the graphics device."
+      },
+      {
+        "name": "height",
+        "description": "Height of the Texture in pixels."
+      },
+      {
+        "name": "imageContentsHash",
+        "description": "The hash value of the Texture."
+      },
+      {
+        "name": "isDataSRGB",
+        "description": "Returns true if the texture pixel data is in sRGB color space."
+      },
+      {
+        "name": "isReadable",
+        "description": "Whether Unity stores an additional copy of this texture's pixel data in CPU-addressable memory."
+      },
+      {
+        "name": "mipMapBias",
+        "description": "The mipmap bias of the Texture."
+      },
+      {
+        "name": "mipmapCount",
+        "description": "How many mipmap levels are in this Texture."
+      },
+      {
+        "name": "updateCount",
+        "description": "This counter is incremented when the Texture is updated."
+      },
+      {
+        "name": "width",
+        "description": "Width of the Texture in pixels."
+      },
+      {
+        "name": "wrapMode",
+        "description": "Options for sampling a texture if a texture coordinate is outside the [0, 1] range."
+      },
+      {
+        "name": "wrapModeU",
+        "description": "Options for sampling a texture if the U texture coordinate is outside the [0, 1] range."
+      },
+      {
+        "name": "wrapModeV",
+        "description": "Options for sampling a texture if the V texture coordinate is outside the [0, 1] range."
+      },
+      {
+        "name": "wrapModeW",
+        "description": "Options for sampling a texture if the W coordinate is outside the [0, 1] range."
+      }
+    ],
+    "methods": [
+      {
+        "name": "GetNativeTexturePtr",
+        "description": "Retrieve a native (underlying graphics API) pointer to the Texture resource."
+      },
+      {
+        "name": "IncrementUpdateCount",
+        "description": "Increment the update counter."
+      }
+    ],
+    "constructors": [],
+    "examples": [],
+    "url": "https://docs.unity3d.com/ScriptReference/Texture.html"
+  },
+  {
+    "class_name": "Shader",
+    "description": "Shader scripts used for all rendering.",
+    "properties": [
+      {
+        "name": "isSupported",
+        "description": "Can this shader run on the end-users graphics card? (Read Only)"
+      },
+      {
+        "name": "keywordSpace",
+        "description": "The local keyword space of this shader."
+      },
+      {
+        "name": "maximumLOD",
+        "description": "Shader LOD level for this shader."
+      },
+      {
+        "name": "passCount",
+        "description": "Returns the number of shader passes on the active SubShader."
+      },
+      {
+        "name": "renderQueue",
+        "description": "The default render queue for this shader. (Read Only)"
+      },
+      {
+        "name": "subshaderCount",
+        "description": "Returns the number of SubShaders in this shader."
+      }
+    ],
+    "methods": [
+      {
+        "name": "FindPassTagValue",
+        "description": "Searches for the tag specified by tagName on the shader's active SubShader and returns the value of the tag."
+      },
+      {
+        "name": "FindPropertyIndex",
+        "description": "Finds the index of a shader property by its name."
+      },
+      {
+        "name": "FindSubshaderTagValue",
+        "description": "Searches for the tag specified by tagName on the SubShader specified by subshaderIndex and returns the value of the tag."
+      },
+      {
+        "name": "FindTextureStack",
+        "description": "Find the name of a texture stack a texture belongs too."
+      },
+      {
+        "name": "GetDependency",
+        "description": "Returns the dependency shader."
+      },
+      {
+        "name": "GetPassCountInSubshader",
+        "description": "Returns the number of passes in the given SubShader."
+      },
+      {
+        "name": "GetPropertyAttributes",
+        "description": "Returns an array of strings containing attributes of the shader property at the specified index."
+      },
+      {
+        "name": "GetPropertyCount",
+        "description": "Returns the number of properties in this Shader."
+      },
+      {
+        "name": "GetPropertyDefaultFloatValue",
+        "description": "Returns the default float value of the shader property at the specified index."
+      },
+      {
+        "name": "GetPropertyDefaultIntValue",
+        "description": "Returns the default int value of the shader property at the specified index."
+      },
+      {
+        "name": "GetPropertyDefaultVectorValue",
+        "description": "Returns the default Vector4 value of the shader property at the specified index."
+      },
+      {
+        "name": "GetPropertyDescription",
+        "description": "Returns the description string of the shader property at the specified index."
+      },
+      {
+        "name": "GetPropertyFlags",
+        "description": "Returns the ShaderPropertyFlags of the shader property at the specified index."
+      },
+      {
+        "name": "GetPropertyName",
+        "description": "Returns the name of the shader property at the specified index."
+      },
+      {
+        "name": "GetPropertyNameId",
+        "description": "Returns the nameId of the shader property at the specified index."
+      },
+      {
+        "name": "GetPropertyRangeLimits",
+        "description": "Returns the min and max limits for a Range property at the specified index."
+      },
+      {
+        "name": "GetPropertyTextureDefaultName",
+        "description": "Returns the default Texture name of a Texture shader property at the specified index."
+      },
+      {
+        "name": "GetPropertyTextureDimension",
+        "description": "Returns the TextureDimension of a Texture shader property at the specified index."
+      },
+      {
+        "name": "GetPropertyType",
+        "description": "Returns the ShaderPropertyType of the property at the specified index."
+      }
+    ],
+    "constructors": [],
+    "examples": [],
+    "url": "https://docs.unity3d.com/ScriptReference/Shader.html"
+  },
+  {
+    "class_name": "Input",
+    "description": "Interface into the Legacy Input system.",
+    "properties": [],
+    "methods": [],
+    "constructors": [],
+    "examples": [
+      "using UnityEngine;\r\nusing System.Collections;public class ExampleClass : MonoBehaviour\r\n{\r\n    public void Update()\r\n    {\r\n        if (Input.GetButtonDown(\"Fire1\"))\r\n        {\r\n            Debug.Log(Input.mousePosition);\r\n        }\r\n    }\r\n}"
+    ],
+    "url": "https://docs.unity3d.com/ScriptReference/Input.html"
+  },
+  {
+    "class_name": "Time",
+    "description": "Provides an interface to get time information from Unity.",
+    "properties": [],
+    "methods": [],
+    "constructors": [],
+    "examples": [],
+    "url": "https://docs.unity3d.com/ScriptReference/Time.html"
+  },
+  {
+    "class_name": "Vector2",
+    "description": "Representation of 2D vectors and points.",
+    "properties": [
+      {
+        "name": "magnitude",
+        "description": "Returns the length of this vector (Read Only)."
+      },
+      {
+        "name": "normalized",
+        "description": "Returns a normalized vector based on the current vector. The normalized vector has a magnitude of 1 and is in the same direction as the current vector. Returns a zero vector If the current vector is too small to be normalized."
+      },
+      {
+        "name": "sqrMagnitude",
+        "description": "Returns the squared length of this vector (Read Only)."
+      },
+      {
+        "name": "this[int]",
+        "description": "Access the x or y component using [0] or [1] respectively."
+      },
+      {
+        "name": "x",
+        "description": "X component of the vector."
+      },
+      {
+        "name": "y",
+        "description": "Y component of the vector."
+      }
+    ],
+    "methods": [
+      {
+        "name": "Equals",
+        "description": "Returns true if the given vector is exactly equal to this vector."
+      },
+      {
+        "name": "Set",
+        "description": "Set x and y components of an existing Vector2."
+      },
+      {
+        "name": "ToString",
+        "description": "Returns a formatted string for this vector."
+      }
+    ],
+    "constructors": [
+      {
+        "name": "Vector2",
+        "description": "Constructs a new vector with given x, y components."
+      }
+    ],
+    "examples": [],
+    "url": "https://docs.unity3d.com/ScriptReference/Vector2.html"
+  },
+  {
+    "class_name": "Vector3",
+    "description": "Representation of 3D vectors and points.",
+    "properties": [
+      {
+        "name": "magnitude",
+        "description": "Returns the length of this vector (Read Only)."
+      },
+      {
+        "name": "normalized",
+        "description": "The unit vector in the direction of the current vector."
+      },
+      {
+        "name": "sqrMagnitude",
+        "description": "Returns the squared length of this vector (Read Only)."
+      },
+      {
+        "name": "this[int]",
+        "description": "Access the x, y, z components using [0], [1], [2] respectively."
+      },
+      {
+        "name": "x",
+        "description": "X component of the vector."
+      },
+      {
+        "name": "y",
+        "description": "Y component of the vector."
+      },
+      {
+        "name": "z",
+        "description": "Z component of the vector."
+      }
+    ],
+    "methods": [
+      {
+        "name": "Equals",
+        "description": "Returns true if the given vector is exactly equal to this vector."
+      },
+      {
+        "name": "Set",
+        "description": "Set x, y and z components of an existing Vector3."
+      },
+      {
+        "name": "ToString",
+        "description": "Returns a formatted string for this vector."
+      }
+    ],
+    "constructors": [
+      {
+        "name": "Vector3",
+        "description": "Creates a new three-dimensional vector or point."
+      }
+    ],
+    "examples": [],
+    "url": "https://docs.unity3d.com/ScriptReference/Vector3.html"
+  },
+  {
+    "class_name": "Quaternion",
+    "description": "Quaternions are used to represent rotations.",
+    "properties": [
+      {
+        "name": "eulerAngles",
+        "description": "Returns or sets the euler angle representation of the rotation in degrees."
+      },
+      {
+        "name": "normalized",
+        "description": "Returns this quaternion with a magnitude of 1 (Read Only)."
+      },
+      {
+        "name": "this[int]",
+        "description": "Access the x, y, z, w components using [0], [1], [2], [3] respectively."
+      },
+      {
+        "name": "w",
+        "description": "W component of the Quaternion. Do not directly modify quaternions."
+      },
+      {
+        "name": "x",
+        "description": "X component of the Quaternion. Don't modify this directly unless you know quaternions inside out."
+      },
+      {
+        "name": "y",
+        "description": "Y component of the Quaternion. Don't modify this directly unless you know quaternions inside out."
+      },
+      {
+        "name": "z",
+        "description": "Z component of the Quaternion. Don't modify this directly unless you know quaternions inside out."
+      }
+    ],
+    "methods": [
+      {
+        "name": "Equals",
+        "description": "Performs exact binary comparison of each Quaternion component (x, y, z, w)."
+      },
+      {
+        "name": "Set",
+        "description": "Set x, y, z and w components of an existing Quaternion."
+      },
+      {
+        "name": "SetFromToRotation",
+        "description": "Creates a rotation which rotates from fromDirection to toDirection."
+      },
+      {
+        "name": "SetLookRotation",
+        "description": "Creates a rotation with the specified forward and upwards directions."
+      },
+      {
+        "name": "ToAngleAxis",
+        "description": "Converts a rotation to angle-axis representation."
+      },
+      {
+        "name": "ToString",
+        "description": "Returns a formatted string for this quaternion."
+      }
+    ],
+    "constructors": [
+      {
+        "name": "Quaternion",
+        "description": "Constructs new Quaternion with given x,y,z,w components."
+      }
+    ],
+    "examples": [],
+    "url": "https://docs.unity3d.com/ScriptReference/Quaternion.html"
+  },
+  {
+    "class_name": "Physics",
+    "description": "Global physics properties and helper methods.",
+    "properties": [],
+    "methods": [],
+    "constructors": [],
+    "examples": [],
+    "url": "https://docs.unity3d.com/ScriptReference/Physics.html"
+  },
+  {
+    "class_name": "Screen",
+    "description": "Provides access to display information.",
+    "properties": [],
+    "methods": [],
+    "constructors": [],
+    "examples": [],
+    "url": "https://docs.unity3d.com/ScriptReference/Screen.html"
+  },
+  {
+    "class_name": "PlayerPrefs",
+    "description": "PlayerPrefs is a class that stores Player preferences between game sessions. It can store string, float and integer values into the user's platform registry.",
+    "properties": [],
+    "methods": [],
+    "constructors": [],
+    "examples": [],
+    "url": "https://docs.unity3d.com/ScriptReference/PlayerPrefs.html"
+  },
+  {
+    "class_name": "Debug",
+    "description": "Class containing methods to ease debugging while developing a game.",
+    "properties": [],
+    "methods": [],
+    "constructors": [],
+    "examples": [],
+    "url": "https://docs.unity3d.com/ScriptReference/Debug.html"
+  },
+  {
+    "class_name": "Animation",
+    "description": "The animation component is used to play back animations.",
+    "properties": [
+      {
+        "name": "animatePhysics",
+        "description": "When enabled, the physics system uses animated transforms from GameObjects with kinematic Rigidbody components to influence other GameObjects."
+      },
+      {
+        "name": "clip",
+        "description": "The default animation."
+      },
+      {
+        "name": "cullingType",
+        "description": "Controls culling of this Animation component."
+      },
+      {
+        "name": "isPlaying",
+        "description": "Is an animation currently being played?"
+      },
+      {
+        "name": "localBounds",
+        "description": "AABB of this Animation animation component in local space."
+      },
+      {
+        "name": "playAutomatically",
+        "description": "Should the default animation clip (the Animation.clip property) automatically start playing on startup?"
+      },
+      {
+        "name": "this[string]",
+        "description": "Returns the animation state named name."
+      },
+      {
+        "name": "updateMode",
+        "description": "Specifies the update mode of the Animation."
+      },
+      {
+        "name": "wrapMode",
+        "description": "How should time beyond the playback range of the clip be treated?"
+      }
+    ],
+    "methods": [
+      {
+        "name": "AddClip",
+        "description": "Adds a clip to the animation with name newName."
+      },
+      {
+        "name": "Blend",
+        "description": "Blends the animation named animation towards targetWeight over the next time seconds."
+      },
+      {
+        "name": "CrossFade",
+        "description": "Fades in the animation with the name animation over a period of time defined by fadeLength."
+      },
+      {
+        "name": "CrossFadeQueued",
+        "description": "Cross fades an animation after previous animations has finished playing."
+      },
+      {
+        "name": "GetClipCount",
+        "description": "Get the number of clips currently assigned to this animation."
+      },
+      {
+        "name": "IsPlaying",
+        "description": "Is the animation named name playing?"
+      },
+      {
+        "name": "Play",
+        "description": "Plays an animation without blending."
+      },
+      {
+        "name": "PlayQueued",
+        "description": "Plays an animation after previous animations has finished playing."
+      },
+      {
+        "name": "RemoveClip",
+        "description": "Remove clip from the animation list."
+      },
+      {
+        "name": "Rewind",
+        "description": "Rewinds the animation named name."
+      },
+      {
+        "name": "Sample",
+        "description": "Samples animations at the current state."
+      },
+      {
+        "name": "Stop",
+        "description": "Stops all playing animations that were started with this Animation."
+      }
+    ],
+    "constructors": [],
+    "examples": [
+      "using UnityEngine;\r\nusing System.Collections;public class ExampleClass : MonoBehaviour\r\n{\r\n    public Animation anim;    void Start()\r\n    {\r\n        anim = GetComponent<Animation>();\r\n        foreach (AnimationState state in anim)\r\n        {\r\n            state.speed = 0.5F;\r\n        }\r\n    }\r\n}"
+    ],
+    "url": "https://docs.unity3d.com/ScriptReference/Animation.html"
+  },
+  {
+    "class_name": "Animator",
+    "description": "Manages, controls, and evaluates the animation of a GameObject.",
+    "properties": [
+      {
+        "name": "angularVelocity",
+        "description": "Gets the avatar angular velocity for the last evaluated frame."
+      },
+      {
+        "name": "animatePhysics",
+        "description": "When enabled, the physics system uses animated transforms from GameObjects with kinematic Rigidbody components to influence other GameObjects."
+      },
+      {
+        "name": "applyRootMotion",
+        "description": "Should root motion be applied?"
+      },
+      {
+        "name": "avatar",
+        "description": "Gets/Sets the current Avatar."
+      },
+      {
+        "name": "avatarRoot",
+        "description": "Returns the Avatar root Transform."
+      },
+      {
+        "name": "bodyPosition",
+        "description": "The position of the body center of mass."
+      },
+      {
+        "name": "bodyRotation",
+        "description": "The rotation of the body center of mass."
+      },
+      {
+        "name": "cullingMode",
+        "description": "Controls culling of this Animator component."
+      },
+      {
+        "name": "deltaPosition",
+        "description": "Gets the avatar delta position for the last evaluated frame."
+      },
+      {
+        "name": "deltaRotation",
+        "description": "Gets the avatar delta rotation for the last evaluated frame."
+      },
+      {
+        "name": "feetPivotActive",
+        "description": "Blends pivot point between body center of mass and feet pivot."
+      },
+      {
+        "name": "fireEvents",
+        "description": "Sets whether the Animator sends events of type AnimationEvent."
+      },
+      {
+        "name": "gravityWeight",
+        "description": "The current gravity weight based on current animations that are played."
+      },
+      {
+        "name": "hasBoundPlayables",
+        "description": "Returns true if Animator has any playables assigned to it."
+      },
+      {
+        "name": "hasRootMotion",
+        "description": "Returns true if the current rig has root motion."
+      },
+      {
+        "name": "hasTransformHierarchy",
+        "description": "Returns true if the object has a transform hierarchy."
+      },
+      {
+        "name": "humanScale",
+        "description": "Returns the scale of the current Avatar for a humanoid rig, (1 by default if the rig is generic)."
+      },
+      {
+        "name": "isHuman",
+        "description": "Returns true if the current rig is humanoid, false if it is generic."
+      },
+      {
+        "name": "isInitialized",
+        "description": "Returns whether the animator is initialized successfully."
+      },
+      {
+        "name": "isMatchingTarget",
+        "description": "If automatic matching is active."
+      },
+      {
+        "name": "isOptimizable",
+        "description": "Returns true if the current rig is optimizable with AnimatorUtility.OptimizeTransformHierarchy."
+      },
+      {
+        "name": "keepAnimatorStateOnDisable",
+        "description": "Controls the behaviour of the Animator component when a GameObject is inactive."
+      },
+      {
+        "name": "layerCount",
+        "description": "Returns the number of layers in the controller."
+      },
+      {
+        "name": "layersAffectMassCenter",
+        "description": "Additional layers affects the center of mass."
+      },
+      {
+        "name": "leftFeetBottomHeight",
+        "description": "Get left foot bottom height."
+      },
+      {
+        "name": "parameterCount",
+        "description": "Returns the number of parameters in the controller."
+      },
+      {
+        "name": "parameters",
+        "description": "The AnimatorControllerParameter list used by the animator. (Read Only)"
+      },
+      {
+        "name": "pivotPosition",
+        "description": "Get the current position of the pivot."
+      },
+      {
+        "name": "pivotWeight",
+        "description": "Gets the pivot weight."
+      },
+      {
+        "name": "playableGraph",
+        "description": "The PlayableGraph created by the Animator."
+      },
+      {
+        "name": "playbackTime",
+        "description": "Sets the playback position in the recording buffer."
+      },
+      {
+        "name": "recorderMode",
+        "description": "Gets the mode of the Animator recorder."
+      },
+      {
+        "name": "recorderStartTime",
+        "description": "Start time of the first frame of the buffer relative to the frame at which StartRecording was called."
+      },
+      {
+        "name": "recorderStopTime",
+        "description": "End time of the recorded clip relative to when StartRecording was called."
+      },
+      {
+        "name": "rightFeetBottomHeight",
+        "description": "Get right foot bottom height."
+      },
+      {
+        "name": "rootPosition",
+        "description": "The root position, the position of the game object."
+      },
+      {
+        "name": "rootRotation",
+        "description": "The root rotation, the rotation of the game object."
+      },
+      {
+        "name": "runtimeAnimatorController",
+        "description": "The runtime representation of AnimatorController that controls the Animator."
+      },
+      {
+        "name": "speed",
+        "description": "The playback speed of the Animator. 1 is normal playback speed."
+      },
+      {
+        "name": "stabilizeFeet",
+        "description": "Automatic stabilization of feet during transition and blending."
+      },
+      {
+        "name": "targetPosition",
+        "description": "Returns the position of the target specified by SetTarget."
+      },
+      {
+        "name": "targetRotation",
+        "description": "Returns the rotation of the target specified by SetTarget."
+      },
+      {
+        "name": "updateMode",
+        "description": "Specifies the update mode of the Animator."
+      },
+      {
+        "name": "velocity",
+        "description": "Gets the avatar velocity for the last evaluated frame."
+      },
+      {
+        "name": "writeDefaultValuesOnDisable",
+        "description": "Specifies whether playable graph values are reset or preserved when the Animator is disabled."
+      }
+    ],
+    "methods": [
+      {
+        "name": "ApplyBuiltinRootMotion",
+        "description": "Apply the default Root Motion."
+      },
+      {
+        "name": "CrossFade",
+        "description": "Creates a crossfade from the current state to any other state using normalized times."
+      },
+      {
+        "name": "CrossFadeInFixedTime",
+        "description": "Creates a crossfade from the current state to any other state using times in seconds."
+      },
+      {
+        "name": "GetAnimatorTransitionInfo",
+        "description": "Returns an AnimatorTransitionInfo with the informations on the current transition."
+      },
+      {
+        "name": "GetBehaviour",
+        "description": "Returns the first StateMachineBehaviour that matches type T or is derived from T. Returns null if none are found."
+      },
+      {
+        "name": "GetBehaviours",
+        "description": "Returns all StateMachineBehaviour that match type T or are derived from T. Returns null if none are found."
+      },
+      {
+        "name": "GetBoneTransform",
+        "description": "Retrieves the Transform mapped to a human bone based on its id."
+      },
+      {
+        "name": "GetBool",
+        "description": "Returns the value of the given boolean parameter."
+      },
+      {
+        "name": "GetCurrentAnimatorClipInfo",
+        "description": "Returns an array of all the AnimatorClipInfo in the current state of the given layer."
+      },
+      {
+        "name": "GetCurrentAnimatorClipInfoCount",
+        "description": "Returns the number of AnimatorClipInfo in the current state."
+      },
+      {
+        "name": "GetCurrentAnimatorStateInfo",
+        "description": "Returns an AnimatorStateInfo with the information on the current state."
+      },
+      {
+        "name": "GetFloat",
+        "description": "Returns the value of the given float parameter."
+      },
+      {
+        "name": "GetIKHintPosition",
+        "description": "Gets the position of an IK hint."
+      },
+      {
+        "name": "GetIKHintPositionWeight",
+        "description": "Gets the translative weight of an IK Hint (0 = at the original animation before IK, 1 = at the hint)."
+      },
+      {
+        "name": "GetIKPosition",
+        "description": "Gets the position of an IK goal."
+      },
+      {
+        "name": "GetIKPositionWeight",
+        "description": "Gets the translative weight of an IK goal (0 = at the original animation before IK, 1 = at the goal)."
+      },
+      {
+        "name": "GetIKRotation",
+        "description": "Gets the rotation of an IK goal."
+      },
+      {
+        "name": "GetIKRotationWeight",
+        "description": "Gets the rotational weight of an IK goal (0 = rotation before IK, 1 = rotation at the IK goal)."
+      },
+      {
+        "name": "GetInteger",
+        "description": "Returns the value of the given integer parameter."
+      },
+      {
+        "name": "GetLayerIndex",
+        "description": "Returns the index of the animation layer with the given name."
+      },
+      {
+        "name": "GetLayerName",
+        "description": "Returns the layer name."
+      },
+      {
+        "name": "GetLayerWeight",
+        "description": "Returns the weight of the layer at the specified index."
+      },
+      {
+        "name": "GetNextAnimatorClipInfo",
+        "description": "Returns an array of all the AnimatorClipInfo in the next state of the given layer."
+      },
+      {
+        "name": "GetNextAnimatorClipInfoCount",
+        "description": "Returns the number of AnimatorClipInfo in the next state."
+      },
+      {
+        "name": "GetNextAnimatorStateInfo",
+        "description": "Returns an AnimatorStateInfo with the information on the next state."
+      },
+      {
+        "name": "GetParameter",
+        "description": "Obtains a reference to the AnimatorControllerParameter at the given index."
+      },
+      {
+        "name": "HasState",
+        "description": "Returns true if the state exists in this layer, false otherwise."
+      },
+      {
+        "name": "InterruptMatchTarget",
+        "description": "Interrupts the automatic target matching."
+      },
+      {
+        "name": "IsInTransition",
+        "description": "Returns true if there is a transition on the given layer, false otherwise."
+      },
+      {
+        "name": "IsParameterControlledByCurve",
+        "description": "Returns true if the parameter is controlled by a curve, false otherwise."
+      },
+      {
+        "name": "MatchTarget",
+        "description": "Automatically adjust the GameObject position and rotation."
+      },
+      {
+        "name": "Play",
+        "description": "Plays a state."
+      },
+      {
+        "name": "PlayInFixedTime",
+        "description": "Plays a state."
+      },
+      {
+        "name": "Rebind",
+        "description": "Rebind all the animated properties and mesh data with the Animator."
+      },
+      {
+        "name": "ResetControllerState",
+        "description": "Resets the AnimatorController to its default state."
+      },
+      {
+        "name": "ResetTrigger",
+        "description": "Resets the value of the given trigger parameter."
+      },
+      {
+        "name": "SetBoneLocalRotation",
+        "description": "Sets local rotation of a human bone during a IK pass."
+      },
+      {
+        "name": "SetBool",
+        "description": "Sets the value of the given boolean parameter."
+      },
+      {
+        "name": "SetFloat",
+        "description": "Send float values to the Animator to affect transitions."
+      },
+      {
+        "name": "SetIKHintPosition",
+        "description": "Sets the position of an IK hint."
+      },
+      {
+        "name": "SetIKHintPositionWeight",
+        "description": "Sets the translative weight of an IK hint (0 = at the original animation before IK, 1 = at the hint)."
+      },
+      {
+        "name": "SetIKPosition",
+        "description": "Sets the position of an IK goal."
+      },
+      {
+        "name": "SetIKPositionWeight",
+        "description": "Sets the translative weight of an IK goal (0 = at the original animation before IK, 1 = at the goal)."
+      },
+      {
+        "name": "SetIKRotation",
+        "description": "Sets the rotation of an IK goal."
+      },
+      {
+        "name": "SetIKRotationWeight",
+        "description": "Sets the rotational weight of an IK goal (0 = rotation before IK, 1 = rotation at the IK goal)."
+      },
+      {
+        "name": "SetInteger",
+        "description": "Sets the value of the given integer parameter."
+      },
+      {
+        "name": "SetLayerWeight",
+        "description": "Changes the weight of the layer at a specific index."
+      },
+      {
+        "name": "SetLookAtPosition",
+        "description": "Sets the look at position for a character during animations."
+      },
+      {
+        "name": "SetLookAtWeight",
+        "description": "Set look at weights."
+      },
+      {
+        "name": "SetTarget",
+        "description": "Sets an AvatarTarget and a targetNormalizedTime for the current state."
+      },
+      {
+        "name": "SetTrigger",
+        "description": "Sets the value of the given trigger parameter."
+      },
+      {
+        "name": "StartPlayback",
+        "description": "Sets the animator in playback mode."
+      },
+      {
+        "name": "StartRecording",
+        "description": "Sets the animator in recording mode, and allocates a circular buffer of size frameCount."
+      },
+      {
+        "name": "StopPlayback",
+        "description": "Stops the animator playback mode. When playback stops, the avatar resumes getting control from game logic."
+      },
+      {
+        "name": "StopRecording",
+        "description": "Stops animator record mode."
+      },
+      {
+        "name": "Update",
+        "description": "Evaluates the animator based on deltaTime."
+      },
+      {
+        "name": "WriteDefaultValues",
+        "description": "Forces a write of the default values stored in the animator."
+      }
+    ],
+    "constructors": [],
+    "examples": [],
+    "url": "https://docs.unity3d.com/ScriptReference/Animator.html"
+  },
+  {
+    "class_name": "ParticleSystem",
+    "description": "Script interface for the Built-in Particle System. Unity's powerful and versatile particle system implementation.",
+    "properties": [
+      {
+        "name": "collision",
+        "description": "Script interface for the CollisionModule of a Particle System."
+      },
+      {
+        "name": "colorBySpeed",
+        "description": "Script interface for the ColorByLifetimeModule of a Particle System."
+      },
+      {
+        "name": "colorOverLifetime",
+        "description": "Script interface for the ColorOverLifetimeModule of a Particle System."
+      },
+      {
+        "name": "customData",
+        "description": "Script interface for the CustomDataModule of a Particle System."
+      },
+      {
+        "name": "emission",
+        "description": "Script interface for the EmissionModule of a Particle System."
+      },
+      {
+        "name": "externalForces",
+        "description": "Script interface for the ExternalForcesModule of a Particle System."
+      },
+      {
+        "name": "forceOverLifetime",
+        "description": "Script interface for the ForceOverLifetimeModule of a Particle System."
+      },
+      {
+        "name": "has3DParticleRotations",
+        "description": "Determines whether the Particle System rotates its particles around only the Z axis, or whether the system specifies separate values for the X, Y and Z axes."
+      },
+      {
+        "name": "hasNonUniformParticleSizes",
+        "description": "Determines whether the Particle System uses a single value for the width and height (and depth, when using meshes), or if the system specifies different values for each axis."
+      },
+      {
+        "name": "inheritVelocity",
+        "description": "Script interface for the InheritVelocityModule of a Particle System."
+      },
+      {
+        "name": "isEmitting",
+        "description": "Determines whether the Particle System is emitting particles. A Particle System may stop emitting when its emission module has finished, it has been paused or if the system has been stopped using Stop with the StopEmitting flag. Resume emitting by calling Play."
+      },
+      {
+        "name": "isPaused",
+        "description": "Determines whether the Particle System is paused."
+      },
+      {
+        "name": "isPlaying",
+        "description": "Determines whether the Particle System is playing."
+      },
+      {
+        "name": "isStopped",
+        "description": "Determines whether the Particle System is in the stopped state."
+      },
+      {
+        "name": "lifetimeByEmitterSpeed",
+        "description": "Script interface for the Particle System Lifetime By Emitter Speed module."
+      },
+      {
+        "name": "lights",
+        "description": "Script interface for the LightsModule of a Particle System."
+      },
+      {
+        "name": "limitVelocityOverLifetime",
+        "description": "Script interface for the LimitVelocityOverLifetimeModule of a Particle System. ."
+      },
+      {
+        "name": "main",
+        "description": "Access the main Particle System settings."
+      },
+      {
+        "name": "noise",
+        "description": "Script interface for the NoiseModule of a Particle System."
+      },
+      {
+        "name": "particleCount",
+        "description": "The current number of particles (Read Only). The number doesn't include particles of child Particle Systems"
+      },
+      {
+        "name": "proceduralSimulationSupported",
+        "description": "Determines whether this system supports Procedural Simulation."
+      },
+      {
+        "name": "randomSeed",
+        "description": "Override the random seed used for the Particle System emission."
+      },
+      {
+        "name": "rotationBySpeed",
+        "description": "Script interface for the RotationBySpeedModule of a Particle System."
+      },
+      {
+        "name": "rotationOverLifetime",
+        "description": "Script interface for the RotationOverLifetimeModule of a Particle System."
+      },
+      {
+        "name": "shape",
+        "description": "Script interface for the ShapeModule of a Particle System."
+      },
+      {
+        "name": "sizeBySpeed",
+        "description": "Script interface for the SizeBySpeedModule of a Particle System."
+      },
+      {
+        "name": "sizeOverLifetime",
+        "description": "Script interface for the SizeOverLifetimeModule of a Particle System."
+      },
+      {
+        "name": "subEmitters",
+        "description": "Script interface for the SubEmittersModule of a Particle System."
+      },
+      {
+        "name": "textureSheetAnimation",
+        "description": "Script interface for the TextureSheetAnimationModule of a Particle System."
+      },
+      {
+        "name": "time",
+        "description": "Playback position in seconds."
+      },
+      {
+        "name": "totalTime",
+        "description": "Total playback time in seconds, including the Start Delay setting."
+      },
+      {
+        "name": "trails",
+        "description": "Script interface for the TrailsModule of a Particle System."
+      },
+      {
+        "name": "trigger",
+        "description": "Script interface for the TriggerModule of a Particle System."
+      },
+      {
+        "name": "useAutoRandomSeed",
+        "description": "Controls whether the Particle System uses an automatically-generated random number to seed the random number generator."
+      },
+      {
+        "name": "velocityOverLifetime",
+        "description": "Script interface for the VelocityOverLifetimeModule of a Particle System."
+      }
+    ],
+    "methods": [
+      {
+        "name": "AllocateAxisOfRotationAttribute",
+        "description": "Ensures that the axisOfRotations particle attribute array is allocated."
+      },
+      {
+        "name": "AllocateCustomDataAttribute",
+        "description": "Ensures that the customData1 and customData2 particle attribute arrays are allocated."
+      },
+      {
+        "name": "AllocateMeshIndexAttribute",
+        "description": "Ensures that the meshIndices particle attribute array is allocated."
+      },
+      {
+        "name": "Clear",
+        "description": "Remove all particles in the Particle System."
+      },
+      {
+        "name": "Emit",
+        "description": "Emit count particles immediately."
+      },
+      {
+        "name": "GetCustomParticleData",
+        "description": "Get a stream of custom per-particle data."
+      },
+      {
+        "name": "GetParticles",
+        "description": "Gets the particles of this Particle System."
+      },
+      {
+        "name": "GetPlaybackState",
+        "description": "Returns all the data that relates to the current internal state of the Particle System."
+      },
+      {
+        "name": "GetTrails",
+        "description": "Returns all the data relating to the current internal state of the Particle System Trails."
+      },
+      {
+        "name": "IsAlive",
+        "description": "Does the Particle System contain any live particles, or will it produce more?"
+      },
+      {
+        "name": "Pause",
+        "description": "Pauses the system so no new particles are emitted and the existing particles are not updated."
+      },
+      {
+        "name": "Play",
+        "description": "Starts the Particle System and resets its playback time to 0."
+      },
+      {
+        "name": "SetCustomParticleData",
+        "description": "Set a stream of custom per-particle data."
+      },
+      {
+        "name": "SetParticles",
+        "description": "Sets the particles of this Particle System."
+      },
+      {
+        "name": "SetParticlesAndTrails",
+        "description": "Sets the particles and the trails of this Particle System."
+      },
+      {
+        "name": "SetPlaybackState",
+        "description": "Use this method with the results of an earlier call to ParticleSystem.GetPlaybackState, in order to restore the Particle System to the state stored in the playbackState object."
+      },
+      {
+        "name": "Simulate",
+        "description": "Fast-forwards the Particle System by simulating particles over the given period of time, then pauses it."
+      },
+      {
+        "name": "Stop",
+        "description": "Stops playing the Particle System using the supplied stop behaviour."
+      },
+      {
+        "name": "TriggerSubEmitter",
+        "description": "Triggers the specified sub emitter on all particles of the Particle System."
+      }
+    ],
+    "constructors": [],
+    "examples": [],
+    "url": "https://docs.unity3d.com/ScriptReference/ParticleSystem.html"
+  },
+  {
+    "class_name": "AudioSource",
+    "description": "A representation of audio sources in 3D.",
+    "properties": [
+      {
+        "name": "bypassEffects",
+        "description": "Bypass effects (Applied from filter components or global listener filters)."
+      },
+      {
+        "name": "bypassListenerEffects",
+        "description": "When set, global effects on the AudioListener doesn't apply to the audio signal generated by the AudioSource. It also does'nt apply, if the AudioSource is playing into a mixer group."
+      },
+      {
+        "name": "bypassReverbZones",
+        "description": "When set, it doesn't route the signal from an AudioSource into the global reverb associated with reverb zones."
+      },
+      {
+        "name": "clip",
+        "description": "The default AudioClip to play."
+      },
+      {
+        "name": "dopplerLevel",
+        "description": "Sets the Doppler scale for this AudioSource."
+      },
+      {
+        "name": "gamepadSpeakerOutputType",
+        "description": "Gets or sets the gamepad audio output type for this audio source."
+      },
+      {
+        "name": "generator",
+        "description": "The default IAudioGenerator to play next."
+      },
+      {
+        "name": "generatorInstance",
+        "description": "A handle to the currently playing Generator, if it can be controlled by scripting."
+      },
+      {
+        "name": "ignoreListenerPause",
+        "description": "Allows AudioSource to play even though AudioListener.pause is set to true. This is useful for the menu element sounds or background music in pause menus."
+      },
+      {
+        "name": "ignoreListenerVolume",
+        "description": "This makes the audio source not take into account the volume of the audio listener."
+      },
+      {
+        "name": "isPlaying",
+        "description": "Returns whether the AudioSource is currently playing an AudioResource(Read Only)."
+      },
+      {
+        "name": "isVirtual",
+        "description": "True if all sounds played by the AudioSource, such as main sound started by Play() or playOnAwake, and one-shots are culled by the audio system."
+      },
+      {
+        "name": "loop",
+        "description": "Checks if the audio clip is looping"
+      },
+      {
+        "name": "maxDistance",
+        "description": "The distance where sound either becomes inaudible or stops attenuation, depending on the rolloff mode."
+      },
+      {
+        "name": "minDistance",
+        "description": "Within the Min distance the AudioSource will cease to grow louder in volume."
+      },
+      {
+        "name": "mute",
+        "description": "Un- / Mutes the AudioSource. Mute sets the volume=0, Un-Mute restore the original volume."
+      },
+      {
+        "name": "outputAudioMixerGroup",
+        "description": "The target group to which the AudioSource should route its signal."
+      },
+      {
+        "name": "panStereo",
+        "description": "Pans a playing sound in a stereo way (left or right). This only applies to sounds that are Mono or Stereo."
+      },
+      {
+        "name": "pitch",
+        "description": "The pitch of the audio source."
+      },
+      {
+        "name": "playOnAwake",
+        "description": "Enable this property to automatically play the audio source when the component or GameObject becomes active."
+      },
+      {
+        "name": "priority",
+        "description": "Sets the priority of the AudioSource."
+      },
+      {
+        "name": "resource",
+        "description": "The default AudioResource to play."
+      },
+      {
+        "name": "reverbZoneMix",
+        "description": "The amount by which the signal from the AudioSource will be mixed into the global reverb associated with the Reverb Zones."
+      },
+      {
+        "name": "rolloffMode",
+        "description": "Sets/Gets how the AudioSource attenuates over distance."
+      },
+      {
+        "name": "spatialBlend",
+        "description": "Sets how much this AudioSource is affected by 3D spatialisation calculations (attenuation, doppler etc). 0.0 makes the sound full 2D, 1.0 makes it full 3D."
+      },
+      {
+        "name": "spatialize",
+        "description": "Enables or disables spatialization."
+      },
+      {
+        "name": "spatializePostEffects",
+        "description": "Determines if the spatializer effect is inserted before or after the effect filters."
+      },
+      {
+        "name": "spread",
+        "description": "Sets the spread angle (in degrees) of a 3d stereo or multichannel sound in speaker space."
+      },
+      {
+        "name": "time",
+        "description": "Audio source playback position in seconds."
+      },
+      {
+        "name": "timeSamples",
+        "description": "The current playback position of the AudioSource in PCM samples."
+      },
+      {
+        "name": "velocityUpdateMode",
+        "description": "Whether the Audio Source should be updated in the fixed or dynamic update."
+      },
+      {
+        "name": "volume",
+        "description": "The volume of the audio source (0.0 to 1.0)."
+      }
+    ],
+    "methods": [
+      {
+        "name": "DisableGamepadOutput",
+        "description": "Disables audio output to a gamepad for this audio source."
+      },
+      {
+        "name": "GetAmbisonicDecoderFloat",
+        "description": "Reads a user-defined parameter of a custom ambisonic decoder effect that is attached to an AudioSource."
+      },
+      {
+        "name": "GetCustomCurve",
+        "description": "Get the current custom curve for the given AudioSourceCurveType."
+      },
+      {
+        "name": "GetOutputData",
+        "description": "Provides a block of the currently playing source's output data."
+      },
+      {
+        "name": "GetSpatializerFloat",
+        "description": "Reads a user-defined parameter of a custom spatializer effect that is attached to an AudioSource."
+      },
+      {
+        "name": "GetSpectrumData",
+        "description": "Provides the block of audio frequencies (spectrum data) of the AudioSource that is currently playing."
+      },
+      {
+        "name": "Pause",
+        "description": "Pauses playing the clip."
+      },
+      {
+        "name": "Play",
+        "description": "Plays the clip."
+      },
+      {
+        "name": "PlayDelayed",
+        "description": "Plays the clip with a delay specified in seconds. Users are advised to use this function instead of the old Play(delay) function that took a delay specified in samples relative to a reference rate of 44.1 kHz as an argument."
+      },
+      {
+        "name": "PlayOneShot",
+        "description": "Plays an AudioClip, and scales the AudioSource volume by volumeScale."
+      },
+      {
+        "name": "PlayOnGamepad",
+        "description": "Enable the audio source to play through a specific gamepad."
+      },
+      {
+        "name": "PlayScheduled",
+        "description": "Plays the clip at a specific time on the absolute time-line that AudioSettings.dspTime reads from."
+      },
+      {
+        "name": "SetAmbisonicDecoderFloat",
+        "description": "Sets a user-defined parameter of a custom ambisonic decoder effect that is attached to an AudioSource."
+      },
+      {
+        "name": "SetCustomCurve",
+        "description": "Set the custom curve for the given AudioSourceCurveType."
+      },
+      {
+        "name": "SetScheduledEndTime",
+        "description": "Changes the time at which a sound that has already been scheduled to play will end. Notice that depending on the timing not all rescheduling requests can be fulfilled."
+      },
+      {
+        "name": "SetScheduledStartTime",
+        "description": "Changes the time at which a sound that has already been scheduled to play will start."
+      },
+      {
+        "name": "SetSpatializerFloat",
+        "description": "Sets a user-defined parameter of a custom spatializer effect that is attached to an AudioSource."
+      },
+      {
+        "name": "Stop",
+        "description": "Stops playing the clip."
+      },
+      {
+        "name": "UnPause",
+        "description": "Unpause the paused playback of this AudioSource."
+      }
+    ],
+    "constructors": [],
+    "examples": [
+      "//This script allows you to toggle music to play and stop.\r\n//Assign an AudioSource to a GameObject and attach an Audio Clip in the Audio Source. Attach this script to the GameObject.using UnityEngine;public class Example : MonoBehaviour\r\n{\r\n    AudioSource m_MyAudioSource;    //Play the music\r\n    bool m_Play;\r\n    //Detect when you use the toggle, ensures music isn’t played multiple times\r\n    bool m_ToggleChange;    void Start()\r\n    {\r\n        //Fetch the AudioSource from the GameObject\r\n        m_MyAudioSource = GetComponent<AudioSource>();\r\n        //Ensure the toggle is set to true for the music to play at start-up\r\n        m_Play = true;\r\n    }    void Update()\r\n    {\r\n        //Check to see if you just set the toggle to positive\r\n        if (m_Play == true && m_ToggleChange == true)\r\n        {\r\n            //Play the audio you attach to the AudioSource component\r\n            m_MyAudioSource.Play();\r\n            //Ensure audio doesn’t play more than once\r\n            m_ToggleChange = false;\r\n        }\r\n        //Check if you just set the toggle to false\r\n        if (m_Play == false && m_ToggleChange == true)\r\n        {\r\n            //Stop the audio\r\n            m_MyAudioSource.Stop();\r\n            //Ensure audio doesn’t play more than once\r\n            m_ToggleChange = false;\r\n        }\r\n    }    void OnGUI()\r\n    {\r\n        //Switch this toggle to activate and deactivate the parent GameObject\r\n        m_Play = GUI.Toggle(new Rect(10, 10, 100, 30), m_Play, \"Play Music\");        //Detect if there is a change with the toggle\r\n        if (GUI.changed)\r\n        {\r\n            //Change to true to show that there was just a change in the toggle state\r\n            m_ToggleChange = true;\r\n        }\r\n    }\r\n}"
+    ],
+    "url": "https://docs.unity3d.com/ScriptReference/AudioSource.html"
+  },
+  {
+    "class_name": "Application",
+    "description": "Provides access to application runtime data.",
+    "properties": [],
+    "methods": [],
+    "constructors": [],
+    "examples": [],
+    "url": "https://docs.unity3d.com/ScriptReference/Application.html"
+  },
+  {
+    "class_name": "Behaviour",
+    "description": "Behaviours are Components that can be enabled or disabled.",
+    "properties": [
+      {
+        "name": "enabled",
+        "description": "Enabled Behaviours are Updated, disabled Behaviours are not."
+      },
+      {
+        "name": "isActiveAndEnabled",
+        "description": "Checks whether a component is enabled, attached to a GameObject that is active in the hierarchy, and the component's OnEnable has been called."
+      }
+    ],
+    "methods": [
+      {
+        "name": "BroadcastMessage",
+        "description": "Calls the method named methodName on every MonoBehaviour in this game object or any of its children."
+      },
+      {
+        "name": "CompareTag",
+        "description": "Checks the GameObject's tag against the defined tag."
+      },
+      {
+        "name": "GetComponent",
+        "description": "Gets a reference to a component of type T on the same GameObject as the component specified."
+      },
+      {
+        "name": "GetComponentInChildren",
+        "description": "Gets a reference to a component of type T on the same GameObject as the component specified, or any child of the GameObject."
+      },
+      {
+        "name": "GetComponentIndex",
+        "description": "Gets the index of the component on its parent GameObject."
+      },
+      {
+        "name": "GetComponentInParent",
+        "description": "Gets a reference to a component of type T on the same GameObject as the component specified, or any parent of the GameObject."
+      },
+      {
+        "name": "GetComponents",
+        "description": "Gets references to all components of type T on the same GameObject as the component specified."
+      },
+      {
+        "name": "GetComponentsInChildren",
+        "description": "Gets references to all components of type T on the same GameObject as the component specified, and any child of the GameObject."
+      },
+      {
+        "name": "GetComponentsInParent",
+        "description": "Gets references to all components of type T on the same GameObject as the component specified, and any parent of the GameObject."
+      },
+      {
+        "name": "SendMessage",
+        "description": "Calls the method named methodName on every MonoBehaviour in this game object."
+      },
+      {
+        "name": "SendMessageUpwards",
+        "description": "Calls the method named methodName on every MonoBehaviour in this game object and on every ancestor of the behaviour."
+      },
+      {
+        "name": "TryGetComponent",
+        "description": "Gets the component of the specified type, if it exists."
+      },
+      {
+        "name": "GetInstanceID",
+        "description": "Gets the instance ID of the object."
+      },
+      {
+        "name": "ToString",
+        "description": "Returns the name of the object."
+      }
+    ],
+    "constructors": [],
+    "examples": [],
+    "url": "https://docs.unity3d.com/ScriptReference/Behaviour.html"
+  },
+  {
+    "class_name": "Object",
+    "description": "Base class for all objects Unity can reference.",
+    "properties": [
+      {
+        "name": "hideFlags",
+        "description": "Should the object be hidden, saved with the Scene or modifiable by the user?"
+      },
+      {
+        "name": "name",
+        "description": "The name of the object."
+      }
+    ],
+    "methods": [
+      {
+        "name": "GetInstanceID",
+        "description": "Gets the instance ID of the object."
+      },
+      {
+        "name": "ToString",
+        "description": "Returns the name of the object."
+      }
+    ],
+    "constructors": [],
+    "examples": [],
+    "url": "https://docs.unity3d.com/ScriptReference/Object.html"
+  },
+  {
+    "class_name": "SystemInfo",
+    "description": "Access system and hardware information.",
+    "properties": [],
+    "methods": [],
+    "constructors": [],
+    "examples": [],
+    "url": "https://docs.unity3d.com/ScriptReference/SystemInfo.html"
+  },
+  {
+    "class_name": "Random",
+    "description": "Easily generate random data for games.",
+    "properties": [],
+    "methods": [],
+    "constructors": [],
+    "examples": [],
+    "url": "https://docs.unity3d.com/ScriptReference/Random.html"
+  },
+  {
+    "class_name": "Mathf",
+    "description": "A collection of common math functions.",
+    "properties": [],
+    "methods": [],
+    "constructors": [],
+    "examples": [],
+    "url": "https://docs.unity3d.com/ScriptReference/Mathf.html"
+  }
+]

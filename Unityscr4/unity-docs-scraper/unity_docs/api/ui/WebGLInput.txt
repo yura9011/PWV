@@ -1,0 +1,7 @@
+// Unity Class: WebGLInput
+// Documentation: https://docs.unity3d.com/ScriptReference/WebGLInput.html
+
+// Description: WebGLInput provides support for WebGL specific functionalities. Important: Browsers only allow sensor input in secure contexts, which means you must use HTTPS except during development where you might use http://localhost.
+
+public class WebGLInput {
+}

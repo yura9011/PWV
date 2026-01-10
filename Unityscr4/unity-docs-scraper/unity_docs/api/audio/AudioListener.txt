@@ -1,0 +1,42 @@
+// Unity Class: AudioListener
+// Documentation: https://docs.unity3d.com/ScriptReference/AudioListener.html
+
+// Description: Representation of a listener in 3D space.
+
+// Properties:
+// - velocityUpdateMode: This lets you set whether the Audio Listener should be updated in the fixed or dynamic update.
+
+// Methods:
+// - BroadcastMessage(): Calls the method named methodName on every MonoBehaviour in this game object or any of its children.
+// - CompareTag(): Checks the GameObject's tag against the defined tag.
+// - GetComponent(): Gets a reference to a component of type T on the same GameObject as the component specified.
+// - GetComponentInChildren(): Gets a reference to a component of type T on the same GameObject as the component specified, or any child of the GameObject.
+// - GetComponentIndex(): Gets the index of the component on its parent GameObject.
+// - GetComponentInParent(): Gets a reference to a component of type T on the same GameObject as the component specified, or any parent of the GameObject.
+// - GetComponents(): Gets references to all components of type T on the same GameObject as the component specified.
+// - GetComponentsInChildren(): Gets references to all components of type T on the same GameObject as the component specified, and any child of the GameObject.
+// - GetComponentsInParent(): Gets references to all components of type T on the same GameObject as the component specified, and any parent of the GameObject.
+// - SendMessage(): Calls the method named methodName on every MonoBehaviour in this game object.
+// - SendMessageUpwards(): Calls the method named methodName on every MonoBehaviour in this game object and on every ancestor of the behaviour.
+// - TryGetComponent(): Gets the component of the specified type, if it exists.
+// - GetInstanceID(): Gets the instance ID of the object.
+// - ToString(): Returns the name of the object.
+
+// Pseudo-code representation of AudioListener
+public class AudioListener {
+    public var velocityUpdateMode; // This lets you set whether the Audio Listener should be updated in the fixed or dynamic update.
+    public void BroadcastMessage(); // Calls the method named methodName on every MonoBehaviour in this game object or any of its children.
+    public void CompareTag(); // Checks the GameObject's tag against the defined tag.
+    public void GetComponent(); // Gets a reference to a component of type T on the same GameObject as the component specified.
+    public void GetComponentInChildren(); // Gets a reference to a component of type T on the same GameObject as the component specified, or any child of the GameObject.
+    public void GetComponentIndex(); // Gets the index of the component on its parent GameObject.
+    public void GetComponentInParent(); // Gets a reference to a component of type T on the same GameObject as the component specified, or any parent of the GameObject.
+    public void GetComponents(); // Gets references to all components of type T on the same GameObject as the component specified.
+    public void GetComponentsInChildren(); // Gets references to all components of type T on the same GameObject as the component specified, and any child of the GameObject.
+    public void GetComponentsInParent(); // Gets references to all components of type T on the same GameObject as the component specified, and any parent of the GameObject.
+    public void SendMessage(); // Calls the method named methodName on every MonoBehaviour in this game object.
+    public void SendMessageUpwards(); // Calls the method named methodName on every MonoBehaviour in this game object and on every ancestor of the behaviour.
+    public void TryGetComponent(); // Gets the component of the specified type, if it exists.
+    public void GetInstanceID(); // Gets the instance ID of the object.
+    public void ToString(); // Returns the name of the object.
+}

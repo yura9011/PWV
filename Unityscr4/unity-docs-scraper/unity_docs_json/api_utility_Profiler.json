@@ -1,0 +1,88 @@
+{
+  "name": "api_utility_Profiler",
+  "type": "api",
+  "description": "Controls the Profiler from script.",
+  "content": "// Unity Class: Profiler\n// Documentation: https://docs.unity3d.com/ScriptReference/Profiling.Profiler.html\n\n// Description: Controls the Profiler from script.\n\n// Methods:\n// - AddFramesFromFile: Displays the recorded profile data in the profiler.\n// - BeginSample: Begin profiling a piece of code with a custom label.\n// - BeginThreadProfiling: Enables profiling on the thread from which you call this method.\n// - EmitFrameMetaData: Write metadata associated with the current frame to the Profiler stream.\n// - EmitSessionMetaData: Write metadata associated with the whole Profiler session capture.\n// - EndSample: Ends the current profiling sample.\n// - EndThreadProfiling: Frees the internal resources used by the Profiler for the thread.\n// - GetAllCategories: Returns all ProfilerCategory registered in Profiler.\n// - GetAllocatedMemoryForGraphicsDriver: Returns the estimated amount of allocated memory for the graphics driver, in bytes.\n// - GetAreaEnabled: Returns whether or not a given ProfilerArea is currently enabled.\n// - GetCategoriesCount: Returns number of ProfilerCategory registered in Profiler.\n// - GetMonoHeapSizeLong: Returns the size of the reserved space for managed-memory.\n// - GetMonoUsedSizeLong: Gets the allocated managed memory for live objects and non-collected objects.\n// - GetRuntimeMemorySizeLong: Gathers the native-memory used by a Unity object.\n// - GetTempAllocatorSize: Returns the size of the temp allocator.\n// - GetTotalAllocatedMemoryLong: The total memory allocated by the internal allocators in Unity. Unity reserves large pools of memory\n// - GetTotalFragmentationInfo: Returns heap memory fragmentation information.\n// - GetTotalReservedMemoryLong: The total memory Unity has reserved.\n// - GetTotalUnusedReservedMemoryLong: Unity allocates memory in pools for usage when unity needs to allocate memory. This function returns\n// - IsCategoryEnabled: Returns whether or not a given ProfilerCategory is currently enabled.\n\npublic class Profiler {\n    public void AddFramesFromFile();\n    public void BeginSample();\n    public void BeginThreadProfiling();\n    public void EmitFrameMetaData();\n    public void EmitSessionMetaData();\n    public void EndSample();\n    public void EndThreadProfiling();\n    public void GetAllCategories();\n    public void GetAllocatedMemoryForGraphicsDriver();\n    public void GetAreaEnabled();\n}",
+  "properties": [
+    {
+      "name": "AddFramesFromFile",
+      "description": "Displays the recorded profile data in the profiler."
+    },
+    {
+      "name": "BeginSample",
+      "description": "Begin profiling a piece of code with a custom label."
+    },
+    {
+      "name": "BeginThreadProfiling",
+      "description": "Enables profiling on the thread from which you call this method."
+    },
+    {
+      "name": "EmitFrameMetaData",
+      "description": "Write metadata associated with the current frame to the Profiler stream."
+    },
+    {
+      "name": "EmitSessionMetaData",
+      "description": "Write metadata associated with the whole Profiler session capture."
+    },
+    {
+      "name": "EndSample",
+      "description": "Ends the current profiling sample."
+    },
+    {
+      "name": "EndThreadProfiling",
+      "description": "Frees the internal resources used by the Profiler for the thread."
+    },
+    {
+      "name": "GetAllCategories",
+      "description": "Returns all ProfilerCategory registered in Profiler."
+    },
+    {
+      "name": "GetAllocatedMemoryForGraphicsDriver",
+      "description": "Returns the estimated amount of allocated memory for the graphics driver, in bytes."
+    },
+    {
+      "name": "GetAreaEnabled",
+      "description": "Returns whether or not a given ProfilerArea is currently enabled."
+    },
+    {
+      "name": "GetCategoriesCount",
+      "description": "Returns number of ProfilerCategory registered in Profiler."
+    },
+    {
+      "name": "GetMonoHeapSizeLong",
+      "description": "Returns the size of the reserved space for managed-memory."
+    },
+    {
+      "name": "GetMonoUsedSizeLong",
+      "description": "Gets the allocated managed memory for live objects and non-collected objects."
+    },
+    {
+      "name": "GetRuntimeMemorySizeLong",
+      "description": "Gathers the native-memory used by a Unity object."
+    },
+    {
+      "name": "GetTempAllocatorSize",
+      "description": "Returns the size of the temp allocator."
+    },
+    {
+      "name": "GetTotalAllocatedMemoryLong",
+      "description": "The total memory allocated by the internal allocators in Unity. Unity reserves large pools of memory"
+    },
+    {
+      "name": "GetTotalFragmentationInfo",
+      "description": "Returns heap memory fragmentation information."
+    },
+    {
+      "name": "GetTotalReservedMemoryLong",
+      "description": "The total memory Unity has reserved."
+    },
+    {
+      "name": "GetTotalUnusedReservedMemoryLong",
+      "description": "Unity allocates memory in pools for usage when unity needs to allocate memory. This function returns"
+    },
+    {
+      "name": "IsCategoryEnabled",
+      "description": "Returns whether or not a given ProfilerCategory is currently enabled."
+    }
+  ]
+}

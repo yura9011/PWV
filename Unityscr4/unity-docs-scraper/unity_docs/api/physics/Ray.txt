@@ -1,0 +1,22 @@
+// Unity Class: Ray
+// Documentation: https://docs.unity3d.com/ScriptReference/Ray.html
+
+// Description: Representation of rays.
+
+// Properties:
+// - direction: The direction of the ray.
+// - origin: The origin point of the ray.
+
+// Constructors:
+// - Ray: Creates a ray starting at origin along direction.
+
+// Methods:
+// - GetPoint: Returns a point at distance units along the ray.
+// - ToString: Returns a formatted string for this ray.
+
+public class Ray {
+    public var direction; // The direction of the ray.
+    public var origin; // The origin point of the ray.
+    public void GetPoint(); // Returns a point at distance units along the ray.
+    public void ToString(); // Returns a formatted string for this ray.
+}

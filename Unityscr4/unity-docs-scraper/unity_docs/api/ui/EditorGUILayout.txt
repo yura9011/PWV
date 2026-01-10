@@ -1,0 +1,113 @@
+// Unity Class: EditorGUILayout
+// Documentation: https://docs.unity3d.com/ScriptReference/EditorGUILayout.html
+
+// Description: Auto laid out version of EditorGUI.
+
+// Methods:
+// - BeginBuildTargetSelectionGrouping: Begin a build target grouping and get the selected BuildTargetGroup back.
+// - BeginFadeGroup: Begins a group that can be be hidden/shown and the transition will be animated.
+// - BeginFoldoutHeaderGroup: Make a label with a foldout arrow to the left of it.
+// - BeginHorizontal: Begin a horizontal group and get its rect back.
+// - BeginScrollView: Begin an automatically laid out scrollview.
+// - BeginToggleGroup: Begin a vertical group with a toggle to enable or disable all the controls within at once.
+// - BeginVertical: Begin a vertical group and get its rect back.
+// - BoundsField: Make Center & Extents field for entering a Bounds.
+// - BoundsIntField: Make Position & Size field for entering a BoundsInt.
+// - ColorField: Make a field for selecting a Color.
+// - CurveField: Make a field for editing an AnimationCurve.
+// - DelayedDoubleField: Make a delayed text field for entering doubles.
+// - DelayedFloatField: Make a delayed text field for entering floats.
+// - DelayedIntField: Make a delayed text field for entering integers.
+// - DelayedTextField: Make a delayed text field.
+// - DoubleField: Make a text field for entering double values.
+// - DropdownButton: Make a button that reacts to mouse down, for displaying your own dropdown content.
+// - EditorToolbar: Makes a toolbar populated with the specified collection of editor tools.
+// - EditorToolbarForTarget: Makes a toolbar populated with the collection of editor tools that match the EditorToolAttribute of the target object.
+// - EndBuildTargetSelectionGrouping: Close a group started with BeginBuildTargetSelectionGrouping.
+// - EndFadeGroup: Closes a group started with BeginFadeGroup.
+// - EndFoldoutHeaderGroup: Closes a group started with BeginFoldoutHeaderGroup.
+// - EndHorizontal: Close a group started with BeginHorizontal.
+// - EndScrollView: Ends a scrollview started with a call to BeginScrollView.
+// - EndToggleGroup: Close a group started with BeginToggleGroup.
+// - EndVertical: Close a group started with BeginVertical.
+// - EnumFlagsField: Displays a menu with an option for every value of the enum type when clicked.
+// - EnumPopup: Make an enum popup selection field.
+// - FloatField: Make a text field for entering float values.
+// - Foldout: Make a label with a foldout arrow to the left of it.
+// - GetControlRect: Get a rect for an Editor control.
+// - GradientField: Make a field for editing a Gradient.
+// - HelpBox: Make a help box with a message to the user.
+// - InspectorTitlebar: Make an inspector-window-like titlebar.
+// - IntField: Make a text field for entering integers.
+// - IntPopup: Make an integer popup selection field.
+// - IntSlider: Make a slider the user can drag to change an integer value between a min and a max.
+// - LabelField: Make a label field. (Useful for showing read-only info.)
+// - LayerField: Make a layer selection field.
+// - LinkButton: Make a clickable link label.
+// - LongField: Make a text field for entering long integers.
+// - MaskField: Make a field for masks.
+// - MinMaxSlider: Make a special slider the user can use to specify a range between a min and a max.
+// - ObjectField: Make a field to receive any object type.
+// - PasswordField: Make a text field where the user can enter a password.
+// - Popup: Make a generic popup selection field.
+// - PrefixLabel: Make a label in front of some control.
+// - PropertyField: Make a field for SerializedProperty.
+// - RectField: Make an X, Y, W & H field for entering a Rect.
+// - RectIntField: Make an X, Y, W & H field for entering a RectInt.
+// - RenderingLayerMaskField: Makes a layer selection field.
+// - SelectableLabel: Make a selectable label field. (Useful for showing read-only info that can be copy-pasted.)
+// - Slider: Make a slider the user can drag to change a value between a min and a max.
+// - Space: Make a small space between the previous control and the following.
+// - TagField: Make a tag selection field.
+// - TextArea: Make a text area.
+// - TextField: Make a text field.
+// - Toggle: Make a toggle.
+// - ToggleLeft: Make a toggle field where the toggle is to the left and the label immediately to the right of it.
+// - ToolContextToolbar: Makes a toolbar populated with the specified collection of editor tool contexts.
+// - ToolContextToolbarForTarget: Makes a toolbar populated with the collection of EditorToolContext that match the EditorToolContextAttribute.targetType of the target object.
+// - Vector2Field: Make an X & Y field for entering a Vector2.
+// - Vector2IntField: Make an X & Y integer field for entering a Vector2Int.
+// - Vector3Field: Make an X, Y & Z field for entering a Vector3.
+// - Vector3IntField: Make an X, Y & Z integer field for entering a Vector3Int.
+// - Vector4Field: Make an X, Y, Z & W field for entering a Vector4.
+
+// Code Examples:
+// Example 1:
+//   using System.Collections;
+//   using System.Collections.Generic;
+//   using UnityEngine;
+//   using UnityEditor;public class EditorGUILayoutExample : EditorWindow
+//   {
+//       Vector2 scrollPos;
+//       string t = "This is a label inside a Scroll view!";    [MenuItem("Examples/EditorGUILayout Example")]
+//       static void Init()
+//       {
+//           EditorGUILayoutExample window = (EditorGUILayoutExample)EditorWindow.GetWindow(typeof(EditorGUILayoutExample), true, "My Empty Window");
+//           window.Show();
+//       }    void OnGUI()
+//       {
+//           // Creates a horizontally laid out group
+//           EditorGUILayout.BeginHorizontal();        // Creates a ScrollView within that group
+//           scrollPos =
+//               EditorGUILayout.BeginScrollView(scrollPos, GUILayout.Width(100), GUILayout.Height(100));        // Creates a label element within the ScrollView
+//           GUILayout.Label(t);        // Ends the ScrollView
+//           EditorGUILayout.EndScrollView();        // Places a button within the Horizontal area, but outside the ScrollView
+//           if (GUILayout.Button("Add More Text", GUILayout.Width(100), GUILayout.Height(100)))
+
+public class EditorGUILayout {
+    public void BeginBuildTargetSelectionGrouping(); // Begin a build target grouping and get the selected BuildTargetGroup back.
+    public void BeginFadeGroup(); // Begins a group that can be be hidden/shown and the transition will be animated.
+    public void BeginFoldoutHeaderGroup(); // Make a label with a foldout arrow to the left of it.
+    public void BeginHorizontal(); // Begin a horizontal group and get its rect back.
+    public void BeginScrollView(); // Begin an automatically laid out scrollview.
+    public void BeginToggleGroup(); // Begin a vertical group with a toggle to enable or disable all the controls withi
+    public void BeginVertical(); // Begin a vertical group and get its rect back.
+    public void BoundsField(); // Make Center & Extents field for entering a Bounds.
+    public void BoundsIntField(); // Make Position & Size field for entering a BoundsInt.
+    public void ColorField(); // Make a field for selecting a Color.
+    public void CurveField(); // Make a field for editing an AnimationCurve.
+    public void DelayedDoubleField(); // Make a delayed text field for entering doubles.
+    public void DelayedFloatField(); // Make a delayed text field for entering floats.
+    public void DelayedIntField(); // Make a delayed text field for entering integers.
+    public void DelayedTextField(); // Make a delayed text field.
+}

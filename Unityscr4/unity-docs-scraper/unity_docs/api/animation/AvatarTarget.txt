@@ -1,0 +1,22 @@
+// Unity Class: AvatarTarget
+// Documentation: https://docs.unity3d.com/ScriptReference/AvatarTarget.html
+
+// Description: Target.
+
+// Properties:
+// - Root: The root, the position of the game object.
+// - Body: The body, center of mass.
+// - LeftFoot: The left foot.
+// - RightFoot: The right foot.
+// - LeftHand: The left hand.
+// - RightHand: The right hand.
+
+// Pseudo-code representation of AvatarTarget
+public class AvatarTarget {
+    public var Root; // The root, the position of the game object.
+    public var Body; // The body, center of mass.
+    public var LeftFoot; // The left foot.
+    public var RightFoot; // The right foot.
+    public var LeftHand; // The left hand.
+    public var RightHand; // The right hand.
+}

@@ -1,0 +1,56 @@
+{
+  "name": "api_rendering_RenderSettings",
+  "type": "api",
+  "description": "The Render Settings contain values for a range of visual elements in your Scene, like fog and ambient light.",
+  "content": "// Unity Class: RenderSettings\n// Documentation: https://docs.unity3d.com/ScriptReference/RenderSettings.html\n\n// Description: The Render Settings contain values for a range of visual elements in your Scene, like fog and ambient light.\n\n// Properties:\n// - hideFlags: Should the object be hidden, saved with the Scene or modifiable by the user?\n// - name: The name of the object.\n\n// Methods:\n// - GetInstanceID: Gets the instance ID of the object.\n// - ToString: Returns the name of the object.\n// - Destroy: Removes a GameObject, component, or asset.\n// - DestroyImmediate: Destroys the specified object immediately. Use with caution and in Edit mode only.\n// - DontDestroyOnLoad: Do not destroy the target Object when loading a new Scene.\n// - FindAnyObjectByType: Retrieves any active loaded object of Type type.\n// - FindFirstObjectByType: Retrieves the first active loaded object of Type type.\n// - FindObjectsByType: Retrieves a list of all loaded objects of Type type.\n// - Instantiate: Clones the object original and returns the clone.\n// - InstantiateAsync: Captures a snapshot of the original object (that must be related to some GameObject) and returns the AsyncInstantiateOperation.\n\n// Code Examples:\n// Example 1:\n//   using UnityEngine;public class FogZone : MonoBehaviour\n\n//   {\n\n//       public Camera mainCamera;\n\n//       public Vector3 zoneCenter = Vector3.zero;\n\n//       public Vector3 zoneSize = new Vector3(10, 10, 10);\n\n//       public Color fogColorInside = Color.red;\n\n//       public Color fogColorOutside = Color.white;\n\n//       public float transitionRadius = 5.0f;    Bounds zoneBounds;    void Start()\n\n//       {\n\n//           // Create a bounds object based on the center and size of the zone\n\n//           zoneBounds = new Bounds(zoneCenter, zoneSize);\n\n//       }    void Update()\n\n//       {\n\n//           if (mainCamera == null) return;        // Calculate the closest point on the box to the camera\n\n//           Vector3 closestPoint = zoneBounds.ClosestPoint(mainCamera.transform.position);\n\n//           float distanceToZone = Vector3.Distance(mainCamera.transform.position, closestPoint);        // Determine the interpolation factor based on the transition radius\n\n//           float t = Mathf.Clamp01(distanceToZone / transitionRadius);        // Interpolate between the inside and outside fog colors\n\n//           RenderSettings.fogColor = Color.Lerp(fogColorInside, fogColorOutside, t);\n\n//       }\n\n//   }\n\npublic class RenderSettings {\n    public var hideFlags; // Should the object be hidden, saved with the Scene or modifiable by the user?\n    public var name; // The name of the object.\n    public void GetInstanceID(); // Gets the instance ID of the object.\n    public void ToString(); // Returns the name of the object.\n    public void Destroy(); // Removes a GameObject, component, or asset.\n    public void DestroyImmediate(); // Destroys the specified object immediately. Use with caution and in Edit mode onl\n    public void DontDestroyOnLoad(); // Do not destroy the target Object when loading a new Scene.\n    public void FindAnyObjectByType(); // Retrieves any active loaded object of Type type.\n    public void FindFirstObjectByType(); // Retrieves the first active loaded object of Type type.\n    public void FindObjectsByType(); // Retrieves a list of all loaded objects of Type type.\n    public void Instantiate(); // Clones the object original and returns the clone.\n    public void InstantiateAsync(); // Captures a snapshot of the original object (that must be related to some GameObj\n}",
+  "properties": [
+    {
+      "name": "hideFlags",
+      "description": "Should the object be hidden, saved with the Scene or modifiable by the user?"
+    },
+    {
+      "name": "name",
+      "description": "The name of the object."
+    },
+    {
+      "name": "GetInstanceID",
+      "description": "Gets the instance ID of the object."
+    },
+    {
+      "name": "ToString",
+      "description": "Returns the name of the object."
+    },
+    {
+      "name": "Destroy",
+      "description": "Removes a GameObject, component, or asset."
+    },
+    {
+      "name": "DestroyImmediate",
+      "description": "Destroys the specified object immediately. Use with caution and in Edit mode only."
+    },
+    {
+      "name": "DontDestroyOnLoad",
+      "description": "Do not destroy the target Object when loading a new Scene."
+    },
+    {
+      "name": "FindAnyObjectByType",
+      "description": "Retrieves any active loaded object of Type type."
+    },
+    {
+      "name": "FindFirstObjectByType",
+      "description": "Retrieves the first active loaded object of Type type."
+    },
+    {
+      "name": "FindObjectsByType",
+      "description": "Retrieves a list of all loaded objects of Type type."
+    },
+    {
+      "name": "Instantiate",
+      "description": "Clones the object original and returns the clone."
+    },
+    {
+      "name": "InstantiateAsync",
+      "description": "Captures a snapshot of the original object (that must be related to some GameObject) and returns the AsyncInstantiateOperation."
+    }
+  ]
+}

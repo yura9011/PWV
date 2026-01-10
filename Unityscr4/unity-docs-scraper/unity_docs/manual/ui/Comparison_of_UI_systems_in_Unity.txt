@@ -1,0 +1,311 @@
+// Unity Manual: Comparison of UI systems in Unity
+// Section: UI
+// URL: https://docs.unity3d.com/Manual/UI-system-compare.html
+
+// Content:
+UI systems
+Comparison of UI systems in Unity
+UI systems
+UI Toolkit
+Comparison of UI systems in Unity
+UI Toolkit
+is intended to become the recommended UI system for you to develop UI in your projects. However, in its current release, UI Toolkit does not have some features that
+uGUI (Unity UI)
+and
+IMGUI (Immediate Mode GUI)
+support. uGUI and IMGUI are more appropriate for certain use cases, and are required to support legacy projects.
+This page provides a high-level feature comparison of UI Toolkit, uGUI, and IMGUI, and their respective approaches to UI design.
+General consideration
+The following table lists the recommended and alternative system for runtime and Editor:
+Unity 6.3
+Recommendation
+Alternative
+Runtime
+uGUI (Unity UI)
+UI Toolkit
+Editor
+UI Toolkit
+IMGUI
+Roles and skill sets
+Your team’s skill set and comfort level with different technologies is also an important consideration.
+The following table lists the recommended system for different roles:
+Roles
+UI Toolkit
+uGUI (Unity UI)
+IMGUI
+Skill sets
+Programmer
+✅
+✅
+✅
+Programmers can use any game development tool or API.
+Technical Artist
+Partial
+✅
+❌
+Technical artists who are familiar with Unity’s GameObject-based tools and workflows are likely to be comfortable working with GameObjects, Components, and the Scene view.
+They might not be comfortable with UI Toolkit’s web-like approach or IMGUI’s pure C# approach.
+UI Designer
+✅
+Partial
+❌
+UI designers who are familiar with UI creation tools are likely to be comfortable with UI Toolkit’s document-based approach and can use the
+UI Builder
+to visually edit their UI.
+If they are not familiar with GameObject-based workflows, they might require help from programmers or level designers.
+Innovation and development
+UI Toolkit is in active development and releases new features frequently. uGUI and IMGUI are established and production-proven UI systems that are updated infrequently.
+uGUI and IMGUI might be better choices if you need features that are not yet available in UI Toolkit, or you need to support or reuse older UI content.
+Runtime
+UI Toolkit is an alternative to uGUI (Unity UI) if you create a screen overlay UI that runs on a wide variety of screen resolutions. Consider UI Toolkit to do the following:
+Produce work with a significant amount of user interfaces
+Require familiar authoring workflows for artists and designers
+Seek textureless UI rendering capabilities
+UI positioned and lit in a 3D world
+Advanced visuals with custom
+shaders
+A program that runs on the GPU.
+More info
+See in
+Glossary
+and materials
+uGUI is the recommended solution for the following:
+Easy referencing from
+MonoBehaviours
+Use Cases
+The following table lists the recommended system for major runtime use cases:
+Unity 6.3
+Recommendation
+Multi-resolution menus and HUD in intensive UI projects
+UI Toolkit
+World space UI and
+VR
+Virtual Reality
+More info
+See in
+Glossary
+UI Toolkit
+UI that requires customized shaders and materials
+UI Toolkit
+UI that requires keyframed animations
+uGUI
+In details
+The following table lists the recommended system for detailed runtime features:
+Unity 6.3
+UI Toolkit
+uGUI
+WYSIWYG
+What You See Is What You Get. A term used to describe a system where the user interface closely resembles the final output.
+See in
+Glossary
+authoring
+✅
+✅
+Nesting reusable components
+✅
+✅
+Layout and Styling Debugger
+✅
+✅
+In-scene authoring
+❌
+✅
+Rich text tags
+✅
+✅
+Scalable text
+✅
+✅
+Font fallbacks
+✅
+✅
+Adaptive layout
+✅
+✅
+Input system
+support
+✅
+✅
+Serialized events
+❌
+✅
+Compatible with
+Rendering pipelines
+✅
+✅
+Screen-space (2D) rendering
+✅
+✅
+World-space (3D) rendering
+✅
+✅
+Custom materials and shaders
+✅
+✅
+Sprites
+A 2D graphic objects. If you are used to working in 3D, Sprites are essentially just standard textures but there are special techniques for combining and managing sprite textures for efficiency and convenience during development.
+More info
+See in
+Glossary
+/
+Sprite atlas
+Graphics:
+A utility that packs several sprite textures tightly together within a single texture known as an atlas.
+More info
+.
+2D:** A texture that is composed of several smaller textures. Also referred to as a texture atlas, image sprite, sprite sheet or packed texture.
+More info
+.
+See in
+Glossary
+support**
+✅
+✅
+Rectangle clipping
+✅
+✅
+Mask clipping
+✅
+✅
+Nested masking
+✅
+✅
+Integration with
+Animation Clips
+Animation data that can be used for animated characters or simple animations. It is a simple “unit” piece of motion, such as (one specific instance of) “Idle”, “Walk” or “Run”.
+More info
+See in
+Glossary
+and Timeline
+❌
+✅
+Data binding system
+✅
+❌
+UI transition animations
+✅
+❌
+Textureless elements
+✅
+❌
+Advanced flexible layout
+✅
+❌
+Global style management
+✅
+❌
+Dynamic texture atlas
+✅
+❌
+UI anti-aliasing
+✅
+❌
+Right-to-left language
+and emoji
+✅
+❌
+SVG support
+✅
+❌
+Editor
+UI Toolkit is recommended if you create complex editor tools. UI Toolkit is also recommended for the following reasons:
+Better reusability and decoupling
+Visual tools for authoring UI
+Better scalability for code maintenance and performance
+IMGUI is an alternative to UI Toolkit for the following:
+Unrestricted access to editor extensible capabilities
+Light API to quickly render UI on screen
+Use Cases
+The following table lists the recommended system for major Editor use cases:
+Unity 6.3
+Recommendation
+Complex editor tool
+UI Toolkit
+Property drawers
+A Unity feature that allows you to customize the look of certain controls in the Inspector window by using attributes on your scripts, or by controlling how a specific Serializable class should look
+More info
+See in
+Glossary
+UI Toolkit
+Collaboration with designers
+UI Toolkit
+In details
+The following table lists the recommended system for detailed Editor features:
+Unity 6.3
+UI Toolkit
+IMGUI
+WYSIWYG authoring
+✅
+❌
+Nesting reusable components
+✅
+❌
+Global style management
+✅
+✅
+Layout and Styling Debugger
+✅
+❌
+Rich text tags
+✅
+✅
+Scalable text
+✅
+❌
+Font fallbacks
+✅
+✅
+Adaptive layout
+✅
+✅
+Default
+Inspectors
+A Unity window that displays information about the currently selected GameObject, asset or project settings, allowing you to inspect and edit the values.
+More info
+See in
+Glossary
+✅
+✅
+Inspector: Edit custom object types
+✅
+✅
+Inspector: Edit custom property types
+✅
+✅
+Inspector: Mixed values (multi-editing) support
+✅
+✅
+Array and list-view control
+✅
+✅
+Data binding: Serialized properties
+✅
+✅
+Advanced flexible layout
+✅
+❌
+Right-to-left language
+and emoji
+✅
+❌
+SVG support
+.
+✅
+❌
+Additional resources
+Migrate from uGUI to UI Toolkit
+Migrate from IMGUI to UI Toolkit
+UI systems
+UI Toolkit
+Copyright ©2005-2026 Unity Technologies. All rights reserved. Built from 6000.3.5f1 (9e864d5a2e6f). Built on: 2026-01-09.
+Tutorials
+Community Answers
+Knowledge Base
+Forums
+Asset Store
+Terms of use
+Legal
+Privacy Policy
+Cookies
+Do Not Sell or Share My Personal Information
+Your Privacy Choices (Cookie Settings)

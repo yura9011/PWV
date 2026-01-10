@@ -1,0 +1,62 @@
+// Unity Class: RectTransform
+// Documentation: https://docs.unity3d.com/ScriptReference/RectTransform.html
+
+// Description: Position, size, anchor and pivot information for a rectangle.
+
+// Properties:
+// - anchoredPosition: The position of the pivot of this RectTransform relative to the anchor reference point.
+// - anchoredPosition3D: The 3D position of the pivot of this RectTransform relative to the anchor reference point.
+// - anchorMax: The normalized position in the parent RectTransform that the upper right corner is anchored to.
+// - anchorMin: The normalized position in the parent RectTransform that the lower left corner is anchored to.
+// - drivenByObject: The object that is driving the values of this RectTransform. Value is null if not driven.
+// - offsetMax: The offset of the upper right corner of the rectangle relative to the upper right anchor.
+// - offsetMin: The offset of the lower left corner of the rectangle relative to the lower left anchor.
+// - pivot: The normalized position in this RectTransform that it rotates around.
+// - rect: The calculated rectangle in the local space of the Transform.
+// - sendChildDimensionsChange: Whether the RectTransform notifies components when a child RectTransform changes dimensions.
+// - sizeDelta: The size of this RectTransform relative to the distances between the anchors.
+
+// Methods:
+// - ForceUpdateRectTransforms: Force the recalculation of RectTransforms internal data.
+// - GetLocalCorners: Get the corners of the calculated rectangle in the local space of its Transform.
+// - GetWorldCorners: Get the corners of the calculated rectangle in world space.
+// - SetInsetAndSizeFromParentEdge: Set the distance of this rectangle relative to a specified edge of the parent rectangle, while also setting its size.
+// - SetSizeWithCurrentAnchors: Makes the RectTransform calculated rect be a given size on the specified axis.
+// - Destroy: Removes a GameObject, component, or asset.
+// - DestroyImmediate: Destroys the specified object immediately. Use with caution and in Edit mode only.
+// - DontDestroyOnLoad: Do not destroy the target Object when loading a new Scene.
+// - FindAnyObjectByType: Retrieves any active loaded object of Type type.
+// - FindFirstObjectByType: Retrieves the first active loaded object of Type type.
+// - FindObjectsByType: Retrieves a list of all loaded objects of Type type.
+// - Instantiate: Clones the object original and returns the clone.
+// - InstantiateAsync: Captures a snapshot of the original object (that must be related to some GameObject) and returns the AsyncInstantiateOperation.
+
+// Events:
+// - reapplyDrivenProperties: Event that is invoked for RectTransforms that need to have their driven properties reapplied.
+
+public class RectTransform {
+    public var anchoredPosition; // The position of the pivot of this RectTransform relative to the anchor reference
+    public var anchoredPosition3D; // The 3D position of the pivot of this RectTransform relative to the anchor refere
+    public var anchorMax; // The normalized position in the parent RectTransform that the upper right corner 
+    public var anchorMin; // The normalized position in the parent RectTransform that the lower left corner i
+    public var drivenByObject; // The object that is driving the values of this RectTransform. Value is null if no
+    public var offsetMax; // The offset of the upper right corner of the rectangle relative to the upper righ
+    public var offsetMin; // The offset of the lower left corner of the rectangle relative to the lower left 
+    public var pivot; // The normalized position in this RectTransform that it rotates around.
+    public var rect; // The calculated rectangle in the local space of the Transform.
+    public var sendChildDimensionsChange; // Whether the RectTransform notifies components when a child RectTransform changes
+    public var sizeDelta; // The size of this RectTransform relative to the distances between the anchors.
+    public void ForceUpdateRectTransforms(); // Force the recalculation of RectTransforms internal data.
+    public void GetLocalCorners(); // Get the corners of the calculated rectangle in the local space of its Transform.
+    public void GetWorldCorners(); // Get the corners of the calculated rectangle in world space.
+    public void SetInsetAndSizeFromParentEdge(); // Set the distance of this rectangle relative to a specified edge of the parent re
+    public void SetSizeWithCurrentAnchors(); // Makes the RectTransform calculated rect be a given size on the specified axis.
+    public void Destroy(); // Removes a GameObject, component, or asset.
+    public void DestroyImmediate(); // Destroys the specified object immediately. Use with caution and in Edit mode onl
+    public void DontDestroyOnLoad(); // Do not destroy the target Object when loading a new Scene.
+    public void FindAnyObjectByType(); // Retrieves any active loaded object of Type type.
+    public void FindFirstObjectByType(); // Retrieves the first active loaded object of Type type.
+    public void FindObjectsByType(); // Retrieves a list of all loaded objects of Type type.
+    public void Instantiate(); // Clones the object original and returns the clone.
+    public void InstantiateAsync(); // Captures a snapshot of the original object (that must be related to some GameObj
+}

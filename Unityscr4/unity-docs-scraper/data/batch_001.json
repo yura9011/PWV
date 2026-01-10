@@ -1,0 +1,902 @@
+[
+  {
+    "class_name": "GameObject",
+    "description": "Base class for all objects that can exist in a scene. Add components to a GameObject to control its appearance and behavior.",
+    "properties": [
+      {
+        "name": "activeInHierarchy",
+        "description": "The active state of the GameObject in the Scene hierarchy. True if active, false if inactive. (Read Only)"
+      },
+      {
+        "name": "activeSelf",
+        "description": "The local active state of the GameObject. True if active, false if inactive. (Read Only)"
+      },
+      {
+        "name": "isStatic",
+        "description": "Whether there are any Static Editor Flags set for the GameObject."
+      },
+      {
+        "name": "layer",
+        "description": "Integer identifying the layer the GameObject is assigned to."
+      },
+      {
+        "name": "scene",
+        "description": "The Scene that contains the GameObject."
+      },
+      {
+        "name": "sceneCullingMask",
+        "description": "The Scene culling mask defined for the GameObject. (Read Only)"
+      },
+      {
+        "name": "tag",
+        "description": "The tag assigned to the GameObject."
+      },
+      {
+        "name": "transform",
+        "description": "The Transform attached to the GameObject (Read Only)."
+      },
+      {
+        "name": "transformHandle",
+        "description": "The TransformHandle of the GameObject (Read Only)."
+      }
+    ],
+    "methods": [
+      {
+        "name": "AddComponent",
+        "description": "Adds a component of the specified type to the GameObject."
+      },
+      {
+        "name": "BroadcastMessage",
+        "description": "Calls the specified method on every MonoBehaviour attached to the GameObject or any of its children."
+      },
+      {
+        "name": "CompareTag",
+        "description": "Checks if the specified tag is attached to the GameObject."
+      },
+      {
+        "name": "GetComponent",
+        "description": "Retrieves a reference to a component of the specified type, by providing the component type as a type parameter to the generic method."
+      },
+      {
+        "name": "GetComponentAtIndex",
+        "description": "Retrieves a reference to a component at a specified index of the GameObject's array of components."
+      },
+      {
+        "name": "GetComponentCount",
+        "description": "Retrieves the total number of components currently attached to the GameObject."
+      },
+      {
+        "name": "GetComponentInChildren",
+        "description": "Retrieves a reference to a component of type T on the specified GameObject, or any child of the GameObject."
+      },
+      {
+        "name": "GetComponentIndex",
+        "description": "Retrieves the index of the specified component in the array of components attached to the GameObject."
+      },
+      {
+        "name": "GetComponentInParent",
+        "description": "Retrieves a reference to a component of type T on the specified GameObject, or any parent of the GameObject."
+      },
+      {
+        "name": "GetComponents",
+        "description": "Retrieves references to all components of type T on the specified GameObject."
+      },
+      {
+        "name": "GetComponentsInChildren",
+        "description": "Retrieves references to all components of type T on the specified GameObject, and any child of the GameObject."
+      },
+      {
+        "name": "GetComponentsInParent",
+        "description": "Retrieves references to all components of type T on the specified GameObject, and any parent of the GameObject."
+      },
+      {
+        "name": "SendMessage",
+        "description": "Calls the specified method on every MonoBehaviour attached to the GameObject."
+      },
+      {
+        "name": "SendMessageUpwards",
+        "description": "Calls the specified method on every MonoBehaviour attached to the GameObject and on every ancestor of the behaviour."
+      },
+      {
+        "name": "SetActive",
+        "description": "Activates or deactivates the GameObject locally, according to the value of the supplied parameter."
+      },
+      {
+        "name": "TryGetComponent",
+        "description": "Retrieves the component of the specified type, if it exists."
+      }
+    ],
+    "constructors": [
+      {
+        "name": "GameObject",
+        "description": "Creates a new GameObject, with optional parameters to specify a name and set of components to attach."
+      }
+    ],
+    "examples": [
+      "using UnityEngine;  public class Example_GameObject : MonoBehaviour\r\n  {\r\n      private void Start()\r\n      {\r\n          GameObject myExampleGO = new GameObject(\"myExampleGO\", typeof(AudioSource));\r\n      }\r\n  }"
+    ],
+    "url": "https://docs.unity3d.com/ScriptReference/GameObject.html"
+  },
+  {
+    "class_name": "Transform",
+    "description": "Position, rotation and scale of an object.",
+    "properties": [
+      {
+        "name": "childCount",
+        "description": "The number of children the parent Transform has."
+      },
+      {
+        "name": "eulerAngles",
+        "description": "The rotation as Euler angles in degrees."
+      },
+      {
+        "name": "forward",
+        "description": "Returns a normalized vector representing the blue axis of the transform in world space."
+      },
+      {
+        "name": "hasChanged",
+        "description": "Has the transform changed since the last time the flag was set to 'false'?"
+      },
+      {
+        "name": "hierarchyCapacity",
+        "description": "The transform capacity of the transform's hierarchy data structure."
+      },
+      {
+        "name": "hierarchyCount",
+        "description": "The number of transforms in the transform's hierarchy data structure."
+      },
+      {
+        "name": "localEulerAngles",
+        "description": "The rotation as Euler angles in degrees relative to the parent transform's rotation."
+      },
+      {
+        "name": "localPosition",
+        "description": "Position of the transform relative to the parent transform."
+      },
+      {
+        "name": "localRotation",
+        "description": "The rotation of the transform relative to the transform rotation of the parent."
+      },
+      {
+        "name": "localScale",
+        "description": "The scale of the transform relative to the GameObjects parent."
+      },
+      {
+        "name": "localToWorldMatrix",
+        "description": "Matrix that transforms a point from local space into world space (Read Only)."
+      },
+      {
+        "name": "lossyScale",
+        "description": "The global scale of the object (Read Only)."
+      },
+      {
+        "name": "parent",
+        "description": "The parent of the transform."
+      },
+      {
+        "name": "position",
+        "description": "The world space position of the Transform."
+      },
+      {
+        "name": "right",
+        "description": "The red axis of the transform in world space."
+      },
+      {
+        "name": "root",
+        "description": "Returns the topmost transform in the hierarchy."
+      },
+      {
+        "name": "rotation",
+        "description": "A Quaternion that stores the rotation of the Transform in world space."
+      },
+      {
+        "name": "up",
+        "description": "The green axis of the transform in world space."
+      },
+      {
+        "name": "worldToLocalMatrix",
+        "description": "Matrix that transforms a point from world space into local space (Read Only)."
+      }
+    ],
+    "methods": [
+      {
+        "name": "DetachChildren",
+        "description": "Unparents all of the target object's children."
+      },
+      {
+        "name": "Find",
+        "description": "Finds a child by name n and returns it."
+      },
+      {
+        "name": "GetChild",
+        "description": "Returns a transform child by index."
+      },
+      {
+        "name": "GetLocalPositionAndRotation",
+        "description": "Updates the value of the out parameters localPosition and localRotation with the transform's current position and rotation in local space (that is, relative to its parent's transform)."
+      },
+      {
+        "name": "GetPositionAndRotation",
+        "description": "Updates the value of the out parameters position and rotation with the transform's current position and rotation in world space (that is, relative to the scene's origin coordinates)."
+      },
+      {
+        "name": "GetSiblingIndex",
+        "description": "Gets the index of this Transform, relative to its siblings."
+      },
+      {
+        "name": "InverseTransformDirection",
+        "description": "Transforms a direction from world space to local space. The opposite of Transform.TransformDirection."
+      },
+      {
+        "name": "InverseTransformDirections",
+        "description": "Transforms multiple directions from world space to local space overwriting each original position with the transformed version. The opposite of Transform.TransformDirections."
+      },
+      {
+        "name": "InverseTransformPoint",
+        "description": "Transforms position from world space to local space."
+      },
+      {
+        "name": "InverseTransformPoints",
+        "description": "Transforms multiple positions from world space to local space overwriting each original position with the transformed version."
+      },
+      {
+        "name": "InverseTransformVector",
+        "description": "Transforms a vector from world space to local space. The opposite of Transform.TransformVector."
+      },
+      {
+        "name": "InverseTransformVectors",
+        "description": "Transforms multiple vectors from world space to local space overwriting each original position with the transformed version. The opposite of Transform.TransformVectors."
+      },
+      {
+        "name": "IsChildOf",
+        "description": "Is this transform a child of parent?"
+      },
+      {
+        "name": "LookAt",
+        "description": "Rotates the transform so the forward vector points at /target/'s current position."
+      },
+      {
+        "name": "Rotate",
+        "description": "Use Transform.Rotate to rotate GameObjects in a variety of ways. The rotation is often provided as an Euler angle and not a Quaternion."
+      },
+      {
+        "name": "RotateAround",
+        "description": "Rotates the transform about axis passing through point in world coordinates by angle degrees."
+      },
+      {
+        "name": "SetAsFirstSibling",
+        "description": "Move the transform to the start of the local transform list."
+      },
+      {
+        "name": "SetAsLastSibling",
+        "description": "Move the transform to the end of the local transform list."
+      },
+      {
+        "name": "SetLocalPositionAndRotation",
+        "description": "Sets the position and rotation of the Transform component in local space (i.e. relative to its parent transform)."
+      },
+      {
+        "name": "SetParent",
+        "description": "Set the parent of the transform."
+      },
+      {
+        "name": "SetPositionAndRotation",
+        "description": "Sets the world space position and rotation of the Transform component."
+      },
+      {
+        "name": "SetSiblingIndex",
+        "description": "Sets the sibling index."
+      },
+      {
+        "name": "TransformDirection",
+        "description": "Transforms direction from local space to world space."
+      },
+      {
+        "name": "TransformDirections",
+        "description": "Transforms multiple directions from local space to world space overwriting each original direction with the transformed version."
+      },
+      {
+        "name": "TransformPoint",
+        "description": "Transforms position from local space to world space."
+      },
+      {
+        "name": "TransformPoints",
+        "description": "Transforms multiple points from local space to world space overwriting each original point with the transformed version."
+      },
+      {
+        "name": "TransformVector",
+        "description": "Transforms vector from local space to world space."
+      },
+      {
+        "name": "TransformVectors",
+        "description": "Transforms multiple vectors from local space to world space overwriting each original vector with the transformed version."
+      },
+      {
+        "name": "Translate",
+        "description": "Moves the transform along its x, y, and z axes by the values of the translation parameter's x, y, and z components respectively."
+      }
+    ],
+    "constructors": [],
+    "examples": [
+      "using UnityEngine;public class Example : MonoBehaviour\r\n{\r\n    // Moves all transform children 10 units upwards!\r\n    void Start()\r\n    {\r\n        foreach (Transform child in transform)\r\n        {\r\n            child.position += Vector3.up * 10.0f;\r\n        }\r\n    }\r\n}"
+    ],
+    "url": "https://docs.unity3d.com/ScriptReference/Transform.html"
+  },
+  {
+    "class_name": "Component",
+    "description": "Base class for everything attached to a GameObject.",
+    "properties": [
+      {
+        "name": "gameObject",
+        "description": "The game object this component is attached to. A component is always attached to a game object."
+      },
+      {
+        "name": "tag",
+        "description": "The tag of this game object."
+      },
+      {
+        "name": "transform",
+        "description": "The Transform attached to this GameObject."
+      },
+      {
+        "name": "transformHandle",
+        "description": "The TransformHandle of this GameObject."
+      }
+    ],
+    "methods": [
+      {
+        "name": "BroadcastMessage",
+        "description": "Calls the method named methodName on every MonoBehaviour in this game object or any of its children."
+      },
+      {
+        "name": "CompareTag",
+        "description": "Checks the GameObject's tag against the defined tag."
+      },
+      {
+        "name": "GetComponent",
+        "description": "Gets a reference to a component of type T on the same GameObject as the component specified."
+      },
+      {
+        "name": "GetComponentInChildren",
+        "description": "Gets a reference to a component of type T on the same GameObject as the component specified, or any child of the GameObject."
+      },
+      {
+        "name": "GetComponentIndex",
+        "description": "Gets the index of the component on its parent GameObject."
+      },
+      {
+        "name": "GetComponentInParent",
+        "description": "Gets a reference to a component of type T on the same GameObject as the component specified, or any parent of the GameObject."
+      },
+      {
+        "name": "GetComponents",
+        "description": "Gets references to all components of type T on the same GameObject as the component specified."
+      },
+      {
+        "name": "GetComponentsInChildren",
+        "description": "Gets references to all components of type T on the same GameObject as the component specified, and any child of the GameObject."
+      },
+      {
+        "name": "GetComponentsInParent",
+        "description": "Gets references to all components of type T on the same GameObject as the component specified, and any parent of the GameObject."
+      },
+      {
+        "name": "SendMessage",
+        "description": "Calls the method named methodName on every MonoBehaviour in this game object."
+      },
+      {
+        "name": "SendMessageUpwards",
+        "description": "Calls the method named methodName on every MonoBehaviour in this game object and on every ancestor of the behaviour."
+      },
+      {
+        "name": "TryGetComponent",
+        "description": "Gets the component of the specified type, if it exists."
+      }
+    ],
+    "constructors": [],
+    "examples": [],
+    "url": "https://docs.unity3d.com/ScriptReference/Component.html"
+  },
+  {
+    "class_name": "MonoBehaviour",
+    "description": "MonoBehaviour is a base class that many Unity scripts derive from.",
+    "properties": [
+      {
+        "name": "destroyCancellationToken",
+        "description": "Cancellation token raised when the MonoBehaviour is destroyed (Read Only)."
+      },
+      {
+        "name": "didAwake",
+        "description": "Returns a boolean value which represents if Awake was called."
+      },
+      {
+        "name": "didStart",
+        "description": "Returns a boolean value which represents if Start was called."
+      },
+      {
+        "name": "runInEditMode",
+        "description": "Allow a specific instance of a MonoBehaviour to run in edit mode (only available in the editor)."
+      },
+      {
+        "name": "useGUILayout",
+        "description": "Disabling this lets you skip the GUI layout phase."
+      }
+    ],
+    "methods": [
+      {
+        "name": "CancelInvoke",
+        "description": "Cancels all Invoke calls on this MonoBehaviour."
+      },
+      {
+        "name": "Invoke",
+        "description": "Invokes the method methodName in time seconds."
+      },
+      {
+        "name": "InvokeRepeating",
+        "description": "Invokes the specified method after a specified delay, then repeatedly at the specified rate."
+      },
+      {
+        "name": "IsInvoking",
+        "description": "Is any invoke on methodName pending?"
+      },
+      {
+        "name": "StartCoroutine",
+        "description": "Starts a coroutine."
+      },
+      {
+        "name": "StopAllCoroutines",
+        "description": "Stops all coroutines running on this MonoBehaviour."
+      },
+      {
+        "name": "StopCoroutine",
+        "description": "Stops the first coroutine named methodName, or the coroutine stored in routine running on this behaviour."
+      }
+    ],
+    "constructors": [],
+    "examples": [],
+    "url": "https://docs.unity3d.com/ScriptReference/MonoBehaviour.html"
+  },
+  {
+    "class_name": "Camera",
+    "description": "A Camera is a device through which the player views the world.",
+    "properties": [
+      {
+        "name": "activeTexture",
+        "description": "Gets the temporary RenderTexture target for this Camera."
+      },
+      {
+        "name": "actualRenderingPath",
+        "description": "The rendering path that is currently being used (Read Only)."
+      },
+      {
+        "name": "allowDynamicResolution",
+        "description": "Dynamic Resolution Scaling."
+      },
+      {
+        "name": "allowHDR",
+        "description": "High dynamic range rendering."
+      },
+      {
+        "name": "allowMSAA",
+        "description": "MSAA rendering."
+      },
+      {
+        "name": "anamorphism",
+        "description": "The camera anamorphism. To use this property, enable UsePhysicalProperties."
+      },
+      {
+        "name": "aperture",
+        "description": "The camera aperture. To use this property, enable UsePhysicalProperties."
+      },
+      {
+        "name": "areVRStereoViewMatricesWithinSingleCullTolerance",
+        "description": "Determines whether the stereo view matrices are suitable to allow for a single pass cull."
+      },
+      {
+        "name": "aspect",
+        "description": "The aspect ratio (width divided by height)."
+      },
+      {
+        "name": "backgroundColor",
+        "description": "The color with which the screen will be cleared."
+      },
+      {
+        "name": "barrelClipping",
+        "description": "The camera barrel clipping. To use this property, enable UsePhysicalProperties."
+      },
+      {
+        "name": "bladeCount",
+        "description": "The blade count in the lens of the camera. To use this property, enable UsePhysicalProperties."
+      },
+      {
+        "name": "cameraToWorldMatrix",
+        "description": "Matrix that transforms from camera space to world space (Read Only)."
+      },
+      {
+        "name": "cameraType",
+        "description": "Identifies what kind of camera this is, using the CameraType enum."
+      },
+      {
+        "name": "clearFlags",
+        "description": "How the camera clears the background."
+      },
+      {
+        "name": "clearStencilAfterLightingPass",
+        "description": "Should the camera clear the stencil buffer after the deferred light pass?"
+      },
+      {
+        "name": "commandBufferCount",
+        "description": "Number of command buffers set up on this camera (Read Only)."
+      },
+      {
+        "name": "cullingMask",
+        "description": "This is used to render parts of the Scene selectively."
+      },
+      {
+        "name": "cullingMatrix",
+        "description": "Sets a custom matrix for the camera to use for all culling queries."
+      },
+      {
+        "name": "curvature",
+        "description": "The curvature of the blades. To use this property, enable UsePhysicalProperties."
+      },
+      {
+        "name": "depth",
+        "description": "Camera's depth in the camera rendering order."
+      },
+      {
+        "name": "depthTextureMode",
+        "description": "How and if camera generates a depth texture."
+      },
+      {
+        "name": "eventMask",
+        "description": "Mask to select which layers can trigger events on the camera."
+      },
+      {
+        "name": "farClipPlane",
+        "description": "The distance of the far clipping plane from the Camera, in world units."
+      },
+      {
+        "name": "fieldOfView",
+        "description": "The vertical field of view of the Camera, in degrees."
+      },
+      {
+        "name": "focalLength",
+        "description": "The camera focal length, expressed in millimeters. To use this property, enable UsePhysicalProperties."
+      },
+      {
+        "name": "focusDistance",
+        "description": "The focus distance of the lens. To use this property, enable UsePhysicalProperties."
+      },
+      {
+        "name": "forceIntoRenderTexture",
+        "description": "Should camera rendering be forced into a RenderTexture."
+      },
+      {
+        "name": "gateFit",
+        "description": "There are two gates for a camera, the sensor gate and the resolution gate. The physical camera sensor gate is defined by the sensorSize property, the resolution gate is defined by the render target area."
+      },
+      {
+        "name": "iso",
+        "description": "The sensor sensitivity of the camera. To use this property, enable UsePhysicalProperties."
+      },
+      {
+        "name": "isProcessingRenderRequest",
+        "description": "Whether the camera is currently processing a render request."
+      },
+      {
+        "name": "layerCullDistances",
+        "description": "Per-layer culling distances."
+      },
+      {
+        "name": "layerCullSpherical",
+        "description": "How to perform per-layer culling for a Camera."
+      },
+      {
+        "name": "lensShift",
+        "description": "The lens offset of the camera. The lens shift is relative to the sensor size. For example, a lens shift of 0.5 offsets the sensor by half its horizontal size."
+      },
+      {
+        "name": "nearClipPlane",
+        "description": "The distance of the near clipping plane from the Camera, in world units."
+      },
+      {
+        "name": "nonJitteredProjectionMatrix",
+        "description": "Get or set the raw projection matrix with no camera offset (no jittering)."
+      },
+      {
+        "name": "opaqueSortMode",
+        "description": "Opaque object sorting mode."
+      },
+      {
+        "name": "orthographic",
+        "description": "Is the camera orthographic (true) or perspective (false)?"
+      },
+      {
+        "name": "orthographicSize",
+        "description": "Camera's half-size when in orthographic mode."
+      },
+      {
+        "name": "overrideSceneCullingMask",
+        "description": "Sets the culling mask used to determine which objects from which Scenes to draw. See EditorSceneManager.SetSceneCullingMask."
+      },
+      {
+        "name": "pixelHeight",
+        "description": "How tall is the camera in pixels (not accounting for dynamic resolution scaling) (Read Only)."
+      },
+      {
+        "name": "pixelRect",
+        "description": "Where on the screen is the camera rendered in pixel coordinates."
+      },
+      {
+        "name": "pixelWidth",
+        "description": "How wide is the camera in pixels (not accounting for dynamic resolution scaling) (Read Only)."
+      },
+      {
+        "name": "previousViewProjectionMatrix",
+        "description": "Get the view projection matrix used on the last frame."
+      },
+      {
+        "name": "projectionMatrix",
+        "description": "The 4x4 matrix that's used to transform world space coordinates to clip space coordinates."
+      },
+      {
+        "name": "rect",
+        "description": "Where on the screen is the camera rendered in normalized coordinates."
+      },
+      {
+        "name": "renderCloudsInSceneView",
+        "description": "Whether Unity renders clouds in the Scene view for this camera."
+      },
+      {
+        "name": "renderingPath",
+        "description": "The rendering path that should be used, if possible."
+      },
+      {
+        "name": "scaledPixelHeight",
+        "description": "How tall is the camera in pixels (accounting for dynamic resolution scaling) (Read Only)."
+      },
+      {
+        "name": "scaledPixelWidth",
+        "description": "How wide is the camera in pixels (accounting for dynamic resolution scaling) (Read Only)."
+      },
+      {
+        "name": "scene",
+        "description": "If not null, the camera will only render the contents of the specified Scene."
+      },
+      {
+        "name": "sensorSize",
+        "description": "The size of the camera sensor, expressed in millimeters."
+      },
+      {
+        "name": "shutterSpeed",
+        "description": "The exposure time of the camera, in seconts. To use this property, enable UsePhysicalProperties."
+      },
+      {
+        "name": "stereoActiveEye",
+        "description": "Returns the eye that is currently rendering. If called when stereo is not enabled it will return Camera.MonoOrStereoscopicEye.Mono. If called during a camera rendering callback such as OnRenderImage it will return the currently rendering eye. If called outside of a rendering callback and stereo is enabled, it will return the default eye which is Camera.MonoOrStereoscopicEye.Left."
+      },
+      {
+        "name": "stereoConvergence",
+        "description": "Distance to a point where virtual eyes converge."
+      },
+      {
+        "name": "stereoEnabled",
+        "description": "Stereoscopic rendering."
+      },
+      {
+        "name": "stereoSeparation",
+        "description": "The distance between the virtual eyes. Use this to query or set the current eye separation. Note that most VR devices provide this value, in which case setting the value will have no effect."
+      },
+      {
+        "name": "stereoTargetEye",
+        "description": "Defines which eye of a VR display the Camera renders into."
+      },
+      {
+        "name": "targetDisplay",
+        "description": "Set the target display for this Camera."
+      },
+      {
+        "name": "targetTexture",
+        "description": "Destination render texture."
+      },
+      {
+        "name": "transparencySortAxis",
+        "description": "An axis that describes the direction along which the distances of objects are measured for the purpose of sorting."
+      },
+      {
+        "name": "transparencySortMode",
+        "description": "Transparent object sorting mode."
+      },
+      {
+        "name": "useJitteredProjectionMatrixForTransparentRendering",
+        "description": "Should the jittered matrix be used for transparency rendering?"
+      },
+      {
+        "name": "useOcclusionCulling",
+        "description": "Whether or not the Camera will use occlusion culling during rendering."
+      },
+      {
+        "name": "usePhysicalProperties",
+        "description": "Enable usePhysicalProperties to use physical camera properties to compute the field of view and the frustum."
+      },
+      {
+        "name": "velocity",
+        "description": "Get the world-space speed of the camera (Read Only)."
+      },
+      {
+        "name": "worldToCameraMatrix",
+        "description": "Matrix that transforms from world to camera space."
+      }
+    ],
+    "methods": [
+      {
+        "name": "AddCommandBuffer",
+        "description": "Add a command buffer to be executed at a specified place."
+      },
+      {
+        "name": "AddCommandBufferAsync",
+        "description": "Adds a command buffer to the GPU's async compute queues and executes that command buffer when graphics processing reaches a given point."
+      },
+      {
+        "name": "CalculateFrustumCorners",
+        "description": "Given viewport coordinates, calculates the view space vectors pointing to the four frustum corners at the specified camera depth."
+      },
+      {
+        "name": "CalculateObliqueMatrix",
+        "description": "Calculates and returns oblique near-plane projection matrix."
+      },
+      {
+        "name": "CopyFrom",
+        "description": "Makes this camera's settings match other camera."
+      },
+      {
+        "name": "CopyStereoDeviceProjectionMatrixToNonJittered",
+        "description": "Sets the non-jittered projection matrix, sourced from the VR SDK."
+      },
+      {
+        "name": "GetCommandBuffers",
+        "description": "Get command buffers to be executed at a specified place. This API is only available with the Built-in renderer."
+      },
+      {
+        "name": "GetGateFittedFieldOfView",
+        "description": "Retrieves the effective vertical field of view of the camera, including GateFit. Fitting the sensor gate and the resolution gate has an impact on the final field of view. If the sensor gate aspect ratio is the same as the resolution gate aspect ratio or if the camera is not in physical mode, then this method returns the same value as the fieldofview property."
+      },
+      {
+        "name": "GetGateFittedLensShift",
+        "description": "Retrieves the effective lens offset of the camera, including GateFit. Fitting the sensor gate and the resolution gate has an impact on the final obliqueness of the projection. If the sensor gate aspect ratio is the same as the resolution gate aspect ratio, then this method returns the same value as the lenshift property. If the camera is not in physical mode, then this methods returns Vector2.zero."
+      },
+      {
+        "name": "GetStereoNonJitteredProjectionMatrix",
+        "description": "Gets the non-jittered projection matrix of a specific left or right stereoscopic eye."
+      },
+      {
+        "name": "GetStereoProjectionMatrix",
+        "description": "Gets the projection matrix of a specific left or right stereoscopic eye."
+      },
+      {
+        "name": "GetStereoViewMatrix",
+        "description": "Gets the left or right view matrix of a specific stereoscopic eye."
+      },
+      {
+        "name": "RemoveAllCommandBuffers",
+        "description": "Remove all command buffers set on this camera."
+      },
+      {
+        "name": "RemoveCommandBuffer",
+        "description": "Remove command buffer from execution at a specified place."
+      },
+      {
+        "name": "RemoveCommandBuffers",
+        "description": "Remove command buffers from execution at a specified place."
+      },
+      {
+        "name": "Render",
+        "description": "Render the camera manually."
+      },
+      {
+        "name": "RenderToCubemap",
+        "description": "Render into a static cubemap from this camera."
+      },
+      {
+        "name": "RenderWithShader",
+        "description": "Render the camera with shader replacement."
+      },
+      {
+        "name": "Reset",
+        "description": "Revert all camera parameters to default."
+      },
+      {
+        "name": "ResetAspect",
+        "description": "Revert the aspect ratio to the screen's aspect ratio."
+      },
+      {
+        "name": "ResetCullingMatrix",
+        "description": "Make culling queries reflect the camera's built in parameters."
+      },
+      {
+        "name": "ResetProjectionMatrix",
+        "description": "Make the projection reflect normal camera's parameters."
+      },
+      {
+        "name": "ResetReplacementShader",
+        "description": "Remove shader replacement from camera."
+      },
+      {
+        "name": "ResetStereoProjectionMatrices",
+        "description": "Reset the camera to using the Unity computed projection matrices for all stereoscopic eyes."
+      },
+      {
+        "name": "ResetStereoViewMatrices",
+        "description": "Reset the camera to using the Unity computed view matrices for all stereoscopic eyes."
+      },
+      {
+        "name": "ResetTransparencySortSettings",
+        "description": "Resets this Camera's transparency sort settings to the default. Default transparency settings are taken from GraphicsSettings instead of directly from this Camera."
+      },
+      {
+        "name": "ResetWorldToCameraMatrix",
+        "description": "Make the rendering position reflect the camera's position in the Scene."
+      },
+      {
+        "name": "ScreenPointToRay",
+        "description": "Returns a ray going from camera through a screen point."
+      },
+      {
+        "name": "ScreenToViewportPoint",
+        "description": "Transforms position from screen space into viewport space."
+      },
+      {
+        "name": "ScreenToWorldPoint",
+        "description": "Transforms a point from screen space into world space, where world space is defined as the coordinate system at the very top of your game's hierarchy."
+      },
+      {
+        "name": "SetReplacementShader",
+        "description": "Make the camera render with shader replacement."
+      },
+      {
+        "name": "SetStereoProjectionMatrix",
+        "description": "Sets a custom projection matrix for a specific stereoscopic eye."
+      },
+      {
+        "name": "SetStereoViewMatrix",
+        "description": "Sets a custom view matrix for a specific stereoscopic eye."
+      },
+      {
+        "name": "SetTargetBuffers",
+        "description": "Sets the Camera to render to the chosen buffers of one or more RenderTextures."
+      },
+      {
+        "name": "SubmitRenderRequest",
+        "description": "Submits a render request to the camera outside of Unity render loop."
+      },
+      {
+        "name": "TryGetCullingParameters",
+        "description": "Get culling parameters for a camera."
+      },
+      {
+        "name": "ViewportPointToRay",
+        "description": "Returns a ray going from camera through a viewport point."
+      },
+      {
+        "name": "ViewportToScreenPoint",
+        "description": "Transforms position from viewport space into screen space."
+      },
+      {
+        "name": "ViewportToWorldPoint",
+        "description": "Transforms position from viewport space into world space."
+      },
+      {
+        "name": "WorldToScreenPoint",
+        "description": "Transforms position from world space into screen space."
+      },
+      {
+        "name": "WorldToViewportPoint",
+        "description": "Transforms position from world space into viewport space."
+      }
+    ],
+    "constructors": [],
+    "examples": [],
+    "url": "https://docs.unity3d.com/ScriptReference/Camera.html"
+  }
+]

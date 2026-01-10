@@ -1,0 +1,28 @@
+{
+  "name": "api_input_LocationService",
+  "type": "api",
+  "description": "Provides methods that allow an application to access the device's location.",
+  "content": "// Unity Class: LocationService\n// Documentation: https://docs.unity3d.com/ScriptReference/LocationService.html\n\n// Description: Provides methods that allow an application to access the device's location.\n\n// Properties:\n// - isEnabledByUser: Indicates whether the device allows the application to access the location service.\n// - lastData: The last geographical location that the device registered.\n// - status: Returns the location service status.\n\n// Methods:\n// - Start: Starts location service updates.\n// - Stop: Stops location service updates. This is useful to save battery power when the application doesn't re\n\npublic class LocationService {\n    public var isEnabledByUser;\n    public var lastData;\n    public var status;\n    public void Start();\n    public void Stop();\n}",
+  "properties": [
+    {
+      "name": "isEnabledByUser",
+      "description": "Indicates whether the device allows the application to access the location service."
+    },
+    {
+      "name": "lastData",
+      "description": "The last geographical location that the device registered."
+    },
+    {
+      "name": "status",
+      "description": "Returns the location service status."
+    },
+    {
+      "name": "Start",
+      "description": "Starts location service updates."
+    },
+    {
+      "name": "Stop",
+      "description": "Stops location service updates. This is useful to save battery power when the application doesn't re"
+    }
+  ]
+}

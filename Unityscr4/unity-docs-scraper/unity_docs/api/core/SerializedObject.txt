@@ -1,0 +1,94 @@
+// Unity Class: SerializedObject
+// Documentation: https://docs.unity3d.com/ScriptReference/SerializedObject.html
+
+// Description: SerializedObject and SerializedProperty are classes for editing serialized fields on Unity objects in a completely generic way. These classes automatically handle dirtying individual serialized fields so they will be processed by the Undo system and styled correctly for Prefab overrides when drawn in the Inspector.
+
+// Properties:
+// - context: The context used to store and resolve ExposedReference types. This is set by the SerializedObject constructor.
+// - forceChildVisibility: Controls the visibility of the child hidden fields.
+// - hasModifiedProperties: Is true when the SerializedObject has a modified property that has not been applied.
+// - isEditingMultipleObjects: Does the serialized object represents multiple objects due to multi-object editing? (Read Only)
+// - maxArraySizeForMultiEditing: Defines the maximum size beyond which arrays cannot be edited when multiple objects are selected.
+// - targetObject: The inspected object (Read Only).
+// - targetObjects: The inspected objects (Read Only).
+
+// Constructors:
+// - SerializedObject: Create SerializedObject for inspected object.
+
+// Methods:
+// - ApplyModifiedProperties: Apply property modifications.
+// - ApplyModifiedPropertiesWithoutUndo: Applies property modifications without registering an undo operation.
+// - CopyFromSerializedProperty: Copies a value from a SerializedProperty to the corresponding serialized property on the serialized object.
+// - CopyFromSerializedPropertyIfDifferent: Copies a changed value from a SerializedProperty to the corresponding serialized property on the serialized object.
+// - FindProperty: Find serialized property by name.
+// - GetIterator: Get the first serialized property.
+// - SetIsDifferentCacheDirty: Update hasMultipleDifferentValues cache on the next /Update()/ call.
+// - Update: Update serialized object's representation.
+// - UpdateIfRequiredOrScript: Update serialized object's representation, only if the object has been modified since the last call to Update or if it is a script.
+
+// Code Examples:
+// Example 1:
+//   using UnityEditor;
+//   using UnityEngine;static class Example1
+//   {
+//       [MenuItem("Edit/Reset Selected Objects Position (No Undo)")]
+//       static void ResetPosition()
+//       {
+//           // this action will not be undoable
+//           foreach (var go in Selection.gameObjects)
+//               go.transform.localPosition = Vector3.zero;
+//       }
+//   }
+// Example 2:
+//   using System.Linq;
+//   using UnityEditor;
+//   using UnityEngine;static class Example2
+//   {
+//       [MenuItem("Edit/Reset Selected Objects Position")]
+//       static void ResetPosition()
+//       {
+//           var transforms = Selection.gameObjects.Select(go => go.transform).ToArray();
+//           var so = new SerializedObject(transforms);
+//           // you can Shift+Right Click on property names in the Inspector to see their paths
+//           so.FindProperty("m_LocalPosition").vector3Value = Vector3.zero;
+//           so.ApplyModifiedProperties();
+//       }
+//   }
+// Example 3:
+//   using UnityEngine;public class SineAnimation : MonoBehaviour
+//   {
+//       public Vector3 axis { get { return m_Axis; } set { m_Axis = value; } }
+//       [SerializeField]
+//       private Vector3 m_Axis = Vector3.up;    public float period { get { return m_Period; } set { m_Period = value; } }
+//       [SerializeField]
+//       private float m_Period = 1f / Mathf.PI;    public float amplitude { get { return m_Amplitude; } set { m_Amplitude = value; } }
+//       [SerializeField]
+//       private float m_Amplitude = 1f;    public float phaseShift { get { return m_PhaseShift; } set { m_PhaseShift = Mathf.Clamp01(value); } }
+//       [SerializeField, Range(0f, 1f)]
+//       private float m_PhaseShift;    void Update()
+//       {
+//           transform.localPosition = m_Axis * m_Amplitude * Mathf.Sin((Time.time + m_PhaseShift) / m_Period);
+//       }    void OnValidate()
+//       {
+//           m_PhaseShift = Mathf.Clamp01(m_PhaseShift);
+//       }
+//   }
+
+public class SerializedObject {
+    public var context; // The context used to store and resolve ExposedReference types. This is set by the
+    public var forceChildVisibility; // Controls the visibility of the child hidden fields.
+    public var hasModifiedProperties; // Is true when the SerializedObject has a modified property that has not been appl
+    public var isEditingMultipleObjects; // Does the serialized object represents multiple objects due to multi-object editi
+    public var maxArraySizeForMultiEditing; // Defines the maximum size beyond which arrays cannot be edited when multiple obje
+    public var targetObject; // The inspected object (Read Only).
+    public var targetObjects; // The inspected objects (Read Only).
+    public void ApplyModifiedProperties(); // Apply property modifications.
+    public void ApplyModifiedPropertiesWithoutUndo(); // Applies property modifications without registering an undo operation.
+    public void CopyFromSerializedProperty(); // Copies a value from a SerializedProperty to the corresponding serialized propert
+    public void CopyFromSerializedPropertyIfDifferent(); // Copies a changed value from a SerializedProperty to the corresponding serialized
+    public void FindProperty(); // Find serialized property by name.
+    public void GetIterator(); // Get the first serialized property.
+    public void SetIsDifferentCacheDirty(); // Update hasMultipleDifferentValues cache on the next /Update()/ call.
+    public void Update(); // Update serialized object's representation.
+    public void UpdateIfRequiredOrScript(); // Update serialized object's representation, only if the object has been modified 
+}

@@ -1,0 +1,112 @@
+// Unity Class: Rigidbody
+// Documentation: https://docs.unity3d.com/ScriptReference/Rigidbody.html
+
+// Description: Control of an object's position through physics simulation.
+
+// Properties:
+// - angularDamping: The angular damping of the object.
+// - angularVelocity: The angular velocity vector of the rigidbody measured in radians per second.
+// - automaticCenterOfMass: Whether or not to calculate the center of mass automatically.
+// - automaticInertiaTensor: Whether or not to calculate the inertia tensor automatically.
+// - centerOfMass: The center of mass relative to the transform's origin.
+// - collisionDetectionMode: The Rigidbody's collision detection mode.
+// - constraints: Controls which degrees of freedom are allowed for the simulation of this Rigidbody.
+// - detectCollisions: Should collision detection be enabled? (By default always enabled).
+// - excludeLayers: The additional layers that all Colliders attached to this Rigidbody should exclude when deciding if the Collider can come into contact with another Collider.
+// - freezeRotation: Controls whether physics will change the rotation of the object.
+// - includeLayers: The additional layers that all Colliders attached to this Rigidbody should include when deciding if the Collider can come into contact with another Collider.
+// - inertiaTensor: The inertia tensor of this body, defined as a diagonal matrix in a reference frame positioned at this body's center of mass and rotated by Rigidbody.inertiaTensorRotation.
+// - inertiaTensorRotation: The rotation of the inertia tensor.
+// - interpolation: Interpolation provides a way to manage the appearance of jitter in the movement of your Rigidbody GameObjects at run time.
+// - isKinematic: Controls whether physics affects the rigidbody.
+// - linearDamping: The linear damping of the Rigidbody linear velocity.
+// - linearVelocity: The linear velocity vector of the rigidbody. It represents the rate of change of Rigidbody position.
+// - mass: The mass of the rigidbody.
+// - maxAngularVelocity: The maximum angular velocity of the rigidbody measured in radians per second. (Default 7) range { 0, infinity }.
+// - maxDepenetrationVelocity: Maximum velocity of a rigidbody when moving out of penetrating state.
+// - maxLinearVelocity: The maximum linear velocity of the rigidbody measured in meters per second.
+// - position: The position of the rigidbody.
+// - rotation: The rotation of the Rigidbody.
+// - sleepThreshold: The mass-normalized energy threshold, below which objects start going to sleep.
+// - solverIterations: The solverIterations determines how accurately Rigidbody joints and collision contacts are resolved. Overrides Physics.defaultSolverIterations. Must be positive.
+// - solverVelocityIterations: The solverVelocityIterations affects how how accurately Rigidbody joints and collision contacts are resolved. Overrides Physics.defaultSolverVelocityIterations. Must be positive.
+// - useGravity: Controls whether gravity affects this rigidbody.
+// - worldCenterOfMass: The center of mass of the rigidbody in world space (Read Only).
+
+// Methods:
+// - AddExplosionForce(): Applies a force to a rigidbody that simulates explosion effects.
+// - AddForce(): Adds a force to the Rigidbody.
+// - AddForceAtPosition(): Applies force at position. As a result this will apply a torque and force on the object.
+// - AddRelativeForce(): Adds a force to the rigidbody relative to its coordinate system.
+// - AddRelativeTorque(): Adds a torque to the rigidbody relative to its coordinate system.
+// - AddTorque(): Adds a torque to the rigidbody.
+// - ClosestPointOnBounds(): The closest point to the bounding box of the attached colliders.
+// - GetAccumulatedForce(): Returns the force that the Rigidbody has accumulated before the simulation step.
+// - GetAccumulatedTorque(): Returns the torque that the Rigidbody has accumulated before the simulation step.
+// - GetPointVelocity(): The velocity of the rigidbody at the point worldPoint in global space.
+// - GetRelativePointVelocity(): The velocity relative to the rigidbody at the point relativePoint.
+// - IsSleeping(): Is the rigidbody sleeping?
+// - Move(): Moves the Rigidbody to position and rotates the Rigidbody to rotation.
+// - MovePosition(): Moves the kinematic Rigidbody towards position.
+// - MoveRotation(): Rotates the rigidbody to rotation.
+// - PublishTransform(): Applies the position and rotation of the Rigidbody to the corresponding Transform component.
+// - ResetCenterOfMass(): Reset the center of mass of the rigidbody.
+// - ResetInertiaTensor(): Reset the inertia tensor value and rotation.
+// - Sleep(): Forces a rigidbody to sleep until woken up.
+// - SweepTest(): Tests if a rigidbody would collide with anything, if it was moved through the Scene.
+// - SweepTestAll(): Like Rigidbody.SweepTest, but returns all hits.
+// - WakeUp(): Forces a rigidbody to wake up.
+
+// Pseudo-code representation of Rigidbody
+public class Rigidbody {
+    public var angularDamping; // The angular damping of the object.
+    public var angularVelocity; // The angular velocity vector of the rigidbody measured in radians per second.
+    public var automaticCenterOfMass; // Whether or not to calculate the center of mass automatically.
+    public var automaticInertiaTensor; // Whether or not to calculate the inertia tensor automatically.
+    public var centerOfMass; // The center of mass relative to the transform's origin.
+    public var collisionDetectionMode; // The Rigidbody's collision detection mode.
+    public var constraints; // Controls which degrees of freedom are allowed for the simulation of this Rigidbody.
+    public var detectCollisions; // Should collision detection be enabled? (By default always enabled).
+    public var excludeLayers; // The additional layers that all Colliders attached to this Rigidbody should exclude when deciding if the Collider can come into contact with another Collider.
+    public var freezeRotation; // Controls whether physics will change the rotation of the object.
+    public var includeLayers; // The additional layers that all Colliders attached to this Rigidbody should include when deciding if the Collider can come into contact with another Collider.
+    public var inertiaTensor; // The inertia tensor of this body, defined as a diagonal matrix in a reference frame positioned at this body's center of mass and rotated by Rigidbody.inertiaTensorRotation.
+    public var inertiaTensorRotation; // The rotation of the inertia tensor.
+    public var interpolation; // Interpolation provides a way to manage the appearance of jitter in the movement of your Rigidbody GameObjects at run time.
+    public var isKinematic; // Controls whether physics affects the rigidbody.
+    public var linearDamping; // The linear damping of the Rigidbody linear velocity.
+    public var linearVelocity; // The linear velocity vector of the rigidbody. It represents the rate of change of Rigidbody position.
+    public var mass; // The mass of the rigidbody.
+    public var maxAngularVelocity; // The maximum angular velocity of the rigidbody measured in radians per second. (Default 7) range { 0, infinity }.
+    public var maxDepenetrationVelocity; // Maximum velocity of a rigidbody when moving out of penetrating state.
+    public var maxLinearVelocity; // The maximum linear velocity of the rigidbody measured in meters per second.
+    public var position; // The position of the rigidbody.
+    public var rotation; // The rotation of the Rigidbody.
+    public var sleepThreshold; // The mass-normalized energy threshold, below which objects start going to sleep.
+    public var solverIterations; // The solverIterations determines how accurately Rigidbody joints and collision contacts are resolved. Overrides Physics.defaultSolverIterations. Must be positive.
+    public var solverVelocityIterations; // The solverVelocityIterations affects how how accurately Rigidbody joints and collision contacts are resolved. Overrides Physics.defaultSolverVelocityIterations. Must be positive.
+    public var useGravity; // Controls whether gravity affects this rigidbody.
+    public var worldCenterOfMass; // The center of mass of the rigidbody in world space (Read Only).
+    public void AddExplosionForce(); // Applies a force to a rigidbody that simulates explosion effects.
+    public void AddForce(); // Adds a force to the Rigidbody.
+    public void AddForceAtPosition(); // Applies force at position. As a result this will apply a torque and force on the object.
+    public void AddRelativeForce(); // Adds a force to the rigidbody relative to its coordinate system.
+    public void AddRelativeTorque(); // Adds a torque to the rigidbody relative to its coordinate system.
+    public void AddTorque(); // Adds a torque to the rigidbody.
+    public void ClosestPointOnBounds(); // The closest point to the bounding box of the attached colliders.
+    public void GetAccumulatedForce(); // Returns the force that the Rigidbody has accumulated before the simulation step.
+    public void GetAccumulatedTorque(); // Returns the torque that the Rigidbody has accumulated before the simulation step.
+    public void GetPointVelocity(); // The velocity of the rigidbody at the point worldPoint in global space.
+    public void GetRelativePointVelocity(); // The velocity relative to the rigidbody at the point relativePoint.
+    public void IsSleeping(); // Is the rigidbody sleeping?
+    public void Move(); // Moves the Rigidbody to position and rotates the Rigidbody to rotation.
+    public void MovePosition(); // Moves the kinematic Rigidbody towards position.
+    public void MoveRotation(); // Rotates the rigidbody to rotation.
+    public void PublishTransform(); // Applies the position and rotation of the Rigidbody to the corresponding Transform component.
+    public void ResetCenterOfMass(); // Reset the center of mass of the rigidbody.
+    public void ResetInertiaTensor(); // Reset the inertia tensor value and rotation.
+    public void Sleep(); // Forces a rigidbody to sleep until woken up.
+    public void SweepTest(); // Tests if a rigidbody would collide with anything, if it was moved through the Scene.
+    public void SweepTestAll(); // Like Rigidbody.SweepTest, but returns all hits.
+    public void WakeUp(); // Forces a rigidbody to wake up.
+}

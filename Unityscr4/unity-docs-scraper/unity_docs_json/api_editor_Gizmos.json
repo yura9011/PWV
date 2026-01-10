@@ -1,0 +1,64 @@
+{
+  "name": "api_editor_Gizmos",
+  "type": "api",
+  "description": "Gizmos are used to give visual debugging or setup aids in the Scene view.",
+  "content": "// Unity Class: Gizmos\n// Documentation: https://docs.unity3d.com/ScriptReference/Gizmos.html\n\n// Description: Gizmos are used to give visual debugging or setup aids in the Scene view.\n\n// Methods:\n// - CalculateLOD: Determines the appropriate level of detail for a gizmo in the Scene view at a specified position with a specified radius.\n// - DrawCube: Draws a solid box at center with size in the Scene view for visualization and debugging purposes.\n// - DrawFrustum: Draws a camera frustum using the currently set Gizmos.matrix for its location and rotation.\n// - DrawGUITexture: Draw a texture in the Scene.\n// - DrawIcon: Draw an icon at a position in the Scene view.\n// - DrawLine: Draws a line between two points in the Scene view.\n// - DrawLineList: Draws multiple lines between pairs of points.\n// - DrawLineStrip: Draws a line between each point in the supplied span.\n// - DrawMesh: Draws a mesh gizmo at the specified transform.\n// - DrawRay: Draws a ray starting at a specified position from and extending in a given direction in the Scene view.\n// - DrawSphere: Draws a solid color sphere with center and radius in the Scene view.\n// - DrawWireCube: Draws a wireframe box at center with size in the Scene view for visualization and debugging purposes.\n// - DrawWireMesh: Draws a wireframe of a mesh at the specified transform.\n// - DrawWireSphere: Draws a wireframe sphere with center and radius in the Scene view.\n\n// Code Examples:\n// Example 1:\n//   using UnityEngine;\n\n//   \n\n//   public class GizmosExample : MonoBehaviour\n\n//   {\n\n//       public float rotationSpeed = 50.0f;\n\n//   \n\n//       void OnDrawGizmosSelected()\n\n//       {\n\n//           Gizmos.color = new Color(0.75f, 0.0f, 0.0f, 0.75f);\n\n//   \n\n//           // Convert the local coordinate values into world\n\n//           // coordinates for the matrix transformation.\n\n//           Gizmos.matrix = transform.localToWorldMatrix;\n\n//           Gizmos.DrawCube(Vector3.zero, Vector3.one);\n\n//       }\n\n//   \n\n//       // Rotate the cube.\n\n//       void Update()\n\n//       {\n\n//           float zRot = rotationSpeed * Time.deltaTime;\n\n\npublic class Gizmos {\n    public void CalculateLOD(); // Determines the appropriate level of detail for a gizmo in the Scene view at a sp\n    public void DrawCube(); // Draws a solid box at center with size in the Scene view for visualization and de\n    public void DrawFrustum(); // Draws a camera frustum using the currently set Gizmos.matrix for its location an\n    public void DrawGUITexture(); // Draw a texture in the Scene.\n    public void DrawIcon(); // Draw an icon at a position in the Scene view.\n    public void DrawLine(); // Draws a line between two points in the Scene view.\n    public void DrawLineList(); // Draws multiple lines between pairs of points.\n    public void DrawLineStrip(); // Draws a line between each point in the supplied span.\n    public void DrawMesh(); // Draws a mesh gizmo at the specified transform.\n    public void DrawRay(); // Draws a ray starting at a specified position from and extending in a given direc\n    public void DrawSphere(); // Draws a solid color sphere with center and radius in the Scene view.\n    public void DrawWireCube(); // Draws a wireframe box at center with size in the Scene view for visualization an\n    public void DrawWireMesh(); // Draws a wireframe of a mesh at the specified transform.\n    public void DrawWireSphere(); // Draws a wireframe sphere with center and radius in the Scene view.\n}",
+  "properties": [
+    {
+      "name": "CalculateLOD",
+      "description": "Determines the appropriate level of detail for a gizmo in the Scene view at a specified position with a specified radius."
+    },
+    {
+      "name": "DrawCube",
+      "description": "Draws a solid box at center with size in the Scene view for visualization and debugging purposes."
+    },
+    {
+      "name": "DrawFrustum",
+      "description": "Draws a camera frustum using the currently set Gizmos.matrix for its location and rotation."
+    },
+    {
+      "name": "DrawGUITexture",
+      "description": "Draw a texture in the Scene."
+    },
+    {
+      "name": "DrawIcon",
+      "description": "Draw an icon at a position in the Scene view."
+    },
+    {
+      "name": "DrawLine",
+      "description": "Draws a line between two points in the Scene view."
+    },
+    {
+      "name": "DrawLineList",
+      "description": "Draws multiple lines between pairs of points."
+    },
+    {
+      "name": "DrawLineStrip",
+      "description": "Draws a line between each point in the supplied span."
+    },
+    {
+      "name": "DrawMesh",
+      "description": "Draws a mesh gizmo at the specified transform."
+    },
+    {
+      "name": "DrawRay",
+      "description": "Draws a ray starting at a specified position from and extending in a given direction in the Scene view."
+    },
+    {
+      "name": "DrawSphere",
+      "description": "Draws a solid color sphere with center and radius in the Scene view."
+    },
+    {
+      "name": "DrawWireCube",
+      "description": "Draws a wireframe box at center with size in the Scene view for visualization and debugging purposes."
+    },
+    {
+      "name": "DrawWireMesh",
+      "description": "Draws a wireframe of a mesh at the specified transform."
+    },
+    {
+      "name": "DrawWireSphere",
+      "description": "Draws a wireframe sphere with center and radius in the Scene view."
+    }
+  ]
+}

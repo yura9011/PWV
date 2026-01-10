@@ -1,0 +1,76 @@
+{
+  "name": "api_physics2d_PolygonCollider2D",
+  "type": "api",
+  "description": "Collider for 2D physics representing an arbitrary polygon defined by its vertices.",
+  "content": "// Unity Class: PolygonCollider2D\n// Documentation: https://docs.unity3d.com/ScriptReference/PolygonCollider2D.html\n\n// Description: Collider for 2D physics representing an arbitrary polygon defined by its vertices.\n\n// Properties:\n// - autoTiling: Determines whether the PolygonCollider2D's shape is automatically updated based on a SpriteRenderer'\n// - pathCount: The number of paths in the polygon.\n// - points: Corner points that define the collider's shape in local space.\n// - useDelaunayMesh: When the value is true, the Collider uses an additional Delaunay triangulation step to produce the C\n\n// Methods:\n// - CreateFromSprite: Create polygon shapes using the selected sprite.\n// - CreatePrimitive: Creates as regular primitive polygon with the specified number of sides.\n// - GetPath: Gets a path from the Collider by its index.\n// - GetTotalPointCount: Return the total number of points in the polygon in all paths.\n// - SetPath: Define a path by its constituent points.\n// - Destroy: Removes a GameObject, component, or asset.\n// - DestroyImmediate: Destroys the specified object immediately. Use with caution and in Edit mode only.\n// - DontDestroyOnLoad: Do not destroy the target Object when loading a new Scene.\n// - FindAnyObjectByType: Retrieves any active loaded object of Type type.\n// - FindFirstObjectByType: Retrieves the first active loaded object of Type type.\n// - FindObjectsByType: Retrieves a list of all loaded objects of Type type.\n// - Instantiate: Clones the object original and returns the clone.\n// - InstantiateAsync: Captures a snapshot of the original object (that must be related to some GameObject) and returns the\n\npublic class PolygonCollider2D {\n    public var autoTiling;\n    public var pathCount;\n    public var points;\n    public var useDelaunayMesh;\n    public void CreateFromSprite();\n    public void CreatePrimitive();\n    public void GetPath();\n    public void GetTotalPointCount();\n    public void SetPath();\n    public void Destroy();\n    public void DestroyImmediate();\n    public void DontDestroyOnLoad();\n    public void FindAnyObjectByType();\n    public void FindFirstObjectByType();\n    public void FindObjectsByType();\n    public void Instantiate();\n    public void InstantiateAsync();\n}",
+  "properties": [
+    {
+      "name": "autoTiling",
+      "description": "Determines whether the PolygonCollider2D's shape is automatically updated based on a SpriteRenderer'"
+    },
+    {
+      "name": "pathCount",
+      "description": "The number of paths in the polygon."
+    },
+    {
+      "name": "points",
+      "description": "Corner points that define the collider's shape in local space."
+    },
+    {
+      "name": "useDelaunayMesh",
+      "description": "When the value is true, the Collider uses an additional Delaunay triangulation step to produce the C"
+    },
+    {
+      "name": "CreateFromSprite",
+      "description": "Create polygon shapes using the selected sprite."
+    },
+    {
+      "name": "CreatePrimitive",
+      "description": "Creates as regular primitive polygon with the specified number of sides."
+    },
+    {
+      "name": "GetPath",
+      "description": "Gets a path from the Collider by its index."
+    },
+    {
+      "name": "GetTotalPointCount",
+      "description": "Return the total number of points in the polygon in all paths."
+    },
+    {
+      "name": "SetPath",
+      "description": "Define a path by its constituent points."
+    },
+    {
+      "name": "Destroy",
+      "description": "Removes a GameObject, component, or asset."
+    },
+    {
+      "name": "DestroyImmediate",
+      "description": "Destroys the specified object immediately. Use with caution and in Edit mode only."
+    },
+    {
+      "name": "DontDestroyOnLoad",
+      "description": "Do not destroy the target Object when loading a new Scene."
+    },
+    {
+      "name": "FindAnyObjectByType",
+      "description": "Retrieves any active loaded object of Type type."
+    },
+    {
+      "name": "FindFirstObjectByType",
+      "description": "Retrieves the first active loaded object of Type type."
+    },
+    {
+      "name": "FindObjectsByType",
+      "description": "Retrieves a list of all loaded objects of Type type."
+    },
+    {
+      "name": "Instantiate",
+      "description": "Clones the object original and returns the clone."
+    },
+    {
+      "name": "InstantiateAsync",
+      "description": "Captures a snapshot of the original object (that must be related to some GameObject) and returns the"
+    }
+  ]
+}

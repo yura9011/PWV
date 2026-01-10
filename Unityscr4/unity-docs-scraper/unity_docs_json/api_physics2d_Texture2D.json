@@ -1,0 +1,88 @@
+{
+  "name": "api_physics2d_Texture2D",
+  "type": "api",
+  "description": "Class that represents textures in C# code.",
+  "content": "// Unity Class: Texture2D\n// Documentation: https://docs.unity3d.com/ScriptReference/Texture2D.html\n\n// Description: Class that represents textures in C# code.\n\n// Properties:\n// - activeMipmapLimit: The number of high resolution mipmap levels from the texture that Unity doesn't upload to the GPU. (Read Only)\n// - alphaIsTransparency: Indicates whether this texture was imported with TextureImporter.alphaIsTransparency enabled. This setting is available only in the Editor scripts. Note that changing this setting will have no effect; it must be enabled in TextureImporter instead.\n// - calculatedMipmapLevel: The mipmap level calculated by the streaming system, which takes into account the streaming Cameras and the location of the objects containing this Texture. This is unaffected by requestedMipmapLevel or minimumMipmapLevel.\n// - desiredMipmapLevel: The mipmap level that the streaming system would load before memory budgets are applied.\n// - format: The format of the pixel data in the texture (Read Only).\n// - ignoreMipmapLimit: This property causes a texture to ignore all texture mipmap limit settings.\n// - loadedMipmapLevel: The mipmap level that is currently loaded by the streaming system.\n// - loadingMipmapLevel: The mipmap level that the mipmap streaming system is in the process of loading.\n// - minimumMipmapLevel: Restricts the mipmap streaming system to a minimum mip level for this Texture.\n// - mipmapLimitGroup: The name of the texture mipmap limit group that this texture is associated with. (Read Only)\n// - requestedMipmapLevel: The mipmap level to load.\n// - streamingMipmaps: Determines whether mipmap streaming is enabled for this Texture.\n// - streamingMipmapsPriority: Sets the relative priority for this Texture when reducing memory size to fit within the memory budget.\n// - vtOnly: Returns true if the VTOnly checkbox was checked when the texture was imported; otherwise returns false. For additional information, see TextureImporter.vtOnly.\n\n// Constructors:\n// - Texture2D: Create a new empty texture.\n\n// Methods:\n// - Apply: Copies changes you've made in a CPU texture to the GPU.\n// - ClearMinimumMipmapLevel: Resets the minimumMipmapLevel field.\n// - ClearRequestedMipmapLevel: Resets the requestedMipmapLevel field.\n// - Compress: Compress texture at runtime to DXT/BCn or ETC formats.\n// - CopyPixels: Copies pixel data from another texture on the CPU.\n// - GetPixel: Gets the pixel color at coordinates (x, y).\n// - GetPixelBilinear: Gets the filtered color at the normalized coordinates (u, v).\n// - GetPixelData: Gets the raw data from a texture.\n// - GetPixels: Gets the pixel color data for a mipmap level as Color structs.\n// - GetPixels32: Gets the pixel color data for a mipmap level as Color32 structs.\n// - GetRawTextureData: Gets the raw data from a texture, as an array that points to memory.\n// - IsRequestedMipmapLevelLoaded: Checks to see whether the mipmap level set by requestedMipmapLevel has finished loading.\n// - LoadRawTextureData: Sets the raw data of an entire texture in CPU memory.\n// - PackTextures: Packs multiple Textures into a texture atlas.\n// - ReadPixels: Reads pixels from the current render target and writes them to a texture.\n// - Reinitialize: Reinitializes a Texture2D, making it possible for you to replace width, height, textureformat, and graphicsformat data for that texture.\n// - SetPixel: Sets the pixel color at coordinates (x,y).\n// - SetPixelData: Sets the raw data of an entire mipmap level directly in CPU memory.\n// - SetPixels: Sets the pixel colors of an entire mipmap level.\n// - SetPixels32: Sets the pixel colors of an entire mipmap level.\n// - UpdateExternalTexture: Updates Unity texture to use different native texture object.\n// - CreateExternalTexture: Creates a Unity Texture out of an externally created native texture object.\n// - GenerateAtlas: Packs a set of rectangles into a square atlas, with optional padding between rectangles.\n\npublic class Texture2D {\n    public var activeMipmapLimit; // The number of high resolution mipmap levels from the texture that Unity doesn't \n    public var alphaIsTransparency; // Indicates whether this texture was imported with TextureImporter.alphaIsTranspar\n    public var calculatedMipmapLevel; // The mipmap level calculated by the streaming system, which takes into account th\n    public var desiredMipmapLevel; // The mipmap level that the streaming system would load before memory budgets are \n    public var format; // The format of the pixel data in the texture (Read Only).\n    public var ignoreMipmapLimit; // This property causes a texture to ignore all texture mipmap limit settings.\n    public var loadedMipmapLevel; // The mipmap level that is currently loaded by the streaming system.\n    public var loadingMipmapLevel; // The mipmap level that the mipmap streaming system is in the process of loading.\n    public var minimumMipmapLevel; // Restricts the mipmap streaming system to a minimum mip level for this Texture.\n    public var mipmapLimitGroup; // The name of the texture mipmap limit group that this texture is associated with.\n    public var requestedMipmapLevel; // The mipmap level to load.\n    public var streamingMipmaps; // Determines whether mipmap streaming is enabled for this Texture.\n    public var streamingMipmapsPriority; // Sets the relative priority for this Texture when reducing memory size to fit wit\n    public var vtOnly; // Returns true if the VTOnly checkbox was checked when the texture was imported; o\n    public void Apply(); // Copies changes you've made in a CPU texture to the GPU.\n    public void ClearMinimumMipmapLevel(); // Resets the minimumMipmapLevel field.\n    public void ClearRequestedMipmapLevel(); // Resets the requestedMipmapLevel field.\n    public void Compress(); // Compress texture at runtime to DXT/BCn or ETC formats.\n    public void CopyPixels(); // Copies pixel data from another texture on the CPU.\n    public void GetPixel(); // Gets the pixel color at coordinates (x, y).\n    public void GetPixelBilinear(); // Gets the filtered color at the normalized coordinates (u, v).\n    public void GetPixelData(); // Gets the raw data from a texture.\n    public void GetPixels(); // Gets the pixel color data for a mipmap level as Color structs.\n    public void GetPixels32(); // Gets the pixel color data for a mipmap level as Color32 structs.\n    public void GetRawTextureData(); // Gets the raw data from a texture, as an array that points to memory.\n    public void IsRequestedMipmapLevelLoaded(); // Checks to see whether the mipmap level set by requestedMipmapLevel has finished \n    public void LoadRawTextureData(); // Sets the raw data of an entire texture in CPU memory.\n    public void PackTextures(); // Packs multiple Textures into a texture atlas.\n    public void ReadPixels(); // Reads pixels from the current render target and writes them to a texture.\n}",
+  "properties": [
+    {
+      "name": "activeMipmapLimit",
+      "description": "The number of high resolution mipmap levels from the texture that Unity doesn't upload to the GPU. (Read Only)"
+    },
+    {
+      "name": "alphaIsTransparency",
+      "description": "Indicates whether this texture was imported with TextureImporter.alphaIsTransparency enabled. This setting is available only in the Editor scripts. Note that changing this setting will have no effect; it must be enabled in TextureImporter instead."
+    },
+    {
+      "name": "calculatedMipmapLevel",
+      "description": "The mipmap level calculated by the streaming system, which takes into account the streaming Cameras and the location of the objects containing this Texture. This is unaffected by requestedMipmapLevel or minimumMipmapLevel."
+    },
+    {
+      "name": "desiredMipmapLevel",
+      "description": "The mipmap level that the streaming system would load before memory budgets are applied."
+    },
+    {
+      "name": "format",
+      "description": "The format of the pixel data in the texture (Read Only)."
+    },
+    {
+      "name": "ignoreMipmapLimit",
+      "description": "This property causes a texture to ignore all texture mipmap limit settings."
+    },
+    {
+      "name": "loadedMipmapLevel",
+      "description": "The mipmap level that is currently loaded by the streaming system."
+    },
+    {
+      "name": "loadingMipmapLevel",
+      "description": "The mipmap level that the mipmap streaming system is in the process of loading."
+    },
+    {
+      "name": "minimumMipmapLevel",
+      "description": "Restricts the mipmap streaming system to a minimum mip level for this Texture."
+    },
+    {
+      "name": "mipmapLimitGroup",
+      "description": "The name of the texture mipmap limit group that this texture is associated with. (Read Only)"
+    },
+    {
+      "name": "requestedMipmapLevel",
+      "description": "The mipmap level to load."
+    },
+    {
+      "name": "streamingMipmaps",
+      "description": "Determines whether mipmap streaming is enabled for this Texture."
+    },
+    {
+      "name": "streamingMipmapsPriority",
+      "description": "Sets the relative priority for this Texture when reducing memory size to fit within the memory budget."
+    },
+    {
+      "name": "vtOnly",
+      "description": "Returns true if the VTOnly checkbox was checked when the texture was imported; otherwise returns false. For additional information, see TextureImporter.vtOnly."
+    },
+    {
+      "name": "Texture2D",
+      "description": "Create a new empty texture."
+    },
+    {
+      "name": "Apply",
+      "description": "Copies changes you've made in a CPU texture to the GPU."
+    },
+    {
+      "name": "ClearMinimumMipmapLevel",
+      "description": "Resets the minimumMipmapLevel field."
+    },
+    {
+      "name": "ClearRequestedMipmapLevel",
+      "description": "Resets the requestedMipmapLevel field."
+    },
+    {
+      "name": "Compress",
+      "description": "Compress texture at runtime to DXT/BCn or ETC formats."
+    },
+    {
+      "name": "CopyPixels",
+      "description": "Copies pixel data from another texture on the CPU."
+    }
+  ]
+}

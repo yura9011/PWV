@@ -1,0 +1,102 @@
+// Unity Manual: Ambisonic audio
+// Section: Audio
+// URL: https://docs.unity3d.com/Manual/AmbisonicAudio.html
+
+// Content:
+Audio
+Ambisonic Audio
+Audio Profiler module reference
+Develop an ambisonic audio decoder
+Ambisonic Audio
+Ambisonics are a type of audio that provide a representation of sound that can completely surround a listener. They can provide an audio
+skybox
+A special type of Material used to represent skies. Usually six-sided.
+More info
+See in
+Glossary
+for distant ambient sounds, and are particularly useful for 360-degree videos and applications.
+Ambisonics are stored in a multi-channel format. Instead of mapping each channel to a specific speaker, ambisonics represent the soundfield in a more general way. You can rotate the soundfield based on the listener’s orientation (such as the user’s head rotation in VR). You can also decode the soundfield into a format that matches the speaker setup.
+Selecting an ambisonic audio decoder
+To select an ambisonic audio decoder in your project, open your project’s
+Audio
+settings (menu:
+Edit
+>
+Project Settings
+>
+Audio
+). Select an
+Ambisonic Decoder Plugin
+from the list of available decoders in the project.
+Ambisonic options in the Audio settings
+There are no built-in decoders included with Unity, but you can do one of the following options:
+You can create your own ambisonic audio decoder
+plug-in
+A set of code created outside of Unity that creates functionality in Unity. There are two kinds of plug-ins you can use in Unity: Managed plug-ins (managed .NET assemblies created with tools like Visual Studio) and Native plug-ins (platform-specific native code libraries).
+More info
+See in
+Glossary
+. For more information, refer to
+Ambisonic Audio Decoder
+.
+Use external decoders. For instance, some
+VR
+Virtual Reality
+More info
+See in
+Glossary
+hardware manufacturers provide them in their audio SDKs for Unity. Check your target platform manufacturer’s documentation to learn if this is available for your project.
+Importing an ambisonic audio clip
+To import an ambisonic
+audio clip
+A container for audio data in Unity. Unity supports mono, stereo and multichannel audio assets (up to eight channels). Unity can import .aif, .wav, .mp3, and .ogg audio file format, and .xm, .mod, .it, and .s3m tracker module formats.
+More info
+See in
+Glossary
+, import a multi-channel B-format WAV file with ACN component ordering, and SN3D normalization. In the
+Inspector
+A Unity window that displays information about the currently selected GameObject, asset or project settings, allowing you to inspect and edit the values.
+More info
+See in
+Glossary
+window for the audio clip, enable
+Ambisonic
+.
+The Ambisonic option in the audio clip inspector
+Playing the ambisonic audio clip through an Audio Source
+To play an ambisonic audio clip through an
+Audio Source
+A component which plays back an Audio Clip in the scene to an audio listener or through an audio mixer.
+More info
+See in
+Glossary
+:
+Assign the WAV file as an
+Audio Clip
+on an Audio Source.
+Disable the
+Spatialize
+option. When you play an ambisonic audio clip, it is automatically decoded through the project’s selected ambisonic audio decoder. The decoder converts the clip from ambisonic format to the project’s selected speaker format. It also already handles spatialization as a part of this decoding operation, based on the orientation of the audio source and
+audio listener
+A component that acts like a microphone, receiving sound from Audio Sources in the scene and outputting to the computer speakers.
+More info
+See in
+Glossary
+.
+When Unity plays an ambisonic audio clip, it decompresses the file, if necessary, then decodes it to convert it to the project’s selected speaker mode. It then applies the Audio Source’s effects.
+Note:
+Reverb zones are disabled for ambisonic audio clips.
+Audio Profiler module reference
+Develop an ambisonic audio decoder
+Copyright ©2005-2026 Unity Technologies. All rights reserved. Built from 6000.3.5f1 (9e864d5a2e6f). Built on: 2026-01-09.
+Tutorials
+Community Answers
+Knowledge Base
+Forums
+Asset Store
+Terms of use
+Legal
+Privacy Policy
+Cookies
+Do Not Sell or Share My Personal Information
+Your Privacy Choices (Cookie Settings)

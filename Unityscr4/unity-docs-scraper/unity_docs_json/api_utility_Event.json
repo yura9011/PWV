@@ -1,0 +1,88 @@
+{
+  "name": "api_utility_Event",
+  "type": "api",
+  "description": "A UnityGUI event.",
+  "content": "// Unity Class: Event\n// Documentation: https://docs.unity3d.com/ScriptReference/Event.html\n\n// Description: A UnityGUI event.\n\n// Properties:\n// - alt: Is Alt/Option key held down? (Read Only)\n// - button: Which mouse button was pressed.\n// - capsLock: Is Caps Lock on? (Read Only)\n// - character: The character typed.\n// - clickCount: How many consecutive mouse clicks have we received.\n// - command: Is Command/Windows key held down? (Read Only)\n// - commandName: The name of an ExecuteCommand or ValidateCommand Event.\n// - control: Is Control key held down? (Read Only)\n// - delta: The relative movement of the mouse compared to last event.\n// - displayIndex: Index of display that the event belongs to.\n// - functionKey: Is the current keypress a function key? (Read Only)\n// - isKey: Is this event a keyboard event? (Read Only)\n// - isMouse: Is this event a mouse event? (Read Only)\n// - keyCode: The raw key code for keyboard events.\n// - modifiers: Which modifier keys are held down.\n// - mousePosition: The mouse position.\n// - numeric: Is the current keypress on the numeric keyboard? (Read Only)\n// - penStatus: Specifies the state of the pen. For example, whether the pen is in contact with the screen or tablet, whether the pen is inverted, and whether buttons are pressed.\n// - pointerType: The type of pointer that created this event (for example, mouse, touch screen, pen).\n// - pressure: How hard pen pressure is applied, normalized between 0 (no pressure) and 1 (maximum pressure).\n// - shift: Is Shift held down? (Read Only)\n// - tilt: Specifies the angle of the pen relative to the X and Y axes, expressed in radians.\n// - twist: Specifies the rotation of the pen around its axis, expressed in radians. The default value is 0.\n// - type: The type of event.\n\n// Methods:\n// - GetTypeForControl: Get a filtered event type for a given control ID.\n// - Use: Use this event.\n// - GetEventCount: Returns the current number of events that are stored in the event queue.\n// - KeyboardEvent: Create a keyboard event.\n// - PopEvent: Get the next queued [Event] from the event system.\n\npublic class Event {\n    public var alt; // Is Alt/Option key held down? (Read Only)\n    public var button; // Which mouse button was pressed.\n    public var capsLock; // Is Caps Lock on? (Read Only)\n    public var character; // The character typed.\n    public var clickCount; // How many consecutive mouse clicks have we received.\n    public var command; // Is Command/Windows key held down? (Read Only)\n    public var commandName; // The name of an ExecuteCommand or ValidateCommand Event.\n    public var control; // Is Control key held down? (Read Only)\n    public var delta; // The relative movement of the mouse compared to last event.\n    public var displayIndex; // Index of display that the event belongs to.\n    public var functionKey; // Is the current keypress a function key? (Read Only)\n    public var isKey; // Is this event a keyboard event? (Read Only)\n    public var isMouse; // Is this event a mouse event? (Read Only)\n    public var keyCode; // The raw key code for keyboard events.\n    public var modifiers; // Which modifier keys are held down.\n    public void GetTypeForControl(); // Get a filtered event type for a given control ID.\n    public void Use(); // Use this event.\n    public void GetEventCount(); // Returns the current number of events that are stored in the event queue.\n    public void KeyboardEvent(); // Create a keyboard event.\n    public void PopEvent(); // Get the next queued [Event] from the event system.\n}",
+  "properties": [
+    {
+      "name": "alt",
+      "description": "Is Alt/Option key held down? (Read Only)"
+    },
+    {
+      "name": "button",
+      "description": "Which mouse button was pressed."
+    },
+    {
+      "name": "capsLock",
+      "description": "Is Caps Lock on? (Read Only)"
+    },
+    {
+      "name": "character",
+      "description": "The character typed."
+    },
+    {
+      "name": "clickCount",
+      "description": "How many consecutive mouse clicks have we received."
+    },
+    {
+      "name": "command",
+      "description": "Is Command/Windows key held down? (Read Only)"
+    },
+    {
+      "name": "commandName",
+      "description": "The name of an ExecuteCommand or ValidateCommand Event."
+    },
+    {
+      "name": "control",
+      "description": "Is Control key held down? (Read Only)"
+    },
+    {
+      "name": "delta",
+      "description": "The relative movement of the mouse compared to last event."
+    },
+    {
+      "name": "displayIndex",
+      "description": "Index of display that the event belongs to."
+    },
+    {
+      "name": "functionKey",
+      "description": "Is the current keypress a function key? (Read Only)"
+    },
+    {
+      "name": "isKey",
+      "description": "Is this event a keyboard event? (Read Only)"
+    },
+    {
+      "name": "isMouse",
+      "description": "Is this event a mouse event? (Read Only)"
+    },
+    {
+      "name": "keyCode",
+      "description": "The raw key code for keyboard events."
+    },
+    {
+      "name": "modifiers",
+      "description": "Which modifier keys are held down."
+    },
+    {
+      "name": "mousePosition",
+      "description": "The mouse position."
+    },
+    {
+      "name": "numeric",
+      "description": "Is the current keypress on the numeric keyboard? (Read Only)"
+    },
+    {
+      "name": "penStatus",
+      "description": "Specifies the state of the pen. For example, whether the pen is in contact with the screen or tablet, whether the pen is inverted, and whether buttons are pressed."
+    },
+    {
+      "name": "pointerType",
+      "description": "The type of pointer that created this event (for example, mouse, touch screen, pen)."
+    },
+    {
+      "name": "pressure",
+      "description": "How hard pen pressure is applied, normalized between 0 (no pressure) and 1 (maximum pressure)."
+    }
+  ]
+}

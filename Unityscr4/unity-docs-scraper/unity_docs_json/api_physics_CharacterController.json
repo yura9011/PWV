@@ -1,0 +1,56 @@
+{
+  "name": "api_physics_CharacterController",
+  "type": "api",
+  "description": "A CharacterController allows you to easily do movement constrained by collisions without having to deal with a rigidbody.",
+  "content": "// Unity Class: CharacterController\n// Documentation: https://docs.unity3d.com/ScriptReference/CharacterController.html\n\n// Description: A CharacterController allows you to easily do movement constrained by collisions without having to deal with a rigidbody.\n\n// Properties:\n// - center: The center of the character's capsule relative to the transform's position.\n// - collisionFlags: What part of the capsule collided with the environment during the last CharacterController.Move call.\n// - detectCollisions: Determines whether other rigidbodies or character controllers collide with this character controller (by default this is always enabled).\n// - enableOverlapRecovery: Enables or disables overlap recovery. Used to depenetrate character controllers from static objects when an overlap is detected.\n// - height: The height of the character's capsule.\n// - isGrounded: Was the CharacterController touching the ground during the last move?\n// - minMoveDistance: Gets or sets the minimum move distance of the character controller.\n// - radius: The radius of the character's capsule.\n// - skinWidth: The character's collision skin width.\n// - slopeLimit: The character controllers slope limit in degrees.\n// - stepOffset: The character controllers step offset in meters.\n// - velocity: The current relative velocity of the Character (see notes).\n\n// Methods:\n// - Move(): Supplies the movement of a GameObject with an attached CharacterController component.\n// - SimpleMove(): Moves the character with speed.\n\n// Pseudo-code representation of CharacterController\npublic class CharacterController {\n    public var center; // The center of the character's capsule relative to the transform's position.\n    public var collisionFlags; // What part of the capsule collided with the environment during the last CharacterController.Move call.\n    public var detectCollisions; // Determines whether other rigidbodies or character controllers collide with this character controller (by default this is always enabled).\n    public var enableOverlapRecovery; // Enables or disables overlap recovery. Used to depenetrate character controllers from static objects when an overlap is detected.\n    public var height; // The height of the character's capsule.\n    public var isGrounded; // Was the CharacterController touching the ground during the last move?\n    public var minMoveDistance; // Gets or sets the minimum move distance of the character controller.\n    public var radius; // The radius of the character's capsule.\n    public var skinWidth; // The character's collision skin width.\n    public var slopeLimit; // The character controllers slope limit in degrees.\n    public var stepOffset; // The character controllers step offset in meters.\n    public var velocity; // The current relative velocity of the Character (see notes).\n    public void Move(); // Supplies the movement of a GameObject with an attached CharacterController component.\n    public void SimpleMove(); // Moves the character with speed.\n}",
+  "properties": [
+    {
+      "name": "center",
+      "description": "The center of the character's capsule relative to the transform's position."
+    },
+    {
+      "name": "collisionFlags",
+      "description": "What part of the capsule collided with the environment during the last CharacterController.Move call."
+    },
+    {
+      "name": "detectCollisions",
+      "description": "Determines whether other rigidbodies or character controllers collide with this character controller (by default this is always enabled)."
+    },
+    {
+      "name": "enableOverlapRecovery",
+      "description": "Enables or disables overlap recovery. Used to depenetrate character controllers from static objects when an overlap is detected."
+    },
+    {
+      "name": "height",
+      "description": "The height of the character's capsule."
+    },
+    {
+      "name": "isGrounded",
+      "description": "Was the CharacterController touching the ground during the last move?"
+    },
+    {
+      "name": "minMoveDistance",
+      "description": "Gets or sets the minimum move distance of the character controller."
+    },
+    {
+      "name": "radius",
+      "description": "The radius of the character's capsule."
+    },
+    {
+      "name": "skinWidth",
+      "description": "The character's collision skin width."
+    },
+    {
+      "name": "slopeLimit",
+      "description": "The character controllers slope limit in degrees."
+    },
+    {
+      "name": "stepOffset",
+      "description": "The character controllers step offset in meters."
+    },
+    {
+      "name": "velocity",
+      "description": "The current relative velocity of the Character (see notes)."
+    }
+  ]
+}

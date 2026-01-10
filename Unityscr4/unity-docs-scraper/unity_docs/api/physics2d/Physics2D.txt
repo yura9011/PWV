@@ -1,0 +1,60 @@
+// Unity Class: Physics2D
+// Documentation: https://docs.unity3d.com/ScriptReference/Physics2D.html
+
+// Description: Provides utilities and global settings to manage and simulate 2D physics interactions, such as collision detection and raycasting.
+
+// Methods:
+// - BoxCast: Casts a box against Colliders in the Scene, returning the first Collider to contact with it.
+// - BoxCastAll: Casts a box against Colliders in the Scene, returning all Colliders that contact with it.
+// - CapsuleCast: Casts a capsule against Colliders in the Scene, returning the first Collider to contact with it.
+// - CapsuleCastAll: Casts a capsule against Colliders in the Scene, returning all Colliders that contact with it.
+// - CircleCast: Casts a circle against Colliders in the Scene, returning the first Collider to contact with it.
+// - CircleCastAll: Casts a circle against Colliders in the Scene, returning all Colliders that contact with it.
+// - ClosestPoint: Returns a point on the perimeter of the Collider that is closest to the specified position.
+// - Distance: Calculates the minimum distance between two Colliders.
+// - GetContacts: Retrieves all Colliders in contact with the Collider.
+// - GetIgnoreCollision: Checks whether the collision detection system will ignore all collisions/triggers between collider1 and collider2 or not.
+// - GetIgnoreLayerCollision: Checks whether collisions between the specified layers be ignored or not.
+// - GetLayerCollisionMask: Get the collision layer mask that indicates which layer(s) the specified layer can collide with.
+// - GetRayIntersection: Cast a 3D ray against the 2D Colliders in the Scene.
+// - GetRayIntersectionAll: Cast a 3D ray against the 2D Colliders in the Scene.
+// - IgnoreCollision: Makes the collision detection system ignore all collisions/triggers between collider1 and collider2.
+// - IgnoreLayerCollision: Choose whether to detect or ignore collisions between a specified pair of layers.
+// - IsTouching: Checks whether the passed Colliders are in contact or not.
+// - IsTouchingLayers: Checks whether the Collider is touching any Colliders on the specified layerMask or not.
+// - Linecast: Casts a line segment against Colliders in the Scene.
+// - LinecastAll: Casts a line against Colliders in the Scene.
+// - OverlapArea: Checks if a Collider falls within a rectangular area.
+// - OverlapAreaAll: Get a list of all Colliders that fall within a rectangular area.
+// - OverlapBox: Checks if a Collider falls within a box area.
+// - OverlapBoxAll: Get a list of all Colliders that fall within a box area.
+// - OverlapCapsule: Checks if a Collider falls within a capsule area.
+// - OverlapCapsuleAll: Get a list of all Colliders that fall within a capsule area.
+// - OverlapCircle: Checks if a Collider falls within a circular area.
+// - OverlapCircleAll: Get a list of all Colliders that fall within a circular area.
+// - OverlapCollider: Gets a list of all Colliders that overlap the given Collider.
+// - OverlapPoint: Checks if a Collider overlaps a point in space.
+// - OverlapPointAll: Get a list of all Colliders that overlap a point in space.
+// - Raycast: Casts a ray against Colliders in the Scene.
+// - RaycastAll: Casts a ray against Colliders in the Scene, returning all Colliders that contact with it.
+// - SetLayerCollisionMask: Set the collision layer mask that indicates which layer(s) the specified layer can collide with.
+// - Simulate: Simulate physics in the default physics scene.
+// - SyncTransforms: Synchronizes.
+
+public class Physics2D {
+    public void BoxCast(); // Casts a box against Colliders in the Scene, returning the first Collider to cont
+    public void BoxCastAll(); // Casts a box against Colliders in the Scene, returning all Colliders that contact
+    public void CapsuleCast(); // Casts a capsule against Colliders in the Scene, returning the first Collider to 
+    public void CapsuleCastAll(); // Casts a capsule against Colliders in the Scene, returning all Colliders that con
+    public void CircleCast(); // Casts a circle against Colliders in the Scene, returning the first Collider to c
+    public void CircleCastAll(); // Casts a circle against Colliders in the Scene, returning all Colliders that cont
+    public void ClosestPoint(); // Returns a point on the perimeter of the Collider that is closest to the specifie
+    public void Distance(); // Calculates the minimum distance between two Colliders.
+    public void GetContacts(); // Retrieves all Colliders in contact with the Collider.
+    public void GetIgnoreCollision(); // Checks whether the collision detection system will ignore all collisions/trigger
+    public void GetIgnoreLayerCollision(); // Checks whether collisions between the specified layers be ignored or not.
+    public void GetLayerCollisionMask(); // Get the collision layer mask that indicates which layer(s) the specified layer c
+    public void GetRayIntersection(); // Cast a 3D ray against the 2D Colliders in the Scene.
+    public void GetRayIntersectionAll(); // Cast a 3D ray against the 2D Colliders in the Scene.
+    public void IgnoreCollision(); // Makes the collision detection system ignore all collisions/triggers between coll
+}

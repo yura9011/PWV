@@ -1,0 +1,59 @@
+// Unity Class: AnimatorControllerParameter
+// Documentation: https://docs.unity3d.com/ScriptReference/AnimatorControllerParameter.html
+
+// Description: Used to communicate between scripting and an AnimatorController.
+
+// Properties:
+// - defaultBool: The default bool value for the parameter.
+// - defaultFloat: The default float value for the parameter.
+// - defaultInt: The default int value for the parameter.
+// - name: The name of the parameter.
+// - nameHash: Returns the hash of the parameter based on its name.
+// - type: The type of the parameter.
+
+// Code Examples:
+// Example 1:
+//   using UnityEditor;
+//   using UnityEditor.Animations;
+//   using UnityEngine;
+//   
+//   // This example demonstrates how to create an AnimatorController with some default parameters.
+//   public static class AnimatorControllerParameterExample
+//   {
+//       [MenuItem("Example/Create Animator Controller With Default Parameters")]
+//       public static void CreateAnimatorControllerWithDefaultParameters()
+//       {
+//           // Create a new AnimatorController.
+//           var controller = AnimatorController.CreateAnimatorControllerAtPath("Assets/NewControllerWithParameters.controller");
+//   
+//           // Add a new parameter to the controller.
+//           var speedParameter = new AnimatorControllerParameter
+//           {
+//               name = "Speed",
+//               type = AnimatorControllerParameterType.Float
+//           };
+//           controller.AddParameter(speedParameter);
+//   
+//           // Add another parameter to the controller with a default value.
+//           var isGroundedParameter = new AnimatorControllerParameter
+//           {
+//               name = "IsGrounded",
+//               type = AnimatorControllerParameterType.Bool,
+//               defaultBool = true
+//           };
+//           controller.AddParameter(isGroundedParameter);
+//   
+//           // Save the controller.
+//           AssetDatabase.SaveAssetIfDirty(controller);
+//       }
+//   }
+
+// Pseudo-code representation of AnimatorControllerParameter
+public class AnimatorControllerParameter {
+    public var defaultBool; // The default bool value for the parameter.
+    public var defaultFloat; // The default float value for the parameter.
+    public var defaultInt; // The default int value for the parameter.
+    public var name; // The name of the parameter.
+    public var nameHash; // Returns the hash of the parameter based on its name.
+    public var type; // The type of the parameter.
+}

@@ -1,0 +1,50 @@
+// Unity Manual: Get started with programming in Unity
+// Section: Scripting
+// URL: https://docs.unity3d.com/Manual/scripting-get-started.html
+
+// Content:
+Programming in Unity
+Get started with programming in Unity
+Programming in Unity
+Introduction to programming in Unity
+Get started with programming in Unity
+Get started with programming in Unity. Create, name, and edit your first
+scripts
+A piece of code that allows you to create your own Components, trigger game events, modify Component properties over time and respond to user input in any way you like.
+More info
+See in
+Glossary
+and set up your development environment to write, test, and debug your Unity C# scripts effectively.
+Topic
+Description
+Introduction to scripting
+Understand the role of scripting in your project and how it works at a high level.
+Creating scripts
+Create scripts to add programmable functionality to your application.
+Naming scripts
+Name your scripts to help the compiler identify your classes. Use namespaces to logically organize your scripts and prevent class name conflicts.
+Inspecting scripts
+View and edit the fields of your C# scripts in the
+Inspector
+A Unity window that displays information about the currently selected GameObject, asset or project settings, allowing you to inspect and edit the values.
+More info
+See in
+Glossary
+window.
+Additional resources
+Environment and tools
+Object-oriented development
+Programming in Unity
+Introduction to programming in Unity
+Copyright ©2005-2026 Unity Technologies. All rights reserved. Built from 6000.3.5f1 (9e864d5a2e6f). Built on: 2026-01-09.
+Tutorials
+Community Answers
+Knowledge Base
+Forums
+Asset Store
+Terms of use
+Legal
+Privacy Policy
+Cookies
+Do Not Sell or Share My Personal Information
+Your Privacy Choices (Cookie Settings)

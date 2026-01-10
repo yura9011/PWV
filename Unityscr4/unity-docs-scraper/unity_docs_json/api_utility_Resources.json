@@ -1,0 +1,44 @@
+{
+  "name": "api_utility_Resources",
+  "type": "api",
+  "description": "The Resources class allows you to find and access objects including assets.",
+  "content": "// Unity Class: Resources\n// Documentation: https://docs.unity3d.com/ScriptReference/Resources.html\n\n// Description: The Resources class allows you to find and access objects including assets.\n\n// Methods:\n// - EntityIdsToObjectList: Translates an array of entity IDs to a list of Object references.\n// - EntityIdToObject: Translates an EntityId to an object reference.\n// - FindObjectsOfTypeAll: Returns a list of all objects of Type T.\n// - InstanceIDsToValidArray: Translates an array of instance IDs to an array of bools indicating whether a given instance ID from instanceIDs corresponds to a valid Object in memory. The Object could have been deleted or not loaded into memory yet.\n// - Load: Loads the asset of the requested type stored at path in a Resources folder.\n// - LoadAll: Loads all assets in a folder or file at path in a Resources folder.\n// - LoadAsync: Asynchronously loads an asset stored at path in a Resources folder.\n// - UnloadAsset: Unloads assetToUnload from memory.\n// - UnloadUnusedAssets: Unloads assets that are not used.\n\n// Code Examples:\n// Example 1:\n//   using UnityEngine;\n\n//   using System.Collections;public class ExampleClass : MonoBehaviour\n\n//   {\n\n//       void Start()\n\n//       {\n\n//           GameObject go = GameObject.CreatePrimitive(PrimitiveType.Plane);\n\n//           Renderer rend = go.GetComponent<Renderer>();\n\n//           rend.material.mainTexture = Resources.Load(\"glass\") as Texture;\n\n//       }\n\n//   }\n\npublic class Resources {\n    public void EntityIdsToObjectList(); // Translates an array of entity IDs to a list of Object references.\n    public void EntityIdToObject(); // Translates an EntityId to an object reference.\n    public void FindObjectsOfTypeAll(); // Returns a list of all objects of Type T.\n    public void InstanceIDsToValidArray(); // Translates an array of instance IDs to an array of bools indicating whether a gi\n    public void Load(); // Loads the asset of the requested type stored at path in a Resources folder.\n    public void LoadAll(); // Loads all assets in a folder or file at path in a Resources folder.\n    public void LoadAsync(); // Asynchronously loads an asset stored at path in a Resources folder.\n    public void UnloadAsset(); // Unloads assetToUnload from memory.\n    public void UnloadUnusedAssets(); // Unloads assets that are not used.\n}",
+  "properties": [
+    {
+      "name": "EntityIdsToObjectList",
+      "description": "Translates an array of entity IDs to a list of Object references."
+    },
+    {
+      "name": "EntityIdToObject",
+      "description": "Translates an EntityId to an object reference."
+    },
+    {
+      "name": "FindObjectsOfTypeAll",
+      "description": "Returns a list of all objects of Type T."
+    },
+    {
+      "name": "InstanceIDsToValidArray",
+      "description": "Translates an array of instance IDs to an array of bools indicating whether a given instance ID from instanceIDs corresponds to a valid Object in memory. The Object could have been deleted or not loaded into memory yet."
+    },
+    {
+      "name": "Load",
+      "description": "Loads the asset of the requested type stored at path in a Resources folder."
+    },
+    {
+      "name": "LoadAll",
+      "description": "Loads all assets in a folder or file at path in a Resources folder."
+    },
+    {
+      "name": "LoadAsync",
+      "description": "Asynchronously loads an asset stored at path in a Resources folder."
+    },
+    {
+      "name": "UnloadAsset",
+      "description": "Unloads assetToUnload from memory."
+    },
+    {
+      "name": "UnloadUnusedAssets",
+      "description": "Unloads assets that are not used."
+    }
+  ]
+}

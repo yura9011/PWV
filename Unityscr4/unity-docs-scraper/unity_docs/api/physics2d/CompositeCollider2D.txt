@@ -1,0 +1,51 @@
+// Unity Class: CompositeCollider2D
+// Documentation: https://docs.unity3d.com/ScriptReference/CompositeCollider2D.html
+
+// Description: A Collider that can merge other Colliders together.
+
+// Properties:
+// - edgeRadius: Controls the radius of all edges created by the Collider.
+// - generationType: Specifies when to generate the Composite Collider geometry.
+// - geometryType: Specifies the type of geometry the Composite Collider should generate.
+// - offsetDistance: Vertices are offset by this distance when compositing multiple physic shapes. Any vertices between s
+// - pathCount: The number of paths in the Collider.
+// - pointCount: Gets the total number of points in all the paths within the Collider.
+// - useDelaunayMesh: When the value is true, the Collider uses an additional Delaunay triangulation step to produce the C
+// - vertexDistance: Controls the minimum distance allowed between generated vertices.
+
+// Methods:
+// - GenerateGeometry: Regenerates the Composite Collider geometry.
+// - GetCompositedColliders: When any Collider2D is using any composite operation other than Collider2D.CompositeOperation.None t
+// - GetPath: Gets a path from the Collider by its index.
+// - GetPathPointCount: Gets the number of points in the specified path from the Collider by its index.
+// - Destroy: Removes a GameObject, component, or asset.
+// - DestroyImmediate: Destroys the specified object immediately. Use with caution and in Edit mode only.
+// - DontDestroyOnLoad: Do not destroy the target Object when loading a new Scene.
+// - FindAnyObjectByType: Retrieves any active loaded object of Type type.
+// - FindFirstObjectByType: Retrieves the first active loaded object of Type type.
+// - FindObjectsByType: Retrieves a list of all loaded objects of Type type.
+// - Instantiate: Clones the object original and returns the clone.
+// - InstantiateAsync: Captures a snapshot of the original object (that must be related to some GameObject) and returns the
+
+public class CompositeCollider2D {
+    public var edgeRadius;
+    public var generationType;
+    public var geometryType;
+    public var offsetDistance;
+    public var pathCount;
+    public var pointCount;
+    public var useDelaunayMesh;
+    public var vertexDistance;
+    public void GenerateGeometry();
+    public void GetCompositedColliders();
+    public void GetPath();
+    public void GetPathPointCount();
+    public void Destroy();
+    public void DestroyImmediate();
+    public void DontDestroyOnLoad();
+    public void FindAnyObjectByType();
+    public void FindFirstObjectByType();
+    public void FindObjectsByType();
+    public void Instantiate();
+    public void InstantiateAsync();
+}

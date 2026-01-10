@@ -1,0 +1,88 @@
+{
+  "name": "api_editor_Handles",
+  "type": "api",
+  "description": "Custom 3D GUI controls and drawing in the Scene view.",
+  "content": "// Unity Class: Handles\n// Documentation: https://docs.unity3d.com/ScriptReference/Handles.html\n\n// Description: Custom 3D GUI controls and drawing in the Scene view.\n\n// Methods:\n// - ArrowHandleCap: Draw an arrow like those used by the move tool.\n// - BeginGUI: Begin a 2D GUI block inside the 3D handle GUI.\n// - Button: Make a 3D Button.\n// - CircleHandleCap: Draw a circle handle. Pass this into handle functions.\n// - ClearCamera: Clears the camera.\n// - ConeHandleCap: Draw a cone handle. Pass this into handle functions.\n// - CubeHandleCap: Draw a cube handle. Pass this into handle functions.\n// - CylinderHandleCap: Draw a cylinder handle. Pass this into handle functions.\n// - Disc: Make a 3D disc that can be dragged with the mouse.\n// - DotHandleCap: Draw a dot handle. Pass this into handle functions.\n// - DrawAAConvexPolygon: Draw anti-aliased convex polygon specified with point array.\n// - DrawAAPolyLine: Draw anti-aliased line specified with point array and width.\n// - DrawBezier: Draw textured bezier line through start and end points with the given tangents.\n// - DrawCamera: Draws a camera inside a rectangle.\n// - DrawDottedLine: Draw a dotted line from p1 to p2.\n// - DrawDottedLines: Draw a list of dotted line segments.\n// - DrawGizmos: Draw the Gizmos for the specified camera.\n// - DrawLine: Draws a line from p1 to p2.\n// - DrawLines: Draw a list of line segments.\n// - DrawOutline: Draws an outline around the specified GameObjects in the Scene View.\n// - DrawPolyLine: Draw a line going through the list of points.\n// - DrawSelectionFrame: Creates a square at a position and rotation with a specified size.\n// - DrawSolidArc: Draw a circular sector (pie piece) in 3D space.\n// - DrawSolidDisc: Draw a solid flat disc in 3D space.\n// - DrawSolidRectangleWithOutline: Draw a solid outlined rectangle in 3D space.\n// - DrawTexture3DSDF: Draws a 3D texture using Signed Distance Field rendering mode in 3D space.\n// - DrawTexture3DSlice: Draws a 3D texture using Slice rendering mode in 3D space.\n// - DrawTexture3DVolume: Draws a 3D texture using Volume rendering mode in 3D space.\n// - DrawWireArc: Draws a circular arc in 3D space.\n// - DrawWireCube: Draw a wireframe box with center and size.\n// - DrawWireDisc: Draws the outline of a flat disc in 3D space.\n// - EndGUI: End a 2D GUI block and get back to the 3D handle GUI.\n// - FreeMoveHandle: Make an unconstrained movement handle.\n// - FreeRotateHandle: Make an unconstrained rotation handle.\n// - GetMainGameViewSize: Get the width and height of the main game view.\n// - Label: Creates a text label for a handle that is positioned in 3D space.\n// - MakeBezierPoints: Retuns an array of points to representing the bezier curve.\n// - PositionHandle: Make a position handle.\n// - RadiusHandle: Make a Scene view radius handle.\n// - RectangleHandleCap: Draw a rectangle handle. Pass this into handle functions.\n// - RotationHandle: Make a Scene view rotation handle.\n// - ScaleHandle: Make a Scene view scale handle.\n// - ScaleSlider: Make a directional scale slider.\n// - ScaleValueHandle: Make a 3D handle that scales a single float.\n// - SetCamera: Set the current camera so all Handles and Gizmos are draw with its settings.\n// - ShouldRenderGizmos: Determines whether or not to draw Gizmos.\n// - Slider: Make a 3D slider that moves along one axis.\n// - Slider2D: Make a 3D slider that moves along a plane defined by two axes.\n// - SnapToGrid: Rounds each Transform.position or Vector3 to the closest multiple of EditorSnapSettings.gridSize.\n// - SnapValue: Rounds value to the closest multiple of snap if snapping is active. Note that snap can only be positive.\n// - SphereHandleCap: Draw a sphere handle. Pass this into handle functions.\n// - TransformHandle: Creates a transform handle.\n\n// Code Examples:\n// Example 1:\n//   using UnityEngine;\n\n//   using UnityEditor;\n\n//   public class ExampleScript : MonoBehaviour\n\n//   {\n\n//       public float value = 7.0f;\n\n//   }// A tiny custom editor for ExampleScript component\n\n//   [CustomEditor(typeof(ExampleScript))]\n\n//   public class ExampleEditor : Editor\n\n//   {\n\n//       // Custom in-scene UI for when ExampleScript\n\n//       // component is selected.\n\n//       public void OnSceneGUI()\n\n//       {\n\n//           var t = target as ExampleScript;\n\n//           var tr = t.transform;\n\n//           var pos = tr.position;\n\n//           // display an orange disc where the object is\n\n//           var color = new Color(1, 0.8f, 0.4f, 1);\n\n//           Handles.color = color;\n\n//           Handles.DrawWireDisc(pos, tr.up, 1.0f);\n\n\npublic class Handles {\n    public void ArrowHandleCap(); // Draw an arrow like those used by the move tool.\n    public void BeginGUI(); // Begin a 2D GUI block inside the 3D handle GUI.\n    public void Button(); // Make a 3D Button.\n    public void CircleHandleCap(); // Draw a circle handle. Pass this into handle functions.\n    public void ClearCamera(); // Clears the camera.\n    public void ConeHandleCap(); // Draw a cone handle. Pass this into handle functions.\n    public void CubeHandleCap(); // Draw a cube handle. Pass this into handle functions.\n    public void CylinderHandleCap(); // Draw a cylinder handle. Pass this into handle functions.\n    public void Disc(); // Make a 3D disc that can be dragged with the mouse.\n    public void DotHandleCap(); // Draw a dot handle. Pass this into handle functions.\n    public void DrawAAConvexPolygon(); // Draw anti-aliased convex polygon specified with point array.\n    public void DrawAAPolyLine(); // Draw anti-aliased line specified with point array and width.\n    public void DrawBezier(); // Draw textured bezier line through start and end points with the given tangents.\n    public void DrawCamera(); // Draws a camera inside a rectangle.\n    public void DrawDottedLine(); // Draw a dotted line from p1 to p2.\n}",
+  "properties": [
+    {
+      "name": "ArrowHandleCap",
+      "description": "Draw an arrow like those used by the move tool."
+    },
+    {
+      "name": "BeginGUI",
+      "description": "Begin a 2D GUI block inside the 3D handle GUI."
+    },
+    {
+      "name": "Button",
+      "description": "Make a 3D Button."
+    },
+    {
+      "name": "CircleHandleCap",
+      "description": "Draw a circle handle. Pass this into handle functions."
+    },
+    {
+      "name": "ClearCamera",
+      "description": "Clears the camera."
+    },
+    {
+      "name": "ConeHandleCap",
+      "description": "Draw a cone handle. Pass this into handle functions."
+    },
+    {
+      "name": "CubeHandleCap",
+      "description": "Draw a cube handle. Pass this into handle functions."
+    },
+    {
+      "name": "CylinderHandleCap",
+      "description": "Draw a cylinder handle. Pass this into handle functions."
+    },
+    {
+      "name": "Disc",
+      "description": "Make a 3D disc that can be dragged with the mouse."
+    },
+    {
+      "name": "DotHandleCap",
+      "description": "Draw a dot handle. Pass this into handle functions."
+    },
+    {
+      "name": "DrawAAConvexPolygon",
+      "description": "Draw anti-aliased convex polygon specified with point array."
+    },
+    {
+      "name": "DrawAAPolyLine",
+      "description": "Draw anti-aliased line specified with point array and width."
+    },
+    {
+      "name": "DrawBezier",
+      "description": "Draw textured bezier line through start and end points with the given tangents."
+    },
+    {
+      "name": "DrawCamera",
+      "description": "Draws a camera inside a rectangle."
+    },
+    {
+      "name": "DrawDottedLine",
+      "description": "Draw a dotted line from p1 to p2."
+    },
+    {
+      "name": "DrawDottedLines",
+      "description": "Draw a list of dotted line segments."
+    },
+    {
+      "name": "DrawGizmos",
+      "description": "Draw the Gizmos for the specified camera."
+    },
+    {
+      "name": "DrawLine",
+      "description": "Draws a line from p1 to p2."
+    },
+    {
+      "name": "DrawLines",
+      "description": "Draw a list of line segments."
+    },
+    {
+      "name": "DrawOutline",
+      "description": "Draws an outline around the specified GameObjects in the Scene View."
+    }
+  ]
+}

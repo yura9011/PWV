@@ -1,0 +1,32 @@
+{
+  "name": "api_rendering_Shader",
+  "type": "api",
+  "description": "Shader scripts used for all rendering.",
+  "content": "// Unity Class: Shader\n// Documentation: https://docs.unity3d.com/ScriptReference/Shader.html\n\n// Description: Shader scripts used for all rendering.\n\n// Properties:\n// - isSupported: Can this shader run on the end-users graphics card? (Read Only)\n// - keywordSpace: The local keyword space of this shader.\n// - maximumLOD: Shader LOD level for this shader.\n// - passCount: Returns the number of shader passes on the active SubShader.\n// - renderQueue: The default render queue for this shader. (Read Only)\n// - subshaderCount: Returns the number of SubShaders in this shader.\n\n// Methods:\n// - FindPassTagValue(): Searches for the tag specified by tagName on the shader's active SubShader and returns the value of the tag.\n// - FindPropertyIndex(): Finds the index of a shader property by its name.\n// - FindSubshaderTagValue(): Searches for the tag specified by tagName on the SubShader specified by subshaderIndex and returns the value of the tag.\n// - FindTextureStack(): Find the name of a texture stack a texture belongs too.\n// - GetDependency(): Returns the dependency shader.\n// - GetPassCountInSubshader(): Returns the number of passes in the given SubShader.\n// - GetPropertyAttributes(): Returns an array of strings containing attributes of the shader property at the specified index.\n// - GetPropertyCount(): Returns the number of properties in this Shader.\n// - GetPropertyDefaultFloatValue(): Returns the default float value of the shader property at the specified index.\n// - GetPropertyDefaultIntValue(): Returns the default int value of the shader property at the specified index.\n// - GetPropertyDefaultVectorValue(): Returns the default Vector4 value of the shader property at the specified index.\n// - GetPropertyDescription(): Returns the description string of the shader property at the specified index.\n// - GetPropertyFlags(): Returns the ShaderPropertyFlags of the shader property at the specified index.\n// - GetPropertyName(): Returns the name of the shader property at the specified index.\n// - GetPropertyNameId(): Returns the nameId of the shader property at the specified index.\n// - GetPropertyRangeLimits(): Returns the min and max limits for a Range property at the specified index.\n// - GetPropertyTextureDefaultName(): Returns the default Texture name of a Texture shader property at the specified index.\n// - GetPropertyTextureDimension(): Returns the TextureDimension of a Texture shader property at the specified index.\n// - GetPropertyType(): Returns the ShaderPropertyType of the property at the specified index.\n\n// Pseudo-code representation of Shader\npublic class Shader {\n    public var isSupported; // Can this shader run on the end-users graphics card? (Read Only)\n    public var keywordSpace; // The local keyword space of this shader.\n    public var maximumLOD; // Shader LOD level for this shader.\n    public var passCount; // Returns the number of shader passes on the active SubShader.\n    public var renderQueue; // The default render queue for this shader. (Read Only)\n    public var subshaderCount; // Returns the number of SubShaders in this shader.\n    public void FindPassTagValue(); // Searches for the tag specified by tagName on the shader's active SubShader and returns the value of the tag.\n    public void FindPropertyIndex(); // Finds the index of a shader property by its name.\n    public void FindSubshaderTagValue(); // Searches for the tag specified by tagName on the SubShader specified by subshaderIndex and returns the value of the tag.\n    public void FindTextureStack(); // Find the name of a texture stack a texture belongs too.\n    public void GetDependency(); // Returns the dependency shader.\n    public void GetPassCountInSubshader(); // Returns the number of passes in the given SubShader.\n    public void GetPropertyAttributes(); // Returns an array of strings containing attributes of the shader property at the specified index.\n    public void GetPropertyCount(); // Returns the number of properties in this Shader.\n    public void GetPropertyDefaultFloatValue(); // Returns the default float value of the shader property at the specified index.\n    public void GetPropertyDefaultIntValue(); // Returns the default int value of the shader property at the specified index.\n    public void GetPropertyDefaultVectorValue(); // Returns the default Vector4 value of the shader property at the specified index.\n    public void GetPropertyDescription(); // Returns the description string of the shader property at the specified index.\n    public void GetPropertyFlags(); // Returns the ShaderPropertyFlags of the shader property at the specified index.\n    public void GetPropertyName(); // Returns the name of the shader property at the specified index.\n    public void GetPropertyNameId(); // Returns the nameId of the shader property at the specified index.\n    public void GetPropertyRangeLimits(); // Returns the min and max limits for a Range property at the specified index.\n    public void GetPropertyTextureDefaultName(); // Returns the default Texture name of a Texture shader property at the specified index.\n    public void GetPropertyTextureDimension(); // Returns the TextureDimension of a Texture shader property at the specified index.\n    public void GetPropertyType(); // Returns the ShaderPropertyType of the property at the specified index.\n}",
+  "properties": [
+    {
+      "name": "isSupported",
+      "description": "Can this shader run on the end-users graphics card? (Read Only)"
+    },
+    {
+      "name": "keywordSpace",
+      "description": "The local keyword space of this shader."
+    },
+    {
+      "name": "maximumLOD",
+      "description": "Shader LOD level for this shader."
+    },
+    {
+      "name": "passCount",
+      "description": "Returns the number of shader passes on the active SubShader."
+    },
+    {
+      "name": "renderQueue",
+      "description": "The default render queue for this shader. (Read Only)"
+    },
+    {
+      "name": "subshaderCount",
+      "description": "Returns the number of SubShaders in this shader."
+    }
+  ]
+}

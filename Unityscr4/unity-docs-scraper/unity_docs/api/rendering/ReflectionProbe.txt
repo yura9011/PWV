@@ -1,0 +1,60 @@
+// Unity Class: ReflectionProbe
+// Documentation: https://docs.unity3d.com/ScriptReference/ReflectionProbe.html
+
+// Description: The reflection probe is used to capture the surroundings into a texture which is passed to the shaders and used for reflections.
+
+// Properties:
+// - backgroundColor: The color with which the texture of reflection probe will be cleared.
+// - bakedTexture: Reference to the baked texture of the reflection probe's surrounding.
+// - blendDistance: Distance around probe used for blending (used in deferred probes).
+// - bounds: The probe's world space axis-aligned bounding box in which the probe can contribute to reflections (
+// - boxProjection: Should this reflection probe use box projection?
+// - center: The center of the probe's bounding box in which the probe can contribute to reflections. The center 
+// - clearFlags: How the reflection probe clears the background.
+// - cullingMask: This is used to render parts of the reflecion probe's surrounding selectively.
+// - customBakedTexture: Reference to the baked texture of the reflection probe's surrounding. Use this to assign custom refl
+// - farClipPlane: The far clipping plane distance when rendering the probe.
+// - hdr: Should this reflection probe use HDR rendering?
+// - importance: Reflection probe importance.
+// - intensity: The intensity modifier that is applied to the texture of reflection probe in the shader.
+// - mode: Should reflection probe texture be generated in the Editor (ReflectionProbeMode.Baked) or should pro
+// - nearClipPlane: The near clipping plane distance when rendering the probe.
+// - realtimeTexture: Reference to the real-time texture of the reflection probe's surroundings. Use this to assign a Rend
+// - refreshMode: Sets the way the probe will refresh.Additional resources: ReflectionProbeRefreshMode.
+// - renderDynamicObjects: Specifies whether Unity should render non-static GameObjects into the Reflection Probe. If you set t
+// - resolution: Resolution of the underlying reflection texture in pixels.
+// - shadowDistance: Shadow drawing distance when rendering the probe.
+// - size: The size of the probe's bounding box in which the probe can contribute to reflections. The size is i
+// - texture: Texture which is passed to the shader of the objects in the vicinity of the reflection probe (Read O
+// - textureHDRDecodeValues: HDR decode values of the reflection probe texture.
+// - timeSlicingMode: Sets this probe time-slicing modeAdditional resources: ReflectionProbeTimeSlicingMode.
+
+// Methods:
+// - IsFinishedRendering: Checks if a probe has finished a time-sliced render.
+// - RenderProbe: Refreshes the probe's cubemap.
+// - Reset: Revert all ReflectionProbe parameters to default.
+// - BlendCubemap: Utility method to blend 2 cubemaps into a target render texture.
+// - UpdateCachedState: Updates the culling system with the ReflectionProbe's current state. This ensures that Unity correct
+
+public class ReflectionProbe {
+    public var backgroundColor;
+    public var bakedTexture;
+    public var blendDistance;
+    public var bounds;
+    public var boxProjection;
+    public var center;
+    public var clearFlags;
+    public var cullingMask;
+    public var customBakedTexture;
+    public var farClipPlane;
+    public var hdr;
+    public var importance;
+    public var intensity;
+    public var mode;
+    public var nearClipPlane;
+    public void IsFinishedRendering();
+    public void RenderProbe();
+    public void Reset();
+    public void BlendCubemap();
+    public void UpdateCachedState();
+}

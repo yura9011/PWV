@@ -1,0 +1,24 @@
+{
+  "name": "api_ui_CanvasGroup",
+  "type": "api",
+  "description": "A Canvas placable element that can be used to modify children Alpha, Raycasting, Enabled state.",
+  "content": "// Unity Class: CanvasGroup\n// Documentation: https://docs.unity3d.com/ScriptReference/CanvasGroup.html\n\n// Description: A Canvas placable element that can be used to modify children Alpha, Raycasting, Enabled state.\n\n// Properties:\n// - alpha: Set the alpha of the group.\n// - blocksRaycasts: Does this group block raycasting (allow collision).\n// - ignoreParentGroups: Should the group ignore parent groups?\n// - interactable: Is the group interactable (are the elements beneath the group enabled).\n\n// Methods:\n// - IsRaycastLocationValid(): Returns true if the Group allows raycasts.\n\n// Pseudo-code representation of CanvasGroup\npublic class CanvasGroup {\n    public var alpha; // Set the alpha of the group.\n    public var blocksRaycasts; // Does this group block raycasting (allow collision).\n    public var ignoreParentGroups; // Should the group ignore parent groups?\n    public var interactable; // Is the group interactable (are the elements beneath the group enabled).\n    public void IsRaycastLocationValid(); // Returns true if the Group allows raycasts.\n}",
+  "properties": [
+    {
+      "name": "alpha",
+      "description": "Set the alpha of the group."
+    },
+    {
+      "name": "blocksRaycasts",
+      "description": "Does this group block raycasting (allow collision)."
+    },
+    {
+      "name": "ignoreParentGroups",
+      "description": "Should the group ignore parent groups?"
+    },
+    {
+      "name": "interactable",
+      "description": "Is the group interactable (are the elements beneath the group enabled)."
+    }
+  ]
+}

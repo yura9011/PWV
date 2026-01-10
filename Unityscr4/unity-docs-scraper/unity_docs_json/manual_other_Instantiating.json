@@ -1,0 +1,7 @@
+{
+  "name": "manual_other_Instantiating",
+  "type": "manual",
+  "description": "",
+  "content": "// Unity Manual: Prefabs_Instantiating\n// URL: https://docs.unity3d.com/Manual/InstantiatingPrefabs.html\n\nGameObjects\nPrefabs\nInstantiating prefabs at runtime\nRevert a prefab instance to a GameObject\nIntroduction to instantiating prefabs\nInstantiating prefabs at runtime\nYou can use\nprefabs\nAn asset type that allows you to store a GameObject complete with components and properties. The prefab acts as a template from which you can create new object instances in the scene.\nMore info\nSee in\nGlossary\nto instantiate complicated\nGameObjects\nThe fundamental object in Unity scenes, which can represent characters, props, scenery, cameras, waypoints, and more. A GameObject’s functionality is defined by the Components attached to it.\nMore info\nSee in\nGlossary\nor collections of GameObjects at runtime.\nTopic\nDescription\nIntroduction to instantiating prefabs\nIntroductory context and common scenarios in which instantiating prefabs is useful.\nBuild a structure with prefabs\nUse prefabs to instantiate several copies of a block prefab to construct a wall.\nInstantiating projectiles and explosions\nUse prefabs to instantiate exploding projectiles.\nAdditional resources\nIntroduction to prefabs\nIntroduction to GameObjects\nRevert a prefab instance to a GameObject\nIntroduction to instantiating prefabs\n",
+  "properties": []
+}

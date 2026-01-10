@@ -1,0 +1,36 @@
+{
+  "name": "api_rendering_MeshRenderer",
+  "type": "api",
+  "description": "Renders the mesh from the MeshFilter component on the same GameObject.",
+  "content": "// Unity Class: MeshRenderer\n// Documentation: https://docs.unity3d.com/ScriptReference/MeshRenderer.html\n\n// Description: Renders the mesh from the MeshFilter component on the same GameObject.\n\n// Properties:\n// - additionalVertexStreams: Vertex attributes in this mesh will override or add attributes of the primary mesh in the MeshRenderer.\n// - enlightenVertexStream: Vertex attributes that override the primary mesh when the MeshRenderer uses lightmaps in the Realtime Global Illumination system.\n// - globalIlluminationMeshLod: Mesh LOD to use for Global Illumination.\n// - receiveGI: Determines how the object will receive global illumination. (Editor only)\n// - scaleInLightmap: Specifies the relative lightmap resolution of this object. (Editor only)\n// - stitchLightmapSeams: When enabled, seams in baked lightmaps will get smoothed. (Editor only)\n// - subMeshStartIndex: Index of the first sub-mesh to use from the Mesh associated with this MeshRenderer (Read Only).\n\n// Methods:\n// - GetShaderUserValue(): Returns the custom value assigned to this renderer.\n// - SetShaderUserValue(): Assign a custom value to this renderer.\n\n// Code Examples:\n// Example 1:\n//   using UnityEngine;\n\n//   public class PlaceRandomCubes : MonoBehaviour\n\n//   {\n\n//       void Start()\n\n//       {\n\n//           Mesh cubeMesh = Resources.GetBuiltinResource<Mesh>(\"Cube.fbx\");        for (int i = 0; i < 10; i++)\n\n//           {\n\n//               // Create a GameObject at a random position\n\n//               GameObject go = new GameObject();\n\n//               go.transform.position = Random.insideUnitSphere * 10;            // Add a MeshFilter to supply the mesh data\n\n//               MeshFilter filter = go.AddComponent<MeshFilter>();\n\n//               filter.sharedMesh = cubeMesh;            // Add a MeshRenderer to render the mesh, and assign a random color\n\n//               MeshRenderer meshRenderer = go.AddComponent<MeshRenderer>();\n\n//               meshRenderer.material.color = Random.ColorHSV();\n\n//           }\n\n//       }\n\n//   }\n\n// Pseudo-code representation of MeshRenderer\npublic class MeshRenderer {\n    public var additionalVertexStreams; // Vertex attributes in this mesh will override or add attributes of the primary mesh in the MeshRenderer.\n    public var enlightenVertexStream; // Vertex attributes that override the primary mesh when the MeshRenderer uses lightmaps in the Realtime Global Illumination system.\n    public var globalIlluminationMeshLod; // Mesh LOD to use for Global Illumination.\n    public var receiveGI; // Determines how the object will receive global illumination. (Editor only)\n    public var scaleInLightmap; // Specifies the relative lightmap resolution of this object. (Editor only)\n    public var stitchLightmapSeams; // When enabled, seams in baked lightmaps will get smoothed. (Editor only)\n    public var subMeshStartIndex; // Index of the first sub-mesh to use from the Mesh associated with this MeshRenderer (Read Only).\n    public void GetShaderUserValue(); // Returns the custom value assigned to this renderer.\n    public void SetShaderUserValue(); // Assign a custom value to this renderer.\n}",
+  "properties": [
+    {
+      "name": "additionalVertexStreams",
+      "description": "Vertex attributes in this mesh will override or add attributes of the primary mesh in the MeshRenderer."
+    },
+    {
+      "name": "enlightenVertexStream",
+      "description": "Vertex attributes that override the primary mesh when the MeshRenderer uses lightmaps in the Realtime Global Illumination system."
+    },
+    {
+      "name": "globalIlluminationMeshLod",
+      "description": "Mesh LOD to use for Global Illumination."
+    },
+    {
+      "name": "receiveGI",
+      "description": "Determines how the object will receive global illumination. (Editor only)"
+    },
+    {
+      "name": "scaleInLightmap",
+      "description": "Specifies the relative lightmap resolution of this object. (Editor only)"
+    },
+    {
+      "name": "stitchLightmapSeams",
+      "description": "When enabled, seams in baked lightmaps will get smoothed. (Editor only)"
+    },
+    {
+      "name": "subMeshStartIndex",
+      "description": "Index of the first sub-mesh to use from the Mesh associated with this MeshRenderer (Read Only)."
+    }
+  ]
+}

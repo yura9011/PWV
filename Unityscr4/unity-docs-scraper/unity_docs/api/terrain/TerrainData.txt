@@ -1,0 +1,120 @@
+// Unity Class: TerrainData
+// Documentation: https://docs.unity3d.com/ScriptReference/TerrainData.html
+
+// Description: The TerrainData class stores heightmaps, detail mesh positions, tree instances, and terrain texture alpha maps.
+
+// Properties:
+// - alphamapHeight: Height of the alpha map. (Read only.)
+// - alphamapLayers: Number of alpha map layers.
+// - alphamapResolution: The size of the alpha map in texels for either the width or the height.
+// - alphamapTextureCount: Returns the number of alphamap textures.
+// - alphamapTextures: Alpha map textures used by the Terrain. Used by Terrain Inspector for undo.
+// - alphamapWidth: Width of the alpha map.
+// - baseMapResolution: Resolution of the base map used for rendering far patches on the terrain.
+// - bounds: The local bounding box of the TerrainData object.
+// - detailHeight: The resolution of the detail data stored in TerrainData.
+// - detailPatchCount: The number of patches along a terrain tile edge. This is squared to make a grid of patches.
+// - detailPrototypes: Contains the detail texture/meshes that the Terrain has.
+// - detailResolution: Detail Resolution of the TerrainData.
+// - detailResolutionPerPatch: Detail Resolution of each patch. A larger value will decrease the number of batches used by detail objects.
+// - detailScatterMode: Additional resources: DetailScatterMode
+// - detailWidth: The resolution of the detail data stored in TerrainData.
+// - enableHolesTextureCompression: Enable the Terrain holes Texture compression.
+// - heightmapResolution: The size of the heightmap in texels for both the width and height. When setting the heightmap resolution, Unity clamps the value to one of 33, 65, 129, 257, 513, 1025, 2049, or 4097.
+// - heightmapScale: Returns a Vector3 where the x and z components are the size of each heightmap sample (i.e. the space between two neighboring heightmap samples), and the y component is the entire Terrain's height range in world space.
+// - heightmapTexture: Returns the heightmap texture.
+// - holesResolution: Returns the Terrain holes resolution for both the data and the Texture.
+// - holesTexture: Returns the Terrain holes Texture.
+// - maxDetailScatterPerRes: The maximum value of each sample in the detail map of the terrain data.
+// - size: The total size in world units of the terrain: width, height, and length.
+// - terrainLayers: Retrieves the terrain layers used by the current terrain.
+// - treeInstanceCount: Returns the number of tree instances.
+// - treeInstances: Contains the current trees placed in the terrain.
+// - treePrototypes: The list of TreePrototypes available in the inspector.
+// - wavingGrassAmount: Amount of waving grass in the terrain.
+// - wavingGrassSpeed: Speed of the waving grass.
+// - wavingGrassStrength: Strength of the waving grass in the terrain.
+// - wavingGrassTint: Color of the waving grass that the terrain has.
+
+// Methods:
+// - ComputeDetailCoverage: This function computes and returns the coverage (how many instances fit in a square unit) of a detail prototype, given its index.
+// - ComputeDetailInstanceTransforms: This function computes and returns an array of detail object transforms for the specified patch and the specified prototype. You can use this function to retrieve the exact same transform data the Unity engine uses for detail rendering.
+// - CopyActiveRenderTextureToHeightmap: Copies the specified part of the active RenderTexture to the Terrain heightmap texture.
+// - CopyActiveRenderTextureToTexture: Copies the specified part of the active RenderTexture to the Terrain texture.
+// - DirtyHeightmapRegion: Marks the specified part of the heightmap as dirty.
+// - DirtyTextureRegion: Marks the specified part of the Terrain texture as dirty.
+// - GetAlphamaps: Returns the alpha map at a position x, y given a width and height.
+// - GetAlphamapTexture: Returns the alphamap texture at the specified index.
+// - GetClampedDetailPatches: Returns an array of detail patches, which are each identified by X-Z coordinates. Detail objects in the patches are clamped to the maximum count.
+// - GetDetailLayer: Returns a 2D array of the detail object density (i.e. the number of detail objects for this layer) in the specific location.
+// - GetHeight: Calculates the height in world space units of a point on the heightmap. x and y are pixel coordinates in the heightmap, and the returned value does not take into account the heightmap's position.
+// - GetHeights: Gets an array of heightmap samples.
+// - GetHoles: Gets an array of Terrain holes samples.
+// - GetInterpolatedHeight: Gets an interpolated height at a point x,y. The x and y coordinates are clamped to [0, 1].
+// - GetInterpolatedHeights: Gets an array of terrain height values using the normalized x,y coordinates.
+// - GetInterpolatedNormal: Get an interpolated normal vector at a given location on the heightmap.
+// - GetMaximumHeightError: Returns an array of tesselation maximum height error values per renderable terrain patch. The returned array can be modified and passed to OverrideMaximumHeightError.
+// - GetPatchMinMaxHeights: Returns an array of min max height values for all the renderable patches in a terrain. The returned array can be modified and then passed to OverrideMinMaxPatchHeights.
+// - GetSteepness: Gets the gradient of the terrain at point (x,y). The gradient's value is always positive.
+// - GetSupportedLayers: Returns an array of all supported detail layer indices in the area.
+// - GetTreeInstance: Gets the tree instance at the specified index. It is used as a faster version of treeInstances[index] as this function doesn't create the entire tree instances array.
+// - IsHole: Gets whether a certain point at x,y is a hole.
+// - OverrideMaximumHeightError: Override the maximum tessellation height error with user provided values. Note that the overriden values get reset when the terrain resolution is changed and stays unchanged when the terrain heightmap is painted or changed via script.
+// - OverrideMinMaxPatchHeights: Override the minimum and maximum patch heights for every renderable terrain patch. Note that the overriden values get reset when the terrain resolution is changed and stays unchanged when the terrain heightmap is painted or changed via script.
+// - RefreshPrototypes: Reloads all the values of the available prototypes (ie, detail mesh assets) in the TerrainData Object.
+// - RemoveDetailPrototype: Removes the detail prototype at the specified index.
+// - SetAlphamaps: Assign all splat values in the given map area.
+// - SetBaseMapDirty: Marks the terrain data as dirty to trigger an update of the terrain basemap texture.
+// - SetDetailLayer: Sets the detail layer density map.
+// - SetDetailResolution: Sets the resolution of the detail map.
+// - SetDetailScatterMode: Sets the DetailScatterMode.
+// - SetHeights: Sets an array of heightmap samples.
+// - SetHeightsDelayLOD: Sets an array of heightmap samples.
+// - SetHoles: Sets an array of Terrain holes samples.
+// - SetHolesDelayLOD: Sets an array of Terrain holes samples.
+// - SetTerrainLayersRegisterUndo: This function sets the terrainLayers property, and in addition, registers the action to the Editor's undo stack.
+// - SetTreeInstance: Sets the tree instance with new parameters at the specified index. However, you cannot change TreeInstance.prototypeIndex and TreeInstance.position. If you change them, the method throws an ArgumentException.
+// - SetTreeInstances: Sets the Tree Instance array, and optionally snaps Trees onto the surface of the Terrain heightmap.
+// - SyncHeightmap: Performs synchronization queued by previous calls to CopyActiveRenderTextureToHeightmap and DirtyHeightmapRegion, which makes the height data and LOD data used for tessellation up to date.
+// - SyncTexture: Performs synchronization queued by previous calls to CopyActiveRenderTextureToTexture and DirtyTextureRegion, which makes CPU data of the Terrain textures up to date.
+// - Destroy: Removes a GameObject, component, or asset.
+// - DestroyImmediate: Destroys the specified object immediately. Use with caution and in Edit mode only.
+// - DontDestroyOnLoad: Do not destroy the target Object when loading a new Scene.
+// - FindAnyObjectByType: Retrieves any active loaded object of Type type.
+// - FindFirstObjectByType: Retrieves the first active loaded object of Type type.
+// - FindObjectsByType: Retrieves a list of all loaded objects of Type type.
+// - Instantiate: Clones the object original and returns the clone.
+// - InstantiateAsync: Captures a snapshot of the original object (that must be related to some GameObject) and returns the AsyncInstantiateOperation.
+
+public class TerrainData {
+    public var alphamapHeight; // Height of the alpha map. (Read only.)
+    public var alphamapLayers; // Number of alpha map layers.
+    public var alphamapResolution; // The size of the alpha map in texels for either the width or the height.
+    public var alphamapTextureCount; // Returns the number of alphamap textures.
+    public var alphamapTextures; // Alpha map textures used by the Terrain. Used by Terrain Inspector for undo.
+    public var alphamapWidth; // Width of the alpha map.
+    public var baseMapResolution; // Resolution of the base map used for rendering far patches on the terrain.
+    public var bounds; // The local bounding box of the TerrainData object.
+    public var detailHeight; // The resolution of the detail data stored in TerrainData.
+    public var detailPatchCount; // The number of patches along a terrain tile edge. This is squared to make a grid 
+    public var detailPrototypes; // Contains the detail texture/meshes that the Terrain has.
+    public var detailResolution; // Detail Resolution of the TerrainData.
+    public var detailResolutionPerPatch; // Detail Resolution of each patch. A larger value will decrease the number of batc
+    public var detailScatterMode; // Additional resources: DetailScatterMode
+    public var detailWidth; // The resolution of the detail data stored in TerrainData.
+    public void ComputeDetailCoverage(); // This function computes and returns the coverage (how many instances fit in a squ
+    public void ComputeDetailInstanceTransforms(); // This function computes and returns an array of detail object transforms for the 
+    public void CopyActiveRenderTextureToHeightmap(); // Copies the specified part of the active RenderTexture to the Terrain heightmap t
+    public void CopyActiveRenderTextureToTexture(); // Copies the specified part of the active RenderTexture to the Terrain texture.
+    public void DirtyHeightmapRegion(); // Marks the specified part of the heightmap as dirty.
+    public void DirtyTextureRegion(); // Marks the specified part of the Terrain texture as dirty.
+    public void GetAlphamaps(); // Returns the alpha map at a position x, y given a width and height.
+    public void GetAlphamapTexture(); // Returns the alphamap texture at the specified index.
+    public void GetClampedDetailPatches(); // Returns an array of detail patches, which are each identified by X-Z coordinates
+    public void GetDetailLayer(); // Returns a 2D array of the detail object density (i.e. the number of detail objec
+    public void GetHeight(); // Calculates the height in world space units of a point on the heightmap. x and y 
+    public void GetHeights(); // Gets an array of heightmap samples.
+    public void GetHoles(); // Gets an array of Terrain holes samples.
+    public void GetInterpolatedHeight(); // Gets an interpolated height at a point x,y. The x and y coordinates are clamped 
+    public void GetInterpolatedHeights(); // Gets an array of terrain height values using the normalized x,y coordinates.
+}

@@ -1,0 +1,39 @@
+// Unity Class: NavMesh
+// Documentation: https://docs.unity3d.com/ScriptReference/AI.NavMesh.html
+
+// Description: Singleton class to access the baked NavMesh.
+
+// Methods:
+// - AddLink: Adds a link to the NavMesh. The link is described by the NavMeshLinkData struct.
+// - AddNavMeshData: Adds the specified NavMeshData to the game.
+// - CalculatePath: Calculate a path between two points and store the resulting path.
+// - CalculateTriangulation: Calculates a triangulation of all the NavMeshes that are present in the scene at the time of the cal
+// - CreateSettings: Creates and returns a new entry of NavMesh build settings available for runtime NavMesh building.
+// - FindClosestEdge: Locate the closest NavMesh edge from a point on the NavMesh.
+// - GetAreaCost: Gets the cost for path finding over geometry of the area type.
+// - GetAreaFromName: Returns the area index for a named NavMesh area type.
+// - GetAreaNames: Get all the NavMesh area names.
+// - GetLinkOwner: Gets the object, if any, that is associated with the link instance.
+// - GetSettingsByID: Returns an existing entry of NavMesh build settings.
+// - GetSettingsByIndex: Returns an existing entry of NavMesh build settings by its ordered index.
+// - GetSettingsCount: Returns the number of registered NavMesh build settings.
+// - GetSettingsNameFromID: Returns the name associated with the NavMesh build settings matching the provided agent type ID.
+// - IsLinkActive: Determines whether the instance of the link can be used to calculate paths, and if NavMesh agents ca
+// - IsLinkOccupied: Determines whether or not a NavMesh agent is currently using this link.
+// - IsLinkValid: Determines whether the link instance is part of the current data used for navigation.
+// - Raycast: Trace a line between two points on the NavMesh.
+// - RemoveAllNavMeshData: Removes all NavMesh surfaces and links from the game.
+// - RemoveLink: Removes a link from the NavMesh.
+
+public class NavMesh {
+    public void AddLink();
+    public void AddNavMeshData();
+    public void CalculatePath();
+    public void CalculateTriangulation();
+    public void CreateSettings();
+    public void FindClosestEdge();
+    public void GetAreaCost();
+    public void GetAreaFromName();
+    public void GetAreaNames();
+    public void GetLinkOwner();
+}

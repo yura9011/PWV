@@ -1,0 +1,28 @@
+{
+  "name": "api_core_MonoBehaviour",
+  "type": "api",
+  "description": "MonoBehaviour is a base class that many Unity scripts derive from.",
+  "content": "// Unity Class: MonoBehaviour\n// Documentation: https://docs.unity3d.com/ScriptReference/MonoBehaviour.html\n\n// Description: MonoBehaviour is a base class that many Unity scripts derive from.\n\n// Properties:\n// - destroyCancellationToken: Cancellation token raised when the MonoBehaviour is destroyed (Read Only).\n// - didAwake: Returns a boolean value which represents if Awake was called.\n// - didStart: Returns a boolean value which represents if Start was called.\n// - runInEditMode: Allow a specific instance of a MonoBehaviour to run in edit mode (only available in the editor).\n// - useGUILayout: Disabling this lets you skip the GUI layout phase.\n\n// Methods:\n// - CancelInvoke(): Cancels all Invoke calls on this MonoBehaviour.\n// - Invoke(): Invokes the method methodName in time seconds.\n// - InvokeRepeating(): Invokes the specified method after a specified delay, then repeatedly at the specified rate.\n// - IsInvoking(): Is any invoke on methodName pending?\n// - StartCoroutine(): Starts a coroutine.\n// - StopAllCoroutines(): Stops all coroutines running on this MonoBehaviour.\n// - StopCoroutine(): Stops the first coroutine named methodName, or the coroutine stored in routine running on this behaviour.\n\n// Pseudo-code representation of MonoBehaviour\npublic class MonoBehaviour {\n    public var destroyCancellationToken; // Cancellation token raised when the MonoBehaviour is destroyed (Read Only).\n    public var didAwake; // Returns a boolean value which represents if Awake was called.\n    public var didStart; // Returns a boolean value which represents if Start was called.\n    public var runInEditMode; // Allow a specific instance of a MonoBehaviour to run in edit mode (only available in the editor).\n    public var useGUILayout; // Disabling this lets you skip the GUI layout phase.\n    public void CancelInvoke(); // Cancels all Invoke calls on this MonoBehaviour.\n    public void Invoke(); // Invokes the method methodName in time seconds.\n    public void InvokeRepeating(); // Invokes the specified method after a specified delay, then repeatedly at the specified rate.\n    public void IsInvoking(); // Is any invoke on methodName pending?\n    public void StartCoroutine(); // Starts a coroutine.\n    public void StopAllCoroutines(); // Stops all coroutines running on this MonoBehaviour.\n    public void StopCoroutine(); // Stops the first coroutine named methodName, or the coroutine stored in routine running on this behaviour.\n}",
+  "properties": [
+    {
+      "name": "destroyCancellationToken",
+      "description": "Cancellation token raised when the MonoBehaviour is destroyed (Read Only)."
+    },
+    {
+      "name": "didAwake",
+      "description": "Returns a boolean value which represents if Awake was called."
+    },
+    {
+      "name": "didStart",
+      "description": "Returns a boolean value which represents if Start was called."
+    },
+    {
+      "name": "runInEditMode",
+      "description": "Allow a specific instance of a MonoBehaviour to run in edit mode (only available in the editor)."
+    },
+    {
+      "name": "useGUILayout",
+      "description": "Disabling this lets you skip the GUI layout phase."
+    }
+  ]
+}

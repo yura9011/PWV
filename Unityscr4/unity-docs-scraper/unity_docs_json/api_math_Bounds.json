@@ -1,0 +1,28 @@
+{
+  "name": "api_math_Bounds",
+  "type": "api",
+  "description": "Represents an axis aligned bounding box.",
+  "content": "// Unity Class: Bounds\n// Documentation: https://docs.unity3d.com/ScriptReference/Bounds.html\n\n// Description: Represents an axis aligned bounding box.\n\n// Properties:\n// - center: The center of the bounding box.\n// - extents: The extents of the Bounding Box. This is always half of the size of the Bounds.\n// - max: The maximal point of the box. This is always equal to center+extents.\n// - min: The minimal point of the box. This is always equal to center-extents.\n// - size: The total size of the box. This is always twice as large as the extents.\n\n// Constructors:\n// - Bounds(): Creates a new Bounds.\n\n// Methods:\n// - ClosestPoint(): The closest point on the bounding box.\n// - Contains(): Is point contained in the bounding box?\n// - Encapsulate(): Grows the Bounds to include the point.\n// - Expand(): Expand the bounds by: size + (amount * 2) along each side.\n// - IntersectRay(): Does ray intersect this bounding box?\n// - Intersects(): Does another bounding box intersect with this bounding box?\n// - SetMinMax(): Sets the bounds to the min and max value of the box.\n// - SqrDistance(): The smallest squared distance between the point and this bounding box.\n// - ToString(): Returns a formatted string for the bounds.\n\n// Code Examples:\n// Example 1:\n//   using UnityEngine;public class BoundsVisualizer : MonoBehaviour\n\n//   {\n\n//       public Bounds bounds;    void Start()\n\n//       {\n\n//           // Example bounds setup if not assigned\n\n//           if (bounds.size == Vector3.zero)\n\n//               bounds = new Bounds(transform.position, Vector3.one);\n\n//       }    void Update()\n\n//       {\n\n//           DrawBounds(bounds, Color.red);\n\n//       }    void DrawBounds(Bounds b, Color color)\n\n//       {\n\n//           Vector3 min = b.min;\n\n//           Vector3 max = b.max;        Vector3[] corners = new Vector3[8];\n\n//           // Bottom\n\n//           corners[0] = new Vector3(min.x, min.y, min.z);\n\n//           corners[1] = new Vector3(max.x, min.y, min.z);\n\n//           corners[2] = new Vector3(max.x, min.y, max.z);\n\n//           corners[3] = new Vector3(min.x, min.y, max.z);\n\n//           // Top\n\n//           corners[4] = new Vector3(min.x, max.y, min.z);\n\n//           corners[5] = new Vector3(max.x, max.y, min.z);\n\n//           corners[6] = new Vector3(max.x, max.y, max.z);\n\n//           corners[7] = new Vector3(min.x, max.y, max.z);        // Bottom rectangle\n\n//           Debug.DrawLine(corners[0], corners[1], color);\n\n//           Debug.DrawLine(corners[1], corners[2], color);\n\n//           Debug.DrawLine(corners[2], corners[3], color);\n\n//           Debug.DrawLine(corners[3], corners[0], color);        // Top rectangle\n\n//           Debug.DrawLine(corners[4], corners[5], color);\n\n//           Debug.DrawLine(corners[5], corners[6], color);\n\n//           Debug.DrawLine(corners[6], corners[7], color);\n\n//           Debug.DrawLine(corners[7], corners[4], color);        // Vertical edges\n\n//           Debug.DrawLine(corners[0], corners[4], color);\n\n//           Debug.DrawLine(corners[1], corners[5], color);\n\n//           Debug.DrawLine(corners[2], corners[6], color);\n\n//           Debug.DrawLine(corners[3], corners[7], color);\n\n//       }\n\n//   }\n\n// Pseudo-code representation of Bounds\npublic class Bounds {\n    public var center; // The center of the bounding box.\n    public var extents; // The extents of the Bounding Box. This is always half of the size of the Bounds.\n    public var max; // The maximal point of the box. This is always equal to center+extents.\n    public var min; // The minimal point of the box. This is always equal to center-extents.\n    public var size; // The total size of the box. This is always twice as large as the extents.\n    public void ClosestPoint(); // The closest point on the bounding box.\n    public void Contains(); // Is point contained in the bounding box?\n    public void Encapsulate(); // Grows the Bounds to include the point.\n    public void Expand(); // Expand the bounds by: size + (amount * 2) along each side.\n    public void IntersectRay(); // Does ray intersect this bounding box?\n    public void Intersects(); // Does another bounding box intersect with this bounding box?\n    public void SetMinMax(); // Sets the bounds to the min and max value of the box.\n    public void SqrDistance(); // The smallest squared distance between the point and this bounding box.\n    public void ToString(); // Returns a formatted string for the bounds.\n}",
+  "properties": [
+    {
+      "name": "center",
+      "description": "The center of the bounding box."
+    },
+    {
+      "name": "extents",
+      "description": "The extents of the Bounding Box. This is always half of the size of the Bounds."
+    },
+    {
+      "name": "max",
+      "description": "The maximal point of the box. This is always equal to center+extents."
+    },
+    {
+      "name": "min",
+      "description": "The minimal point of the box. This is always equal to center-extents."
+    },
+    {
+      "name": "size",
+      "description": "The total size of the box. This is always twice as large as the extents."
+    }
+  ]
+}

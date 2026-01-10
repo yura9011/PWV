@@ -1,0 +1,185 @@
+// Unity Class: AnimationClip
+// Documentation: https://docs.unity3d.com/ScriptReference/AnimationClip.html
+
+// Description: Provides an asset that assigns animation curves to animatable properties.
+
+// Properties:
+// - empty: Returns true if the animation clip has no curves and no events.
+// - events: Animation Events for this animation clip.
+// - frameRate: Frame rate at which keyframes are sampled. (Read Only)
+// - hasGenericRootTransform: Returns true if the Animation has animation on the root transform.
+// - hasMotionCurves: Returns true if the AnimationClip has root motion curves.
+// - hasMotionFloatCurves: Returns true if the AnimationClip has editor curves for its root motion.
+// - hasRootCurves: Returns true if the AnimationClip has root Curves.
+// - humanMotion: Returns true if the animation contains curve that drives a humanoid rig.
+// - legacy: Set to true if the AnimationClip will be used with the Legacy Animation component ( instead of the Animator ).
+// - length: Animation length in seconds. (Read Only)
+// - localBounds: AABB of this Animation Clip in local space of Animation component that it is attached too.
+// - wrapMode: Sets the default wrap mode used in the animation state.
+
+// Constructors:
+// - AnimationClip(): Creates a new animation clip.
+
+// Methods:
+// - AddEvent(): Adds an animation event to the clip.
+// - ClearCurves(): Clears all curves from the clip.
+// - EnsureQuaternionContinuity(): Realigns quaternion keys to ensure shortest interpolation paths.
+// - SampleAnimation(): Samples an animation at a given time for any animated properties.
+// - SetCurve(): Assigns the curve to animate a specific property.
+
+// Code Examples:
+// Example 1:
+//   // Create a new MonoBehaviour in your project and paste in the following code.
+//   
+//   using UnityEngine;
+//   
+//   // The example creates a new MonoBehaviour that is used alongside a Camera component.
+//   // At runtime, the component will create a procedural clip to animate the Camera field of view
+//   // property and automatically play that clip on an Animation component.
+//   [RequireComponent(typeof(Camera))]
+//   public class ProceduralFieldOfViewAnimation : MonoBehaviour
+//   {
+//       void OnEnable()
+//       {
+//           AnimationClip clip = new AnimationClip();
+//           AnimationCurve curve = AnimationCurve.Linear(0.0f, 60.0f, 10.0f, 90.0f);
+//           clip.SetCurve("", typeof(Camera), "field of view", curve);
+//           clip.legacy = true;
+//   
+//           if (!TryGetComponent<Animation>(out var animation))
+//               animation = gameObject.AddComponent<Animation>();
+//   
+//           animation.AddClip(clip, "animfov");
+//           animation.Play("animfov");
+//       }
+//   }
+
+// Example 2:
+//   using UnityEditor;
+//   using UnityEngine;
+//   
+//   static class AnimationClipWithAnimationCurvesExample
+//   {
+//       // This example creates an AnimationClip with a single frame that captures the pose of a GameObject hierarchy.
+//       // The clip is saved as an asset in the project.
+//       [MenuItem("Example/Create Animation Clip Pose From GameObject")]
+//       static void CreateAnimationClipPoseFromGameObject()
+//       {
+//           var selectedGameObject = Selection.activeGameObject;
+//           if (selectedGameObject == null)
+//           {
+//               Debug.LogError("Please select a GameObject to create a clip for.");
+//               return;
+//           }
+//   
+//           AnimationClip clip = new AnimationClip();
+//   
+//           var transforms = selectedGameObject.GetComponentsInChildren<Transform>();
+//           var numberOfCurves = transforms.Length * 10; // 3 for position, 4 for rotation, 3 for scale
+//   
+//           var bindings = new EditorCurveBinding[numberOfCurves];
+//           var curves = new AnimationCurve[numberOfCurves];
+//   
+//           for (int i = 0; i < transforms.Length; ++i)
+//           {
+//               var startIndex = i * 10;
+//   
+//               var transform = transforms[i];
+//               var path = AnimationUtility.CalculateTransformPath(transform, selectedGameObject.transform);
+//   
+//               var index = startIndex;
+//               bindings[index++] = EditorCurveBinding.FloatCurve(path, typeof(Transform), "m_LocalPosition.x");
+//               bindings[index++] = EditorCurveBinding.FloatCurve(path, typeof(Transform), "m_LocalPosition.y");
+//               bindings[index++] = EditorCurveBinding.FloatCurve(path, typeof(Transform), "m_LocalPosition.z");
+//   
+//               bindings[index++] = EditorCurveBinding.FloatCurve(path, typeof(Transform), "m_LocalRotation.x");
+//               bindings[index++] = EditorCurveBinding.FloatCurve(path, typeof(Transform), "m_LocalRotation.y");
+//               bindings[index++] = EditorCurveBinding.FloatCurve(path, typeof(Transform), "m_LocalRotation.z");
+//               bindings[index++] = EditorCurveBinding.FloatCurve(path, typeof(Transform), "m_LocalRotation.w");
+//   
+//               bindings[index++] = EditorCurveBinding.FloatCurve(path, typeof(Transform), "m_LocalScale.x");
+//               bindings[index++] = EditorCurveBinding.FloatCurve(path, typeof(Transform), "m_LocalScale.y");
+//               bindings[index] = EditorCurveBinding.FloatCurve(path, typeof(Transform), "m_LocalScale.z");
+//   
+//               transform.GetLocalPositionAndRotation(out var localPosition, out var localRotation);
+//               var localScale = transform.localScale;
+//   
+//               index = startIndex;
+//               curves[index++] = AnimationCurve.Constant(0f, 1f, localPosition.x);
+//               curves[index++] = AnimationCurve.Constant(0f, 1f, localPosition.y);
+//               curves[index++] = AnimationCurve.Constant(0f, 1f, localPosition.z);
+//   
+//               curves[index++] = AnimationCurve.Constant(0f, 1f, localRotation.x);
+//               curves[index++] = AnimationCurve.Constant(0f, 1f, localRotation.y);
+//               curves[index++] = AnimationCurve.Constant(0f, 1f, localRotation.z);
+//               curves[index++] = AnimationCurve.Constant(0f, 1f, localRotation.w);
+//   
+//               curves[index++] = AnimationCurve.Constant(0f, 1f, localScale.x);
+//               curves[index++] = AnimationCurve.Constant(0f, 1f, localScale.y);
+//               curves[index] = AnimationCurve.Constant(0f, 1f, localScale.z);
+//           }
+//   
+//           AnimationUtility.SetEditorCurves(clip, bindings, curves);
+//   
+//           AssetDatabase.CreateAsset(clip, AssetDatabase.GenerateUniqueAssetPath($"Assets/{selectedGameObject.name}-Pose.anim"));
+//       }
+//   }
+
+// Example 3:
+//   using UnityEditor;
+//   using UnityEngine;
+//   
+//   static class AnimationClipWithObjectReferenceKeyframesExample
+//   {
+//       // This example creates an AnimationClip of a sequence of sprites selected
+//       // in the project view. The clip is saved as an asset in the project.
+//       [MenuItem("Example/Create Flip Book Animation Clip From Sprites")]
+//       static void CreateFlipBookAnimationClipFromSprites()
+//       {
+//           var selectedSprites = Selection.GetFiltered<Sprite>(SelectionMode.Unfiltered);
+//           if (selectedSprites == null || selectedSprites.Length == 0)
+//           {
+//               Debug.LogError("Please select sprites in the project view to create a clip for.");
+//               return;
+//           }
+//   
+//           AnimationClip clip = new AnimationClip();
+//   
+//           var spriteCurve = new ObjectReferenceKeyframe[selectedSprites.Length];
+//           for (int i = 0; i < selectedSprites.Length; ++i)
+//           {
+//               var sprite = selectedSprites[i];
+//               spriteCurve[i] = new ObjectReferenceKeyframe
+//               {
+//                   time = i/clip.frameRate,
+//                   value = sprite
+//               };
+//           }
+//   
+//           var spriteBinding = EditorCurveBinding.PPtrCurve("", typeof(SpriteRenderer), "m_Sprite");
+//           AnimationUtility.SetObjectReferenceCurve(clip, spriteBinding, spriteCurve);
+//   
+//           AssetDatabase.CreateAsset(clip, AssetDatabase.GenerateUniqueAssetPath($"Assets/FlipBookClip.anim"));
+//       }
+//   }
+
+// Pseudo-code representation of AnimationClip
+public class AnimationClip {
+    public var empty; // Returns true if the animation clip has no curves and no events.
+    public var events; // Animation Events for this animation clip.
+    public var frameRate; // Frame rate at which keyframes are sampled. (Read Only)
+    public var hasGenericRootTransform; // Returns true if the Animation has animation on the root transform.
+    public var hasMotionCurves; // Returns true if the AnimationClip has root motion curves.
+    public var hasMotionFloatCurves; // Returns true if the AnimationClip has editor curves for its root motion.
+    public var hasRootCurves; // Returns true if the AnimationClip has root Curves.
+    public var humanMotion; // Returns true if the animation contains curve that drives a humanoid rig.
+    public var legacy; // Set to true if the AnimationClip will be used with the Legacy Animation component ( instead of the Animator ).
+    public var length; // Animation length in seconds. (Read Only)
+    public var localBounds; // AABB of this Animation Clip in local space of Animation component that it is attached too.
+    public var wrapMode; // Sets the default wrap mode used in the animation state.
+    public void AddEvent(); // Adds an animation event to the clip.
+    public void ClearCurves(); // Clears all curves from the clip.
+    public void EnsureQuaternionContinuity(); // Realigns quaternion keys to ensure shortest interpolation paths.
+    public void SampleAnimation(); // Samples an animation at a given time for any animated properties.
+    public void SetCurve(); // Assigns the curve to animate a specific property.
+}

@@ -1,0 +1,24 @@
+{
+  "name": "api_networking_UploadHandler",
+  "type": "api",
+  "description": "Helper object for UnityWebRequests. Manages the buffering and transmission of body data during HTTP requests.",
+  "content": "// Unity Class: UploadHandler\n// Documentation: https://docs.unity3d.com/ScriptReference/Networking.UploadHandler.html\n\n// Description: Helper object for UnityWebRequests. Manages the buffering and transmission of body data during HTTP requests.\n\n// Properties:\n// - contentType: Determines the default Content-Type header which will be transmitted with the outbound HTTP request.\n// - data: The raw data which will be transmitted to the remote server as body data. (Read Only)\n// - progress: Returns the proportion of data uploaded to the remote server compared to the total amount of data to\n\n// Methods:\n// - Dispose: Signals that this UploadHandler is no longer being used, and should clean up any resources it is usi\n\npublic class UploadHandler {\n    public var contentType;\n    public var data;\n    public var progress;\n    public void Dispose();\n}",
+  "properties": [
+    {
+      "name": "contentType",
+      "description": "Determines the default Content-Type header which will be transmitted with the outbound HTTP request."
+    },
+    {
+      "name": "data",
+      "description": "The raw data which will be transmitted to the remote server as body data. (Read Only)"
+    },
+    {
+      "name": "progress",
+      "description": "Returns the proportion of data uploaded to the remote server compared to the total amount of data to"
+    },
+    {
+      "name": "Dispose",
+      "description": "Signals that this UploadHandler is no longer being used, and should clean up any resources it is usi"
+    }
+  ]
+}

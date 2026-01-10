@@ -1,0 +1,55 @@
+// Unity Class: SkinnedMeshRenderer
+// Documentation: https://docs.unity3d.com/ScriptReference/SkinnedMeshRenderer.html
+
+// Description: The Skinned Mesh filter.
+
+// Properties:
+// - bones: The bones used to skin the mesh.
+// - forceMatrixRecalculationPerRender: Forces the Skinned Mesh to recalculate its matricies when rendered
+// - quality: The maximum number of bones per vertex that are taken into account during skinning.
+// - sharedMesh: The mesh used for skinning.
+// - skinnedMotionVectors: Specifies whether skinned motion vectors should be used for this renderer.
+// - updateWhenOffscreen: If enabled, the Skinned Mesh will be updated when offscreen. If disabled, this also disables updatin
+// - vertexBufferTarget: The intended target usage of the skinned mesh GPU vertex buffer.
+
+// Methods:
+// - BakeMesh: Creates a snapshot of SkinnedMeshRenderer and stores it in mesh.
+// - GetBlendShapeWeight: Returns the weight of a BlendShape for this Renderer.
+// - GetPreviousVertexBuffer: Retrieves a GraphicsBuffer that provides direct access to the GPU vertex buffer for this skinned mes
+// - GetShaderUserValue: Returns the custom value assigned to this renderer.
+// - GetVertexBuffer: Retrieves a GraphicsBuffer that provides direct access to the GPU vertex buffer for this skinned mes
+// - SetBlendShapeWeight: Sets the weight of a BlendShape for this Renderer.
+// - SetShaderUserValue: Assign a custom value to this renderer.
+// - Destroy: Removes a GameObject, component, or asset.
+// - DestroyImmediate: Destroys the specified object immediately. Use with caution and in Edit mode only.
+// - DontDestroyOnLoad: Do not destroy the target Object when loading a new Scene.
+// - FindAnyObjectByType: Retrieves any active loaded object of Type type.
+// - FindFirstObjectByType: Retrieves the first active loaded object of Type type.
+// - FindObjectsByType: Retrieves a list of all loaded objects of Type type.
+// - Instantiate: Clones the object original and returns the clone.
+// - InstantiateAsync: Captures a snapshot of the original object (that must be related to some GameObject) and returns the
+
+public class SkinnedMeshRenderer {
+    public var bones;
+    public var forceMatrixRecalculationPerRender;
+    public var quality;
+    public var sharedMesh;
+    public var skinnedMotionVectors;
+    public var updateWhenOffscreen;
+    public var vertexBufferTarget;
+    public void BakeMesh();
+    public void GetBlendShapeWeight();
+    public void GetPreviousVertexBuffer();
+    public void GetShaderUserValue();
+    public void GetVertexBuffer();
+    public void SetBlendShapeWeight();
+    public void SetShaderUserValue();
+    public void Destroy();
+    public void DestroyImmediate();
+    public void DontDestroyOnLoad();
+    public void FindAnyObjectByType();
+    public void FindFirstObjectByType();
+    public void FindObjectsByType();
+    public void Instantiate();
+    public void InstantiateAsync();
+}

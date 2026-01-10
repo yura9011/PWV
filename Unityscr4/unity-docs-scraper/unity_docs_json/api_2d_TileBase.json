@@ -1,0 +1,68 @@
+{
+  "name": "api_2d_TileBase",
+  "type": "api",
+  "description": "Base class for a tile in the Tilemap.",
+  "content": "// Unity Class: TileBase\n// Documentation: https://docs.unity3d.com/ScriptReference/Tilemaps.TileBase.html\n\n// Description: Base class for a tile in the Tilemap.\n\n// Properties:\n// - hideFlags: Should the object be hidden, saved with the Scene or modifiable by the user?\n// - name: The name of the object.\n\n// Methods:\n// - GetTileAnimationData: Retrieves any tile animation data from the scripted tile.\n// - GetTileData: Retrieves any tile rendering data from the scripted tile.\n// - RefreshTile: This method is called when the tile is refreshed.\n// - StartUp: StartUp is called on the first frame of the running Scene.\n// - Destroy: Removes a GameObject, component, or asset.\n// - DestroyImmediate: Destroys the specified object immediately. Use with caution and in Edit mode only.\n// - DontDestroyOnLoad: Do not destroy the target Object when loading a new Scene.\n// - FindAnyObjectByType: Retrieves any active loaded object of Type type.\n// - FindFirstObjectByType: Retrieves the first active loaded object of Type type.\n// - FindObjectsByType: Retrieves a list of all loaded objects of Type type.\n// - Instantiate: Clones the object original and returns the clone.\n// - InstantiateAsync: Captures a snapshot of the original object (that must be related to some GameObject) and returns the\n// - CreateInstance: Creates an instance of a scriptable object.\n\npublic class TileBase {\n    public var hideFlags;\n    public var name;\n    public void GetTileAnimationData();\n    public void GetTileData();\n    public void RefreshTile();\n    public void StartUp();\n    public void Destroy();\n    public void DestroyImmediate();\n    public void DontDestroyOnLoad();\n    public void FindAnyObjectByType();\n    public void FindFirstObjectByType();\n    public void FindObjectsByType();\n    public void Instantiate();\n    public void InstantiateAsync();\n    public void CreateInstance();\n}",
+  "properties": [
+    {
+      "name": "hideFlags",
+      "description": "Should the object be hidden, saved with the Scene or modifiable by the user?"
+    },
+    {
+      "name": "name",
+      "description": "The name of the object."
+    },
+    {
+      "name": "GetTileAnimationData",
+      "description": "Retrieves any tile animation data from the scripted tile."
+    },
+    {
+      "name": "GetTileData",
+      "description": "Retrieves any tile rendering data from the scripted tile."
+    },
+    {
+      "name": "RefreshTile",
+      "description": "This method is called when the tile is refreshed."
+    },
+    {
+      "name": "StartUp",
+      "description": "StartUp is called on the first frame of the running Scene."
+    },
+    {
+      "name": "Destroy",
+      "description": "Removes a GameObject, component, or asset."
+    },
+    {
+      "name": "DestroyImmediate",
+      "description": "Destroys the specified object immediately. Use with caution and in Edit mode only."
+    },
+    {
+      "name": "DontDestroyOnLoad",
+      "description": "Do not destroy the target Object when loading a new Scene."
+    },
+    {
+      "name": "FindAnyObjectByType",
+      "description": "Retrieves any active loaded object of Type type."
+    },
+    {
+      "name": "FindFirstObjectByType",
+      "description": "Retrieves the first active loaded object of Type type."
+    },
+    {
+      "name": "FindObjectsByType",
+      "description": "Retrieves a list of all loaded objects of Type type."
+    },
+    {
+      "name": "Instantiate",
+      "description": "Clones the object original and returns the clone."
+    },
+    {
+      "name": "InstantiateAsync",
+      "description": "Captures a snapshot of the original object (that must be related to some GameObject) and returns the"
+    },
+    {
+      "name": "CreateInstance",
+      "description": "Creates an instance of a scriptable object."
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+// Unity Class: LocationService
+// Documentation: https://docs.unity3d.com/ScriptReference/LocationService.html
+
+// Description: Provides methods that allow an application to access the device's location.
+
+// Properties:
+// - isEnabledByUser: Indicates whether the device allows the application to access the location service.
+// - lastData: The last geographical location that the device registered.
+// - status: Returns the location service status.
+
+// Methods:
+// - Start: Starts location service updates.
+// - Stop: Stops location service updates. This is useful to save battery power when the application doesn't re
+
+public class LocationService {
+    public var isEnabledByUser;
+    public var lastData;
+    public var status;
+    public void Start();
+    public void Stop();
+}

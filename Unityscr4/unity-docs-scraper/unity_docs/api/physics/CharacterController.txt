@@ -1,0 +1,40 @@
+// Unity Class: CharacterController
+// Documentation: https://docs.unity3d.com/ScriptReference/CharacterController.html
+
+// Description: A CharacterController allows you to easily do movement constrained by collisions without having to deal with a rigidbody.
+
+// Properties:
+// - center: The center of the character's capsule relative to the transform's position.
+// - collisionFlags: What part of the capsule collided with the environment during the last CharacterController.Move call.
+// - detectCollisions: Determines whether other rigidbodies or character controllers collide with this character controller (by default this is always enabled).
+// - enableOverlapRecovery: Enables or disables overlap recovery. Used to depenetrate character controllers from static objects when an overlap is detected.
+// - height: The height of the character's capsule.
+// - isGrounded: Was the CharacterController touching the ground during the last move?
+// - minMoveDistance: Gets or sets the minimum move distance of the character controller.
+// - radius: The radius of the character's capsule.
+// - skinWidth: The character's collision skin width.
+// - slopeLimit: The character controllers slope limit in degrees.
+// - stepOffset: The character controllers step offset in meters.
+// - velocity: The current relative velocity of the Character (see notes).
+
+// Methods:
+// - Move(): Supplies the movement of a GameObject with an attached CharacterController component.
+// - SimpleMove(): Moves the character with speed.
+
+// Pseudo-code representation of CharacterController
+public class CharacterController {
+    public var center; // The center of the character's capsule relative to the transform's position.
+    public var collisionFlags; // What part of the capsule collided with the environment during the last CharacterController.Move call.
+    public var detectCollisions; // Determines whether other rigidbodies or character controllers collide with this character controller (by default this is always enabled).
+    public var enableOverlapRecovery; // Enables or disables overlap recovery. Used to depenetrate character controllers from static objects when an overlap is detected.
+    public var height; // The height of the character's capsule.
+    public var isGrounded; // Was the CharacterController touching the ground during the last move?
+    public var minMoveDistance; // Gets or sets the minimum move distance of the character controller.
+    public var radius; // The radius of the character's capsule.
+    public var skinWidth; // The character's collision skin width.
+    public var slopeLimit; // The character controllers slope limit in degrees.
+    public var stepOffset; // The character controllers step offset in meters.
+    public var velocity; // The current relative velocity of the Character (see notes).
+    public void Move(); // Supplies the movement of a GameObject with an attached CharacterController component.
+    public void SimpleMove(); // Moves the character with speed.
+}

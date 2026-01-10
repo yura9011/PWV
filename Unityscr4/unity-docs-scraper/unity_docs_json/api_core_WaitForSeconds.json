@@ -1,0 +1,12 @@
+{
+  "name": "api_core_WaitForSeconds",
+  "type": "api",
+  "description": "Suspends the coroutine execution for the specified scaled time in seconds.",
+  "content": "// Unity Class: WaitForSeconds\n// Documentation: https://docs.unity3d.com/ScriptReference/WaitForSeconds.html\n\n// Description: Suspends the coroutine execution for the specified scaled time in seconds.\n\n// Constructors:\n// - WaitForSeconds: Suspends the coroutine execution for the given amount of seconds using scaled time.\n\n// Code Examples:\n// Example 1:\n//   using UnityEngine;\n\n//   using System.Collections;public class WaitForSecondsExample : MonoBehaviour\n\n//   {\n\n//       void Start()\n\n//       {\n\n//           //Start the coroutine we define below named ExampleCoroutine.\n\n//           StartCoroutine(ExampleCoroutine());\n\n//       }    IEnumerator ExampleCoroutine()\n\n//       {\n\n//           //Print the time of when the function is first called.\n\n//           Debug.Log(\"Started Coroutine at timestamp : \" + Time.time);        //yield on a new YieldInstruction that waits for 5 seconds.\n\n//           yield return new WaitForSeconds(5);        //After we have waited 5 seconds print the time again.\n\n//           Debug.Log(\"Finished Coroutine at timestamp : \" + Time.time);\n\n//       }\n\n//   }\n\npublic class WaitForSeconds {\n}",
+  "properties": [
+    {
+      "name": "WaitForSeconds",
+      "description": "Suspends the coroutine execution for the given amount of seconds using scaled time."
+    }
+  ]
+}

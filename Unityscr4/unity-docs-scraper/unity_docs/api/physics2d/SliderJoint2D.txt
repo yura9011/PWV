@@ -1,0 +1,49 @@
+// Unity Class: SliderJoint2D
+// Documentation: https://docs.unity3d.com/ScriptReference/SliderJoint2D.html
+
+// Description: Joint that restricts the motion of a Rigidbody2D object to a single line.
+
+// Properties:
+// - angle: The angle of the line in space (in degrees).
+// - autoConfigureAngle: Should the angle be calculated automatically?
+// - jointSpeed: The current joint speed.
+// - jointTranslation: The current joint translation.
+// - limits: Restrictions on how far the joint can slide in each direction along the line.
+// - limitState: Gets the state of the joint limit.
+// - motor: Parameters for a motor force that is applied automatically to the Rigibody2D along the line.
+// - referenceAngle: The angle (in degrees) referenced between the two bodies used as the constraint for the joint.
+// - useLimits: Should motion limits be used?
+// - useMotor: Should a motor force be applied automatically to the Rigidbody2D?
+
+// Methods:
+// - GetMotorForce: Gets the motor force of the joint given the specified timestep.
+// - Destroy: Removes a GameObject, component, or asset.
+// - DestroyImmediate: Destroys the specified object immediately. Use with caution and in Edit mode only.
+// - DontDestroyOnLoad: Do not destroy the target Object when loading a new Scene.
+// - FindAnyObjectByType: Retrieves any active loaded object of Type type.
+// - FindFirstObjectByType: Retrieves the first active loaded object of Type type.
+// - FindObjectsByType: Retrieves a list of all loaded objects of Type type.
+// - Instantiate: Clones the object original and returns the clone.
+// - InstantiateAsync: Captures a snapshot of the original object (that must be related to some GameObject) and returns the
+
+public class SliderJoint2D {
+    public var angle;
+    public var autoConfigureAngle;
+    public var jointSpeed;
+    public var jointTranslation;
+    public var limits;
+    public var limitState;
+    public var motor;
+    public var referenceAngle;
+    public var useLimits;
+    public var useMotor;
+    public void GetMotorForce();
+    public void Destroy();
+    public void DestroyImmediate();
+    public void DontDestroyOnLoad();
+    public void FindAnyObjectByType();
+    public void FindFirstObjectByType();
+    public void FindObjectsByType();
+    public void Instantiate();
+    public void InstantiateAsync();
+}

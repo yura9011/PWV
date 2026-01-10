@@ -1,0 +1,88 @@
+{
+  "name": "api_rendering_SkinnedMeshRenderer",
+  "type": "api",
+  "description": "The Skinned Mesh filter.",
+  "content": "// Unity Class: SkinnedMeshRenderer\n// Documentation: https://docs.unity3d.com/ScriptReference/SkinnedMeshRenderer.html\n\n// Description: The Skinned Mesh filter.\n\n// Properties:\n// - bones: The bones used to skin the mesh.\n// - forceMatrixRecalculationPerRender: Forces the Skinned Mesh to recalculate its matricies when rendered\n// - quality: The maximum number of bones per vertex that are taken into account during skinning.\n// - sharedMesh: The mesh used for skinning.\n// - skinnedMotionVectors: Specifies whether skinned motion vectors should be used for this renderer.\n// - updateWhenOffscreen: If enabled, the Skinned Mesh will be updated when offscreen. If disabled, this also disables updatin\n// - vertexBufferTarget: The intended target usage of the skinned mesh GPU vertex buffer.\n\n// Methods:\n// - BakeMesh: Creates a snapshot of SkinnedMeshRenderer and stores it in mesh.\n// - GetBlendShapeWeight: Returns the weight of a BlendShape for this Renderer.\n// - GetPreviousVertexBuffer: Retrieves a GraphicsBuffer that provides direct access to the GPU vertex buffer for this skinned mes\n// - GetShaderUserValue: Returns the custom value assigned to this renderer.\n// - GetVertexBuffer: Retrieves a GraphicsBuffer that provides direct access to the GPU vertex buffer for this skinned mes\n// - SetBlendShapeWeight: Sets the weight of a BlendShape for this Renderer.\n// - SetShaderUserValue: Assign a custom value to this renderer.\n// - Destroy: Removes a GameObject, component, or asset.\n// - DestroyImmediate: Destroys the specified object immediately. Use with caution and in Edit mode only.\n// - DontDestroyOnLoad: Do not destroy the target Object when loading a new Scene.\n// - FindAnyObjectByType: Retrieves any active loaded object of Type type.\n// - FindFirstObjectByType: Retrieves the first active loaded object of Type type.\n// - FindObjectsByType: Retrieves a list of all loaded objects of Type type.\n// - Instantiate: Clones the object original and returns the clone.\n// - InstantiateAsync: Captures a snapshot of the original object (that must be related to some GameObject) and returns the\n\npublic class SkinnedMeshRenderer {\n    public var bones;\n    public var forceMatrixRecalculationPerRender;\n    public var quality;\n    public var sharedMesh;\n    public var skinnedMotionVectors;\n    public var updateWhenOffscreen;\n    public var vertexBufferTarget;\n    public void BakeMesh();\n    public void GetBlendShapeWeight();\n    public void GetPreviousVertexBuffer();\n    public void GetShaderUserValue();\n    public void GetVertexBuffer();\n    public void SetBlendShapeWeight();\n    public void SetShaderUserValue();\n    public void Destroy();\n    public void DestroyImmediate();\n    public void DontDestroyOnLoad();\n    public void FindAnyObjectByType();\n    public void FindFirstObjectByType();\n    public void FindObjectsByType();\n    public void Instantiate();\n    public void InstantiateAsync();\n}",
+  "properties": [
+    {
+      "name": "bones",
+      "description": "The bones used to skin the mesh."
+    },
+    {
+      "name": "forceMatrixRecalculationPerRender",
+      "description": "Forces the Skinned Mesh to recalculate its matricies when rendered"
+    },
+    {
+      "name": "quality",
+      "description": "The maximum number of bones per vertex that are taken into account during skinning."
+    },
+    {
+      "name": "sharedMesh",
+      "description": "The mesh used for skinning."
+    },
+    {
+      "name": "skinnedMotionVectors",
+      "description": "Specifies whether skinned motion vectors should be used for this renderer."
+    },
+    {
+      "name": "updateWhenOffscreen",
+      "description": "If enabled, the Skinned Mesh will be updated when offscreen. If disabled, this also disables updatin"
+    },
+    {
+      "name": "vertexBufferTarget",
+      "description": "The intended target usage of the skinned mesh GPU vertex buffer."
+    },
+    {
+      "name": "BakeMesh",
+      "description": "Creates a snapshot of SkinnedMeshRenderer and stores it in mesh."
+    },
+    {
+      "name": "GetBlendShapeWeight",
+      "description": "Returns the weight of a BlendShape for this Renderer."
+    },
+    {
+      "name": "GetPreviousVertexBuffer",
+      "description": "Retrieves a GraphicsBuffer that provides direct access to the GPU vertex buffer for this skinned mes"
+    },
+    {
+      "name": "GetShaderUserValue",
+      "description": "Returns the custom value assigned to this renderer."
+    },
+    {
+      "name": "GetVertexBuffer",
+      "description": "Retrieves a GraphicsBuffer that provides direct access to the GPU vertex buffer for this skinned mes"
+    },
+    {
+      "name": "SetBlendShapeWeight",
+      "description": "Sets the weight of a BlendShape for this Renderer."
+    },
+    {
+      "name": "SetShaderUserValue",
+      "description": "Assign a custom value to this renderer."
+    },
+    {
+      "name": "Destroy",
+      "description": "Removes a GameObject, component, or asset."
+    },
+    {
+      "name": "DestroyImmediate",
+      "description": "Destroys the specified object immediately. Use with caution and in Edit mode only."
+    },
+    {
+      "name": "DontDestroyOnLoad",
+      "description": "Do not destroy the target Object when loading a new Scene."
+    },
+    {
+      "name": "FindAnyObjectByType",
+      "description": "Retrieves any active loaded object of Type type."
+    },
+    {
+      "name": "FindFirstObjectByType",
+      "description": "Retrieves the first active loaded object of Type type."
+    },
+    {
+      "name": "FindObjectsByType",
+      "description": "Retrieves a list of all loaded objects of Type type."
+    }
+  ]
+}

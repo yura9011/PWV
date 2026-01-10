@@ -1,0 +1,60 @@
+{
+  "name": "api_editor_TextAsset",
+  "type": "api",
+  "description": "Represents a raw text or binary file asset.",
+  "content": "// Unity Class: TextAsset\n// Documentation: https://docs.unity3d.com/ScriptReference/TextAsset.html\n\n// Description: Represents a raw text or binary file asset.\n\n// Properties:\n// - bytes: The raw bytes of the text asset. (Read Only)\n// - dataSize: The size of the text asset data in bytes. (Read Only)\n// - text: The text contents of the file as a string. (Read Only)\n\n// Methods:\n// - GetData: Gets raw text asset data.\n// - ToString: Returns the contents of the TextAsset as a read-only string.\n// - Destroy: Removes a GameObject, component, or asset.\n// - DestroyImmediate: Destroys the specified object immediately. Use with caution and in Edit mode only.\n// - DontDestroyOnLoad: Do not destroy the target Object when loading a new Scene.\n// - FindAnyObjectByType: Retrieves any active loaded object of Type type.\n// - FindFirstObjectByType: Retrieves the first active loaded object of Type type.\n// - FindObjectsByType: Retrieves a list of all loaded objects of Type type.\n// - Instantiate: Clones the object original and returns the clone.\n// - InstantiateAsync: Captures a snapshot of the original object (that must be related to some GameObject) and returns the\n\npublic class TextAsset {\n    public var bytes;\n    public var dataSize;\n    public var text;\n    public void GetData();\n    public void ToString();\n    public void Destroy();\n    public void DestroyImmediate();\n    public void DontDestroyOnLoad();\n    public void FindAnyObjectByType();\n    public void FindFirstObjectByType();\n    public void FindObjectsByType();\n    public void Instantiate();\n    public void InstantiateAsync();\n}",
+  "properties": [
+    {
+      "name": "bytes",
+      "description": "The raw bytes of the text asset. (Read Only)"
+    },
+    {
+      "name": "dataSize",
+      "description": "The size of the text asset data in bytes. (Read Only)"
+    },
+    {
+      "name": "text",
+      "description": "The text contents of the file as a string. (Read Only)"
+    },
+    {
+      "name": "GetData",
+      "description": "Gets raw text asset data."
+    },
+    {
+      "name": "ToString",
+      "description": "Returns the contents of the TextAsset as a read-only string."
+    },
+    {
+      "name": "Destroy",
+      "description": "Removes a GameObject, component, or asset."
+    },
+    {
+      "name": "DestroyImmediate",
+      "description": "Destroys the specified object immediately. Use with caution and in Edit mode only."
+    },
+    {
+      "name": "DontDestroyOnLoad",
+      "description": "Do not destroy the target Object when loading a new Scene."
+    },
+    {
+      "name": "FindAnyObjectByType",
+      "description": "Retrieves any active loaded object of Type type."
+    },
+    {
+      "name": "FindFirstObjectByType",
+      "description": "Retrieves the first active loaded object of Type type."
+    },
+    {
+      "name": "FindObjectsByType",
+      "description": "Retrieves a list of all loaded objects of Type type."
+    },
+    {
+      "name": "Instantiate",
+      "description": "Clones the object original and returns the clone."
+    },
+    {
+      "name": "InstantiateAsync",
+      "description": "Captures a snapshot of the original object (that must be related to some GameObject) and returns the"
+    }
+  ]
+}

@@ -1,0 +1,88 @@
+{
+  "name": "api_rendering_SpriteRenderer",
+  "type": "api",
+  "description": "A component that renders a Sprite.If a GameObject has a SpriteRenderer component, the component renders the assigned Sprite asset on the screen using the position, rotation and scale from the Transform component.You can use this to draw characters, items, backgrounds, and other visual elements in a 2D game.",
+  "content": "// Unity Class: SpriteRenderer\n// Documentation: https://docs.unity3d.com/ScriptReference/SpriteRenderer.html\n\n// Description: A component that renders a Sprite.If a GameObject has a SpriteRenderer component, the component renders the assigned Sprite asset on the screen using the position, rotation and scale from the Transform component.You can use this to draw characters, items, backgrounds, and other visual elements in a 2D game.\n\n// Properties:\n// - adaptiveModeThreshold: The current threshold for Sprite Renderer tiling.\n// - color: Rendering color for the Sprite graphic.\n// - drawMode: The current draw mode of the Sprite Renderer.\n// - flipX: Flips the sprite on the X axis.\n// - flipY: Flips the sprite on the Y axis.\n// - maskInteraction: Specifies how the sprite interacts with the masks.\n// - size: Property to set or get the size to render when the SpriteRenderer.drawMode is set to SpriteDrawMode.Sliced or SpriteDrawMode.Tiled.\n// - sprite: The Sprite to render.\n// - spriteSortPoint: Determines the position of the Sprite used for sorting the SpriteRenderer.\n// - tileMode: The current tile mode of the Sprite Renderer.\n\n// Methods:\n// - RegisterSpriteChangeCallback: Registers a callback to receive a notification when the SpriteRenderer's Sprite reference changes.\n// - UnregisterSpriteChangeCallback: Removes a callback (that receives a notification when the Sprite reference changes) that was previously registered to a SpriteRenderer.\n// - Destroy: Removes a GameObject, component, or asset.\n// - DestroyImmediate: Destroys the specified object immediately. Use with caution and in Edit mode only.\n// - DontDestroyOnLoad: Do not destroy the target Object when loading a new Scene.\n// - FindAnyObjectByType: Retrieves any active loaded object of Type type.\n// - FindFirstObjectByType: Retrieves the first active loaded object of Type type.\n// - FindObjectsByType: Retrieves a list of all loaded objects of Type type.\n// - Instantiate: Clones the object original and returns the clone.\n// - InstantiateAsync: Captures a snapshot of the original object (that must be related to some GameObject) and returns the AsyncInstantiateOperation.\n\n// Code Examples:\n// Example 1:\n//   using UnityEngine;// This example script demonstrates how to change the sprite and the sprite color, and flip the sprite horizontally and vertically.\n\n//   // Attach this script to a GameObject with a SpriteRenderer component and assign a Sprite to the Sprite field in the Inspector.\n\n//   public class Example : MonoBehaviour\n\n//   {\n\n//       public Sprite sprite;    private SpriteRenderer m_spriteRenderer;    private void Awake()\n\n//       {\n\n//           // Fetch the SpriteRenderer from the GameObject\n\n//           m_spriteRenderer = GetComponent<SpriteRenderer>();\n\n//       }    private void Start()\n\n//       {\n\n//           // Change the sprite to the one in the sprite field\n\n//           m_spriteRenderer.sprite = sprite;\n\n//           \n\n//           // Change the color of the sprite to red\n\n//           m_spriteRenderer.color = Color.red;\n\n//           \n\n//           // Flip the sprite horizontally\n\n//           m_spriteRenderer.flipX = true;\n\n//           \n\n//           // Flip the sprite vertically\n\n\npublic class SpriteRenderer {\n    public var adaptiveModeThreshold; // The current threshold for Sprite Renderer tiling.\n    public var color; // Rendering color for the Sprite graphic.\n    public var drawMode; // The current draw mode of the Sprite Renderer.\n    public var flipX; // Flips the sprite on the X axis.\n    public var flipY; // Flips the sprite on the Y axis.\n    public var maskInteraction; // Specifies how the sprite interacts with the masks.\n    public var size; // Property to set or get the size to render when the SpriteRenderer.drawMode is se\n    public var sprite; // The Sprite to render.\n    public var spriteSortPoint; // Determines the position of the Sprite used for sorting the SpriteRenderer.\n    public var tileMode; // The current tile mode of the Sprite Renderer.\n    public void RegisterSpriteChangeCallback(); // Registers a callback to receive a notification when the SpriteRenderer's Sprite \n    public void UnregisterSpriteChangeCallback(); // Removes a callback (that receives a notification when the Sprite reference chang\n    public void Destroy(); // Removes a GameObject, component, or asset.\n    public void DestroyImmediate(); // Destroys the specified object immediately. Use with caution and in Edit mode onl\n    public void DontDestroyOnLoad(); // Do not destroy the target Object when loading a new Scene.\n    public void FindAnyObjectByType(); // Retrieves any active loaded object of Type type.\n    public void FindFirstObjectByType(); // Retrieves the first active loaded object of Type type.\n    public void FindObjectsByType(); // Retrieves a list of all loaded objects of Type type.\n    public void Instantiate(); // Clones the object original and returns the clone.\n    public void InstantiateAsync(); // Captures a snapshot of the original object (that must be related to some GameObj\n}",
+  "properties": [
+    {
+      "name": "adaptiveModeThreshold",
+      "description": "The current threshold for Sprite Renderer tiling."
+    },
+    {
+      "name": "color",
+      "description": "Rendering color for the Sprite graphic."
+    },
+    {
+      "name": "drawMode",
+      "description": "The current draw mode of the Sprite Renderer."
+    },
+    {
+      "name": "flipX",
+      "description": "Flips the sprite on the X axis."
+    },
+    {
+      "name": "flipY",
+      "description": "Flips the sprite on the Y axis."
+    },
+    {
+      "name": "maskInteraction",
+      "description": "Specifies how the sprite interacts with the masks."
+    },
+    {
+      "name": "size",
+      "description": "Property to set or get the size to render when the SpriteRenderer.drawMode is set to SpriteDrawMode.Sliced or SpriteDrawMode.Tiled."
+    },
+    {
+      "name": "sprite",
+      "description": "The Sprite to render."
+    },
+    {
+      "name": "spriteSortPoint",
+      "description": "Determines the position of the Sprite used for sorting the SpriteRenderer."
+    },
+    {
+      "name": "tileMode",
+      "description": "The current tile mode of the Sprite Renderer."
+    },
+    {
+      "name": "RegisterSpriteChangeCallback",
+      "description": "Registers a callback to receive a notification when the SpriteRenderer's Sprite reference changes."
+    },
+    {
+      "name": "UnregisterSpriteChangeCallback",
+      "description": "Removes a callback (that receives a notification when the Sprite reference changes) that was previously registered to a SpriteRenderer."
+    },
+    {
+      "name": "Destroy",
+      "description": "Removes a GameObject, component, or asset."
+    },
+    {
+      "name": "DestroyImmediate",
+      "description": "Destroys the specified object immediately. Use with caution and in Edit mode only."
+    },
+    {
+      "name": "DontDestroyOnLoad",
+      "description": "Do not destroy the target Object when loading a new Scene."
+    },
+    {
+      "name": "FindAnyObjectByType",
+      "description": "Retrieves any active loaded object of Type type."
+    },
+    {
+      "name": "FindFirstObjectByType",
+      "description": "Retrieves the first active loaded object of Type type."
+    },
+    {
+      "name": "FindObjectsByType",
+      "description": "Retrieves a list of all loaded objects of Type type."
+    },
+    {
+      "name": "Instantiate",
+      "description": "Clones the object original and returns the clone."
+    },
+    {
+      "name": "InstantiateAsync",
+      "description": "Captures a snapshot of the original object (that must be related to some GameObject) and returns the AsyncInstantiateOperation."
+    }
+  ]
+}

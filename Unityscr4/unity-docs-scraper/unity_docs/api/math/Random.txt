@@ -1,0 +1,8 @@
+// Unity Class: Random
+// Documentation: https://docs.unity3d.com/ScriptReference/Random.html
+
+// Description: Easily generate random data for games.
+
+// Pseudo-code representation of Random
+public class Random {
+}

@@ -1,0 +1,88 @@
+{
+  "name": "api_utility_AccessibilityNode",
+  "type": "api",
+  "description": "A node in the AccessibilityHierarchy representing a visual element, such as a UI element or an element that is part of your game, that needs to be accessible to the screen reader.",
+  "content": "// Unity Class: AccessibilityNode\n// Documentation: https://docs.unity3d.com/ScriptReference/Accessibility.AccessibilityNode.html\n\n// Description: A node in the AccessibilityHierarchy representing a visual element, such as a UI element or an element that is part of your game, that needs to be accessible to the screen reader.\n\n// Properties:\n// - allowsDirectInteraction: Whether the accessibility node allows direct touch interaction while the screen reader is active.\n// - children: The node's children in the accessibility hierarchy.\n// - frame: The bounding rectangle of the accessibility node in screen coordinates.\n// - frameGetter: Delegate that calculates the frame of the accessibility node, automatically keeping it up-to-date.\n// - hint: Additional guidance or context for interacting with the accessibility node.\n// - id: The unique identifier of the accessibility node.\n// - isActive: Whether the accessibility node is exposed to screen readers. The default value is true.\n// - isFocused: Whether the accessibility node is currently focused by the screen reader.\n// - label: A short description of the accessibility node.\n// - parent: The node's parent in the accessibility hierarchy.\n// - role: The type of user interface element that the accessibility node represents.\n// - state: The status of the visual element that the accessibility node represents.\n// - value: The value of the visual element that the accessibility node represents.\n\n// Methods:\n// - GetHashCode: A hash used for comparisons.\n// - ToString: Provides a debugging string.\n\n// Events:\n// - decremented: Event invoked when the user performs a \"decrement\" action when focused on the accessibility node.\n// - dismissed: Event invoked when the user performs a \"dismiss\" action when focused on the accessibility node.\n// - focusChanged: Event invoked on the main thread when the accessibility node gains or loses screen reader focus.\n// - incremented: Event invoked when the user performs an \"increment\" action when focused on the accessibility node.\n// - invoked: Event invoked when the user performs an \"activate\" action when focused on the accessibility node.\n// - scrolled: Event invoked when the user performs a \"scroll\" action when focused on the accessibility node.\n// - selected: Deprecated. Use AccessibilityNode.invoked instead.\n\npublic class AccessibilityNode {\n    public var allowsDirectInteraction;\n    public var children;\n    public var frame;\n    public var frameGetter;\n    public var hint;\n    public var id;\n    public var isActive;\n    public var isFocused;\n    public var label;\n    public var parent;\n    public void GetHashCode();\n    public void ToString();\n}",
+  "properties": [
+    {
+      "name": "allowsDirectInteraction",
+      "description": "Whether the accessibility node allows direct touch interaction while the screen reader is active."
+    },
+    {
+      "name": "children",
+      "description": "The node's children in the accessibility hierarchy."
+    },
+    {
+      "name": "frame",
+      "description": "The bounding rectangle of the accessibility node in screen coordinates."
+    },
+    {
+      "name": "frameGetter",
+      "description": "Delegate that calculates the frame of the accessibility node, automatically keeping it up-to-date."
+    },
+    {
+      "name": "hint",
+      "description": "Additional guidance or context for interacting with the accessibility node."
+    },
+    {
+      "name": "id",
+      "description": "The unique identifier of the accessibility node."
+    },
+    {
+      "name": "isActive",
+      "description": "Whether the accessibility node is exposed to screen readers. The default value is true."
+    },
+    {
+      "name": "isFocused",
+      "description": "Whether the accessibility node is currently focused by the screen reader."
+    },
+    {
+      "name": "label",
+      "description": "A short description of the accessibility node."
+    },
+    {
+      "name": "parent",
+      "description": "The node's parent in the accessibility hierarchy."
+    },
+    {
+      "name": "role",
+      "description": "The type of user interface element that the accessibility node represents."
+    },
+    {
+      "name": "state",
+      "description": "The status of the visual element that the accessibility node represents."
+    },
+    {
+      "name": "value",
+      "description": "The value of the visual element that the accessibility node represents."
+    },
+    {
+      "name": "GetHashCode",
+      "description": "A hash used for comparisons."
+    },
+    {
+      "name": "ToString",
+      "description": "Provides a debugging string."
+    },
+    {
+      "name": "decremented",
+      "description": "Event invoked when the user performs a \"decrement\" action when focused on the accessibility node."
+    },
+    {
+      "name": "dismissed",
+      "description": "Event invoked when the user performs a \"dismiss\" action when focused on the accessibility node."
+    },
+    {
+      "name": "focusChanged",
+      "description": "Event invoked on the main thread when the accessibility node gains or loses screen reader focus."
+    },
+    {
+      "name": "incremented",
+      "description": "Event invoked when the user performs an \"increment\" action when focused on the accessibility node."
+    },
+    {
+      "name": "invoked",
+      "description": "Event invoked when the user performs an \"activate\" action when focused on the accessibility node."
+    }
+  ]
+}

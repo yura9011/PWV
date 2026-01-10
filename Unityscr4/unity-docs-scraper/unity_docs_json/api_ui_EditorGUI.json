@@ -1,0 +1,88 @@
+{
+  "name": "api_ui_EditorGUI",
+  "type": "api",
+  "description": "These work pretty much like the normal GUI functions - and also have matching implementations in EditorGUILayout.",
+  "content": "// Unity Class: EditorGUI\n// Documentation: https://docs.unity3d.com/ScriptReference/EditorGUI.html\n\n// Description: These work pretty much like the normal GUI functions - and also have matching implementations in EditorGUILayout.\n\n// Methods:\n// - BeginChangeCheck: Starts a new code block to check for GUI changes.\n// - BeginDisabledGroup: Create a group of controls that can be disabled.\n// - BeginFoldoutHeaderGroup: Make a label with a foldout arrow to the left of it.\n// - BeginProperty: Create a Property wrapper, useful for making regular GUI controls work with SerializedProperty.\n// - BoundsField: Makes Center and Extents field for entering a Bounds.\n// - BoundsIntField: Makes Position and Size field for entering a BoundsInt.\n// - ColorField: Makes a field for selecting a Color.\n// - CurveField: Makes a field for editing an AnimationCurve.\n// - DelayedDoubleField: Makes a delayed text field for entering doubles.\n// - DelayedFloatField: Makes a delayed text field for entering floats.\n// - DelayedIntField: Makes a delayed text field for entering integers.\n// - DelayedTextField: Makes a delayed text field.\n// - DoubleField: Makes a text field for entering doubles.\n// - DrawPreviewTexture: Draws the texture within a rectangle.\n// - DrawRect: Draws a filled rectangle of color at the specified position and size within the current editor window.\n// - DrawTextureAlpha: Draws the alpha channel of a texture within a rectangle.\n// - DropdownButton: Makes a button that reacts to mouse down, for displaying your own dropdown content.\n// - DropShadowLabel: Draws a label with a drop shadow.\n// - EndChangeCheck: Ends a code block and checks for any GUI changes.\n// - EndDisabledGroup: Ends a disabled group started with BeginDisabledGroup.\n// - EndFoldoutHeaderGroup: Closes a group started with BeginFoldoutHeaderGroup. Additional resources: EditorGUILayout.BeginFoldoutHeaderGroup.\n// - EndProperty: Ends a Property wrapper started with BeginProperty.\n// - EnumFlagsField: Displays a menu with an option for every value of the enum type when clicked. An option for the value 0 with name \"Nothing\" and an option for the value ~0 (that is, all bits set) with the name \"Everything\" are always displayed at the top of the menu. The names for the values 0 and ~0 can be overriden by defining these values in the enum type.\n// - EnumPopup: Makes an enum popup selection field.\n// - FloatField: Makes a text field for entering floats.\n// - FocusTextInControl: Move keyboard focus to a named text field and begin editing of the content.\n// - Foldout: Makes a label with a foldout arrow to the left of it.\n// - GetPropertyHeight: Get the height needed for a PropertyField control.\n// - GradientField: Makes a field for editing a Gradient.\n// - HandlePrefixLabel: Makes a label for some control.\n// - HelpBox: Makes a help box with a message to the user.\n// - InspectorTitlebar: Makes an inspector-window-like titlebar.\n// - IntField: Makes a text field for entering integers.\n// - IntPopup: Makes an integer popup selection field.\n// - IntSlider: Makes a slider the user can drag to change an integer value between a min and a max.\n// - LabelField: Makes a label field. (Useful for showing read-only info.)\n// - LargeSplitButtonWithDropdownList: Creates a large button that contains a regular button section and an arrow to open a dropdown menu.\n// - LayerField: Makes a layer selection field.\n// - LinkButton: Make a clickable link label.\n// - LogarithmicIntSlider: Makes a text field for entering an integer on a logarithmic scale.\n// - LongField: Makes a text field for entering long integers.\n// - MaskField: Makes a field for masks.\n// - MinMaxSlider: Makes a special slider the user can use to specify a range between a min and a max.\n// - MultiFloatField: Makes a multi-control with text fields for entering multiple floats in the same line.\n// - MultiIntField: Makes a multi-control with text fields for entering multiple integers in the same line.\n// - MultiPropertyField: Makes a multi-control with several property fields in the same line.\n// - ObjectField: Makes an object field. You can assign objects either by drag and drop objects or by selecting an object using the Object Picker.\n// - PasswordField: Makes a text field where the user can enter a password.\n// - Popup: Makes a generic popup selection field.\n// - PrefixLabel: Makes a label in front of some control.\n// - ProgressBar: Makes a progress bar.\n// - PropertyField: Use this to make a field for a SerializedProperty in the Editor.\n// - RectField: Makes an X, Y, W, and H field for entering a Rect.\n// - RectIntField: Makes an X, Y, W, and H field for entering a RectInt.\n// - RenderingLayerMaskField: Makes a rendering layer selection field.\n// - SelectableLabel: Makes a selectable label field. (Useful for showing read-only info that can be copy-pasted.)\n// - Slider: Makes a slider the user can drag to change a value between a min and a max.\n// - TagField: Makes a tag selection field.\n// - TextArea: Makes a text area.\n// - TextField: Makes a text field.\n// - Toggle: Makes a toggle.\n// - ToggleLeft: Makes a toggle field where the toggle is to the left and the label immediately to the right of it.\n// - Vector2Field: Makes an X and Y field for entering a Vector2.\n// - Vector2IntField: Makes an X and Y integer field for entering a Vector2Int.\n// - Vector3Field: Makes an X, Y, and Z field for entering a Vector3.\n// - Vector3IntField: Makes an X, Y, and Z integer field for entering a Vector3Int.\n// - Vector4Field: Makes an X, Y, Z, and W field for entering a Vector4.\n\n// Events:\n// - hyperLinkClicked: Event used to react on clicks on a text hyperlink part.\n\npublic class EditorGUI {\n    public void BeginChangeCheck(); // Starts a new code block to check for GUI changes.\n    public void BeginDisabledGroup(); // Create a group of controls that can be disabled.\n    public void BeginFoldoutHeaderGroup(); // Make a label with a foldout arrow to the left of it.\n    public void BeginProperty(); // Create a Property wrapper, useful for making regular GUI controls work with Seri\n    public void BoundsField(); // Makes Center and Extents field for entering a Bounds.\n    public void BoundsIntField(); // Makes Position and Size field for entering a BoundsInt.\n    public void ColorField(); // Makes a field for selecting a Color.\n    public void CurveField(); // Makes a field for editing an AnimationCurve.\n    public void DelayedDoubleField(); // Makes a delayed text field for entering doubles.\n    public void DelayedFloatField(); // Makes a delayed text field for entering floats.\n    public void DelayedIntField(); // Makes a delayed text field for entering integers.\n    public void DelayedTextField(); // Makes a delayed text field.\n    public void DoubleField(); // Makes a text field for entering doubles.\n    public void DrawPreviewTexture(); // Draws the texture within a rectangle.\n    public void DrawRect(); // Draws a filled rectangle of color at the specified position and size within the \n}",
+  "properties": [
+    {
+      "name": "BeginChangeCheck",
+      "description": "Starts a new code block to check for GUI changes."
+    },
+    {
+      "name": "BeginDisabledGroup",
+      "description": "Create a group of controls that can be disabled."
+    },
+    {
+      "name": "BeginFoldoutHeaderGroup",
+      "description": "Make a label with a foldout arrow to the left of it."
+    },
+    {
+      "name": "BeginProperty",
+      "description": "Create a Property wrapper, useful for making regular GUI controls work with SerializedProperty."
+    },
+    {
+      "name": "BoundsField",
+      "description": "Makes Center and Extents field for entering a Bounds."
+    },
+    {
+      "name": "BoundsIntField",
+      "description": "Makes Position and Size field for entering a BoundsInt."
+    },
+    {
+      "name": "ColorField",
+      "description": "Makes a field for selecting a Color."
+    },
+    {
+      "name": "CurveField",
+      "description": "Makes a field for editing an AnimationCurve."
+    },
+    {
+      "name": "DelayedDoubleField",
+      "description": "Makes a delayed text field for entering doubles."
+    },
+    {
+      "name": "DelayedFloatField",
+      "description": "Makes a delayed text field for entering floats."
+    },
+    {
+      "name": "DelayedIntField",
+      "description": "Makes a delayed text field for entering integers."
+    },
+    {
+      "name": "DelayedTextField",
+      "description": "Makes a delayed text field."
+    },
+    {
+      "name": "DoubleField",
+      "description": "Makes a text field for entering doubles."
+    },
+    {
+      "name": "DrawPreviewTexture",
+      "description": "Draws the texture within a rectangle."
+    },
+    {
+      "name": "DrawRect",
+      "description": "Draws a filled rectangle of color at the specified position and size within the current editor window."
+    },
+    {
+      "name": "DrawTextureAlpha",
+      "description": "Draws the alpha channel of a texture within a rectangle."
+    },
+    {
+      "name": "DropdownButton",
+      "description": "Makes a button that reacts to mouse down, for displaying your own dropdown content."
+    },
+    {
+      "name": "DropShadowLabel",
+      "description": "Draws a label with a drop shadow."
+    },
+    {
+      "name": "EndChangeCheck",
+      "description": "Ends a code block and checks for any GUI changes."
+    },
+    {
+      "name": "EndDisabledGroup",
+      "description": "Ends a disabled group started with BeginDisabledGroup."
+    }
+  ]
+}

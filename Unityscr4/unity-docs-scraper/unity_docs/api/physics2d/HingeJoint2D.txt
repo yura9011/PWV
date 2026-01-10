@@ -1,0 +1,47 @@
+// Unity Class: HingeJoint2D
+// Documentation: https://docs.unity3d.com/ScriptReference/HingeJoint2D.html
+
+// Description: Joint that allows a Rigidbody2D object to rotate around a point in space or a point on another object.
+
+// Properties:
+// - jointAngle: The current joint angle (in degrees) with respect to the reference angle.
+// - jointSpeed: The current joint speed.
+// - limits: Limit of angular rotation (in degrees) on the joint.
+// - limitState: Gets the state of the joint limit.
+// - motor: Parameters for the motor force applied to the joint.
+// - referenceAngle: The angle (in degrees) referenced between the two bodies used as the constraint for the joint.
+// - useConnectedAnchor: Controls whether the connected anchor is used or not.
+// - useLimits: Should limits be placed on the range of rotation?
+// - useMotor: Should the joint be rotated automatically by a motor torque?
+
+// Methods:
+// - GetMotorTorque: Gets the motor torque of the joint given the specified timestep.
+// - Destroy: Removes a GameObject, component, or asset.
+// - DestroyImmediate: Destroys the specified object immediately. Use with caution and in Edit mode only.
+// - DontDestroyOnLoad: Do not destroy the target Object when loading a new Scene.
+// - FindAnyObjectByType: Retrieves any active loaded object of Type type.
+// - FindFirstObjectByType: Retrieves the first active loaded object of Type type.
+// - FindObjectsByType: Retrieves a list of all loaded objects of Type type.
+// - Instantiate: Clones the object original and returns the clone.
+// - InstantiateAsync: Captures a snapshot of the original object (that must be related to some GameObject) and returns the AsyncInstantiateOperation.
+
+public class HingeJoint2D {
+    public var jointAngle; // The current joint angle (in degrees) with respect to the reference angle.
+    public var jointSpeed; // The current joint speed.
+    public var limits; // Limit of angular rotation (in degrees) on the joint.
+    public var limitState; // Gets the state of the joint limit.
+    public var motor; // Parameters for the motor force applied to the joint.
+    public var referenceAngle; // The angle (in degrees) referenced between the two bodies used as the constraint 
+    public var useConnectedAnchor; // Controls whether the connected anchor is used or not.
+    public var useLimits; // Should limits be placed on the range of rotation?
+    public var useMotor; // Should the joint be rotated automatically by a motor torque?
+    public void GetMotorTorque(); // Gets the motor torque of the joint given the specified timestep.
+    public void Destroy(); // Removes a GameObject, component, or asset.
+    public void DestroyImmediate(); // Destroys the specified object immediately. Use with caution and in Edit mode onl
+    public void DontDestroyOnLoad(); // Do not destroy the target Object when loading a new Scene.
+    public void FindAnyObjectByType(); // Retrieves any active loaded object of Type type.
+    public void FindFirstObjectByType(); // Retrieves the first active loaded object of Type type.
+    public void FindObjectsByType(); // Retrieves a list of all loaded objects of Type type.
+    public void Instantiate(); // Clones the object original and returns the clone.
+    public void InstantiateAsync(); // Captures a snapshot of the original object (that must be related to some GameObj
+}

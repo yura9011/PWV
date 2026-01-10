@@ -1,0 +1,14 @@
+{
+  "mcpServers": {
+    "unity-docs": {
+      "command": "node",
+      "args": ["path/to/smart-coding-mcp/dist/index.js"],
+      "env": {
+        "WORKSPACE_PATH": "./unity_docs_json",
+        "EXTENSIONS": ".json",
+        "CHUNK_SIZE": "30",
+        "EMBEDDING_DIMENSION": "128"
+      }
+    }
+  }
+}

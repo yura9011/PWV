@@ -1,0 +1,60 @@
+{
+  "name": "api_physics_RaycastHit",
+  "type": "api",
+  "description": "Structure used to get information back from a raycast.",
+  "content": "// Unity Class: RaycastHit\n// Documentation: https://docs.unity3d.com/ScriptReference/RaycastHit.html\n\n// Description: Structure used to get information back from a raycast.\n\n// Properties:\n// - articulationBody: The ArticulationBody of the collider that was hit. If the collider is not attached to an articulation body then it is null.\n// - barycentricCoordinate: The barycentric coordinate of the triangle we hit.\n// - collider: The Collider that was hit.\n// - colliderEntityId: EntityId of the Collider that was hit.\n// - distance: The distance from the ray's origin to the impact point.\n// - lightmapCoord: The uv lightmap coordinate at the impact point.\n// - normal: The normal of the surface the ray hit.\n// - point: The impact point in world space where the ray hit the collider.\n// - rigidbody: The Rigidbody of the collider that was hit. If the collider is not attached to a rigidbody then it is null.\n// - textureCoord: The uv texture coordinate at the collision location.\n// - textureCoord2: The secondary uv texture coordinate at the impact point.\n// - transform: The Transform of the rigidbody or collider that was hit.\n// - triangleIndex: The index of the triangle that was hit.\n\npublic class RaycastHit {\n    public var articulationBody; // The ArticulationBody of the collider that was hit. If the collider is not attach\n    public var barycentricCoordinate; // The barycentric coordinate of the triangle we hit.\n    public var collider; // The Collider that was hit.\n    public var colliderEntityId; // EntityId of the Collider that was hit.\n    public var distance; // The distance from the ray's origin to the impact point.\n    public var lightmapCoord; // The uv lightmap coordinate at the impact point.\n    public var normal; // The normal of the surface the ray hit.\n    public var point; // The impact point in world space where the ray hit the collider.\n    public var rigidbody; // The Rigidbody of the collider that was hit. If the collider is not attached to a\n    public var textureCoord; // The uv texture coordinate at the collision location.\n    public var textureCoord2; // The secondary uv texture coordinate at the impact point.\n    public var transform; // The Transform of the rigidbody or collider that was hit.\n    public var triangleIndex; // The index of the triangle that was hit.\n}",
+  "properties": [
+    {
+      "name": "articulationBody",
+      "description": "The ArticulationBody of the collider that was hit. If the collider is not attached to an articulation body then it is null."
+    },
+    {
+      "name": "barycentricCoordinate",
+      "description": "The barycentric coordinate of the triangle we hit."
+    },
+    {
+      "name": "collider",
+      "description": "The Collider that was hit."
+    },
+    {
+      "name": "colliderEntityId",
+      "description": "EntityId of the Collider that was hit."
+    },
+    {
+      "name": "distance",
+      "description": "The distance from the ray's origin to the impact point."
+    },
+    {
+      "name": "lightmapCoord",
+      "description": "The uv lightmap coordinate at the impact point."
+    },
+    {
+      "name": "normal",
+      "description": "The normal of the surface the ray hit."
+    },
+    {
+      "name": "point",
+      "description": "The impact point in world space where the ray hit the collider."
+    },
+    {
+      "name": "rigidbody",
+      "description": "The Rigidbody of the collider that was hit. If the collider is not attached to a rigidbody then it is null."
+    },
+    {
+      "name": "textureCoord",
+      "description": "The uv texture coordinate at the collision location."
+    },
+    {
+      "name": "textureCoord2",
+      "description": "The secondary uv texture coordinate at the impact point."
+    },
+    {
+      "name": "transform",
+      "description": "The Transform of the rigidbody or collider that was hit."
+    },
+    {
+      "name": "triangleIndex",
+      "description": "The index of the triangle that was hit."
+    }
+  ]
+}

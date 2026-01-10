@@ -1,0 +1,69 @@
+// Unity Class: Color
+// Documentation: https://docs.unity3d.com/ScriptReference/Color.html
+
+// Description: Representation of RGBA colors.
+
+// Properties:
+// - a: Alpha component of the color (0 is transparent, 1 is opaque).
+// - b: Blue component of the color.
+// - g: Green component of the color.
+// - gamma: A version of the color that has had the gamma curve applied.
+// - grayscale: The grayscale value of the color. (Read Only)
+// - linear: A color value in linear space converted from an sRGB value.
+// - maxColorComponent: Returns the maximum color component value: Max(r,g,b).
+// - r: Red component of the color.
+// - this[int]: Access the r, g, b,a components using [0], [1], [2], [3] respectively.
+
+// Constructors:
+// - Color(): Constructs a new Color with given r,g,b,a components.
+
+// Methods:
+// - Equals(): Returns true if the given color is exactly equal to this color, i.e. if the red, green, blue, and alpha values are exactly the same.
+// - GetHashCode(): Returns the hash code for this color. This lets you use colors as keys in hash tables.
+// - ToString(): Returns a formatted string of this color.
+
+// Code Examples:
+// Example 1:
+//   using UnityEngine;public class ColorExample : MonoBehaviour
+//   {
+//       void Start()
+//       {
+//           // Initialize with RGB
+//           Color redColor = new Color(1f, 0f, 0f);        // Initialize with RGBA
+//           Color blueWithAlpha = new Color(0f, 0f, 1f, 0.5f);        // Initialize with hex
+//           ColorUtility.TryParseHtmlString("#00FF00", out Color greenFromHex);        // Initialize with HSV
+//           float hue = 0.6f;
+//           float saturation = 0.9f;
+//           float value = 0.7f;
+//           Color fromHSV = Color.HSVToRGB(hue, saturation, value);        // Use some of the preset colors
+//           Color cornflower = Color.cornflowerBlue;
+//           Color lawn = Color.lawnGreen;
+//           Color lemon = Color.lemonChiffon;
+//           Color violet = Color.violet;        // Create complementary color
+//           Color complementary = new Color(
+//               1f - redColor.r,
+//               1f - redColor.g,
+//               1f - redColor.b
+//           );
+//           // Lerp between colors
+//           Color lerpedColor = Color.Lerp(redColor, blueWithAlpha, 0.5f);        // Darken color
+//           Color darkercolor = lerpedColor * 0.8f;        // Lighten color
+//           Color lighterColor = lerpedColor + Color.white * 0.2f;
+//       }
+//   }
+
+// Pseudo-code representation of Color
+public class Color {
+    public var a; // Alpha component of the color (0 is transparent, 1 is opaque).
+    public var b; // Blue component of the color.
+    public var g; // Green component of the color.
+    public var gamma; // A version of the color that has had the gamma curve applied.
+    public var grayscale; // The grayscale value of the color. (Read Only)
+    public var linear; // A color value in linear space converted from an sRGB value.
+    public var maxColorComponent; // Returns the maximum color component value: Max(r,g,b).
+    public var r; // Red component of the color.
+    public var this[int]; // Access the r, g, b,a components using [0], [1], [2], [3] respectively.
+    public void Equals(); // Returns true if the given color is exactly equal to this color, i.e. if the red, green, blue, and alpha values are exactly the same.
+    public void GetHashCode(); // Returns the hash code for this color. This lets you use colors as keys in hash tables.
+    public void ToString(); // Returns a formatted string of this color.
+}

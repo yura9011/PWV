@@ -1,0 +1,40 @@
+{
+  "name": "api_animation_AnimatorStateInfo",
+  "type": "api",
+  "description": "Runtime information on the current or next animation state, managed by an Animator.",
+  "content": "// Unity Class: AnimatorStateInfo\n// Documentation: https://docs.unity3d.com/ScriptReference/AnimatorStateInfo.html\n\n// Description: Runtime information on the current or next animation state, managed by an Animator.\n\n// Properties:\n// - fullPathHash: The full path hash for this state.\n// - length: Current duration of the state.\n// - loop: Is the state looping.\n// - normalizedTime: Normalized time of the State.\n// - shortNameHash: The hash is generated using Animator.StringToHash. The hash does not include the name of the parent layer.\n// - speed: The playback speed of the animation. 1 is the normal playback speed.\n// - speedMultiplier: The speed multiplier for this state.\n// - tagHash: The Tag of the State.\n\n// Methods:\n// - IsName(): Checks if name matches the name of the active state in the state machine.\n// - IsTag(): Checks whether the animation state has the specified tag.\n\n// Code Examples:\n// Example 1:\n//   // This script demonstrate using AnimatorStateInfo to modify a parameter during animation.\n\n//   // Ensure Animator has a \"Run\" state in Base Layer and a \"SpeedMultiplier\" parameter.\n\n//   \n\n//   using UnityEngine;\n\n//   \n\n//   [RequireComponent(typeof(Animator))]\n\n//   public class AnimatorStateInfoExample : MonoBehaviour\n\n//   {\n\n//       private Animator m_Animator;\n\n//       private readonly int m_RunStateHash = Animator.StringToHash(\"Base Layer.Run\");\n\n//   \n\n//       void Start()\n\n//       {\n\n//           m_Animator = GetComponent<Animator>();\n\n//       }\n\n//   \n\n//       void Update()\n\n//       {\n\n//           // Retrieve the current animation state information\n\n//           AnimatorStateInfo stateInfo = m_Animator.GetCurrentAnimatorStateInfo(0);\n\n//   \n\n//           // Use the hashed name for comparison with the current state's full path hash\n\n//           if (stateInfo.fullPathHash == m_RunStateHash)\n\n//           {\n\n//               Debug.Log(\"Running state active. Normalized time: \" + stateInfo.normalizedTime);\n\n//   \n\n//               // Perform actions based on the animation's progress\n\n//               if (stateInfo.normalizedTime > 0.5f && stateInfo.normalizedTime < 0.75f)\n\n//               {\n\n//                   Debug.Log(\"Halfway through the Run animation.\");\n\n//                   m_Animator.SetFloat(\"SpeedMultiplier\", 1.5f); // Adjust the playback speed\n\n//               }\n\n//           }\n\n//       }\n\n//   }\n\n// Pseudo-code representation of AnimatorStateInfo\npublic class AnimatorStateInfo {\n    public var fullPathHash; // The full path hash for this state.\n    public var length; // Current duration of the state.\n    public var loop; // Is the state looping.\n    public var normalizedTime; // Normalized time of the State.\n    public var shortNameHash; // The hash is generated using Animator.StringToHash. The hash does not include the name of the parent layer.\n    public var speed; // The playback speed of the animation. 1 is the normal playback speed.\n    public var speedMultiplier; // The speed multiplier for this state.\n    public var tagHash; // The Tag of the State.\n    public void IsName(); // Checks if name matches the name of the active state in the state machine.\n    public void IsTag(); // Checks whether the animation state has the specified tag.\n}",
+  "properties": [
+    {
+      "name": "fullPathHash",
+      "description": "The full path hash for this state."
+    },
+    {
+      "name": "length",
+      "description": "Current duration of the state."
+    },
+    {
+      "name": "loop",
+      "description": "Is the state looping."
+    },
+    {
+      "name": "normalizedTime",
+      "description": "Normalized time of the State."
+    },
+    {
+      "name": "shortNameHash",
+      "description": "The hash is generated using Animator.StringToHash. The hash does not include the name of the parent layer."
+    },
+    {
+      "name": "speed",
+      "description": "The playback speed of the animation. 1 is the normal playback speed."
+    },
+    {
+      "name": "speedMultiplier",
+      "description": "The speed multiplier for this state."
+    },
+    {
+      "name": "tagHash",
+      "description": "The Tag of the State."
+    }
+  ]
+}

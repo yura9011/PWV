@@ -1,0 +1,88 @@
+{
+  "name": "api_physics2d_Collider2D",
+  "type": "api",
+  "description": "The parent class for collider types used with 2D gameplay. Provides methods to defines the shape and physical behavior for 2D object interactions, used to detect collisions, and trigger events in 2D game environments.",
+  "content": "// Unity Class: Collider2D\n// Documentation: https://docs.unity3d.com/ScriptReference/Collider2D.html\n\n// Description: The parent class for collider types used with 2D gameplay. Provides methods to defines the shape and physical behavior for 2D object interactions, used to detect collisions, and trigger events in 2D game environments.\n\n// Properties:\n// - attachedRigidbody: The Rigidbody2D attached to the Collider2D.\n// - bounceCombine: The bounciness combine mode used by the Collider2D.\n// - bounciness: The bounciness used by the Collider2D.\n// - bounds: The world space bounding area of the collider.\n// - callbackLayers: The Layers that this Collider2D will report collision or trigger callbacks for during a contact with another Collider2D.\n// - composite: Get the CompositeCollider2D that is available to be attached to the collider.\n// - compositeCapable: Indicates if this Collider2D is capable of being composited by the CompositeCollider2D.\n// - compositeOperation: The composite operation to be used by a CompositeCollider2D.\n// - compositeOrder: The composite operation order to be used when a CompositeCollider2D is used.\n// - contactCaptureLayers: The layers of other Collider2D involved in contacts with this Collider2D that will be captured.\n// - contactMask: Calculates the effective LayerMask that the Collider2D will use when determining if it can contact another Collider2D.\n// - density: The density of the collider used to calculate its mass (when auto mass is enabled).\n// - errorState: The error state that indicates the state of the physics shapes the 2D Collider tried to create. (Read Only)\n// - excludeLayers: The additional Layers that this Collider2D should exclude when deciding if a contact with another Collider2D should happen or not.\n// - forceReceiveLayers: The Layers that this Collider2D can receive forces from during a Collision contact with another Collider2D.\n// - forceSendLayers: The Layers that this Collider2D is allowed to send forces to during a Collision contact with another Collider2D.\n// - friction: The friction used by the Collider2D.\n// - frictionCombine: The friction combine mode used by the Collider2D.\n// - includeLayers: The additional Layers that this Collider2D should include when deciding if a contact with another Collider2D should happen or not.\n// - isTrigger: Is this collider configured as a trigger?\n// - layerOverridePriority: A decision priority assigned to this Collider2D used when there is a conflicting decision on whether a contact between itself and another Collision2D should happen or not.\n// - localToWorldMatrix: The transformation matrix used to transform the Collider physics shapes to world space.\n// - offset: The local offset of the collider geometry.\n// - shapeCount: The number of active PhysicsShape2D the Collider2D is currently using.\n// - sharedMaterial: The PhysicsMaterial2D that is applied to this collider.\n// - usedByEffector: Whether the collider is used by an attached effector or not.\n\n// Methods:\n// - CanContact: This method determines if both Colliders can ever come into contact.\n// - Cast: Casts the Collider shape into the Scene starting at the Collider position ignoring the Collider itself.\n// - ClosestPoint: Returns a point on the perimeter of this Collider that is closest to the specified position.\n// - CreateMesh: Creates a planar Mesh that is identical to the area defined by the Collider2D geometry.\n// - Distance: Calculates the minimum separation of this collider against another collider.\n// - GetContacts: Retrieves all contact points for this Collider.\n// - GetShapeBounds: Retrieves a list of Bounds for all PhysicsShape2D created by this Collider2D, and returns the combined Bounds of the retrieved list.\n// - GetShapeHash: Generates a simple hash value based upon the geometry of the Collider2D.\n// - GetShapes: Gets all the PhysicsShape2D used by the Collider2D.\n// - IsTouching: Check whether this collider is touching the collider or not.\n// - IsTouchingLayers: Checks whether this collider is touching any colliders on the specified layerMask or not.\n// - Overlap: Get a list of all Colliders that overlap this Collider.\n// - OverlapPoint: Check if a collider overlaps a point in space.\n// - Raycast: Casts a ray into the Scene that starts at the Collider position and ignores the Collider itself.\n// - Destroy: Removes a GameObject, component, or asset.\n// - DestroyImmediate: Destroys the specified object immediately. Use with caution and in Edit mode only.\n// - DontDestroyOnLoad: Do not destroy the target Object when loading a new Scene.\n// - FindAnyObjectByType: Retrieves any active loaded object of Type type.\n// - FindFirstObjectByType: Retrieves the first active loaded object of Type type.\n// - FindObjectsByType: Retrieves a list of all loaded objects of Type type.\n// - Instantiate: Clones the object original and returns the clone.\n// - InstantiateAsync: Captures a snapshot of the original object (that must be related to some GameObject) and returns the AsyncInstantiateOperation.\n\npublic class Collider2D {\n    public var attachedRigidbody; // The Rigidbody2D attached to the Collider2D.\n    public var bounceCombine; // The bounciness combine mode used by the Collider2D.\n    public var bounciness; // The bounciness used by the Collider2D.\n    public var bounds; // The world space bounding area of the collider.\n    public var callbackLayers; // The Layers that this Collider2D will report collision or trigger callbacks for d\n    public var composite; // Get the CompositeCollider2D that is available to be attached to the collider.\n    public var compositeCapable; // Indicates if this Collider2D is capable of being composited by the CompositeColl\n    public var compositeOperation; // The composite operation to be used by a CompositeCollider2D.\n    public var compositeOrder; // The composite operation order to be used when a CompositeCollider2D is used.\n    public var contactCaptureLayers; // The layers of other Collider2D involved in contacts with this Collider2D that wi\n    public var contactMask; // Calculates the effective LayerMask that the Collider2D will use when determining\n    public var density; // The density of the collider used to calculate its mass (when auto mass is enable\n    public var errorState; // The error state that indicates the state of the physics shapes the 2D Collider t\n    public var excludeLayers; // The additional Layers that this Collider2D should exclude when deciding if a con\n    public var forceReceiveLayers; // The Layers that this Collider2D can receive forces from during a Collision conta\n    public void CanContact(); // This method determines if both Colliders can ever come into contact.\n    public void Cast(); // Casts the Collider shape into the Scene starting at the Collider position ignori\n    public void ClosestPoint(); // Returns a point on the perimeter of this Collider that is closest to the specifi\n    public void CreateMesh(); // Creates a planar Mesh that is identical to the area defined by the Collider2D ge\n    public void Distance(); // Calculates the minimum separation of this collider against another collider.\n    public void GetContacts(); // Retrieves all contact points for this Collider.\n    public void GetShapeBounds(); // Retrieves a list of Bounds for all PhysicsShape2D created by this Collider2D, an\n    public void GetShapeHash(); // Generates a simple hash value based upon the geometry of the Collider2D.\n    public void GetShapes(); // Gets all the PhysicsShape2D used by the Collider2D.\n    public void IsTouching(); // Check whether this collider is touching the collider or not.\n    public void IsTouchingLayers(); // Checks whether this collider is touching any colliders on the specified layerMas\n    public void Overlap(); // Get a list of all Colliders that overlap this Collider.\n    public void OverlapPoint(); // Check if a collider overlaps a point in space.\n    public void Raycast(); // Casts a ray into the Scene that starts at the Collider position and ignores the \n    public void Destroy(); // Removes a GameObject, component, or asset.\n}",
+  "properties": [
+    {
+      "name": "attachedRigidbody",
+      "description": "The Rigidbody2D attached to the Collider2D."
+    },
+    {
+      "name": "bounceCombine",
+      "description": "The bounciness combine mode used by the Collider2D."
+    },
+    {
+      "name": "bounciness",
+      "description": "The bounciness used by the Collider2D."
+    },
+    {
+      "name": "bounds",
+      "description": "The world space bounding area of the collider."
+    },
+    {
+      "name": "callbackLayers",
+      "description": "The Layers that this Collider2D will report collision or trigger callbacks for during a contact with another Collider2D."
+    },
+    {
+      "name": "composite",
+      "description": "Get the CompositeCollider2D that is available to be attached to the collider."
+    },
+    {
+      "name": "compositeCapable",
+      "description": "Indicates if this Collider2D is capable of being composited by the CompositeCollider2D."
+    },
+    {
+      "name": "compositeOperation",
+      "description": "The composite operation to be used by a CompositeCollider2D."
+    },
+    {
+      "name": "compositeOrder",
+      "description": "The composite operation order to be used when a CompositeCollider2D is used."
+    },
+    {
+      "name": "contactCaptureLayers",
+      "description": "The layers of other Collider2D involved in contacts with this Collider2D that will be captured."
+    },
+    {
+      "name": "contactMask",
+      "description": "Calculates the effective LayerMask that the Collider2D will use when determining if it can contact another Collider2D."
+    },
+    {
+      "name": "density",
+      "description": "The density of the collider used to calculate its mass (when auto mass is enabled)."
+    },
+    {
+      "name": "errorState",
+      "description": "The error state that indicates the state of the physics shapes the 2D Collider tried to create. (Read Only)"
+    },
+    {
+      "name": "excludeLayers",
+      "description": "The additional Layers that this Collider2D should exclude when deciding if a contact with another Collider2D should happen or not."
+    },
+    {
+      "name": "forceReceiveLayers",
+      "description": "The Layers that this Collider2D can receive forces from during a Collision contact with another Collider2D."
+    },
+    {
+      "name": "forceSendLayers",
+      "description": "The Layers that this Collider2D is allowed to send forces to during a Collision contact with another Collider2D."
+    },
+    {
+      "name": "friction",
+      "description": "The friction used by the Collider2D."
+    },
+    {
+      "name": "frictionCombine",
+      "description": "The friction combine mode used by the Collider2D."
+    },
+    {
+      "name": "includeLayers",
+      "description": "The additional Layers that this Collider2D should include when deciding if a contact with another Collider2D should happen or not."
+    },
+    {
+      "name": "isTrigger",
+      "description": "Is this collider configured as a trigger?"
+    }
+  ]
+}

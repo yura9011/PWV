@@ -1,0 +1,16 @@
+{
+  "name": "api_core_Object",
+  "type": "api",
+  "description": "Base class for all objects Unity can reference.",
+  "content": "// Unity Class: Object\n// Documentation: https://docs.unity3d.com/ScriptReference/Object.html\n\n// Description: Base class for all objects Unity can reference.\n\n// Properties:\n// - hideFlags: Should the object be hidden, saved with the Scene or modifiable by the user?\n// - name: The name of the object.\n\n// Methods:\n// - GetInstanceID(): Gets the instance ID of the object.\n// - ToString(): Returns the name of the object.\n\n// Pseudo-code representation of Object\npublic class Object {\n    public var hideFlags; // Should the object be hidden, saved with the Scene or modifiable by the user?\n    public var name; // The name of the object.\n    public void GetInstanceID(); // Gets the instance ID of the object.\n    public void ToString(); // Returns the name of the object.\n}",
+  "properties": [
+    {
+      "name": "hideFlags",
+      "description": "Should the object be hidden, saved with the Scene or modifiable by the user?"
+    },
+    {
+      "name": "name",
+      "description": "The name of the object."
+    }
+  ]
+}

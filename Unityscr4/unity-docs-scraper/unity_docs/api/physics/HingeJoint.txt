@@ -1,0 +1,68 @@
+// Unity Class: HingeJoint
+// Documentation: https://docs.unity3d.com/ScriptReference/HingeJoint.html
+
+// Description: The HingeJoint groups together 2 rigid bodies, constraining them to move like connected by a hinge.
+
+// Properties:
+// - angle: The current angle in degrees of the joint relative to its rest position. (Read Only)
+// - extendedLimits: If enabled, the angle of the hinge is extended to [-360, 360] degrees.
+// - limits: Limit of angular rotation (in degrees) on the hinge joint.
+// - motor: The motor will apply a force up to a maximum force to achieve the target velocity in degrees per second.
+// - spring: The spring attempts to reach a target angle by adding spring and damping forces.
+// - useAcceleration: Defines whether the HingeJoint.spring outputs accelerations instead of forces.
+// - useLimits: Enables the joint's limits. Disabled by default.
+// - useMotor: Enables the joint's motor. Disabled by default.
+// - useSpring: Enables the joint's spring. Disabled by default.
+// - velocity: The angular velocity of the joint in degrees per second. (Read Only)
+
+// Methods:
+// - BroadcastMessage: Calls the method named methodName on every MonoBehaviour in this game object or any of its children.
+// - CompareTag: Checks the GameObject's tag against the defined tag.
+// - GetComponent: Gets a reference to a component of type T on the same GameObject as the component specified.
+// - GetComponentInChildren: Gets a reference to a component of type T on the same GameObject as the component specified, or any child of the GameObject.
+// - GetComponentIndex: Gets the index of the component on its parent GameObject.
+// - GetComponentInParent: Gets a reference to a component of type T on the same GameObject as the component specified, or any parent of the GameObject.
+// - GetComponents: Gets references to all components of type T on the same GameObject as the component specified.
+// - GetComponentsInChildren: Gets references to all components of type T on the same GameObject as the component specified, and any child of the GameObject.
+// - GetComponentsInParent: Gets references to all components of type T on the same GameObject as the component specified, and any parent of the GameObject.
+// - SendMessage: Calls the method named methodName on every MonoBehaviour in this game object.
+// - SendMessageUpwards: Calls the method named methodName on every MonoBehaviour in this game object and on every ancestor of the behaviour.
+// - TryGetComponent: Gets the component of the specified type, if it exists.
+// - GetInstanceID: Gets the instance ID of the object.
+// - ToString: Returns the name of the object.
+// - Destroy: Removes a GameObject, component, or asset.
+// - DestroyImmediate: Destroys the specified object immediately. Use with caution and in Edit mode only.
+// - DontDestroyOnLoad: Do not destroy the target Object when loading a new Scene.
+// - FindAnyObjectByType: Retrieves any active loaded object of Type type.
+// - FindFirstObjectByType: Retrieves the first active loaded object of Type type.
+// - FindObjectsByType: Retrieves a list of all loaded objects of Type type.
+// - Instantiate: Clones the object original and returns the clone.
+// - InstantiateAsync: Captures a snapshot of the original object (that must be related to some GameObject) and returns the AsyncInstantiateOperation.
+
+public class HingeJoint {
+    public var angle; // The current angle in degrees of the joint relative to its rest position. (Read O
+    public var extendedLimits; // If enabled, the angle of the hinge is extended to [-360, 360] degrees.
+    public var limits; // Limit of angular rotation (in degrees) on the hinge joint.
+    public var motor; // The motor will apply a force up to a maximum force to achieve the target velocit
+    public var spring; // The spring attempts to reach a target angle by adding spring and damping forces.
+    public var useAcceleration; // Defines whether the HingeJoint.spring outputs accelerations instead of forces.
+    public var useLimits; // Enables the joint's limits. Disabled by default.
+    public var useMotor; // Enables the joint's motor. Disabled by default.
+    public var useSpring; // Enables the joint's spring. Disabled by default.
+    public var velocity; // The angular velocity of the joint in degrees per second. (Read Only)
+    public void BroadcastMessage(); // Calls the method named methodName on every MonoBehaviour in this game object or 
+    public void CompareTag(); // Checks the GameObject's tag against the defined tag.
+    public void GetComponent(); // Gets a reference to a component of type T on the same GameObject as the componen
+    public void GetComponentInChildren(); // Gets a reference to a component of type T on the same GameObject as the componen
+    public void GetComponentIndex(); // Gets the index of the component on its parent GameObject.
+    public void GetComponentInParent(); // Gets a reference to a component of type T on the same GameObject as the componen
+    public void GetComponents(); // Gets references to all components of type T on the same GameObject as the compon
+    public void GetComponentsInChildren(); // Gets references to all components of type T on the same GameObject as the compon
+    public void GetComponentsInParent(); // Gets references to all components of type T on the same GameObject as the compon
+    public void SendMessage(); // Calls the method named methodName on every MonoBehaviour in this game object.
+    public void SendMessageUpwards(); // Calls the method named methodName on every MonoBehaviour in this game object and
+    public void TryGetComponent(); // Gets the component of the specified type, if it exists.
+    public void GetInstanceID(); // Gets the instance ID of the object.
+    public void ToString(); // Returns the name of the object.
+    public void Destroy(); // Removes a GameObject, component, or asset.
+}

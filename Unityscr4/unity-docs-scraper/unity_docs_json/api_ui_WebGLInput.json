@@ -1,0 +1,7 @@
+{
+  "name": "api_ui_WebGLInput",
+  "type": "api",
+  "description": "WebGLInput provides support for WebGL specific functionalities. Important: Browsers only allow sensor input in secure contexts, which means you must use HTTPS except during development where you might use http://localhost.",
+  "content": "// Unity Class: WebGLInput\n// Documentation: https://docs.unity3d.com/ScriptReference/WebGLInput.html\n\n// Description: WebGLInput provides support for WebGL specific functionalities. Important: Browsers only allow sensor input in secure contexts, which means you must use HTTPS except during development where you might use http://localhost.\n\npublic class WebGLInput {\n}",
+  "properties": []
+}

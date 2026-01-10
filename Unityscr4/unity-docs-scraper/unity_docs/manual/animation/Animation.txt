@@ -1,0 +1,103 @@
+// Unity Manual: Animation
+// Section: Animation
+// URL: https://docs.unity3d.com/Manual/AnimationSection.html
+
+// Content:
+Animation
+Create TreeView with IMGUI
+Mecanim Animation system
+Animation
+An animation system provides tools and processes to animate the properties of models and assets. For example, use an animation system to animate transform properties to move and rotate a model, or animate the intensity property to dim a light.
+Common tools include importers that import animation and models, editors that create and modify animation, and real-time animation
+state machines
+The set of states in an Animator Controller that a character or animated GameObject can be in, along with a set of transitions between those states and a variable to remember the current state. The states available will depend on the type of gameplay, but typical states include things like idling, walking, running and jumping.
+More info
+See in
+Glossary
+that determine which animation plays and when. Some animation systems also include specialized tools that define a humanoid model and retarget animation between models with the same definition.
+Unity has two animation systems with different capabilities and performance characteristics:
+Animation system
+Description
+Mecanim animation system
+The Mecanim animation system (Mecanim) is a rich and sophisticated animation system that uses the
+Animator component
+A component on a model that animates that model using the Animation system. The component has a reference to an Animator Controller asset that controls the animation.
+More info
+See in
+Glossary
+, the
+Animation window
+, and the
+Animator window
+The window where the Animator Controller is visualized and edited.
+More info
+See in
+Glossary
+. Mecanim is the recommended animation system for most situations. It provides better performance for complex character animation with many
+animation curves
+Allows you to add data to an imported clip so you can animate the timings of other items based on the state of an animator. For example, for a game set in icy conditions, you could use an extra animation curve to control the emission rate of a particle system to show the player’s condensing breath in the cold air.
+More info
+See in
+Glossary
+and
+blending
+.
+Legacy animation system
+Unity’s Legacy animation system (Legacy) has a limited
+feature set
+A
+feature set
+is a collection of related packages that you can use to achieve specific results in the Unity Editor. You can manage feature sets directly in Unity’s Package Manager.
+More info
+See in
+Glossary
+that predates Mecanim. Legacy uses the
+Animation component
+and the special
+Legacy
+import option in the
+Rig tab of the Import Settings window
+. Legacy is less complex for simple animation. Legacy is still available for backward compatibility with old Unity projects.
+Additional resources and examples
+👥
+Community
+:
+Join the conversation on Unity Discussions for Animation
+📖
+E-Book
+:
+The definitive guide to animation in Unity
+📖
+E-Book
+:
+2D game art, animation, and lighting for artists
+📝
+How-to guide
+:
+How to troubleshoot imported animations in Unity
+📝
+How-to guide
+:
+Tips for building animator controllers in Unity
+📝
+How-to guide
+:
+How to animate 2D characters in Unity 2022 LTS
+📺
+Video
+:
+How to work with humanoid animations in Unity
+Create TreeView with IMGUI
+Mecanim Animation system
+Copyright ©2005-2026 Unity Technologies. All rights reserved. Built from 6000.3.5f1 (9e864d5a2e6f). Built on: 2026-01-09.
+Tutorials
+Community Answers
+Knowledge Base
+Forums
+Asset Store
+Terms of use
+Legal
+Privacy Policy
+Cookies
+Do Not Sell or Share My Personal Information
+Your Privacy Choices (Cookie Settings)

@@ -1,0 +1,11 @@
+// Unity Class: Cursor
+// Documentation: https://docs.unity3d.com/ScriptReference/Cursor.html
+
+// Description: Cursor API for setting the cursor (mouse pointer).
+
+// Methods:
+// - SetCursor: Sets a custom cursor to use as your cursor.
+
+public class Cursor {
+    public void SetCursor(); // Sets a custom cursor to use as your cursor.
+}

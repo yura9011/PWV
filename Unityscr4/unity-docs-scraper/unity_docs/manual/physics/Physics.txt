@@ -1,0 +1,56 @@
+// Unity Manual: Physics
+// Section: Physics
+// URL: https://docs.unity3d.com/Manual/PhysicsSection.html
+
+// Content:
+Physics
+Terrain and the Terrain Tools package
+Built-in 3D physics
+Physics
+Simulate physics in your Unity Project to ensure that the objects correctly accelerate and respond to
+collisions
+A collision occurs when the physics engine detects that the colliders of two GameObjects make contact or overlap, when at least one has a Rigidbody component and is in motion.
+More info
+See in
+Glossary
+, gravity, and various other forces.
+Unity provides different
+physics engine
+integrations which you can use according to your Project needs: 3D, 2D, object-oriented, or data-oriented. To learn more, refer to
+Physics integrations in Unity
+.
+Topic
+Description
+Built-in 3D physics
+Use this integration of the Nvidia PhysX engine in object-oriented 3D projects.
+Physics integrations in Unity
+An overview of the different physics integrations available in the Unity engine.
+Disable and strip the physics integration from your project
+Disable and strip the physics engine integration from your project to reduce the build size.
+Additional resources and examples
+💡
+Resources
+:
+Physics tutorials
+📺
+Video
+:
+Performance optimization tips: Physics in Unity
+👥
+Community
+:
+Join the conversation on Unity Discussions
+Terrain and the Terrain Tools package
+Built-in 3D physics
+Copyright ©2005-2026 Unity Technologies. All rights reserved. Built from 6000.3.5f1 (9e864d5a2e6f). Built on: 2026-01-09.
+Tutorials
+Community Answers
+Knowledge Base
+Forums
+Asset Store
+Terms of use
+Legal
+Privacy Policy
+Cookies
+Do Not Sell or Share My Personal Information
+Your Privacy Choices (Cookie Settings)

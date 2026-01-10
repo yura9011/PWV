@@ -1,0 +1,8 @@
+// Unity Class: Screen
+// Documentation: https://docs.unity3d.com/ScriptReference/Screen.html
+
+// Description: Provides access to display information.
+
+// Pseudo-code representation of Screen
+public class Screen {
+}

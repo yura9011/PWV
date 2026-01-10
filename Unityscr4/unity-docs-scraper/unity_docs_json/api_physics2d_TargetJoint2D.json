@@ -1,0 +1,88 @@
+{
+  "name": "api_physics2d_TargetJoint2D",
+  "type": "api",
+  "description": "The joint attempts to move a Rigidbody2D to a specific target position.",
+  "content": "// Unity Class: TargetJoint2D\n// Documentation: https://docs.unity3d.com/ScriptReference/TargetJoint2D.html\n\n// Description: The joint attempts to move a Rigidbody2D to a specific target position.\n\n// Properties:\n// - anchor: The local-space anchor on the rigid-body the joint is attached to.\n// - autoConfigureTarget: Should the target be calculated automatically?\n// - dampingRatio: The amount by which the target spring force is reduced in proportion to the movement speed.\n// - frequency: The frequency at which the target spring oscillates around the target position.\n// - maxForce: The maximum force that can be generated when trying to maintain the target joint constraint.\n// - target: The world-space position that the joint will attempt to move the body to.\n\n// Methods:\n// - BroadcastMessage: Calls the method named methodName on every MonoBehaviour in this game object or any of its children.\n// - CompareTag: Checks the GameObject's tag against the defined tag.\n// - GetComponent: Gets a reference to a component of type T on the same GameObject as the component specified.\n// - GetComponentInChildren: Gets a reference to a component of type T on the same GameObject as the component specified, or any \n// - GetComponentIndex: Gets the index of the component on its parent GameObject.\n// - GetComponentInParent: Gets a reference to a component of type T on the same GameObject as the component specified, or any \n// - GetComponents: Gets references to all components of type T on the same GameObject as the component specified.\n// - GetComponentsInChildren: Gets references to all components of type T on the same GameObject as the component specified, and a\n// - GetComponentsInParent: Gets references to all components of type T on the same GameObject as the component specified, and a\n// - SendMessage: Calls the method named methodName on every MonoBehaviour in this game object.\n// - SendMessageUpwards: Calls the method named methodName on every MonoBehaviour in this game object and on every ancestor o\n// - TryGetComponent: Gets the component of the specified type, if it exists.\n// - GetReactionForce: Gets the reaction force of the joint given the specified timeStep.\n// - GetReactionTorque: Gets the reaction torque of the joint given the specified timeStep.\n// - GetInstanceID: Gets the instance ID of the object.\n// - ToString: Returns the name of the object.\n// - Destroy: Removes a GameObject, component, or asset.\n// - DestroyImmediate: Destroys the specified object immediately. Use with caution and in Edit mode only.\n// - DontDestroyOnLoad: Do not destroy the target Object when loading a new Scene.\n// - FindAnyObjectByType: Retrieves any active loaded object of Type type.\n// - FindFirstObjectByType: Retrieves the first active loaded object of Type type.\n// - FindObjectsByType: Retrieves a list of all loaded objects of Type type.\n// - Instantiate: Clones the object original and returns the clone.\n// - InstantiateAsync: Captures a snapshot of the original object (that must be related to some GameObject) and returns the\n\npublic class TargetJoint2D {\n    public var anchor;\n    public var autoConfigureTarget;\n    public var dampingRatio;\n    public var frequency;\n    public var maxForce;\n    public var target;\n    public void BroadcastMessage();\n    public void CompareTag();\n    public void GetComponent();\n    public void GetComponentInChildren();\n    public void GetComponentIndex();\n    public void GetComponentInParent();\n    public void GetComponents();\n    public void GetComponentsInChildren();\n    public void GetComponentsInParent();\n    public void SendMessage();\n    public void SendMessageUpwards();\n    public void TryGetComponent();\n    public void GetReactionForce();\n    public void GetReactionTorque();\n    public void GetInstanceID();\n}",
+  "properties": [
+    {
+      "name": "anchor",
+      "description": "The local-space anchor on the rigid-body the joint is attached to."
+    },
+    {
+      "name": "autoConfigureTarget",
+      "description": "Should the target be calculated automatically?"
+    },
+    {
+      "name": "dampingRatio",
+      "description": "The amount by which the target spring force is reduced in proportion to the movement speed."
+    },
+    {
+      "name": "frequency",
+      "description": "The frequency at which the target spring oscillates around the target position."
+    },
+    {
+      "name": "maxForce",
+      "description": "The maximum force that can be generated when trying to maintain the target joint constraint."
+    },
+    {
+      "name": "target",
+      "description": "The world-space position that the joint will attempt to move the body to."
+    },
+    {
+      "name": "BroadcastMessage",
+      "description": "Calls the method named methodName on every MonoBehaviour in this game object or any of its children."
+    },
+    {
+      "name": "CompareTag",
+      "description": "Checks the GameObject's tag against the defined tag."
+    },
+    {
+      "name": "GetComponent",
+      "description": "Gets a reference to a component of type T on the same GameObject as the component specified."
+    },
+    {
+      "name": "GetComponentInChildren",
+      "description": "Gets a reference to a component of type T on the same GameObject as the component specified, or any "
+    },
+    {
+      "name": "GetComponentIndex",
+      "description": "Gets the index of the component on its parent GameObject."
+    },
+    {
+      "name": "GetComponentInParent",
+      "description": "Gets a reference to a component of type T on the same GameObject as the component specified, or any "
+    },
+    {
+      "name": "GetComponents",
+      "description": "Gets references to all components of type T on the same GameObject as the component specified."
+    },
+    {
+      "name": "GetComponentsInChildren",
+      "description": "Gets references to all components of type T on the same GameObject as the component specified, and a"
+    },
+    {
+      "name": "GetComponentsInParent",
+      "description": "Gets references to all components of type T on the same GameObject as the component specified, and a"
+    },
+    {
+      "name": "SendMessage",
+      "description": "Calls the method named methodName on every MonoBehaviour in this game object."
+    },
+    {
+      "name": "SendMessageUpwards",
+      "description": "Calls the method named methodName on every MonoBehaviour in this game object and on every ancestor o"
+    },
+    {
+      "name": "TryGetComponent",
+      "description": "Gets the component of the specified type, if it exists."
+    },
+    {
+      "name": "GetReactionForce",
+      "description": "Gets the reaction force of the joint given the specified timeStep."
+    },
+    {
+      "name": "GetReactionTorque",
+      "description": "Gets the reaction torque of the joint given the specified timeStep."
+    }
+  ]
+}

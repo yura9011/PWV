@@ -1,0 +1,33 @@
+// Unity Class: AnimatorClipInfo
+// Documentation: https://docs.unity3d.com/ScriptReference/AnimatorClipInfo.html
+
+// Description: Information about clip being played and blended by the Animator.
+
+// Properties:
+// - clip: Returns the animation clip played by the Animator.
+// - weight: Returns the blending weight used by the Animator to blend this clip.
+
+// Code Examples:
+// Example 1:
+//   //Create a GameObject and attach an Animator component (Click the Add Component button in the Inspector of the GameObject and go to Miscellaneous>Animator). Set up the Animator how you would like.
+//   //Attach this script to the GameObject//This script outputs the current clip from the Animator to the console
+//   using UnityEngine;public class AnimationClipInfoClipExample : MonoBehaviour
+//   {
+//       Animator m_Animator;
+//       AnimatorClipInfo[] m_AnimatorClipInfo;    // Use this for initialization
+//       void Start()
+//       {
+//           //Fetch the Animator component from the GameObject
+//           m_Animator = GetComponent<Animator>();
+//           //Get the animator clip information from the Animator Controller
+//           m_AnimatorClipInfo = m_Animator.GetCurrentAnimatorClipInfo(0);
+//           //Output the name of the starting clip
+//           Debug.Log("Starting clip : " + m_AnimatorClipInfo[0].clip);
+//       }
+//   }
+
+// Pseudo-code representation of AnimatorClipInfo
+public class AnimatorClipInfo {
+    public var clip; // Returns the animation clip played by the Animator.
+    public var weight; // Returns the blending weight used by the Animator to blend this clip.
+}

@@ -1,0 +1,60 @@
+{
+  "name": "api_ui_Font",
+  "type": "api",
+  "description": "Script interface for font assets.",
+  "content": "// Unity Class: Font\n// Documentation: https://docs.unity3d.com/ScriptReference/Font.html\n\n// Description: Script interface for font assets.\n\n// Properties:\n// - ascent: The ascent of the font.\n// - characterInfo: Access an array of all characters contained in the font texture.\n// - dynamic: Is the font a dynamic font.\n// - fontSize: The default size of the font.\n// - lineHeight: The line height of the font.\n// - material: The material used for the font display.\n\n// Methods:\n// - GetCharacterInfo: Get rendering info for a specific character.\n// - HasCharacter: Does this font have a specific character?\n// - RequestCharactersInTexture: Request characters to be added to the font texture (dynamic fonts only).\n// - CreateDynamicFontFromOSFont: Creates a Font object which lets you render a font installed on the user machine.\n// - GetMaxVertsForString: Returns the maximum number of verts that the text generator may return for a given string.\n// - GetOSInstalledFontNames: Get names of fonts installed on the machine.\n// - GetPathsToOSFonts: Gets the file paths of the fonts that are installed on the operating system.\n\npublic class Font {\n    public var ascent;\n    public var characterInfo;\n    public var dynamic;\n    public var fontSize;\n    public var lineHeight;\n    public var material;\n    public void GetCharacterInfo();\n    public void HasCharacter();\n    public void RequestCharactersInTexture();\n    public void CreateDynamicFontFromOSFont();\n    public void GetMaxVertsForString();\n    public void GetOSInstalledFontNames();\n    public void GetPathsToOSFonts();\n}",
+  "properties": [
+    {
+      "name": "ascent",
+      "description": "The ascent of the font."
+    },
+    {
+      "name": "characterInfo",
+      "description": "Access an array of all characters contained in the font texture."
+    },
+    {
+      "name": "dynamic",
+      "description": "Is the font a dynamic font."
+    },
+    {
+      "name": "fontSize",
+      "description": "The default size of the font."
+    },
+    {
+      "name": "lineHeight",
+      "description": "The line height of the font."
+    },
+    {
+      "name": "material",
+      "description": "The material used for the font display."
+    },
+    {
+      "name": "GetCharacterInfo",
+      "description": "Get rendering info for a specific character."
+    },
+    {
+      "name": "HasCharacter",
+      "description": "Does this font have a specific character?"
+    },
+    {
+      "name": "RequestCharactersInTexture",
+      "description": "Request characters to be added to the font texture (dynamic fonts only)."
+    },
+    {
+      "name": "CreateDynamicFontFromOSFont",
+      "description": "Creates a Font object which lets you render a font installed on the user machine."
+    },
+    {
+      "name": "GetMaxVertsForString",
+      "description": "Returns the maximum number of verts that the text generator may return for a given string."
+    },
+    {
+      "name": "GetOSInstalledFontNames",
+      "description": "Get names of fonts installed on the machine."
+    },
+    {
+      "name": "GetPathsToOSFonts",
+      "description": "Gets the file paths of the fonts that are installed on the operating system."
+    }
+  ]
+}

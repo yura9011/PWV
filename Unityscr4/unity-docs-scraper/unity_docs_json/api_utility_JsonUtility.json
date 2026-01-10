@@ -1,0 +1,20 @@
+{
+  "name": "api_utility_JsonUtility",
+  "type": "api",
+  "description": "Provides functions for converting between objects and JSON data.",
+  "content": "// Unity Class: JsonUtility\n// Documentation: https://docs.unity3d.com/ScriptReference/JsonUtility.html\n\n// Description: Provides functions for converting between objects and JSON data.\n\n// Methods:\n// - FromJson: Create an object from its JSON representation.\n// - FromJsonOverwrite: Overwrite data in an object by reading from its JSON representation.\n// - ToJson: Generate a JSON representation of the public fields of an object.\n\n// Code Examples:\n// Example 1:\n//   using UnityEngine;\n\n//   using System;\n\n//   using System.Collections.Generic;[Serializable]\n\n//   public class GameState\n\n//   {\n\n//       public int Lives;\n\n//       public int Level;\n\n//       public string CharacterName;\n\n//       public List<string> ItemsCarried;\n\n//    \n\n//       public const string PlayerPrefsKeyName = \"SavedGameState\";    public void SaveToPlayerPrefs()\n\n//       {\n\n//           // Convert this GameState instance to a JSON string\n\n//           string json = JsonUtility.ToJson(this);        // Save the converted JSON into the PlayerPrefs\n\n//           PlayerPrefs.SetString(PlayerPrefsKeyName, json);\n\n//           PlayerPrefs.Save();\n\n//       }    public static GameState CreateFromPlayerPrefs()\n\n//       {\n\n//           // If the game was never saved before, the key will not exist; in this case return null\n\n//           if(!PlayerPrefs.HasKey(PlayerPrefsKeyName))\n\n\npublic class JsonUtility {\n    public void FromJson(); // Create an object from its JSON representation.\n    public void FromJsonOverwrite(); // Overwrite data in an object by reading from its JSON representation.\n    public void ToJson(); // Generate a JSON representation of the public fields of an object.\n}",
+  "properties": [
+    {
+      "name": "FromJson",
+      "description": "Create an object from its JSON representation."
+    },
+    {
+      "name": "FromJsonOverwrite",
+      "description": "Overwrite data in an object by reading from its JSON representation."
+    },
+    {
+      "name": "ToJson",
+      "description": "Generate a JSON representation of the public fields of an object."
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "name": "api_animation_Animation",
+  "type": "api",
+  "description": "The animation component is used to play back animations.",
+  "content": "// Unity Class: Animation\n// Documentation: https://docs.unity3d.com/ScriptReference/Animation.html\n\n// Description: The animation component is used to play back animations.\n\n// Properties:\n// - animatePhysics: When enabled, the physics system uses animated transforms from GameObjects with kinematic Rigidbody components to influence other GameObjects.\n// - clip: The default animation.\n// - cullingType: Controls culling of this Animation component.\n// - isPlaying: Is an animation currently being played?\n// - localBounds: AABB of this Animation animation component in local space.\n// - playAutomatically: Should the default animation clip (the Animation.clip property) automatically start playing on startup?\n// - this[string]: Returns the animation state named name.\n// - updateMode: Specifies the update mode of the Animation.\n// - wrapMode: How should time beyond the playback range of the clip be treated?\n\n// Methods:\n// - AddClip(): Adds a clip to the animation with name newName.\n// - Blend(): Blends the animation named animation towards targetWeight over the next time seconds.\n// - CrossFade(): Fades in the animation with the name animation over a period of time defined by fadeLength.\n// - CrossFadeQueued(): Cross fades an animation after previous animations has finished playing.\n// - GetClipCount(): Get the number of clips currently assigned to this animation.\n// - IsPlaying(): Is the animation named name playing?\n// - Play(): Plays an animation without blending.\n// - PlayQueued(): Plays an animation after previous animations has finished playing.\n// - RemoveClip(): Remove clip from the animation list.\n// - Rewind(): Rewinds the animation named name.\n// - Sample(): Samples animations at the current state.\n// - Stop(): Stops all playing animations that were started with this Animation.\n\n// Code Examples:\n// Example 1:\n//   using UnityEngine;\n\n//   using System.Collections;public class ExampleClass : MonoBehaviour\n\n//   {\n\n//       public Animation anim;    void Start()\n\n//       {\n\n//           anim = GetComponent<Animation>();\n\n//           foreach (AnimationState state in anim)\n\n//           {\n\n//               state.speed = 0.5F;\n\n//           }\n\n//       }\n\n//   }\n\n// Pseudo-code representation of Animation\npublic class Animation {\n    public var animatePhysics; // When enabled, the physics system uses animated transforms from GameObjects with kinematic Rigidbody components to influence other GameObjects.\n    public var clip; // The default animation.\n    public var cullingType; // Controls culling of this Animation component.\n    public var isPlaying; // Is an animation currently being played?\n    public var localBounds; // AABB of this Animation animation component in local space.\n    public var playAutomatically; // Should the default animation clip (the Animation.clip property) automatically start playing on startup?\n    public var this[string]; // Returns the animation state named name.\n    public var updateMode; // Specifies the update mode of the Animation.\n    public var wrapMode; // How should time beyond the playback range of the clip be treated?\n    public void AddClip(); // Adds a clip to the animation with name newName.\n    public void Blend(); // Blends the animation named animation towards targetWeight over the next time seconds.\n    public void CrossFade(); // Fades in the animation with the name animation over a period of time defined by fadeLength.\n    public void CrossFadeQueued(); // Cross fades an animation after previous animations has finished playing.\n    public void GetClipCount(); // Get the number of clips currently assigned to this animation.\n    public void IsPlaying(); // Is the animation named name playing?\n    public void Play(); // Plays an animation without blending.\n    public void PlayQueued(); // Plays an animation after previous animations has finished playing.\n    public void RemoveClip(); // Remove clip from the animation list.\n    public void Rewind(); // Rewinds the animation named name.\n    public void Sample(); // Samples animations at the current state.\n    public void Stop(); // Stops all playing animations that were started with this Animation.\n}",
+  "properties": [
+    {
+      "name": "animatePhysics",
+      "description": "When enabled, the physics system uses animated transforms from GameObjects with kinematic Rigidbody components to influence other GameObjects."
+    },
+    {
+      "name": "clip",
+      "description": "The default animation."
+    },
+    {
+      "name": "cullingType",
+      "description": "Controls culling of this Animation component."
+    },
+    {
+      "name": "isPlaying",
+      "description": "Is an animation currently being played?"
+    },
+    {
+      "name": "localBounds",
+      "description": "AABB of this Animation animation component in local space."
+    },
+    {
+      "name": "playAutomatically",
+      "description": "Should the default animation clip (the Animation.clip property) automatically start playing on startup?"
+    },
+    {
+      "name": "updateMode",
+      "description": "Specifies the update mode of the Animation."
+    },
+    {
+      "name": "wrapMode",
+      "description": "How should time beyond the playback range of the clip be treated?"
+    }
+  ]
+}

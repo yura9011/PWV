@@ -1,0 +1,74 @@
+// Unity Manual: Physics2D
+// Section: Physics2D
+// URL: https://docs.unity3d.com/Manual/Physics2DReference.html
+
+// Content:
+2D game development
+2D physics
+Grid component reference
+Rigidbody 2D
+2D physics
+Unity’s physics system lets you handle 2D physics to make use of optimizations available with 2D. You can use the following physics 2D components with Unity:
+Page
+Description
+Rigidbody 2D
+Learn how
+Rigidbody
+A component that allows a GameObject to be affected by simulated gravity and other forces.
+More info
+See in
+Glossary
+2D works.
+Collider 2D
+Understand the types of
+Collider
+An invisible shape that is used to handle physical collisions for an object. A collider doesn’t need to be exactly the same shape as the object’s mesh - a rough approximation is often more efficient and indistinguishable in gameplay.
+More info
+See in
+Glossary
+2D components available to use with Rigidbody 2D.
+Effectors 2D
+Approaches and techniques to working with the forces of physics when
+GameObject
+The fundamental object in Unity scenes, which can represent characters, props, scenery, cameras, waypoints, and more. A GameObject’s functionality is defined by the Components attached to it.
+More info
+See in
+Glossary
+colliders are in contact.
+2D joints
+Understand the types of 2D
+Joints
+A physics component allowing a dynamic connection between Rigidbody components, usually allowing some degree of movement such as a hinge.
+More info
+See in
+Glossary
+available to use with 2D GameObjects.
+Physics 2D Profiler
+Approaches to analyzing the performance of 2D physics in your application.
+Constant Force 2D reference
+Explore the properties that control
+constant forces
+A simple component for adding a constant force or torque to game objects with a Rigidbody.
+More info
+See in
+Glossary
+applied to a Rigidbody 2D.
+Physics Material 2D reference
+Explore the properties that control the friction and bounce between colliding 2D physics objects.
+Additional resources
+Physics 2D Manager
+Physics section
+Grid component reference
+Rigidbody 2D
+Copyright ©2005-2026 Unity Technologies. All rights reserved. Built from 6000.3.5f1 (9e864d5a2e6f). Built on: 2026-01-09.
+Tutorials
+Community Answers
+Knowledge Base
+Forums
+Asset Store
+Terms of use
+Legal
+Privacy Policy
+Cookies
+Do Not Sell or Share My Personal Information
+Your Privacy Choices (Cookie Settings)

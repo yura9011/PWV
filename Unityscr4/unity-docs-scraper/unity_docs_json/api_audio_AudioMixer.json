@@ -1,0 +1,72 @@
+{
+  "name": "api_audio_AudioMixer",
+  "type": "api",
+  "description": "AudioMixer asset.",
+  "content": "// Unity Class: AudioMixer\n// Documentation: https://docs.unity3d.com/ScriptReference/Audio.AudioMixer.html\n\n// Description: AudioMixer asset.\n\n// Properties:\n// - outputAudioMixerGroup: Routing target.\n// - updateMode: How time should progress for this AudioMixer. Used during Snapshot transitions.\n\n// Methods:\n// - ClearFloat: Resets an exposed parameter to its initial value.\n// - FindMatchingGroups: Connected groups in the mixer form a path from the mixer's master group to the leaves. This path has\n// - FindSnapshot: The name must be an exact match.\n// - GetFloat: Returns the value of the exposed parameter specified. If the parameter doesn't exist the function re\n// - SetFloat: AudioMixer.SetFloat sets the value of the exposed parameter specified. Once you call this function, \n// - TransitionToSnapshots: Transitions to a weighted mixture of the snapshots specified. This can be used for games that specif\n// - Destroy: Removes a GameObject, component, or asset.\n// - DestroyImmediate: Destroys the specified object immediately. Use with caution and in Edit mode only.\n// - DontDestroyOnLoad: Do not destroy the target Object when loading a new Scene.\n// - FindAnyObjectByType: Retrieves any active loaded object of Type type.\n// - FindFirstObjectByType: Retrieves the first active loaded object of Type type.\n// - FindObjectsByType: Retrieves a list of all loaded objects of Type type.\n// - Instantiate: Clones the object original and returns the clone.\n// - InstantiateAsync: Captures a snapshot of the original object (that must be related to some GameObject) and returns the\n\npublic class AudioMixer {\n    public var outputAudioMixerGroup;\n    public var updateMode;\n    public void ClearFloat();\n    public void FindMatchingGroups();\n    public void FindSnapshot();\n    public void GetFloat();\n    public void SetFloat();\n    public void TransitionToSnapshots();\n    public void Destroy();\n    public void DestroyImmediate();\n    public void DontDestroyOnLoad();\n    public void FindAnyObjectByType();\n}",
+  "properties": [
+    {
+      "name": "outputAudioMixerGroup",
+      "description": "Routing target."
+    },
+    {
+      "name": "updateMode",
+      "description": "How time should progress for this AudioMixer. Used during Snapshot transitions."
+    },
+    {
+      "name": "ClearFloat",
+      "description": "Resets an exposed parameter to its initial value."
+    },
+    {
+      "name": "FindMatchingGroups",
+      "description": "Connected groups in the mixer form a path from the mixer's master group to the leaves. This path has"
+    },
+    {
+      "name": "FindSnapshot",
+      "description": "The name must be an exact match."
+    },
+    {
+      "name": "GetFloat",
+      "description": "Returns the value of the exposed parameter specified. If the parameter doesn't exist the function re"
+    },
+    {
+      "name": "SetFloat",
+      "description": "AudioMixer.SetFloat sets the value of the exposed parameter specified. Once you call this function, "
+    },
+    {
+      "name": "TransitionToSnapshots",
+      "description": "Transitions to a weighted mixture of the snapshots specified. This can be used for games that specif"
+    },
+    {
+      "name": "Destroy",
+      "description": "Removes a GameObject, component, or asset."
+    },
+    {
+      "name": "DestroyImmediate",
+      "description": "Destroys the specified object immediately. Use with caution and in Edit mode only."
+    },
+    {
+      "name": "DontDestroyOnLoad",
+      "description": "Do not destroy the target Object when loading a new Scene."
+    },
+    {
+      "name": "FindAnyObjectByType",
+      "description": "Retrieves any active loaded object of Type type."
+    },
+    {
+      "name": "FindFirstObjectByType",
+      "description": "Retrieves the first active loaded object of Type type."
+    },
+    {
+      "name": "FindObjectsByType",
+      "description": "Retrieves a list of all loaded objects of Type type."
+    },
+    {
+      "name": "Instantiate",
+      "description": "Clones the object original and returns the clone."
+    },
+    {
+      "name": "InstantiateAsync",
+      "description": "Captures a snapshot of the original object (that must be related to some GameObject) and returns the"
+    }
+  ]
+}

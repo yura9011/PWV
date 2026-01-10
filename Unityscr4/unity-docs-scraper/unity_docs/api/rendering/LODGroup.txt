@@ -1,0 +1,49 @@
+// Unity Class: LODGroup
+// Documentation: https://docs.unity3d.com/ScriptReference/LODGroup.html
+
+// Description: LODGroup lets you group multiple Renderers into LOD levels.
+
+// Properties:
+// - animateCrossFading: Specify if the cross-fading should be animated by time. The animation duration is specified globally
+// - enabled: Allows you to enable or disable the LODGroup.
+// - fadeMode: The LOD fade mode used.
+// - lastLODBillboard: Specify whether the last LOD level is a BillboardRenderer.
+// - localReferencePoint: The local reference point against which the LOD distance is calculated.
+// - lodCount: The number of LOD levels.
+// - size: The size of the LOD object in local space.
+
+// Methods:
+// - ForceLOD: Disable automatic LOD selection based on camera distance by forcing a specific LOD level, or revert 
+// - GetLODs: Returns the array of LODs.
+// - RecalculateBounds: Recalculate the bounding region for the LODGroup. This process can be slow. To avoid lag, call this 
+// - SetLODs: Set the LODs for the LOD group. This removes any existing LODs configured on the LODGroup.
+// - Destroy: Removes a GameObject, component, or asset.
+// - DestroyImmediate: Destroys the specified object immediately. Use with caution and in Edit mode only.
+// - DontDestroyOnLoad: Do not destroy the target Object when loading a new Scene.
+// - FindAnyObjectByType: Retrieves any active loaded object of Type type.
+// - FindFirstObjectByType: Retrieves the first active loaded object of Type type.
+// - FindObjectsByType: Retrieves a list of all loaded objects of Type type.
+// - Instantiate: Clones the object original and returns the clone.
+// - InstantiateAsync: Captures a snapshot of the original object (that must be related to some GameObject) and returns the
+
+public class LODGroup {
+    public var animateCrossFading;
+    public var enabled;
+    public var fadeMode;
+    public var lastLODBillboard;
+    public var localReferencePoint;
+    public var lodCount;
+    public var size;
+    public void ForceLOD();
+    public void GetLODs();
+    public void RecalculateBounds();
+    public void SetLODs();
+    public void Destroy();
+    public void DestroyImmediate();
+    public void DontDestroyOnLoad();
+    public void FindAnyObjectByType();
+    public void FindFirstObjectByType();
+    public void FindObjectsByType();
+    public void Instantiate();
+    public void InstantiateAsync();
+}

@@ -1,0 +1,7 @@
+{
+  "name": "api_utility_PlayerPrefs",
+  "type": "api",
+  "description": "PlayerPrefs is a class that stores Player preferences between game sessions. It can store string, float and integer values into the user's platform registry.",
+  "content": "// Unity Class: PlayerPrefs\n// Documentation: https://docs.unity3d.com/ScriptReference/PlayerPrefs.html\n\n// Description: PlayerPrefs is a class that stores Player preferences between game sessions. It can store string, float and integer values into the user's platform registry.\n\n// Pseudo-code representation of PlayerPrefs\npublic class PlayerPrefs {\n}",
+  "properties": []
+}

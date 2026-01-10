@@ -1,0 +1,7 @@
+{
+  "name": "api_utility_SystemInfo",
+  "type": "api",
+  "description": "Access system and hardware information.",
+  "content": "// Unity Class: SystemInfo\n// Documentation: https://docs.unity3d.com/ScriptReference/SystemInfo.html\n\n// Description: Access system and hardware information.\n\n// Pseudo-code representation of SystemInfo\npublic class SystemInfo {\n}",
+  "properties": []
+}

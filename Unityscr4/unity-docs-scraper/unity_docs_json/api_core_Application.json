@@ -1,0 +1,7 @@
+{
+  "name": "api_core_Application",
+  "type": "api",
+  "description": "Provides access to application runtime data.",
+  "content": "// Unity Class: Application\n// Documentation: https://docs.unity3d.com/ScriptReference/Application.html\n\n// Description: Provides access to application runtime data.\n\n// Pseudo-code representation of Application\npublic class Application {\n}",
+  "properties": []
+}

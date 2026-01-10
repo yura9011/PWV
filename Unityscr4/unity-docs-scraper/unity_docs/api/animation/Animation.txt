@@ -1,0 +1,69 @@
+// Unity Class: Animation
+// Documentation: https://docs.unity3d.com/ScriptReference/Animation.html
+
+// Description: The animation component is used to play back animations.
+
+// Properties:
+// - animatePhysics: When enabled, the physics system uses animated transforms from GameObjects with kinematic Rigidbody components to influence other GameObjects.
+// - clip: The default animation.
+// - cullingType: Controls culling of this Animation component.
+// - isPlaying: Is an animation currently being played?
+// - localBounds: AABB of this Animation animation component in local space.
+// - playAutomatically: Should the default animation clip (the Animation.clip property) automatically start playing on startup?
+// - this[string]: Returns the animation state named name.
+// - updateMode: Specifies the update mode of the Animation.
+// - wrapMode: How should time beyond the playback range of the clip be treated?
+
+// Methods:
+// - AddClip(): Adds a clip to the animation with name newName.
+// - Blend(): Blends the animation named animation towards targetWeight over the next time seconds.
+// - CrossFade(): Fades in the animation with the name animation over a period of time defined by fadeLength.
+// - CrossFadeQueued(): Cross fades an animation after previous animations has finished playing.
+// - GetClipCount(): Get the number of clips currently assigned to this animation.
+// - IsPlaying(): Is the animation named name playing?
+// - Play(): Plays an animation without blending.
+// - PlayQueued(): Plays an animation after previous animations has finished playing.
+// - RemoveClip(): Remove clip from the animation list.
+// - Rewind(): Rewinds the animation named name.
+// - Sample(): Samples animations at the current state.
+// - Stop(): Stops all playing animations that were started with this Animation.
+
+// Code Examples:
+// Example 1:
+//   using UnityEngine;
+//   using System.Collections;public class ExampleClass : MonoBehaviour
+//   {
+//       public Animation anim;    void Start()
+//       {
+//           anim = GetComponent<Animation>();
+//           foreach (AnimationState state in anim)
+//           {
+//               state.speed = 0.5F;
+//           }
+//       }
+//   }
+
+// Pseudo-code representation of Animation
+public class Animation {
+    public var animatePhysics; // When enabled, the physics system uses animated transforms from GameObjects with kinematic Rigidbody components to influence other GameObjects.
+    public var clip; // The default animation.
+    public var cullingType; // Controls culling of this Animation component.
+    public var isPlaying; // Is an animation currently being played?
+    public var localBounds; // AABB of this Animation animation component in local space.
+    public var playAutomatically; // Should the default animation clip (the Animation.clip property) automatically start playing on startup?
+    public var this[string]; // Returns the animation state named name.
+    public var updateMode; // Specifies the update mode of the Animation.
+    public var wrapMode; // How should time beyond the playback range of the clip be treated?
+    public void AddClip(); // Adds a clip to the animation with name newName.
+    public void Blend(); // Blends the animation named animation towards targetWeight over the next time seconds.
+    public void CrossFade(); // Fades in the animation with the name animation over a period of time defined by fadeLength.
+    public void CrossFadeQueued(); // Cross fades an animation after previous animations has finished playing.
+    public void GetClipCount(); // Get the number of clips currently assigned to this animation.
+    public void IsPlaying(); // Is the animation named name playing?
+    public void Play(); // Plays an animation without blending.
+    public void PlayQueued(); // Plays an animation after previous animations has finished playing.
+    public void RemoveClip(); // Remove clip from the animation list.
+    public void Rewind(); // Rewinds the animation named name.
+    public void Sample(); // Samples animations at the current state.
+    public void Stop(); // Stops all playing animations that were started with this Animation.
+}

@@ -1,0 +1,88 @@
+{
+  "name": "api_math_Matrix4x4",
+  "type": "api",
+  "description": "A standard 4x4 transformation matrix.",
+  "content": "// Unity Class: Matrix4x4\n// Documentation: https://docs.unity3d.com/ScriptReference/Matrix4x4.html\n\n// Description: A standard 4x4 transformation matrix.\n\n// Properties:\n// - decomposeProjection: This property takes a projection matrix and returns the six plane coordinates that define a projecti\n// - determinant: The determinant of the matrix. (Read Only)\n// - inverse: The inverse of this matrix. (Read Only)\n// - isIdentity: Checks whether this is an identity matrix. (Read Only)\n// - lossyScale: Attempts to get a scale value from the matrix. (Read Only)\n// - rotation: Attempts to get a rotation quaternion from this matrix.\n// - this[int,int]: Access element at [row, column].\n// - transpose: Returns the transpose of this matrix (Read Only).\n\n// Methods:\n// - GetColumn: Get a column of the matrix.\n// - GetPosition: Get position vector from the matrix.\n// - GetRow: Returns a row of the matrix.\n// - MultiplyPoint: Transforms a position by this matrix (generic).\n// - MultiplyPoint3x4: Transforms a position by this matrix (fast).\n// - MultiplyVector: Transforms a direction by this matrix.\n// - SetColumn: Sets a column of the matrix.\n// - SetRow: Sets a row of the matrix.\n// - SetTRS: Sets this matrix to a translation, rotation and scaling matrix.\n// - ToString: Returns a formatted string for this matrix.\n// - TransformPlane: Returns a plane that is transformed in space.\n// - ValidTRS: Checks if this matrix is a valid transform matrix.\n// - Frustum: This function returns a projection matrix with viewing frustum that has a near plane defined by the \n// - Inverse3DAffine: Computes the inverse of a 3D affine matrix.\n// - LookAt: Create a \"look at\" matrix.\n// - Ortho: Create an orthogonal projection matrix.\n// - Perspective: Create a perspective projection matrix.\n// - Rotate: Creates a rotation matrix.\n// - Scale: Creates a scaling matrix.\n// - Translate: Creates a translation matrix.\n// - TRS: Creates a translation, rotation and scaling matrix.\n\npublic class Matrix4x4 {\n    public var decomposeProjection;\n    public var determinant;\n    public var inverse;\n    public var isIdentity;\n    public var lossyScale;\n    public var rotation;\n    public var this[int,int];\n    public var transpose;\n    public void GetColumn();\n    public void GetPosition();\n    public void GetRow();\n    public void MultiplyPoint();\n    public void MultiplyPoint3x4();\n    public void MultiplyVector();\n    public void SetColumn();\n    public void SetRow();\n    public void SetTRS();\n    public void ToString();\n    public void TransformPlane();\n    public void ValidTRS();\n    public void Frustum();\n    public void Inverse3DAffine();\n    public void LookAt();\n}",
+  "properties": [
+    {
+      "name": "decomposeProjection",
+      "description": "This property takes a projection matrix and returns the six plane coordinates that define a projecti"
+    },
+    {
+      "name": "determinant",
+      "description": "The determinant of the matrix. (Read Only)"
+    },
+    {
+      "name": "inverse",
+      "description": "The inverse of this matrix. (Read Only)"
+    },
+    {
+      "name": "isIdentity",
+      "description": "Checks whether this is an identity matrix. (Read Only)"
+    },
+    {
+      "name": "lossyScale",
+      "description": "Attempts to get a scale value from the matrix. (Read Only)"
+    },
+    {
+      "name": "rotation",
+      "description": "Attempts to get a rotation quaternion from this matrix."
+    },
+    {
+      "name": "transpose",
+      "description": "Returns the transpose of this matrix (Read Only)."
+    },
+    {
+      "name": "GetColumn",
+      "description": "Get a column of the matrix."
+    },
+    {
+      "name": "GetPosition",
+      "description": "Get position vector from the matrix."
+    },
+    {
+      "name": "GetRow",
+      "description": "Returns a row of the matrix."
+    },
+    {
+      "name": "MultiplyPoint",
+      "description": "Transforms a position by this matrix (generic)."
+    },
+    {
+      "name": "MultiplyPoint3x4",
+      "description": "Transforms a position by this matrix (fast)."
+    },
+    {
+      "name": "MultiplyVector",
+      "description": "Transforms a direction by this matrix."
+    },
+    {
+      "name": "SetColumn",
+      "description": "Sets a column of the matrix."
+    },
+    {
+      "name": "SetRow",
+      "description": "Sets a row of the matrix."
+    },
+    {
+      "name": "SetTRS",
+      "description": "Sets this matrix to a translation, rotation and scaling matrix."
+    },
+    {
+      "name": "ToString",
+      "description": "Returns a formatted string for this matrix."
+    },
+    {
+      "name": "TransformPlane",
+      "description": "Returns a plane that is transformed in space."
+    },
+    {
+      "name": "ValidTRS",
+      "description": "Checks if this matrix is a valid transform matrix."
+    },
+    {
+      "name": "Frustum",
+      "description": "This function returns a projection matrix with viewing frustum that has a near plane defined by the "
+    }
+  ]
+}

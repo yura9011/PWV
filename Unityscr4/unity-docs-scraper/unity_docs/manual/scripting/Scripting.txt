@@ -1,0 +1,110 @@
+// Unity Manual: Scripting
+// Section: Scripting
+// URL: https://docs.unity3d.com/Manual/ScriptingSection.html
+
+// Content:
+Programming in Unity
+Full Screen Pass Renderer Feature reference for URP
+Get started with programming in Unity
+Programming in Unity
+Programming in Unity refers to authoring your project’s functionality in code rather than through the Unity Editor UI. This allows you to go beyond what can be done in the Editor UI alone. Interacting directly with the public Unity APIs allows for finer control and a greater degree of customization.
+Learning to program in particular languages is beyond the scope of this section. However, there are many books, tutorials, and other resources for learning how to program with Unity. Refer to
+learn
+for further details.
+Topic
+Description
+Get started with programming in Unity
+Get started with creating, naming, and editing your first Unity
+scripts
+A piece of code that allows you to create your own Components, trigger game events, modify Component properties over time and respond to user input in any way you like.
+More info
+See in
+Glossary
+.
+Environment and tools
+Set up your software development environment with the right tools for programming in Unity.
+Object-oriented development
+Develop Unity projects with the traditional object-oriented programming philosophy and architecture.
+Compilation and code reload
+How Unity transforms the code you write into code that runs, and the implications for development iteration times and your application’s runtime behavior.
+Code optimization
+Project configuration, design patterns, and coding strategies to help optimize the performance of your code.
+Testing your code
+Use the Unity Test Framework to write and run tests for your Editor or runtime code.
+Debugging and diagnostics
+Debug, diagnose, and fix problems in your code.
+Additional resources and examples
+📖
+E-Book
+:
+Use a C# style guide for clean and scalable game code (Unity 6 edition)
+📖
+E-Book
+:
+Level up your code with design patterns and SOLID
+📖
+E-Book
+:
+Create modular game architecture in Unity with ScriptableObjects
+📖
+E-Book
+:
+Introduction to the Data-Oriented Technology Stack for advanced Unity developers
+💡
+Resources
+:
+Unity Learn Scripting tutorials
+💡
+Resources
+:
+An example of a Unity C# code style guide
+⚙️
+Sample project
+:
+Level up your code with design patterns and SOLID
+⚙️
+Sample project
+:
+ScriptableObjects Paddle Ball project
+📺
+Video
+:
+Tips for creating your own C# code style guide
+📺
+Video
+:
+Level up your code with game programming patterns: Command pattern
+📺
+Video
+:
+Level up your code with game programming patterns: Factory pattern
+📺
+Video
+:
+Level up your code with game programming patterns: Model-view-presenter
+📺
+Video
+:
+Level up your code with game programming design patterns: Object pool
+📺
+Video
+:
+Level up your code with game programming patterns: Pattern combo
+👥
+Community
+:
+Scripting section at Unity Discussions
+Full Screen Pass Renderer Feature reference for URP
+Get started with programming in Unity
+Copyright ©2005-2026 Unity Technologies. All rights reserved. Built from 6000.3.5f1 (9e864d5a2e6f). Built on: 2026-01-09.
+Tutorials
+Community Answers
+Knowledge Base
+Forums
+Asset Store
+Terms of use
+Legal
+Privacy Policy
+Cookies
+Do Not Sell or Share My Personal Information
+Your Privacy Choices (Cookie Settings)

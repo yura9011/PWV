@@ -1,0 +1,84 @@
+{
+  "name": "api_rendering_LODGroup",
+  "type": "api",
+  "description": "LODGroup lets you group multiple Renderers into LOD levels.",
+  "content": "// Unity Class: LODGroup\n// Documentation: https://docs.unity3d.com/ScriptReference/LODGroup.html\n\n// Description: LODGroup lets you group multiple Renderers into LOD levels.\n\n// Properties:\n// - animateCrossFading: Specify if the cross-fading should be animated by time. The animation duration is specified globally\n// - enabled: Allows you to enable or disable the LODGroup.\n// - fadeMode: The LOD fade mode used.\n// - lastLODBillboard: Specify whether the last LOD level is a BillboardRenderer.\n// - localReferencePoint: The local reference point against which the LOD distance is calculated.\n// - lodCount: The number of LOD levels.\n// - size: The size of the LOD object in local space.\n\n// Methods:\n// - ForceLOD: Disable automatic LOD selection based on camera distance by forcing a specific LOD level, or revert \n// - GetLODs: Returns the array of LODs.\n// - RecalculateBounds: Recalculate the bounding region for the LODGroup. This process can be slow. To avoid lag, call this \n// - SetLODs: Set the LODs for the LOD group. This removes any existing LODs configured on the LODGroup.\n// - Destroy: Removes a GameObject, component, or asset.\n// - DestroyImmediate: Destroys the specified object immediately. Use with caution and in Edit mode only.\n// - DontDestroyOnLoad: Do not destroy the target Object when loading a new Scene.\n// - FindAnyObjectByType: Retrieves any active loaded object of Type type.\n// - FindFirstObjectByType: Retrieves the first active loaded object of Type type.\n// - FindObjectsByType: Retrieves a list of all loaded objects of Type type.\n// - Instantiate: Clones the object original and returns the clone.\n// - InstantiateAsync: Captures a snapshot of the original object (that must be related to some GameObject) and returns the\n\npublic class LODGroup {\n    public var animateCrossFading;\n    public var enabled;\n    public var fadeMode;\n    public var lastLODBillboard;\n    public var localReferencePoint;\n    public var lodCount;\n    public var size;\n    public void ForceLOD();\n    public void GetLODs();\n    public void RecalculateBounds();\n    public void SetLODs();\n    public void Destroy();\n    public void DestroyImmediate();\n    public void DontDestroyOnLoad();\n    public void FindAnyObjectByType();\n    public void FindFirstObjectByType();\n    public void FindObjectsByType();\n    public void Instantiate();\n    public void InstantiateAsync();\n}",
+  "properties": [
+    {
+      "name": "animateCrossFading",
+      "description": "Specify if the cross-fading should be animated by time. The animation duration is specified globally"
+    },
+    {
+      "name": "enabled",
+      "description": "Allows you to enable or disable the LODGroup."
+    },
+    {
+      "name": "fadeMode",
+      "description": "The LOD fade mode used."
+    },
+    {
+      "name": "lastLODBillboard",
+      "description": "Specify whether the last LOD level is a BillboardRenderer."
+    },
+    {
+      "name": "localReferencePoint",
+      "description": "The local reference point against which the LOD distance is calculated."
+    },
+    {
+      "name": "lodCount",
+      "description": "The number of LOD levels."
+    },
+    {
+      "name": "size",
+      "description": "The size of the LOD object in local space."
+    },
+    {
+      "name": "ForceLOD",
+      "description": "Disable automatic LOD selection based on camera distance by forcing a specific LOD level, or revert "
+    },
+    {
+      "name": "GetLODs",
+      "description": "Returns the array of LODs."
+    },
+    {
+      "name": "RecalculateBounds",
+      "description": "Recalculate the bounding region for the LODGroup. This process can be slow. To avoid lag, call this "
+    },
+    {
+      "name": "SetLODs",
+      "description": "Set the LODs for the LOD group. This removes any existing LODs configured on the LODGroup."
+    },
+    {
+      "name": "Destroy",
+      "description": "Removes a GameObject, component, or asset."
+    },
+    {
+      "name": "DestroyImmediate",
+      "description": "Destroys the specified object immediately. Use with caution and in Edit mode only."
+    },
+    {
+      "name": "DontDestroyOnLoad",
+      "description": "Do not destroy the target Object when loading a new Scene."
+    },
+    {
+      "name": "FindAnyObjectByType",
+      "description": "Retrieves any active loaded object of Type type."
+    },
+    {
+      "name": "FindFirstObjectByType",
+      "description": "Retrieves the first active loaded object of Type type."
+    },
+    {
+      "name": "FindObjectsByType",
+      "description": "Retrieves a list of all loaded objects of Type type."
+    },
+    {
+      "name": "Instantiate",
+      "description": "Clones the object original and returns the clone."
+    },
+    {
+      "name": "InstantiateAsync",
+      "description": "Captures a snapshot of the original object (that must be related to some GameObject) and returns the"
+    }
+  ]
+}

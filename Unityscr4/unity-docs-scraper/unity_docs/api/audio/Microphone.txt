@@ -1,0 +1,19 @@
+// Unity Class: Microphone
+// Documentation: https://docs.unity3d.com/ScriptReference/Microphone.html
+
+// Description: Use this class to record to an AudioClip using a connected microphone.
+
+// Methods:
+// - End: Stops recording.
+// - GetDeviceCaps: Get the frequency capabilities of a device.
+// - GetPosition: Get the position in samples of the recording.
+// - IsRecording: Query if a device is currently recording.
+// - Start: Start Recording with device.
+
+public class Microphone {
+    public void End();
+    public void GetDeviceCaps();
+    public void GetPosition();
+    public void IsRecording();
+    public void Start();
+}

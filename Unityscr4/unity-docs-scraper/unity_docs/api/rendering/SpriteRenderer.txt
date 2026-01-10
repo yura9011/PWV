@@ -1,0 +1,74 @@
+// Unity Class: SpriteRenderer
+// Documentation: https://docs.unity3d.com/ScriptReference/SpriteRenderer.html
+
+// Description: A component that renders a Sprite.If a GameObject has a SpriteRenderer component, the component renders the assigned Sprite asset on the screen using the position, rotation and scale from the Transform component.You can use this to draw characters, items, backgrounds, and other visual elements in a 2D game.
+
+// Properties:
+// - adaptiveModeThreshold: The current threshold for Sprite Renderer tiling.
+// - color: Rendering color for the Sprite graphic.
+// - drawMode: The current draw mode of the Sprite Renderer.
+// - flipX: Flips the sprite on the X axis.
+// - flipY: Flips the sprite on the Y axis.
+// - maskInteraction: Specifies how the sprite interacts with the masks.
+// - size: Property to set or get the size to render when the SpriteRenderer.drawMode is set to SpriteDrawMode.Sliced or SpriteDrawMode.Tiled.
+// - sprite: The Sprite to render.
+// - spriteSortPoint: Determines the position of the Sprite used for sorting the SpriteRenderer.
+// - tileMode: The current tile mode of the Sprite Renderer.
+
+// Methods:
+// - RegisterSpriteChangeCallback: Registers a callback to receive a notification when the SpriteRenderer's Sprite reference changes.
+// - UnregisterSpriteChangeCallback: Removes a callback (that receives a notification when the Sprite reference changes) that was previously registered to a SpriteRenderer.
+// - Destroy: Removes a GameObject, component, or asset.
+// - DestroyImmediate: Destroys the specified object immediately. Use with caution and in Edit mode only.
+// - DontDestroyOnLoad: Do not destroy the target Object when loading a new Scene.
+// - FindAnyObjectByType: Retrieves any active loaded object of Type type.
+// - FindFirstObjectByType: Retrieves the first active loaded object of Type type.
+// - FindObjectsByType: Retrieves a list of all loaded objects of Type type.
+// - Instantiate: Clones the object original and returns the clone.
+// - InstantiateAsync: Captures a snapshot of the original object (that must be related to some GameObject) and returns the AsyncInstantiateOperation.
+
+// Code Examples:
+// Example 1:
+//   using UnityEngine;// This example script demonstrates how to change the sprite and the sprite color, and flip the sprite horizontally and vertically.
+//   // Attach this script to a GameObject with a SpriteRenderer component and assign a Sprite to the Sprite field in the Inspector.
+//   public class Example : MonoBehaviour
+//   {
+//       public Sprite sprite;    private SpriteRenderer m_spriteRenderer;    private void Awake()
+//       {
+//           // Fetch the SpriteRenderer from the GameObject
+//           m_spriteRenderer = GetComponent<SpriteRenderer>();
+//       }    private void Start()
+//       {
+//           // Change the sprite to the one in the sprite field
+//           m_spriteRenderer.sprite = sprite;
+//           
+//           // Change the color of the sprite to red
+//           m_spriteRenderer.color = Color.red;
+//           
+//           // Flip the sprite horizontally
+//           m_spriteRenderer.flipX = true;
+//           
+//           // Flip the sprite vertically
+
+public class SpriteRenderer {
+    public var adaptiveModeThreshold; // The current threshold for Sprite Renderer tiling.
+    public var color; // Rendering color for the Sprite graphic.
+    public var drawMode; // The current draw mode of the Sprite Renderer.
+    public var flipX; // Flips the sprite on the X axis.
+    public var flipY; // Flips the sprite on the Y axis.
+    public var maskInteraction; // Specifies how the sprite interacts with the masks.
+    public var size; // Property to set or get the size to render when the SpriteRenderer.drawMode is se
+    public var sprite; // The Sprite to render.
+    public var spriteSortPoint; // Determines the position of the Sprite used for sorting the SpriteRenderer.
+    public var tileMode; // The current tile mode of the Sprite Renderer.
+    public void RegisterSpriteChangeCallback(); // Registers a callback to receive a notification when the SpriteRenderer's Sprite 
+    public void UnregisterSpriteChangeCallback(); // Removes a callback (that receives a notification when the Sprite reference chang
+    public void Destroy(); // Removes a GameObject, component, or asset.
+    public void DestroyImmediate(); // Destroys the specified object immediately. Use with caution and in Edit mode onl
+    public void DontDestroyOnLoad(); // Do not destroy the target Object when loading a new Scene.
+    public void FindAnyObjectByType(); // Retrieves any active loaded object of Type type.
+    public void FindFirstObjectByType(); // Retrieves the first active loaded object of Type type.
+    public void FindObjectsByType(); // Retrieves a list of all loaded objects of Type type.
+    public void Instantiate(); // Clones the object original and returns the clone.
+    public void InstantiateAsync(); // Captures a snapshot of the original object (that must be related to some GameObj
+}

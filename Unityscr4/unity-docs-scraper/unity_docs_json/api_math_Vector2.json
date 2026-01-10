@@ -1,0 +1,28 @@
+{
+  "name": "api_math_Vector2",
+  "type": "api",
+  "description": "Representation of 2D vectors and points.",
+  "content": "// Unity Class: Vector2\n// Documentation: https://docs.unity3d.com/ScriptReference/Vector2.html\n\n// Description: Representation of 2D vectors and points.\n\n// Properties:\n// - magnitude: Returns the length of this vector (Read Only).\n// - normalized: Returns a normalized vector based on the current vector. The normalized vector has a magnitude of 1 and is in the same direction as the current vector. Returns a zero vector If the current vector is too small to be normalized.\n// - sqrMagnitude: Returns the squared length of this vector (Read Only).\n// - this[int]: Access the x or y component using [0] or [1] respectively.\n// - x: X component of the vector.\n// - y: Y component of the vector.\n\n// Constructors:\n// - Vector2(): Constructs a new vector with given x, y components.\n\n// Methods:\n// - Equals(): Returns true if the given vector is exactly equal to this vector.\n// - Set(): Set x and y components of an existing Vector2.\n// - ToString(): Returns a formatted string for this vector.\n\n// Pseudo-code representation of Vector2\npublic class Vector2 {\n    public var magnitude; // Returns the length of this vector (Read Only).\n    public var normalized; // Returns a normalized vector based on the current vector. The normalized vector has a magnitude of 1 and is in the same direction as the current vector. Returns a zero vector If the current vector is too small to be normalized.\n    public var sqrMagnitude; // Returns the squared length of this vector (Read Only).\n    public var this[int]; // Access the x or y component using [0] or [1] respectively.\n    public var x; // X component of the vector.\n    public var y; // Y component of the vector.\n    public void Equals(); // Returns true if the given vector is exactly equal to this vector.\n    public void Set(); // Set x and y components of an existing Vector2.\n    public void ToString(); // Returns a formatted string for this vector.\n}",
+  "properties": [
+    {
+      "name": "magnitude",
+      "description": "Returns the length of this vector (Read Only)."
+    },
+    {
+      "name": "normalized",
+      "description": "Returns a normalized vector based on the current vector. The normalized vector has a magnitude of 1 and is in the same direction as the current vector. Returns a zero vector If the current vector is too small to be normalized."
+    },
+    {
+      "name": "sqrMagnitude",
+      "description": "Returns the squared length of this vector (Read Only)."
+    },
+    {
+      "name": "x",
+      "description": "X component of the vector."
+    },
+    {
+      "name": "y",
+      "description": "Y component of the vector."
+    }
+  ]
+}

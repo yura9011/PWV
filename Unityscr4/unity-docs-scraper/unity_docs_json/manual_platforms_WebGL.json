@@ -1,0 +1,7 @@
+{
+  "name": "manual_platforms_WebGL",
+  "type": "manual",
+  "description": "",
+  "content": "// Unity Manual: Platforms_WebGL\n// URL: https://docs.unity3d.com/Manual/webgl.html\n\nPlatform development\nWeb\nvisionOS\nWeb introduction\nWeb\nUnity provides support for developing games on the Web platform.\nWebGL\nlets you publish real-time interactive 3D graphics into a browser.\nFor information on getting started with a Web application, refer to the following sections:\nTopic\nDescription\nIntroduction\nIntroduction to Web development in Unity.\nWeb development\nWeb specific development information such as memory, input, and\nnetworking\nThe Unity system that enables multiplayer gaming across a computer network.\nMore info\nSee in\nGlossary\n.\nBuild and distribute a Web application\nInformation about building and testing your content for Web.\nFacebook Instant Games\nCreate Web builds optimized for Facebook Instant Games and upload them to Facebook Instant Games directly from the Unity Editor.\nvisionOS\nWeb introduction\n",
+  "properties": []
+}

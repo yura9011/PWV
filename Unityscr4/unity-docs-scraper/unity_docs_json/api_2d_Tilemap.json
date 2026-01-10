@@ -1,0 +1,88 @@
+{
+  "name": "api_2d_Tilemap",
+  "type": "api",
+  "description": "The Tilemap stores Sprites in a layout marked by a Grid component.",
+  "content": "// Unity Class: Tilemap\n// Documentation: https://docs.unity3d.com/ScriptReference/Tilemaps.Tilemap.html\n\n// Description: The Tilemap stores Sprites in a layout marked by a Grid component.\n\n// Properties:\n// - animationFrameRate: The frame rate for all Tile animations in the Tilemap.\n// - cellBounds: Returns the boundaries of the Tilemap in cell size.\n// - color: The color of the Tilemap layer.\n// - editorPreviewOrigin: The origin of the Tilemap in cell position inclusive of editor preview Tiles.\n// - editorPreviewSize: The size of the Tilemap in cells inclusive of editor preview Tiles.\n// - layoutGrid: Gets the Grid associated with this Tilemap.\n// - localBounds: Returns the boundaries of the Tilemap in local space size.\n// - orientation: Orientation of the Tiles in the Tilemap.\n// - orientationMatrix: Orientation Matrix of the orientation of the Tiles in the Tilemap.\n// - origin: The origin of the Tilemap in cell position.\n// - size: The size of the Tilemap in cells.\n// - tileAnchor: Gets the anchor point of Tiles in the Tilemap.\n\n// Methods:\n// - AddTileAnimationFlags: Adds the TileAnimationFlags onto the Tile at the given position.\n// - AddTileFlags: Adds the TileFlags onto the Tile at the given position.\n// - BoxFill: Does a box fill with the given Tile on the Tilemap. Starts from given coordinates and fills the limi\n// - ClearAllEditorPreviewTiles: Clears all editor preview Tiles that are placed in the Tilemap.\n// - ClearAllTiles: Clears all Tiles that are placed in the Tilemap.\n// - CompressBounds: Compresses the origin and size of the Tilemap to bounds where Tiles exist.\n// - ContainsTile: Returns true if the Tilemap contains the given Tile. Returns false if not.\n// - DeleteCells: Removes cells from within the Tilemap's bounds.\n// - EditorPreviewBoxFill: Does an editor preview of a box fill with the given Tile on the Tilemap. Starts from given coordinat\n// - EditorPreviewFloodFill: Does an editor preview of a flood fill with the given Tile to place. on the Tilemap starting from th\n// - FloodFill: Does a flood fill with the given Tile to place. on the Tilemap starting from the given coordinates.\n// - GetAnimationFrame: Retrieves the current animation frame for a Tile at the given position.\n// - GetAnimationFrameCount: Retrieves the number of animation frames for a Tile at the given position.\n// - GetAnimationTime: Retrieves the current running animation time for a Tile at the given position.\n// - GetCellCenterLocal: Gets the logical center coordinate of a Grid cell in local space. The logical center for a cell of t\n// - GetCellCenterWorld: Gets the logical center coordinate of a Grid cell in world space. The logical center for a cell of t\n// - GetColliderType: Gets the Collider type of a Tile given the XYZ coordinates of a cell in the Tilemap.\n// - GetColor: Gets the Color of a Tile given the XYZ coordinates of a cell in the Tilemap.\n// - GetEditorPreviewColor: Gets the Color of an editor preview Tile given the XYZ coordinates of a cell in the Tilemap.\n// - GetEditorPreviewSprite: Gets the Sprite used in an editor preview Tile given the XYZ coordinates of a cell in the Tilemap.\n// - GetEditorPreviewTile: Gets the editor preview Tile at the given XYZ coordinates of a cell in the Tilemap.\n// - GetEditorPreviewTileFlags: Gets the TileFlags of the editor preview Tile at the given position.\n// - GetEditorPreviewTransformMatrix: Gets the transform matrix of an editor preview Tile given the XYZ coordinates of a cell in the Tilem\n// - GetInstantiatedObject: Gets the GameObject instantiated by a Tile given the XYZ coordinates of a cell in the Tilemap.\n// - GetObjectToInstantiate: Gets the GameObject which will be instantiated by a Tile given the XYZ coordinates of a cell in the \n\npublic class Tilemap {\n    public var animationFrameRate;\n    public var cellBounds;\n    public var color;\n    public var editorPreviewOrigin;\n    public var editorPreviewSize;\n    public var layoutGrid;\n    public var localBounds;\n    public var orientation;\n    public var orientationMatrix;\n    public var origin;\n    public var size;\n    public var tileAnchor;\n    public void AddTileAnimationFlags();\n    public void AddTileFlags();\n    public void BoxFill();\n    public void ClearAllEditorPreviewTiles();\n    public void ClearAllTiles();\n    public void CompressBounds();\n    public void ContainsTile();\n    public void DeleteCells();\n    public void EditorPreviewBoxFill();\n    public void EditorPreviewFloodFill();\n    public void FloodFill();\n    public void GetAnimationFrame();\n    public void GetAnimationFrameCount();\n    public void GetAnimationTime();\n    public void GetCellCenterLocal();\n}",
+  "properties": [
+    {
+      "name": "animationFrameRate",
+      "description": "The frame rate for all Tile animations in the Tilemap."
+    },
+    {
+      "name": "cellBounds",
+      "description": "Returns the boundaries of the Tilemap in cell size."
+    },
+    {
+      "name": "color",
+      "description": "The color of the Tilemap layer."
+    },
+    {
+      "name": "editorPreviewOrigin",
+      "description": "The origin of the Tilemap in cell position inclusive of editor preview Tiles."
+    },
+    {
+      "name": "editorPreviewSize",
+      "description": "The size of the Tilemap in cells inclusive of editor preview Tiles."
+    },
+    {
+      "name": "layoutGrid",
+      "description": "Gets the Grid associated with this Tilemap."
+    },
+    {
+      "name": "localBounds",
+      "description": "Returns the boundaries of the Tilemap in local space size."
+    },
+    {
+      "name": "orientation",
+      "description": "Orientation of the Tiles in the Tilemap."
+    },
+    {
+      "name": "orientationMatrix",
+      "description": "Orientation Matrix of the orientation of the Tiles in the Tilemap."
+    },
+    {
+      "name": "origin",
+      "description": "The origin of the Tilemap in cell position."
+    },
+    {
+      "name": "size",
+      "description": "The size of the Tilemap in cells."
+    },
+    {
+      "name": "tileAnchor",
+      "description": "Gets the anchor point of Tiles in the Tilemap."
+    },
+    {
+      "name": "AddTileAnimationFlags",
+      "description": "Adds the TileAnimationFlags onto the Tile at the given position."
+    },
+    {
+      "name": "AddTileFlags",
+      "description": "Adds the TileFlags onto the Tile at the given position."
+    },
+    {
+      "name": "BoxFill",
+      "description": "Does a box fill with the given Tile on the Tilemap. Starts from given coordinates and fills the limi"
+    },
+    {
+      "name": "ClearAllEditorPreviewTiles",
+      "description": "Clears all editor preview Tiles that are placed in the Tilemap."
+    },
+    {
+      "name": "ClearAllTiles",
+      "description": "Clears all Tiles that are placed in the Tilemap."
+    },
+    {
+      "name": "CompressBounds",
+      "description": "Compresses the origin and size of the Tilemap to bounds where Tiles exist."
+    },
+    {
+      "name": "ContainsTile",
+      "description": "Returns true if the Tilemap contains the given Tile. Returns false if not."
+    },
+    {
+      "name": "DeleteCells",
+      "description": "Removes cells from within the Tilemap's bounds."
+    }
+  ]
+}

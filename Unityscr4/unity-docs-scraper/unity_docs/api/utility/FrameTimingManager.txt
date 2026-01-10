@@ -1,0 +1,59 @@
+// Unity Class: FrameTimingManager
+// Documentation: https://docs.unity3d.com/ScriptReference/FrameTimingManager.html
+
+// Description: Provides frame-level CPU and GPU time measurements.
+
+// Methods:
+// - CaptureFrameTimings: This function triggers the FrameTimingManager to capture a snapshot of FrameTiming's data, that can then be accessed by the user.
+// - GetCpuTimerFrequency: This returns the frequency of CPU timer on the current platform. If the platform does not support returning this value it will return 0.
+// - GetGpuTimerFrequency: This returns the frequency of GPU timer on the current platform. Currently always 1000000000.
+// - GetLatestTimings: Allows the user to access the currently captured FrameTimings.
+// - GetVSyncsPerSecond: This returns the number of vsyncs per second on the current platform, used to interpret timing results. If the platform does not support returning this value it will return 0.
+// - IsFeatureEnabled: Check if frame timing statistics are enabled.
+
+// Code Examples:
+// Example 1:
+//   using Unity.Profiling;
+//   using UnityEngine;public class ExampleScript : MonoBehaviour
+//   {
+//   	FrameTiming[] m_FrameTimings = new FrameTiming[10];	void Update()
+//   	{
+//   		// Instruct FrameTimingManager to collect and cache information
+//   		FrameTimingManager.CaptureFrameTimings();		// Read cached information about N last frames (10 in this example)
+//   		// The returned value tells how many frames are actually returned
+//   		// Element 0 of the returned array contains the data for the last fully finished frame.
+//   		var ret = FrameTimingManager.GetLatestTimings((uint)m_FrameTimings.Length, m_FrameTimings);
+//   		if (ret > 0)
+//   		{
+//   			// Your code logic here
+//   		}
+//   	}
+//   }
+// Example 2:
+//   using Unity.Profiling;
+//   using UnityEngine;public class ExampleScript : MonoBehaviour
+//   {
+//   	ProfilerRecorder mainThreadTimeRecorder;	void OnEnable()
+//   	{
+//   		// Create ProfilerRecorder and attach it to a counter
+//   		mainThreadTimeRecorder = ProfilerRecorder.StartNew(ProfilerCategory.Internal, "CPU Main Thread Frame Time");
+//   	}	void OnDisable()
+//   	{
+//   		// Recorders must be explicitly disposed after use
+//   		mainThreadTimeRecorder.Dispose();
+//   	}	void Update()
+//   	{
+//           // Read the last recorded value. Times are in nanoseconds.
+//   		var frameTime = mainThreadTimeRecorder.LastValue;
+//   		// Your code logic here
+//   	}
+//   }
+
+public class FrameTimingManager {
+    public void CaptureFrameTimings(); // This function triggers the FrameTimingManager to capture a snapshot of FrameTimi
+    public void GetCpuTimerFrequency(); // This returns the frequency of CPU timer on the current platform. If the platform
+    public void GetGpuTimerFrequency(); // This returns the frequency of GPU timer on the current platform. Currently alway
+    public void GetLatestTimings(); // Allows the user to access the currently captured FrameTimings.
+    public void GetVSyncsPerSecond(); // This returns the number of vsyncs per second on the current platform, used to in
+    public void IsFeatureEnabled(); // Check if frame timing statistics are enabled.
+}

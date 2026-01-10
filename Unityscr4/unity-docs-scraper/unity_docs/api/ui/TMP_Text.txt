@@ -1,0 +1,7 @@
+// Unity Class: TMP_Text
+// Documentation: https://docs.unity3d.com/Packages/com.unity.textmeshpro@3.0/api/TMPro.TMP_Text.html
+
+// Description: Base class which contains common properties and functions shared between the TextMeshPro and TextMeshProUGUI component.
+
+public class TMP_Text {
+}

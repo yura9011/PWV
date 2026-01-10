@@ -1,0 +1,59 @@
+// Unity Class: Editor
+// Documentation: https://docs.unity3d.com/ScriptReference/Editor.html
+
+// Description: Derive from this base class to create a custom inspector or editor for your custom object.
+
+// Properties:
+// - hasUnsavedChanges: This property specifies whether the Editor prompts the user to save or discard unsaved changes befor
+// - saveChangesMessage: The message that displays to the user if they are prompted to save.
+// - serializedObject: A SerializedObject representing the object or objects being inspected.
+// - target: The object being inspected.
+// - targets: An array of all the object being inspected.
+
+// Methods:
+// - CreateInspectorGUI: Implement this method to make a custom UIElements inspector.
+// - CreatePreview: Implement this method to make a custom UIElements inspector preview.
+// - DiscardChanges: Discards unsaved changes to the contents of the editor.
+// - DrawDefaultInspector: Draws the built-in Inspector.
+// - DrawHeader: Call this function to draw the header of the editor.
+// - DrawPreview: The first entry point for Preview Drawing.
+// - GetInfoString: Implement this method to show asset information on top of the asset preview.
+// - GetPreviewTitle: Override this method if you want to change the label of the Preview area.
+// - HasPreviewGUI: Override this method in subclasses if you implement OnPreviewGUI.
+// - OnInspectorGUI: Implement this function to make a custom inspector.
+// - OnInteractivePreviewGUI: Implement to create your own interactive custom preview. Interactive custom previews are used in the
+// - OnPreviewGUI: Creates a custom preview for the preview area of the Inspector, the headers of the primary Editor, a
+// - OnPreviewSettings: Override this method if you want to show custom controls in the preview header.
+// - RenderStaticPreview: Override this method if you want to render a static preview.
+// - Repaint: Redraw any inspectors that shows this editor.
+// - RequiresConstantRepaint: Checks if this editor requires constant repaints in its current state.
+// - SaveChanges: Performs a save action on the contents of the editor.
+// - UseDefaultMargins: Override this method in subclasses to return false if you don't want default margins.
+// - CreateCachedEditor: On return previousEditor is an editor for targetObject or targetObjects. The function either returns
+// - CreateCachedEditorWithContext: Creates a cached editor using a context object.
+// - CreateEditor: Make a custom editor for targetObject or targetObjects.
+// - CreateEditorWithContext: Make a custom editor for targetObject or targetObjects with a context object.
+// - DrawFoldoutInspector: Draws the inspector GUI with a foldout header for target.
+
+public class Editor {
+    public var hasUnsavedChanges;
+    public var saveChangesMessage;
+    public var serializedObject;
+    public var target;
+    public var targets;
+    public void CreateInspectorGUI();
+    public void CreatePreview();
+    public void DiscardChanges();
+    public void DrawDefaultInspector();
+    public void DrawHeader();
+    public void DrawPreview();
+    public void GetInfoString();
+    public void GetPreviewTitle();
+    public void HasPreviewGUI();
+    public void OnInspectorGUI();
+    public void OnInteractivePreviewGUI();
+    public void OnPreviewGUI();
+    public void OnPreviewSettings();
+    public void RenderStaticPreview();
+    public void Repaint();
+}

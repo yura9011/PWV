@@ -1,0 +1,28 @@
+{
+  "name": "api_rendering_CameraType",
+  "type": "api",
+  "description": "Describes different types of camera.",
+  "content": "// Unity Class: CameraType\n// Documentation: https://docs.unity3d.com/ScriptReference/CameraType.html\n\n// Description: Describes different types of camera.\n\n// Properties:\n// - Game: Used to indicate a regular in-game camera.\n// - SceneView: Used to indicate that a camera is used for rendering the Scene View in the Editor.\n// - Preview: Used to indicate a camera that is used for rendering previews in the Editor.\n// - VR: Used to indicate that a camera is used for rendering VR (in edit mode) in the Editor.\n// - Reflection: Used to indicate a camera that is used for rendering reflection probes.\n\n// Pseudo-code representation of CameraType\npublic class CameraType {\n    public var Game; // Used to indicate a regular in-game camera.\n    public var SceneView; // Used to indicate that a camera is used for rendering the Scene View in the Editor.\n    public var Preview; // Used to indicate a camera that is used for rendering previews in the Editor.\n    public var VR; // Used to indicate that a camera is used for rendering VR (in edit mode) in the Editor.\n    public var Reflection; // Used to indicate a camera that is used for rendering reflection probes.\n}",
+  "properties": [
+    {
+      "name": "Game",
+      "description": "Used to indicate a regular in-game camera."
+    },
+    {
+      "name": "SceneView",
+      "description": "Used to indicate that a camera is used for rendering the Scene View in the Editor."
+    },
+    {
+      "name": "Preview",
+      "description": "Used to indicate a camera that is used for rendering previews in the Editor."
+    },
+    {
+      "name": "VR",
+      "description": "Used to indicate that a camera is used for rendering VR (in edit mode) in the Editor."
+    },
+    {
+      "name": "Reflection",
+      "description": "Used to indicate a camera that is used for rendering reflection probes."
+    }
+  ]
+}

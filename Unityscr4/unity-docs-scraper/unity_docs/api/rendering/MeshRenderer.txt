@@ -1,0 +1,50 @@
+// Unity Class: MeshRenderer
+// Documentation: https://docs.unity3d.com/ScriptReference/MeshRenderer.html
+
+// Description: Renders the mesh from the MeshFilter component on the same GameObject.
+
+// Properties:
+// - additionalVertexStreams: Vertex attributes in this mesh will override or add attributes of the primary mesh in the MeshRenderer.
+// - enlightenVertexStream: Vertex attributes that override the primary mesh when the MeshRenderer uses lightmaps in the Realtime Global Illumination system.
+// - globalIlluminationMeshLod: Mesh LOD to use for Global Illumination.
+// - receiveGI: Determines how the object will receive global illumination. (Editor only)
+// - scaleInLightmap: Specifies the relative lightmap resolution of this object. (Editor only)
+// - stitchLightmapSeams: When enabled, seams in baked lightmaps will get smoothed. (Editor only)
+// - subMeshStartIndex: Index of the first sub-mesh to use from the Mesh associated with this MeshRenderer (Read Only).
+
+// Methods:
+// - GetShaderUserValue(): Returns the custom value assigned to this renderer.
+// - SetShaderUserValue(): Assign a custom value to this renderer.
+
+// Code Examples:
+// Example 1:
+//   using UnityEngine;
+//   public class PlaceRandomCubes : MonoBehaviour
+//   {
+//       void Start()
+//       {
+//           Mesh cubeMesh = Resources.GetBuiltinResource<Mesh>("Cube.fbx");        for (int i = 0; i < 10; i++)
+//           {
+//               // Create a GameObject at a random position
+//               GameObject go = new GameObject();
+//               go.transform.position = Random.insideUnitSphere * 10;            // Add a MeshFilter to supply the mesh data
+//               MeshFilter filter = go.AddComponent<MeshFilter>();
+//               filter.sharedMesh = cubeMesh;            // Add a MeshRenderer to render the mesh, and assign a random color
+//               MeshRenderer meshRenderer = go.AddComponent<MeshRenderer>();
+//               meshRenderer.material.color = Random.ColorHSV();
+//           }
+//       }
+//   }
+
+// Pseudo-code representation of MeshRenderer
+public class MeshRenderer {
+    public var additionalVertexStreams; // Vertex attributes in this mesh will override or add attributes of the primary mesh in the MeshRenderer.
+    public var enlightenVertexStream; // Vertex attributes that override the primary mesh when the MeshRenderer uses lightmaps in the Realtime Global Illumination system.
+    public var globalIlluminationMeshLod; // Mesh LOD to use for Global Illumination.
+    public var receiveGI; // Determines how the object will receive global illumination. (Editor only)
+    public var scaleInLightmap; // Specifies the relative lightmap resolution of this object. (Editor only)
+    public var stitchLightmapSeams; // When enabled, seams in baked lightmaps will get smoothed. (Editor only)
+    public var subMeshStartIndex; // Index of the first sub-mesh to use from the Mesh associated with this MeshRenderer (Read Only).
+    public void GetShaderUserValue(); // Returns the custom value assigned to this renderer.
+    public void SetShaderUserValue(); // Assign a custom value to this renderer.
+}

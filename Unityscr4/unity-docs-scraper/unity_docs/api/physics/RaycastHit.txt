@@ -1,0 +1,35 @@
+// Unity Class: RaycastHit
+// Documentation: https://docs.unity3d.com/ScriptReference/RaycastHit.html
+
+// Description: Structure used to get information back from a raycast.
+
+// Properties:
+// - articulationBody: The ArticulationBody of the collider that was hit. If the collider is not attached to an articulation body then it is null.
+// - barycentricCoordinate: The barycentric coordinate of the triangle we hit.
+// - collider: The Collider that was hit.
+// - colliderEntityId: EntityId of the Collider that was hit.
+// - distance: The distance from the ray's origin to the impact point.
+// - lightmapCoord: The uv lightmap coordinate at the impact point.
+// - normal: The normal of the surface the ray hit.
+// - point: The impact point in world space where the ray hit the collider.
+// - rigidbody: The Rigidbody of the collider that was hit. If the collider is not attached to a rigidbody then it is null.
+// - textureCoord: The uv texture coordinate at the collision location.
+// - textureCoord2: The secondary uv texture coordinate at the impact point.
+// - transform: The Transform of the rigidbody or collider that was hit.
+// - triangleIndex: The index of the triangle that was hit.
+
+public class RaycastHit {
+    public var articulationBody; // The ArticulationBody of the collider that was hit. If the collider is not attach
+    public var barycentricCoordinate; // The barycentric coordinate of the triangle we hit.
+    public var collider; // The Collider that was hit.
+    public var colliderEntityId; // EntityId of the Collider that was hit.
+    public var distance; // The distance from the ray's origin to the impact point.
+    public var lightmapCoord; // The uv lightmap coordinate at the impact point.
+    public var normal; // The normal of the surface the ray hit.
+    public var point; // The impact point in world space where the ray hit the collider.
+    public var rigidbody; // The Rigidbody of the collider that was hit. If the collider is not attached to a
+    public var textureCoord; // The uv texture coordinate at the collision location.
+    public var textureCoord2; // The secondary uv texture coordinate at the impact point.
+    public var transform; // The Transform of the rigidbody or collider that was hit.
+    public var triangleIndex; // The index of the triangle that was hit.
+}

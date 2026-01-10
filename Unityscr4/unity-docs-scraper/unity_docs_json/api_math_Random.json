@@ -1,0 +1,7 @@
+{
+  "name": "api_math_Random",
+  "type": "api",
+  "description": "Easily generate random data for games.",
+  "content": "// Unity Class: Random\n// Documentation: https://docs.unity3d.com/ScriptReference/Random.html\n\n// Description: Easily generate random data for games.\n\n// Pseudo-code representation of Random\npublic class Random {\n}",
+  "properties": []
+}

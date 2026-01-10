@@ -1,0 +1,53 @@
+// Unity Class: Vector4
+// Documentation: https://docs.unity3d.com/ScriptReference/Vector4.html
+
+// Description: Representation of four-dimensional vectors.
+
+// Properties:
+// - magnitude: Returns the length of this vector (Read Only).
+// - normalized: Returns a normalized vector based on the current vector. The normalized vector has a magnitude of 1 
+// - sqrMagnitude: Returns the squared length of this vector (Read Only).
+// - this[int]: Access the x, y, z, w components using [0], [1], [2], [3] respectively.
+// - w: W component of the vector.
+// - x: X component of the vector.
+// - y: Y component of the vector.
+// - z: Z component of the vector.
+
+// Methods:
+// - Equals: Returns true if the given vector is exactly equal to this vector.
+// - Set: Set x, y, z and w components of an existing Vector4.
+// - ToString: Returns a formatted string for this vector.
+// - Distance: Returns the distance between a and b.
+// - Dot: Dot Product of two vectors.
+// - Lerp: Linearly interpolates between two vectors.
+// - LerpUnclamped: Linearly interpolates between two vectors.
+// - Max: Returns a vector that is made from the largest components of two vectors.
+// - Min: Returns a vector that is made from the smallest components of two vectors.
+// - MoveTowards: Moves a point current towards target.
+// - Normalize: Makes this vector have a magnitude of 1.
+// - Project: Projects a vector onto another vector.
+// - Scale: Multiplies two vectors component-wise.
+
+public class Vector4 {
+    public var magnitude;
+    public var normalized;
+    public var sqrMagnitude;
+    public var this[int];
+    public var w;
+    public var x;
+    public var y;
+    public var z;
+    public void Equals();
+    public void Set();
+    public void ToString();
+    public void Distance();
+    public void Dot();
+    public void Lerp();
+    public void LerpUnclamped();
+    public void Max();
+    public void Min();
+    public void MoveTowards();
+    public void Normalize();
+    public void Project();
+    public void Scale();
+}

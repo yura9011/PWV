@@ -1,0 +1,8 @@
+// Unity Class: PlayerPrefs
+// Documentation: https://docs.unity3d.com/ScriptReference/PlayerPrefs.html
+
+// Description: PlayerPrefs is a class that stores Player preferences between game sessions. It can store string, float and integer values into the user's platform registry.
+
+// Pseudo-code representation of PlayerPrefs
+public class PlayerPrefs {
+}

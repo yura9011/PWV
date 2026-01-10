@@ -1,0 +1,88 @@
+{
+  "name": "api_rendering_WebCamTexture",
+  "type": "api",
+  "description": "WebCam Textures are textures onto which the live video input is rendered.",
+  "content": "// Unity Class: WebCamTexture\n// Documentation: https://docs.unity3d.com/ScriptReference/WebCamTexture.html\n\n// Description: WebCam Textures are textures onto which the live video input is rendered.\n\n// Properties:\n// - autoFocusPoint: This property allows you to set/get the auto focus point of the camera. This works only on Android a\n// - deviceName: Set this to specify the name of the device to use.\n// - didUpdateThisFrame: Did the video buffer update this frame?\n// - isDepth: This property is true if the texture is based on depth data.\n// - isPlaying: Returns if the camera is currently playing.\n// - requestedFPS: Set the requested frame rate of the camera device (in frames per second).\n// - requestedHeight: Set the requested height of the camera device.\n// - requestedWidth: Set the requested width of the camera device.\n// - videoRotationAngle: Returns an clockwise angle (in degrees), which can be used to rotate a polygon so camera contents ar\n// - videoVerticallyMirrored: Returns if the texture image is vertically flipped.\n\n// Methods:\n// - GetPixel: Gets the pixel color at coordinates (x, y).\n// - GetPixels: Gets the pixel color data for a mipmap level as Color structs.\n// - GetPixels32: Gets the pixel color data for a mipmap level as Color32 structs.\n// - Pause: Pauses the camera.\n// - Play: Starts the camera.\n// - Stop: Stops the camera.\n// - Destroy: Removes a GameObject, component, or asset.\n// - DestroyImmediate: Destroys the specified object immediately. Use with caution and in Edit mode only.\n// - DontDestroyOnLoad: Do not destroy the target Object when loading a new Scene.\n// - FindAnyObjectByType: Retrieves any active loaded object of Type type.\n// - FindFirstObjectByType: Retrieves the first active loaded object of Type type.\n// - FindObjectsByType: Retrieves a list of all loaded objects of Type type.\n// - Instantiate: Clones the object original and returns the clone.\n// - InstantiateAsync: Captures a snapshot of the original object (that must be related to some GameObject) and returns the\n// - SetGlobalAnisotropicFilteringLimits: Sets Anisotropic limits.\n// - SetStreamingTextureMaterialDebugProperties: This function sets mipmap streaming debug properties on all materials known by the mipmap streaming \n\npublic class WebCamTexture {\n    public var autoFocusPoint;\n    public var deviceName;\n    public var didUpdateThisFrame;\n    public var isDepth;\n    public var isPlaying;\n    public var requestedFPS;\n    public var requestedHeight;\n    public var requestedWidth;\n    public var videoRotationAngle;\n    public var videoVerticallyMirrored;\n    public void GetPixel();\n    public void GetPixels();\n    public void GetPixels32();\n    public void Pause();\n    public void Play();\n    public void Stop();\n    public void Destroy();\n    public void DestroyImmediate();\n    public void DontDestroyOnLoad();\n    public void FindAnyObjectByType();\n    public void FindFirstObjectByType();\n    public void FindObjectsByType();\n    public void Instantiate();\n    public void InstantiateAsync();\n    public void SetGlobalAnisotropicFilteringLimits();\n}",
+  "properties": [
+    {
+      "name": "autoFocusPoint",
+      "description": "This property allows you to set/get the auto focus point of the camera. This works only on Android a"
+    },
+    {
+      "name": "deviceName",
+      "description": "Set this to specify the name of the device to use."
+    },
+    {
+      "name": "didUpdateThisFrame",
+      "description": "Did the video buffer update this frame?"
+    },
+    {
+      "name": "isDepth",
+      "description": "This property is true if the texture is based on depth data."
+    },
+    {
+      "name": "isPlaying",
+      "description": "Returns if the camera is currently playing."
+    },
+    {
+      "name": "requestedFPS",
+      "description": "Set the requested frame rate of the camera device (in frames per second)."
+    },
+    {
+      "name": "requestedHeight",
+      "description": "Set the requested height of the camera device."
+    },
+    {
+      "name": "requestedWidth",
+      "description": "Set the requested width of the camera device."
+    },
+    {
+      "name": "videoRotationAngle",
+      "description": "Returns an clockwise angle (in degrees), which can be used to rotate a polygon so camera contents ar"
+    },
+    {
+      "name": "videoVerticallyMirrored",
+      "description": "Returns if the texture image is vertically flipped."
+    },
+    {
+      "name": "GetPixel",
+      "description": "Gets the pixel color at coordinates (x, y)."
+    },
+    {
+      "name": "GetPixels",
+      "description": "Gets the pixel color data for a mipmap level as Color structs."
+    },
+    {
+      "name": "GetPixels32",
+      "description": "Gets the pixel color data for a mipmap level as Color32 structs."
+    },
+    {
+      "name": "Pause",
+      "description": "Pauses the camera."
+    },
+    {
+      "name": "Play",
+      "description": "Starts the camera."
+    },
+    {
+      "name": "Stop",
+      "description": "Stops the camera."
+    },
+    {
+      "name": "Destroy",
+      "description": "Removes a GameObject, component, or asset."
+    },
+    {
+      "name": "DestroyImmediate",
+      "description": "Destroys the specified object immediately. Use with caution and in Edit mode only."
+    },
+    {
+      "name": "DontDestroyOnLoad",
+      "description": "Do not destroy the target Object when loading a new Scene."
+    },
+    {
+      "name": "FindAnyObjectByType",
+      "description": "Retrieves any active loaded object of Type type."
+    }
+  ]
+}

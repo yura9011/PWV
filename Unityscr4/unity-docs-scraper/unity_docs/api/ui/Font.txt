@@ -1,0 +1,37 @@
+// Unity Class: Font
+// Documentation: https://docs.unity3d.com/ScriptReference/Font.html
+
+// Description: Script interface for font assets.
+
+// Properties:
+// - ascent: The ascent of the font.
+// - characterInfo: Access an array of all characters contained in the font texture.
+// - dynamic: Is the font a dynamic font.
+// - fontSize: The default size of the font.
+// - lineHeight: The line height of the font.
+// - material: The material used for the font display.
+
+// Methods:
+// - GetCharacterInfo: Get rendering info for a specific character.
+// - HasCharacter: Does this font have a specific character?
+// - RequestCharactersInTexture: Request characters to be added to the font texture (dynamic fonts only).
+// - CreateDynamicFontFromOSFont: Creates a Font object which lets you render a font installed on the user machine.
+// - GetMaxVertsForString: Returns the maximum number of verts that the text generator may return for a given string.
+// - GetOSInstalledFontNames: Get names of fonts installed on the machine.
+// - GetPathsToOSFonts: Gets the file paths of the fonts that are installed on the operating system.
+
+public class Font {
+    public var ascent;
+    public var characterInfo;
+    public var dynamic;
+    public var fontSize;
+    public var lineHeight;
+    public var material;
+    public void GetCharacterInfo();
+    public void HasCharacter();
+    public void RequestCharactersInTexture();
+    public void CreateDynamicFontFromOSFont();
+    public void GetMaxVertsForString();
+    public void GetOSInstalledFontNames();
+    public void GetPathsToOSFonts();
+}

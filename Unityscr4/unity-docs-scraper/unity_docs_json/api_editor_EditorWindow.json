@@ -1,0 +1,88 @@
+{
+  "name": "api_editor_EditorWindow",
+  "type": "api",
+  "description": "Derive from this class to create a custom Editor window.",
+  "content": "// Unity Class: EditorWindow\n// Documentation: https://docs.unity3d.com/ScriptReference/EditorWindow.html\n\n// Description: Derive from this class to create a custom Editor window.\n\n// Properties:\n// - autoRepaintOnSceneChange: Enable this property to automatically repaint the window when the SceneView is modified.\n// - dataModeController: An instance of IDataModeController to handle DataMode functionalities for the current window.\n// - docked: Returns true if EditorWindow is docked.\n// - EditorWindow: Dockarea we're inside.\n// - hasFocus: Returns true if EditorWindow is focused.\n// - hasUnsavedChanges: This property specifies whether the Editor prompts the user to save or discard unsaved changes befor\n// - maximized: Whether or not this window is maximized?\n// - maxSize: The maximum size of this window when it is floating or modal. The maximum size is not used when the \n// - minSize: The minimum size of this window when it is floating or modal. The minimum size is not used when the \n// - overlayCanvas: The OverlayCanvas for this window.\n// - position: The desired position of the window in screen space.\n// - rootVisualElement: Retrieves the root visual element of this window hierarchy.\n// - saveChangesMessage: The message that displays to the user if they are prompted to save\n// - titleContent: The GUIContent used for drawing the title of EditorWindows.\n// - wantsLessLayoutEvents: Specifies whether a layout pass is performed before all user events (for example, EventType.MouseDow\n// - wantsMouseEnterLeaveWindow: Checks whether MouseEnterWindow and MouseLeaveWindow events are received in the GUI in this Editor w\n// - wantsMouseMove: Checks whether MouseMove events are received in the GUI in this Editor window.\n\n// Methods:\n// - BeginWindows: Mark the beginning area of all popup windows.\n// - Close: Close the editor window.\n// - DiscardChanges: Discards unsaved changes to the contents of the window.\n// - EndWindows: Close a window group started with EditorWindow.BeginWindows.\n// - Focus: Moves keyboard focus to another EditorWindow.\n// - GetExtraPaneTypes: Gets the extra types of EditorWindow associated with the current window.\n// - RemoveNotification: Stop showing notification message.\n// - Repaint: Make the window repaint. This queues a command to render the window on the next frame.\n// - SaveChanges: Performs a save action on the contents of the window.\n// - SendEvent: Sends an Event to a window.\n// - Show: Show the EditorWindow window.\n// - ShowAsDropDown: Shows a window with dropdown behaviour and styling.\n// - ShowAuxWindow: Show the editor window in the auxiliary window.\n// - ShowModal: Show modal editor window.\n// - ShowModalUtility: Shows the EditorWindow as a floating modal window.\n// - ShowNotification: Show a notification message.\n// - ShowPopup: Shows an Editor window using popup-style framing.\n// - ShowTab: Shows a docked Editor window.\n// - ShowUtility: Show the EditorWindow as a floating utility window.\n// - TryGetOverlay: Get an Overlay with matching ID from an EditorWindow canvas.\n// - CreateWindow: Creates an EditorWindow of type T.\n// - FocusWindowIfItsOpen: Focuses the first found EditorWindow of specified type if it is open.\n// - GetWindow: Returns the first EditorWindow of type windowType which is currently on the screen.\n// - GetWindowWithRect: Returns the first EditorWindow of type t which is currently on the screen.\n// - HasOpenInstances: Checks if an editor window is open.\n\npublic class EditorWindow {\n    public var autoRepaintOnSceneChange;\n    public var dataModeController;\n    public var docked;\n    public var EditorWindow;\n    public var hasFocus;\n    public var hasUnsavedChanges;\n    public var maximized;\n    public var maxSize;\n    public var minSize;\n    public var overlayCanvas;\n    public var position;\n    public var rootVisualElement;\n    public var saveChangesMessage;\n    public var titleContent;\n    public var wantsLessLayoutEvents;\n    public void BeginWindows();\n    public void Close();\n    public void DiscardChanges();\n    public void EndWindows();\n    public void Focus();\n    public void GetExtraPaneTypes();\n    public void RemoveNotification();\n    public void Repaint();\n    public void SaveChanges();\n    public void SendEvent();\n    public void Show();\n    public void ShowAsDropDown();\n    public void ShowAuxWindow();\n    public void ShowModal();\n    public void ShowModalUtility();\n}",
+  "properties": [
+    {
+      "name": "autoRepaintOnSceneChange",
+      "description": "Enable this property to automatically repaint the window when the SceneView is modified."
+    },
+    {
+      "name": "dataModeController",
+      "description": "An instance of IDataModeController to handle DataMode functionalities for the current window."
+    },
+    {
+      "name": "docked",
+      "description": "Returns true if EditorWindow is docked."
+    },
+    {
+      "name": "EditorWindow",
+      "description": "Dockarea we're inside."
+    },
+    {
+      "name": "hasFocus",
+      "description": "Returns true if EditorWindow is focused."
+    },
+    {
+      "name": "hasUnsavedChanges",
+      "description": "This property specifies whether the Editor prompts the user to save or discard unsaved changes befor"
+    },
+    {
+      "name": "maximized",
+      "description": "Whether or not this window is maximized?"
+    },
+    {
+      "name": "maxSize",
+      "description": "The maximum size of this window when it is floating or modal. The maximum size is not used when the "
+    },
+    {
+      "name": "minSize",
+      "description": "The minimum size of this window when it is floating or modal. The minimum size is not used when the "
+    },
+    {
+      "name": "overlayCanvas",
+      "description": "The OverlayCanvas for this window."
+    },
+    {
+      "name": "position",
+      "description": "The desired position of the window in screen space."
+    },
+    {
+      "name": "rootVisualElement",
+      "description": "Retrieves the root visual element of this window hierarchy."
+    },
+    {
+      "name": "saveChangesMessage",
+      "description": "The message that displays to the user if they are prompted to save"
+    },
+    {
+      "name": "titleContent",
+      "description": "The GUIContent used for drawing the title of EditorWindows."
+    },
+    {
+      "name": "wantsLessLayoutEvents",
+      "description": "Specifies whether a layout pass is performed before all user events (for example, EventType.MouseDow"
+    },
+    {
+      "name": "wantsMouseEnterLeaveWindow",
+      "description": "Checks whether MouseEnterWindow and MouseLeaveWindow events are received in the GUI in this Editor w"
+    },
+    {
+      "name": "wantsMouseMove",
+      "description": "Checks whether MouseMove events are received in the GUI in this Editor window."
+    },
+    {
+      "name": "BeginWindows",
+      "description": "Mark the beginning area of all popup windows."
+    },
+    {
+      "name": "Close",
+      "description": "Close the editor window."
+    },
+    {
+      "name": "DiscardChanges",
+      "description": "Discards unsaved changes to the contents of the window."
+    }
+  ]
+}

@@ -1,0 +1,213 @@
+// Unity Class: Mesh
+// Documentation: https://docs.unity3d.com/ScriptReference/Mesh.html
+
+// Description: A class that allows you to create or modify meshes.
+
+// Properties:
+// - bindposeCount: The number of bind poses in the Mesh.
+// - bindposes: The bind poses. The bind pose at each index refers to the bone with the same index.
+// - blendShapeCount: Returns BlendShape count on this mesh.
+// - boneWeights: The BoneWeight for each vertex in the Mesh, which represents 4 bones per vertex.
+// - bounds: The bounding volume of the mesh that contain all vertices of the mesh.
+// - colors: Vertex colors of the Mesh.
+// - colors32: Vertex colors of the Mesh.
+// - indexBufferTarget: The intended target usage of the Mesh GPU index buffer.
+// - indexFormat: Format of the mesh index buffer data.
+// - isReadable: Returns true if the Mesh is read/write enabled, or false if it is not.
+// - lodCount: The number of LOD levels in this mesh.
+// - lodSelectionCurve: This struct represents the parameters that Unity uses to calculate which Mesh LOD level to select. It contains the lodBias and lodSlope properties, which scale logarithmically using screen space pixel area.
+// - normals: An array of vectors that defines the surface orientation at each vertex of the mesh.
+// - skinWeightBufferLayout: The dimension of data in the bone weight buffer.
+// - subMeshCount: The number of sub-meshes inside the Mesh object.
+// - tangents: The tangents of the Mesh.
+// - triangles: An array containing all triangles in the Mesh.
+// - uv: The texture coordinates (UVs) in the first channel.
+// - uv2: The texture coordinates (UVs) in the second channel.
+// - uv3: The texture coordinates (UVs) in the third channel.
+// - uv4: The texture coordinates (UVs) in the fourth channel.
+// - uv5: The texture coordinates (UVs) in the fifth channel.
+// - uv6: The texture coordinates (UVs) in the sixth channel.
+// - uv7: The texture coordinates (UVs) in the seventh channel.
+// - uv8: The texture coordinates (UVs) in the eighth channel.
+// - vertexAttributeCount: Returns the number of vertex attributes that the mesh has. (Read Only)
+// - vertexBufferCount: Gets the number of vertex buffers present in the Mesh. (Read Only)
+// - vertexBufferTarget: The intended target usage of the Mesh GPU vertex buffer.
+// - vertexCount: Returns the number of vertices in the Mesh (Read Only).
+// - vertices: Returns a copy of the vertex positions or assigns a new vertex positions array.
+
+// Constructors:
+// - Mesh: Creates a new, empty Mesh object that can be dynamically built or modified through script.
+
+// Methods:
+// - AddBlendShapeFrame: Adds a new blend shape frame.
+// - Clear: Clears all vertex data and all triangle indices.
+// - ClearBlendShapes: Clears all blend shapes from Mesh.
+// - CombineMeshes: Combines several Meshes into this Mesh.
+// - GetAllBoneWeights: Gets the bone weights for the Mesh.
+// - GetBaseVertex: Gets the base vertex index of the given sub-mesh.
+// - GetBindposes: Obtains the bind pose matrices used in skinning calculations.
+// - GetBlendShapeBuffer: Retrieves a GraphicsBuffer that provides direct read and write access to GPU blend shape vertex data.
+// - GetBlendShapeBufferRange: Get the location of blend shape vertex data for a given blend shape.
+// - GetBlendShapeFrameCount: Returns the frame count for a blend shape.
+// - GetBlendShapeFrameVertices: Retreives deltaVertices, deltaNormals and deltaTangents of a blend shape frame.
+// - GetBlendShapeFrameWeight: Returns the weight of a blend shape frame.
+// - GetBlendShapeIndex: Gets the index of a blend shape by given name.
+// - GetBlendShapeName: Returns name of BlendShape by given index.
+// - GetBonesPerVertex: The number of non-zero bone weights for each vertex.
+// - GetBoneWeightBuffer: Retrieves a GraphicsBuffer that provides direct read and write access to GPU bone weight data.
+// - GetBoneWeights: Gets the bone weights for the Mesh.
+// - GetColors: Gets the vertex colors of the Mesh.
+// - GetIndexBuffer: Retrieves a GraphicsBuffer to the GPU index buffer.
+// - GetIndexCount: Gets the index count of the given sub-mesh. If the mesh contains Mesh LODs, the index count of LOD0.
+// - GetIndexStart: Gets the starting index location within the Mesh's index buffer, for the given sub-mesh.
+// - GetIndices: Fetches the index list for the specified sub-mesh.
+// - GetLod: Gets a Mesh LOD range (index start and index count) for a given Mesh LOD.
+// - GetLods: Gets an array containing the Mesh LOD ranges (index start and index count) for a given Mesh LOD.
+// - GetNativeIndexBufferPtr: Retrieves a native (underlying graphics API) pointer to the index buffer.
+// - GetNativeVertexBufferPtr: Retrieves a native (underlying graphics API) pointer to the vertex buffer.
+// - GetNormals: Gets the vertex normals of the Mesh.
+// - GetSubMesh: Get information about a sub-mesh of the Mesh.
+// - GetTangents: Gets the tangents of the Mesh.
+// - GetTopology: Retrieves the topology type of the specified submesh in the Mesh.
+// - GetTriangles: Fetches the triangle list for the specified sub-mesh on this object.
+// - GetUVDistributionMetric: The UV distribution metric can be used to calculate the desired mipmap level based on the position of the camera.
+// - GetUVs: Gets the texture coordinates (UVs) stored in a given channel.
+// - GetVertexAttribute: Returns information about a vertex attribute based on its index.
+// - GetVertexAttributeDimension: Get dimension of a specific vertex data attribute on this Mesh.
+// - GetVertexAttributeFormat: Get format of a specific vertex data attribute on this Mesh.
+// - GetVertexAttributeOffset: Get offset within a vertex buffer stream of a specific vertex data attribute on this Mesh.
+// - GetVertexAttributes: Get information about vertex attributes of a Mesh.
+// - GetVertexAttributeStream: Gets the vertex buffer stream index of a specific vertex data attribute on this Mesh.
+// - GetVertexBuffer: Retrieves a GraphicsBuffer that provides direct acces to the GPU vertex buffer.
+// - GetVertexBufferStride: Get vertex buffer stream stride in bytes.
+// - GetVertices: Gets the vertex positions of the Mesh.
+// - HasVertexAttribute: Checks if a specific vertex data attribute exists on this Mesh.
+// - MarkDynamic: Hints that the Mesh geometry data will be updated frequently, optimizing GPU buffer strategies for potentially faster data updates.
+// - MarkModified: Notify Renderer components of mesh geometry change.
+// - Optimize: Optimizes the Mesh data to improve rendering performance.
+// - OptimizeIndexBuffers: Optimizes the geometry of the Mesh to improve rendering performance.
+// - OptimizeReorderVertexBuffer: Optimizes the vertices of the Mesh to improve rendering performance.
+// - RecalculateBounds: Recalculate the bounding volume of the Mesh and all of its sub-meshes with the vertex data.
+// - RecalculateNormals: Recalculates the normals of the Mesh from the triangles and vertices.
+// - RecalculateTangents: Recalculates the tangents of the Mesh from the normals and texture coordinates.
+// - RecalculateUVDistributionMetric: Recalculates the UV distribution metric of the Mesh from the vertices and uv coordinates.
+// - RecalculateUVDistributionMetrics: Recalculates the UV distribution metrics of the Mesh from the vertices and uv coordinates.
+// - SetBindposes: Sets the bind poses of the Mesh.
+// - SetBoneWeights: Sets the bone weights for the Mesh.
+// - SetColors: Set the per-vertex colors of the Mesh.
+// - SetIndexBufferData: Sets the data of the index buffer of the Mesh.
+// - SetIndexBufferParams: Sets the index buffer size and format.
+// - SetIndices: Sets the index buffer for the sub-mesh.
+// - SetLod: Sets a Mesh LOD range (index start and index count) for a given sub-mesh and level of detail.
+// - SetLods: Sets the Mesh LOD ranges (index start and index count) for a given sub-mesh with an array.
+// - SetNormals: Set the normals of the Mesh.
+// - SetSubMesh: Sets the information about a sub-mesh of the Mesh.
+// - SetSubMeshes: Sets information defining all sub-meshes in this Mesh, replacing any existing sub-meshes.
+// - SetTangents: Set the tangents of the Mesh.
+// - SetTriangles: Sets the triangle list for the sub-mesh.
+// - SetUVs: Sets the texture coordinates (UVs) stored in a given channel.
+// - SetVertexBufferData: Sets the data within a specific vertex buffer stream, copying elements from a source container to a destination range within the Mesh's buffer.
+// - SetVertexBufferParams: Sets the vertex buffer size and layout.
+// - SetVertices: Assigns a new vertex positions array.
+// - UploadMeshData: Upload previously done Mesh modifications to the graphics API.
+// - AcquireReadOnlyMeshData: Gets a snapshot of Mesh data for read-only access.
+// - AllocateWritableMeshData: Allocates data structures for Mesh creation using C# Jobs.
+// - ApplyAndDisposeWritableMeshData: Applies data defined in MeshData structs to Mesh objects.
+
+// Code Examples:
+// Example 1:
+//   using UnityEngine;public class Example : MonoBehaviour
+//   {
+//       [SerializeField] Vector3[] newVertices;
+//       [SerializeField] Vector2[] newUV;
+//       [SerializeField] int[] newTriangles;    void Start()
+//       {
+//           // Create a new Mesh and set its data properties (vertices, UV coordinates, and triangles).
+//           Mesh mesh = new Mesh
+//           {
+//               vertices = newVertices,
+//               uv = newUV,
+//               triangles = newTriangles
+//           };        // After updating the Mesh data, recalculate the normals. 
+//           // If the Mesh uses shaders with normal maps, also call RecalculateTangents for proper lighting.
+//           mesh.RecalculateNormals();
+//           
+//           // This assignment is temporary and will reset to the initial Mesh when exiting Play mode.
+//           GetComponent<MeshFilter>().mesh = mesh;
+//       }
+//   }
+// Example 2:
+//   using System.Collections.Generic;
+//   using UnityEngine;public class AnimateMesh : MonoBehaviour
+//   {
+//       Mesh m_Mesh;    readonly List<Vector3> m_InitialVertices = new List<Vector3>();
+//       readonly List<Vector3> m_InitialNormals = new List<Vector3>();
+//       readonly List<Vector3> m_AnimatedVertices = new List<Vector3>();    // Cache the vertices and normals lists, assuming the Mesh does not change.
+//       void Start()
+//       {
+//           m_Mesh = GetComponent<MeshFilter>().mesh;
+//           m_Mesh.GetVertices(m_InitialVertices);
+//           m_Mesh.GetNormals(m_InitialNormals);
+//           m_AnimatedVertices.AddRange(m_InitialVertices);
+//       }    void Update()
+//       {
+//           // Animate the vertices in the direction of the normals.
+//           for (var i = 0; i < m_InitialVertices.Count; i++)
+//               m_AnimatedVertices[i] = m_InitialVertices[i] + Mathf.Abs(Mathf.Sin(Time.time)) * m_InitialNormals[i];        // Update the mesh with the modified vertex positions.
+//           m_Mesh.SetVertices(m_AnimatedVertices);
+//       }
+//   }
+// Example 3:
+//   using UnityEngine;public class ExampleClass : MonoBehaviour
+//   {
+//       [SerializeField] Vector3[] newVertices;
+//       [SerializeField] Vector2[] newUV;
+//       [SerializeField] int[] newTriangles;    void Start()
+//       {
+//           // Extract a new Mesh instance and automatically assign it to the MeshFilter component.
+//           Mesh mesh = GetComponent<MeshFilter>().mesh;
+//           
+//           // Clear the Mesh to reset its data before assigning new values.
+//           mesh.Clear();        // Update the Mesh data.
+//           mesh.vertices = newVertices;
+//           mesh.uv = newUV;
+//           mesh.triangles = newTriangles;
+//           
+//           // After updating the Mesh data, recalculate the normals. 
+//           // If the Mesh uses shaders with normal maps, also call RecalculateTangents.
+//           mesh.RecalculateNormals();
+//       }
+//   }
+
+public class Mesh {
+    public var bindposeCount; // The number of bind poses in the Mesh.
+    public var bindposes; // The bind poses. The bind pose at each index refers to the bone with the same ind
+    public var blendShapeCount; // Returns BlendShape count on this mesh.
+    public var boneWeights; // The BoneWeight for each vertex in the Mesh, which represents 4 bones per vertex.
+    public var bounds; // The bounding volume of the mesh that contain all vertices of the mesh.
+    public var colors; // Vertex colors of the Mesh.
+    public var colors32; // Vertex colors of the Mesh.
+    public var indexBufferTarget; // The intended target usage of the Mesh GPU index buffer.
+    public var indexFormat; // Format of the mesh index buffer data.
+    public var isReadable; // Returns true if the Mesh is read/write enabled, or false if it is not.
+    public var lodCount; // The number of LOD levels in this mesh.
+    public var lodSelectionCurve; // This struct represents the parameters that Unity uses to calculate which Mesh LO
+    public var normals; // An array of vectors that defines the surface orientation at each vertex of the m
+    public var skinWeightBufferLayout; // The dimension of data in the bone weight buffer.
+    public var subMeshCount; // The number of sub-meshes inside the Mesh object.
+    public void AddBlendShapeFrame(); // Adds a new blend shape frame.
+    public void Clear(); // Clears all vertex data and all triangle indices.
+    public void ClearBlendShapes(); // Clears all blend shapes from Mesh.
+    public void CombineMeshes(); // Combines several Meshes into this Mesh.
+    public void GetAllBoneWeights(); // Gets the bone weights for the Mesh.
+    public void GetBaseVertex(); // Gets the base vertex index of the given sub-mesh.
+    public void GetBindposes(); // Obtains the bind pose matrices used in skinning calculations.
+    public void GetBlendShapeBuffer(); // Retrieves a GraphicsBuffer that provides direct read and write access to GPU ble
+    public void GetBlendShapeBufferRange(); // Get the location of blend shape vertex data for a given blend shape.
+    public void GetBlendShapeFrameCount(); // Returns the frame count for a blend shape.
+    public void GetBlendShapeFrameVertices(); // Retreives deltaVertices, deltaNormals and deltaTangents of a blend shape frame.
+    public void GetBlendShapeFrameWeight(); // Returns the weight of a blend shape frame.
+    public void GetBlendShapeIndex(); // Gets the index of a blend shape by given name.
+    public void GetBlendShapeName(); // Returns name of BlendShape by given index.
+    public void GetBonesPerVertex(); // The number of non-zero bone weights for each vertex.
+}

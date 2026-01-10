@@ -1,0 +1,126 @@
+// Unity Class: Avatar
+// Documentation: https://docs.unity3d.com/ScriptReference/Avatar.html
+
+// Description: The avatar asset describes the mapping of the character in the Animator.
+
+// Properties:
+// - humanDescription: Returns the HumanDescription used to create this Avatar.
+// - isHuman: Return true if this avatar is a valid human avatar.
+// - isValid: Return true if this avatar is a valid mecanim avatar. It can be a generic avatar or a human avatar.
+
+// Methods:
+// - GetInstanceID(): Gets the instance ID of the object.
+// - ToString(): Returns the name of the object.
+
+// Code Examples:
+// Example 1:
+//   using UnityEngine;
+//   
+//   // This example automatically builds a generic avatar
+//   // for the GameObject it is attached to and assigns it
+//   // to the Animator.
+//   [RequireComponent(typeof(Animator))]
+//   public class GenericAvatarBuilderExample : MonoBehaviour
+//   {
+//       void Start()
+//       {
+//           var animator = GetComponent<Animator>();
+//   
+//           var avatar = AvatarBuilder.BuildGenericAvatar(gameObject, "");
+//           avatar.name = "RuntimeAvatar";
+//   
+//           animator.avatar = avatar;
+//       }
+//   }
+
+// Example 2:
+//   using System;
+//   using System.Collections.Generic;
+//   using UnityEngine;
+//   
+//   // This example automatically builds a humanoid avatar
+//   // for the GameObject it is attached to and assigns it
+//   // to the Animator.
+//   [RequireComponent(typeof(Animator))]
+//   public class HumanAvatarBuilderExample : MonoBehaviour
+//   {
+//       [Serializable]
+//       public struct BoneMapping
+//       {
+//           public BoneMapping(HumanBodyBones bone)
+//           {
+//               this.bone = bone;
+//               transform = null;
+//           }
+//   
+//           public HumanBodyBones bone;
+//           public Transform transform;
+//       }
+//   
+//       // Lightweight version of the mapping tool available in
+//       // the Avatar Mapping tab.
+//       public BoneMapping[] boneMappings =
+//       {
+//           new BoneMapping(HumanBodyBones.Hips),
+//           new BoneMapping(HumanBodyBones.LeftUpperLeg),
+//           new BoneMapping(HumanBodyBones.RightUpperLeg),
+//           new BoneMapping(HumanBodyBones.LeftLowerLeg),
+//           new BoneMapping(HumanBodyBones.RightLowerLeg),
+//           new BoneMapping(HumanBodyBones.LeftFoot),
+//           new BoneMapping(HumanBodyBones.RightFoot),
+//           new BoneMapping(HumanBodyBones.Spine),
+//           new BoneMapping(HumanBodyBones.Chest),
+//           new BoneMapping(HumanBodyBones.Neck),
+//           new BoneMapping(HumanBodyBones.Head),
+//           new BoneMapping(HumanBodyBones.LeftShoulder),
+//           new BoneMapping(HumanBodyBones.RightShoulder),
+//           new BoneMapping(HumanBodyBones.LeftUpperArm),
+//           new BoneMapping(HumanBodyBones.RightUpperArm),
+//           new BoneMapping(HumanBodyBones.LeftLowerArm),
+//           new BoneMapping(HumanBodyBones.RightLowerArm),
+//           new BoneMapping(HumanBodyBones.LeftHand),
+//           new BoneMapping(HumanBodyBones.RightHand),
+//           new BoneMapping(HumanBodyBones.UpperChest)
+//       };
+//   
+//       HumanBone[] GetHumanBones()
+//       {
+//           var humanBones = new List<HumanBone>();
+//   
+//           string[] boneName = HumanTrait.BoneName;
+//           foreach (var kvp in boneMappings)
+//           {
+//               if (kvp.transform == null)
+//                   continue;
+//   
+//               humanBones.Add(new HumanBone
+//               {
+//                   humanName = boneName[(int)kvp.bone],
+//                   boneName = kvp.transform.name
+//               });
+//           }
+//   
+//           return humanBones.ToArray();
+//       }
+//   
+//       void Start()
+//       {
+//           var animator = GetComponent<Animator>();
+//           var avatar = AvatarBuilder.BuildHumanAvatar(gameObject, new HumanDescription
+//           {
+//               human = GetHumanBones(),
+//               skeleton = Array.Empty<SkeletonBone>(),
+//           });
+//           avatar.name = "RuntimeAvatar";
+//           animator.avatar = avatar;
+//       }
+//   }
+
+// Pseudo-code representation of Avatar
+public class Avatar {
+    public var humanDescription; // Returns the HumanDescription used to create this Avatar.
+    public var isHuman; // Return true if this avatar is a valid human avatar.
+    public var isValid; // Return true if this avatar is a valid mecanim avatar. It can be a generic avatar or a human avatar.
+    public void GetInstanceID(); // Gets the instance ID of the object.
+    public void ToString(); // Returns the name of the object.
+}

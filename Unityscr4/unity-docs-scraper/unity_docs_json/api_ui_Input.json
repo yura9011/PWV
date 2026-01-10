@@ -1,0 +1,7 @@
+{
+  "name": "api_ui_Input",
+  "type": "api",
+  "description": "Interface into the Legacy Input system.",
+  "content": "// Unity Class: Input\n// Documentation: https://docs.unity3d.com/ScriptReference/Input.html\n\n// Description: Interface into the Legacy Input system.\n\n// Code Examples:\n// Example 1:\n//   using UnityEngine;\n\n//   using System.Collections;public class ExampleClass : MonoBehaviour\n\n//   {\n\n//       public void Update()\n\n//       {\n\n//           if (Input.GetButtonDown(\"Fire1\"))\n\n//           {\n\n//               Debug.Log(Input.mousePosition);\n\n//           }\n\n//       }\n\n//   }\n\n// Pseudo-code representation of Input\npublic class Input {\n}",
+  "properties": []
+}

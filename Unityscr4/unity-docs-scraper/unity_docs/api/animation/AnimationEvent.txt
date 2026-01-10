@@ -1,0 +1,79 @@
+// Unity Class: AnimationEvent
+// Documentation: https://docs.unity3d.com/ScriptReference/AnimationEvent.html
+
+// Description: AnimationEvent lets you call a script function similar to SendMessage as part of playing back an animation.
+
+// Properties:
+// - animationState: The animation state that fired this event (Read Only).
+// - animatorClipInfo: The animator clip info related to this event (Read Only).
+// - animatorStateInfo: The animator state info related to this event (Read Only).
+// - floatParameter: Float parameter that is stored in the event and will be sent to the function.
+// - functionName: The name of the function that will be called.
+// - intParameter: Int parameter that is stored in the event and will be sent to the function.
+// - isFiredByAnimator: Returns true if this Animation event has been fired by an Animator component.
+// - isFiredByLegacy: Returns true if this Animation event has been fired by an Animation component.
+// - messageOptions: Function call options.
+// - objectReferenceParameter: Object reference parameter that is stored in the event and will be sent to the function.
+// - stringParameter: String parameter that is stored in the event and will be sent to the function.
+// - time: The time at which the event will be fired off.
+
+// Constructors:
+// - AnimationEvent(): Creates a new animation event.
+
+// Code Examples:
+// Example 1:
+//   // Animation Event example
+//   // Small example that can be called on each specified frame.
+//   // The code is executed once per animation loop.using UnityEngine;
+//   using System.Collections;public class Example : MonoBehaviour
+//   {
+//       public void PrintEvent()
+//       {
+//           Debug.Log("PrintEvent");
+//       }
+//   }
+
+// Example 2:
+//   // Add an Animation Event to a GameObject that has an Animator
+//   using UnityEngine;
+//   using System.Collections;public class Example : MonoBehaviour
+//   {
+//       public void Start()
+//       {
+//           // existing components on the GameObject
+//           AnimationClip clip;
+//           Animator anim;        // new event created
+//           AnimationEvent evt;
+//           evt = new AnimationEvent();        // put some parameters on the AnimationEvent
+//           //  - call the function called PrintEvent()
+//           //  - the animation on this object lasts 2 seconds
+//           //    and the new animation created here is
+//           //    set up to happen 1.3s into the animation
+//           evt.intParameter = 12345;
+//           evt.time = 1.3f;
+//           evt.functionName = "PrintEvent";        // get the animation clip and add the AnimationEvent
+//           anim = GetComponent<Animator>();
+//           clip = anim.runtimeAnimatorController.animationClips[0];
+//           clip.AddEvent(evt);
+//       }    // the function to be called as an event
+//       public void PrintEvent(int i)
+//       {
+//           print("PrintEvent: " + i + " called at: " + Time.time);
+//       }
+//   }
+
+// Pseudo-code representation of AnimationEvent
+public class AnimationEvent {
+    public var animationState; // The animation state that fired this event (Read Only).
+    public var animatorClipInfo; // The animator clip info related to this event (Read Only).
+    public var animatorStateInfo; // The animator state info related to this event (Read Only).
+    public var floatParameter; // Float parameter that is stored in the event and will be sent to the function.
+    public var functionName; // The name of the function that will be called.
+    public var intParameter; // Int parameter that is stored in the event and will be sent to the function.
+    public var isFiredByAnimator; // Returns true if this Animation event has been fired by an Animator component.
+    public var isFiredByLegacy; // Returns true if this Animation event has been fired by an Animation component.
+    public var messageOptions; // Function call options.
+    public var objectReferenceParameter; // Object reference parameter that is stored in the event and will be sent to the function.
+    public var stringParameter; // String parameter that is stored in the event and will be sent to the function.
+    public var time; // The time at which the event will be fired off.
+}

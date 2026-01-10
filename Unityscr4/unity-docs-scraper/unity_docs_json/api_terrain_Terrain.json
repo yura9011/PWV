@@ -1,0 +1,88 @@
+{
+  "name": "api_terrain_Terrain",
+  "type": "api",
+  "description": "The Terrain component renders the terrain.",
+  "content": "// Unity Class: Terrain\n// Documentation: https://docs.unity3d.com/ScriptReference/Terrain.html\n\n// Description: The Terrain component renders the terrain.\n\n// Properties:\n// - allowAutoConnect: Specifies if the terrain tile will be automatically connected to adjacent tiles.\n// - bakeLightProbesForTrees: Whether to bake an array of internal light probes for Tree Editor trees (Editor only).\n// - basemapDistance: Heightmap patches beyond basemap distance will use a precomputed low res basemap.\n// - bottomNeighbor: Terrain bottom neighbor.\n// - collectDetailPatches: Collect detail patches from memory.\n// - deringLightProbesForTrees: Removes ringing from light probes on Tree Editor trees (Editor only).\n// - detailObjectDensity: Density of detail objects.\n// - detailObjectDistance: Detail objects will be displayed up to this distance.\n// - drawHeightmap: Indicates whether Unity draws the Terrain geometry itself.\n// - drawInstanced: Set to true to enable the terrain instance renderer. The default value is false.\n// - drawTreesAndFoliage: Specify if terrain trees and details should be drawn. If disabled, this will also disable updates to renderer positions for trees and details. Tree and detail renderer positions will update again once this setting is re-enabled.\n// - editorRenderFlags: Controls what part of the terrain should be rendered.\n// - enableHeightmapRayTracing: When this options is enabled, Terrain heightmap geometries will be added in acceleration structures used for Ray Tracing.\n// - groupingID: Grouping ID for auto connect.\n// - heightmapMaximumLOD: Limits the Terrain's maximum rendering resolution.\n// - heightmapMinimumLODSimplification: Limits how simplified the rendered terrain can be.\n// - heightmapPixelError: An approximation of how many pixels the terrain will pop in the worst case when switching lod.\n// - ignoreQualitySettings: When enabled, the terrain ignores the terrain overrides set in the QualitySettings.\n// - keepUnusedRenderingResources: Defines whether Unity frees per-Camera rendering resources for the Terrain when those resources aren't in use after a certain number of frames.\n// - leftNeighbor: The Terrain tile to the left, which is in the negative X direction.\n// - lightmapIndex: The index of the baked lightmap applied to this terrain.\n// - lightmapScaleOffset: The UV scale & offset used for a baked lightmap.\n// - materialTemplate: The custom material Unity uses to render the Terrain.\n// - normalmapTexture: Returns the normal map texture computed from sampling the heightmap. It is only used when terrain is rendered using instancing.\n// - patchBoundsMultiplier: Set the terrain bounding box scale.\n// - preserveTreePrototypeLayers: Allows you to specify how Unity chooses the layer for tree instances.\n// - realtimeLightmapIndex: The index of the realtime lightmap applied to this terrain.\n// - realtimeLightmapScaleOffset: The UV scale & offset used for a realtime lightmap.\n// - reflectionProbeUsage: How reflection probes are used for terrain. See ReflectionProbeUsage.\n// - renderingLayerMask: Determines which rendering layers the Terrain renderer lives on.\n// - rightNeighbor: The Terrain tile to the left, which is in the positive X direction.\n// - shadowCastingMode: Allows you to set the shadow casting mode for the terrain.\n// - terrainData: The Terrain Data that stores heightmaps, terrain textures, detail meshes and trees.\n// - topNeighbor: Terrain top neighbor.\n// - treeBillboardDistance: Distance from the camera where trees will be rendered as billboards only.\n// - treeCrossFadeLength: Total distance delta that trees will use to transition from billboard orientation to mesh orientation.\n// - treeDistance: The maximum distance at which trees are rendered.\n// - treeLODBiasMultiplier: The multiplier to the current LOD bias used for rendering LOD trees (i.e. SpeedTree trees).\n// - treeMaximumFullLODCount: Maximum number of trees rendered at full LOD.\n// - treeMotionVectorModeOverride: The motion vector rendering mode for all SpeedTree models painted on the terrain.\n\n// Methods:\n// - AddTreeInstance: Adds a tree instance to the terrain.\n// - Flush: Flushes any change done in the terrain so it takes effect.\n// - GetClosestReflectionProbes: Fills the list with reflection probes whose AABB intersects with terrain's AABB. Their weights are also provided. Weight shows how much influence the probe has on the terrain, and is used when the blending between multiple reflection probes occurs.\n// - GetKeepUnusedCameraRenderingResources: Each Camera has its own KeepUnusedRenderingResources setting, which is false by default. Unity uses this per-Camera setting in combination with the Terrain's overall KeepUnusedRenderingResources setting. If either setting is true, Unity preserves all rendering resources regardless of how long they've remained unused.\n// - GetPosition: Get the world space position of the terrain.\n// - GetSplatMaterialPropertyBlock: Get the previously set splat material properties by copying to the dest MaterialPropertyBlock object.\n// - SampleHeight: Samples the height at the given position defined in world space, relative to the Terrain space.\n// - SetKeepUnusedCameraRenderingResources: Defines whether Unity cleans up rendering resources for a given Camera during garbage collection.\n// - SetNeighbors: Lets you set up the connection between neighboring Terrain tiles. This ensures LOD matches up on neighboring Terrain tiles.\n// - SetSplatMaterialPropertyBlock: Set the additional material properties when rendering the terrain heightmap using the splat material.\n// - CreateTerrainGameObject: Creates a Terrain including collider from TerrainData.\n// - GetActiveTerrains: Populates a List of Terrains with the active Terrains in the Scene.\n// - SetConnectivityDirty: Marks the current connectivity status as invalid.\n\npublic class Terrain {\n    public var allowAutoConnect; // Specifies if the terrain tile will be automatically connected to adjacent tiles.\n    public var bakeLightProbesForTrees; // Whether to bake an array of internal light probes for Tree Editor trees (Editor \n    public var basemapDistance; // Heightmap patches beyond basemap distance will use a precomputed low res basemap\n    public var bottomNeighbor; // Terrain bottom neighbor.\n    public var collectDetailPatches; // Collect detail patches from memory.\n    public var deringLightProbesForTrees; // Removes ringing from light probes on Tree Editor trees (Editor only).\n    public var detailObjectDensity; // Density of detail objects.\n    public var detailObjectDistance; // Detail objects will be displayed up to this distance.\n    public var drawHeightmap; // Indicates whether Unity draws the Terrain geometry itself.\n    public var drawInstanced; // Set to true to enable the terrain instance renderer. The default value is false.\n    public var drawTreesAndFoliage; // Specify if terrain trees and details should be drawn. If disabled, this will als\n    public var editorRenderFlags; // Controls what part of the terrain should be rendered.\n    public var enableHeightmapRayTracing; // When this options is enabled, Terrain heightmap geometries will be added in acce\n    public var groupingID; // Grouping ID for auto connect.\n    public var heightmapMaximumLOD; // Limits the Terrain's maximum rendering resolution.\n    public void AddTreeInstance(); // Adds a tree instance to the terrain.\n    public void Flush(); // Flushes any change done in the terrain so it takes effect.\n    public void GetClosestReflectionProbes(); // Fills the list with reflection probes whose AABB intersects with terrain's AABB.\n    public void GetKeepUnusedCameraRenderingResources(); // Each Camera has its own KeepUnusedRenderingResources setting, which is false by \n    public void GetPosition(); // Get the world space position of the terrain.\n    public void GetSplatMaterialPropertyBlock(); // Get the previously set splat material properties by copying to the dest Material\n    public void SampleHeight(); // Samples the height at the given position defined in world space, relative to the\n    public void SetKeepUnusedCameraRenderingResources(); // Defines whether Unity cleans up rendering resources for a given Camera during ga\n    public void SetNeighbors(); // Lets you set up the connection between neighboring Terrain tiles. This ensures L\n    public void SetSplatMaterialPropertyBlock(); // Set the additional material properties when rendering the terrain heightmap usin\n    public void CreateTerrainGameObject(); // Creates a Terrain including collider from TerrainData.\n    public void GetActiveTerrains(); // Populates a List of Terrains with the active Terrains in the Scene.\n    public void SetConnectivityDirty(); // Marks the current connectivity status as invalid.\n}",
+  "properties": [
+    {
+      "name": "allowAutoConnect",
+      "description": "Specifies if the terrain tile will be automatically connected to adjacent tiles."
+    },
+    {
+      "name": "bakeLightProbesForTrees",
+      "description": "Whether to bake an array of internal light probes for Tree Editor trees (Editor only)."
+    },
+    {
+      "name": "basemapDistance",
+      "description": "Heightmap patches beyond basemap distance will use a precomputed low res basemap."
+    },
+    {
+      "name": "bottomNeighbor",
+      "description": "Terrain bottom neighbor."
+    },
+    {
+      "name": "collectDetailPatches",
+      "description": "Collect detail patches from memory."
+    },
+    {
+      "name": "deringLightProbesForTrees",
+      "description": "Removes ringing from light probes on Tree Editor trees (Editor only)."
+    },
+    {
+      "name": "detailObjectDensity",
+      "description": "Density of detail objects."
+    },
+    {
+      "name": "detailObjectDistance",
+      "description": "Detail objects will be displayed up to this distance."
+    },
+    {
+      "name": "drawHeightmap",
+      "description": "Indicates whether Unity draws the Terrain geometry itself."
+    },
+    {
+      "name": "drawInstanced",
+      "description": "Set to true to enable the terrain instance renderer. The default value is false."
+    },
+    {
+      "name": "drawTreesAndFoliage",
+      "description": "Specify if terrain trees and details should be drawn. If disabled, this will also disable updates to renderer positions for trees and details. Tree and detail renderer positions will update again once this setting is re-enabled."
+    },
+    {
+      "name": "editorRenderFlags",
+      "description": "Controls what part of the terrain should be rendered."
+    },
+    {
+      "name": "enableHeightmapRayTracing",
+      "description": "When this options is enabled, Terrain heightmap geometries will be added in acceleration structures used for Ray Tracing."
+    },
+    {
+      "name": "groupingID",
+      "description": "Grouping ID for auto connect."
+    },
+    {
+      "name": "heightmapMaximumLOD",
+      "description": "Limits the Terrain's maximum rendering resolution."
+    },
+    {
+      "name": "heightmapMinimumLODSimplification",
+      "description": "Limits how simplified the rendered terrain can be."
+    },
+    {
+      "name": "heightmapPixelError",
+      "description": "An approximation of how many pixels the terrain will pop in the worst case when switching lod."
+    },
+    {
+      "name": "ignoreQualitySettings",
+      "description": "When enabled, the terrain ignores the terrain overrides set in the QualitySettings."
+    },
+    {
+      "name": "keepUnusedRenderingResources",
+      "description": "Defines whether Unity frees per-Camera rendering resources for the Terrain when those resources aren't in use after a certain number of frames."
+    },
+    {
+      "name": "leftNeighbor",
+      "description": "The Terrain tile to the left, which is in the negative X direction."
+    }
+  ]
+}

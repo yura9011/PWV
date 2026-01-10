@@ -1,0 +1,33 @@
+// Unity Class: Vector2
+// Documentation: https://docs.unity3d.com/ScriptReference/Vector2.html
+
+// Description: Representation of 2D vectors and points.
+
+// Properties:
+// - magnitude: Returns the length of this vector (Read Only).
+// - normalized: Returns a normalized vector based on the current vector. The normalized vector has a magnitude of 1 and is in the same direction as the current vector. Returns a zero vector If the current vector is too small to be normalized.
+// - sqrMagnitude: Returns the squared length of this vector (Read Only).
+// - this[int]: Access the x or y component using [0] or [1] respectively.
+// - x: X component of the vector.
+// - y: Y component of the vector.
+
+// Constructors:
+// - Vector2(): Constructs a new vector with given x, y components.
+
+// Methods:
+// - Equals(): Returns true if the given vector is exactly equal to this vector.
+// - Set(): Set x and y components of an existing Vector2.
+// - ToString(): Returns a formatted string for this vector.
+
+// Pseudo-code representation of Vector2
+public class Vector2 {
+    public var magnitude; // Returns the length of this vector (Read Only).
+    public var normalized; // Returns a normalized vector based on the current vector. The normalized vector has a magnitude of 1 and is in the same direction as the current vector. Returns a zero vector If the current vector is too small to be normalized.
+    public var sqrMagnitude; // Returns the squared length of this vector (Read Only).
+    public var this[int]; // Access the x or y component using [0] or [1] respectively.
+    public var x; // X component of the vector.
+    public var y; // Y component of the vector.
+    public void Equals(); // Returns true if the given vector is exactly equal to this vector.
+    public void Set(); // Set x and y components of an existing Vector2.
+    public void ToString(); // Returns a formatted string for this vector.
+}

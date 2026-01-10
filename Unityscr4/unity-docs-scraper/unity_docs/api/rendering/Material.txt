@@ -1,0 +1,177 @@
+// Unity Class: Material
+// Documentation: https://docs.unity3d.com/ScriptReference/Material.html
+
+// Description: The material class.
+
+// Properties:
+// - color: The main color property of the Material.
+// - doubleSidedGI: Gets and sets whether the Double Sided Global Illumination setting is enabled for this material.
+// - enabledKeywords: An array containing the local shader keywords that are currently enabled for this material.
+// - enableInstancing: Gets and sets whether GPU instancing is enabled for this material.
+// - globalIlluminationFlags: Defines how the material should interact with lightmaps and lightprobes.
+// - isVariant: Returns true if this material is a material variant.
+// - mainTexture: The main texture.
+// - mainTextureOffset: Defines the UV offset for the main texture in the Material. This property adjusts the position of the texture mapping on a Mesh surface relative to its UV coordinates.
+// - mainTextureScale: The scale of the main texture.
+// - parent: Parent of this material.
+// - passCount: How many passes are in this material (Read Only).
+// - rawRenderQueue: Raw render queue of this material.
+// - renderQueue: The render queue to use as an override on this material.
+// - shader: The shader used by the material.
+// - shaderKeywords: An array containing names of the local shader keywords that are currently enabled for this material.
+
+// Constructors:
+// - Material(): 
+
+// Methods:
+// - ApplyPropertyOverride(): Applies an override associated with a Material Variant to a target.
+// - ComputeCRC(): Computes a CRC hash value from the content of the material.
+// - CopyMatchingPropertiesFromMaterial(): Copies properties, keyword states and settings from mat to this material, but only if they exist in both materials.
+// - CopyPropertiesFromMaterial(): Copy properties from other material into this material.
+// - DisableKeyword(): Disables a local shader keyword for this material.
+// - EnableKeyword(): Enables a local shader keyword for this material.
+// - FindPass(): Returns the index of the pass passName.
+// - GetBuffer(): Get a named Graphics Buffer value.
+// - GetColor(): Get a named color value.
+// - GetColorArray(): Get a named color array.
+// - GetConstantBuffer(): Get a named Constant Buffer value.
+// - GetFloat(): Get a named float value.
+// - GetFloatArray(): Get a named float array.
+// - GetInt(): This method is deprecated. Use GetFloat or GetInteger instead.
+// - GetInteger(): Get a named integer value. If the integer property is not found an exception is thrown.
+// - GetMatrix(): Get a named matrix value from the shader.
+// - GetMatrixArray(): Get a named matrix array.
+// - GetPassName(): Returns the name of the shader pass at index pass.
+// - GetPropertyNames(): Retrieves a list of the named properties in the material that match the input property type.
+// - GetShaderPassEnabled(): Checks whether a given Shader pass is enabled on this Material.
+// - GetTag(): Get the value of material's shader tag.
+// - GetTexture(): Get a named texture.
+// - GetTextureOffset(): Gets the placement offset of texture propertyName.
+// - GetTexturePropertyNameIDs(): Return the name IDs of all texture properties exposed on this material.
+// - GetTexturePropertyNames(): Returns the names of all texture properties exposed on this material.
+// - GetTextureScale(): Gets the placement scale of texture propertyName.
+// - GetVector(): Get a named vector value.
+// - GetVectorArray(): Get a named vector array.
+// - HasBuffer(): Checks if the ShaderLab file assigned to the Material has a ComputeBuffer property with the given name.
+// - HasColor(): Checks if the ShaderLab file assigned to the Material has a Color property with the given name.
+// - HasConstantBuffer(): Checks if the ShaderLab file assigned to the Material has a ConstantBuffer property with the given name.
+// - HasFloat(): Checks if the ShaderLab file assigned to the Material has a Float property with the given name. This also works with the Float Array property.
+// - HasInt(): This method is deprecated. Use HasFloat or HasInteger instead.
+// - HasInteger(): Checks if the ShaderLab file assigned to the Material has an Integer property with the given name.
+// - HasMatrix(): Checks if the ShaderLab file assigned to the Material has a Matrix property with the given name. This also works with the Matrix Array property.
+// - HasProperty(): Checks if the ShaderLab file assigned to the Material has a property with the given name.
+// - HasTexture(): Checks if the ShaderLab file assigned to the Material has a Texture property with the given name.
+// - HasVector(): Checks if the ShaderLab file assigned to the Material has a Vector property with the given name. This also works with the Vector Array property.
+// - IsChildOf(): Returns True if the given material is an ancestor of this Material.
+// - IsKeywordEnabled(): Checks whether a local shader keyword is enabled for this material.
+// - IsPropertyLocked(): Checks whether a property is locked by this material.
+// - IsPropertyLockedByAncestor(): Checks whether a property is locked by any of ancestor of this material.
+// - IsPropertyOverriden(): Checks whether a property is overriden by this material.
+// - Lerp(): Interpolate properties between two materials.
+// - RevertAllPropertyOverrides(): Removes all property overrides on this material.
+// - RevertPropertyOverride(): Removes the override on a property.
+// - SetBuffer(): Sets a named buffer value.
+// - SetColor(): Sets the value of a color- or vector-type property.
+// - SetColorArray(): Sets a color array property.
+// - SetConstantBuffer(): Sets a ComputeBuffer or GraphicsBuffer as a named constant buffer for the material.
+// - SetFloat(): Sets a named float value.
+// - SetFloatArray(): Sets a float array property.
+// - SetInt(): This method is deprecated. Use SetFloat or SetInteger instead.
+// - SetInteger(): Sets a named integer value.
+// - SetKeyword(): Sets the state of a local shader keyword for this material.
+// - SetMatrix(): Sets a named matrix for the shader.
+// - SetMatrixArray(): Sets a matrix array property.
+// - SetOverrideTag(): Sets an override tag/value on the material.
+// - SetPass(): Activate the given pass for rendering.
+// - SetPropertyLock(): Sets the lock state of a property for this material.
+// - SetShaderPassEnabled(): Enables or disables a Shader pass on a per-Material level.
+// - SetTexture(): Sets a named texture.
+// - SetTextureOffset(): Sets the placement offset of a given texture. The name parameter is defined in the shader. This method creates a new Material instance.
+// - SetTextureScale(): Sets the placement scale of texture propertyName.
+// - SetVector(): Sets a value for a named vector in the material.
+// - SetVectorArray(): Sets a vector array property.
+
+// Pseudo-code representation of Material
+public class Material {
+    public var color; // The main color property of the Material.
+    public var doubleSidedGI; // Gets and sets whether the Double Sided Global Illumination setting is enabled for this material.
+    public var enabledKeywords; // An array containing the local shader keywords that are currently enabled for this material.
+    public var enableInstancing; // Gets and sets whether GPU instancing is enabled for this material.
+    public var globalIlluminationFlags; // Defines how the material should interact with lightmaps and lightprobes.
+    public var isVariant; // Returns true if this material is a material variant.
+    public var mainTexture; // The main texture.
+    public var mainTextureOffset; // Defines the UV offset for the main texture in the Material. This property adjusts the position of the texture mapping on a Mesh surface relative to its UV coordinates.
+    public var mainTextureScale; // The scale of the main texture.
+    public var parent; // Parent of this material.
+    public var passCount; // How many passes are in this material (Read Only).
+    public var rawRenderQueue; // Raw render queue of this material.
+    public var renderQueue; // The render queue to use as an override on this material.
+    public var shader; // The shader used by the material.
+    public var shaderKeywords; // An array containing names of the local shader keywords that are currently enabled for this material.
+    public void ApplyPropertyOverride(); // Applies an override associated with a Material Variant to a target.
+    public void ComputeCRC(); // Computes a CRC hash value from the content of the material.
+    public void CopyMatchingPropertiesFromMaterial(); // Copies properties, keyword states and settings from mat to this material, but only if they exist in both materials.
+    public void CopyPropertiesFromMaterial(); // Copy properties from other material into this material.
+    public void DisableKeyword(); // Disables a local shader keyword for this material.
+    public void EnableKeyword(); // Enables a local shader keyword for this material.
+    public void FindPass(); // Returns the index of the pass passName.
+    public void GetBuffer(); // Get a named Graphics Buffer value.
+    public void GetColor(); // Get a named color value.
+    public void GetColorArray(); // Get a named color array.
+    public void GetConstantBuffer(); // Get a named Constant Buffer value.
+    public void GetFloat(); // Get a named float value.
+    public void GetFloatArray(); // Get a named float array.
+    public void GetInt(); // This method is deprecated. Use GetFloat or GetInteger instead.
+    public void GetInteger(); // Get a named integer value. If the integer property is not found an exception is thrown.
+    public void GetMatrix(); // Get a named matrix value from the shader.
+    public void GetMatrixArray(); // Get a named matrix array.
+    public void GetPassName(); // Returns the name of the shader pass at index pass.
+    public void GetPropertyNames(); // Retrieves a list of the named properties in the material that match the input property type.
+    public void GetShaderPassEnabled(); // Checks whether a given Shader pass is enabled on this Material.
+    public void GetTag(); // Get the value of material's shader tag.
+    public void GetTexture(); // Get a named texture.
+    public void GetTextureOffset(); // Gets the placement offset of texture propertyName.
+    public void GetTexturePropertyNameIDs(); // Return the name IDs of all texture properties exposed on this material.
+    public void GetTexturePropertyNames(); // Returns the names of all texture properties exposed on this material.
+    public void GetTextureScale(); // Gets the placement scale of texture propertyName.
+    public void GetVector(); // Get a named vector value.
+    public void GetVectorArray(); // Get a named vector array.
+    public void HasBuffer(); // Checks if the ShaderLab file assigned to the Material has a ComputeBuffer property with the given name.
+    public void HasColor(); // Checks if the ShaderLab file assigned to the Material has a Color property with the given name.
+    public void HasConstantBuffer(); // Checks if the ShaderLab file assigned to the Material has a ConstantBuffer property with the given name.
+    public void HasFloat(); // Checks if the ShaderLab file assigned to the Material has a Float property with the given name. This also works with the Float Array property.
+    public void HasInt(); // This method is deprecated. Use HasFloat or HasInteger instead.
+    public void HasInteger(); // Checks if the ShaderLab file assigned to the Material has an Integer property with the given name.
+    public void HasMatrix(); // Checks if the ShaderLab file assigned to the Material has a Matrix property with the given name. This also works with the Matrix Array property.
+    public void HasProperty(); // Checks if the ShaderLab file assigned to the Material has a property with the given name.
+    public void HasTexture(); // Checks if the ShaderLab file assigned to the Material has a Texture property with the given name.
+    public void HasVector(); // Checks if the ShaderLab file assigned to the Material has a Vector property with the given name. This also works with the Vector Array property.
+    public void IsChildOf(); // Returns True if the given material is an ancestor of this Material.
+    public void IsKeywordEnabled(); // Checks whether a local shader keyword is enabled for this material.
+    public void IsPropertyLocked(); // Checks whether a property is locked by this material.
+    public void IsPropertyLockedByAncestor(); // Checks whether a property is locked by any of ancestor of this material.
+    public void IsPropertyOverriden(); // Checks whether a property is overriden by this material.
+    public void Lerp(); // Interpolate properties between two materials.
+    public void RevertAllPropertyOverrides(); // Removes all property overrides on this material.
+    public void RevertPropertyOverride(); // Removes the override on a property.
+    public void SetBuffer(); // Sets a named buffer value.
+    public void SetColor(); // Sets the value of a color- or vector-type property.
+    public void SetColorArray(); // Sets a color array property.
+    public void SetConstantBuffer(); // Sets a ComputeBuffer or GraphicsBuffer as a named constant buffer for the material.
+    public void SetFloat(); // Sets a named float value.
+    public void SetFloatArray(); // Sets a float array property.
+    public void SetInt(); // This method is deprecated. Use SetFloat or SetInteger instead.
+    public void SetInteger(); // Sets a named integer value.
+    public void SetKeyword(); // Sets the state of a local shader keyword for this material.
+    public void SetMatrix(); // Sets a named matrix for the shader.
+    public void SetMatrixArray(); // Sets a matrix array property.
+    public void SetOverrideTag(); // Sets an override tag/value on the material.
+    public void SetPass(); // Activate the given pass for rendering.
+    public void SetPropertyLock(); // Sets the lock state of a property for this material.
+    public void SetShaderPassEnabled(); // Enables or disables a Shader pass on a per-Material level.
+    public void SetTexture(); // Sets a named texture.
+    public void SetTextureOffset(); // Sets the placement offset of a given texture. The name parameter is defined in the shader. This method creates a new Material instance.
+    public void SetTextureScale(); // Sets the placement scale of texture propertyName.
+    public void SetVector(); // Sets a value for a named vector in the material.
+    public void SetVectorArray(); // Sets a vector array property.
+}

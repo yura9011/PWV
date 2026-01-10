@@ -1,0 +1,12 @@
+{
+  "name": "api_input_Cursor",
+  "type": "api",
+  "description": "Cursor API for setting the cursor (mouse pointer).",
+  "content": "// Unity Class: Cursor\n// Documentation: https://docs.unity3d.com/ScriptReference/Cursor.html\n\n// Description: Cursor API for setting the cursor (mouse pointer).\n\n// Methods:\n// - SetCursor: Sets a custom cursor to use as your cursor.\n\npublic class Cursor {\n    public void SetCursor(); // Sets a custom cursor to use as your cursor.\n}",
+  "properties": [
+    {
+      "name": "SetCursor",
+      "description": "Sets a custom cursor to use as your cursor."
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "name": "api_math_Quaternion",
+  "type": "api",
+  "description": "Quaternions are used to represent rotations.",
+  "content": "// Unity Class: Quaternion\n// Documentation: https://docs.unity3d.com/ScriptReference/Quaternion.html\n\n// Description: Quaternions are used to represent rotations.\n\n// Properties:\n// - eulerAngles: Returns or sets the euler angle representation of the rotation in degrees.\n// - normalized: Returns this quaternion with a magnitude of 1 (Read Only).\n// - this[int]: Access the x, y, z, w components using [0], [1], [2], [3] respectively.\n// - w: W component of the Quaternion. Do not directly modify quaternions.\n// - x: X component of the Quaternion. Don't modify this directly unless you know quaternions inside out.\n// - y: Y component of the Quaternion. Don't modify this directly unless you know quaternions inside out.\n// - z: Z component of the Quaternion. Don't modify this directly unless you know quaternions inside out.\n\n// Constructors:\n// - Quaternion(): Constructs new Quaternion with given x,y,z,w components.\n\n// Methods:\n// - Equals(): Performs exact binary comparison of each Quaternion component (x, y, z, w).\n// - Set(): Set x, y, z and w components of an existing Quaternion.\n// - SetFromToRotation(): Creates a rotation which rotates from fromDirection to toDirection.\n// - SetLookRotation(): Creates a rotation with the specified forward and upwards directions.\n// - ToAngleAxis(): Converts a rotation to angle-axis representation.\n// - ToString(): Returns a formatted string for this quaternion.\n\n// Pseudo-code representation of Quaternion\npublic class Quaternion {\n    public var eulerAngles; // Returns or sets the euler angle representation of the rotation in degrees.\n    public var normalized; // Returns this quaternion with a magnitude of 1 (Read Only).\n    public var this[int]; // Access the x, y, z, w components using [0], [1], [2], [3] respectively.\n    public var w; // W component of the Quaternion. Do not directly modify quaternions.\n    public var x; // X component of the Quaternion. Don't modify this directly unless you know quaternions inside out.\n    public var y; // Y component of the Quaternion. Don't modify this directly unless you know quaternions inside out.\n    public var z; // Z component of the Quaternion. Don't modify this directly unless you know quaternions inside out.\n    public void Equals(); // Performs exact binary comparison of each Quaternion component (x, y, z, w).\n    public void Set(); // Set x, y, z and w components of an existing Quaternion.\n    public void SetFromToRotation(); // Creates a rotation which rotates from fromDirection to toDirection.\n    public void SetLookRotation(); // Creates a rotation with the specified forward and upwards directions.\n    public void ToAngleAxis(); // Converts a rotation to angle-axis representation.\n    public void ToString(); // Returns a formatted string for this quaternion.\n}",
+  "properties": [
+    {
+      "name": "eulerAngles",
+      "description": "Returns or sets the euler angle representation of the rotation in degrees."
+    },
+    {
+      "name": "normalized",
+      "description": "Returns this quaternion with a magnitude of 1 (Read Only)."
+    },
+    {
+      "name": "w",
+      "description": "W component of the Quaternion. Do not directly modify quaternions."
+    },
+    {
+      "name": "x",
+      "description": "X component of the Quaternion. Don't modify this directly unless you know quaternions inside out."
+    },
+    {
+      "name": "y",
+      "description": "Y component of the Quaternion. Don't modify this directly unless you know quaternions inside out."
+    },
+    {
+      "name": "z",
+      "description": "Z component of the Quaternion. Don't modify this directly unless you know quaternions inside out."
+    }
+  ]
+}

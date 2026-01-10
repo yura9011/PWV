@@ -1,0 +1,19 @@
+// Unity Class: NavMeshPath
+// Documentation: https://docs.unity3d.com/ScriptReference/AI.NavMeshPath.html
+
+// Description: A path as calculated by the navigation system.
+
+// Properties:
+// - corners: Corner points of the path. (Read Only)
+// - status: Status of the path. (Read Only)
+
+// Methods:
+// - ClearCorners: Erase all corner points from path.
+// - GetCornersNonAlloc: Calculate the corners for the path.
+
+public class NavMeshPath {
+    public var corners;
+    public var status;
+    public void ClearCorners();
+    public void GetCornersNonAlloc();
+}

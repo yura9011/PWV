@@ -1,0 +1,43 @@
+// Unity Manual: Audio files
+// Section: Audio
+// URL: https://docs.unity3d.com/Manual/AudioFiles.html
+
+// Content:
+Audio
+Audio files
+Audio overview
+Introduction to audio files
+Audio files
+You can import and use audio files in your Unity projects to create a more immersive and interactive application.
+Topic
+Description
+Introduction to audio files
+An overview of audio files in Unity.
+Audio file type compatibility
+Information about the audio file formats Unity supports.
+Audio file compression in Unity
+An overview of how Unity compresses audio files on import.
+Audio Clip Import Settings reference
+Reference information about the
+Audio Clip
+A container for audio data in Unity. Unity supports mono, stereo and multichannel audio assets (up to eight channels). Unity can import .aif, .wav, .mp3, and .ogg audio file format, and .xm, .mod, .it, and .s3m tracker module formats.
+More info
+See in
+Glossary
+Import Settings.
+Import audio files into Unity
+Instructions on how to import audio files into your Unity project.
+Audio overview
+Introduction to audio files
+Copyright ©2005-2026 Unity Technologies. All rights reserved. Built from 6000.3.5f1 (9e864d5a2e6f). Built on: 2026-01-09.
+Tutorials
+Community Answers
+Knowledge Base
+Forums
+Asset Store
+Terms of use
+Legal
+Privacy Policy
+Cookies
+Do Not Sell or Share My Personal Information
+Your Privacy Choices (Cookie Settings)

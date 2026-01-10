@@ -1,0 +1,8 @@
+// Unity Class: Application
+// Documentation: https://docs.unity3d.com/ScriptReference/Application.html
+
+// Description: Provides access to application runtime data.
+
+// Pseudo-code representation of Application
+public class Application {
+}

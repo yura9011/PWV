@@ -1,0 +1,88 @@
+{
+  "name": "api_physics2d_Rigidbody2D",
+  "type": "api",
+  "description": "Provides physics movement and other dynamics, and the ability to attach Collider2D to it.",
+  "content": "// Unity Class: Rigidbody2D\n// Documentation: https://docs.unity3d.com/ScriptReference/Rigidbody2D.html\n\n// Description: Provides physics movement and other dynamics, and the ability to attach Collider2D to it.\n\n// Properties:\n// - angularDamping: The angular damping of the Rigidbody2D angular velocity.\n// - angularVelocity: Angular velocity in degrees per second.\n// - attachedColliderCount: Returns the number of Collider2D attached to this Rigidbody2D.\n// - bodyType: The physical behaviour type of the Rigidbody2D.\n// - centerOfMass: The center of mass of the rigidBody in local space.\n// - collisionDetectionMode: The method used by the physics engine to check if two objects have collided.\n// - constraints: Controls which degrees of freedom are allowed for the simulation of this Rigidbody2D.\n// - excludeLayers: The additional Layers that all Collider2D attached to this Rigidbody2D should exclude when deciding if a contact with another Collider2D should happen or not.\n// - freezeRotation: Controls whether physics will change the rotation of the object.\n// - gravityScale: The degree to which this object is affected by gravity.\n// - includeLayers: The additional Layers that all Collider2D attached to this Rigidbody2D should include when deciding if a contact with another Collider2D should happen or not.\n// - inertia: The Rigidbody's resistance to changes in angular velocity (rotation).\n// - interpolation: Physics interpolation used between updates.\n// - linearDamping: The linear damping of the Rigidbody2D linear velocity.\n// - linearVelocity: The linear velocity of the Rigidbody2D represents the rate of change over time of the Rigidbody2D position in world-units.\n// - linearVelocityX: The X component of the linear velocity of the Rigidbody2D in world-units per second.\n// - linearVelocityY: The Y component of the linear velocity of the Rigidbody2D in world-units per second.\n// - localToWorldMatrix: The transformation matrix used to transform the Rigidbody2D to world space.\n// - mass: Mass of the Rigidbody.\n// - position: The position of the rigidbody.\n// - rotation: The rotation of the rigidbody.\n// - sharedMaterial: The PhysicsMaterial2D that is applied to all Collider2D attached to this Rigidbody2D.\n// - simulated: Indicates whether the rigid body should be simulated or not by the physics system.\n// - sleepMode: The sleep state that the rigidbody will initially be in.\n// - totalForce: The total amount of force that has been explicitly applied to this Rigidbody2D since the last physics simulation step.\n// - totalTorque: The total amount of torque that has been explicitly applied to this Rigidbody2D since the last physics simulation step.\n// - useAutoMass: Should the total rigid-body mass be automatically calculated from the Collider2D.density of attached colliders?\n// - useFullKinematicContacts: Should kinematic/kinematic and kinematic/static collisions be allowed?\n// - worldCenterOfMass: Gets the center of mass of the rigidBody in global space.\n\n// Methods:\n// - AddForce: Apply a force to the rigidbody.\n// - AddForceAtPosition: Apply a force at a given position in space.\n// - AddForceX: Adds a force to the X component of the Rigidbody2D.linearVelocity only leaving the Y component of the world space Rigidbody2D.linearVelocity untouched.\n// - AddForceY: Adds a force to the Y component of the Rigidbody2D.linearVelocity only leaving the X component of the world space Rigidbody2D.linearVelocity untouched.\n// - AddRelativeForce: Adds a force to the local space Rigidbody2D.linearVelocity. In other words, the force is applied in the rotated coordinate space of the Rigidbody2D.\n// - AddRelativeForceX: Adds a force to the X component of the Rigidbody2D.linearVelocity in the local space of the Rigidbody2D only leaving the Y component of the local space Rigidbody2D.linearVelocity untouched.\n// - AddRelativeForceY: Adds a force to the Y component of the Rigidbody2D.linearVelocity in the local space of the Rigidbody2D only leaving the X component of the local space Rigidbody2D.linearVelocity untouched.\n// - AddTorque: Apply a torque at the rigidbody's centre of mass.\n// - Cast: All the Collider2D shapes attached to the Rigidbody2D are cast into the Scene starting at each Collider position ignoring the Colliders attached to the same Rigidbody2D.\n// - ClosestPoint: Returns a point on the perimeter of all enabled Colliders attached to this Rigidbody that is closest to the specified position.\n// - Distance: Calculates the minimum distance of this collider against all Collider2D attached to this Rigidbody2D.\n// - GetAttachedColliders: Returns all Collider2D that are attached to this Rigidbody2D.\n// - GetContacts: Retrieves all contact points for all of the Collider(s) attached to this Rigidbody.\n// - GetPoint: Get a local space point given the point point in rigidBody global space.\n// - GetPointVelocity: The velocity of the rigidbody at the point Point in global space.\n// - GetRelativePoint: Get a global space point given the point relativePoint in rigidBody local space.\n// - GetRelativePointVelocity: The velocity of the rigidbody at the point Point in local space.\n// - GetRelativeVector: Get a global space vector given the vector relativeVector in rigidBody local space.\n// - GetShapes: Gets all the PhysicsShape2D used by all Collider2D attached to the Rigidbody2D.\n// - GetVector: Get a local space vector given the vector vector in rigidBody global space.\n// - IsAwake: Is the rigidbody \"awake\"?\n// - IsSleeping: Is the rigidbody \"sleeping\"?\n// - IsTouching: Checks whether the collider is touching any of the collider(s) attached to this rigidbody or not.\n// - IsTouchingLayers: Checks whether any of the collider(s) attached to this rigidbody are touching any colliders on the specified layerMask or not.\n// - MovePosition: Moves the rigidbody to position.\n// - MovePositionAndRotation: Moves the rigidbody position to position and the rigidbody angle to angle.\n// - MoveRotation: Rotates the Rigidbody to angle (given in degrees).\n// - Overlap: Get a list of all Colliders that overlap all Colliders attached to this Rigidbody2D.\n// - OverlapPoint: Check if any of the Rigidbody2D colliders overlap a point in space.\n// - SetRotation: Sets the rotation of the Rigidbody2D to angle (given in degrees).\n// - Sleep: Make the rigidbody \"sleep\".\n// - Slide: Slide the Rigidbody2D using the specified velocity integrated over deltaTime using the configuration specified by slideMovement.\n// - WakeUp: Disables the \"sleeping\" state of a rigidbody.\n// - Destroy: Removes a GameObject, component, or asset.\n// - DestroyImmediate: Destroys the specified object immediately. Use with caution and in Edit mode only.\n// - DontDestroyOnLoad: Do not destroy the target Object when loading a new Scene.\n// - FindAnyObjectByType: Retrieves any active loaded object of Type type.\n// - FindFirstObjectByType: Retrieves the first active loaded object of Type type.\n// - FindObjectsByType: Retrieves a list of all loaded objects of Type type.\n// - Instantiate: Clones the object original and returns the clone.\n// - InstantiateAsync: Captures a snapshot of the original object (that must be related to some GameObject) and returns the AsyncInstantiateOperation.\n\npublic class Rigidbody2D {\n    public var angularDamping; // The angular damping of the Rigidbody2D angular velocity.\n    public var angularVelocity; // Angular velocity in degrees per second.\n    public var attachedColliderCount; // Returns the number of Collider2D attached to this Rigidbody2D.\n    public var bodyType; // The physical behaviour type of the Rigidbody2D.\n    public var centerOfMass; // The center of mass of the rigidBody in local space.\n    public var collisionDetectionMode; // The method used by the physics engine to check if two objects have collided.\n    public var constraints; // Controls which degrees of freedom are allowed for the simulation of this Rigidbo\n    public var excludeLayers; // The additional Layers that all Collider2D attached to this Rigidbody2D should ex\n    public var freezeRotation; // Controls whether physics will change the rotation of the object.\n    public var gravityScale; // The degree to which this object is affected by gravity.\n    public var includeLayers; // The additional Layers that all Collider2D attached to this Rigidbody2D should in\n    public var inertia; // The Rigidbody's resistance to changes in angular velocity (rotation).\n    public var interpolation; // Physics interpolation used between updates.\n    public var linearDamping; // The linear damping of the Rigidbody2D linear velocity.\n    public var linearVelocity; // The linear velocity of the Rigidbody2D represents the rate of change over time o\n    public void AddForce(); // Apply a force to the rigidbody.\n    public void AddForceAtPosition(); // Apply a force at a given position in space.\n    public void AddForceX(); // Adds a force to the X component of the Rigidbody2D.linearVelocity only leaving t\n    public void AddForceY(); // Adds a force to the Y component of the Rigidbody2D.linearVelocity only leaving t\n    public void AddRelativeForce(); // Adds a force to the local space Rigidbody2D.linearVelocity. In other words, the \n    public void AddRelativeForceX(); // Adds a force to the X component of the Rigidbody2D.linearVelocity in the local s\n    public void AddRelativeForceY(); // Adds a force to the Y component of the Rigidbody2D.linearVelocity in the local s\n    public void AddTorque(); // Apply a torque at the rigidbody's centre of mass.\n    public void Cast(); // All the Collider2D shapes attached to the Rigidbody2D are cast into the Scene st\n    public void ClosestPoint(); // Returns a point on the perimeter of all enabled Colliders attached to this Rigid\n    public void Distance(); // Calculates the minimum distance of this collider against all Collider2D attached\n    public void GetAttachedColliders(); // Returns all Collider2D that are attached to this Rigidbody2D.\n    public void GetContacts(); // Retrieves all contact points for all of the Collider(s) attached to this Rigidbo\n    public void GetPoint(); // Get a local space point given the point point in rigidBody global space.\n    public void GetPointVelocity(); // The velocity of the rigidbody at the point Point in global space.\n}",
+  "properties": [
+    {
+      "name": "angularDamping",
+      "description": "The angular damping of the Rigidbody2D angular velocity."
+    },
+    {
+      "name": "angularVelocity",
+      "description": "Angular velocity in degrees per second."
+    },
+    {
+      "name": "attachedColliderCount",
+      "description": "Returns the number of Collider2D attached to this Rigidbody2D."
+    },
+    {
+      "name": "bodyType",
+      "description": "The physical behaviour type of the Rigidbody2D."
+    },
+    {
+      "name": "centerOfMass",
+      "description": "The center of mass of the rigidBody in local space."
+    },
+    {
+      "name": "collisionDetectionMode",
+      "description": "The method used by the physics engine to check if two objects have collided."
+    },
+    {
+      "name": "constraints",
+      "description": "Controls which degrees of freedom are allowed for the simulation of this Rigidbody2D."
+    },
+    {
+      "name": "excludeLayers",
+      "description": "The additional Layers that all Collider2D attached to this Rigidbody2D should exclude when deciding if a contact with another Collider2D should happen or not."
+    },
+    {
+      "name": "freezeRotation",
+      "description": "Controls whether physics will change the rotation of the object."
+    },
+    {
+      "name": "gravityScale",
+      "description": "The degree to which this object is affected by gravity."
+    },
+    {
+      "name": "includeLayers",
+      "description": "The additional Layers that all Collider2D attached to this Rigidbody2D should include when deciding if a contact with another Collider2D should happen or not."
+    },
+    {
+      "name": "inertia",
+      "description": "The Rigidbody's resistance to changes in angular velocity (rotation)."
+    },
+    {
+      "name": "interpolation",
+      "description": "Physics interpolation used between updates."
+    },
+    {
+      "name": "linearDamping",
+      "description": "The linear damping of the Rigidbody2D linear velocity."
+    },
+    {
+      "name": "linearVelocity",
+      "description": "The linear velocity of the Rigidbody2D represents the rate of change over time of the Rigidbody2D position in world-units."
+    },
+    {
+      "name": "linearVelocityX",
+      "description": "The X component of the linear velocity of the Rigidbody2D in world-units per second."
+    },
+    {
+      "name": "linearVelocityY",
+      "description": "The Y component of the linear velocity of the Rigidbody2D in world-units per second."
+    },
+    {
+      "name": "localToWorldMatrix",
+      "description": "The transformation matrix used to transform the Rigidbody2D to world space."
+    },
+    {
+      "name": "mass",
+      "description": "Mass of the Rigidbody."
+    },
+    {
+      "name": "position",
+      "description": "The position of the rigidbody."
+    }
+  ]
+}

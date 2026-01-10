@@ -1,0 +1,8 @@
+// Unity Class: Mathf
+// Documentation: https://docs.unity3d.com/ScriptReference/Mathf.html
+
+// Description: A collection of common math functions.
+
+// Pseudo-code representation of Mathf
+public class Mathf {
+}

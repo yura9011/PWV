@@ -1,0 +1,79 @@
+// Unity Manual: Testing your code
+// Section: Scripting
+// URL: https://docs.unity3d.com/Manual/test-framework/test-framework-introduction.html
+
+// Content:
+Programming in Unity
+Testing your code
+TransfromHandle API examples
+Get started with Unity Test Framework
+Testing your code
+Write tests for your Edit mode or Play mode code and run them through the Unity Editor’s
+Test Runner
+The Test Framework package (formerly called the Test Runner) is a Unity tool that tests your code in both Edit mode and Play mode, and also on target platforms such as Standalone, Android, or iOS.
+More info
+See in
+Glossary
+window, from the command line, or from code. Unity Test Framework integrates a custom version of
+NUnit
+, the open-source unit testing library for .NET languages and extends it with Unity-specific capabilities.
+As an alternative to
+NUnit tests
+, Unity Test Framework provides
+Unity tests
+, which can interact with Unity-specific concepts such as frames, the application loop, and
+domain reload
+. A Unity test runs as a
+coroutine
+in Play mode and in the
+EditorApplication.update
+callback loop in Edit mode.
+Unity tests can
+yield instructions for the Unity Editor
+. Once the instruction is complete, the test run continues. You can also
+yield return null
+in a Unity test to skip a frame and defer an operation until the next iteration of either the
+EditorApplication.update
+or the
+per-frame game update
+loop.
+This documentation assumes you’re familiar with NUnit and with fundamental principles of unit testing in C#. If you’re not, refer to
+Unit testing C# with NUnit and .NET Core
+and
+Unit testing best practices
+in the Microsoft documentation.
+Note
+: Unity Test Framework is a
+core Unity package
+and is distributed as part of a Unity Editor installation. Unity Test Framework currently uses a custom version of NUnit based on version 3.5.
+Topic
+Description
+Get started with Unity Test Framework
+Create your first test assembly and sample Unity Test Framework tests.
+Command-line reference
+Run tests and configure test settings from the Unity Editor command line.
+Writing tests
+Write Unity tests for Edit mode or Play mode code with the Unity Test Framework C# APIs.
+Running tests
+Run Unity tests from the Editor’s
+Test Runner
+window, from the command line, or directly from code.
+Unity Test Framework learning materials
+Follow a practical tutorial with a series of exercises to help you learn the fundamentals of Unity Test Framework.
+Additional resources
+QA your code: The new Unity Test Framework (Unite Copenhagen)
+Performance Testing Package for Unity Test Framework
+TransfromHandle API examples
+Get started with Unity Test Framework
+Copyright ©2005-2026 Unity Technologies. All rights reserved. Built from 6000.3.5f1 (9e864d5a2e6f). Built on: 2026-01-09.
+Tutorials
+Community Answers
+Knowledge Base
+Forums
+Asset Store
+Terms of use
+Legal
+Privacy Policy
+Cookies
+Do Not Sell or Share My Personal Information
+Your Privacy Choices (Cookie Settings)

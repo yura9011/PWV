@@ -1,0 +1,56 @@
+{
+  "name": "api_animation_AnimatorOverrideController",
+  "type": "api",
+  "description": "Interface to control Animator Override Controller.",
+  "content": "// Unity Class: AnimatorOverrideController\n// Documentation: https://docs.unity3d.com/ScriptReference/AnimatorOverrideController.html\n\n// Description: Interface to control Animator Override Controller.\n\n// Properties:\n// - overridesCount: Returns the count of overrides.\n// - runtimeAnimatorController: The Runtime Animator Controller that the Animator Override Controller overrides.\n// - this[string]: Returns either the overriding Animation Clip if set or the original Animation Clip named name.\n\n// Methods:\n// - ApplyOverrides: Applies the list of overrides on this Animator Override Controller.\n// - GetOverrides: Gets the list of Animation Clip overrides currently defined in this Animator Override Controller.\n// - Destroy: Removes a GameObject, component, or asset.\n// - DestroyImmediate: Destroys the specified object immediately. Use with caution and in Edit mode only.\n// - DontDestroyOnLoad: Do not destroy the target Object when loading a new Scene.\n// - FindAnyObjectByType: Retrieves any active loaded object of Type type.\n// - FindFirstObjectByType: Retrieves the first active loaded object of Type type.\n// - FindObjectsByType: Retrieves a list of all loaded objects of Type type.\n// - Instantiate: Clones the object original and returns the clone.\n// - InstantiateAsync: Captures a snapshot of the original object (that must be related to some GameObject) and returns the\n\npublic class AnimatorOverrideController {\n    public var overridesCount;\n    public var runtimeAnimatorController;\n    public var this[string];\n    public void ApplyOverrides();\n    public void GetOverrides();\n    public void Destroy();\n    public void DestroyImmediate();\n    public void DontDestroyOnLoad();\n    public void FindAnyObjectByType();\n    public void FindFirstObjectByType();\n    public void FindObjectsByType();\n    public void Instantiate();\n    public void InstantiateAsync();\n}",
+  "properties": [
+    {
+      "name": "overridesCount",
+      "description": "Returns the count of overrides."
+    },
+    {
+      "name": "runtimeAnimatorController",
+      "description": "The Runtime Animator Controller that the Animator Override Controller overrides."
+    },
+    {
+      "name": "ApplyOverrides",
+      "description": "Applies the list of overrides on this Animator Override Controller."
+    },
+    {
+      "name": "GetOverrides",
+      "description": "Gets the list of Animation Clip overrides currently defined in this Animator Override Controller."
+    },
+    {
+      "name": "Destroy",
+      "description": "Removes a GameObject, component, or asset."
+    },
+    {
+      "name": "DestroyImmediate",
+      "description": "Destroys the specified object immediately. Use with caution and in Edit mode only."
+    },
+    {
+      "name": "DontDestroyOnLoad",
+      "description": "Do not destroy the target Object when loading a new Scene."
+    },
+    {
+      "name": "FindAnyObjectByType",
+      "description": "Retrieves any active loaded object of Type type."
+    },
+    {
+      "name": "FindFirstObjectByType",
+      "description": "Retrieves the first active loaded object of Type type."
+    },
+    {
+      "name": "FindObjectsByType",
+      "description": "Retrieves a list of all loaded objects of Type type."
+    },
+    {
+      "name": "Instantiate",
+      "description": "Clones the object original and returns the clone."
+    },
+    {
+      "name": "InstantiateAsync",
+      "description": "Captures a snapshot of the original object (that must be related to some GameObject) and returns the"
+    }
+  ]
+}

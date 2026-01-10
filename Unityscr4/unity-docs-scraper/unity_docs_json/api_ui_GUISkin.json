@@ -1,0 +1,88 @@
+{
+  "name": "api_ui_GUISkin",
+  "type": "api",
+  "description": "Defines how GUI looks and behaves.",
+  "content": "// Unity Class: GUISkin\n// Documentation: https://docs.unity3d.com/ScriptReference/GUISkin.html\n\n// Description: Defines how GUI looks and behaves.\n\n// Properties:\n// - box: Style used by default for GUI.Box controls.\n// - button: Style used by default for GUI.Button controls.\n// - customStyles: Array of GUI styles for specific needs.\n// - font: The default font to use for all styles.\n// - GUISkin: Make this the current skin used by the GUI.\n// - horizontalScrollbar: Style used by default for the background part of GUI.HorizontalScrollbar controls.\n// - horizontalScrollbarLeftButton: Style used by default for the left button on GUI.HorizontalScrollbar controls.\n// - horizontalScrollbarRightButton: Style used by default for the right button on GUI.HorizontalScrollbar controls.\n// - horizontalScrollbarThumb: Style used by default for the thumb that is dragged in GUI.HorizontalScrollbar controls.\n// - horizontalSlider: Style used by default for the background part of GUI.HorizontalSlider controls.\n// - horizontalSliderThumb: Style used by default for the thumb that is dragged in GUI.HorizontalSlider controls.\n// - label: Style used by default for GUI.Label controls.\n// - scrollView: Style used by default for the background of ScrollView controls (see GUI.BeginScrollView).\n// - settings: Generic settings for how controls should behave with this skin.\n// - textArea: Style used by default for GUI.TextArea controls.\n// - textField: Style used by default for GUI.TextField controls.\n// - toggle: Style used by default for GUI.Toggle controls.\n// - verticalScrollbar: Style used by default for the background part of GUI.VerticalScrollbar controls.\n// - verticalScrollbarDownButton: Style used by default for the down button on GUI.VerticalScrollbar controls.\n// - verticalScrollbarThumb: Style used by default for the thumb that is dragged in GUI.VerticalScrollbar controls.\n// - verticalScrollbarUpButton: Style used by default for the up button on GUI.VerticalScrollbar controls.\n// - verticalSlider: Style used by default for the background part of GUI.VerticalSlider controls.\n// - verticalSliderThumb: Style used by default for the thumb that is dragged in GUI.VerticalSlider controls.\n// - window: Style used by default for Window controls (Additional resources: GUI.Window).\n\n// Methods:\n// - FindStyle: Try to search for a GUIStyle. This functions returns NULL and does not give an error.\n// - GetStyle: Get a named GUIStyle.\n// - Destroy: Removes a GameObject, component, or asset.\n// - DestroyImmediate: Destroys the specified object immediately. Use with caution and in Edit mode only.\n// - DontDestroyOnLoad: Do not destroy the target Object when loading a new Scene.\n// - FindAnyObjectByType: Retrieves any active loaded object of Type type.\n// - FindFirstObjectByType: Retrieves the first active loaded object of Type type.\n// - FindObjectsByType: Retrieves a list of all loaded objects of Type type.\n// - Instantiate: Clones the object original and returns the clone.\n// - InstantiateAsync: Captures a snapshot of the original object (that must be related to some GameObject) and returns the\n// - CreateInstance: Creates an instance of a scriptable object.\n\npublic class GUISkin {\n    public var box;\n    public var button;\n    public var customStyles;\n    public var font;\n    public var GUISkin;\n    public var horizontalScrollbar;\n    public var horizontalScrollbarLeftButton;\n    public var horizontalScrollbarRightButton;\n    public var horizontalScrollbarThumb;\n    public var horizontalSlider;\n    public var horizontalSliderThumb;\n    public var label;\n    public var scrollView;\n    public var settings;\n    public var textArea;\n    public void FindStyle();\n    public void GetStyle();\n    public void Destroy();\n    public void DestroyImmediate();\n    public void DontDestroyOnLoad();\n    public void FindAnyObjectByType();\n    public void FindFirstObjectByType();\n    public void FindObjectsByType();\n    public void Instantiate();\n    public void InstantiateAsync();\n    public void CreateInstance();\n}",
+  "properties": [
+    {
+      "name": "box",
+      "description": "Style used by default for GUI.Box controls."
+    },
+    {
+      "name": "button",
+      "description": "Style used by default for GUI.Button controls."
+    },
+    {
+      "name": "customStyles",
+      "description": "Array of GUI styles for specific needs."
+    },
+    {
+      "name": "font",
+      "description": "The default font to use for all styles."
+    },
+    {
+      "name": "GUISkin",
+      "description": "Make this the current skin used by the GUI."
+    },
+    {
+      "name": "horizontalScrollbar",
+      "description": "Style used by default for the background part of GUI.HorizontalScrollbar controls."
+    },
+    {
+      "name": "horizontalScrollbarLeftButton",
+      "description": "Style used by default for the left button on GUI.HorizontalScrollbar controls."
+    },
+    {
+      "name": "horizontalScrollbarRightButton",
+      "description": "Style used by default for the right button on GUI.HorizontalScrollbar controls."
+    },
+    {
+      "name": "horizontalScrollbarThumb",
+      "description": "Style used by default for the thumb that is dragged in GUI.HorizontalScrollbar controls."
+    },
+    {
+      "name": "horizontalSlider",
+      "description": "Style used by default for the background part of GUI.HorizontalSlider controls."
+    },
+    {
+      "name": "horizontalSliderThumb",
+      "description": "Style used by default for the thumb that is dragged in GUI.HorizontalSlider controls."
+    },
+    {
+      "name": "label",
+      "description": "Style used by default for GUI.Label controls."
+    },
+    {
+      "name": "scrollView",
+      "description": "Style used by default for the background of ScrollView controls (see GUI.BeginScrollView)."
+    },
+    {
+      "name": "settings",
+      "description": "Generic settings for how controls should behave with this skin."
+    },
+    {
+      "name": "textArea",
+      "description": "Style used by default for GUI.TextArea controls."
+    },
+    {
+      "name": "textField",
+      "description": "Style used by default for GUI.TextField controls."
+    },
+    {
+      "name": "toggle",
+      "description": "Style used by default for GUI.Toggle controls."
+    },
+    {
+      "name": "verticalScrollbar",
+      "description": "Style used by default for the background part of GUI.VerticalScrollbar controls."
+    },
+    {
+      "name": "verticalScrollbarDownButton",
+      "description": "Style used by default for the down button on GUI.VerticalScrollbar controls."
+    },
+    {
+      "name": "verticalScrollbarThumb",
+      "description": "Style used by default for the thumb that is dragged in GUI.VerticalScrollbar controls."
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+// Unity Manual: Code optimization
+// Section: Scripting
+// URL: https://docs.unity3d.com/Manual/scripting-optimization.html
+
+// Content:
+Programming in Unity
+Code optimization
+Native plug-in API for logging
+Unity programming best practices
+Code optimization
+Considering performance in all the code you write helps your project scale without bottlenecks. There are several ways you can improve performance, including avoiding bad practices,
+profiling
+your code, implementing appropriate design patterns, and using techniques like asynchronous programming to split work across multiple threads of execution.
+Topic
+Description
+Unity programming best practices
+Key issues to be aware of when writing code for Unity applications, along with best practices to help you avoid common pitfalls.
+Asynchronous programming
+Asynchronous programming in Unity with the .NET
+async
+and
+await
+keywords and Unity’s own custom
+Awaitable
+class.
+Job system
+Use Unity’s own
+Job
+system to get the most out of multi-core CPUs and parallelize your algorithms.
+Optimizing your code for managed memory
+Approaches for optimizing your code to work with managed memory.
+Using unmanaged API for transform operations
+Use the
+TransformHandle
+API as an alternative to the
+Transform
+API.
+Additional resources
+Optimization in Unity
+Native plug-in API for logging
+Unity programming best practices
+Copyright ©2005-2026 Unity Technologies. All rights reserved. Built from 6000.3.5f1 (9e864d5a2e6f). Built on: 2026-01-09.
+Tutorials
+Community Answers
+Knowledge Base
+Forums
+Asset Store
+Terms of use
+Legal
+Privacy Policy
+Cookies
+Do Not Sell or Share My Personal Information
+Your Privacy Choices (Cookie Settings)

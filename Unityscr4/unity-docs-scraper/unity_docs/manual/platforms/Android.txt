@@ -1,0 +1,71 @@
+// Unity Manual: Platforms_Android
+// URL: https://docs.unity3d.com/Manual/android.html
+
+Platform development
+Android
+Unity Remote
+Introducing Android
+Android
+Access information on developing Unity applications on the Android platform.
+Important
+: A critical security vulnerability has been identified affecting games and applications built with Unity 2017.1 and later for Android, Windows, macOS, and Linux. To learn more about this vulnerability and the action you must take, refer to
+Unity Platform Protection: Developer Remediation Guide
+.
+The following sections cover the key concepts, tools, and workflows to help you develop and publish Android applications.
+Topic
+Description
+Introducing Android
+Introduces key concepts and workflows that are useful to understand before you begin to develop a Unity application for Android.
+Getting started with Android
+Explains how to set up a project for Android development and introduces Android-specific tools and settings.
+Developing for Android
+Contains Android-specific development information on topics such as input, asset management, and debugging.
+Building and delivering for Android
+Explains how to build and publish an Android application.
+Additional resources and examples
+📖
+E-Book
+:
+Optimize your game performance for mobile, XR, and Web in Unity
+📖
+E-Book
+:
+Introduction to the Universal Render Pipeline for advanced Unity creators
+📖
+E-Book
+:
+Create popular shaders and visual effects with the Universal Render Pipeline
+📖
+E-Book
+:
+Ultimate guide to profiling Unity games
+📝
+How-to guide
+:
+How to run automated tests for your games with the Unity Test Framework
+📝
+How-to guide
+:
+Tools for profiling and debugging
+📝
+How-to guide
+:
+Mobile optimization tips for technical artists - Part 1
+📝
+How-to guide
+:
+Mobile optimization tips for technical artists - Part 2
+⚙️
+Sample project
+:
+Dragon Crashers - UI Toolkit sample project
+⚙️
+Sample project
+:
+Gem Hunter Match - 2D sample project
+⚙️
+Sample project
+:
+Happy Harvest - 2D sample project
+Unity Remote
+Introducing Android

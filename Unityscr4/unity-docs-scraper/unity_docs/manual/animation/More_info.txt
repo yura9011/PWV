@@ -1,0 +1,92 @@
+// Unity Manual: More info
+// Section: Animation
+// URL: https://docs.unity3d.com/Manual/FeatureSets.html
+
+// Content:
+Packages and package management
+Feature sets
+Deprecated packages
+2D feature set
+Feature sets
+Feature sets are groups of
+packages
+A container that stores various types of features and assets for Unity, including Editor or Runtime tools and libraries, Asset collections, and project templates. Packages are self-contained units that the Unity Package Manager can share across Unity projects. Most of the time these are called
+packages
+, but occasionally they are called
+Unity Package Manager (UPM) packages
+. The
+Unity Package Manager
+(UPM) can display, add, and remove packages from your project. These packages are native to the Unity Package Manager and provide a fundamental method of delivering Unity functionality. However, the Unity Package Manager can also display
+Asset Store packages
+that you downloaded from the Asset Store.
+More info
+See in
+Glossary
+that enable you to achieve specific results in Unity. For example, the 2D
+feature set
+provides all the functionality you need to create 2D games for various art styles.
+All the packages in a feature set are compatible with each other for that version of the feature set. You can install feature sets using the
+Package Manager
+.
+The following feature sets are available in this release of Unity:
+2D
+: Create 2D game worlds with animated characters and 2D physics.
+3D Characters and Animation
+: Animate characters and create cutscenes, sequences or movies.
+3D World Building
+: Use artist-friendly tools to create 3D, open-world environments that are believable and interactive.
+AR
+Augmented Reality
+More info
+See in
+Glossary
+: Create
+augmented reality
+Augmented Reality (AR) uses computer graphics or video composited on top of a live video feed to augment the view and create interaction with real and virtual objects.
+More info
+See in
+Glossary
+experiences that interact with the real world.
+ECS
+: Create experiences using a data-oriented design approach, to scale processing in a highly performant manner.
+Engineering
+: Enable support for integrated development environments, and use tools to test and analyze your project’s performance.
+Gameplay and Storytelling
+: Create dynamic
+camera
+A component which creates an image of a particular viewpoint in your scene. The output is either drawn to the screen or captured as a texture.
+More info
+See in
+Glossary
+shots, and arrange cinematic content to create a story for your project.
+Mobile
+: Optimize your apps for mobile devices.
+VR
+Virtual Reality
+More info
+See in
+Glossary
+: Add interactivity to your applications to create
+virtual reality
+Virtual Reality (VR) immerses users in an artificial 3D world of realistic images and sounds, using a headset and motion tracking.
+More info
+See in
+Glossary
+experiences.
+Additional resources
+Details panel reference (feature sets)
+Install a feature set
+Deprecated packages
+2D feature set
+Copyright ©2005-2026 Unity Technologies. All rights reserved. Built from 6000.3.5f1 (9e864d5a2e6f). Built on: 2026-01-09.
+Tutorials
+Community Answers
+Knowledge Base
+Forums
+Asset Store
+Terms of use
+Legal
+Privacy Policy
+Cookies
+Do Not Sell or Share My Personal Information
+Your Privacy Choices (Cookie Settings)

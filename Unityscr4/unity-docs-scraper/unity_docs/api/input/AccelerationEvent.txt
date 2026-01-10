@@ -1,0 +1,14 @@
+// Unity Class: AccelerationEvent
+// Documentation: https://docs.unity3d.com/ScriptReference/AccelerationEvent.html
+
+// Description: Structure describing acceleration status of the device.
+
+// Properties:
+// - acceleration: Value of acceleration.
+// - deltaTime: Amount of time passed since last accelerometer measurement.
+
+// Pseudo-code representation of AccelerationEvent
+public class AccelerationEvent {
+    public var acceleration; // Value of acceleration.
+    public var deltaTime; // Amount of time passed since last accelerometer measurement.
+}

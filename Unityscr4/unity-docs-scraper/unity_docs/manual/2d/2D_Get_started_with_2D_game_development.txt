@@ -1,0 +1,47 @@
+// Unity Manual: Get started with 2D game development
+// Section: 2D
+// URL: https://docs.unity3d.com/Manual/2d-game-development-landing.html
+
+// Content:
+2D game development
+Get started with 2D game development
+Introduction to 2D
+Set up a project for 2D games
+Get started with 2D game development
+2D games in Unity differ on their game perspective and art style. Use this quickstart guide to create a
+2D game in Unity
+.
+Topic
+Description
+Set up a project for 2D games
+Set up a project to create a 2D game.
+2D game creation workflow
+Follow this workflow to learn how to create a 2D game in Unity.
+2D game perspectives reference
+Explore the different
+camera
+A component which creates an image of a particular viewpoint in your scene. The output is either drawn to the screen or captured as a texture.
+More info
+See in
+Glossary
+perspectives available to 2D games.
+2D game art style reference
+Explore the different art styles available to 2D games.
+Additional resources
+2D Beginner: Adventure Game
+2D Game Kit
+2D Learn tutorials
+Introduction to 2D
+Set up a project for 2D games
+Copyright ©2005-2026 Unity Technologies. All rights reserved. Built from 6000.3.5f1 (9e864d5a2e6f). Built on: 2026-01-09.
+Tutorials
+Community Answers
+Knowledge Base
+Forums
+Asset Store
+Terms of use
+Legal
+Privacy Policy
+Cookies
+Do Not Sell or Share My Personal Information
+Your Privacy Choices (Cookie Settings)

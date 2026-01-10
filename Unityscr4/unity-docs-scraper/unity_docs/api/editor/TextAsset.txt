@@ -1,0 +1,37 @@
+// Unity Class: TextAsset
+// Documentation: https://docs.unity3d.com/ScriptReference/TextAsset.html
+
+// Description: Represents a raw text or binary file asset.
+
+// Properties:
+// - bytes: The raw bytes of the text asset. (Read Only)
+// - dataSize: The size of the text asset data in bytes. (Read Only)
+// - text: The text contents of the file as a string. (Read Only)
+
+// Methods:
+// - GetData: Gets raw text asset data.
+// - ToString: Returns the contents of the TextAsset as a read-only string.
+// - Destroy: Removes a GameObject, component, or asset.
+// - DestroyImmediate: Destroys the specified object immediately. Use with caution and in Edit mode only.
+// - DontDestroyOnLoad: Do not destroy the target Object when loading a new Scene.
+// - FindAnyObjectByType: Retrieves any active loaded object of Type type.
+// - FindFirstObjectByType: Retrieves the first active loaded object of Type type.
+// - FindObjectsByType: Retrieves a list of all loaded objects of Type type.
+// - Instantiate: Clones the object original and returns the clone.
+// - InstantiateAsync: Captures a snapshot of the original object (that must be related to some GameObject) and returns the
+
+public class TextAsset {
+    public var bytes;
+    public var dataSize;
+    public var text;
+    public void GetData();
+    public void ToString();
+    public void Destroy();
+    public void DestroyImmediate();
+    public void DontDestroyOnLoad();
+    public void FindAnyObjectByType();
+    public void FindFirstObjectByType();
+    public void FindObjectsByType();
+    public void Instantiate();
+    public void InstantiateAsync();
+}

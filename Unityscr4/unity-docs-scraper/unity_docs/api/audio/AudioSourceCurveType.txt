@@ -1,0 +1,18 @@
+// Unity Class: AudioSourceCurveType
+// Documentation: https://docs.unity3d.com/ScriptReference/AudioSourceCurveType.html
+
+// Description: This defines the curve type of the different custom curves that can be queried and set within the AudioSource.
+
+// Properties:
+// - CustomRolloff: Custom Volume Rolloff.
+// - SpatialBlend: The Spatial Blend.
+// - ReverbZoneMix: Reverb Zone Mix.
+// - Spread: The 3D Spread.
+
+// Pseudo-code representation of AudioSourceCurveType
+public class AudioSourceCurveType {
+    public var CustomRolloff; // Custom Volume Rolloff.
+    public var SpatialBlend; // The Spatial Blend.
+    public var ReverbZoneMix; // Reverb Zone Mix.
+    public var Spread; // The 3D Spread.
+}

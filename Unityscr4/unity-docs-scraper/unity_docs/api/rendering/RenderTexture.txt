@@ -1,0 +1,77 @@
+// Unity Class: RenderTexture
+// Documentation: https://docs.unity3d.com/ScriptReference/RenderTexture.html
+
+// Description: Render textures are textures that can be rendered to.
+
+// Properties:
+// - antiAliasing: The antialiasing level for the RenderTexture.
+// - autoGenerateMips: Mipmap levels are generated automatically when this flag is set.
+// - bindTextureMS: If true and antiAliasing is greater than 1, the render texture will not be resolved by default. Use this if the render texture needs to be bound as a multisampled texture in a shader.
+// - colorBuffer: Color buffer of the render texture (Read Only).
+// - depth: The precision of the render texture's depth buffer in bits (0, 16, 24 and 32 are supported).
+// - depthBuffer: Depth/stencil buffer of the render texture (Read Only).
+// - depthStencilFormat: The format of the depth/stencil buffer.
+// - descriptor: This struct contains all the information required to create a RenderTexture. It can be copied, cached, and reused to easily create RenderTextures that all share the same properties.
+// - dimension: Dimensionality (type) of the render texture.
+// - enableRandomWrite: Enable random access write into this render texture on Shader Model 5.0 level shaders.
+// - enableShadingRate: Make this render texture usable as a shading rate image.
+// - graphicsFormat: The color format of the render texture. You can set the color format to None to achieve depth-only rendering.
+// - height: The height of the render texture in pixels.
+// - memorylessMode: The render texture memoryless mode property.
+// - sRGB: Does this render texture use sRGB read/write conversions? (Read Only).
+// - stencilFormat: The format of the stencil data that you can encapsulate within a RenderTexture.Specifying this property creates a stencil element for the RenderTexture and sets its format. This allows for stencil data to be bound as a Texture to all shader types for the platforms that support it. This property does not specify the format of the stencil buffer, which is constrained by the depth buffer format specified in RenderTexture.depth.Currently, most platforms only support R8_UInt (DirectX11, DirectX12), while PS4 also supports R8_UNorm.
+// - useDynamicScale: When this flag is set to true, render texture is set to be used by the Dynamic Resolution system.
+// - useDynamicScaleExplicit: When this flag is set to true, render texture is set to be used by the Dynamic Resolution system. Scale is applied with an explicit call to ApplyDynamicScale
+// - useMipMap: Render texture has mipmaps when this flag is set.
+// - volumeDepth: Volume extent of a 3D render texture or number of slices of array texture.
+// - vrUsage: If this RenderTexture is a VR eye texture used in stereoscopic rendering, this property decides what special rendering occurs, if any.
+// - width: The width of the render texture in pixels.
+
+// Constructors:
+// - RenderTexture: Creates a new RenderTexture object.
+
+// Methods:
+// - ApplyDynamicScale: Applies the Dynamic Resolution system scale.
+// - ConvertToEquirect: Converts the render texture to equirectangular format (both stereoscopic or monoscopic equirect). The left eye will occupy the top half and the right eye will occupy the bottom. The monoscopic version will occupy the whole texture. Texture dimension must be of type TextureDimension.Cube.
+// - Create: Actually creates the RenderTexture.
+// - DiscardContents: Hint the GPU driver that the contents of the RenderTexture will not be used.
+// - GenerateMips: Generate mipmap levels of a render texture.
+// - GetNativeDepthBufferPtr: Retrieve a native (underlying graphics API) pointer to the depth buffer resource.
+// - IsCreated: Is the render texture actually created?
+// - Release: Releases the RenderTexture.
+// - ResolveAntiAliasedSurface: Force an antialiased render texture to be resolved.
+// - SetGlobalShaderProperty: Assigns this RenderTexture as a global shader property named propertyName.
+// - GetTemporary: Allocate a temporary render texture.
+// - ReleaseTemporary: Release a temporary texture allocated with GetTemporary.
+// - SupportsStencil: Does a RenderTexture have stencil buffer?
+
+public class RenderTexture {
+    public var antiAliasing; // The antialiasing level for the RenderTexture.
+    public var autoGenerateMips; // Mipmap levels are generated automatically when this flag is set.
+    public var bindTextureMS; // If true and antiAliasing is greater than 1, the render texture will not be resol
+    public var colorBuffer; // Color buffer of the render texture (Read Only).
+    public var depth; // The precision of the render texture's depth buffer in bits (0, 16, 24 and 32 are
+    public var depthBuffer; // Depth/stencil buffer of the render texture (Read Only).
+    public var depthStencilFormat; // The format of the depth/stencil buffer.
+    public var descriptor; // This struct contains all the information required to create a RenderTexture. It 
+    public var dimension; // Dimensionality (type) of the render texture.
+    public var enableRandomWrite; // Enable random access write into this render texture on Shader Model 5.0 level sh
+    public var enableShadingRate; // Make this render texture usable as a shading rate image.
+    public var graphicsFormat; // The color format of the render texture. You can set the color format to None to 
+    public var height; // The height of the render texture in pixels.
+    public var memorylessMode; // The render texture memoryless mode property.
+    public var sRGB; // Does this render texture use sRGB read/write conversions? (Read Only).
+    public void ApplyDynamicScale(); // Applies the Dynamic Resolution system scale.
+    public void ConvertToEquirect(); // Converts the render texture to equirectangular format (both stereoscopic or mono
+    public void Create(); // Actually creates the RenderTexture.
+    public void DiscardContents(); // Hint the GPU driver that the contents of the RenderTexture will not be used.
+    public void GenerateMips(); // Generate mipmap levels of a render texture.
+    public void GetNativeDepthBufferPtr(); // Retrieve a native (underlying graphics API) pointer to the depth buffer resource
+    public void IsCreated(); // Is the render texture actually created?
+    public void Release(); // Releases the RenderTexture.
+    public void ResolveAntiAliasedSurface(); // Force an antialiased render texture to be resolved.
+    public void SetGlobalShaderProperty(); // Assigns this RenderTexture as a global shader property named propertyName.
+    public void GetTemporary(); // Allocate a temporary render texture.
+    public void ReleaseTemporary(); // Release a temporary texture allocated with GetTemporary.
+    public void SupportsStencil(); // Does a RenderTexture have stencil buffer?
+}

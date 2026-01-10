@@ -1,0 +1,32 @@
+{
+  "name": "api_animation_AvatarTarget",
+  "type": "api",
+  "description": "Target.",
+  "content": "// Unity Class: AvatarTarget\n// Documentation: https://docs.unity3d.com/ScriptReference/AvatarTarget.html\n\n// Description: Target.\n\n// Properties:\n// - Root: The root, the position of the game object.\n// - Body: The body, center of mass.\n// - LeftFoot: The left foot.\n// - RightFoot: The right foot.\n// - LeftHand: The left hand.\n// - RightHand: The right hand.\n\n// Pseudo-code representation of AvatarTarget\npublic class AvatarTarget {\n    public var Root; // The root, the position of the game object.\n    public var Body; // The body, center of mass.\n    public var LeftFoot; // The left foot.\n    public var RightFoot; // The right foot.\n    public var LeftHand; // The left hand.\n    public var RightHand; // The right hand.\n}",
+  "properties": [
+    {
+      "name": "Root",
+      "description": "The root, the position of the game object."
+    },
+    {
+      "name": "Body",
+      "description": "The body, center of mass."
+    },
+    {
+      "name": "LeftFoot",
+      "description": "The left foot."
+    },
+    {
+      "name": "RightFoot",
+      "description": "The right foot."
+    },
+    {
+      "name": "LeftHand",
+      "description": "The left hand."
+    },
+    {
+      "name": "RightHand",
+      "description": "The right hand."
+    }
+  ]
+}

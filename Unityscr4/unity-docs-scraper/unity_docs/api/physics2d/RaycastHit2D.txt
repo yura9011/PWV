@@ -1,0 +1,25 @@
+// Unity Class: RaycastHit2D
+// Documentation: https://docs.unity3d.com/ScriptReference/RaycastHit2D.html
+
+// Description: Returns information about 2D Colliders detected by a 2D physics query in the scene.
+
+// Properties:
+// - centroid: The world space centroid (center) of the physics query shape when it intersects.
+// - collider: The Collider2D detected by the physics query.
+// - distance: The distance the physics query traversed before it detected a Collider2D.
+// - fraction: The fraction of the distance specified to the physics query before it detected a Collider2D.
+// - normal: The surface normal of the detected Collider2D.
+// - point: The world space position where the physics query shape intersected with the detected Collider2D surface.
+// - rigidbody: The Rigidbody2D that the Collider2D detected by the physics query is attached to.
+// - transform: The Transform on the GameObject that the Collider2D is attached to.
+
+public class RaycastHit2D {
+    public var centroid; // The world space centroid (center) of the physics query shape when it intersects.
+    public var collider; // The Collider2D detected by the physics query.
+    public var distance; // The distance the physics query traversed before it detected a Collider2D.
+    public var fraction; // The fraction of the distance specified to the physics query before it detected a
+    public var normal; // The surface normal of the detected Collider2D.
+    public var point; // The world space position where the physics query shape intersected with the dete
+    public var rigidbody; // The Rigidbody2D that the Collider2D detected by the physics query is attached to
+    public var transform; // The Transform on the GameObject that the Collider2D is attached to.
+}

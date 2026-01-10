@@ -1,0 +1,81 @@
+// Unity Class: VideoPlayer
+// Documentation: https://docs.unity3d.com/ScriptReference/Video.VideoPlayer.html
+
+// Description: Plays video content onto a target.
+
+// Properties:
+// - aspectRatio: Defines how the video content will be stretched to fill the target area.
+// - audioOutputMode: Destination for the audio embedded in the video.
+// - audioTrackCount: Number of audio tracks found in the data source currently configured. (Read Only)
+// - canSetDirectAudioVolume: Whether direct-output volume controls are supported for the current platform and video format. (Read
+// - canSetPlaybackSpeed: Whether you can change the playback speed. (Read Only)
+// - canSetSkipOnDrop: Whether frame-skipping to maintain synchronization can be controlled. (Read Only)
+// - canSetTime: Whether you can change the current time using the VideoPlayer.time or VideoPlayer.frame properties. 
+// - canSetTimeUpdateMode: Whether you can change the time source followed by the VideoPlayer. (Read Only)
+// - canStep: Returns true if the VideoPlayer can step forward through the video content. (Read Only)
+// - clip: The clip being played by the VideoPlayer.
+// - clockTime: The clock time that the VideoPlayer follows to schedule its samples. The clock time is expressed in 
+// - controlledAudioTrackCount: Number of audio tracks that this VideoPlayer will take control of.
+// - externalReferenceTime: Reference time of the external clock the VideoPlayer uses to correct its drift.
+// - frame: The frame index of the currently available frame in VideoPlayer.texture.
+// - frameCount: Number of frames in the current video content. (Read Only)
+// - frameRate: The frame rate of the clip or URL in frames/second. (Read Only)
+// - height: The height of the images in the VideoClip, or URL, in pixels. (Read Only)
+// - isLooping: Determines whether the VideoPlayer restarts from the beginning when it reaches the end of the clip.
+// - isPaused: Whether playback is paused. (Read Only)
+// - isPlaying: Returns whether the VideoPlayer is currently playing the content.
+
+// Methods:
+// - EnableAudioTrack: Enable/disable audio track decoding. Only effective when the VideoPlayer is not currently playing.
+// - GetAudioChannelCount: The number of audio channels in the specified audio track.
+// - GetAudioLanguageCode: Returns the language code, if any, for the specified track.
+// - GetAudioSampleRate: Gets the audio track sampling rate in Hertz.
+// - GetDirectAudioMute: Gets the direct-output audio mute status for the specified track.
+// - GetDirectAudioVolume: Return the direct-output volume for specified track.
+// - GetTargetAudioSource: Gets the AudioSource that will receive audio samples for the specified track if VideoPlayer.audioOut
+// - IsAudioTrackEnabled: Whether decoding for the specified audio track is enabled. See VideoPlayer.EnableAudioTrack for dist
+// - Pause: Pauses the playback and leaves the current time intact.
+// - Play: Starts or resumes the playback of a video.
+// - Prepare: Prepares the playback engine so that it's ready for playback.
+// - SetDirectAudioMute: Set the direct-output audio mute status for the specified track.
+// - SetDirectAudioVolume: Set the direct-output audio volume for the specified track.
+// - SetTargetAudioSource: Sets the AudioSource that will receive audio samples for the specified track if this audio target is
+// - StepForward: Immediately advance the current time by one frame.
+// - Stop: Stops the playback and sets the current time to 0.
+// - Destroy: Removes a GameObject, component, or asset.
+// - DestroyImmediate: Destroys the specified object immediately. Use with caution and in Edit mode only.
+// - DontDestroyOnLoad: Do not destroy the target Object when loading a new Scene.
+// - FindAnyObjectByType: Retrieves any active loaded object of Type type.
+
+// Events:
+// - clockResyncOccurred: Invoked when the VideoPlayer clock is synced back to its VideoTimeReference.
+// - errorReceived: The VideoPlayer uses this callback to report various types of errors.
+// - frameDropped: Invoked when the video decoder does not produce a frame as per the time source during playback.
+// - frameReady: The VideoPlayer invokes this event when a new frame is ready to be displayed.
+// - loopPointReached: The VideoPlayer emits this event when the video reaches the end of its playback.
+// - prepareCompleted: The VideoPlayer invokes this event when the video is ready for playback.
+// - seekCompleted: Invoke after a seek operation completes.
+// - started: The VideoPlayer emits this event when the video starts to play.
+
+public class VideoPlayer {
+    public var aspectRatio;
+    public var audioOutputMode;
+    public var audioTrackCount;
+    public var canSetDirectAudioVolume;
+    public var canSetPlaybackSpeed;
+    public var canSetSkipOnDrop;
+    public var canSetTime;
+    public var canSetTimeUpdateMode;
+    public var canStep;
+    public var clip;
+    public void EnableAudioTrack();
+    public void GetAudioChannelCount();
+    public void GetAudioLanguageCode();
+    public void GetAudioSampleRate();
+    public void GetDirectAudioMute();
+    public void GetDirectAudioVolume();
+    public void GetTargetAudioSource();
+    public void IsAudioTrackEnabled();
+    public void Pause();
+    public void Play();
+}

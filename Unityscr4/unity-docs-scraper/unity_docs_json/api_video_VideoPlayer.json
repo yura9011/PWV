@@ -1,0 +1,88 @@
+{
+  "name": "api_video_VideoPlayer",
+  "type": "api",
+  "description": "Plays video content onto a target.",
+  "content": "// Unity Class: VideoPlayer\n// Documentation: https://docs.unity3d.com/ScriptReference/Video.VideoPlayer.html\n\n// Description: Plays video content onto a target.\n\n// Properties:\n// - aspectRatio: Defines how the video content will be stretched to fill the target area.\n// - audioOutputMode: Destination for the audio embedded in the video.\n// - audioTrackCount: Number of audio tracks found in the data source currently configured. (Read Only)\n// - canSetDirectAudioVolume: Whether direct-output volume controls are supported for the current platform and video format. (Read\n// - canSetPlaybackSpeed: Whether you can change the playback speed. (Read Only)\n// - canSetSkipOnDrop: Whether frame-skipping to maintain synchronization can be controlled. (Read Only)\n// - canSetTime: Whether you can change the current time using the VideoPlayer.time or VideoPlayer.frame properties. \n// - canSetTimeUpdateMode: Whether you can change the time source followed by the VideoPlayer. (Read Only)\n// - canStep: Returns true if the VideoPlayer can step forward through the video content. (Read Only)\n// - clip: The clip being played by the VideoPlayer.\n// - clockTime: The clock time that the VideoPlayer follows to schedule its samples. The clock time is expressed in \n// - controlledAudioTrackCount: Number of audio tracks that this VideoPlayer will take control of.\n// - externalReferenceTime: Reference time of the external clock the VideoPlayer uses to correct its drift.\n// - frame: The frame index of the currently available frame in VideoPlayer.texture.\n// - frameCount: Number of frames in the current video content. (Read Only)\n// - frameRate: The frame rate of the clip or URL in frames/second. (Read Only)\n// - height: The height of the images in the VideoClip, or URL, in pixels. (Read Only)\n// - isLooping: Determines whether the VideoPlayer restarts from the beginning when it reaches the end of the clip.\n// - isPaused: Whether playback is paused. (Read Only)\n// - isPlaying: Returns whether the VideoPlayer is currently playing the content.\n\n// Methods:\n// - EnableAudioTrack: Enable/disable audio track decoding. Only effective when the VideoPlayer is not currently playing.\n// - GetAudioChannelCount: The number of audio channels in the specified audio track.\n// - GetAudioLanguageCode: Returns the language code, if any, for the specified track.\n// - GetAudioSampleRate: Gets the audio track sampling rate in Hertz.\n// - GetDirectAudioMute: Gets the direct-output audio mute status for the specified track.\n// - GetDirectAudioVolume: Return the direct-output volume for specified track.\n// - GetTargetAudioSource: Gets the AudioSource that will receive audio samples for the specified track if VideoPlayer.audioOut\n// - IsAudioTrackEnabled: Whether decoding for the specified audio track is enabled. See VideoPlayer.EnableAudioTrack for dist\n// - Pause: Pauses the playback and leaves the current time intact.\n// - Play: Starts or resumes the playback of a video.\n// - Prepare: Prepares the playback engine so that it's ready for playback.\n// - SetDirectAudioMute: Set the direct-output audio mute status for the specified track.\n// - SetDirectAudioVolume: Set the direct-output audio volume for the specified track.\n// - SetTargetAudioSource: Sets the AudioSource that will receive audio samples for the specified track if this audio target is\n// - StepForward: Immediately advance the current time by one frame.\n// - Stop: Stops the playback and sets the current time to 0.\n// - Destroy: Removes a GameObject, component, or asset.\n// - DestroyImmediate: Destroys the specified object immediately. Use with caution and in Edit mode only.\n// - DontDestroyOnLoad: Do not destroy the target Object when loading a new Scene.\n// - FindAnyObjectByType: Retrieves any active loaded object of Type type.\n\n// Events:\n// - clockResyncOccurred: Invoked when the VideoPlayer clock is synced back to its VideoTimeReference.\n// - errorReceived: The VideoPlayer uses this callback to report various types of errors.\n// - frameDropped: Invoked when the video decoder does not produce a frame as per the time source during playback.\n// - frameReady: The VideoPlayer invokes this event when a new frame is ready to be displayed.\n// - loopPointReached: The VideoPlayer emits this event when the video reaches the end of its playback.\n// - prepareCompleted: The VideoPlayer invokes this event when the video is ready for playback.\n// - seekCompleted: Invoke after a seek operation completes.\n// - started: The VideoPlayer emits this event when the video starts to play.\n\npublic class VideoPlayer {\n    public var aspectRatio;\n    public var audioOutputMode;\n    public var audioTrackCount;\n    public var canSetDirectAudioVolume;\n    public var canSetPlaybackSpeed;\n    public var canSetSkipOnDrop;\n    public var canSetTime;\n    public var canSetTimeUpdateMode;\n    public var canStep;\n    public var clip;\n    public void EnableAudioTrack();\n    public void GetAudioChannelCount();\n    public void GetAudioLanguageCode();\n    public void GetAudioSampleRate();\n    public void GetDirectAudioMute();\n    public void GetDirectAudioVolume();\n    public void GetTargetAudioSource();\n    public void IsAudioTrackEnabled();\n    public void Pause();\n    public void Play();\n}",
+  "properties": [
+    {
+      "name": "aspectRatio",
+      "description": "Defines how the video content will be stretched to fill the target area."
+    },
+    {
+      "name": "audioOutputMode",
+      "description": "Destination for the audio embedded in the video."
+    },
+    {
+      "name": "audioTrackCount",
+      "description": "Number of audio tracks found in the data source currently configured. (Read Only)"
+    },
+    {
+      "name": "canSetDirectAudioVolume",
+      "description": "Whether direct-output volume controls are supported for the current platform and video format. (Read"
+    },
+    {
+      "name": "canSetPlaybackSpeed",
+      "description": "Whether you can change the playback speed. (Read Only)"
+    },
+    {
+      "name": "canSetSkipOnDrop",
+      "description": "Whether frame-skipping to maintain synchronization can be controlled. (Read Only)"
+    },
+    {
+      "name": "canSetTime",
+      "description": "Whether you can change the current time using the VideoPlayer.time or VideoPlayer.frame properties. "
+    },
+    {
+      "name": "canSetTimeUpdateMode",
+      "description": "Whether you can change the time source followed by the VideoPlayer. (Read Only)"
+    },
+    {
+      "name": "canStep",
+      "description": "Returns true if the VideoPlayer can step forward through the video content. (Read Only)"
+    },
+    {
+      "name": "clip",
+      "description": "The clip being played by the VideoPlayer."
+    },
+    {
+      "name": "clockTime",
+      "description": "The clock time that the VideoPlayer follows to schedule its samples. The clock time is expressed in "
+    },
+    {
+      "name": "controlledAudioTrackCount",
+      "description": "Number of audio tracks that this VideoPlayer will take control of."
+    },
+    {
+      "name": "externalReferenceTime",
+      "description": "Reference time of the external clock the VideoPlayer uses to correct its drift."
+    },
+    {
+      "name": "frame",
+      "description": "The frame index of the currently available frame in VideoPlayer.texture."
+    },
+    {
+      "name": "frameCount",
+      "description": "Number of frames in the current video content. (Read Only)"
+    },
+    {
+      "name": "frameRate",
+      "description": "The frame rate of the clip or URL in frames/second. (Read Only)"
+    },
+    {
+      "name": "height",
+      "description": "The height of the images in the VideoClip, or URL, in pixels. (Read Only)"
+    },
+    {
+      "name": "isLooping",
+      "description": "Determines whether the VideoPlayer restarts from the beginning when it reaches the end of the clip."
+    },
+    {
+      "name": "isPaused",
+      "description": "Whether playback is paused. (Read Only)"
+    },
+    {
+      "name": "isPlaying",
+      "description": "Returns whether the VideoPlayer is currently playing the content."
+    }
+  ]
+}

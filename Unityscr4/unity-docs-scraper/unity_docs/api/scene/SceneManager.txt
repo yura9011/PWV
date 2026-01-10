@@ -1,0 +1,37 @@
+// Unity Class: SceneManager
+// Documentation: https://docs.unity3d.com/ScriptReference/SceneManagement.SceneManager.html
+
+// Description: Manage scenes in the Player and in Play mode in the Editor.
+
+// Methods:
+// - CreateScene: Create an empty new Scene at runtime with the given name.
+// - GetActiveScene: Gets the currently active Scene.
+// - GetSceneAt: Gets the scene at the specified index in the SceneManager's scene list. This includes scenes that ar
+// - GetSceneByBuildIndex: Get a Scene struct from a build index.
+// - GetSceneByName: Searches through the Scenes loaded for a Scene with the given name.
+// - GetSceneByPath: Searches all Scenes loaded for a Scene that has the given asset path.
+// - LoadScene: Loads the Scene by its name or index in Build Settings.
+// - LoadSceneAsync: Loads the Scene asynchronously in the background.
+// - MergeScenes: This will merge the source Scene into the destinationScene.
+// - MoveGameObjectsToScene: Move multiple GameObjects, represented by a NativeArray of instance IDs, from their current Scene to
+// - MoveGameObjectToScene: Move a GameObject from its current Scene to a new Scene.
+// - SetActiveScene: Set the Scene to be active.
+// - UnloadSceneAsync: Destroys all GameObjects associated with the given Scene and removes the Scene from the SceneManager
+
+// Events:
+// - activeSceneChanged: Subscribe to this event to get notified when the active Scene has changed.
+// - sceneLoaded: Assign a custom callback to this event to get notifications when a Scene has loaded.
+// - sceneUnloaded: Add a delegate to this to get notifications when a Scene has unloaded.
+
+public class SceneManager {
+    public void CreateScene();
+    public void GetActiveScene();
+    public void GetSceneAt();
+    public void GetSceneByBuildIndex();
+    public void GetSceneByName();
+    public void GetSceneByPath();
+    public void LoadScene();
+    public void LoadSceneAsync();
+    public void MergeScenes();
+    public void MoveGameObjectsToScene();
+}

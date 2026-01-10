@@ -1,0 +1,53 @@
+// Unity Class: QualitySettings
+// Documentation: https://docs.unity3d.com/ScriptReference/QualitySettings.html
+
+// Description: This represents the script interface for Quality Settings.
+
+// Properties:
+// - hideFlags: Should the object be hidden, saved with the Scene or modifiable by the user?
+// - name: The name of the object.
+
+// Methods:
+// - GetInstanceID: Gets the instance ID of the object.
+// - ToString: Returns the name of the object.
+// - DecreaseLevel: Decrease the current quality level.
+// - ForEach: Executes the given Action for each Quality Level configured in QualitySettings.
+// - GetActiveQualityLevelsForPlatform: [Editor Only] Obtains an array with the Quality Level indexes that are selected for the given platform.
+// - GetActiveQualityLevelsForPlatformCount: [Editor Only] Obtains the number of Quality Levels that are selected for a given platform.
+// - GetAllRenderPipelineAssetsForPlatform: [Editor Only] Fills the given list with all the Render Pipeline Assets on any Quality Level for the given platform. Without filtering by Render Pipeline Asset type or null.
+// - GetQualityLevel: Returns the current graphics quality level.
+// - GetQualitySettings: Provides a reference to the QualitySettings object.
+// - GetRenderPipelineAssetAt: Provides a reference to the RenderPipelineAsset that defines the override render pipeline for a given quality level.
+// - GetRenderPipelineAssetsForPlatform: [Editor Only] Obtains a set with the non null Render Pipeline Assets selected on all the Quality Levels for the given platform.
+// - GetTextureMipmapLimitSettings: Retrieves a copy of the TextureMipmapLimitSettings from a texture mipmap limit group.
+// - IncreaseLevel: Increase the current quality level.
+// - IsPlatformIncluded: [Editor Only] Returns if the given platform is included by the Quality Level.
+// - SetLODSettings: Sets the lodBias and maximumLODLevel at the same time.
+// - SetQualityLevel: Sets a new graphics quality level.
+// - SetTextureMipmapLimitSettings: Applies new TextureMipmapLimitSettings to the indicated texture mipmap limit group.
+// - TryExcludePlatformAt: [Editor Only] Excludes a platform for the given Quality Level.
+// - TryIncludePlatformAt: [Editor Only] Includes a platform to be supported by the Quality Level.
+
+// Events:
+// - activeQualityLevelChanged: Delegate that you can use to invoke custom code when Unity changes the current Quality Level.
+// - activeQualityLevelRenamed: This can be used to invoke custom code when the currently active QualityLevel is being renamed.
+
+public class QualitySettings {
+    public var hideFlags; // Should the object be hidden, saved with the Scene or modifiable by the user?
+    public var name; // The name of the object.
+    public void GetInstanceID(); // Gets the instance ID of the object.
+    public void ToString(); // Returns the name of the object.
+    public void DecreaseLevel(); // Decrease the current quality level.
+    public void ForEach(); // Executes the given Action for each Quality Level configured in QualitySettings.
+    public void GetActiveQualityLevelsForPlatform(); // [Editor Only] Obtains an array with the Quality Level indexes that are selected 
+    public void GetActiveQualityLevelsForPlatformCount(); // [Editor Only] Obtains the number of Quality Levels that are selected for a given
+    public void GetAllRenderPipelineAssetsForPlatform(); // [Editor Only] Fills the given list with all the Render Pipeline Assets on any Qu
+    public void GetQualityLevel(); // Returns the current graphics quality level.
+    public void GetQualitySettings(); // Provides a reference to the QualitySettings object.
+    public void GetRenderPipelineAssetAt(); // Provides a reference to the RenderPipelineAsset that defines the override render
+    public void GetRenderPipelineAssetsForPlatform(); // [Editor Only] Obtains a set with the non null Render Pipeline Assets selected on
+    public void GetTextureMipmapLimitSettings(); // Retrieves a copy of the TextureMipmapLimitSettings from a texture mipmap limit g
+    public void IncreaseLevel(); // Increase the current quality level.
+    public void IsPlatformIncluded(); // [Editor Only] Returns if the given platform is included by the Quality Level.
+    public void SetLODSettings(); // Sets the lodBias and maximumLODLevel at the same time.
+}

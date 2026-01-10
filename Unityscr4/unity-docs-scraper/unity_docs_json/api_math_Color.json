@@ -1,0 +1,40 @@
+{
+  "name": "api_math_Color",
+  "type": "api",
+  "description": "Representation of RGBA colors.",
+  "content": "// Unity Class: Color\n// Documentation: https://docs.unity3d.com/ScriptReference/Color.html\n\n// Description: Representation of RGBA colors.\n\n// Properties:\n// - a: Alpha component of the color (0 is transparent, 1 is opaque).\n// - b: Blue component of the color.\n// - g: Green component of the color.\n// - gamma: A version of the color that has had the gamma curve applied.\n// - grayscale: The grayscale value of the color. (Read Only)\n// - linear: A color value in linear space converted from an sRGB value.\n// - maxColorComponent: Returns the maximum color component value: Max(r,g,b).\n// - r: Red component of the color.\n// - this[int]: Access the r, g, b,a components using [0], [1], [2], [3] respectively.\n\n// Constructors:\n// - Color(): Constructs a new Color with given r,g,b,a components.\n\n// Methods:\n// - Equals(): Returns true if the given color is exactly equal to this color, i.e. if the red, green, blue, and alpha values are exactly the same.\n// - GetHashCode(): Returns the hash code for this color. This lets you use colors as keys in hash tables.\n// - ToString(): Returns a formatted string of this color.\n\n// Code Examples:\n// Example 1:\n//   using UnityEngine;public class ColorExample : MonoBehaviour\n\n//   {\n\n//       void Start()\n\n//       {\n\n//           // Initialize with RGB\n\n//           Color redColor = new Color(1f, 0f, 0f);        // Initialize with RGBA\n\n//           Color blueWithAlpha = new Color(0f, 0f, 1f, 0.5f);        // Initialize with hex\n\n//           ColorUtility.TryParseHtmlString(\"#00FF00\", out Color greenFromHex);        // Initialize with HSV\n\n//           float hue = 0.6f;\n\n//           float saturation = 0.9f;\n\n//           float value = 0.7f;\n\n//           Color fromHSV = Color.HSVToRGB(hue, saturation, value);        // Use some of the preset colors\n\n//           Color cornflower = Color.cornflowerBlue;\n\n//           Color lawn = Color.lawnGreen;\n\n//           Color lemon = Color.lemonChiffon;\n\n//           Color violet = Color.violet;        // Create complementary color\n\n//           Color complementary = new Color(\n\n//               1f - redColor.r,\n\n//               1f - redColor.g,\n\n//               1f - redColor.b\n\n//           );\n\n//           // Lerp between colors\n\n//           Color lerpedColor = Color.Lerp(redColor, blueWithAlpha, 0.5f);        // Darken color\n\n//           Color darkercolor = lerpedColor * 0.8f;        // Lighten color\n\n//           Color lighterColor = lerpedColor + Color.white * 0.2f;\n\n//       }\n\n//   }\n\n// Pseudo-code representation of Color\npublic class Color {\n    public var a; // Alpha component of the color (0 is transparent, 1 is opaque).\n    public var b; // Blue component of the color.\n    public var g; // Green component of the color.\n    public var gamma; // A version of the color that has had the gamma curve applied.\n    public var grayscale; // The grayscale value of the color. (Read Only)\n    public var linear; // A color value in linear space converted from an sRGB value.\n    public var maxColorComponent; // Returns the maximum color component value: Max(r,g,b).\n    public var r; // Red component of the color.\n    public var this[int]; // Access the r, g, b,a components using [0], [1], [2], [3] respectively.\n    public void Equals(); // Returns true if the given color is exactly equal to this color, i.e. if the red, green, blue, and alpha values are exactly the same.\n    public void GetHashCode(); // Returns the hash code for this color. This lets you use colors as keys in hash tables.\n    public void ToString(); // Returns a formatted string of this color.\n}",
+  "properties": [
+    {
+      "name": "a",
+      "description": "Alpha component of the color (0 is transparent, 1 is opaque)."
+    },
+    {
+      "name": "b",
+      "description": "Blue component of the color."
+    },
+    {
+      "name": "g",
+      "description": "Green component of the color."
+    },
+    {
+      "name": "gamma",
+      "description": "A version of the color that has had the gamma curve applied."
+    },
+    {
+      "name": "grayscale",
+      "description": "The grayscale value of the color. (Read Only)"
+    },
+    {
+      "name": "linear",
+      "description": "A color value in linear space converted from an sRGB value."
+    },
+    {
+      "name": "maxColorComponent",
+      "description": "Returns the maximum color component value: Max(r,g,b)."
+    },
+    {
+      "name": "r",
+      "description": "Red component of the color."
+    }
+  ]
+}

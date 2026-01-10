@@ -1,0 +1,8 @@
+// Unity Class: Physics
+// Documentation: https://docs.unity3d.com/ScriptReference/Physics.html
+
+// Description: Global physics properties and helper methods.
+
+// Pseudo-code representation of Physics
+public class Physics {
+}

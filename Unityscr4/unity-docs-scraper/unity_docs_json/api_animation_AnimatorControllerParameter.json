@@ -1,0 +1,32 @@
+{
+  "name": "api_animation_AnimatorControllerParameter",
+  "type": "api",
+  "description": "Used to communicate between scripting and an AnimatorController.",
+  "content": "// Unity Class: AnimatorControllerParameter\n// Documentation: https://docs.unity3d.com/ScriptReference/AnimatorControllerParameter.html\n\n// Description: Used to communicate between scripting and an AnimatorController.\n\n// Properties:\n// - defaultBool: The default bool value for the parameter.\n// - defaultFloat: The default float value for the parameter.\n// - defaultInt: The default int value for the parameter.\n// - name: The name of the parameter.\n// - nameHash: Returns the hash of the parameter based on its name.\n// - type: The type of the parameter.\n\n// Code Examples:\n// Example 1:\n//   using UnityEditor;\n\n//   using UnityEditor.Animations;\n\n//   using UnityEngine;\n\n//   \n\n//   // This example demonstrates how to create an AnimatorController with some default parameters.\n\n//   public static class AnimatorControllerParameterExample\n\n//   {\n\n//       [MenuItem(\"Example/Create Animator Controller With Default Parameters\")]\n\n//       public static void CreateAnimatorControllerWithDefaultParameters()\n\n//       {\n\n//           // Create a new AnimatorController.\n\n//           var controller = AnimatorController.CreateAnimatorControllerAtPath(\"Assets/NewControllerWithParameters.controller\");\n\n//   \n\n//           // Add a new parameter to the controller.\n\n//           var speedParameter = new AnimatorControllerParameter\n\n//           {\n\n//               name = \"Speed\",\n\n//               type = AnimatorControllerParameterType.Float\n\n//           };\n\n//           controller.AddParameter(speedParameter);\n\n//   \n\n//           // Add another parameter to the controller with a default value.\n\n//           var isGroundedParameter = new AnimatorControllerParameter\n\n//           {\n\n//               name = \"IsGrounded\",\n\n//               type = AnimatorControllerParameterType.Bool,\n\n//               defaultBool = true\n\n//           };\n\n//           controller.AddParameter(isGroundedParameter);\n\n//   \n\n//           // Save the controller.\n\n//           AssetDatabase.SaveAssetIfDirty(controller);\n\n//       }\n\n//   }\n\n// Pseudo-code representation of AnimatorControllerParameter\npublic class AnimatorControllerParameter {\n    public var defaultBool; // The default bool value for the parameter.\n    public var defaultFloat; // The default float value for the parameter.\n    public var defaultInt; // The default int value for the parameter.\n    public var name; // The name of the parameter.\n    public var nameHash; // Returns the hash of the parameter based on its name.\n    public var type; // The type of the parameter.\n}",
+  "properties": [
+    {
+      "name": "defaultBool",
+      "description": "The default bool value for the parameter."
+    },
+    {
+      "name": "defaultFloat",
+      "description": "The default float value for the parameter."
+    },
+    {
+      "name": "defaultInt",
+      "description": "The default int value for the parameter."
+    },
+    {
+      "name": "name",
+      "description": "The name of the parameter."
+    },
+    {
+      "name": "nameHash",
+      "description": "Returns the hash of the parameter based on its name."
+    },
+    {
+      "name": "type",
+      "description": "The type of the parameter."
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+// Unity Class: Vector3
+// Documentation: https://docs.unity3d.com/ScriptReference/Vector3.html
+
+// Description: Representation of 3D vectors and points.
+
+// Properties:
+// - magnitude: Returns the length of this vector (Read Only).
+// - normalized: The unit vector in the direction of the current vector.
+// - sqrMagnitude: Returns the squared length of this vector (Read Only).
+// - this[int]: Access the x, y, z components using [0], [1], [2] respectively.
+// - x: X component of the vector.
+// - y: Y component of the vector.
+// - z: Z component of the vector.
+
+// Constructors:
+// - Vector3(): Creates a new three-dimensional vector or point.
+
+// Methods:
+// - Equals(): Returns true if the given vector is exactly equal to this vector.
+// - Set(): Set x, y and z components of an existing Vector3.
+// - ToString(): Returns a formatted string for this vector.
+
+// Pseudo-code representation of Vector3
+public class Vector3 {
+    public var magnitude; // Returns the length of this vector (Read Only).
+    public var normalized; // The unit vector in the direction of the current vector.
+    public var sqrMagnitude; // Returns the squared length of this vector (Read Only).
+    public var this[int]; // Access the x, y, z components using [0], [1], [2] respectively.
+    public var x; // X component of the vector.
+    public var y; // Y component of the vector.
+    public var z; // Z component of the vector.
+    public void Equals(); // Returns true if the given vector is exactly equal to this vector.
+    public void Set(); // Set x, y and z components of an existing Vector3.
+    public void ToString(); // Returns a formatted string for this vector.
+}

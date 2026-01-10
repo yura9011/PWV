@@ -1,0 +1,16 @@
+{
+    "name": "EtherDomes.Progression",
+    "rootNamespace": "EtherDomes.Progression",
+    "references": [
+        "EtherDomes.Data"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

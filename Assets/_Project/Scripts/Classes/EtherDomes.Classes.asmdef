@@ -1,0 +1,17 @@
+{
+    "name": "EtherDomes.Classes",
+    "rootNamespace": "EtherDomes.Classes",
+    "references": [
+        "EtherDomes.Data",
+        "EtherDomes.Combat"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

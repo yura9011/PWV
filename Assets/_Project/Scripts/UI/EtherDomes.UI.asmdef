@@ -1,0 +1,27 @@
+{
+    "name": "EtherDomes.UI",
+    "rootNamespace": "EtherDomes.UI",
+    "references": [
+        "EtherDomes.Data",
+        "EtherDomes.Combat",
+        "EtherDomes.Network",
+        "EtherDomes.Persistence",
+        "EtherDomes.Core",
+        "EtherDomes.Progression",
+        "EtherDomes.World",
+        "EtherDomes.Enemy",
+        "EtherDomes.Classes",
+        "Unity.TextMeshPro",
+        "Unity.Netcode.Runtime",
+        "Unity.UGUI"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

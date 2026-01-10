@@ -1,0 +1,20 @@
+{
+    "name": "EtherDomes.Testing",
+    "rootNamespace": "EtherDomes.Testing",
+    "references": [
+        "EtherDomes.Combat",
+        "EtherDomes.Data",
+        "EtherDomes.Persistence",
+        "Unity.Netcode.Runtime",
+        "EtherDomes.Movement"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

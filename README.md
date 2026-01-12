@@ -1,25 +1,23 @@
 # The Ether Domes
 
-Micro-MMORPG cooperativo para 1-10 jugadores con combate Tab-Target estilo WoW.
+Micro-MMORPG cooperativo para 1-10 jugadores con combate Tab-Target.
 
-## 🚀 Para Agentes/Desarrolladores - Leer Primero
+## Inicio Rápido para Desarrolladores
 
-**Antes de hacer cualquier cosa, leer en este orden:**
+Antes de comenzar, leer en este orden:
 
-1. **[docs/PROYECTO_ESTADO.md](docs/PROYECTO_ESTADO.md)** - Estado actual del proyecto
-2. **[docs/TODO.md](docs/TODO.md)** - Tareas pendientes
-3. **[docs/GUIA_DESARROLLO.md](docs/GUIA_DESARROLLO.md)** - Convenciones y flujo de trabajo
+1. [docs/PROYECTO_ESTADO.md](docs/PROYECTO_ESTADO.md) - Estado actual del proyecto
+2. [docs/TODO.md](docs/TODO.md) - Tareas pendientes
+3. [docs/GUIA_DESARROLLO.md](docs/GUIA_DESARROLLO.md) - Convenciones y flujo de trabajo
 
-**Si usas Kiro IDE:** Los archivos en `.kiro/steering/` se cargan automáticamente con reglas adicionales.
+Si usas Kiro IDE, los archivos en `.kiro/steering/` se cargan automáticamente.
+Para otros IDEs o agentes, leer `.kiro/steering/00-onboarding.md`.
 
-**Si usas otro IDE/agente:** Lee también `.kiro/steering/00-onboarding.md` para reglas completas.
+## Stack Tecnológico
 
----
-
-## Stack
 - Unity 6.3 LTS
-- Netcode for GameObjects + Unity Relay
-- MCP for Unity (integración con Kiro)
+- Netcode for GameObjects
+- Unity Relay
 
 ## Documentación
 
@@ -27,33 +25,31 @@ Micro-MMORPG cooperativo para 1-10 jugadores con combate Tab-Target estilo WoW.
 |-----------|-------------|
 | [Estado del Proyecto](docs/PROYECTO_ESTADO.md) | Fase actual y sistemas completados |
 | [TODO](docs/TODO.md) | Tareas pendientes |
-| [Plan MVP](docs/PLAN_10_FEATURES.md) | Roadmap de 10 features (~60h) |
-| [Guía de Desarrollo](docs/GUIA_DESARROLLO.md) | Onboarding para devs |
+| [Plan MVP](docs/PLAN_10_FEATURES.md) | Roadmap de 10 features |
+| [Guía de Desarrollo](docs/GUIA_DESARROLLO.md) | Onboarding |
 | [Arquitectura](docs/ARQUITECTURA.md) | Estructura del código |
-| [Notas de Sesión](docs/SESSION_NOTES.md) | Historial de trabajo |
 
-## Estructura
+## Estructura del Repositorio
 
 ```
-/
-├── Assets/_Project/    # Código del juego
-├── docs/               # Documentación
-├── logs/               # Logs de trabajo por sistema
-└── .kiro/              # Configuración de Kiro y specs
+Assets/_Project/    Código del juego
+docs/               Documentación
+logs/               Logs de trabajo por sistema
+.kiro/              Configuración y especificaciones
 ```
 
-## Quick Start
+## Ejecución
 
 1. Abrir con Unity 6.3 LTS
-2. Escena de prueba: `Assets/_Project/Scenes/Dungeons/Mazmorra1_1.unity`
-3. Play para probar controles y combate offline
+2. Cargar escena: `Assets/_Project/Scenes/Dungeons/Mazmorra1_1.unity`
+3. Play para probar en modo offline
 
-## Controles (Estilo WoW)
+## Controles
 
 | Tecla | Acción |
 |-------|--------|
 | WASD | Movimiento |
 | Tab | Ciclar targets |
-| 1-2 | Ataques |
-| Click Der | Rotar cámara + jugador |
+| 1-2 | Habilidades |
+| Click derecho | Rotar cámara |
 | Rueda | Zoom |

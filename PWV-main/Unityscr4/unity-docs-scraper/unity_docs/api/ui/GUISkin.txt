@@ -1,0 +1,72 @@
+// Unity Class: GUISkin
+// Documentation: https://docs.unity3d.com/ScriptReference/GUISkin.html
+
+// Description: Defines how GUI looks and behaves.
+
+// Properties:
+// - box: Style used by default for GUI.Box controls.
+// - button: Style used by default for GUI.Button controls.
+// - customStyles: Array of GUI styles for specific needs.
+// - font: The default font to use for all styles.
+// - GUISkin: Make this the current skin used by the GUI.
+// - horizontalScrollbar: Style used by default for the background part of GUI.HorizontalScrollbar controls.
+// - horizontalScrollbarLeftButton: Style used by default for the left button on GUI.HorizontalScrollbar controls.
+// - horizontalScrollbarRightButton: Style used by default for the right button on GUI.HorizontalScrollbar controls.
+// - horizontalScrollbarThumb: Style used by default for the thumb that is dragged in GUI.HorizontalScrollbar controls.
+// - horizontalSlider: Style used by default for the background part of GUI.HorizontalSlider controls.
+// - horizontalSliderThumb: Style used by default for the thumb that is dragged in GUI.HorizontalSlider controls.
+// - label: Style used by default for GUI.Label controls.
+// - scrollView: Style used by default for the background of ScrollView controls (see GUI.BeginScrollView).
+// - settings: Generic settings for how controls should behave with this skin.
+// - textArea: Style used by default for GUI.TextArea controls.
+// - textField: Style used by default for GUI.TextField controls.
+// - toggle: Style used by default for GUI.Toggle controls.
+// - verticalScrollbar: Style used by default for the background part of GUI.VerticalScrollbar controls.
+// - verticalScrollbarDownButton: Style used by default for the down button on GUI.VerticalScrollbar controls.
+// - verticalScrollbarThumb: Style used by default for the thumb that is dragged in GUI.VerticalScrollbar controls.
+// - verticalScrollbarUpButton: Style used by default for the up button on GUI.VerticalScrollbar controls.
+// - verticalSlider: Style used by default for the background part of GUI.VerticalSlider controls.
+// - verticalSliderThumb: Style used by default for the thumb that is dragged in GUI.VerticalSlider controls.
+// - window: Style used by default for Window controls (Additional resources: GUI.Window).
+
+// Methods:
+// - FindStyle: Try to search for a GUIStyle. This functions returns NULL and does not give an error.
+// - GetStyle: Get a named GUIStyle.
+// - Destroy: Removes a GameObject, component, or asset.
+// - DestroyImmediate: Destroys the specified object immediately. Use with caution and in Edit mode only.
+// - DontDestroyOnLoad: Do not destroy the target Object when loading a new Scene.
+// - FindAnyObjectByType: Retrieves any active loaded object of Type type.
+// - FindFirstObjectByType: Retrieves the first active loaded object of Type type.
+// - FindObjectsByType: Retrieves a list of all loaded objects of Type type.
+// - Instantiate: Clones the object original and returns the clone.
+// - InstantiateAsync: Captures a snapshot of the original object (that must be related to some GameObject) and returns the
+// - CreateInstance: Creates an instance of a scriptable object.
+
+public class GUISkin {
+    public var box;
+    public var button;
+    public var customStyles;
+    public var font;
+    public var GUISkin;
+    public var horizontalScrollbar;
+    public var horizontalScrollbarLeftButton;
+    public var horizontalScrollbarRightButton;
+    public var horizontalScrollbarThumb;
+    public var horizontalSlider;
+    public var horizontalSliderThumb;
+    public var label;
+    public var scrollView;
+    public var settings;
+    public var textArea;
+    public void FindStyle();
+    public void GetStyle();
+    public void Destroy();
+    public void DestroyImmediate();
+    public void DontDestroyOnLoad();
+    public void FindAnyObjectByType();
+    public void FindFirstObjectByType();
+    public void FindObjectsByType();
+    public void Instantiate();
+    public void InstantiateAsync();
+    public void CreateInstance();
+}

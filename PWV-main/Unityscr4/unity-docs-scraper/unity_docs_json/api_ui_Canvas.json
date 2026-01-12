@@ -1,0 +1,88 @@
+{
+  "name": "api_ui_Canvas",
+  "type": "api",
+  "description": "Element that can be used for screen rendering.",
+  "content": "// Unity Class: Canvas\n// Documentation: https://docs.unity3d.com/ScriptReference/Canvas.html\n\n// Description: Element that can be used for screen rendering.\n\n// Properties:\n// - additionalShaderChannels: Get or set the mask of additional shader channels to be used when creating the Canvas mesh.\n// - cachedSortingLayerValue: Cached calculated value based upon SortingLayerID.\n// - isRootCanvas: Is this the root Canvas?\n// - normalizedSortingGridSize: The normalized grid size that the canvas will split the renderable area into.\n// - overridePixelPerfect: Allows for nested canvases to override pixelPerfect settings inherited from parent canvases.\n// - overrideSorting: Allows for nested canvases to override the Canvas.sortingOrder from parent canvases.\n// - pixelPerfect: Forces pixel alignment for elements in the canvas. It only applies when Canvas.renderMode is set to Screen Space.\n// - pixelRect: Get the render rect for the Canvas.\n// - planeDistance: How far away from the camera is the Canvas generated? It only applies when Canvas.renderMode is set to RenderMode.ScreenSpaceCamera.\n// - referencePixelsPerUnit: The number of pixels per unit that is considered the default.\n// - renderingDisplaySize: Provides the pixel dimensions of the display area where the UI canvas is rendered.\n// - renderMode: Is the Canvas in World or Overlay mode?\n// - renderOrder: The render order in which the canvas is being emitted to the Scene. (Read Only)\n// - rootCanvas: Returns the Canvas closest to root, by checking through each parent and returning the last canvas found. If no other canvas is found then the canvas will return itself.\n// - scaleFactor: Scales the entire canvas, ensuring it fits the screen. It only applies when Canvas.renderMode is set to Screen Space.\n// - sortingLayerID: Unique ID of the Canvas' sorting layer.\n// - sortingLayerName: Name of the Canvas' sorting layer.\n// - sortingOrder: Canvas' order within a sorting layer.\n// - targetDisplay: For Overlay mode, display index on which the UI canvas will appear.\n// - updateRectTransformForStandalone: Should the Canvas size be updated based on the render target when a manual Camera.Render call is performed.\n// - vertexColorAlwaysGammaSpace: Should the Canvas vertex color always be in gamma space before passing to the UI shaders in linear color space work flow.\n// - worldCamera: Camera used for sizing the Canvas when in Screen Space - Camera. Also used as the Camera that events will be sent through for a World Space Canvas.\n\n// Methods:\n// - BroadcastMessage(): Calls the method named methodName on every MonoBehaviour in this game object or any of its children.\n// - CompareTag(): Checks the GameObject's tag against the defined tag.\n// - GetComponent(): Gets a reference to a component of type T on the same GameObject as the component specified.\n// - GetComponentInChildren(): Gets a reference to a component of type T on the same GameObject as the component specified, or any child of the GameObject.\n// - GetComponentIndex(): Gets the index of the component on its parent GameObject.\n// - GetComponentInParent(): Gets a reference to a component of type T on the same GameObject as the component specified, or any parent of the GameObject.\n// - GetComponents(): Gets references to all components of type T on the same GameObject as the component specified.\n// - GetComponentsInChildren(): Gets references to all components of type T on the same GameObject as the component specified, and any child of the GameObject.\n// - GetComponentsInParent(): Gets references to all components of type T on the same GameObject as the component specified, and any parent of the GameObject.\n// - SendMessage(): Calls the method named methodName on every MonoBehaviour in this game object.\n// - SendMessageUpwards(): Calls the method named methodName on every MonoBehaviour in this game object and on every ancestor of the behaviour.\n// - TryGetComponent(): Gets the component of the specified type, if it exists.\n// - GetInstanceID(): Gets the instance ID of the object.\n// - ToString(): Returns the name of the object.\n\n// Code Examples:\n// Example 1:\n//   using System.Collections;\n\n//   using System.Collections.Generic;\n\n//   using UnityEditor;\n\n//   using UnityEngine;\n\n//   using UnityEngine.UI;// Create a Canvas that holds a Text GameObject.public class ExampleClass : MonoBehaviour\n\n//   {\n\n//       void Start()\n\n//       {\n\n//           GameObject myGO;\n\n//           GameObject myText;\n\n//           Canvas myCanvas;\n\n//           Text text;\n\n//           RectTransform rectTransform;        // Canvas\n\n//           myGO = new GameObject();\n\n//           myGO.name = \"TestCanvas\";\n\n//           myGO.AddComponent<Canvas>();        myCanvas = myGO.GetComponent<Canvas>();\n\n//           myCanvas.renderMode = RenderMode.ScreenSpaceOverlay;\n\n//           myGO.AddComponent<CanvasScaler>();\n\n//           myGO.AddComponent<GraphicRaycaster>();        // Text\n\n//           myText = new GameObject();\n\n//           myText.transform.parent = myGO.transform;\n\n//           myText.name = \"wibble\";        text = myText.AddComponent<Text>();\n\n//           text.font = (Font)Resources.Load(\"MyFont\");\n\n//           text.text = \"wobble\";\n\n//           text.fontSize = 100;        // Text position\n\n//           rectTransform = text.GetComponent<RectTransform>();\n\n//           rectTransform.localPosition = new Vector3(0, 0, 0);\n\n//           rectTransform.sizeDelta = new Vector2(400, 200);\n\n//       }\n\n//   }\n\n// Pseudo-code representation of Canvas\npublic class Canvas {\n    public var additionalShaderChannels; // Get or set the mask of additional shader channels to be used when creating the Canvas mesh.\n    public var cachedSortingLayerValue; // Cached calculated value based upon SortingLayerID.\n    public var isRootCanvas; // Is this the root Canvas?\n    public var normalizedSortingGridSize; // The normalized grid size that the canvas will split the renderable area into.\n    public var overridePixelPerfect; // Allows for nested canvases to override pixelPerfect settings inherited from parent canvases.\n    public var overrideSorting; // Allows for nested canvases to override the Canvas.sortingOrder from parent canvases.\n    public var pixelPerfect; // Forces pixel alignment for elements in the canvas. It only applies when Canvas.renderMode is set to Screen Space.\n    public var pixelRect; // Get the render rect for the Canvas.\n    public var planeDistance; // How far away from the camera is the Canvas generated? It only applies when Canvas.renderMode is set to RenderMode.ScreenSpaceCamera.\n    public var referencePixelsPerUnit; // The number of pixels per unit that is considered the default.\n    public var renderingDisplaySize; // Provides the pixel dimensions of the display area where the UI canvas is rendered.\n    public var renderMode; // Is the Canvas in World or Overlay mode?\n    public var renderOrder; // The render order in which the canvas is being emitted to the Scene. (Read Only)\n    public var rootCanvas; // Returns the Canvas closest to root, by checking through each parent and returning the last canvas found. If no other canvas is found then the canvas will return itself.\n    public var scaleFactor; // Scales the entire canvas, ensuring it fits the screen. It only applies when Canvas.renderMode is set to Screen Space.\n    public var sortingLayerID; // Unique ID of the Canvas' sorting layer.\n    public var sortingLayerName; // Name of the Canvas' sorting layer.\n    public var sortingOrder; // Canvas' order within a sorting layer.\n    public var targetDisplay; // For Overlay mode, display index on which the UI canvas will appear.\n    public var updateRectTransformForStandalone; // Should the Canvas size be updated based on the render target when a manual Camera.Render call is performed.\n    public var vertexColorAlwaysGammaSpace; // Should the Canvas vertex color always be in gamma space before passing to the UI shaders in linear color space work flow.\n    public var worldCamera; // Camera used for sizing the Canvas when in Screen Space - Camera. Also used as the Camera that events will be sent through for a World Space Canvas.\n    public void BroadcastMessage(); // Calls the method named methodName on every MonoBehaviour in this game object or any of its children.\n    public void CompareTag(); // Checks the GameObject's tag against the defined tag.\n    public void GetComponent(); // Gets a reference to a component of type T on the same GameObject as the component specified.\n    public void GetComponentInChildren(); // Gets a reference to a component of type T on the same GameObject as the component specified, or any child of the GameObject.\n    public void GetComponentIndex(); // Gets the index of the component on its parent GameObject.\n    public void GetComponentInParent(); // Gets a reference to a component of type T on the same GameObject as the component specified, or any parent of the GameObject.\n    public void GetComponents(); // Gets references to all components of type T on the same GameObject as the component specified.\n    public void GetComponentsInChildren(); // Gets references to all components of type T on the same GameObject as the component specified, and any child of the GameObject.\n    public void GetComponentsInParent(); // Gets references to all components of type T on the same GameObject as the component specified, and any parent of the GameObject.\n    public void SendMessage(); // Calls the method named methodName on every MonoBehaviour in this game object.\n    public void SendMessageUpwards(); // Calls the method named methodName on every MonoBehaviour in this game object and on every ancestor of the behaviour.\n    public void TryGetComponent(); // Gets the component of the specified type, if it exists.\n    public void GetInstanceID(); // Gets the instance ID of the object.\n    public void ToString(); // Returns the name of the object.\n}",
+  "properties": [
+    {
+      "name": "additionalShaderChannels",
+      "description": "Get or set the mask of additional shader channels to be used when creating the Canvas mesh."
+    },
+    {
+      "name": "cachedSortingLayerValue",
+      "description": "Cached calculated value based upon SortingLayerID."
+    },
+    {
+      "name": "isRootCanvas",
+      "description": "Is this the root Canvas?"
+    },
+    {
+      "name": "normalizedSortingGridSize",
+      "description": "The normalized grid size that the canvas will split the renderable area into."
+    },
+    {
+      "name": "overridePixelPerfect",
+      "description": "Allows for nested canvases to override pixelPerfect settings inherited from parent canvases."
+    },
+    {
+      "name": "overrideSorting",
+      "description": "Allows for nested canvases to override the Canvas.sortingOrder from parent canvases."
+    },
+    {
+      "name": "pixelPerfect",
+      "description": "Forces pixel alignment for elements in the canvas. It only applies when Canvas.renderMode is set to Screen Space."
+    },
+    {
+      "name": "pixelRect",
+      "description": "Get the render rect for the Canvas."
+    },
+    {
+      "name": "planeDistance",
+      "description": "How far away from the camera is the Canvas generated? It only applies when Canvas.renderMode is set to RenderMode.ScreenSpaceCamera."
+    },
+    {
+      "name": "referencePixelsPerUnit",
+      "description": "The number of pixels per unit that is considered the default."
+    },
+    {
+      "name": "renderingDisplaySize",
+      "description": "Provides the pixel dimensions of the display area where the UI canvas is rendered."
+    },
+    {
+      "name": "renderMode",
+      "description": "Is the Canvas in World or Overlay mode?"
+    },
+    {
+      "name": "renderOrder",
+      "description": "The render order in which the canvas is being emitted to the Scene. (Read Only)"
+    },
+    {
+      "name": "rootCanvas",
+      "description": "Returns the Canvas closest to root, by checking through each parent and returning the last canvas found. If no other canvas is found then the canvas will return itself."
+    },
+    {
+      "name": "scaleFactor",
+      "description": "Scales the entire canvas, ensuring it fits the screen. It only applies when Canvas.renderMode is set to Screen Space."
+    },
+    {
+      "name": "sortingLayerID",
+      "description": "Unique ID of the Canvas' sorting layer."
+    },
+    {
+      "name": "sortingLayerName",
+      "description": "Name of the Canvas' sorting layer."
+    },
+    {
+      "name": "sortingOrder",
+      "description": "Canvas' order within a sorting layer."
+    },
+    {
+      "name": "targetDisplay",
+      "description": "For Overlay mode, display index on which the UI canvas will appear."
+    },
+    {
+      "name": "updateRectTransformForStandalone",
+      "description": "Should the Canvas size be updated based on the render target when a manual Camera.Render call is performed."
+    }
+  ]
+}

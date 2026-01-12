@@ -1,0 +1,22 @@
+// Unity Class: CanvasGroup
+// Documentation: https://docs.unity3d.com/ScriptReference/CanvasGroup.html
+
+// Description: A Canvas placable element that can be used to modify children Alpha, Raycasting, Enabled state.
+
+// Properties:
+// - alpha: Set the alpha of the group.
+// - blocksRaycasts: Does this group block raycasting (allow collision).
+// - ignoreParentGroups: Should the group ignore parent groups?
+// - interactable: Is the group interactable (are the elements beneath the group enabled).
+
+// Methods:
+// - IsRaycastLocationValid(): Returns true if the Group allows raycasts.
+
+// Pseudo-code representation of CanvasGroup
+public class CanvasGroup {
+    public var alpha; // Set the alpha of the group.
+    public var blocksRaycasts; // Does this group block raycasting (allow collision).
+    public var ignoreParentGroups; // Should the group ignore parent groups?
+    public var interactable; // Is the group interactable (are the elements beneath the group enabled).
+    public void IsRaycastLocationValid(); // Returns true if the Group allows raycasts.
+}

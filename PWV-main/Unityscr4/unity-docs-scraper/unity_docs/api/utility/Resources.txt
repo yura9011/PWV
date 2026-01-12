@@ -1,0 +1,40 @@
+// Unity Class: Resources
+// Documentation: https://docs.unity3d.com/ScriptReference/Resources.html
+
+// Description: The Resources class allows you to find and access objects including assets.
+
+// Methods:
+// - EntityIdsToObjectList: Translates an array of entity IDs to a list of Object references.
+// - EntityIdToObject: Translates an EntityId to an object reference.
+// - FindObjectsOfTypeAll: Returns a list of all objects of Type T.
+// - InstanceIDsToValidArray: Translates an array of instance IDs to an array of bools indicating whether a given instance ID from instanceIDs corresponds to a valid Object in memory. The Object could have been deleted or not loaded into memory yet.
+// - Load: Loads the asset of the requested type stored at path in a Resources folder.
+// - LoadAll: Loads all assets in a folder or file at path in a Resources folder.
+// - LoadAsync: Asynchronously loads an asset stored at path in a Resources folder.
+// - UnloadAsset: Unloads assetToUnload from memory.
+// - UnloadUnusedAssets: Unloads assets that are not used.
+
+// Code Examples:
+// Example 1:
+//   using UnityEngine;
+//   using System.Collections;public class ExampleClass : MonoBehaviour
+//   {
+//       void Start()
+//       {
+//           GameObject go = GameObject.CreatePrimitive(PrimitiveType.Plane);
+//           Renderer rend = go.GetComponent<Renderer>();
+//           rend.material.mainTexture = Resources.Load("glass") as Texture;
+//       }
+//   }
+
+public class Resources {
+    public void EntityIdsToObjectList(); // Translates an array of entity IDs to a list of Object references.
+    public void EntityIdToObject(); // Translates an EntityId to an object reference.
+    public void FindObjectsOfTypeAll(); // Returns a list of all objects of Type T.
+    public void InstanceIDsToValidArray(); // Translates an array of instance IDs to an array of bools indicating whether a gi
+    public void Load(); // Loads the asset of the requested type stored at path in a Resources folder.
+    public void LoadAll(); // Loads all assets in a folder or file at path in a Resources folder.
+    public void LoadAsync(); // Asynchronously loads an asset stored at path in a Resources folder.
+    public void UnloadAsset(); // Unloads assetToUnload from memory.
+    public void UnloadUnusedAssets(); // Unloads assets that are not used.
+}

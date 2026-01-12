@@ -1,0 +1,7 @@
+{
+  "name": "api_ui_Image",
+  "type": "api",
+  "description": "Image is a textured element in the UI hierarchy.",
+  "content": "// Unity Class: Image\n// Documentation: https://docs.unity3d.com/Packages/com.unity.ugui@1.0/api/UnityEngine.UI.Image.html\n\n// Description: Image is a textured element in the UI hierarchy.\n\npublic class Image {\n}",
+  "properties": []
+}

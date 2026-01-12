@@ -1,0 +1,8 @@
+// Unity Class: AudioSettings
+// Documentation: https://docs.unity3d.com/ScriptReference/AudioSettings.html
+
+// Description: Controls the global audio settings from script.
+
+// Pseudo-code representation of AudioSettings
+public class AudioSettings {
+}

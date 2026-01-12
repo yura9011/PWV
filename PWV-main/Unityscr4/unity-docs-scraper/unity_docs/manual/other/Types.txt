@@ -1,0 +1,469 @@
+// Unity Manual: Assets_Types
+// URL: https://docs.unity3d.com/Manual/AssetTypes.html
+
+Assets and media
+Importing assets
+Supported asset type reference
+Text assets
+Reserved folder name reference
+Supported asset type reference
+Unity supports many different types of assets and most common image file types. It uses
+asset importers
+to process and convert external files into assets you can use in your project.
+Unity supports the following kinds of files:
+3D model files
+: Unity supports standard and proprietary
+model file
+A file containing a 3D data, which may include definitions for meshes, bones, animation, materials and textures.
+More info
+See in
+Glossary
+formats. Internally, Unity uses the FBX file format as its importing chain. For a list of supported files, refer to
+3D model importers
+.
+Image files
+: Unity imports image files as textures and supports most common image file types. For a list of supported files, refer to
+Image importers
+.
+Audio and video files
+: Unity supports many audio and video file formats. For a list of supported files, refer to
+Audio and video importers
+.
+Shader
+A program that runs on the GPU.
+More info
+See in
+Glossary
+files
+: Unity supports different shader file types depending on the graphics pipeline you’re using. For a list of supported files, refer to
+Shader importers
+.
+Text and arbitrary data
+: Unity can import arbitrary data from files such as .html, .xml, .json files, which you can use to store and use data from external sources. For a list of supported files, refer to
+Text and arbitrary data importers
+.
+Plug-ins and code related assets
+: You can add managed and native
+plug-ins
+A set of code created outside of Unity that creates functionality in Unity. There are two kinds of plug-ins you can use in Unity: Managed plug-ins (managed .NET assemblies created with tools like Visual Studio) and Native plug-ins (platform-specific native code libraries).
+More info
+See in
+Glossary
+files into your project to expand the functionality of your application, and
+assembly definitions
+to create and organize your
+scripts
+A piece of code that allows you to create your own Components, trigger game events, modify Component properties over time and respond to user input in any way you like.
+More info
+See in
+Glossary
+into assemblies. For a list of supported files, refer to
+Plug-ins and code importers
+Native assets
+: There are a range of asset types that are native to the Unity Editor. For a list of supported files, refer to
+Native asset importers
+.
+Asset importers
+Unity uses importers to process and convert external files into assets that can be used in your project. Each file type has a corresponding importer that handles its specific requirements.
+Unity supports many asset file types via its collection of built-in importers. Most of these importers are implemented in the Unity Editor’s native code. They provide the import functionality for most of Unity’s basic asset types, such as 3D models, textures, and audio files.
+Most importers have a corresponding class in the
+UnityEditor
+namespace that exposes the same configurable import settings as the
+Inspector
+A Unity window that displays information about the currently selected GameObject, asset or project settings, allowing you to inspect and edit the values.
+More info
+See in
+Glossary
+window for the asset type. They also have corresponding pre-process and post-process callbacks on the
+AssetPostprocessor
+class so you can define custom behavior to run before or after asset import. For example, the import settings for the
+AudioImporter
+are configurable in the
+Audio Clip Inspector window
+or from code with the
+AudioImporter
+class
+. You can also create custom pre-import or post-import behavior for audio assets with
+AssetPostprocessor.OnPreprocessorAudio
+and
+AssetPostprocessor.OnPostprocessAudio
+respectively. This pattern applies for most major asset types.
+3D model importers
+Unity uses the FBX file format as its importing chain. For a list of 3D modeling software that Unity supports, refer to
+Model file formats
+.
+Importer
+Description
+Supported file formats
+FBXImporter
+Imports 3D model files. For more information, refer to
+Importing a model
+.
+.blend
+.c4d
+.dae
+.dxf
+.fbx
+.jas
+.lxo
+.ma
+.mb
+.max
+.obj
+Mesh3DSImporter
+Imports 3D Studio Max files. For more information, refer to
+Importing a model
+.
+.3ds
+SketchUpImporter
+Imports SketchUp files. For more information, refer to
+SketchUp Import Settings
+and
+SketchUpImporter
+.
+.skp
+SpeedTreeImporter
+Imports SpeedTree files. For more information, refer to
+SpeedTree Import Settings window
+and
+SpeedTreeImporter
+.
+.spm
+.st
+SubstanceImporter
+Imports Substance files.
+.sbsar
+Audio and video importers
+Importer
+Description
+Supported file formats
+AudioImporter
+Imports audio files. For more information, refer to
+Audio files
+and
+AudioImporter
+.
+.aif
+.aiff
+.flac
+.it
+.mod
+.mp3
+.ogg
+.s3m
+.wav
+.xm
+VideoClipImporter
+Imports video files. For more information, refer to
+Video sources
+and
+VideoClipImporter
+.
+.asf
+.avi
+.dv
+.m4v
+.mov
+.mp4
+.mpg
+.mpeg
+.ogv
+.vp8
+.webm
+.wmv
+Image importers
+Unity imports image files as textures. Unity supports most common image file types, such as
+.bmp
+,
+.tif
+,
+.tga
+,
+.jpg
+,
+.svg
+, and
+.psd
+. For more information, refer to
+Import a texture
+.
+Importer
+Description
+Supported file formats
+IHVImageFormatImporter
+Imports specialized image formats. For more information, refer to
+IHVImageFormatImporter
+.
+.astc
+.dds
+.ktx
+.pvr
+TextureImporter
+Imports texture files. For more information, refer to
+Import a texture
+and
+TextureImporter
+.
+.bmp
+.exr
+.gif
+.hdr
+.iff
+.jpeg
+.jpg
+.pct
+.pic
+.pict
+.png
+.psd
+.tga
+.tif
+.tiff
+.svg
+Native asset importers
+There are a range of asset types that are native to the Unity Editor. You can create assets of these types using Editor features. When you create these, Unity saves the files which represent them as asset files in the
+Assets
+folder of your project. These include
+animations
+,
+curves
+,
+gradients
+,
+masks
+Can refer to a Sprite Mask, a UI Mask, or a Layer Mask
+More info
+See in
+Glossary
+,
+materials
+An asset that defines how a surface should be rendered.
+More info
+See in
+Glossary
+, and
+presets
+.
+Importer
+Description
+Supported file formats
+NativeFormatImporter
+Imports Unity’s native asset formats.
+.anim
+.asset
+.blendtree
+.brush
+.buildreport
+.colors
+.controller
+.cubemap
+.curves
+.curvesNormalized
+.flare
+.fontsettings
+.giparams
+.gradients
+.guiskin
+.ht
+.mask
+.mat
+.mesh
+.mixer
+.overrideController
+.particleCurves
+.particleCurvesSigned
+.particleDoubleCurves
+.particleDoubleCurvesSigned
+.physicMaterial
+.physicsMaterial2D
+.playable
+.preset
+.renderTexture
+.shadervariants
+.signal
+.spriteatlas
+.state
+.statemachine
+.terrainlayer
+.texture2D
+.transition
+.webCamTexture
+PrefabImporter
+Imports
+prefab
+An asset type that allows you to store a GameObject complete with components and properties. The prefab acts as a template from which you can create new object instances in the scene.
+More info
+See in
+Glossary
+files. For more information, refer to
+Creating prefabs
+.
+.prefab
+VisualEffectImporter
+Imports visual effect files.
+.vfx
+.vfxblock
+.vfxoperator
+Plug-ins and code importers
+You can add managed and native
+plug-ins
+such as
+.dll
+files into your project to expand the functionality of your application. Unity also supports
+assembly definitions
+to help you create and organize your scripts into assemblies.
+Importer
+Description
+Supported file formats
+AssemblyDefinitionImporter
+Imports assembly definition files. For more information, refer to
+Introduction to assemblies in Unity
+.
+.asmdef
+AssemblyDefinitionReferenceImporter
+Imports assembly definition reference files. For more information, refer to
+Introduction to assemblies in Unity
+.
+.asmref
+DefaultImporter
+Imports system files.
+.rsp
+.unity
+PackageManifestImporter
+Imports package manifest files. For more information, refer to
+Package manifest
+Each package has a
+manifest
+, which provides information about the package to the Package Manager. The manifest contains information such as the name of the package, its version, a description for users, dependencies on other packages (if any), and other details.
+More info
+See in
+Glossary
+.
+.json
+PluginImporter
+Imports plug-in files. For more information, refer to
+Import and configure plug-ins
+and
+PluginImporter
+.
+.a
+.aar
+.bc
+.bundle
+.c
+.cc
+.config
+.cpp
+.dylib
+.h
+.jar
+.java
+.jslib
+.jspre
+.kt
+.m
+.mm
+.prx
+.rpl
+.so
+.suprx
+.swift
+.winmd
+.xib
+Shader importers
+Importer
+Description
+Supported file formats
+ComputeShaderImporter
+Imports compute shader files. For more information, refer to
+Writing compute shaders
+and
+ComputeShader
+.
+.compute
+RayTracingShaderImporter
+Imports
+ray tracing
+The process of generating an image by tracing out rays from the Camera through each pixel and recording the color contribution at the hit point. This is an alternative to rasterization.
+raytracing
+See in
+Glossary
+shader files. For more information, refer to
+Introduction to shaders
+.
+.raytrace
+ShaderImporter
+Imports shader files. For more information, refer to
+Introduction to shaders
+and
+ShaderImporter
+.
+.cg
+.cginc
+.glslinc
+.hlsl
+.shader
+Text and arbitrary data importers
+Importer
+Description
+Supported file formats
+LocalizationImporter
+Imports localization files.
+.po
+TextScriptImporter
+Imports text and script files. For more information, refer to
+Text assets
+.
+.boo
+.bytes
+.csv
+.fnt
+.htm
+.html
+.js
+.json
+.manifest
+.md
+.rsp
+.txt
+.xml
+.yaml
+TrueTypeFontImporter
+Imports font files. For more information, refer to
+Font assets
+and
+TrueTypeFontImporter
+.
+.dfont
+.otf
+.ttc
+.ttf
+Built-in scripted importers
+Scripted importers
+allow you to write your own custom importers for formats that Unity doesn’t natively support. Some of Unity’s own built-in importers are implemented as scripted importers because they are written in C# in core packages, rather than within the Unity Editor’s native code itself. Unity imports scripted importer assets after native importer assets.
+Importer
+Description
+File formats
+SpeedTree9Importer
+Imports SpeedTree 9 files. For more information, refer to
+SpeedTree9Importer
+.
+.st9
+StyleSheetImporter
+Imports Unity style sheet files. For more information, refer to
+Introduction to USS
+.
+.uss
+UIElementsViewImporter
+Imports Unity XML files. For more information, refer to
+Structure UI with UXML
+.
+.uxml
+Additional resources
+Scripted importers
+Introduction to importing assets
+Asset metadata
+AssetPostprocessor
+API reference
+Text assets
+Reserved folder name reference

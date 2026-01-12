@@ -1,0 +1,38 @@
+// Unity Class: AudioClip
+// Documentation: https://docs.unity3d.com/ScriptReference/AudioClip.html
+
+// Description: A container for audio data.
+
+// Properties:
+// - ambisonic: Returns true if this audio clip is ambisonic (read-only).
+// - channels: The number of channels in the audio clip. (Read Only)
+// - frequency: The sample frequency of the clip in Hertz. (Read Only)
+// - length: The length of the audio clip in seconds. (Read Only)
+// - loadInBackground: Enable this property to load the AudioClip asynchronously in the background instead of on the main thread. Set this property in the Inspector (Read Only).
+// - loadState: Returns the current load state of the audio data associated with an AudioClip.
+// - loadType: The load type of the clip (read-only).
+// - preloadAudioData: Enable this property in the Inspector to preload audio data from the audio clip when loading the clip Asset (Read Only).
+// - samples: The length of the audio clip in samples. (Read Only)
+
+// Methods:
+// - GetData(): Fills an array with sample data from the audio clip.
+// - LoadAudioData(): Loads the asset data of an AudioClip into memory, so it will immediately be ready to play.
+// - SetData(): Fills an audio clip with sample data from an array or Span. Overwrites existing data if necessary.
+// - UnloadAudioData(): Unloads the audio data associated with the clip. This works only for AudioClips that are based on actual sound file assets.
+
+// Pseudo-code representation of AudioClip
+public class AudioClip {
+    public var ambisonic; // Returns true if this audio clip is ambisonic (read-only).
+    public var channels; // The number of channels in the audio clip. (Read Only)
+    public var frequency; // The sample frequency of the clip in Hertz. (Read Only)
+    public var length; // The length of the audio clip in seconds. (Read Only)
+    public var loadInBackground; // Enable this property to load the AudioClip asynchronously in the background instead of on the main thread. Set this property in the Inspector (Read Only).
+    public var loadState; // Returns the current load state of the audio data associated with an AudioClip.
+    public var loadType; // The load type of the clip (read-only).
+    public var preloadAudioData; // Enable this property in the Inspector to preload audio data from the audio clip when loading the clip Asset (Read Only).
+    public var samples; // The length of the audio clip in samples. (Read Only)
+    public void GetData(); // Fills an array with sample data from the audio clip.
+    public void LoadAudioData(); // Loads the asset data of an AudioClip into memory, so it will immediately be ready to play.
+    public void SetData(); // Fills an audio clip with sample data from an array or Span. Overwrites existing data if necessary.
+    public void UnloadAudioData(); // Unloads the audio data associated with the clip. This works only for AudioClips that are based on actual sound file assets.
+}

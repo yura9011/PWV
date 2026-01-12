@@ -1,0 +1,88 @@
+{
+  "name": "api_ui_EditorGUILayout",
+  "type": "api",
+  "description": "Auto laid out version of EditorGUI.",
+  "content": "// Unity Class: EditorGUILayout\n// Documentation: https://docs.unity3d.com/ScriptReference/EditorGUILayout.html\n\n// Description: Auto laid out version of EditorGUI.\n\n// Methods:\n// - BeginBuildTargetSelectionGrouping: Begin a build target grouping and get the selected BuildTargetGroup back.\n// - BeginFadeGroup: Begins a group that can be be hidden/shown and the transition will be animated.\n// - BeginFoldoutHeaderGroup: Make a label with a foldout arrow to the left of it.\n// - BeginHorizontal: Begin a horizontal group and get its rect back.\n// - BeginScrollView: Begin an automatically laid out scrollview.\n// - BeginToggleGroup: Begin a vertical group with a toggle to enable or disable all the controls within at once.\n// - BeginVertical: Begin a vertical group and get its rect back.\n// - BoundsField: Make Center & Extents field for entering a Bounds.\n// - BoundsIntField: Make Position & Size field for entering a BoundsInt.\n// - ColorField: Make a field for selecting a Color.\n// - CurveField: Make a field for editing an AnimationCurve.\n// - DelayedDoubleField: Make a delayed text field for entering doubles.\n// - DelayedFloatField: Make a delayed text field for entering floats.\n// - DelayedIntField: Make a delayed text field for entering integers.\n// - DelayedTextField: Make a delayed text field.\n// - DoubleField: Make a text field for entering double values.\n// - DropdownButton: Make a button that reacts to mouse down, for displaying your own dropdown content.\n// - EditorToolbar: Makes a toolbar populated with the specified collection of editor tools.\n// - EditorToolbarForTarget: Makes a toolbar populated with the collection of editor tools that match the EditorToolAttribute of the target object.\n// - EndBuildTargetSelectionGrouping: Close a group started with BeginBuildTargetSelectionGrouping.\n// - EndFadeGroup: Closes a group started with BeginFadeGroup.\n// - EndFoldoutHeaderGroup: Closes a group started with BeginFoldoutHeaderGroup.\n// - EndHorizontal: Close a group started with BeginHorizontal.\n// - EndScrollView: Ends a scrollview started with a call to BeginScrollView.\n// - EndToggleGroup: Close a group started with BeginToggleGroup.\n// - EndVertical: Close a group started with BeginVertical.\n// - EnumFlagsField: Displays a menu with an option for every value of the enum type when clicked.\n// - EnumPopup: Make an enum popup selection field.\n// - FloatField: Make a text field for entering float values.\n// - Foldout: Make a label with a foldout arrow to the left of it.\n// - GetControlRect: Get a rect for an Editor control.\n// - GradientField: Make a field for editing a Gradient.\n// - HelpBox: Make a help box with a message to the user.\n// - InspectorTitlebar: Make an inspector-window-like titlebar.\n// - IntField: Make a text field for entering integers.\n// - IntPopup: Make an integer popup selection field.\n// - IntSlider: Make a slider the user can drag to change an integer value between a min and a max.\n// - LabelField: Make a label field. (Useful for showing read-only info.)\n// - LayerField: Make a layer selection field.\n// - LinkButton: Make a clickable link label.\n// - LongField: Make a text field for entering long integers.\n// - MaskField: Make a field for masks.\n// - MinMaxSlider: Make a special slider the user can use to specify a range between a min and a max.\n// - ObjectField: Make a field to receive any object type.\n// - PasswordField: Make a text field where the user can enter a password.\n// - Popup: Make a generic popup selection field.\n// - PrefixLabel: Make a label in front of some control.\n// - PropertyField: Make a field for SerializedProperty.\n// - RectField: Make an X, Y, W & H field for entering a Rect.\n// - RectIntField: Make an X, Y, W & H field for entering a RectInt.\n// - RenderingLayerMaskField: Makes a layer selection field.\n// - SelectableLabel: Make a selectable label field. (Useful for showing read-only info that can be copy-pasted.)\n// - Slider: Make a slider the user can drag to change a value between a min and a max.\n// - Space: Make a small space between the previous control and the following.\n// - TagField: Make a tag selection field.\n// - TextArea: Make a text area.\n// - TextField: Make a text field.\n// - Toggle: Make a toggle.\n// - ToggleLeft: Make a toggle field where the toggle is to the left and the label immediately to the right of it.\n// - ToolContextToolbar: Makes a toolbar populated with the specified collection of editor tool contexts.\n// - ToolContextToolbarForTarget: Makes a toolbar populated with the collection of EditorToolContext that match the EditorToolContextAttribute.targetType of the target object.\n// - Vector2Field: Make an X & Y field for entering a Vector2.\n// - Vector2IntField: Make an X & Y integer field for entering a Vector2Int.\n// - Vector3Field: Make an X, Y & Z field for entering a Vector3.\n// - Vector3IntField: Make an X, Y & Z integer field for entering a Vector3Int.\n// - Vector4Field: Make an X, Y, Z & W field for entering a Vector4.\n\n// Code Examples:\n// Example 1:\n//   using System.Collections;\n\n//   using System.Collections.Generic;\n\n//   using UnityEngine;\n\n//   using UnityEditor;public class EditorGUILayoutExample : EditorWindow\n\n//   {\n\n//       Vector2 scrollPos;\n\n//       string t = \"This is a label inside a Scroll view!\";    [MenuItem(\"Examples/EditorGUILayout Example\")]\n\n//       static void Init()\n\n//       {\n\n//           EditorGUILayoutExample window = (EditorGUILayoutExample)EditorWindow.GetWindow(typeof(EditorGUILayoutExample), true, \"My Empty Window\");\n\n//           window.Show();\n\n//       }    void OnGUI()\n\n//       {\n\n//           // Creates a horizontally laid out group\n\n//           EditorGUILayout.BeginHorizontal();        // Creates a ScrollView within that group\n\n//           scrollPos =\n\n//               EditorGUILayout.BeginScrollView(scrollPos, GUILayout.Width(100), GUILayout.Height(100));        // Creates a label element within the ScrollView\n\n//           GUILayout.Label(t);        // Ends the ScrollView\n\n//           EditorGUILayout.EndScrollView();        // Places a button within the Horizontal area, but outside the ScrollView\n\n//           if (GUILayout.Button(\"Add More Text\", GUILayout.Width(100), GUILayout.Height(100)))\n\n\npublic class EditorGUILayout {\n    public void BeginBuildTargetSelectionGrouping(); // Begin a build target grouping and get the selected BuildTargetGroup back.\n    public void BeginFadeGroup(); // Begins a group that can be be hidden/shown and the transition will be animated.\n    public void BeginFoldoutHeaderGroup(); // Make a label with a foldout arrow to the left of it.\n    public void BeginHorizontal(); // Begin a horizontal group and get its rect back.\n    public void BeginScrollView(); // Begin an automatically laid out scrollview.\n    public void BeginToggleGroup(); // Begin a vertical group with a toggle to enable or disable all the controls withi\n    public void BeginVertical(); // Begin a vertical group and get its rect back.\n    public void BoundsField(); // Make Center & Extents field for entering a Bounds.\n    public void BoundsIntField(); // Make Position & Size field for entering a BoundsInt.\n    public void ColorField(); // Make a field for selecting a Color.\n    public void CurveField(); // Make a field for editing an AnimationCurve.\n    public void DelayedDoubleField(); // Make a delayed text field for entering doubles.\n    public void DelayedFloatField(); // Make a delayed text field for entering floats.\n    public void DelayedIntField(); // Make a delayed text field for entering integers.\n    public void DelayedTextField(); // Make a delayed text field.\n}",
+  "properties": [
+    {
+      "name": "BeginBuildTargetSelectionGrouping",
+      "description": "Begin a build target grouping and get the selected BuildTargetGroup back."
+    },
+    {
+      "name": "BeginFadeGroup",
+      "description": "Begins a group that can be be hidden/shown and the transition will be animated."
+    },
+    {
+      "name": "BeginFoldoutHeaderGroup",
+      "description": "Make a label with a foldout arrow to the left of it."
+    },
+    {
+      "name": "BeginHorizontal",
+      "description": "Begin a horizontal group and get its rect back."
+    },
+    {
+      "name": "BeginScrollView",
+      "description": "Begin an automatically laid out scrollview."
+    },
+    {
+      "name": "BeginToggleGroup",
+      "description": "Begin a vertical group with a toggle to enable or disable all the controls within at once."
+    },
+    {
+      "name": "BeginVertical",
+      "description": "Begin a vertical group and get its rect back."
+    },
+    {
+      "name": "BoundsField",
+      "description": "Make Center & Extents field for entering a Bounds."
+    },
+    {
+      "name": "BoundsIntField",
+      "description": "Make Position & Size field for entering a BoundsInt."
+    },
+    {
+      "name": "ColorField",
+      "description": "Make a field for selecting a Color."
+    },
+    {
+      "name": "CurveField",
+      "description": "Make a field for editing an AnimationCurve."
+    },
+    {
+      "name": "DelayedDoubleField",
+      "description": "Make a delayed text field for entering doubles."
+    },
+    {
+      "name": "DelayedFloatField",
+      "description": "Make a delayed text field for entering floats."
+    },
+    {
+      "name": "DelayedIntField",
+      "description": "Make a delayed text field for entering integers."
+    },
+    {
+      "name": "DelayedTextField",
+      "description": "Make a delayed text field."
+    },
+    {
+      "name": "DoubleField",
+      "description": "Make a text field for entering double values."
+    },
+    {
+      "name": "DropdownButton",
+      "description": "Make a button that reacts to mouse down, for displaying your own dropdown content."
+    },
+    {
+      "name": "EditorToolbar",
+      "description": "Makes a toolbar populated with the specified collection of editor tools."
+    },
+    {
+      "name": "EditorToolbarForTarget",
+      "description": "Makes a toolbar populated with the collection of editor tools that match the EditorToolAttribute of the target object."
+    },
+    {
+      "name": "EndBuildTargetSelectionGrouping",
+      "description": "Close a group started with BeginBuildTargetSelectionGrouping."
+    }
+  ]
+}

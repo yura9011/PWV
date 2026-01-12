@@ -1,0 +1,63 @@
+// Unity Class: Matrix4x4
+// Documentation: https://docs.unity3d.com/ScriptReference/Matrix4x4.html
+
+// Description: A standard 4x4 transformation matrix.
+
+// Properties:
+// - decomposeProjection: This property takes a projection matrix and returns the six plane coordinates that define a projecti
+// - determinant: The determinant of the matrix. (Read Only)
+// - inverse: The inverse of this matrix. (Read Only)
+// - isIdentity: Checks whether this is an identity matrix. (Read Only)
+// - lossyScale: Attempts to get a scale value from the matrix. (Read Only)
+// - rotation: Attempts to get a rotation quaternion from this matrix.
+// - this[int,int]: Access element at [row, column].
+// - transpose: Returns the transpose of this matrix (Read Only).
+
+// Methods:
+// - GetColumn: Get a column of the matrix.
+// - GetPosition: Get position vector from the matrix.
+// - GetRow: Returns a row of the matrix.
+// - MultiplyPoint: Transforms a position by this matrix (generic).
+// - MultiplyPoint3x4: Transforms a position by this matrix (fast).
+// - MultiplyVector: Transforms a direction by this matrix.
+// - SetColumn: Sets a column of the matrix.
+// - SetRow: Sets a row of the matrix.
+// - SetTRS: Sets this matrix to a translation, rotation and scaling matrix.
+// - ToString: Returns a formatted string for this matrix.
+// - TransformPlane: Returns a plane that is transformed in space.
+// - ValidTRS: Checks if this matrix is a valid transform matrix.
+// - Frustum: This function returns a projection matrix with viewing frustum that has a near plane defined by the 
+// - Inverse3DAffine: Computes the inverse of a 3D affine matrix.
+// - LookAt: Create a "look at" matrix.
+// - Ortho: Create an orthogonal projection matrix.
+// - Perspective: Create a perspective projection matrix.
+// - Rotate: Creates a rotation matrix.
+// - Scale: Creates a scaling matrix.
+// - Translate: Creates a translation matrix.
+// - TRS: Creates a translation, rotation and scaling matrix.
+
+public class Matrix4x4 {
+    public var decomposeProjection;
+    public var determinant;
+    public var inverse;
+    public var isIdentity;
+    public var lossyScale;
+    public var rotation;
+    public var this[int,int];
+    public var transpose;
+    public void GetColumn();
+    public void GetPosition();
+    public void GetRow();
+    public void MultiplyPoint();
+    public void MultiplyPoint3x4();
+    public void MultiplyVector();
+    public void SetColumn();
+    public void SetRow();
+    public void SetTRS();
+    public void ToString();
+    public void TransformPlane();
+    public void ValidTRS();
+    public void Frustum();
+    public void Inverse3DAffine();
+    public void LookAt();
+}

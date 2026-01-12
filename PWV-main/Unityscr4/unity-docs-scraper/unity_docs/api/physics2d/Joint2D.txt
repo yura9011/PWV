@@ -1,0 +1,47 @@
+// Unity Class: Joint2D
+// Documentation: https://docs.unity3d.com/ScriptReference/Joint2D.html
+
+// Description: Parent class for joints to connect Rigidbody2D objects.
+
+// Properties:
+// - attachedRigidbody: The Rigidbody2D attached to the Joint2D.
+// - breakAction: The action to take when the joint breaks the breakForce or breakTorque.
+// - breakForce: The force that needs to be applied for this joint to break.
+// - breakTorque: The torque that needs to be applied for this joint to break.
+// - connectedBody: The Rigidbody2D object to which the other end of the joint is attached (ie, the object without the joint component).
+// - enableCollision: Should the two Rigidbody2D connected with this joint collide with each other?
+// - reactionForce: Gets the reaction force of the joint.
+// - reactionTorque: Gets the reaction torque of the joint.
+
+// Methods:
+// - GetReactionForce: Gets the reaction force of the joint given the specified timeStep.
+// - GetReactionTorque: Gets the reaction torque of the joint given the specified timeStep.
+// - Destroy: Removes a GameObject, component, or asset.
+// - DestroyImmediate: Destroys the specified object immediately. Use with caution and in Edit mode only.
+// - DontDestroyOnLoad: Do not destroy the target Object when loading a new Scene.
+// - FindAnyObjectByType: Retrieves any active loaded object of Type type.
+// - FindFirstObjectByType: Retrieves the first active loaded object of Type type.
+// - FindObjectsByType: Retrieves a list of all loaded objects of Type type.
+// - Instantiate: Clones the object original and returns the clone.
+// - InstantiateAsync: Captures a snapshot of the original object (that must be related to some GameObject) and returns the AsyncInstantiateOperation.
+
+public class Joint2D {
+    public var attachedRigidbody; // The Rigidbody2D attached to the Joint2D.
+    public var breakAction; // The action to take when the joint breaks the breakForce or breakTorque.
+    public var breakForce; // The force that needs to be applied for this joint to break.
+    public var breakTorque; // The torque that needs to be applied for this joint to break.
+    public var connectedBody; // The Rigidbody2D object to which the other end of the joint is attached (ie, the 
+    public var enableCollision; // Should the two Rigidbody2D connected with this joint collide with each other?
+    public var reactionForce; // Gets the reaction force of the joint.
+    public var reactionTorque; // Gets the reaction torque of the joint.
+    public void GetReactionForce(); // Gets the reaction force of the joint given the specified timeStep.
+    public void GetReactionTorque(); // Gets the reaction torque of the joint given the specified timeStep.
+    public void Destroy(); // Removes a GameObject, component, or asset.
+    public void DestroyImmediate(); // Destroys the specified object immediately. Use with caution and in Edit mode onl
+    public void DontDestroyOnLoad(); // Do not destroy the target Object when loading a new Scene.
+    public void FindAnyObjectByType(); // Retrieves any active loaded object of Type type.
+    public void FindFirstObjectByType(); // Retrieves the first active loaded object of Type type.
+    public void FindObjectsByType(); // Retrieves a list of all loaded objects of Type type.
+    public void Instantiate(); // Clones the object original and returns the clone.
+    public void InstantiateAsync(); // Captures a snapshot of the original object (that must be related to some GameObj
+}

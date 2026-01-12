@@ -1,0 +1,7 @@
+{
+  "name": "api_audio_AudioSettings",
+  "type": "api",
+  "description": "Controls the global audio settings from script.",
+  "content": "// Unity Class: AudioSettings\n// Documentation: https://docs.unity3d.com/ScriptReference/AudioSettings.html\n\n// Description: Controls the global audio settings from script.\n\n// Pseudo-code representation of AudioSettings\npublic class AudioSettings {\n}",
+  "properties": []
+}

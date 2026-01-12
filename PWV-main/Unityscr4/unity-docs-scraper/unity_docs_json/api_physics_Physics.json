@@ -1,0 +1,7 @@
+{
+  "name": "api_physics_Physics",
+  "type": "api",
+  "description": "Global physics properties and helper methods.",
+  "content": "// Unity Class: Physics\n// Documentation: https://docs.unity3d.com/ScriptReference/Physics.html\n\n// Description: Global physics properties and helper methods.\n\n// Pseudo-code representation of Physics\npublic class Physics {\n}",
+  "properties": []
+}

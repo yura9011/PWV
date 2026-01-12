@@ -1,0 +1,64 @@
+// Unity Class: CircleCollider2D
+// Documentation: https://docs.unity3d.com/ScriptReference/CircleCollider2D.html
+
+// Description: Collider for 2D physics representing an circle.
+
+// Properties:
+// - radius: Radius of the circle.
+
+// Methods:
+// - CanContact: This method determines if both Colliders can ever come into contact.
+// - Cast: Casts the Collider shape into the Scene starting at the Collider position ignoring the Collider itself.
+// - ClosestPoint: Returns a point on the perimeter of this Collider that is closest to the specified position.
+// - CreateMesh: Creates a planar Mesh that is identical to the area defined by the Collider2D geometry.
+// - Distance: Calculates the minimum separation of this collider against another collider.
+// - GetContacts: Retrieves all contact points for this Collider.
+// - GetShapeBounds: Retrieves a list of Bounds for all PhysicsShape2D created by this Collider2D, and returns the combined Bounds of the retrieved list.
+// - GetShapeHash: Generates a simple hash value based upon the geometry of the Collider2D.
+// - GetShapes: Gets all the PhysicsShape2D used by the Collider2D.
+// - IsTouching: Check whether this collider is touching the collider or not.
+// - IsTouchingLayers: Checks whether this collider is touching any colliders on the specified layerMask or not.
+// - Overlap: Get a list of all Colliders that overlap this Collider.
+// - OverlapPoint: Check if a collider overlaps a point in space.
+// - Raycast: Casts a ray into the Scene that starts at the Collider position and ignores the Collider itself.
+// - BroadcastMessage: Calls the method named methodName on every MonoBehaviour in this game object or any of its children.
+// - CompareTag: Checks the GameObject's tag against the defined tag.
+// - GetComponent: Gets a reference to a component of type T on the same GameObject as the component specified.
+// - GetComponentInChildren: Gets a reference to a component of type T on the same GameObject as the component specified, or any child of the GameObject.
+// - GetComponentIndex: Gets the index of the component on its parent GameObject.
+// - GetComponentInParent: Gets a reference to a component of type T on the same GameObject as the component specified, or any parent of the GameObject.
+// - GetComponents: Gets references to all components of type T on the same GameObject as the component specified.
+// - GetComponentsInChildren: Gets references to all components of type T on the same GameObject as the component specified, and any child of the GameObject.
+// - GetComponentsInParent: Gets references to all components of type T on the same GameObject as the component specified, and any parent of the GameObject.
+// - SendMessage: Calls the method named methodName on every MonoBehaviour in this game object.
+// - SendMessageUpwards: Calls the method named methodName on every MonoBehaviour in this game object and on every ancestor of the behaviour.
+// - TryGetComponent: Gets the component of the specified type, if it exists.
+// - GetInstanceID: Gets the instance ID of the object.
+// - ToString: Returns the name of the object.
+// - Destroy: Removes a GameObject, component, or asset.
+// - DestroyImmediate: Destroys the specified object immediately. Use with caution and in Edit mode only.
+// - DontDestroyOnLoad: Do not destroy the target Object when loading a new Scene.
+// - FindAnyObjectByType: Retrieves any active loaded object of Type type.
+// - FindFirstObjectByType: Retrieves the first active loaded object of Type type.
+// - FindObjectsByType: Retrieves a list of all loaded objects of Type type.
+// - Instantiate: Clones the object original and returns the clone.
+// - InstantiateAsync: Captures a snapshot of the original object (that must be related to some GameObject) and returns the AsyncInstantiateOperation.
+
+public class CircleCollider2D {
+    public var radius; // Radius of the circle.
+    public void CanContact(); // This method determines if both Colliders can ever come into contact.
+    public void Cast(); // Casts the Collider shape into the Scene starting at the Collider position ignori
+    public void ClosestPoint(); // Returns a point on the perimeter of this Collider that is closest to the specifi
+    public void CreateMesh(); // Creates a planar Mesh that is identical to the area defined by the Collider2D ge
+    public void Distance(); // Calculates the minimum separation of this collider against another collider.
+    public void GetContacts(); // Retrieves all contact points for this Collider.
+    public void GetShapeBounds(); // Retrieves a list of Bounds for all PhysicsShape2D created by this Collider2D, an
+    public void GetShapeHash(); // Generates a simple hash value based upon the geometry of the Collider2D.
+    public void GetShapes(); // Gets all the PhysicsShape2D used by the Collider2D.
+    public void IsTouching(); // Check whether this collider is touching the collider or not.
+    public void IsTouchingLayers(); // Checks whether this collider is touching any colliders on the specified layerMas
+    public void Overlap(); // Get a list of all Colliders that overlap this Collider.
+    public void OverlapPoint(); // Check if a collider overlaps a point in space.
+    public void Raycast(); // Casts a ray into the Scene that starts at the Collider position and ignores the 
+    public void BroadcastMessage(); // Calls the method named methodName on every MonoBehaviour in this game object or 
+}

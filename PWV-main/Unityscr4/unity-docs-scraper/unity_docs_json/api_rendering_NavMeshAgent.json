@@ -1,0 +1,88 @@
+{
+  "name": "api_rendering_NavMeshAgent",
+  "type": "api",
+  "description": "Navigation mesh agent.",
+  "content": "// Unity Class: NavMeshAgent\n// Documentation: https://docs.unity3d.com/ScriptReference/NavMeshAgent.html\n\n// Description: Navigation mesh agent.\n\n// Properties:\n// - acceleration: The maximum acceleration of an agent as it follows a path, given in units / sec^2.\n// - agentTypeID: The type ID for the agent.\n// - angularSpeed: Maximum turning speed in (deg/s) while following a path.\n// - areaMask: Specifies which NavMesh areas are passable. Changing areaMask will make the path stale (see isPathStale).\n// - autoBraking: Should the agent brake automatically to avoid overshooting the destination point?\n// - autoRepath: Should the agent attempt to acquire a new path if the existing path becomes invalid?\n// - autoTraverseOffMeshLink: Should the agent move across OffMeshLinks automatically?\n// - avoidancePriority: The avoidance priority level.\n// - baseOffset: The relative vertical displacement of the owning GameObject.\n// - currentOffMeshLinkData: The current OffMeshLinkData.\n// - desiredVelocity: The desired velocity of the agent including any potential contribution from avoidance. (Read Only)\n// - destination: Gets or attempts to set the destination of the agent in world-space units.\n// - hasPath: Does the agent currently have a path? (Read Only)\n// - height: The height of the agent for purposes of passing under obstacles, etc.\n// - isOnNavMesh: Is the agent currently bound to the navmesh? (Read Only)\n// - isOnOffMeshLink: Is the agent currently positioned on an OffMeshLink? (Read Only)\n// - isPathStale: Is the current path stale. (Read Only)\n// - isStopped: Use this property to set, or get, whether the NavMesh agent stops or continues its movement along the current path.\n// - navMeshOwner: Returns the owning object of the NavMesh the agent is currently placed on (Read Only).\n// - nextOffMeshLinkData: The next OffMeshLinkData on the current path.\n// - nextPosition: Gets or sets the simulation position of the navmesh agent.\n// - obstacleAvoidanceType: The level of quality of avoidance.\n// - path: Property to get and set the current path.\n// - pathPending: Is a path in the process of being computed but not yet ready? (Read Only)\n// - pathStatus: The status of the current path (complete, partial or invalid).\n// - radius: The avoidance radius for the agent.\n// - remainingDistance: The distance between the agent's position and the destination on the current path. (Read Only)\n// - speed: Maximum movement speed when following a path.\n// - steeringTarget: Get the current steering target along the path. (Read Only)\n// - stoppingDistance: Stop within this distance from the target position.\n// - updatePosition: Gets or sets whether the transform position is synchronized with the simulated agent position. The default value is true.\n// - updateRotation: Should the agent update the transform orientation?\n// - updateUpAxis: Allows you to specify whether the agent should be aligned to the up-axis of the NavMesh or link that it is placed on.\n// - velocity: Access the current velocity of the NavMeshAgent component, or set a velocity to control the agent manually.\n\n// Methods:\n// - ActivateCurrentOffMeshLink: Enables or disables the current off-mesh link.\n// - CalculatePath: Calculate a path to a specified point and store the resulting path.\n// - CompleteOffMeshLink: Completes the movement on the current OffMeshLink.\n// - FindClosestEdge: Locate the closest NavMesh edge.\n// - GetAreaCost: Gets the cost for path calculation when crossing area of a particular type.\n// - Move: Apply relative movement to current position.\n// - Raycast: Trace a straight path towards a target postion in the NavMesh without moving the agent.\n// - ResetPath: Clears the current path.\n// - SamplePathPosition: Sample a position along the current path.\n// - SetAreaCost: Sets the cost for traversing over areas of the area type.\n// - SetDestination: Sets or updates the destination thus triggering the calculation for a new path.\n// - SetPath: Assign a new path to this agent.\n// - Warp: Warps agent to the provided position.\n// - Destroy: Removes a GameObject, component, or asset.\n// - DestroyImmediate: Destroys the specified object immediately. Use with caution and in Edit mode only.\n// - DontDestroyOnLoad: Do not destroy the target Object when loading a new Scene.\n// - FindAnyObjectByType: Retrieves any active loaded object of Type type.\n// - FindFirstObjectByType: Retrieves the first active loaded object of Type type.\n// - FindObjectsByType: Retrieves a list of all loaded objects of Type type.\n// - Instantiate: Clones the object original and returns the clone.\n// - InstantiateAsync: Captures a snapshot of the original object (that must be related to some GameObject) and returns the AsyncInstantiateOperation.\n\npublic class NavMeshAgent {\n    public var acceleration; // The maximum acceleration of an agent as it follows a path, given in units / sec^\n    public var agentTypeID; // The type ID for the agent.\n    public var angularSpeed; // Maximum turning speed in (deg/s) while following a path.\n    public var areaMask; // Specifies which NavMesh areas are passable. Changing areaMask will make the path\n    public var autoBraking; // Should the agent brake automatically to avoid overshooting the destination point\n    public var autoRepath; // Should the agent attempt to acquire a new path if the existing path becomes inva\n    public var autoTraverseOffMeshLink; // Should the agent move across OffMeshLinks automatically?\n    public var avoidancePriority; // The avoidance priority level.\n    public var baseOffset; // The relative vertical displacement of the owning GameObject.\n    public var currentOffMeshLinkData; // The current OffMeshLinkData.\n    public var desiredVelocity; // The desired velocity of the agent including any potential contribution from avoi\n    public var destination; // Gets or attempts to set the destination of the agent in world-space units.\n    public var hasPath; // Does the agent currently have a path? (Read Only)\n    public var height; // The height of the agent for purposes of passing under obstacles, etc.\n    public var isOnNavMesh; // Is the agent currently bound to the navmesh? (Read Only)\n    public void ActivateCurrentOffMeshLink(); // Enables or disables the current off-mesh link.\n    public void CalculatePath(); // Calculate a path to a specified point and store the resulting path.\n    public void CompleteOffMeshLink(); // Completes the movement on the current OffMeshLink.\n    public void FindClosestEdge(); // Locate the closest NavMesh edge.\n    public void GetAreaCost(); // Gets the cost for path calculation when crossing area of a particular type.\n    public void Move(); // Apply relative movement to current position.\n    public void Raycast(); // Trace a straight path towards a target postion in the NavMesh without moving the\n    public void ResetPath(); // Clears the current path.\n    public void SamplePathPosition(); // Sample a position along the current path.\n    public void SetAreaCost(); // Sets the cost for traversing over areas of the area type.\n    public void SetDestination(); // Sets or updates the destination thus triggering the calculation for a new path.\n    public void SetPath(); // Assign a new path to this agent.\n    public void Warp(); // Warps agent to the provided position.\n    public void Destroy(); // Removes a GameObject, component, or asset.\n    public void DestroyImmediate(); // Destroys the specified object immediately. Use with caution and in Edit mode onl\n}",
+  "properties": [
+    {
+      "name": "acceleration",
+      "description": "The maximum acceleration of an agent as it follows a path, given in units / sec^2."
+    },
+    {
+      "name": "agentTypeID",
+      "description": "The type ID for the agent."
+    },
+    {
+      "name": "angularSpeed",
+      "description": "Maximum turning speed in (deg/s) while following a path."
+    },
+    {
+      "name": "areaMask",
+      "description": "Specifies which NavMesh areas are passable. Changing areaMask will make the path stale (see isPathStale)."
+    },
+    {
+      "name": "autoBraking",
+      "description": "Should the agent brake automatically to avoid overshooting the destination point?"
+    },
+    {
+      "name": "autoRepath",
+      "description": "Should the agent attempt to acquire a new path if the existing path becomes invalid?"
+    },
+    {
+      "name": "autoTraverseOffMeshLink",
+      "description": "Should the agent move across OffMeshLinks automatically?"
+    },
+    {
+      "name": "avoidancePriority",
+      "description": "The avoidance priority level."
+    },
+    {
+      "name": "baseOffset",
+      "description": "The relative vertical displacement of the owning GameObject."
+    },
+    {
+      "name": "currentOffMeshLinkData",
+      "description": "The current OffMeshLinkData."
+    },
+    {
+      "name": "desiredVelocity",
+      "description": "The desired velocity of the agent including any potential contribution from avoidance. (Read Only)"
+    },
+    {
+      "name": "destination",
+      "description": "Gets or attempts to set the destination of the agent in world-space units."
+    },
+    {
+      "name": "hasPath",
+      "description": "Does the agent currently have a path? (Read Only)"
+    },
+    {
+      "name": "height",
+      "description": "The height of the agent for purposes of passing under obstacles, etc."
+    },
+    {
+      "name": "isOnNavMesh",
+      "description": "Is the agent currently bound to the navmesh? (Read Only)"
+    },
+    {
+      "name": "isOnOffMeshLink",
+      "description": "Is the agent currently positioned on an OffMeshLink? (Read Only)"
+    },
+    {
+      "name": "isPathStale",
+      "description": "Is the current path stale. (Read Only)"
+    },
+    {
+      "name": "isStopped",
+      "description": "Use this property to set, or get, whether the NavMesh agent stops or continues its movement along the current path."
+    },
+    {
+      "name": "navMeshOwner",
+      "description": "Returns the owning object of the NavMesh the agent is currently placed on (Read Only)."
+    },
+    {
+      "name": "nextOffMeshLinkData",
+      "description": "The next OffMeshLinkData on the current path."
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+// Unity Class: NavMeshHit
+// Documentation: https://docs.unity3d.com/ScriptReference/AI.NavMeshHit.html
+
+// Description: Result information for NavMesh queries.
+
+// Properties:
+// - distance: Distance to the point of hit.
+// - hit: Flag set when hit.
+// - mask: Mask specifying NavMesh area at point of hit.
+// - normal: Normal at the point of hit.
+// - position: Position of hit.
+
+public class NavMeshHit {
+    public var distance;
+    public var hit;
+    public var mask;
+    public var normal;
+    public var position;
+}

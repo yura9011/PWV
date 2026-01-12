@@ -1,0 +1,28 @@
+{
+  "name": "api_rendering_NavMeshHit",
+  "type": "api",
+  "description": "Result information for NavMesh queries.",
+  "content": "// Unity Class: NavMeshHit\n// Documentation: https://docs.unity3d.com/ScriptReference/AI.NavMeshHit.html\n\n// Description: Result information for NavMesh queries.\n\n// Properties:\n// - distance: Distance to the point of hit.\n// - hit: Flag set when hit.\n// - mask: Mask specifying NavMesh area at point of hit.\n// - normal: Normal at the point of hit.\n// - position: Position of hit.\n\npublic class NavMeshHit {\n    public var distance;\n    public var hit;\n    public var mask;\n    public var normal;\n    public var position;\n}",
+  "properties": [
+    {
+      "name": "distance",
+      "description": "Distance to the point of hit."
+    },
+    {
+      "name": "hit",
+      "description": "Flag set when hit."
+    },
+    {
+      "name": "mask",
+      "description": "Mask specifying NavMesh area at point of hit."
+    },
+    {
+      "name": "normal",
+      "description": "Normal at the point of hit."
+    },
+    {
+      "name": "position",
+      "description": "Position of hit."
+    }
+  ]
+}

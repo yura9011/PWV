@@ -1,0 +1,88 @@
+{
+  "name": "api_rendering_Renderer",
+  "type": "api",
+  "description": "General functionality for all renderers.",
+  "content": "// Unity Class: Renderer\n// Documentation: https://docs.unity3d.com/ScriptReference/Renderer.html\n\n// Description: General functionality for all renderers.\n\n// Properties:\n// - allowOcclusionWhenDynamic: Controls if dynamic occlusion culling should be performed for this renderer.\n// - bounds: The bounding box of the renderer in world space.\n// - enabled: Makes the rendered 3D object visible if enabled.\n// - forceMeshLod: Force a specific Mesh LOD level for this renderer if the mesh has Mesh LODs. If the value is -1, Unity uses the default Mesh LOD selection method.\n// - forceRenderingOff: Allows turning off rendering for a specific component.\n// - isLOD0: Is the renderer the first LOD level in its group.\n// - isPartOfStaticBatch: Indicates whether the renderer is part of a static batch with other renderers.\n// - isVisible: Is this renderer visible in any camera? (Read Only)\n// - lightmapIndex: The index of the baked lightmap applied to this renderer.\n// - lightmapScaleOffset: The UV scale & offset used for a lightmap.\n// - lightProbeProxyVolumeOverride: If set, the Renderer will use the Light Probe Proxy Volume component attached to the source GameObject.\n// - lightProbeUsage: The light probe interpolation type.\n// - localBounds: The bounding box of the renderer in local space.\n// - localToWorldMatrix: Matrix that transforms a point from local space into world space (Read Only).\n// - LODGroup: The LODGroup for this Renderer.\n// - material: Returns the first instantiated Material assigned to the renderer.\n// - materials: Returns all the instantiated materials of this object.\n// - meshLodSelectionBias: Bias to add to the calculated value when selecting a Mesh LOD level.\n// - motionVectorGenerationMode: Specifies the mode for motion vector rendering.\n// - probeAnchor: If set, Renderer will use this Transform's position to find the light or reflection probe.\n// - rayTracingAccelerationStructureBuildFlags: The flags Unity uses when it builds acceleration structures associated with geometry used by renderers.\n// - rayTracingAccelerationStructureBuildFlagsOverride: Whether to override the default build flags specified when creating a RayTracingAccelerationStructure.\n// - rayTracingMode: Describes how this renderer is updated for ray tracing.\n// - realtimeLightmapIndex: The index of the real-time lightmap applied to this renderer.\n// - realtimeLightmapScaleOffset: The UV scale & offset used for a real-time lightmap.\n// - receiveShadows: Does this object receive shadows?\n// - reflectionProbeUsage: Should reflection probes be used for this Renderer?\n// - rendererPriority: This value sorts renderers by priority. Lower values are rendered first and higher values are rendered last.\n// - renderingLayerMask: Determines which rendering layer this renderer lives on, if you use a scriptable render pipeline.\n// - shadowCastingMode: Does this object cast shadows?\n// - sharedMaterial: The shared material of this object.\n// - sharedMaterials: All the shared materials of this object.\n// - sortingLayerID: Unique ID of the Renderer's sorting layer.\n// - sortingLayerName: Name of the Renderer's sorting layer.\n// - sortingOrder: Renderer's order within a sorting layer.\n// - staticShadowCaster: Is this renderer a static shadow caster?\n// - worldToLocalMatrix: Matrix that transforms a point from world space into local space (Read Only).\n\n// Methods:\n// - GetClosestReflectionProbes(): Returns an array of closest reflection probes with weights, weight shows how much influence the probe has on the renderer, this value is also used when blending between reflection probes occur.\n// - GetMaterials(): Returns all the instantiated materials of this object.\n// - GetPropertyBlock(): Get per-Renderer or per-Material property block.\n// - GetSharedMaterials(): Returns all the shared materials of this object.\n// - HasPropertyBlock(): Returns true if the Renderer has a material property block attached via SetPropertyBlock.\n// - ResetBounds(): Reset custom world space bounds.\n// - ResetLocalBounds(): Reset custom local space bounds.\n// - SetMaterials(): Assigns the shared materials of this renderer using the list of materials provided.\n// - SetPropertyBlock(): Lets you set or clear per-renderer or per-material parameter overrides.\n// - SetSharedMaterials(): Assigns the shared materials of this renderer using the list of materials provided.\n\n// Pseudo-code representation of Renderer\npublic class Renderer {\n    public var allowOcclusionWhenDynamic; // Controls if dynamic occlusion culling should be performed for this renderer.\n    public var bounds; // The bounding box of the renderer in world space.\n    public var enabled; // Makes the rendered 3D object visible if enabled.\n    public var forceMeshLod; // Force a specific Mesh LOD level for this renderer if the mesh has Mesh LODs. If the value is -1, Unity uses the default Mesh LOD selection method.\n    public var forceRenderingOff; // Allows turning off rendering for a specific component.\n    public var isLOD0; // Is the renderer the first LOD level in its group.\n    public var isPartOfStaticBatch; // Indicates whether the renderer is part of a static batch with other renderers.\n    public var isVisible; // Is this renderer visible in any camera? (Read Only)\n    public var lightmapIndex; // The index of the baked lightmap applied to this renderer.\n    public var lightmapScaleOffset; // The UV scale & offset used for a lightmap.\n    public var lightProbeProxyVolumeOverride; // If set, the Renderer will use the Light Probe Proxy Volume component attached to the source GameObject.\n    public var lightProbeUsage; // The light probe interpolation type.\n    public var localBounds; // The bounding box of the renderer in local space.\n    public var localToWorldMatrix; // Matrix that transforms a point from local space into world space (Read Only).\n    public var LODGroup; // The LODGroup for this Renderer.\n    public var material; // Returns the first instantiated Material assigned to the renderer.\n    public var materials; // Returns all the instantiated materials of this object.\n    public var meshLodSelectionBias; // Bias to add to the calculated value when selecting a Mesh LOD level.\n    public var motionVectorGenerationMode; // Specifies the mode for motion vector rendering.\n    public var probeAnchor; // If set, Renderer will use this Transform's position to find the light or reflection probe.\n    public var rayTracingAccelerationStructureBuildFlags; // The flags Unity uses when it builds acceleration structures associated with geometry used by renderers.\n    public var rayTracingAccelerationStructureBuildFlagsOverride; // Whether to override the default build flags specified when creating a RayTracingAccelerationStructure.\n    public var rayTracingMode; // Describes how this renderer is updated for ray tracing.\n    public var realtimeLightmapIndex; // The index of the real-time lightmap applied to this renderer.\n    public var realtimeLightmapScaleOffset; // The UV scale & offset used for a real-time lightmap.\n    public var receiveShadows; // Does this object receive shadows?\n    public var reflectionProbeUsage; // Should reflection probes be used for this Renderer?\n    public var rendererPriority; // This value sorts renderers by priority. Lower values are rendered first and higher values are rendered last.\n    public var renderingLayerMask; // Determines which rendering layer this renderer lives on, if you use a scriptable render pipeline.\n    public var shadowCastingMode; // Does this object cast shadows?\n    public var sharedMaterial; // The shared material of this object.\n    public var sharedMaterials; // All the shared materials of this object.\n    public var sortingLayerID; // Unique ID of the Renderer's sorting layer.\n    public var sortingLayerName; // Name of the Renderer's sorting layer.\n    public var sortingOrder; // Renderer's order within a sorting layer.\n    public var staticShadowCaster; // Is this renderer a static shadow caster?\n    public var worldToLocalMatrix; // Matrix that transforms a point from world space into local space (Read Only).\n    public void GetClosestReflectionProbes(); // Returns an array of closest reflection probes with weights, weight shows how much influence the probe has on the renderer, this value is also used when blending between reflection probes occur.\n    public void GetMaterials(); // Returns all the instantiated materials of this object.\n    public void GetPropertyBlock(); // Get per-Renderer or per-Material property block.\n    public void GetSharedMaterials(); // Returns all the shared materials of this object.\n    public void HasPropertyBlock(); // Returns true if the Renderer has a material property block attached via SetPropertyBlock.\n    public void ResetBounds(); // Reset custom world space bounds.\n    public void ResetLocalBounds(); // Reset custom local space bounds.\n    public void SetMaterials(); // Assigns the shared materials of this renderer using the list of materials provided.\n    public void SetPropertyBlock(); // Lets you set or clear per-renderer or per-material parameter overrides.\n    public void SetSharedMaterials(); // Assigns the shared materials of this renderer using the list of materials provided.\n}",
+  "properties": [
+    {
+      "name": "allowOcclusionWhenDynamic",
+      "description": "Controls if dynamic occlusion culling should be performed for this renderer."
+    },
+    {
+      "name": "bounds",
+      "description": "The bounding box of the renderer in world space."
+    },
+    {
+      "name": "enabled",
+      "description": "Makes the rendered 3D object visible if enabled."
+    },
+    {
+      "name": "forceMeshLod",
+      "description": "Force a specific Mesh LOD level for this renderer if the mesh has Mesh LODs. If the value is -1, Unity uses the default Mesh LOD selection method."
+    },
+    {
+      "name": "forceRenderingOff",
+      "description": "Allows turning off rendering for a specific component."
+    },
+    {
+      "name": "isLOD0",
+      "description": "Is the renderer the first LOD level in its group."
+    },
+    {
+      "name": "isPartOfStaticBatch",
+      "description": "Indicates whether the renderer is part of a static batch with other renderers."
+    },
+    {
+      "name": "isVisible",
+      "description": "Is this renderer visible in any camera? (Read Only)"
+    },
+    {
+      "name": "lightmapIndex",
+      "description": "The index of the baked lightmap applied to this renderer."
+    },
+    {
+      "name": "lightmapScaleOffset",
+      "description": "The UV scale & offset used for a lightmap."
+    },
+    {
+      "name": "lightProbeProxyVolumeOverride",
+      "description": "If set, the Renderer will use the Light Probe Proxy Volume component attached to the source GameObject."
+    },
+    {
+      "name": "lightProbeUsage",
+      "description": "The light probe interpolation type."
+    },
+    {
+      "name": "localBounds",
+      "description": "The bounding box of the renderer in local space."
+    },
+    {
+      "name": "localToWorldMatrix",
+      "description": "Matrix that transforms a point from local space into world space (Read Only)."
+    },
+    {
+      "name": "LODGroup",
+      "description": "The LODGroup for this Renderer."
+    },
+    {
+      "name": "material",
+      "description": "Returns the first instantiated Material assigned to the renderer."
+    },
+    {
+      "name": "materials",
+      "description": "Returns all the instantiated materials of this object."
+    },
+    {
+      "name": "meshLodSelectionBias",
+      "description": "Bias to add to the calculated value when selecting a Mesh LOD level."
+    },
+    {
+      "name": "motionVectorGenerationMode",
+      "description": "Specifies the mode for motion vector rendering."
+    },
+    {
+      "name": "probeAnchor",
+      "description": "If set, Renderer will use this Transform's position to find the light or reflection probe."
+    }
+  ]
+}

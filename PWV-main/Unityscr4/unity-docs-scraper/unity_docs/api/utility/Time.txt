@@ -1,0 +1,8 @@
+// Unity Class: Time
+// Documentation: https://docs.unity3d.com/ScriptReference/Time.html
+
+// Description: Provides an interface to get time information from Unity.
+
+// Pseudo-code representation of Time
+public class Time {
+}

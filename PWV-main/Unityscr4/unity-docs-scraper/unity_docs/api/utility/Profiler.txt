@@ -1,0 +1,39 @@
+// Unity Class: Profiler
+// Documentation: https://docs.unity3d.com/ScriptReference/Profiling.Profiler.html
+
+// Description: Controls the Profiler from script.
+
+// Methods:
+// - AddFramesFromFile: Displays the recorded profile data in the profiler.
+// - BeginSample: Begin profiling a piece of code with a custom label.
+// - BeginThreadProfiling: Enables profiling on the thread from which you call this method.
+// - EmitFrameMetaData: Write metadata associated with the current frame to the Profiler stream.
+// - EmitSessionMetaData: Write metadata associated with the whole Profiler session capture.
+// - EndSample: Ends the current profiling sample.
+// - EndThreadProfiling: Frees the internal resources used by the Profiler for the thread.
+// - GetAllCategories: Returns all ProfilerCategory registered in Profiler.
+// - GetAllocatedMemoryForGraphicsDriver: Returns the estimated amount of allocated memory for the graphics driver, in bytes.
+// - GetAreaEnabled: Returns whether or not a given ProfilerArea is currently enabled.
+// - GetCategoriesCount: Returns number of ProfilerCategory registered in Profiler.
+// - GetMonoHeapSizeLong: Returns the size of the reserved space for managed-memory.
+// - GetMonoUsedSizeLong: Gets the allocated managed memory for live objects and non-collected objects.
+// - GetRuntimeMemorySizeLong: Gathers the native-memory used by a Unity object.
+// - GetTempAllocatorSize: Returns the size of the temp allocator.
+// - GetTotalAllocatedMemoryLong: The total memory allocated by the internal allocators in Unity. Unity reserves large pools of memory
+// - GetTotalFragmentationInfo: Returns heap memory fragmentation information.
+// - GetTotalReservedMemoryLong: The total memory Unity has reserved.
+// - GetTotalUnusedReservedMemoryLong: Unity allocates memory in pools for usage when unity needs to allocate memory. This function returns
+// - IsCategoryEnabled: Returns whether or not a given ProfilerCategory is currently enabled.
+
+public class Profiler {
+    public void AddFramesFromFile();
+    public void BeginSample();
+    public void BeginThreadProfiling();
+    public void EmitFrameMetaData();
+    public void EmitSessionMetaData();
+    public void EndSample();
+    public void EndThreadProfiling();
+    public void GetAllCategories();
+    public void GetAllocatedMemoryForGraphicsDriver();
+    public void GetAreaEnabled();
+}

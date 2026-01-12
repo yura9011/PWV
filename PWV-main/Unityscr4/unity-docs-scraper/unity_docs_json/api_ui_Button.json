@@ -1,0 +1,7 @@
+{
+  "name": "api_ui_Button",
+  "type": "api",
+  "description": "A standard button that sends an event when clicked.",
+  "content": "// Unity Class: Button\n// Documentation: https://docs.unity3d.com/Packages/com.unity.ugui@1.0/api/UnityEngine.UI.Button.html\n\n// Description: A standard button that sends an event when clicked.\n\npublic class Button {\n}",
+  "properties": []
+}

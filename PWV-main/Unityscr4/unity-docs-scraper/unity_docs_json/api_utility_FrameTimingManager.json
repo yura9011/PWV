@@ -1,0 +1,32 @@
+{
+  "name": "api_utility_FrameTimingManager",
+  "type": "api",
+  "description": "Provides frame-level CPU and GPU time measurements.",
+  "content": "// Unity Class: FrameTimingManager\n// Documentation: https://docs.unity3d.com/ScriptReference/FrameTimingManager.html\n\n// Description: Provides frame-level CPU and GPU time measurements.\n\n// Methods:\n// - CaptureFrameTimings: This function triggers the FrameTimingManager to capture a snapshot of FrameTiming's data, that can then be accessed by the user.\n// - GetCpuTimerFrequency: This returns the frequency of CPU timer on the current platform. If the platform does not support returning this value it will return 0.\n// - GetGpuTimerFrequency: This returns the frequency of GPU timer on the current platform. Currently always 1000000000.\n// - GetLatestTimings: Allows the user to access the currently captured FrameTimings.\n// - GetVSyncsPerSecond: This returns the number of vsyncs per second on the current platform, used to interpret timing results. If the platform does not support returning this value it will return 0.\n// - IsFeatureEnabled: Check if frame timing statistics are enabled.\n\n// Code Examples:\n// Example 1:\n//   using Unity.Profiling;\n\n//   using UnityEngine;public class ExampleScript : MonoBehaviour\n\n//   {\n\n//   \tFrameTiming[] m_FrameTimings = new FrameTiming[10];\tvoid Update()\n\n//   \t{\n\n//   \t\t// Instruct FrameTimingManager to collect and cache information\n\n//   \t\tFrameTimingManager.CaptureFrameTimings();\t\t// Read cached information about N last frames (10 in this example)\n\n//   \t\t// The returned value tells how many frames are actually returned\n\n//   \t\t// Element 0 of the returned array contains the data for the last fully finished frame.\n\n//   \t\tvar ret = FrameTimingManager.GetLatestTimings((uint)m_FrameTimings.Length, m_FrameTimings);\n\n//   \t\tif (ret > 0)\n\n//   \t\t{\n\n//   \t\t\t// Your code logic here\n\n//   \t\t}\n\n//   \t}\n\n//   }\n// Example 2:\n//   using Unity.Profiling;\n\n//   using UnityEngine;public class ExampleScript : MonoBehaviour\n\n//   {\n\n//   \tProfilerRecorder mainThreadTimeRecorder;\tvoid OnEnable()\n\n//   \t{\n\n//   \t\t// Create ProfilerRecorder and attach it to a counter\n\n//   \t\tmainThreadTimeRecorder = ProfilerRecorder.StartNew(ProfilerCategory.Internal, \"CPU Main Thread Frame Time\");\n\n//   \t}\tvoid OnDisable()\n\n//   \t{\n\n//   \t\t// Recorders must be explicitly disposed after use\n\n//   \t\tmainThreadTimeRecorder.Dispose();\n\n//   \t}\tvoid Update()\n\n//   \t{\n\n//           // Read the last recorded value. Times are in nanoseconds.\n\n//   \t\tvar frameTime = mainThreadTimeRecorder.LastValue;\n\n//   \t\t// Your code logic here\n\n//   \t}\n\n//   }\n\npublic class FrameTimingManager {\n    public void CaptureFrameTimings(); // This function triggers the FrameTimingManager to capture a snapshot of FrameTimi\n    public void GetCpuTimerFrequency(); // This returns the frequency of CPU timer on the current platform. If the platform\n    public void GetGpuTimerFrequency(); // This returns the frequency of GPU timer on the current platform. Currently alway\n    public void GetLatestTimings(); // Allows the user to access the currently captured FrameTimings.\n    public void GetVSyncsPerSecond(); // This returns the number of vsyncs per second on the current platform, used to in\n    public void IsFeatureEnabled(); // Check if frame timing statistics are enabled.\n}",
+  "properties": [
+    {
+      "name": "CaptureFrameTimings",
+      "description": "This function triggers the FrameTimingManager to capture a snapshot of FrameTiming's data, that can then be accessed by the user."
+    },
+    {
+      "name": "GetCpuTimerFrequency",
+      "description": "This returns the frequency of CPU timer on the current platform. If the platform does not support returning this value it will return 0."
+    },
+    {
+      "name": "GetGpuTimerFrequency",
+      "description": "This returns the frequency of GPU timer on the current platform. Currently always 1000000000."
+    },
+    {
+      "name": "GetLatestTimings",
+      "description": "Allows the user to access the currently captured FrameTimings."
+    },
+    {
+      "name": "GetVSyncsPerSecond",
+      "description": "This returns the number of vsyncs per second on the current platform, used to interpret timing results. If the platform does not support returning this value it will return 0."
+    },
+    {
+      "name": "IsFeatureEnabled",
+      "description": "Check if frame timing statistics are enabled."
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+// Unity Class: EdgeCollider2D
+// Documentation: https://docs.unity3d.com/ScriptReference/EdgeCollider2D.html
+
+// Description: Collider for 2D physics representing an arbitrary set of connected edges (lines) defined by its vertices.
+
+// Properties:
+// - adjacentEndPoint: Defines the position of a virtual point adjacent to the end point of the EdgeCollider2D.
+// - adjacentStartPoint: Defines the position of a virtual point adjacent to the start point of the EdgeCollider2D.
+// - edgeCount: Gets the number of edges.
+// - edgeRadius: Controls the radius of all edges created by the collider.
+// - pointCount: Gets the number of points.
+// - points: Get or set the points defining multiple continuous edges.
+// - useAdjacentEndPoint: Set this to true to use the adjacentEndPoint to form the collision normal that is used to calculate 
+// - useAdjacentStartPoint: Set this to true to use the adjacentStartPoint to form the collision normal that is used to calculat
+
+// Methods:
+// - GetPoints: Gets all the points that define a set of continuous edges.
+// - Reset: Reset to a single edge consisting of two points.
+// - SetPoints: Sets all the points that define a set of continuous edges.
+// - Destroy: Removes a GameObject, component, or asset.
+// - DestroyImmediate: Destroys the specified object immediately. Use with caution and in Edit mode only.
+// - DontDestroyOnLoad: Do not destroy the target Object when loading a new Scene.
+// - FindAnyObjectByType: Retrieves any active loaded object of Type type.
+// - FindFirstObjectByType: Retrieves the first active loaded object of Type type.
+// - FindObjectsByType: Retrieves a list of all loaded objects of Type type.
+// - Instantiate: Clones the object original and returns the clone.
+// - InstantiateAsync: Captures a snapshot of the original object (that must be related to some GameObject) and returns the
+
+public class EdgeCollider2D {
+    public var adjacentEndPoint;
+    public var adjacentStartPoint;
+    public var edgeCount;
+    public var edgeRadius;
+    public var pointCount;
+    public var points;
+    public var useAdjacentEndPoint;
+    public var useAdjacentStartPoint;
+    public void GetPoints();
+    public void Reset();
+    public void SetPoints();
+    public void Destroy();
+    public void DestroyImmediate();
+    public void DontDestroyOnLoad();
+    public void FindAnyObjectByType();
+    public void FindFirstObjectByType();
+    public void FindObjectsByType();
+    public void Instantiate();
+    public void InstantiateAsync();
+}

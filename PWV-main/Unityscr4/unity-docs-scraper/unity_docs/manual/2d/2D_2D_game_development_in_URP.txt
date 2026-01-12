@@ -1,0 +1,48 @@
+// Unity Manual: 2D game development in URP
+// Section: 2D
+// URL: https://docs.unity3d.com/Manual/2d-urp-landing.html
+
+// Content:
+2D game development
+2D game development in URP
+Physics Material 2D reference
+2D lighting in URP
+2D game development in URP
+Techniques and resources for creating 2D lights, 2D lighting effects, and implementing the pixelated visual style with your projects.
+2D features included with URP are the
+2D Lighting
+graphics pipeline which allows you to create 2D Lights and 2D lighting effects; and the
+2D Pixel Perfect Camera
+for implementing the pixelated visual style with your projects.
+Topic
+Description
+2D lighting in URP
+Techniques and resources for creating 2D lights and applying 2D lighting effects
+Precise pixel scaling and rotation via the Pixel Perfect Camera in URP
+Techniques and resources for using the
+Pixel
+The smallest unit in a computer image. Pixel size depends on your screen resolution. Pixel lighting is calculated at every screen pixel.
+More info
+See in
+Glossary
+Perfect
+Camera
+A component which creates an image of a particular viewpoint in your scene. The output is either drawn to the screen or captured as a texture.
+More info
+See in
+Glossary
+in your project.
+Physics Material 2D reference
+2D lighting in URP
+Copyright ©2005-2026 Unity Technologies. All rights reserved. Built from 6000.3.5f1 (9e864d5a2e6f). Built on: 2026-01-09.
+Tutorials
+Community Answers
+Knowledge Base
+Forums
+Asset Store
+Terms of use
+Legal
+Privacy Policy
+Cookies
+Do Not Sell or Share My Personal Information
+Your Privacy Choices (Cookie Settings)

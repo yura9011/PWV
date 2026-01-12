@@ -1,0 +1,88 @@
+{
+  "name": "api_physics2d_BoxCollider2D",
+  "type": "api",
+  "description": "Collider for 2D physics representing an axis-aligned rectangle.",
+  "content": "// Unity Class: BoxCollider2D\n// Documentation: https://docs.unity3d.com/ScriptReference/BoxCollider2D.html\n\n// Description: Collider for 2D physics representing an axis-aligned rectangle.\n\n// Properties:\n// - autoTiling: Determines whether the BoxCollider2D's shape is automatically updated based on a SpriteRenderer's tiling properties.\n// - edgeRadius: Controls the radius of all edges created by the collider.\n// - size: The width and height of the rectangle.\n\n// Methods:\n// - CanContact: This method determines if both Colliders can ever come into contact.\n// - Cast: Casts the Collider shape into the Scene starting at the Collider position ignoring the Collider itself.\n// - ClosestPoint: Returns a point on the perimeter of this Collider that is closest to the specified position.\n// - CreateMesh: Creates a planar Mesh that is identical to the area defined by the Collider2D geometry.\n// - Distance: Calculates the minimum separation of this collider against another collider.\n// - GetContacts: Retrieves all contact points for this Collider.\n// - GetShapeBounds: Retrieves a list of Bounds for all PhysicsShape2D created by this Collider2D, and returns the combined Bounds of the retrieved list.\n// - GetShapeHash: Generates a simple hash value based upon the geometry of the Collider2D.\n// - GetShapes: Gets all the PhysicsShape2D used by the Collider2D.\n// - IsTouching: Check whether this collider is touching the collider or not.\n// - IsTouchingLayers: Checks whether this collider is touching any colliders on the specified layerMask or not.\n// - Overlap: Get a list of all Colliders that overlap this Collider.\n// - OverlapPoint: Check if a collider overlaps a point in space.\n// - Raycast: Casts a ray into the Scene that starts at the Collider position and ignores the Collider itself.\n// - BroadcastMessage: Calls the method named methodName on every MonoBehaviour in this game object or any of its children.\n// - CompareTag: Checks the GameObject's tag against the defined tag.\n// - GetComponent: Gets a reference to a component of type T on the same GameObject as the component specified.\n// - GetComponentInChildren: Gets a reference to a component of type T on the same GameObject as the component specified, or any child of the GameObject.\n// - GetComponentIndex: Gets the index of the component on its parent GameObject.\n// - GetComponentInParent: Gets a reference to a component of type T on the same GameObject as the component specified, or any parent of the GameObject.\n// - GetComponents: Gets references to all components of type T on the same GameObject as the component specified.\n// - GetComponentsInChildren: Gets references to all components of type T on the same GameObject as the component specified, and any child of the GameObject.\n// - GetComponentsInParent: Gets references to all components of type T on the same GameObject as the component specified, and any parent of the GameObject.\n// - SendMessage: Calls the method named methodName on every MonoBehaviour in this game object.\n// - SendMessageUpwards: Calls the method named methodName on every MonoBehaviour in this game object and on every ancestor of the behaviour.\n// - TryGetComponent: Gets the component of the specified type, if it exists.\n// - GetInstanceID: Gets the instance ID of the object.\n// - ToString: Returns the name of the object.\n// - Destroy: Removes a GameObject, component, or asset.\n// - DestroyImmediate: Destroys the specified object immediately. Use with caution and in Edit mode only.\n// - DontDestroyOnLoad: Do not destroy the target Object when loading a new Scene.\n// - FindAnyObjectByType: Retrieves any active loaded object of Type type.\n// - FindFirstObjectByType: Retrieves the first active loaded object of Type type.\n// - FindObjectsByType: Retrieves a list of all loaded objects of Type type.\n// - Instantiate: Clones the object original and returns the clone.\n// - InstantiateAsync: Captures a snapshot of the original object (that must be related to some GameObject) and returns the AsyncInstantiateOperation.\n\npublic class BoxCollider2D {\n    public var autoTiling; // Determines whether the BoxCollider2D's shape is automatically updated based on a\n    public var edgeRadius; // Controls the radius of all edges created by the collider.\n    public var size; // The width and height of the rectangle.\n    public void CanContact(); // This method determines if both Colliders can ever come into contact.\n    public void Cast(); // Casts the Collider shape into the Scene starting at the Collider position ignori\n    public void ClosestPoint(); // Returns a point on the perimeter of this Collider that is closest to the specifi\n    public void CreateMesh(); // Creates a planar Mesh that is identical to the area defined by the Collider2D ge\n    public void Distance(); // Calculates the minimum separation of this collider against another collider.\n    public void GetContacts(); // Retrieves all contact points for this Collider.\n    public void GetShapeBounds(); // Retrieves a list of Bounds for all PhysicsShape2D created by this Collider2D, an\n    public void GetShapeHash(); // Generates a simple hash value based upon the geometry of the Collider2D.\n    public void GetShapes(); // Gets all the PhysicsShape2D used by the Collider2D.\n    public void IsTouching(); // Check whether this collider is touching the collider or not.\n    public void IsTouchingLayers(); // Checks whether this collider is touching any colliders on the specified layerMas\n    public void Overlap(); // Get a list of all Colliders that overlap this Collider.\n    public void OverlapPoint(); // Check if a collider overlaps a point in space.\n    public void Raycast(); // Casts a ray into the Scene that starts at the Collider position and ignores the \n    public void BroadcastMessage(); // Calls the method named methodName on every MonoBehaviour in this game object or \n}",
+  "properties": [
+    {
+      "name": "autoTiling",
+      "description": "Determines whether the BoxCollider2D's shape is automatically updated based on a SpriteRenderer's tiling properties."
+    },
+    {
+      "name": "edgeRadius",
+      "description": "Controls the radius of all edges created by the collider."
+    },
+    {
+      "name": "size",
+      "description": "The width and height of the rectangle."
+    },
+    {
+      "name": "CanContact",
+      "description": "This method determines if both Colliders can ever come into contact."
+    },
+    {
+      "name": "Cast",
+      "description": "Casts the Collider shape into the Scene starting at the Collider position ignoring the Collider itself."
+    },
+    {
+      "name": "ClosestPoint",
+      "description": "Returns a point on the perimeter of this Collider that is closest to the specified position."
+    },
+    {
+      "name": "CreateMesh",
+      "description": "Creates a planar Mesh that is identical to the area defined by the Collider2D geometry."
+    },
+    {
+      "name": "Distance",
+      "description": "Calculates the minimum separation of this collider against another collider."
+    },
+    {
+      "name": "GetContacts",
+      "description": "Retrieves all contact points for this Collider."
+    },
+    {
+      "name": "GetShapeBounds",
+      "description": "Retrieves a list of Bounds for all PhysicsShape2D created by this Collider2D, and returns the combined Bounds of the retrieved list."
+    },
+    {
+      "name": "GetShapeHash",
+      "description": "Generates a simple hash value based upon the geometry of the Collider2D."
+    },
+    {
+      "name": "GetShapes",
+      "description": "Gets all the PhysicsShape2D used by the Collider2D."
+    },
+    {
+      "name": "IsTouching",
+      "description": "Check whether this collider is touching the collider or not."
+    },
+    {
+      "name": "IsTouchingLayers",
+      "description": "Checks whether this collider is touching any colliders on the specified layerMask or not."
+    },
+    {
+      "name": "Overlap",
+      "description": "Get a list of all Colliders that overlap this Collider."
+    },
+    {
+      "name": "OverlapPoint",
+      "description": "Check if a collider overlaps a point in space."
+    },
+    {
+      "name": "Raycast",
+      "description": "Casts a ray into the Scene that starts at the Collider position and ignores the Collider itself."
+    },
+    {
+      "name": "BroadcastMessage",
+      "description": "Calls the method named methodName on every MonoBehaviour in this game object or any of its children."
+    },
+    {
+      "name": "CompareTag",
+      "description": "Checks the GameObject's tag against the defined tag."
+    },
+    {
+      "name": "GetComponent",
+      "description": "Gets a reference to a component of type T on the same GameObject as the component specified."
+    }
+  ]
+}

@@ -1,0 +1,88 @@
+{
+  "name": "api_physics_Cloth",
+  "type": "api",
+  "description": "The Cloth class provides an interface to cloth simulation physics.",
+  "content": "// Unity Class: Cloth\n// Documentation: https://docs.unity3d.com/ScriptReference/Cloth.html\n\n// Description: The Cloth class provides an interface to cloth simulation physics.\n\n// Properties:\n// - bendingStiffness: Bending stiffness of the cloth.\n// - capsuleColliders: An array of CapsuleColliders which this Cloth instance should collide with.\n// - clothSolverFrequency: Number of cloth solver iterations per second.\n// - coefficients: The cloth skinning coefficients used to set up how the cloth interacts with the skinned mesh.\n// - collisionMassScale: How much to increase mass of colliding particles.\n// - damping: Damp cloth motion.\n// - enableContinuousCollision: Enable continuous collision to improve collision stability.\n// - enabled: Is this cloth enabled?\n// - externalAcceleration: A constant, external acceleration applied to the cloth.\n// - friction: The friction of the cloth when colliding with the character.\n// - normals: The current normals of the cloth object.\n// - randomAcceleration: A random, external acceleration applied to the cloth.\n// - selfCollisionDistance: Minimum distance at which two cloth particles repel each other (default: 0.0).\n// - selfCollisionStiffness: Self-collision stiffness defines how strong the separating impulse should be for colliding particles.\n// - sleepThreshold: Cloth's sleep threshold.\n// - sphereColliders: An array of ClothSphereColliderPairs which this Cloth instance should collide with.\n// - stiffnessFrequency: Sets the stiffness frequency parameter.\n// - stretchingStiffness: Stretching stiffness of the cloth.\n// - useGravity: Should gravity affect the cloth simulation?\n// - useTethers: Use Tether Anchors.\n// - useVirtualParticles: Add one virtual particle per triangle to improve collision stability.\n// - vertices: The current vertex positions of the cloth object.\n// - worldAccelerationScale: How much world-space acceleration of the character will affect cloth vertices.\n// - worldVelocityScale: How much world-space movement of the character will affect cloth vertices.\n\n// Methods:\n// - ClearTransformMotion(): Clear the pending transform changes from affecting the cloth simulation.\n// - GetSelfAndInterCollisionIndices(): Get list of particles to be used for self and inter collision.\n// - GetVirtualParticleIndices(): Get list of indices to be used when generating virtual particles.\n// - GetVirtualParticleWeights(): Get weights to be used when generating virtual particles for cloth.\n// - SetEnabledFading(): Fade the cloth simulation in or out.\n// - SetSelfAndInterCollisionIndices(): This allows you to set the cloth indices used for self and inter collision.\n// - SetVirtualParticleIndices(): Set indices to use when generating virtual particles.\n// - SetVirtualParticleWeights(): Sets weights to be used when generating virtual particles for cloth.\n\n// Pseudo-code representation of Cloth\npublic class Cloth {\n    public var bendingStiffness; // Bending stiffness of the cloth.\n    public var capsuleColliders; // An array of CapsuleColliders which this Cloth instance should collide with.\n    public var clothSolverFrequency; // Number of cloth solver iterations per second.\n    public var coefficients; // The cloth skinning coefficients used to set up how the cloth interacts with the skinned mesh.\n    public var collisionMassScale; // How much to increase mass of colliding particles.\n    public var damping; // Damp cloth motion.\n    public var enableContinuousCollision; // Enable continuous collision to improve collision stability.\n    public var enabled; // Is this cloth enabled?\n    public var externalAcceleration; // A constant, external acceleration applied to the cloth.\n    public var friction; // The friction of the cloth when colliding with the character.\n    public var normals; // The current normals of the cloth object.\n    public var randomAcceleration; // A random, external acceleration applied to the cloth.\n    public var selfCollisionDistance; // Minimum distance at which two cloth particles repel each other (default: 0.0).\n    public var selfCollisionStiffness; // Self-collision stiffness defines how strong the separating impulse should be for colliding particles.\n    public var sleepThreshold; // Cloth's sleep threshold.\n    public var sphereColliders; // An array of ClothSphereColliderPairs which this Cloth instance should collide with.\n    public var stiffnessFrequency; // Sets the stiffness frequency parameter.\n    public var stretchingStiffness; // Stretching stiffness of the cloth.\n    public var useGravity; // Should gravity affect the cloth simulation?\n    public var useTethers; // Use Tether Anchors.\n    public var useVirtualParticles; // Add one virtual particle per triangle to improve collision stability.\n    public var vertices; // The current vertex positions of the cloth object.\n    public var worldAccelerationScale; // How much world-space acceleration of the character will affect cloth vertices.\n    public var worldVelocityScale; // How much world-space movement of the character will affect cloth vertices.\n    public void ClearTransformMotion(); // Clear the pending transform changes from affecting the cloth simulation.\n    public void GetSelfAndInterCollisionIndices(); // Get list of particles to be used for self and inter collision.\n    public void GetVirtualParticleIndices(); // Get list of indices to be used when generating virtual particles.\n    public void GetVirtualParticleWeights(); // Get weights to be used when generating virtual particles for cloth.\n    public void SetEnabledFading(); // Fade the cloth simulation in or out.\n    public void SetSelfAndInterCollisionIndices(); // This allows you to set the cloth indices used for self and inter collision.\n    public void SetVirtualParticleIndices(); // Set indices to use when generating virtual particles.\n    public void SetVirtualParticleWeights(); // Sets weights to be used when generating virtual particles for cloth.\n}",
+  "properties": [
+    {
+      "name": "bendingStiffness",
+      "description": "Bending stiffness of the cloth."
+    },
+    {
+      "name": "capsuleColliders",
+      "description": "An array of CapsuleColliders which this Cloth instance should collide with."
+    },
+    {
+      "name": "clothSolverFrequency",
+      "description": "Number of cloth solver iterations per second."
+    },
+    {
+      "name": "coefficients",
+      "description": "The cloth skinning coefficients used to set up how the cloth interacts with the skinned mesh."
+    },
+    {
+      "name": "collisionMassScale",
+      "description": "How much to increase mass of colliding particles."
+    },
+    {
+      "name": "damping",
+      "description": "Damp cloth motion."
+    },
+    {
+      "name": "enableContinuousCollision",
+      "description": "Enable continuous collision to improve collision stability."
+    },
+    {
+      "name": "enabled",
+      "description": "Is this cloth enabled?"
+    },
+    {
+      "name": "externalAcceleration",
+      "description": "A constant, external acceleration applied to the cloth."
+    },
+    {
+      "name": "friction",
+      "description": "The friction of the cloth when colliding with the character."
+    },
+    {
+      "name": "normals",
+      "description": "The current normals of the cloth object."
+    },
+    {
+      "name": "randomAcceleration",
+      "description": "A random, external acceleration applied to the cloth."
+    },
+    {
+      "name": "selfCollisionDistance",
+      "description": "Minimum distance at which two cloth particles repel each other (default: 0.0)."
+    },
+    {
+      "name": "selfCollisionStiffness",
+      "description": "Self-collision stiffness defines how strong the separating impulse should be for colliding particles."
+    },
+    {
+      "name": "sleepThreshold",
+      "description": "Cloth's sleep threshold."
+    },
+    {
+      "name": "sphereColliders",
+      "description": "An array of ClothSphereColliderPairs which this Cloth instance should collide with."
+    },
+    {
+      "name": "stiffnessFrequency",
+      "description": "Sets the stiffness frequency parameter."
+    },
+    {
+      "name": "stretchingStiffness",
+      "description": "Stretching stiffness of the cloth."
+    },
+    {
+      "name": "useGravity",
+      "description": "Should gravity affect the cloth simulation?"
+    },
+    {
+      "name": "useTethers",
+      "description": "Use Tether Anchors."
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "name": "api_2d_Grid",
+  "type": "api",
+  "description": "Grid is the base class for plotting a layout of uniformly spaced points and lines.",
+  "content": "// Unity Class: Grid\n// Documentation: https://docs.unity3d.com/ScriptReference/Grid.html\n\n// Description: Grid is the base class for plotting a layout of uniformly spaced points and lines.\n\n// Properties:\n// - cellGap: The size of the gap between each cell in the Grid.\n// - cellLayout: The layout of the cells in the Grid.\n// - cellSize: The size of each cell in the Grid.\n// - cellSwizzle: The cell swizzle for the Grid.\n\n// Methods:\n// - GetCellCenterLocal: Get the logical center coordinate of a grid cell in local space.\n// - GetCellCenterWorld: Get the logical center coordinate of a grid cell in world space.\n// - InverseSwizzle: Does the inverse swizzle of the given position for given swizzle order.\n// - Swizzle: Swizzles the given position with the given swizzle order.\n\npublic class Grid {\n    public var cellGap;\n    public var cellLayout;\n    public var cellSize;\n    public var cellSwizzle;\n    public void GetCellCenterLocal();\n    public void GetCellCenterWorld();\n    public void InverseSwizzle();\n    public void Swizzle();\n}",
+  "properties": [
+    {
+      "name": "cellGap",
+      "description": "The size of the gap between each cell in the Grid."
+    },
+    {
+      "name": "cellLayout",
+      "description": "The layout of the cells in the Grid."
+    },
+    {
+      "name": "cellSize",
+      "description": "The size of each cell in the Grid."
+    },
+    {
+      "name": "cellSwizzle",
+      "description": "The cell swizzle for the Grid."
+    },
+    {
+      "name": "GetCellCenterLocal",
+      "description": "Get the logical center coordinate of a grid cell in local space."
+    },
+    {
+      "name": "GetCellCenterWorld",
+      "description": "Get the logical center coordinate of a grid cell in world space."
+    },
+    {
+      "name": "InverseSwizzle",
+      "description": "Does the inverse swizzle of the given position for given swizzle order."
+    },
+    {
+      "name": "Swizzle",
+      "description": "Swizzles the given position with the given swizzle order."
+    }
+  ]
+}

@@ -1,0 +1,544 @@
+// Unity Manual: Glossary
+// Section: 2D
+// URL: https://docs.unity3d.com/Manual/Glossary.html#Tilemap
+
+// Content:
+Glossary
+Troubleshooting
+Glossary
+Glossary
+|
+0–9
+|
+A
+|
+B
+|
+C
+|
+D
+|
+E
+|
+F
+|
+G
+|
+|
+H
+|
+I-J
+|
+K
+|
+L
+|
+M
+|
+N
+|
+O
+|
+P
+|
+|
+Q
+|
+R
+|
+S
+|
+T
+|
+U
+|
+V
+|
+W
+|
+X-Z
+|
+0–9
+1D Blend Tree:
+A Blend Tree for 1D blending, which blends motion according to a single Animation Parameter.
+More info
+2D Blend Tree:
+A Blend Tree for 2D blending, which blends motion according to two
+Animation Parameters
+Used to communicate between scripting and the Animator Controller. Some parameters can be set in scripting and used by the controller, while other parameters are based on Custom Curves in Animation Clips and can be sampled using the scripting API.
+More info
+See in
+Glossary
+.
+More info
+2D Object:
+A 2D
+GameObject
+The fundamental object in Unity scenes, which can represent characters, props, scenery, cameras, waypoints, and more. A GameObject’s functionality is defined by the Components attached to it.
+More info
+See in
+Glossary
+such as a
+tilemap
+A GameObject that allows you to quickly create 2D levels using tiles and a grid overlay.
+More info
+See in
+Glossary
+or
+sprite
+A 2D graphic objects. If you are used to working in 3D, Sprites are essentially just standard textures but there are special techniques for combining and managing sprite textures for efficiency and convenience during development.
+More info
+See in
+Glossary
+.
+More info
+3D Object:
+A 3D
+GameObject
+The fundamental object in Unity scenes, which can represent characters, props, scenery, cameras, waypoints, and more. A GameObject’s functionality is defined by the Components attached to it.
+More info
+See in
+Glossary
+such as a cube,
+terrain
+The landscape in your scene. A Terrain GameObject adds a large flat plane to your scene and you can use the Terrain’s Inspector window to create a detailed landscape.
+More info
+See in
+Glossary
+or ragdoll.
+More info
+A
+Accelerator:
+The Unity
+Accelerator
+The Unity Accelerator is an external tool that provides an asset cache that keeps copies of a team’s imported assets. The goal of the Accelerator is to speed up teamwork and reduce iteration time by coordinating asset sharing so that you don’t need to reimport portions of your project.
+More info
+See in
+Glossary
+is an external tool that provides an asset cache that keeps copies of a team’s imported assets. The goal of the
+Accelerator
+is to speed up teamwork and reduce iteration time by coordinating asset sharing so that you don’t need to reimport portions of your project.
+More info
+active users:
+Players who recently played your game. Unity
+Analytics
+Abbreviation of
+Unity Analytics
+See in
+Glossary
+defines an active player as someone who has played within the last 90 calendar days.
+More info
+Ad ARP:
+(Average Revenue Per User) Average Unity Ads revenue per player.
+More info
+ad revenue:
+Total Unity Ads revenue.
+More info
+ad starts:
+The number of video ads that started playing.
+More info
+ADB:
+An Android Debug Bridge (ADB). You can use an
+ADB
+An Android Debug Bridge (ADB). You can use an ADB to deploy an Android package (APK) manually after building.
+More info
+See in
+Glossary
+to deploy an Android package (APK) manually after building.
+More info
+ads per DAU:
+The number of ads started per active player on a given day.
+More info
+age 14 and under:
+By default, Unity does not breakout
+analytics
+Abbreviation of
+Unity Analytics
+See in
+Glossary
+data for players under the age of 14. See
+COPPA
+(Children’s Online Privacy Protection Act) COPPA is a US law that applies to apps that collect personal information and are targeted to children under the age of 13.
+More info
+See in
+Glossary
+Compliance.
+More info
+all spenders:
+Players who have made any verified or unverified in-app purchases in their lifetime.
+More info
+ambient light:
+Light that doesn’t come from any specific direction, and contributes equal light in all directions to the
+Scene
+A Scene contains the environments and menus of your game. Think of each unique Scene file as a unique level. In each Scene, you place your environments, obstacles, and decorations, essentially designing and building your game in pieces.
+More info
+See in
+Glossary
+.
+More info
+ambient occlusion:
+A method to approximate how much
+ambient light
+Light that doesn’t come from any specific direction, and contributes equal light in all directions to the Scene.
+More info
+See in
+Glossary
+(light not coming from a specific direction) can hit a point on a surface.
+analytics events:
+Events dispatched to the
+Analytics
+Abbreviation of
+Unity Analytics
+See in
+Glossary
+Service by instances of your applications.
+Analytics
+events contain the data that is processed and aggregated to provide insights into player behavior.
+More info
+Analytics:
+Abbreviation of
+Unity Analytics
+A data platform that provides analytics for your Unity game.
+More info
+See in
+Glossary
+anchor:
+A UI layout tool that fixes a UI element to a parent element. Anchors are shown as four small triangular handles in the
+Scene
+A Scene contains the environments and menus of your game. Think of each unique Scene file as a unique level. In each Scene, you place your environments, obstacles, and decorations, essentially designing and building your game in pieces.
+More info
+See in
+Glossary
+view and anchor information is also shown in the
+Inspector
+A Unity window that displays information about the currently selected GameObject, asset or project settings, allowing you to inspect and edit the values.
+More info
+See in
+Glossary
+.
+More info
+Android Keystore:
+An Android system that lets you store cryptographic key entries for enhanced device security.
+More info
+Animation Blend Shape:
+Enables you to make an object change its form by blending between two separate meshes.
+More info
+Animation Blend Tree:
+Used for continuous blending between similar
+Animation Clips
+Animation data that can be used for animated characters or simple animations. It is a simple “unit” piece of motion, such as (one specific instance of) “Idle”, “Walk” or “Run”.
+More info
+See in
+Glossary
+based on float
+Animation Parameters
+Used to communicate between scripting and the Animator Controller. Some parameters can be set in scripting and used by the controller, while other parameters are based on Custom Curves in Animation Clips and can be sampled using the scripting API.
+More info
+See in
+Glossary
+.
+More info
+Animation Clip:
+Animation data that can be used for animated characters or simple animations. It is a simple “unit” piece of motion, such as (one specific instance of) “Idle”, “Walk” or “Run”.
+More info
+Animation Clip Node:
+A node in a Blend Tree graph that contains an
+animation clip
+Animation data that can be used for animated characters or simple animations. It is a simple “unit” piece of motion, such as (one specific instance of) “Idle”, “Walk” or “Run”.
+More info
+See in
+Glossary
+, such as a run or walk animation.
+More info
+animation compression:
+The method of compressing animation data to significantly reduce file sizes without causing a noticeable reduction in motion quality. Animation
+compression
+A method of storing data that reduces the amount of storage space it requires. See
+Texture Compression
+,
+Animation Compression
+,
+Audio Compression
+,
+Build Compression
+.
+See in
+Glossary
+is a trade off between saving on memory and image quality.
+More info
+Animation Curves:
+Allows you to add data to an imported clip so you can animate the timings of other items based on the state of an animator. For example, for a game set in icy conditions, you could use an extra animation curve to control the emission rate of a
+particle
+A small, simple image or mesh that is emitted by a particle system. A particle system can display and move particles in great numbers to represent a fluid or amorphous entity. The effect of all the particles together creates the impression of the complete entity, such as smoke.
+More info
+See in
+Glossary
+system to show the player’s condensing breath in the cold air.
+More info
+Animation Event:
+Allows you to add data to an imported clip which determines when certain actions should occur in time with the animation. For example, for an animated character you might want to add events to walk and run cycles to indicate when the footstep sounds should play.
+More info
+Animation Key:
+The value of an animatable property, set at a specific point in time. Setting at least two keys for the same property creates an animation.
+More info
+Animation Layer:
+An
+Animation Layer
+An Animation Layer contains an Animation State Machine that controls animations of a model or part of it. An example of this is if you have a full-body layer for walking or jumping and a higher layer for upper-body motions such as throwing an object or shooting. The higher layers take precedence for the body parts they control.
+More info
+See in
+Glossary
+contains an Animation
+State Machine
+The set of states in an Animator Controller that a character or animated GameObject can be in, along with a set of transitions between those states and a variable to remember the current state. The states available will depend on the type of gameplay, but typical states include things like idling, walking, running and jumping.
+More info
+See in
+Glossary
+that controls animations of a model or part of it. An example of this is if you have a full-body layer for walking or jumping and a higher layer for upper-body motions such as throwing an object or shooting. The higher layers take precedence for the body parts they control.
+More info
+Animation Parameters:
+Used to communicate between scripting and the
+Animator Controller
+Controls animation through Animation Layers with Animation State Machines and Animation Blend Trees, controlled by Animation Parameters. The same Animator Controller can be referenced by multiple models with Animator components.
+More info
+See in
+Glossary
+. Some parameters can be set in scripting and used by the controller, while other parameters are based on Custom Curves in
+Animation Clips
+Animation data that can be used for animated characters or simple animations. It is a simple “unit” piece of motion, such as (one specific instance of) “Idle”, “Walk” or “Run”.
+More info
+See in
+Glossary
+and can be sampled using the scripting API.
+More info
+Animation State Machine:
+A graph within an
+Animator Controller
+Controls animation through Animation Layers with Animation State Machines and Animation Blend Trees, controlled by Animation Parameters. The same Animator Controller can be referenced by multiple models with Animator components.
+More info
+See in
+Glossary
+that controls the interaction of Animation States. Each state references an
+Animation Blend Tree
+Used for continuous blending between similar Animation Clips based on float Animation Parameters.
+More info
+See in
+Glossary
+or a single
+Animation Clip
+Animation data that can be used for animated characters or simple animations. It is a simple “unit” piece of motion, such as (one specific instance of) “Idle”, “Walk” or “Run”.
+More info
+See in
+Glossary
+.
+More info
+Animation Transition:
+Allows a
+state machine
+The set of states in an Animator Controller that a character or animated GameObject can be in, along with a set of transitions between those states and a variable to remember the current state. The states available will depend on the type of gameplay, but typical states include things like idling, walking, running and jumping.
+More info
+See in
+Glossary
+to switch or blend from one animation state to another. Transitions define how long a blend between states should take, and the conditions that activate them.
+More info
+Animator Component:
+A component on a model that animates that model using the Animation system. The component has a reference to an
+Animator Controller
+Controls animation through Animation Layers with Animation State Machines and Animation Blend Trees, controlled by Animation Parameters. The same Animator Controller can be referenced by multiple models with Animator components.
+More info
+See in
+Glossary
+asset that controls the animation.
+More info
+Animator Controller:
+Controls animation through
+Animation Layers
+An Animation Layer contains an Animation State Machine that controls animations of a model or part of it. An example of this is if you have a full-body layer for walking or jumping and a higher layer for upper-body motions such as throwing an object or shooting. The higher layers take precedence for the body parts they control.
+More info
+See in
+Glossary
+with Animation
+State Machines
+The set of states in an Animator Controller that a character or animated GameObject can be in, along with a set of transitions between those states and a variable to remember the current state. The states available will depend on the type of gameplay, but typical states include things like idling, walking, running and jumping.
+More info
+See in
+Glossary
+and
+Animation Blend Trees
+Used for continuous blending between similar Animation Clips based on float Animation Parameters.
+More info
+See in
+Glossary
+, controlled by
+Animation Parameters
+Used to communicate between scripting and the Animator Controller. Some parameters can be set in scripting and used by the controller, while other parameters are based on Custom Curves in Animation Clips and can be sampled using the scripting API.
+More info
+See in
+Glossary
+. The same
+Animator Controller
+Controls animation through Animation Layers with Animation State Machines and Animation Blend Trees, controlled by Animation Parameters. The same Animator Controller can be referenced by multiple models with Animator components.
+More info
+See in
+Glossary
+can be referenced by multiple models with
+Animator components
+A component on a model that animates that model using the Animation system. The component has a reference to an Animator Controller asset that controls the animation.
+More info
+See in
+Glossary
+.
+More info
+Animator Override Controller:
+Allows you to create multiple variants of an
+Animator Controller
+Controls animation through Animation Layers with Animation State Machines and Animation Blend Trees, controlled by Animation Parameters. The same Animator Controller can be referenced by multiple models with Animator components.
+More info
+See in
+Glossary
+, with each variant using a different set of animations, while retaining the original Controller’s structure, parameters and logic.
+More info
+Animator Window:
+The window where the
+Animator Controller
+Controls animation through Animation Layers with Animation State Machines and Animation Blend Trees, controlled by Animation Parameters. The same Animator Controller can be referenced by multiple models with Animator components.
+More info
+See in
+Glossary
+is visualized and edited.
+More info
+Aniso Level:
+The anisotropic filtering (AF) level of a texture. Allows you to increase texture quality when viewing a texture at a steep angle. Good for floor and ground textures.
+More info
+antialiasing:
+A technique for decreasing artifacts, like jagged lines (jaggies), in images to make them appear smoother.
+AOT Compilation:
+Ahead of Time (AOT) compilation is an optimization method used by all platforms except iOS for optimizing the size of the built player. .
+More info
+APK:
+The Android Package format output by Unity. An APK is automatically deployed to your device when you select File > Build & Run.
+More info
+application version:
+Player segments based on application version or bundleid.
+More info
+AR:
+Augmented Reality
+More info
+ARPDAU:
+(Average Revenue Per Daily Active User) The average revenue per user who played on a given day.
+More info
+ARPPU:
+(Average Revenue Per Paying User) Average
+verified IAP revenue
+Revenue from verified IAP transactions. IAP verification is currently supported by the Apple App Store and the Google Play Store.
+More info
+See in
+Glossary
+per user who completed a verified IAP transaction.
+More info
+aspect ratio:
+The relationship of an image’s proportional dimensions, such as its width and height.
+asset package:
+A collection of files and data from Unity projects, or elements of projects, which are compressed and stored in one file, similar to Zip files, with the
+.unitypackage
+extension.
+Asset packages
+A collection of files and data from Unity projects, or elements of projects, which are compressed and stored in one file, similar to Zip files, with the
+.unitypackage
+extension. Asset packages are a handy way of sharing and re-using Unity projects and collections of assets.
+More info
+See in
+Glossary
+are a handy way of sharing and re-using Unity projects and collections of assets.
+More info
+Asset Server:
+Legacy - An asset and
+version control
+A system for managing file changes. You can use Unity in conjunction with most common version control tools, including Perforce, Git, Mercurial and PlasticSCM.
+More info
+See in
+Glossary
+system with a graphical user interface integrated into Unity. Enables team members to work together on a project on different computers.
+asset:
+Any media or data that can be used in your game or project. An asset may come from a file created outside of Unity, such as a 3D Model, an audio file or an image. You can also create some asset types in Unity, such as an
+Animator Controller
+Controls animation through Animation Layers with Animation State Machines and Animation Blend Trees, controlled by Animation Parameters. The same Animator Controller can be referenced by multiple models with Animator components.
+More info
+See in
+Glossary
+, an Audio Mixer or a
+Render Texture
+A special type of Texture that is created and updated at runtime. To use them, first create a new Render Texture and designate one of your Cameras to render into it. Then you can use the Render Texture in a Material just like a regular Texture.
+More info
+See in
+Glossary
+.
+More info
+Asset Store:
+A growing library of free and commercial assets created by Unity and members of the community. Offers a wide variety of assets, from textures, models and animations to whole project examples, tutorials and Editor extensions.
+More info
+Asset Store package:
+A bundled collection of assets or tools available for purchase or download on the Unity
+Asset Store
+A growing library of free and commercial assets created by Unity and members of the community. Offers a wide variety of assets, from textures, models and animations to whole project examples, tutorials and Editor extensions.
+More info
+See in
+Glossary
+, compressed and stored as an
+asset package
+A collection of files and data from Unity projects, or elements of projects, which are compressed and stored in one file, similar to Zip files, with the
+.unitypackage
+extension. Asset packages are a handy way of sharing and re-using Unity projects and collections of assets.
+More info
+See in
+Glossary
+(
+.unitypackage
+extension) or a
+UPM package
+A
+Package
+managed by the
+Unity Package Manager
+. Refer to
+Packages
+.
+See in
+Glossary
+. You can manage your packages from the
+Asset Store
+either on the online store or through the Package Manager window.
+More info
+Audio Clip:
+A container for audio data in Unity. Unity supports mono, stereo and multichannel audio assets (up to eight channels). Unity can import .aif, .wav, .mp3, and .ogg audio file format, and .xm, .mod, .it, and .s3m tracker module formats.
+More info
+Audio Distortion Filter:
+An
+audio filter
+Any audio filter that distorts the sound from an Audio Source or sounds reaching an Audio Listener.
+More info
+See in
+Glossary
+that distorts the sound from an
+Audio Source
+A component which plays back an Audio Clip in the scene to an audio listener or through an audio mixer.
+More info
+See in
+Glossary
+or sounds reaching the
+Audio Listener
+A component that acts like a microphone, receiving sound from Audio Sources in the scene and outputting to the computer speakers.
+More info
+See in
+Glossary
+by simulating the sound of a low quality radio transmission.
+More info
+Audio Effect:
+Any effect that can modify the output of Audio Mixer components, such as filtering frequency ranges of a sound or applying reverb.
+More info
+Audio Filter:
+Any
+audio filter
+Any audio filter that distorts the sound from an Audio Source or sounds reaching an Audio Listener.
+More info
+

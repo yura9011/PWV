@@ -1,0 +1,7 @@
+{
+  "name": "api_math_Mathf",
+  "type": "api",
+  "description": "A collection of common math functions.",
+  "content": "// Unity Class: Mathf\n// Documentation: https://docs.unity3d.com/ScriptReference/Mathf.html\n\n// Description: A collection of common math functions.\n\n// Pseudo-code representation of Mathf\npublic class Mathf {\n}",
+  "properties": []
+}

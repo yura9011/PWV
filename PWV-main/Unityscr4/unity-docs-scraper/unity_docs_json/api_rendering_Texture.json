@@ -1,0 +1,76 @@
+{
+  "name": "api_rendering_Texture",
+  "type": "api",
+  "description": "Base class for Texture handling.",
+  "content": "// Unity Class: Texture\n// Documentation: https://docs.unity3d.com/ScriptReference/Texture.html\n\n// Description: Base class for Texture handling.\n\n// Properties:\n// - anisoLevel: Defines the anisotropic filtering level of the Texture.\n// - dimension: Dimensionality (type) of the Texture.\n// - filterMode: Filtering mode of the Texture.\n// - graphicsFormat: Returns the GraphicsFormat format or color format of a Texture object.\n// - graphicsTexture: GraphicsTexture that represents the texture resource uploaded to the graphics device.\n// - height: Height of the Texture in pixels.\n// - imageContentsHash: The hash value of the Texture.\n// - isDataSRGB: Returns true if the texture pixel data is in sRGB color space.\n// - isReadable: Whether Unity stores an additional copy of this texture's pixel data in CPU-addressable memory.\n// - mipMapBias: The mipmap bias of the Texture.\n// - mipmapCount: How many mipmap levels are in this Texture.\n// - updateCount: This counter is incremented when the Texture is updated.\n// - width: Width of the Texture in pixels.\n// - wrapMode: Options for sampling a texture if a texture coordinate is outside the [0, 1] range.\n// - wrapModeU: Options for sampling a texture if the U texture coordinate is outside the [0, 1] range.\n// - wrapModeV: Options for sampling a texture if the V texture coordinate is outside the [0, 1] range.\n// - wrapModeW: Options for sampling a texture if the W coordinate is outside the [0, 1] range.\n\n// Methods:\n// - GetNativeTexturePtr(): Retrieve a native (underlying graphics API) pointer to the Texture resource.\n// - IncrementUpdateCount(): Increment the update counter.\n\n// Pseudo-code representation of Texture\npublic class Texture {\n    public var anisoLevel; // Defines the anisotropic filtering level of the Texture.\n    public var dimension; // Dimensionality (type) of the Texture.\n    public var filterMode; // Filtering mode of the Texture.\n    public var graphicsFormat; // Returns the GraphicsFormat format or color format of a Texture object.\n    public var graphicsTexture; // GraphicsTexture that represents the texture resource uploaded to the graphics device.\n    public var height; // Height of the Texture in pixels.\n    public var imageContentsHash; // The hash value of the Texture.\n    public var isDataSRGB; // Returns true if the texture pixel data is in sRGB color space.\n    public var isReadable; // Whether Unity stores an additional copy of this texture's pixel data in CPU-addressable memory.\n    public var mipMapBias; // The mipmap bias of the Texture.\n    public var mipmapCount; // How many mipmap levels are in this Texture.\n    public var updateCount; // This counter is incremented when the Texture is updated.\n    public var width; // Width of the Texture in pixels.\n    public var wrapMode; // Options for sampling a texture if a texture coordinate is outside the [0, 1] range.\n    public var wrapModeU; // Options for sampling a texture if the U texture coordinate is outside the [0, 1] range.\n    public var wrapModeV; // Options for sampling a texture if the V texture coordinate is outside the [0, 1] range.\n    public var wrapModeW; // Options for sampling a texture if the W coordinate is outside the [0, 1] range.\n    public void GetNativeTexturePtr(); // Retrieve a native (underlying graphics API) pointer to the Texture resource.\n    public void IncrementUpdateCount(); // Increment the update counter.\n}",
+  "properties": [
+    {
+      "name": "anisoLevel",
+      "description": "Defines the anisotropic filtering level of the Texture."
+    },
+    {
+      "name": "dimension",
+      "description": "Dimensionality (type) of the Texture."
+    },
+    {
+      "name": "filterMode",
+      "description": "Filtering mode of the Texture."
+    },
+    {
+      "name": "graphicsFormat",
+      "description": "Returns the GraphicsFormat format or color format of a Texture object."
+    },
+    {
+      "name": "graphicsTexture",
+      "description": "GraphicsTexture that represents the texture resource uploaded to the graphics device."
+    },
+    {
+      "name": "height",
+      "description": "Height of the Texture in pixels."
+    },
+    {
+      "name": "imageContentsHash",
+      "description": "The hash value of the Texture."
+    },
+    {
+      "name": "isDataSRGB",
+      "description": "Returns true if the texture pixel data is in sRGB color space."
+    },
+    {
+      "name": "isReadable",
+      "description": "Whether Unity stores an additional copy of this texture's pixel data in CPU-addressable memory."
+    },
+    {
+      "name": "mipMapBias",
+      "description": "The mipmap bias of the Texture."
+    },
+    {
+      "name": "mipmapCount",
+      "description": "How many mipmap levels are in this Texture."
+    },
+    {
+      "name": "updateCount",
+      "description": "This counter is incremented when the Texture is updated."
+    },
+    {
+      "name": "width",
+      "description": "Width of the Texture in pixels."
+    },
+    {
+      "name": "wrapMode",
+      "description": "Options for sampling a texture if a texture coordinate is outside the [0, 1] range."
+    },
+    {
+      "name": "wrapModeU",
+      "description": "Options for sampling a texture if the U texture coordinate is outside the [0, 1] range."
+    },
+    {
+      "name": "wrapModeV",
+      "description": "Options for sampling a texture if the V texture coordinate is outside the [0, 1] range."
+    },
+    {
+      "name": "wrapModeW",
+      "description": "Options for sampling a texture if the W coordinate is outside the [0, 1] range."
+    }
+  ]
+}

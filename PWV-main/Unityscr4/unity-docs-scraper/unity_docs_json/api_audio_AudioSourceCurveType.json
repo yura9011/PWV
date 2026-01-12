@@ -1,0 +1,24 @@
+{
+  "name": "api_audio_AudioSourceCurveType",
+  "type": "api",
+  "description": "This defines the curve type of the different custom curves that can be queried and set within the AudioSource.",
+  "content": "// Unity Class: AudioSourceCurveType\n// Documentation: https://docs.unity3d.com/ScriptReference/AudioSourceCurveType.html\n\n// Description: This defines the curve type of the different custom curves that can be queried and set within the AudioSource.\n\n// Properties:\n// - CustomRolloff: Custom Volume Rolloff.\n// - SpatialBlend: The Spatial Blend.\n// - ReverbZoneMix: Reverb Zone Mix.\n// - Spread: The 3D Spread.\n\n// Pseudo-code representation of AudioSourceCurveType\npublic class AudioSourceCurveType {\n    public var CustomRolloff; // Custom Volume Rolloff.\n    public var SpatialBlend; // The Spatial Blend.\n    public var ReverbZoneMix; // Reverb Zone Mix.\n    public var Spread; // The 3D Spread.\n}",
+  "properties": [
+    {
+      "name": "CustomRolloff",
+      "description": "Custom Volume Rolloff."
+    },
+    {
+      "name": "SpatialBlend",
+      "description": "The Spatial Blend."
+    },
+    {
+      "name": "ReverbZoneMix",
+      "description": "Reverb Zone Mix."
+    },
+    {
+      "name": "Spread",
+      "description": "The 3D Spread."
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "name": "api_audio_Microphone",
+  "type": "api",
+  "description": "Use this class to record to an AudioClip using a connected microphone.",
+  "content": "// Unity Class: Microphone\n// Documentation: https://docs.unity3d.com/ScriptReference/Microphone.html\n\n// Description: Use this class to record to an AudioClip using a connected microphone.\n\n// Methods:\n// - End: Stops recording.\n// - GetDeviceCaps: Get the frequency capabilities of a device.\n// - GetPosition: Get the position in samples of the recording.\n// - IsRecording: Query if a device is currently recording.\n// - Start: Start Recording with device.\n\npublic class Microphone {\n    public void End();\n    public void GetDeviceCaps();\n    public void GetPosition();\n    public void IsRecording();\n    public void Start();\n}",
+  "properties": [
+    {
+      "name": "End",
+      "description": "Stops recording."
+    },
+    {
+      "name": "GetDeviceCaps",
+      "description": "Get the frequency capabilities of a device."
+    },
+    {
+      "name": "GetPosition",
+      "description": "Get the position in samples of the recording."
+    },
+    {
+      "name": "IsRecording",
+      "description": "Query if a device is currently recording."
+    },
+    {
+      "name": "Start",
+      "description": "Start Recording with device."
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+// Unity Manual: Physics integrations in Unity
+// Section: Physics
+// URL: https://docs.unity3d.com/Manual/physics-integrations.html
+
+// Content:
+Physics
+Physics integrations in Unity
+Physics Profiler module
+Disable and strip the physics integration from your project
+Physics integrations in Unity
+Unity helps you simulate physics in your Project to ensure that the objects correctly accelerate and respond to
+collisions
+A collision occurs when the physics engine detects that the colliders of two GameObjects make contact or overlap, when at least one has a Rigidbody component and is in motion.
+More info
+See in
+Glossary
+, gravity, and various other forces. Unity provides different physics system implementations which you can use according to your project needs: 3D, 2D, object-oriented, or data-oriented.
+You can create some basic physics interactions with the user interface, but for more control over the simulation, you need some familiarity with C#. To develop your C# skills, refer to the Unity Learn
+Junior Programmer
+course.
+Built-in physics systems for object-oriented projects
+If your project is
+object-oriented
+, use the Unity’s built-in physics system that corresponds to your needs:
+Built-in 3D physics
+: Uses an integration of the Nvidia PhysX engine by default.
+Built-in 2D physics
+: Uses an integration of Box2D
+physics engine
+A system that simulates aspects of physical systems so that objects can accelerate correctly and be affected by collisions, gravity and other forces.
+More info
+See in
+Glossary
+by default.
+Physics engine packages for data-oriented projects
+If your project uses Unity’s Data-Oriented Technology Stack (DOTS), you need to install the
+Unity Physics
+package. Unity Physics is the DOTS physics engine that simulates physics in a data-oriented project.
+Additional resources
+Physics
+Physics project settings
+2D physics
+Built-in 3D physics
+Unity Physics package
+Havok Physics for Unity package
+Physics Profiler module
+Disable and strip the physics integration from your project
+Copyright ©2005-2026 Unity Technologies. All rights reserved. Built from 6000.3.5f1 (9e864d5a2e6f). Built on: 2026-01-09.
+Tutorials
+Community Answers
+Knowledge Base
+Forums
+Asset Store
+Terms of use
+Legal
+Privacy Policy
+Cookies
+Do Not Sell or Share My Personal Information
+Your Privacy Choices (Cookie Settings)

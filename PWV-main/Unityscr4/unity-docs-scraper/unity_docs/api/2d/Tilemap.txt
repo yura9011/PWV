@@ -1,0 +1,75 @@
+// Unity Class: Tilemap
+// Documentation: https://docs.unity3d.com/ScriptReference/Tilemaps.Tilemap.html
+
+// Description: The Tilemap stores Sprites in a layout marked by a Grid component.
+
+// Properties:
+// - animationFrameRate: The frame rate for all Tile animations in the Tilemap.
+// - cellBounds: Returns the boundaries of the Tilemap in cell size.
+// - color: The color of the Tilemap layer.
+// - editorPreviewOrigin: The origin of the Tilemap in cell position inclusive of editor preview Tiles.
+// - editorPreviewSize: The size of the Tilemap in cells inclusive of editor preview Tiles.
+// - layoutGrid: Gets the Grid associated with this Tilemap.
+// - localBounds: Returns the boundaries of the Tilemap in local space size.
+// - orientation: Orientation of the Tiles in the Tilemap.
+// - orientationMatrix: Orientation Matrix of the orientation of the Tiles in the Tilemap.
+// - origin: The origin of the Tilemap in cell position.
+// - size: The size of the Tilemap in cells.
+// - tileAnchor: Gets the anchor point of Tiles in the Tilemap.
+
+// Methods:
+// - AddTileAnimationFlags: Adds the TileAnimationFlags onto the Tile at the given position.
+// - AddTileFlags: Adds the TileFlags onto the Tile at the given position.
+// - BoxFill: Does a box fill with the given Tile on the Tilemap. Starts from given coordinates and fills the limi
+// - ClearAllEditorPreviewTiles: Clears all editor preview Tiles that are placed in the Tilemap.
+// - ClearAllTiles: Clears all Tiles that are placed in the Tilemap.
+// - CompressBounds: Compresses the origin and size of the Tilemap to bounds where Tiles exist.
+// - ContainsTile: Returns true if the Tilemap contains the given Tile. Returns false if not.
+// - DeleteCells: Removes cells from within the Tilemap's bounds.
+// - EditorPreviewBoxFill: Does an editor preview of a box fill with the given Tile on the Tilemap. Starts from given coordinat
+// - EditorPreviewFloodFill: Does an editor preview of a flood fill with the given Tile to place. on the Tilemap starting from th
+// - FloodFill: Does a flood fill with the given Tile to place. on the Tilemap starting from the given coordinates.
+// - GetAnimationFrame: Retrieves the current animation frame for a Tile at the given position.
+// - GetAnimationFrameCount: Retrieves the number of animation frames for a Tile at the given position.
+// - GetAnimationTime: Retrieves the current running animation time for a Tile at the given position.
+// - GetCellCenterLocal: Gets the logical center coordinate of a Grid cell in local space. The logical center for a cell of t
+// - GetCellCenterWorld: Gets the logical center coordinate of a Grid cell in world space. The logical center for a cell of t
+// - GetColliderType: Gets the Collider type of a Tile given the XYZ coordinates of a cell in the Tilemap.
+// - GetColor: Gets the Color of a Tile given the XYZ coordinates of a cell in the Tilemap.
+// - GetEditorPreviewColor: Gets the Color of an editor preview Tile given the XYZ coordinates of a cell in the Tilemap.
+// - GetEditorPreviewSprite: Gets the Sprite used in an editor preview Tile given the XYZ coordinates of a cell in the Tilemap.
+// - GetEditorPreviewTile: Gets the editor preview Tile at the given XYZ coordinates of a cell in the Tilemap.
+// - GetEditorPreviewTileFlags: Gets the TileFlags of the editor preview Tile at the given position.
+// - GetEditorPreviewTransformMatrix: Gets the transform matrix of an editor preview Tile given the XYZ coordinates of a cell in the Tilem
+// - GetInstantiatedObject: Gets the GameObject instantiated by a Tile given the XYZ coordinates of a cell in the Tilemap.
+// - GetObjectToInstantiate: Gets the GameObject which will be instantiated by a Tile given the XYZ coordinates of a cell in the 
+
+public class Tilemap {
+    public var animationFrameRate;
+    public var cellBounds;
+    public var color;
+    public var editorPreviewOrigin;
+    public var editorPreviewSize;
+    public var layoutGrid;
+    public var localBounds;
+    public var orientation;
+    public var orientationMatrix;
+    public var origin;
+    public var size;
+    public var tileAnchor;
+    public void AddTileAnimationFlags();
+    public void AddTileFlags();
+    public void BoxFill();
+    public void ClearAllEditorPreviewTiles();
+    public void ClearAllTiles();
+    public void CompressBounds();
+    public void ContainsTile();
+    public void DeleteCells();
+    public void EditorPreviewBoxFill();
+    public void EditorPreviewFloodFill();
+    public void FloodFill();
+    public void GetAnimationFrame();
+    public void GetAnimationFrameCount();
+    public void GetAnimationTime();
+    public void GetCellCenterLocal();
+}

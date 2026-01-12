@@ -1,0 +1,24 @@
+{
+  "name": "api_rendering_NavMeshPath",
+  "type": "api",
+  "description": "A path as calculated by the navigation system.",
+  "content": "// Unity Class: NavMeshPath\n// Documentation: https://docs.unity3d.com/ScriptReference/AI.NavMeshPath.html\n\n// Description: A path as calculated by the navigation system.\n\n// Properties:\n// - corners: Corner points of the path. (Read Only)\n// - status: Status of the path. (Read Only)\n\n// Methods:\n// - ClearCorners: Erase all corner points from path.\n// - GetCornersNonAlloc: Calculate the corners for the path.\n\npublic class NavMeshPath {\n    public var corners;\n    public var status;\n    public void ClearCorners();\n    public void GetCornersNonAlloc();\n}",
+  "properties": [
+    {
+      "name": "corners",
+      "description": "Corner points of the path. (Read Only)"
+    },
+    {
+      "name": "status",
+      "description": "Status of the path. (Read Only)"
+    },
+    {
+      "name": "ClearCorners",
+      "description": "Erase all corner points from path."
+    },
+    {
+      "name": "GetCornersNonAlloc",
+      "description": "Calculate the corners for the path."
+    }
+  ]
+}

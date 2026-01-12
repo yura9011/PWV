@@ -1,0 +1,46 @@
+// Unity Manual: Tilemaps
+// Section: 2D
+// URL: https://docs.unity3d.com/Manual/tilemaps/tilemaps-landing.html
+
+// Content:
+2D game development
+Tilemaps in Unity
+Sprite shape renderer reference
+Tilemaps
+Tilemaps in Unity
+Resources for working with the Tilemaps package to create 2D projects in Unity.
+Page
+Description
+Tilemaps
+A GameObject that allows you to quickly create 2D levels using tiles and a grid overlay.
+More info
+See in
+Glossary
+Understand how tilemaps work in Unity.
+Work with tilemaps
+Techniques for creating and editing tilemaps.
+Tiles for tilemaps
+Techniques for creating and editing tiles for tilemaps.
+Tile palettes
+Techniques for creating and working with tile palettes.
+Tile sets
+Techniques for creating and working with tile sets.
+Grid component reference
+Refer to the properties of the Grid component.
+Additional resources
+2D
+API documentation on Tilemap
+Sprite shape renderer reference
+Tilemaps
+Copyright ©2005-2026 Unity Technologies. All rights reserved. Built from 6000.3.5f1 (9e864d5a2e6f). Built on: 2026-01-09.
+Tutorials
+Community Answers
+Knowledge Base
+Forums
+Asset Store
+Terms of use
+Legal
+Privacy Policy
+Cookies
+Do Not Sell or Share My Personal Information
+Your Privacy Choices (Cookie Settings)

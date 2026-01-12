@@ -1,0 +1,102 @@
+// Unity Class: TrailRenderer
+// Documentation: https://docs.unity3d.com/ScriptReference/TrailRenderer.html
+
+// Description: Creates a visual trail of polygons that follows a GameObject's movement, useful for emphasizing motion or creating dynamic visual effects.
+
+// Properties:
+// - alignment: Select whether the trail will face the camera, or the orientation of the Transform Component.
+// - applyActiveColorSpace: Set whether colors will be converted appropriately before being passed to the GPU when using Linear Rendering.
+// - autodestruct: Does the GameObject of this Trail Renderer auto destruct?
+// - colorGradient: Set the color gradient describing the color of the trail at various points along its length.
+// - emitting: Creates trails when the GameObject moves.
+// - endColor: Set the color at the end of the trail.
+// - endWidth: The width of the trail at the end of the trail.
+// - generateLightingData: Configures a trail to generate Normals and Tangents. With this data, Scene lighting can affect the trail via Normal Maps and the Unity Standard Shader, or your own custom-built Shaders.
+// - maskInteraction: Specifies how the TrailRenderer interacts with SpriteMask.
+// - minVertexDistance: Set the minimum distance the trail can travel before a new vertex is added to it.
+// - numCapVertices: Set this to a value greater than 0, to get rounded corners on each end of the trail.
+// - numCornerVertices: Set this to a value greater than 0, to get rounded corners between each segment of the trail.
+// - positionCount: Get the number of line segments in the trail.
+// - shadowBias: Apply a shadow bias to prevent self-shadowing artifacts. The specified value is the proportion of the trail width at each segment.
+// - startColor: Set the color at the start of the trail.
+// - startWidth: The width of the trail at the spawning point.
+// - textureMode: Choose whether the U coordinate of the trail texture is tiled or stretched.
+// - textureScale: A multiplier for the UV coordinates of the trail texture.
+// - time: How long does the trail take to fade out.
+// - widthCurve: Set the curve describing the width of the trail at various points along its length.
+// - widthMultiplier: Set an overall multiplier that is applied to the TrailRenderer.widthCurve to get the final width of the trail.
+
+// Methods:
+// - AddPosition: Adds a position to the trail.
+// - AddPositions: Add an array of positions to the trail.
+// - BakeMesh: Creates a snapshot of TrailRenderer and stores it in mesh.
+// - Clear: Removes all points from the TrailRenderer. Useful for restarting a trail from a new position.
+// - GetPosition: Get the position of a vertex in the trail.
+// - GetPositions: Get the positions of all vertices in the trail.
+// - GetVisiblePositions: Get the visible positions of all vertices in the trail.
+// - SetPosition: Set the position of a vertex in the trail.
+// - SetPositions: Sets the positions of all vertices in the trail.
+// - Destroy: Removes a GameObject, component, or asset.
+// - DestroyImmediate: Destroys the specified object immediately. Use with caution and in Edit mode only.
+// - DontDestroyOnLoad: Do not destroy the target Object when loading a new Scene.
+// - FindAnyObjectByType: Retrieves any active loaded object of Type type.
+// - FindFirstObjectByType: Retrieves the first active loaded object of Type type.
+// - FindObjectsByType: Retrieves a list of all loaded objects of Type type.
+// - Instantiate: Clones the object original and returns the clone.
+// - InstantiateAsync: Captures a snapshot of the original object (that must be related to some GameObject) and returns the AsyncInstantiateOperation.
+
+// Code Examples:
+// Example 1:
+//   // Ensure the GameObject has a TrailRenderer component
+//   using UnityEngine;[RequireComponent(typeof(TrailRenderer))]
+//   public class SimpleTrail : MonoBehaviour
+//   {
+//       public float moveSpeed = 3.0f;
+//       public float circleRadius = 2.0f;    private TrailRenderer trail;
+//       private float angle = 0f;    void Start()
+//       {
+//           trail = GetComponent<TrailRenderer>();        // Configure the trail's appearance
+//           trail.time = 1.5f;              // How long the trail lasts in seconds
+//           trail.startWidth = 0.3f;        // Width at the newest part of the trail
+//           trail.endWidth = 0f;            // Width at the oldest part of the trail        // Set a color gradient (e.g., white fading to transparent red)
+//           Gradient gradient = new Gradient();
+//           gradient.SetKeys(
+//              // Color keys: White at the start, Red at the end
+//              new GradientColorKey[] { new GradientColorKey(Color.white, 0.0f), new GradientColorKey(Color.red, 1.0f) },
+//              // Alpha keys: Opaque at the start, Transparent at the end
+//              new GradientAlphaKey[] { new GradientAlphaKey(1.0f, 0.0f), new GradientAlphaKey(0.0f, 1.0f) }
+//           );
+//           trail.colorGradient = gradient;
+
+public class TrailRenderer {
+    public var alignment; // Select whether the trail will face the camera, or the orientation of the Transfo
+    public var applyActiveColorSpace; // Set whether colors will be converted appropriately before being passed to the GP
+    public var autodestruct; // Does the GameObject of this Trail Renderer auto destruct?
+    public var colorGradient; // Set the color gradient describing the color of the trail at various points along
+    public var emitting; // Creates trails when the GameObject moves.
+    public var endColor; // Set the color at the end of the trail.
+    public var endWidth; // The width of the trail at the end of the trail.
+    public var generateLightingData; // Configures a trail to generate Normals and Tangents. With this data, Scene light
+    public var maskInteraction; // Specifies how the TrailRenderer interacts with SpriteMask.
+    public var minVertexDistance; // Set the minimum distance the trail can travel before a new vertex is added to it
+    public var numCapVertices; // Set this to a value greater than 0, to get rounded corners on each end of the tr
+    public var numCornerVertices; // Set this to a value greater than 0, to get rounded corners between each segment 
+    public var positionCount; // Get the number of line segments in the trail.
+    public var shadowBias; // Apply a shadow bias to prevent self-shadowing artifacts. The specified value is 
+    public var startColor; // Set the color at the start of the trail.
+    public void AddPosition(); // Adds a position to the trail.
+    public void AddPositions(); // Add an array of positions to the trail.
+    public void BakeMesh(); // Creates a snapshot of TrailRenderer and stores it in mesh.
+    public void Clear(); // Removes all points from the TrailRenderer. Useful for restarting a trail from a 
+    public void GetPosition(); // Get the position of a vertex in the trail.
+    public void GetPositions(); // Get the positions of all vertices in the trail.
+    public void GetVisiblePositions(); // Get the visible positions of all vertices in the trail.
+    public void SetPosition(); // Set the position of a vertex in the trail.
+    public void SetPositions(); // Sets the positions of all vertices in the trail.
+    public void Destroy(); // Removes a GameObject, component, or asset.
+    public void DestroyImmediate(); // Destroys the specified object immediately. Use with caution and in Edit mode onl
+    public void DontDestroyOnLoad(); // Do not destroy the target Object when loading a new Scene.
+    public void FindAnyObjectByType(); // Retrieves any active loaded object of Type type.
+    public void FindFirstObjectByType(); // Retrieves the first active loaded object of Type type.
+    public void FindObjectsByType(); // Retrieves a list of all loaded objects of Type type.
+}

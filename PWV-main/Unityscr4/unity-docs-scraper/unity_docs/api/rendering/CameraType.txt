@@ -1,0 +1,20 @@
+// Unity Class: CameraType
+// Documentation: https://docs.unity3d.com/ScriptReference/CameraType.html
+
+// Description: Describes different types of camera.
+
+// Properties:
+// - Game: Used to indicate a regular in-game camera.
+// - SceneView: Used to indicate that a camera is used for rendering the Scene View in the Editor.
+// - Preview: Used to indicate a camera that is used for rendering previews in the Editor.
+// - VR: Used to indicate that a camera is used for rendering VR (in edit mode) in the Editor.
+// - Reflection: Used to indicate a camera that is used for rendering reflection probes.
+
+// Pseudo-code representation of CameraType
+public class CameraType {
+    public var Game; // Used to indicate a regular in-game camera.
+    public var SceneView; // Used to indicate that a camera is used for rendering the Scene View in the Editor.
+    public var Preview; // Used to indicate a camera that is used for rendering previews in the Editor.
+    public var VR; // Used to indicate that a camera is used for rendering VR (in edit mode) in the Editor.
+    public var Reflection; // Used to indicate a camera that is used for rendering reflection probes.
+}

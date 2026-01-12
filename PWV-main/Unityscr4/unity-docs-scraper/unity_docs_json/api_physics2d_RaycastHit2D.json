@@ -1,0 +1,40 @@
+{
+  "name": "api_physics2d_RaycastHit2D",
+  "type": "api",
+  "description": "Returns information about 2D Colliders detected by a 2D physics query in the scene.",
+  "content": "// Unity Class: RaycastHit2D\n// Documentation: https://docs.unity3d.com/ScriptReference/RaycastHit2D.html\n\n// Description: Returns information about 2D Colliders detected by a 2D physics query in the scene.\n\n// Properties:\n// - centroid: The world space centroid (center) of the physics query shape when it intersects.\n// - collider: The Collider2D detected by the physics query.\n// - distance: The distance the physics query traversed before it detected a Collider2D.\n// - fraction: The fraction of the distance specified to the physics query before it detected a Collider2D.\n// - normal: The surface normal of the detected Collider2D.\n// - point: The world space position where the physics query shape intersected with the detected Collider2D surface.\n// - rigidbody: The Rigidbody2D that the Collider2D detected by the physics query is attached to.\n// - transform: The Transform on the GameObject that the Collider2D is attached to.\n\npublic class RaycastHit2D {\n    public var centroid; // The world space centroid (center) of the physics query shape when it intersects.\n    public var collider; // The Collider2D detected by the physics query.\n    public var distance; // The distance the physics query traversed before it detected a Collider2D.\n    public var fraction; // The fraction of the distance specified to the physics query before it detected a\n    public var normal; // The surface normal of the detected Collider2D.\n    public var point; // The world space position where the physics query shape intersected with the dete\n    public var rigidbody; // The Rigidbody2D that the Collider2D detected by the physics query is attached to\n    public var transform; // The Transform on the GameObject that the Collider2D is attached to.\n}",
+  "properties": [
+    {
+      "name": "centroid",
+      "description": "The world space centroid (center) of the physics query shape when it intersects."
+    },
+    {
+      "name": "collider",
+      "description": "The Collider2D detected by the physics query."
+    },
+    {
+      "name": "distance",
+      "description": "The distance the physics query traversed before it detected a Collider2D."
+    },
+    {
+      "name": "fraction",
+      "description": "The fraction of the distance specified to the physics query before it detected a Collider2D."
+    },
+    {
+      "name": "normal",
+      "description": "The surface normal of the detected Collider2D."
+    },
+    {
+      "name": "point",
+      "description": "The world space position where the physics query shape intersected with the detected Collider2D surface."
+    },
+    {
+      "name": "rigidbody",
+      "description": "The Rigidbody2D that the Collider2D detected by the physics query is attached to."
+    },
+    {
+      "name": "transform",
+      "description": "The Transform on the GameObject that the Collider2D is attached to."
+    }
+  ]
+}

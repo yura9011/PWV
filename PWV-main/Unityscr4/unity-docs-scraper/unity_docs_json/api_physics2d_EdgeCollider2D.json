@@ -1,0 +1,84 @@
+{
+  "name": "api_physics2d_EdgeCollider2D",
+  "type": "api",
+  "description": "Collider for 2D physics representing an arbitrary set of connected edges (lines) defined by its vertices.",
+  "content": "// Unity Class: EdgeCollider2D\n// Documentation: https://docs.unity3d.com/ScriptReference/EdgeCollider2D.html\n\n// Description: Collider for 2D physics representing an arbitrary set of connected edges (lines) defined by its vertices.\n\n// Properties:\n// - adjacentEndPoint: Defines the position of a virtual point adjacent to the end point of the EdgeCollider2D.\n// - adjacentStartPoint: Defines the position of a virtual point adjacent to the start point of the EdgeCollider2D.\n// - edgeCount: Gets the number of edges.\n// - edgeRadius: Controls the radius of all edges created by the collider.\n// - pointCount: Gets the number of points.\n// - points: Get or set the points defining multiple continuous edges.\n// - useAdjacentEndPoint: Set this to true to use the adjacentEndPoint to form the collision normal that is used to calculate \n// - useAdjacentStartPoint: Set this to true to use the adjacentStartPoint to form the collision normal that is used to calculat\n\n// Methods:\n// - GetPoints: Gets all the points that define a set of continuous edges.\n// - Reset: Reset to a single edge consisting of two points.\n// - SetPoints: Sets all the points that define a set of continuous edges.\n// - Destroy: Removes a GameObject, component, or asset.\n// - DestroyImmediate: Destroys the specified object immediately. Use with caution and in Edit mode only.\n// - DontDestroyOnLoad: Do not destroy the target Object when loading a new Scene.\n// - FindAnyObjectByType: Retrieves any active loaded object of Type type.\n// - FindFirstObjectByType: Retrieves the first active loaded object of Type type.\n// - FindObjectsByType: Retrieves a list of all loaded objects of Type type.\n// - Instantiate: Clones the object original and returns the clone.\n// - InstantiateAsync: Captures a snapshot of the original object (that must be related to some GameObject) and returns the\n\npublic class EdgeCollider2D {\n    public var adjacentEndPoint;\n    public var adjacentStartPoint;\n    public var edgeCount;\n    public var edgeRadius;\n    public var pointCount;\n    public var points;\n    public var useAdjacentEndPoint;\n    public var useAdjacentStartPoint;\n    public void GetPoints();\n    public void Reset();\n    public void SetPoints();\n    public void Destroy();\n    public void DestroyImmediate();\n    public void DontDestroyOnLoad();\n    public void FindAnyObjectByType();\n    public void FindFirstObjectByType();\n    public void FindObjectsByType();\n    public void Instantiate();\n    public void InstantiateAsync();\n}",
+  "properties": [
+    {
+      "name": "adjacentEndPoint",
+      "description": "Defines the position of a virtual point adjacent to the end point of the EdgeCollider2D."
+    },
+    {
+      "name": "adjacentStartPoint",
+      "description": "Defines the position of a virtual point adjacent to the start point of the EdgeCollider2D."
+    },
+    {
+      "name": "edgeCount",
+      "description": "Gets the number of edges."
+    },
+    {
+      "name": "edgeRadius",
+      "description": "Controls the radius of all edges created by the collider."
+    },
+    {
+      "name": "pointCount",
+      "description": "Gets the number of points."
+    },
+    {
+      "name": "points",
+      "description": "Get or set the points defining multiple continuous edges."
+    },
+    {
+      "name": "useAdjacentEndPoint",
+      "description": "Set this to true to use the adjacentEndPoint to form the collision normal that is used to calculate "
+    },
+    {
+      "name": "useAdjacentStartPoint",
+      "description": "Set this to true to use the adjacentStartPoint to form the collision normal that is used to calculat"
+    },
+    {
+      "name": "GetPoints",
+      "description": "Gets all the points that define a set of continuous edges."
+    },
+    {
+      "name": "Reset",
+      "description": "Reset to a single edge consisting of two points."
+    },
+    {
+      "name": "SetPoints",
+      "description": "Sets all the points that define a set of continuous edges."
+    },
+    {
+      "name": "Destroy",
+      "description": "Removes a GameObject, component, or asset."
+    },
+    {
+      "name": "DestroyImmediate",
+      "description": "Destroys the specified object immediately. Use with caution and in Edit mode only."
+    },
+    {
+      "name": "DontDestroyOnLoad",
+      "description": "Do not destroy the target Object when loading a new Scene."
+    },
+    {
+      "name": "FindAnyObjectByType",
+      "description": "Retrieves any active loaded object of Type type."
+    },
+    {
+      "name": "FindFirstObjectByType",
+      "description": "Retrieves the first active loaded object of Type type."
+    },
+    {
+      "name": "FindObjectsByType",
+      "description": "Retrieves a list of all loaded objects of Type type."
+    },
+    {
+      "name": "Instantiate",
+      "description": "Clones the object original and returns the clone."
+    },
+    {
+      "name": "InstantiateAsync",
+      "description": "Captures a snapshot of the original object (that must be related to some GameObject) and returns the"
+    }
+  ]
+}

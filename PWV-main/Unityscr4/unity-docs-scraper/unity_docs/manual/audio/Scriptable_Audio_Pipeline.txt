@@ -1,0 +1,45 @@
+// Unity Manual: Scriptable Audio Pipeline
+// Section: Audio
+// URL: https://docs.unity3d.com/Manual/audio-scriptable-processors.html
+
+// Content:
+Audio
+Scriptable audio pipeline
+Import audio files into Unity
+Scriptable processors concepts
+Scriptable audio pipeline
+The scriptable audio pipeline framework lets you extend the Unity audio engine at specific integration points using Burst-compatible HPC#. The below sections explain what the scriptable audio pipeline is and how you can use it to customize and extend the audio system.
+Topic
+Description
+Scriptable processors concepts
+Learn the core concepts required to work with scriptable processors.
+Generators
+Learn about generators.
+Root outputs
+Learn about root outputs.
+Example: create a generator
+Create a generator and attach it to an
+audio source
+A component which plays back an Audio Clip in the scene to an audio listener or through an audio mixer.
+More info
+See in
+Glossary
+.
+Example: create a root output
+Create a root output and connect it to the Unity audio engine.
+Note
+: The scriptable audio pipeline is not supported on the Web Platform. Attempting to use it in a Web build will trigger a warning.
+Import audio files into Unity
+Scriptable processors concepts
+Copyright ©2005-2026 Unity Technologies. All rights reserved. Built from 6000.3.5f1 (9e864d5a2e6f). Built on: 2026-01-09.
+Tutorials
+Community Answers
+Knowledge Base
+Forums
+Asset Store
+Terms of use
+Legal
+Privacy Policy
+Cookies
+Do Not Sell or Share My Personal Information
+Your Privacy Choices (Cookie Settings)

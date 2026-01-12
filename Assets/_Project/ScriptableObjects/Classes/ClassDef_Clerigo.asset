@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37f03974b9124ab43b17ba8cd8cc5eef, type: 3}
+  m_Name: ClassDef_Clerigo
+  m_EditorClassIdentifier: EtherDomes.Data::EtherDomes.Data.ClassDefinition
+  ClassType: 6
+  ClassName: "Cl\xE9rigo"
+  Description: Healer sagrado que canaliza luz divina con su libro sagrado.
+  Role: 3
+  BaseHealth: 95
+  BaseMana: 130
+  BaseStrength: 5
+  BaseAgility: 6
+  BaseIntellect: 16
+  BaseStamina: 9
+  BaseArmor: 15
+  HealthPerLevel: 9
+  ManaPerLevel: 12
+  StrengthPerLevel: 0.5
+  AgilityPerLevel: 0.5
+  IntellectPerLevel: 3
+  StaminaPerLevel: 1.5
+  AllowedArmorType: 2
+  AllowedWeaponTypes: 19000000
+  UsesTwoHandedWeapon: 1
+  UsesShield: 0

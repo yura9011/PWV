@@ -1,0 +1,88 @@
+{
+  "name": "api_ui_GUIStyle",
+  "type": "api",
+  "description": "Styling information for GUI elements.",
+  "content": "// Unity Class: GUIStyle\n// Documentation: https://docs.unity3d.com/ScriptReference/GUIStyle.html\n\n// Description: Styling information for GUI elements.\n\n// Properties:\n// - active: Rendering settings for when the control is pressed down.\n// - alignment: Text alignment.\n// - border: The borders of all background images.\n// - clipping: What to do when the contents to be rendered is too large to fit within the area given.\n// - contentOffset: Pixel offset to apply to the content of this GUIstyle.\n// - fixedHeight: If non-0, any GUI elements rendered with this style will have the height specified here.\n// - fixedWidth: If non-0, any GUI elements rendered with this style will have the width specified here.\n// - focused: Rendering settings for when the element has keyboard focus.\n// - font: The font to use for rendering. If null, the default font for the current GUISkin is used instead.\n// - fontSize: The font size to use (for dynamic fonts).\n// - fontStyle: The font style to use (for dynamic fonts).\n// - hover: Rendering settings for when the mouse is hovering over the control.\n// - imagePosition: How image and text of the GUIContent is combined.\n// - lineHeight: The height of one line of text with this style, measured in pixels. (Read Only)\n// - margin: The margins between elements rendered in this style and any other GUI elements.\n// - name: The name of this GUIStyle. Used for getting them based on name.\n// - normal: Rendering settings for when the component is displayed normally.\n// - onActive: Rendering settings for when the element is turned on and pressed down.\n// - onFocused: Rendering settings for when the element has keyboard and is turned on.\n// - onHover: Rendering settings for when the control is turned on and the mouse is hovering it.\n// - onNormal: Rendering settings for when the control is turned on.\n// - overflow: Extra space to be added to the background image.\n// - padding: Space from the edge of GUIStyle to the start of the contents.\n// - richText: Enable HTML-style tags for Text Formatting Markup.\n// - stretchHeight: Can GUI elements of this style be stretched vertically for better layout?\n\n// Methods:\n// - CalcHeight: How tall this element will be when rendered with content and a specific width.\n// - CalcMinMaxWidth: Calculate the minimum and maximum widths for this style rendered with content.\n// - CalcScreenSize: Calculate the size of an element formatted with this style, and a given space to content.\n// - CalcSize: Calculate the size of some content if it is rendered with this style.\n// - Draw: Draw this GUIStyle on to the screen, internal version.\n// - DrawCursor: Draw this GUIStyle with selected content.\n// - DrawWithTextSelection: Draw this GUIStyle with selected content.\n// - GetCursorPixelPosition: Get the pixel position of a given string index.\n// - GetCursorStringIndex: Get the cursor position (indexing into contents.text) when the user clicked at cursorPixelPosition.\n\npublic class GUIStyle {\n    public var active;\n    public var alignment;\n    public var border;\n    public var clipping;\n    public var contentOffset;\n    public var fixedHeight;\n    public var fixedWidth;\n    public var focused;\n    public var font;\n    public var fontSize;\n    public var fontStyle;\n    public var hover;\n    public var imagePosition;\n    public var lineHeight;\n    public var margin;\n    public void CalcHeight();\n    public void CalcMinMaxWidth();\n    public void CalcScreenSize();\n    public void CalcSize();\n    public void Draw();\n    public void DrawCursor();\n    public void DrawWithTextSelection();\n    public void GetCursorPixelPosition();\n    public void GetCursorStringIndex();\n}",
+  "properties": [
+    {
+      "name": "active",
+      "description": "Rendering settings for when the control is pressed down."
+    },
+    {
+      "name": "alignment",
+      "description": "Text alignment."
+    },
+    {
+      "name": "border",
+      "description": "The borders of all background images."
+    },
+    {
+      "name": "clipping",
+      "description": "What to do when the contents to be rendered is too large to fit within the area given."
+    },
+    {
+      "name": "contentOffset",
+      "description": "Pixel offset to apply to the content of this GUIstyle."
+    },
+    {
+      "name": "fixedHeight",
+      "description": "If non-0, any GUI elements rendered with this style will have the height specified here."
+    },
+    {
+      "name": "fixedWidth",
+      "description": "If non-0, any GUI elements rendered with this style will have the width specified here."
+    },
+    {
+      "name": "focused",
+      "description": "Rendering settings for when the element has keyboard focus."
+    },
+    {
+      "name": "font",
+      "description": "The font to use for rendering. If null, the default font for the current GUISkin is used instead."
+    },
+    {
+      "name": "fontSize",
+      "description": "The font size to use (for dynamic fonts)."
+    },
+    {
+      "name": "fontStyle",
+      "description": "The font style to use (for dynamic fonts)."
+    },
+    {
+      "name": "hover",
+      "description": "Rendering settings for when the mouse is hovering over the control."
+    },
+    {
+      "name": "imagePosition",
+      "description": "How image and text of the GUIContent is combined."
+    },
+    {
+      "name": "lineHeight",
+      "description": "The height of one line of text with this style, measured in pixels. (Read Only)"
+    },
+    {
+      "name": "margin",
+      "description": "The margins between elements rendered in this style and any other GUI elements."
+    },
+    {
+      "name": "name",
+      "description": "The name of this GUIStyle. Used for getting them based on name."
+    },
+    {
+      "name": "normal",
+      "description": "Rendering settings for when the component is displayed normally."
+    },
+    {
+      "name": "onActive",
+      "description": "Rendering settings for when the element is turned on and pressed down."
+    },
+    {
+      "name": "onFocused",
+      "description": "Rendering settings for when the element has keyboard and is turned on."
+    },
+    {
+      "name": "onHover",
+      "description": "Rendering settings for when the control is turned on and the mouse is hovering it."
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "name": "api_scene_Scene",
+  "type": "api",
+  "description": "The runtime data structure for a scene.",
+  "content": "// Unity Class: Scene\n// Documentation: https://docs.unity3d.com/ScriptReference/SceneManagement.Scene.html\n\n// Description: The runtime data structure for a scene.\n\n// Properties:\n// - buildIndex: Return the index of the Scene in the Build Settings.\n// - handle: A unique identifier for a loaded scene.\n// - isDirty: Returns true if the Scene is modified.\n// - isLoaded: IsLoaded is set to true after loading has completed and objects have been enabled.\n// - isSubScene: Whether this scene is a subscene.\n// - name: Returns the name of the Scene that is currently active in the game or app.\n// - path: Returns the relative path of the Scene. For example: \"Assets/MyScenes/MyScene.unity\".\n// - rootCount: The number of root transforms of this Scene.\n\n// Methods:\n// - GetRootGameObjects: Returns all the root game objects in the Scene.\n// - IsValid: Whether this is a valid Scene. A Scene may be invalid if, for example, you tried to open a Scene tha\n\npublic class Scene {\n    public var buildIndex;\n    public var handle;\n    public var isDirty;\n    public var isLoaded;\n    public var isSubScene;\n    public var name;\n    public var path;\n    public var rootCount;\n    public void GetRootGameObjects();\n    public void IsValid();\n}",
+  "properties": [
+    {
+      "name": "buildIndex",
+      "description": "Return the index of the Scene in the Build Settings."
+    },
+    {
+      "name": "handle",
+      "description": "A unique identifier for a loaded scene."
+    },
+    {
+      "name": "isDirty",
+      "description": "Returns true if the Scene is modified."
+    },
+    {
+      "name": "isLoaded",
+      "description": "IsLoaded is set to true after loading has completed and objects have been enabled."
+    },
+    {
+      "name": "isSubScene",
+      "description": "Whether this scene is a subscene."
+    },
+    {
+      "name": "name",
+      "description": "Returns the name of the Scene that is currently active in the game or app."
+    },
+    {
+      "name": "path",
+      "description": "Returns the relative path of the Scene. For example: \"Assets/MyScenes/MyScene.unity\"."
+    },
+    {
+      "name": "rootCount",
+      "description": "The number of root transforms of this Scene."
+    },
+    {
+      "name": "GetRootGameObjects",
+      "description": "Returns all the root game objects in the Scene."
+    },
+    {
+      "name": "IsValid",
+      "description": "Whether this is a valid Scene. A Scene may be invalid if, for example, you tried to open a Scene tha"
+    }
+  ]
+}

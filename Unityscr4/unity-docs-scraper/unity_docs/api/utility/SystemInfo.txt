@@ -1,0 +1,8 @@
+// Unity Class: SystemInfo
+// Documentation: https://docs.unity3d.com/ScriptReference/SystemInfo.html
+
+// Description: Access system and hardware information.
+
+// Pseudo-code representation of SystemInfo
+public class SystemInfo {
+}

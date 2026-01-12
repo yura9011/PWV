@@ -1,0 +1,80 @@
+{
+  "name": "api_physics2d_HingeJoint2D",
+  "type": "api",
+  "description": "Joint that allows a Rigidbody2D object to rotate around a point in space or a point on another object.",
+  "content": "// Unity Class: HingeJoint2D\n// Documentation: https://docs.unity3d.com/ScriptReference/HingeJoint2D.html\n\n// Description: Joint that allows a Rigidbody2D object to rotate around a point in space or a point on another object.\n\n// Properties:\n// - jointAngle: The current joint angle (in degrees) with respect to the reference angle.\n// - jointSpeed: The current joint speed.\n// - limits: Limit of angular rotation (in degrees) on the joint.\n// - limitState: Gets the state of the joint limit.\n// - motor: Parameters for the motor force applied to the joint.\n// - referenceAngle: The angle (in degrees) referenced between the two bodies used as the constraint for the joint.\n// - useConnectedAnchor: Controls whether the connected anchor is used or not.\n// - useLimits: Should limits be placed on the range of rotation?\n// - useMotor: Should the joint be rotated automatically by a motor torque?\n\n// Methods:\n// - GetMotorTorque: Gets the motor torque of the joint given the specified timestep.\n// - Destroy: Removes a GameObject, component, or asset.\n// - DestroyImmediate: Destroys the specified object immediately. Use with caution and in Edit mode only.\n// - DontDestroyOnLoad: Do not destroy the target Object when loading a new Scene.\n// - FindAnyObjectByType: Retrieves any active loaded object of Type type.\n// - FindFirstObjectByType: Retrieves the first active loaded object of Type type.\n// - FindObjectsByType: Retrieves a list of all loaded objects of Type type.\n// - Instantiate: Clones the object original and returns the clone.\n// - InstantiateAsync: Captures a snapshot of the original object (that must be related to some GameObject) and returns the AsyncInstantiateOperation.\n\npublic class HingeJoint2D {\n    public var jointAngle; // The current joint angle (in degrees) with respect to the reference angle.\n    public var jointSpeed; // The current joint speed.\n    public var limits; // Limit of angular rotation (in degrees) on the joint.\n    public var limitState; // Gets the state of the joint limit.\n    public var motor; // Parameters for the motor force applied to the joint.\n    public var referenceAngle; // The angle (in degrees) referenced between the two bodies used as the constraint \n    public var useConnectedAnchor; // Controls whether the connected anchor is used or not.\n    public var useLimits; // Should limits be placed on the range of rotation?\n    public var useMotor; // Should the joint be rotated automatically by a motor torque?\n    public void GetMotorTorque(); // Gets the motor torque of the joint given the specified timestep.\n    public void Destroy(); // Removes a GameObject, component, or asset.\n    public void DestroyImmediate(); // Destroys the specified object immediately. Use with caution and in Edit mode onl\n    public void DontDestroyOnLoad(); // Do not destroy the target Object when loading a new Scene.\n    public void FindAnyObjectByType(); // Retrieves any active loaded object of Type type.\n    public void FindFirstObjectByType(); // Retrieves the first active loaded object of Type type.\n    public void FindObjectsByType(); // Retrieves a list of all loaded objects of Type type.\n    public void Instantiate(); // Clones the object original and returns the clone.\n    public void InstantiateAsync(); // Captures a snapshot of the original object (that must be related to some GameObj\n}",
+  "properties": [
+    {
+      "name": "jointAngle",
+      "description": "The current joint angle (in degrees) with respect to the reference angle."
+    },
+    {
+      "name": "jointSpeed",
+      "description": "The current joint speed."
+    },
+    {
+      "name": "limits",
+      "description": "Limit of angular rotation (in degrees) on the joint."
+    },
+    {
+      "name": "limitState",
+      "description": "Gets the state of the joint limit."
+    },
+    {
+      "name": "motor",
+      "description": "Parameters for the motor force applied to the joint."
+    },
+    {
+      "name": "referenceAngle",
+      "description": "The angle (in degrees) referenced between the two bodies used as the constraint for the joint."
+    },
+    {
+      "name": "useConnectedAnchor",
+      "description": "Controls whether the connected anchor is used or not."
+    },
+    {
+      "name": "useLimits",
+      "description": "Should limits be placed on the range of rotation?"
+    },
+    {
+      "name": "useMotor",
+      "description": "Should the joint be rotated automatically by a motor torque?"
+    },
+    {
+      "name": "GetMotorTorque",
+      "description": "Gets the motor torque of the joint given the specified timestep."
+    },
+    {
+      "name": "Destroy",
+      "description": "Removes a GameObject, component, or asset."
+    },
+    {
+      "name": "DestroyImmediate",
+      "description": "Destroys the specified object immediately. Use with caution and in Edit mode only."
+    },
+    {
+      "name": "DontDestroyOnLoad",
+      "description": "Do not destroy the target Object when loading a new Scene."
+    },
+    {
+      "name": "FindAnyObjectByType",
+      "description": "Retrieves any active loaded object of Type type."
+    },
+    {
+      "name": "FindFirstObjectByType",
+      "description": "Retrieves the first active loaded object of Type type."
+    },
+    {
+      "name": "FindObjectsByType",
+      "description": "Retrieves a list of all loaded objects of Type type."
+    },
+    {
+      "name": "Instantiate",
+      "description": "Clones the object original and returns the clone."
+    },
+    {
+      "name": "InstantiateAsync",
+      "description": "Captures a snapshot of the original object (that must be related to some GameObject) and returns the AsyncInstantiateOperation."
+    }
+  ]
+}

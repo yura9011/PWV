@@ -1,0 +1,33 @@
+// Unity Class: AudioMixerGroup
+// Documentation: https://docs.unity3d.com/ScriptReference/Audio.AudioMixerGroup.html
+
+// Description: Object representing a group in the mixer.
+
+// Properties:
+// - audioMixer: Gain access to the AudioMixer that this AudioMixerGroup belongs to (Read Only).
+
+// Methods:
+// - GetInstanceID: Gets the instance ID of the object.
+// - ToString: Returns the name of the object.
+// - Destroy: Removes a GameObject, component, or asset.
+// - DestroyImmediate: Destroys the specified object immediately. Use with caution and in Edit mode only.
+// - DontDestroyOnLoad: Do not destroy the target Object when loading a new Scene.
+// - FindAnyObjectByType: Retrieves any active loaded object of Type type.
+// - FindFirstObjectByType: Retrieves the first active loaded object of Type type.
+// - FindObjectsByType: Retrieves a list of all loaded objects of Type type.
+// - Instantiate: Clones the object original and returns the clone.
+// - InstantiateAsync: Captures a snapshot of the original object (that must be related to some GameObject) and returns the
+
+public class AudioMixerGroup {
+    public var audioMixer;
+    public void GetInstanceID();
+    public void ToString();
+    public void Destroy();
+    public void DestroyImmediate();
+    public void DontDestroyOnLoad();
+    public void FindAnyObjectByType();
+    public void FindFirstObjectByType();
+    public void FindObjectsByType();
+    public void Instantiate();
+    public void InstantiateAsync();
+}

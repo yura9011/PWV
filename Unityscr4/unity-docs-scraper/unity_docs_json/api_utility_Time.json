@@ -1,0 +1,7 @@
+{
+  "name": "api_utility_Time",
+  "type": "api",
+  "description": "Provides an interface to get time information from Unity.",
+  "content": "// Unity Class: Time\n// Documentation: https://docs.unity3d.com/ScriptReference/Time.html\n\n// Description: Provides an interface to get time information from Unity.\n\n// Pseudo-code representation of Time\npublic class Time {\n}",
+  "properties": []
+}

@@ -1,0 +1,97 @@
+// Unity Class: LineRenderer
+// Documentation: https://docs.unity3d.com/ScriptReference/LineRenderer.html
+
+// Description: The line renderer is used to draw free-floating lines in 3D space.
+
+// Properties:
+// - alignment: Select whether the line will face the camera, or the orientation of the Transform Component.
+// - applyActiveColorSpace: Set whether colors will be converted appropriately before being passed to the GPU when using Linear Rendering.
+// - colorGradient: Set the color gradient describing the color of the line at various points along its length.
+// - endColor: Set the color at the end of the line.
+// - endWidth: Set the width at the end of the line.
+// - generateLightingData: Configures a line to generate Normals and Tangents. With this data, Scene lighting can affect the line via Normal Maps and the Unity Standard Shader, or your own custom-built Shaders.
+// - loop: Connect the start and end positions of the line together to form a continuous loop.
+// - maskInteraction: Specifies how the LineRenderer interacts with SpriteMask.
+// - numCapVertices: Set this to a value greater than 0, to get rounded corners on each end of the line. The default is 0.
+// - numCornerVertices: Set this to a value greater than 0, to get rounded corners between each segment of the line.
+// - positionCount: Set/get the number of vertices.
+// - shadowBias: Apply a shadow bias to prevent self-shadowing artifacts. The specified value is the proportion of the line width at each segment.
+// - startColor: Set the color at the start of the line.
+// - startWidth: Set the width at the start of the line.
+// - textureMode: Choose whether the U coordinate of the line texture is tiled or stretched.
+// - textureScale: A multiplier for the UV coordinates of the line texture.
+// - useWorldSpace: If enabled, the lines are defined in world space.
+// - widthCurve: Set the curve describing the width of the line at various points along its length.
+// - widthMultiplier: Set an overall multiplier that is applied to the LineRenderer.widthCurve to get the final width of the line.
+
+// Constructors:
+// - LineRenderer: Instead of using this constructor, either use GameObject.AddComponent<LineRenderer>(), or if you have an existing LineRenderer component on a GameObject, use GameObject.GetComponent<LineRenderer>().
+
+// Methods:
+// - BakeMesh: Creates a snapshot of LineRenderer and stores it in mesh.
+// - GetPosition: Get the position of a vertex in the line.
+// - GetPositions: Get the positions of all vertices in the line.
+// - SetPosition: Set the position of a vertex in the line.
+// - SetPositions: Set the positions of all vertices in the line.
+// - Simplify: Generates a simplified version of the original line by removing points that fall within the specified tolerance.
+// - Destroy: Removes a GameObject, component, or asset.
+// - DestroyImmediate: Destroys the specified object immediately. Use with caution and in Edit mode only.
+// - DontDestroyOnLoad: Do not destroy the target Object when loading a new Scene.
+// - FindAnyObjectByType: Retrieves any active loaded object of Type type.
+// - FindFirstObjectByType: Retrieves the first active loaded object of Type type.
+// - FindObjectsByType: Retrieves a list of all loaded objects of Type type.
+// - Instantiate: Clones the object original and returns the clone.
+// - InstantiateAsync: Captures a snapshot of the original object (that must be related to some GameObject) and returns the AsyncInstantiateOperation.
+
+// Code Examples:
+// Example 1:
+//   // Programatically add a LineRenderer component and draw a 3D line.
+//   using UnityEngine;public class LineRendererExample : MonoBehaviour
+//   {
+//       void Start()
+//       {
+//           // Add a LineRenderer component
+//           LineRenderer lineRenderer = gameObject.AddComponent<LineRenderer>();        // Set the material
+//           lineRenderer.material = new Material(Shader.Find("Sprites/Default"));        // Set the color
+//           lineRenderer.startColor = Color.red;
+//           lineRenderer.endColor = Color.green;        // Set the width
+//           lineRenderer.startWidth = 0.2f;
+//           lineRenderer.endWidth = 0.2f;        // Set the number of vertices
+//           lineRenderer.positionCount = 3;        // Set the positions of the vertices
+//           lineRenderer.SetPosition(0, new Vector3(0, 0, 0));
+//           lineRenderer.SetPosition(1, new Vector3(1, 1, 0));
+//           lineRenderer.SetPosition(2, new Vector3(2, 0, 0));
+//       }
+//   }
+
+public class LineRenderer {
+    public var alignment; // Select whether the line will face the camera, or the orientation of the Transfor
+    public var applyActiveColorSpace; // Set whether colors will be converted appropriately before being passed to the GP
+    public var colorGradient; // Set the color gradient describing the color of the line at various points along 
+    public var endColor; // Set the color at the end of the line.
+    public var endWidth; // Set the width at the end of the line.
+    public var generateLightingData; // Configures a line to generate Normals and Tangents. With this data, Scene lighti
+    public var loop; // Connect the start and end positions of the line together to form a continuous lo
+    public var maskInteraction; // Specifies how the LineRenderer interacts with SpriteMask.
+    public var numCapVertices; // Set this to a value greater than 0, to get rounded corners on each end of the li
+    public var numCornerVertices; // Set this to a value greater than 0, to get rounded corners between each segment 
+    public var positionCount; // Set/get the number of vertices.
+    public var shadowBias; // Apply a shadow bias to prevent self-shadowing artifacts. The specified value is 
+    public var startColor; // Set the color at the start of the line.
+    public var startWidth; // Set the width at the start of the line.
+    public var textureMode; // Choose whether the U coordinate of the line texture is tiled or stretched.
+    public void BakeMesh(); // Creates a snapshot of LineRenderer and stores it in mesh.
+    public void GetPosition(); // Get the position of a vertex in the line.
+    public void GetPositions(); // Get the positions of all vertices in the line.
+    public void SetPosition(); // Set the position of a vertex in the line.
+    public void SetPositions(); // Set the positions of all vertices in the line.
+    public void Simplify(); // Generates a simplified version of the original line by removing points that fall
+    public void Destroy(); // Removes a GameObject, component, or asset.
+    public void DestroyImmediate(); // Destroys the specified object immediately. Use with caution and in Edit mode onl
+    public void DontDestroyOnLoad(); // Do not destroy the target Object when loading a new Scene.
+    public void FindAnyObjectByType(); // Retrieves any active loaded object of Type type.
+    public void FindFirstObjectByType(); // Retrieves the first active loaded object of Type type.
+    public void FindObjectsByType(); // Retrieves a list of all loaded objects of Type type.
+    public void Instantiate(); // Clones the object original and returns the clone.
+    public void InstantiateAsync(); // Captures a snapshot of the original object (that must be related to some GameObj
+}

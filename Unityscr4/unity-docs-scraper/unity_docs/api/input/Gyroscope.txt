@@ -1,0 +1,23 @@
+// Unity Class: Gyroscope
+// Documentation: https://docs.unity3d.com/ScriptReference/Gyroscope.html
+
+// Description: Interface into the Gyroscope.
+
+// Properties:
+// - attitude: Returns the attitude (ie, orientation in space) of the device.
+// - enabled: Sets or retrieves the enabled status of this gyroscope.
+// - gravity: Returns the gravity acceleration vector expressed in the device's reference frame.
+// - rotationRate: Returns rotation rate as measured by the device's gyroscope.
+// - rotationRateUnbiased: Returns unbiased rotation rate as measured by the device's gyroscope.
+// - updateInterval: Sets or retrieves gyroscope interval in seconds.
+// - userAcceleration: Returns the acceleration that the user is giving to the device.
+
+public class Gyroscope {
+    public var attitude;
+    public var enabled;
+    public var gravity;
+    public var rotationRate;
+    public var rotationRateUnbiased;
+    public var updateInterval;
+    public var userAcceleration;
+}

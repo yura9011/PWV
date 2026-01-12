@@ -1,0 +1,12 @@
+{
+  "name": "api_networking_WWW",
+  "type": "api",
+  "description": "Simple access to web pages.",
+  "content": "// Unity Class: WWW\n// Documentation: https://docs.unity3d.com/ScriptReference/WWW.html\n\n// Description: Simple access to web pages.\n\n// Properties:\n// - keepWaiting: Indicates if coroutine should be kept suspended.\n\n// Code Examples:\n// Example 1:\n//   // Get the Unity logo as a texture from the Unity website\n\n//   using UnityEngine;\n\n//   using System.Collections;public class ExampleClass : MonoBehaviour\n\n//   {\n\n//       public string url = \"https://unity3d.com/files/images/ogimg.jpg\";\n\n//       IEnumerator Start()\n\n//       {\n\n//           using (WWW www = new WWW(url))\n\n//           {\n\n//               yield return www;\n\n//               Renderer renderer = GetComponent<Renderer>();\n\n//               renderer.material.mainTexture = www.texture;\n\n//           }\n\n//       }\n\n//   }\n\npublic class WWW {\n    public var keepWaiting; // Indicates if coroutine should be kept suspended.\n}",
+  "properties": [
+    {
+      "name": "keepWaiting",
+      "description": "Indicates if coroutine should be kept suspended."
+    }
+  ]
+}

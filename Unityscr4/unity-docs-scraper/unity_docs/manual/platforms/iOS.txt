@@ -1,0 +1,74 @@
+// Unity Manual: Platforms_iOS
+// URL: https://docs.unity3d.com/Manual/iphone.html
+
+Platform development
+iOS
+Deploy a QNX project
+Introducing iOS
+iOS
+This section of the User Manual contains information on Unity development for iOS.
+Topic
+Description
+Introducing iOS
+Introduces key concepts and workflows that are useful to understand before you begin to develop a Unity application for iOS.
+Getting started with iOS
+Explains how to set up a project for iOS development and introduces iOS-specific tools and settings.
+Developing for iOS
+Contains iOS-specific development information on topics such as input, in-app purchases, and debugging.
+Building and delivering for iOS
+Explains how to build and publish an iOS application.
+Additional resources and examples
+📖
+E-Book
+:
+Optimize your game performance for mobile, XR, and Web in Unity
+📖
+E-Book
+:
+Introduction to the Universal Render Pipeline for advanced Unity creators
+📖
+E-Book
+:
+Create popular shaders and visual effects with the Universal Render Pipeline
+📖
+E-Book
+:
+Ultimate guide to profiling Unity games
+📝
+How-to guide
+:
+Performance profiling tips for game developers
+📝
+How-to guide
+:
+Tools for profiling and debugging
+📝
+How-to guide
+:
+How to run automated tests for your games with the Unity Test Framework
+📖
+E-Book
+:
+Create virtual and mixed reality experiences in Unity
+📝
+How-to guide
+:
+Mobile optimization tips for technical artists - Part 1
+📝
+How-to guide
+:
+Mobile optimization tips for technical artists - Part 2
+⚙️
+Sample project
+:
+Dragon Crashers - UI Toolkit sample project
+⚙️
+Sample project
+:
+Gem Hunter Match - 2D sample project
+⚙️
+Sample project
+:
+Happy Harvest - 2D sample project
+Deploy a QNX project
+Introducing iOS

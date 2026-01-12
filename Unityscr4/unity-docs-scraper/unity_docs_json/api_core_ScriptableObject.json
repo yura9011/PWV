@@ -1,0 +1,28 @@
+{
+  "name": "api_core_ScriptableObject",
+  "type": "api",
+  "description": "A class you can derive from if you want to create objects that live independently of GameObjects.",
+  "content": "// Unity Class: ScriptableObject\n// Documentation: https://docs.unity3d.com/ScriptReference/ScriptableObject.html\n\n// Description: A class you can derive from if you want to create objects that live independently of GameObjects.\n\n// Properties:\n// - hideFlags: Should the object be hidden, saved with the Scene or modifiable by the user?\n// - name: The name of the object.\n\n// Methods:\n// - GetInstanceID: Gets the instance ID of the object.\n// - ToString: Returns the name of the object.\n// - CreateInstance: Creates an instance of a scriptable object.\n\n// Code Examples:\n// Example 1:\n//   using UnityEngine;[CreateAssetMenu]\n\n//   public class VehicleTypeInfo : ScriptableObject\n\n//   {\n\n//       // Class that represents a specific type of vehicle\n\n//       [Range(0.1f, 100f)]\n\n//       public float m_MaxSpeed = 0.1f;    [Range(0.1f, 10f)]\n\n//       public float m_MaxAcceration = 0.1f;    // This class could have many other vehicle parameters, such as Turning Radius, Range, Damage etc\n\n//   }\n// Example 2:\n//   using UnityEngine;\n\n//   using UnityEditor;public class VehicleInstance : MonoBehaviour\n\n//   {\n\n//       // Snippet of a MonoBehaviour that would control motion of a specific vehicle.\n\n//       // In PlayMode it accelerates up to the maximum speed permitted by its type    [Range(0f, 200f)]\n\n//       public float m_CurrentSpeed;    [Range(0f, 50f)]\n\n//       public float m_Acceleration;    // Reference to the ScriptableObject asset\n\n//       public VehicleTypeInfo m_VehicleType;    public void Initialize(VehicleTypeInfo vehicleType)\n\n//       {\n\n//           m_VehicleType = vehicleType;\n\n//           m_CurrentSpeed = 0f;\n\n//           m_Acceleration = Random.Range(0.05f, m_VehicleType.m_MaxAcceration);\n\n//       }    void Update()\n\n//       {\n\n//           m_CurrentSpeed += m_Acceleration * Time.deltaTime;        // Use parameter from the ScriptableObject to control the behaviour of the Vehicle\n\n//           if (m_VehicleType && m_VehicleType.m_MaxSpeed < m_CurrentSpeed)\n\n//               m_CurrentSpeed = m_VehicleType.m_MaxSpeed;        gameObject.transform.position += gameObject.transform.forward * Time.deltaTime * m_CurrentSpeed;\n\n//       }\n\n//   }public class ScriptableObjectVehicleExample\n\n//   {\n\n\npublic class ScriptableObject {\n    public var hideFlags; // Should the object be hidden, saved with the Scene or modifiable by the user?\n    public var name; // The name of the object.\n    public void GetInstanceID(); // Gets the instance ID of the object.\n    public void ToString(); // Returns the name of the object.\n    public void CreateInstance(); // Creates an instance of a scriptable object.\n}",
+  "properties": [
+    {
+      "name": "hideFlags",
+      "description": "Should the object be hidden, saved with the Scene or modifiable by the user?"
+    },
+    {
+      "name": "name",
+      "description": "The name of the object."
+    },
+    {
+      "name": "GetInstanceID",
+      "description": "Gets the instance ID of the object."
+    },
+    {
+      "name": "ToString",
+      "description": "Returns the name of the object."
+    },
+    {
+      "name": "CreateInstance",
+      "description": "Creates an instance of a scriptable object."
+    }
+  ]
+}

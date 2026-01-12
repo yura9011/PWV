@@ -1,0 +1,7 @@
+{
+  "name": "api_utility_Debug",
+  "type": "api",
+  "description": "Class containing methods to ease debugging while developing a game.",
+  "content": "// Unity Class: Debug\n// Documentation: https://docs.unity3d.com/ScriptReference/Debug.html\n\n// Description: Class containing methods to ease debugging while developing a game.\n\n// Pseudo-code representation of Debug\npublic class Debug {\n}",
+  "properties": []
+}

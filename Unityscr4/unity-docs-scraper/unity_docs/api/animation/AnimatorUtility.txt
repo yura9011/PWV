@@ -1,0 +1,8 @@
+// Unity Class: AnimatorUtility
+// Documentation: https://docs.unity3d.com/ScriptReference/AnimatorUtility.html
+
+// Description: Various utilities for animator manipulation.
+
+// Pseudo-code representation of AnimatorUtility
+public class AnimatorUtility {
+}

@@ -1,0 +1,29 @@
+// Unity Class: WWW
+// Documentation: https://docs.unity3d.com/ScriptReference/WWW.html
+
+// Description: Simple access to web pages.
+
+// Properties:
+// - keepWaiting: Indicates if coroutine should be kept suspended.
+
+// Code Examples:
+// Example 1:
+//   // Get the Unity logo as a texture from the Unity website
+//   using UnityEngine;
+//   using System.Collections;public class ExampleClass : MonoBehaviour
+//   {
+//       public string url = "https://unity3d.com/files/images/ogimg.jpg";
+//       IEnumerator Start()
+//       {
+//           using (WWW www = new WWW(url))
+//           {
+//               yield return www;
+//               Renderer renderer = GetComponent<Renderer>();
+//               renderer.material.mainTexture = www.texture;
+//           }
+//       }
+//   }
+
+public class WWW {
+    public var keepWaiting; // Indicates if coroutine should be kept suspended.
+}

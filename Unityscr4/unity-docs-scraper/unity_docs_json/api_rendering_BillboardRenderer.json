@@ -1,0 +1,88 @@
+{
+  "name": "api_rendering_BillboardRenderer",
+  "type": "api",
+  "description": "Renders a billboard from a BillboardAsset.",
+  "content": "// Unity Class: BillboardRenderer\n// Documentation: https://docs.unity3d.com/ScriptReference/BillboardRenderer.html\n\n// Description: Renders a billboard from a BillboardAsset.\n\n// Properties:\n// - billboard: The BillboardAsset to render.\n\n// Methods:\n// - BroadcastMessage: Calls the method named methodName on every MonoBehaviour in this game object or any of its children.\n// - CompareTag: Checks the GameObject's tag against the defined tag.\n// - GetComponent: Gets a reference to a component of type T on the same GameObject as the component specified.\n// - GetComponentInChildren: Gets a reference to a component of type T on the same GameObject as the component specified, or any \n// - GetComponentIndex: Gets the index of the component on its parent GameObject.\n// - GetComponentInParent: Gets a reference to a component of type T on the same GameObject as the component specified, or any \n// - GetComponents: Gets references to all components of type T on the same GameObject as the component specified.\n// - GetComponentsInChildren: Gets references to all components of type T on the same GameObject as the component specified, and a\n// - GetComponentsInParent: Gets references to all components of type T on the same GameObject as the component specified, and a\n// - SendMessage: Calls the method named methodName on every MonoBehaviour in this game object.\n// - SendMessageUpwards: Calls the method named methodName on every MonoBehaviour in this game object and on every ancestor o\n// - TryGetComponent: Gets the component of the specified type, if it exists.\n// - GetInstanceID: Gets the instance ID of the object.\n// - ToString: Returns the name of the object.\n// - GetClosestReflectionProbes: Returns an array of closest reflection probes with weights, weight shows how much influence the prob\n// - GetMaterials: Returns all the instantiated materials of this object.\n// - GetPropertyBlock: Get per-Renderer or per-Material property block.\n// - GetSharedMaterials: Returns all the shared materials of this object.\n// - HasPropertyBlock: Returns true if the Renderer has a material property block attached via SetPropertyBlock.\n// - ResetBounds: Reset custom world space bounds.\n// - ResetLocalBounds: Reset custom local space bounds.\n// - SetMaterials: Assigns the shared materials of this renderer using the list of materials provided.\n// - SetPropertyBlock: Lets you set or clear per-renderer or per-material parameter overrides.\n// - SetSharedMaterials: Assigns the shared materials of this renderer using the list of materials provided.\n// - Destroy: Removes a GameObject, component, or asset.\n\npublic class BillboardRenderer {\n    public var billboard;\n    public void BroadcastMessage();\n    public void CompareTag();\n    public void GetComponent();\n    public void GetComponentInChildren();\n    public void GetComponentIndex();\n    public void GetComponentInParent();\n    public void GetComponents();\n    public void GetComponentsInChildren();\n    public void GetComponentsInParent();\n    public void SendMessage();\n    public void SendMessageUpwards();\n    public void TryGetComponent();\n    public void GetInstanceID();\n    public void ToString();\n    public void GetClosestReflectionProbes();\n}",
+  "properties": [
+    {
+      "name": "billboard",
+      "description": "The BillboardAsset to render."
+    },
+    {
+      "name": "BroadcastMessage",
+      "description": "Calls the method named methodName on every MonoBehaviour in this game object or any of its children."
+    },
+    {
+      "name": "CompareTag",
+      "description": "Checks the GameObject's tag against the defined tag."
+    },
+    {
+      "name": "GetComponent",
+      "description": "Gets a reference to a component of type T on the same GameObject as the component specified."
+    },
+    {
+      "name": "GetComponentInChildren",
+      "description": "Gets a reference to a component of type T on the same GameObject as the component specified, or any "
+    },
+    {
+      "name": "GetComponentIndex",
+      "description": "Gets the index of the component on its parent GameObject."
+    },
+    {
+      "name": "GetComponentInParent",
+      "description": "Gets a reference to a component of type T on the same GameObject as the component specified, or any "
+    },
+    {
+      "name": "GetComponents",
+      "description": "Gets references to all components of type T on the same GameObject as the component specified."
+    },
+    {
+      "name": "GetComponentsInChildren",
+      "description": "Gets references to all components of type T on the same GameObject as the component specified, and a"
+    },
+    {
+      "name": "GetComponentsInParent",
+      "description": "Gets references to all components of type T on the same GameObject as the component specified, and a"
+    },
+    {
+      "name": "SendMessage",
+      "description": "Calls the method named methodName on every MonoBehaviour in this game object."
+    },
+    {
+      "name": "SendMessageUpwards",
+      "description": "Calls the method named methodName on every MonoBehaviour in this game object and on every ancestor o"
+    },
+    {
+      "name": "TryGetComponent",
+      "description": "Gets the component of the specified type, if it exists."
+    },
+    {
+      "name": "GetInstanceID",
+      "description": "Gets the instance ID of the object."
+    },
+    {
+      "name": "ToString",
+      "description": "Returns the name of the object."
+    },
+    {
+      "name": "GetClosestReflectionProbes",
+      "description": "Returns an array of closest reflection probes with weights, weight shows how much influence the prob"
+    },
+    {
+      "name": "GetMaterials",
+      "description": "Returns all the instantiated materials of this object."
+    },
+    {
+      "name": "GetPropertyBlock",
+      "description": "Get per-Renderer or per-Material property block."
+    },
+    {
+      "name": "GetSharedMaterials",
+      "description": "Returns all the shared materials of this object."
+    },
+    {
+      "name": "HasPropertyBlock",
+      "description": "Returns true if the Renderer has a material property block attached via SetPropertyBlock."
+    }
+  ]
+}

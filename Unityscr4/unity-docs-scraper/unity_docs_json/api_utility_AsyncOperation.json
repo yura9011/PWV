@@ -1,0 +1,24 @@
+{
+  "name": "api_utility_AsyncOperation",
+  "type": "api",
+  "description": "Suspends a coroutine until an asynchronous operation completes.",
+  "content": "// Unity Class: AsyncOperation\n// Documentation: https://docs.unity3d.com/ScriptReference/AsyncOperation.html\n\n// Description: Suspends a coroutine until an asynchronous operation completes.\n\n// Properties:\n// - allowSceneActivation: Allow Scenes to be activated as soon as it is ready.\n// - isDone: Has the operation finished? (Read Only)\n// - priority: Priority lets you tweak in which order async operation calls will be performed.\n// - progress: What's the operation's progress. (Read Only)\n\n// Code Examples:\n// Example 1:\n//   using System.Collections;\n\n//   using UnityEngine;public class ExampleClass : MonoBehaviour\n\n//   {\n\n//       public void Start()\n\n//       {\n\n//           StartCoroutine(Example_AsyncTests());\n\n//       }    public IEnumerator Example_AsyncTests()\n\n//       {\n\n//           Debug.Log(\"Start of AsyncLoad Example\");\n\n//           \n\n//           var load = UnityEngine.Resources.LoadAsync(\"\");\n\n//           yield return load;\n\n//           yield return null;\n\n//           \n\n//           Debug.Log(\"End of AsyncLoad Example\");\n\n//       }\n\n//   }\n\n// Pseudo-code representation of AsyncOperation\npublic class AsyncOperation {\n    public var allowSceneActivation; // Allow Scenes to be activated as soon as it is ready.\n    public var isDone; // Has the operation finished? (Read Only)\n    public var priority; // Priority lets you tweak in which order async operation calls will be performed.\n    public var progress; // What's the operation's progress. (Read Only)\n}",
+  "properties": [
+    {
+      "name": "allowSceneActivation",
+      "description": "Allow Scenes to be activated as soon as it is ready."
+    },
+    {
+      "name": "isDone",
+      "description": "Has the operation finished? (Read Only)"
+    },
+    {
+      "name": "priority",
+      "description": "Priority lets you tweak in which order async operation calls will be performed."
+    },
+    {
+      "name": "progress",
+      "description": "What's the operation's progress. (Read Only)"
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "name": "api_input_AccelerationEvent",
+  "type": "api",
+  "description": "Structure describing acceleration status of the device.",
+  "content": "// Unity Class: AccelerationEvent\n// Documentation: https://docs.unity3d.com/ScriptReference/AccelerationEvent.html\n\n// Description: Structure describing acceleration status of the device.\n\n// Properties:\n// - acceleration: Value of acceleration.\n// - deltaTime: Amount of time passed since last accelerometer measurement.\n\n// Pseudo-code representation of AccelerationEvent\npublic class AccelerationEvent {\n    public var acceleration; // Value of acceleration.\n    public var deltaTime; // Amount of time passed since last accelerometer measurement.\n}",
+  "properties": [
+    {
+      "name": "acceleration",
+      "description": "Value of acceleration."
+    },
+    {
+      "name": "deltaTime",
+      "description": "Amount of time passed since last accelerometer measurement."
+    }
+  ]
+}

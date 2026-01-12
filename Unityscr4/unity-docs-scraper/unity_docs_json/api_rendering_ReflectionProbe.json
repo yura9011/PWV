@@ -1,0 +1,88 @@
+{
+  "name": "api_rendering_ReflectionProbe",
+  "type": "api",
+  "description": "The reflection probe is used to capture the surroundings into a texture which is passed to the shaders and used for reflections.",
+  "content": "// Unity Class: ReflectionProbe\n// Documentation: https://docs.unity3d.com/ScriptReference/ReflectionProbe.html\n\n// Description: The reflection probe is used to capture the surroundings into a texture which is passed to the shaders and used for reflections.\n\n// Properties:\n// - backgroundColor: The color with which the texture of reflection probe will be cleared.\n// - bakedTexture: Reference to the baked texture of the reflection probe's surrounding.\n// - blendDistance: Distance around probe used for blending (used in deferred probes).\n// - bounds: The probe's world space axis-aligned bounding box in which the probe can contribute to reflections (\n// - boxProjection: Should this reflection probe use box projection?\n// - center: The center of the probe's bounding box in which the probe can contribute to reflections. The center \n// - clearFlags: How the reflection probe clears the background.\n// - cullingMask: This is used to render parts of the reflecion probe's surrounding selectively.\n// - customBakedTexture: Reference to the baked texture of the reflection probe's surrounding. Use this to assign custom refl\n// - farClipPlane: The far clipping plane distance when rendering the probe.\n// - hdr: Should this reflection probe use HDR rendering?\n// - importance: Reflection probe importance.\n// - intensity: The intensity modifier that is applied to the texture of reflection probe in the shader.\n// - mode: Should reflection probe texture be generated in the Editor (ReflectionProbeMode.Baked) or should pro\n// - nearClipPlane: The near clipping plane distance when rendering the probe.\n// - realtimeTexture: Reference to the real-time texture of the reflection probe's surroundings. Use this to assign a Rend\n// - refreshMode: Sets the way the probe will refresh.Additional resources: ReflectionProbeRefreshMode.\n// - renderDynamicObjects: Specifies whether Unity should render non-static GameObjects into the Reflection Probe. If you set t\n// - resolution: Resolution of the underlying reflection texture in pixels.\n// - shadowDistance: Shadow drawing distance when rendering the probe.\n// - size: The size of the probe's bounding box in which the probe can contribute to reflections. The size is i\n// - texture: Texture which is passed to the shader of the objects in the vicinity of the reflection probe (Read O\n// - textureHDRDecodeValues: HDR decode values of the reflection probe texture.\n// - timeSlicingMode: Sets this probe time-slicing modeAdditional resources: ReflectionProbeTimeSlicingMode.\n\n// Methods:\n// - IsFinishedRendering: Checks if a probe has finished a time-sliced render.\n// - RenderProbe: Refreshes the probe's cubemap.\n// - Reset: Revert all ReflectionProbe parameters to default.\n// - BlendCubemap: Utility method to blend 2 cubemaps into a target render texture.\n// - UpdateCachedState: Updates the culling system with the ReflectionProbe's current state. This ensures that Unity correct\n\npublic class ReflectionProbe {\n    public var backgroundColor;\n    public var bakedTexture;\n    public var blendDistance;\n    public var bounds;\n    public var boxProjection;\n    public var center;\n    public var clearFlags;\n    public var cullingMask;\n    public var customBakedTexture;\n    public var farClipPlane;\n    public var hdr;\n    public var importance;\n    public var intensity;\n    public var mode;\n    public var nearClipPlane;\n    public void IsFinishedRendering();\n    public void RenderProbe();\n    public void Reset();\n    public void BlendCubemap();\n    public void UpdateCachedState();\n}",
+  "properties": [
+    {
+      "name": "backgroundColor",
+      "description": "The color with which the texture of reflection probe will be cleared."
+    },
+    {
+      "name": "bakedTexture",
+      "description": "Reference to the baked texture of the reflection probe's surrounding."
+    },
+    {
+      "name": "blendDistance",
+      "description": "Distance around probe used for blending (used in deferred probes)."
+    },
+    {
+      "name": "bounds",
+      "description": "The probe's world space axis-aligned bounding box in which the probe can contribute to reflections ("
+    },
+    {
+      "name": "boxProjection",
+      "description": "Should this reflection probe use box projection?"
+    },
+    {
+      "name": "center",
+      "description": "The center of the probe's bounding box in which the probe can contribute to reflections. The center "
+    },
+    {
+      "name": "clearFlags",
+      "description": "How the reflection probe clears the background."
+    },
+    {
+      "name": "cullingMask",
+      "description": "This is used to render parts of the reflecion probe's surrounding selectively."
+    },
+    {
+      "name": "customBakedTexture",
+      "description": "Reference to the baked texture of the reflection probe's surrounding. Use this to assign custom refl"
+    },
+    {
+      "name": "farClipPlane",
+      "description": "The far clipping plane distance when rendering the probe."
+    },
+    {
+      "name": "hdr",
+      "description": "Should this reflection probe use HDR rendering?"
+    },
+    {
+      "name": "importance",
+      "description": "Reflection probe importance."
+    },
+    {
+      "name": "intensity",
+      "description": "The intensity modifier that is applied to the texture of reflection probe in the shader."
+    },
+    {
+      "name": "mode",
+      "description": "Should reflection probe texture be generated in the Editor (ReflectionProbeMode.Baked) or should pro"
+    },
+    {
+      "name": "nearClipPlane",
+      "description": "The near clipping plane distance when rendering the probe."
+    },
+    {
+      "name": "realtimeTexture",
+      "description": "Reference to the real-time texture of the reflection probe's surroundings. Use this to assign a Rend"
+    },
+    {
+      "name": "refreshMode",
+      "description": "Sets the way the probe will refresh.Additional resources: ReflectionProbeRefreshMode."
+    },
+    {
+      "name": "renderDynamicObjects",
+      "description": "Specifies whether Unity should render non-static GameObjects into the Reflection Probe. If you set t"
+    },
+    {
+      "name": "resolution",
+      "description": "Resolution of the underlying reflection texture in pixels."
+    },
+    {
+      "name": "shadowDistance",
+      "description": "Shadow drawing distance when rendering the probe."
+    }
+  ]
+}

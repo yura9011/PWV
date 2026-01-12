@@ -1,0 +1,88 @@
+{
+  "name": "api_ui_GUILayout",
+  "type": "api",
+  "description": "The GUILayout class is the interface for Unity gui with automatic layout. Unlike the standard GUI class which requires manual coordinates, GUILayout arranges controls based on their content and container.",
+  "content": "// Unity Class: GUILayout\n// Documentation: https://docs.unity3d.com/ScriptReference/GUILayout.html\n\n// Description: The GUILayout class is the interface for Unity gui with automatic layout. Unlike the standard GUI class which requires manual coordinates, GUILayout arranges controls based on their content and container.\n\n// Methods:\n// - BeginArea: Begin a GUILayout block of GUI controls in a fixed screen area.\n// - BeginHorizontal: Begin a Horizontal control group.\n// - BeginScrollView: Begin an automatically laid out scrollview.\n// - BeginVertical: Begin a vertical control group.\n// - Box: Make an auto-layout box.\n// - Button: Make a single press button.\n// - EndArea: Close a GUILayout block started with BeginArea.\n// - EndHorizontal: Close a group started with BeginHorizontal.\n// - EndScrollView: End a scroll view begun with a call to BeginScrollView.\n// - EndVertical: Close a group started with BeginVertical.\n// - ExpandHeight: Option passed to a control to allow or disallow vertical expansion.\n// - ExpandWidth: Option passed to a control to allow or disallow horizontal expansion.\n// - FlexibleSpace: Insert a flexible space element.\n// - Height: Option passed to a control to give it an absolute height.\n// - HorizontalScrollbar: Make a horizontal scrollbar.\n// - HorizontalSlider: A horizontal slider the user can drag to change a value between a min and a max.\n// - Label: Make an auto-layout label.\n// - MaxHeight: Option passed to a control to specify a maximum height.\n// - MaxWidth: Option passed to a control to specify a maximum width.\n// - MinHeight: Option passed to a control to specify a minimum height.\n// - MinWidth: Option passed to a control to specify a minimum width.\n// - PasswordField: Make a text field where the user can enter a password.\n// - RepeatButton: Make a repeating button. The button returns true as long as the user holds down the mouse.\n// - SelectionGrid: Make a Selection Grid.\n// - Space: Insert a space in the current layout group.\n// - TextArea: Make a multi-line text field where the user can edit a string.\n// - TextField: Make a single-line text field where the user can edit a string.\n// - Toggle: Make an on/off toggle button.\n// - Toolbar: Make a toolbar.\n// - VerticalScrollbar: Make a vertical scrollbar.\n// - VerticalSlider: A vertical slider the user can drag to change a value between a min and a max.\n// - Width: Option passed to a control to give it an absolute width.\n// - Window: Make a popup window that layouts its contents automatically.\n\n// Code Examples:\n// Example 1:\n//   // This example creates a simple UI using the IMGUI system.\n\n//   using UnityEngine;public class Example : MonoBehaviour\n\n//   {\n\n//       private string playerName = \"\";\n\n//       private int playerAge = 0;    void OnGUI()\n\n//       {\n\n//           // Begin a horizontal group\n\n//           GUILayout.BeginHorizontal();        // Add GUI elements that will be arranged horizontally\n\n//           GUILayout.Label(\"Name: \", GUILayout.Width(50));\n\n//           playerName = GUILayout.TextField(playerName, GUILayout.Width(100));        GUILayout.Label(\"Age: \", GUILayout.Width(40));\n\n//           playerAge = int.Parse(GUILayout.TextField(playerAge.ToString(), GUILayout.Width(30)));        // End the horizontal group\n\n//           GUILayout.EndHorizontal();\n\n//       }\n\n//   }\n\npublic class GUILayout {\n    public void BeginArea(); // Begin a GUILayout block of GUI controls in a fixed screen area.\n    public void BeginHorizontal(); // Begin a Horizontal control group.\n    public void BeginScrollView(); // Begin an automatically laid out scrollview.\n    public void BeginVertical(); // Begin a vertical control group.\n    public void Box(); // Make an auto-layout box.\n    public void Button(); // Make a single press button.\n    public void EndArea(); // Close a GUILayout block started with BeginArea.\n    public void EndHorizontal(); // Close a group started with BeginHorizontal.\n    public void EndScrollView(); // End a scroll view begun with a call to BeginScrollView.\n    public void EndVertical(); // Close a group started with BeginVertical.\n    public void ExpandHeight(); // Option passed to a control to allow or disallow vertical expansion.\n    public void ExpandWidth(); // Option passed to a control to allow or disallow horizontal expansion.\n    public void FlexibleSpace(); // Insert a flexible space element.\n    public void Height(); // Option passed to a control to give it an absolute height.\n    public void HorizontalScrollbar(); // Make a horizontal scrollbar.\n}",
+  "properties": [
+    {
+      "name": "BeginArea",
+      "description": "Begin a GUILayout block of GUI controls in a fixed screen area."
+    },
+    {
+      "name": "BeginHorizontal",
+      "description": "Begin a Horizontal control group."
+    },
+    {
+      "name": "BeginScrollView",
+      "description": "Begin an automatically laid out scrollview."
+    },
+    {
+      "name": "BeginVertical",
+      "description": "Begin a vertical control group."
+    },
+    {
+      "name": "Box",
+      "description": "Make an auto-layout box."
+    },
+    {
+      "name": "Button",
+      "description": "Make a single press button."
+    },
+    {
+      "name": "EndArea",
+      "description": "Close a GUILayout block started with BeginArea."
+    },
+    {
+      "name": "EndHorizontal",
+      "description": "Close a group started with BeginHorizontal."
+    },
+    {
+      "name": "EndScrollView",
+      "description": "End a scroll view begun with a call to BeginScrollView."
+    },
+    {
+      "name": "EndVertical",
+      "description": "Close a group started with BeginVertical."
+    },
+    {
+      "name": "ExpandHeight",
+      "description": "Option passed to a control to allow or disallow vertical expansion."
+    },
+    {
+      "name": "ExpandWidth",
+      "description": "Option passed to a control to allow or disallow horizontal expansion."
+    },
+    {
+      "name": "FlexibleSpace",
+      "description": "Insert a flexible space element."
+    },
+    {
+      "name": "Height",
+      "description": "Option passed to a control to give it an absolute height."
+    },
+    {
+      "name": "HorizontalScrollbar",
+      "description": "Make a horizontal scrollbar."
+    },
+    {
+      "name": "HorizontalSlider",
+      "description": "A horizontal slider the user can drag to change a value between a min and a max."
+    },
+    {
+      "name": "Label",
+      "description": "Make an auto-layout label."
+    },
+    {
+      "name": "MaxHeight",
+      "description": "Option passed to a control to specify a maximum height."
+    },
+    {
+      "name": "MaxWidth",
+      "description": "Option passed to a control to specify a maximum width."
+    },
+    {
+      "name": "MinHeight",
+      "description": "Option passed to a control to specify a minimum height."
+    }
+  ]
+}

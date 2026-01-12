@@ -1,0 +1,27 @@
+// Unity Class: Color32
+// Documentation: https://docs.unity3d.com/ScriptReference/Color32.html
+
+// Description: Representation of RGBA colors in 32 bit format.
+
+// Properties:
+// - a: Alpha component of the color.
+// - b: Blue component of the color.
+// - g: Green component of the color.
+// - r: Red component of the color.
+// - this[int]: Access the red (r), green (g), blue (b), and alpha (a) color components using [0], [1], [2], [3] respectively.
+
+// Constructors:
+// - Color32(): Constructs a new Color32 with given r, g, b, a components.
+
+// Methods:
+// - ToString(): Returns a formatted string for this color.
+
+// Pseudo-code representation of Color32
+public class Color32 {
+    public var a; // Alpha component of the color.
+    public var b; // Blue component of the color.
+    public var g; // Green component of the color.
+    public var r; // Red component of the color.
+    public var this[int]; // Access the red (r), green (g), blue (b), and alpha (a) color components using [0], [1], [2], [3] respectively.
+    public void ToString(); // Returns a formatted string for this color.
+}

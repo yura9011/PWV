@@ -1,0 +1,52 @@
+// Unity Class: VideoClip
+// Documentation: https://docs.unity3d.com/ScriptReference/Video.VideoClip.html
+
+// Description: A container for video assets that can be used in the Vide.VideoPlayer component.
+
+// Properties:
+// - audioTrackCount: Gets the number of audio tracks that are embedded in the video clip. (Read Only).
+// - frameCount: The length of the video clip in frames. (Read Only).
+// - frameRate: The frame rate of the clip in frames per second. (Read Only).
+// - height: The height of the images in the video clip in pixels. (Read Only).
+// - length: The length of the video clip in seconds. (Read Only).
+// - originalPath: Gets the original video clip file path as it was imported into Unity. (Read Only).
+// - pixelAspectRatioDenominator: Returns the denominator of the pixel aspect ratio (numerator:denominator). (Read Only).
+// - pixelAspectRatioNumerator: Returns the numerator of the pixel aspect ratio (numerator:denominator). (Read Only).
+// - sRGB: Whether the imported clip contains sRGB color data (Read Only).
+// - width: The width of the images in the video clip in pixels. (Read Only).
+
+// Methods:
+// - GetAudioChannelCount: Returns the number of channels in the audio track. For example, if the audio track is a stereo track
+// - GetAudioLanguage: Gets the language of the video clip’s audio tracks, if the audio tracks have an assigned language.
+// - GetAudioSampleRate: Get the audio track sampling rate in hertz (Hz).
+// - Destroy: Removes a GameObject, component, or asset.
+// - DestroyImmediate: Destroys the specified object immediately. Use with caution and in Edit mode only.
+// - DontDestroyOnLoad: Do not destroy the target Object when loading a new Scene.
+// - FindAnyObjectByType: Retrieves any active loaded object of Type type.
+// - FindFirstObjectByType: Retrieves the first active loaded object of Type type.
+// - FindObjectsByType: Retrieves a list of all loaded objects of Type type.
+// - Instantiate: Clones the object original and returns the clone.
+// - InstantiateAsync: Captures a snapshot of the original object (that must be related to some GameObject) and returns the
+
+public class VideoClip {
+    public var audioTrackCount;
+    public var frameCount;
+    public var frameRate;
+    public var height;
+    public var length;
+    public var originalPath;
+    public var pixelAspectRatioDenominator;
+    public var pixelAspectRatioNumerator;
+    public var sRGB;
+    public var width;
+    public void GetAudioChannelCount();
+    public void GetAudioLanguage();
+    public void GetAudioSampleRate();
+    public void Destroy();
+    public void DestroyImmediate();
+    public void DontDestroyOnLoad();
+    public void FindAnyObjectByType();
+    public void FindFirstObjectByType();
+    public void FindObjectsByType();
+    public void Instantiate();
+}

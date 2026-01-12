@@ -1,0 +1,80 @@
+{
+  "name": "api_physics2d_Joint2D",
+  "type": "api",
+  "description": "Parent class for joints to connect Rigidbody2D objects.",
+  "content": "// Unity Class: Joint2D\n// Documentation: https://docs.unity3d.com/ScriptReference/Joint2D.html\n\n// Description: Parent class for joints to connect Rigidbody2D objects.\n\n// Properties:\n// - attachedRigidbody: The Rigidbody2D attached to the Joint2D.\n// - breakAction: The action to take when the joint breaks the breakForce or breakTorque.\n// - breakForce: The force that needs to be applied for this joint to break.\n// - breakTorque: The torque that needs to be applied for this joint to break.\n// - connectedBody: The Rigidbody2D object to which the other end of the joint is attached (ie, the object without the joint component).\n// - enableCollision: Should the two Rigidbody2D connected with this joint collide with each other?\n// - reactionForce: Gets the reaction force of the joint.\n// - reactionTorque: Gets the reaction torque of the joint.\n\n// Methods:\n// - GetReactionForce: Gets the reaction force of the joint given the specified timeStep.\n// - GetReactionTorque: Gets the reaction torque of the joint given the specified timeStep.\n// - Destroy: Removes a GameObject, component, or asset.\n// - DestroyImmediate: Destroys the specified object immediately. Use with caution and in Edit mode only.\n// - DontDestroyOnLoad: Do not destroy the target Object when loading a new Scene.\n// - FindAnyObjectByType: Retrieves any active loaded object of Type type.\n// - FindFirstObjectByType: Retrieves the first active loaded object of Type type.\n// - FindObjectsByType: Retrieves a list of all loaded objects of Type type.\n// - Instantiate: Clones the object original and returns the clone.\n// - InstantiateAsync: Captures a snapshot of the original object (that must be related to some GameObject) and returns the AsyncInstantiateOperation.\n\npublic class Joint2D {\n    public var attachedRigidbody; // The Rigidbody2D attached to the Joint2D.\n    public var breakAction; // The action to take when the joint breaks the breakForce or breakTorque.\n    public var breakForce; // The force that needs to be applied for this joint to break.\n    public var breakTorque; // The torque that needs to be applied for this joint to break.\n    public var connectedBody; // The Rigidbody2D object to which the other end of the joint is attached (ie, the \n    public var enableCollision; // Should the two Rigidbody2D connected with this joint collide with each other?\n    public var reactionForce; // Gets the reaction force of the joint.\n    public var reactionTorque; // Gets the reaction torque of the joint.\n    public void GetReactionForce(); // Gets the reaction force of the joint given the specified timeStep.\n    public void GetReactionTorque(); // Gets the reaction torque of the joint given the specified timeStep.\n    public void Destroy(); // Removes a GameObject, component, or asset.\n    public void DestroyImmediate(); // Destroys the specified object immediately. Use with caution and in Edit mode onl\n    public void DontDestroyOnLoad(); // Do not destroy the target Object when loading a new Scene.\n    public void FindAnyObjectByType(); // Retrieves any active loaded object of Type type.\n    public void FindFirstObjectByType(); // Retrieves the first active loaded object of Type type.\n    public void FindObjectsByType(); // Retrieves a list of all loaded objects of Type type.\n    public void Instantiate(); // Clones the object original and returns the clone.\n    public void InstantiateAsync(); // Captures a snapshot of the original object (that must be related to some GameObj\n}",
+  "properties": [
+    {
+      "name": "attachedRigidbody",
+      "description": "The Rigidbody2D attached to the Joint2D."
+    },
+    {
+      "name": "breakAction",
+      "description": "The action to take when the joint breaks the breakForce or breakTorque."
+    },
+    {
+      "name": "breakForce",
+      "description": "The force that needs to be applied for this joint to break."
+    },
+    {
+      "name": "breakTorque",
+      "description": "The torque that needs to be applied for this joint to break."
+    },
+    {
+      "name": "connectedBody",
+      "description": "The Rigidbody2D object to which the other end of the joint is attached (ie, the object without the joint component)."
+    },
+    {
+      "name": "enableCollision",
+      "description": "Should the two Rigidbody2D connected with this joint collide with each other?"
+    },
+    {
+      "name": "reactionForce",
+      "description": "Gets the reaction force of the joint."
+    },
+    {
+      "name": "reactionTorque",
+      "description": "Gets the reaction torque of the joint."
+    },
+    {
+      "name": "GetReactionForce",
+      "description": "Gets the reaction force of the joint given the specified timeStep."
+    },
+    {
+      "name": "GetReactionTorque",
+      "description": "Gets the reaction torque of the joint given the specified timeStep."
+    },
+    {
+      "name": "Destroy",
+      "description": "Removes a GameObject, component, or asset."
+    },
+    {
+      "name": "DestroyImmediate",
+      "description": "Destroys the specified object immediately. Use with caution and in Edit mode only."
+    },
+    {
+      "name": "DontDestroyOnLoad",
+      "description": "Do not destroy the target Object when loading a new Scene."
+    },
+    {
+      "name": "FindAnyObjectByType",
+      "description": "Retrieves any active loaded object of Type type."
+    },
+    {
+      "name": "FindFirstObjectByType",
+      "description": "Retrieves the first active loaded object of Type type."
+    },
+    {
+      "name": "FindObjectsByType",
+      "description": "Retrieves a list of all loaded objects of Type type."
+    },
+    {
+      "name": "Instantiate",
+      "description": "Clones the object original and returns the clone."
+    },
+    {
+      "name": "InstantiateAsync",
+      "description": "Captures a snapshot of the original object (that must be related to some GameObject) and returns the AsyncInstantiateOperation."
+    }
+  ]
+}

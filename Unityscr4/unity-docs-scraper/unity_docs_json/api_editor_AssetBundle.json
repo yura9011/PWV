@@ -1,0 +1,88 @@
+{
+  "name": "api_editor_AssetBundle",
+  "type": "api",
+  "description": "API for accessing the content of AssetBundle files.",
+  "content": "// Unity Class: AssetBundle\n// Documentation: https://docs.unity3d.com/ScriptReference/AssetBundle.html\n\n// Description: API for accessing the content of AssetBundle files.\n\n// Properties:\n// - isStreamedSceneAssetBundle: Return true if the AssetBundle contains Unity Scene files\n\n// Methods:\n// - Contains: Check if an AssetBundle contains a specific object.\n// - GetAllAssetNames: Return all Asset names in the AssetBundle.\n// - GetAllScenePaths: Return all the names of Scenes in the AssetBundle.\n// - LoadAllAssets: Loads all Assets contained in the AssetBundle synchronously.\n// - LoadAllAssetsAsync: Loads all Assets contained in the AssetBundle asynchronously.\n// - LoadAsset: Synchronously loads an Asset from the AssetBundle.\n// - LoadAssetAsync: Asynchronously loads an Asset from the bundle.\n// - LoadAssetWithSubAssets: Loads Asset and sub Assets from the AssetBundle synchronously.\n// - LoadAssetWithSubAssetsAsync: Loads Asset and sub Assets from the AssetBundle asynchronously.\n// - Unload: Unloads an AssetBundle freeing its data.\n// - UnloadAsync: Unloads assets in the bundle.\n// - GetAllLoadedAssetBundles: Get an enumeration of all the currently loaded AssetBundles.\n// - LoadFromFile: Synchronously loads an AssetBundle from a file on disk.\n// - LoadFromFileAsync: Asynchronously loads an AssetBundle from a file on disk.\n// - LoadFromMemory: Synchronously load an AssetBundle from a memory region.\n// - LoadFromMemoryAsync: Asynchronously load an AssetBundle from a memory region.\n// - LoadFromStream: Synchronously loads an AssetBundle from a managed Stream.\n// - LoadFromStreamAsync: Asynchronously loads an AssetBundle from a managed Stream.\n// - RecompressAssetBundleAsync: Asynchronously recompress a downloaded/stored AssetBundle from one BuildCompression to another.\n// - UnloadAllAssetBundles: Unloads all currently loaded AssetBundles.\n\n// Code Examples:\n// Example 1:\n//   using System.Collections;\n\n//   using UnityEngine;\n\n//   using UnityEngine.Networking;public class SampleBehaviour : MonoBehaviour\n\n//   {\n\n//       IEnumerator Start()\n\n//       {\n\n//           var uwr = UnityWebRequestAssetBundle.GetAssetBundle(\"https://myserver/myBundle.unity3d\");\n\n//           yield return uwr.SendWebRequest();        // Get an asset from the bundle and instantiate it.\n\n//           AssetBundle bundle = DownloadHandlerAssetBundle.GetContent(uwr);\n\n//           var loadAsset = bundle.LoadAssetAsync<GameObject>(\"Assets/Players/MainPlayer.prefab\");\n\n//           yield return loadAsset;        Instantiate(loadAsset.asset);        bundle.Unload(true);\n\n//       }\n\n//   }\n// Example 2:\n//   //This example shows how to build a scene into an AssetBundle, and then build a Player with that AssetBundle included.\n\n//   //When the Player starts it loads the scene and then unloads after a few seconds.\n\n//   //\n\n//   //To try this example:\n\n//   // - Save it into a file, for example \"Assets/AssetBundleSceneLoader.cs\".  The source file name needs to match the name of the MonoBehaviour.\n\n//   // - From the Editor Menu select \"Example\" / \"Scene in AssetBundle Example\".\n\n//   //\n\n//   //It is also possible to try it in Play mode in the Editor:\n\n//   // - Run the menu at least once to create the scenes and AssetBundle\n\n//   // - Open \"Assets/Scenes/StartingScene.unity\"\n\n//   // - Enter Play modeusing System.IO;\n\n//   using System.Collections;\n\n//   using UnityEngine;\n\n//   using UnityEngine.SceneManagement;#if UNITY_EDITOR\n\n//   using UnityEditor;\n\n//   using UnityEditor.Build.Reporting;\n\n//   using UnityEditor.SceneManagement;\n\n//   #endifpublic class Constants\n\n//   {\n\n//       // Scene in the project that is intended for an AssetBundle\n\n\npublic class AssetBundle {\n    public var isStreamedSceneAssetBundle; // Return true if the AssetBundle contains Unity Scene files\n    public void Contains(); // Check if an AssetBundle contains a specific object.\n    public void GetAllAssetNames(); // Return all Asset names in the AssetBundle.\n    public void GetAllScenePaths(); // Return all the names of Scenes in the AssetBundle.\n    public void LoadAllAssets(); // Loads all Assets contained in the AssetBundle synchronously.\n    public void LoadAllAssetsAsync(); // Loads all Assets contained in the AssetBundle asynchronously.\n    public void LoadAsset(); // Synchronously loads an Asset from the AssetBundle.\n    public void LoadAssetAsync(); // Asynchronously loads an Asset from the bundle.\n    public void LoadAssetWithSubAssets(); // Loads Asset and sub Assets from the AssetBundle synchronously.\n    public void LoadAssetWithSubAssetsAsync(); // Loads Asset and sub Assets from the AssetBundle asynchronously.\n    public void Unload(); // Unloads an AssetBundle freeing its data.\n    public void UnloadAsync(); // Unloads assets in the bundle.\n    public void GetAllLoadedAssetBundles(); // Get an enumeration of all the currently loaded AssetBundles.\n    public void LoadFromFile(); // Synchronously loads an AssetBundle from a file on disk.\n    public void LoadFromFileAsync(); // Asynchronously loads an AssetBundle from a file on disk.\n    public void LoadFromMemory(); // Synchronously load an AssetBundle from a memory region.\n}",
+  "properties": [
+    {
+      "name": "isStreamedSceneAssetBundle",
+      "description": "Return true if the AssetBundle contains Unity Scene files"
+    },
+    {
+      "name": "Contains",
+      "description": "Check if an AssetBundle contains a specific object."
+    },
+    {
+      "name": "GetAllAssetNames",
+      "description": "Return all Asset names in the AssetBundle."
+    },
+    {
+      "name": "GetAllScenePaths",
+      "description": "Return all the names of Scenes in the AssetBundle."
+    },
+    {
+      "name": "LoadAllAssets",
+      "description": "Loads all Assets contained in the AssetBundle synchronously."
+    },
+    {
+      "name": "LoadAllAssetsAsync",
+      "description": "Loads all Assets contained in the AssetBundle asynchronously."
+    },
+    {
+      "name": "LoadAsset",
+      "description": "Synchronously loads an Asset from the AssetBundle."
+    },
+    {
+      "name": "LoadAssetAsync",
+      "description": "Asynchronously loads an Asset from the bundle."
+    },
+    {
+      "name": "LoadAssetWithSubAssets",
+      "description": "Loads Asset and sub Assets from the AssetBundle synchronously."
+    },
+    {
+      "name": "LoadAssetWithSubAssetsAsync",
+      "description": "Loads Asset and sub Assets from the AssetBundle asynchronously."
+    },
+    {
+      "name": "Unload",
+      "description": "Unloads an AssetBundle freeing its data."
+    },
+    {
+      "name": "UnloadAsync",
+      "description": "Unloads assets in the bundle."
+    },
+    {
+      "name": "GetAllLoadedAssetBundles",
+      "description": "Get an enumeration of all the currently loaded AssetBundles."
+    },
+    {
+      "name": "LoadFromFile",
+      "description": "Synchronously loads an AssetBundle from a file on disk."
+    },
+    {
+      "name": "LoadFromFileAsync",
+      "description": "Asynchronously loads an AssetBundle from a file on disk."
+    },
+    {
+      "name": "LoadFromMemory",
+      "description": "Synchronously load an AssetBundle from a memory region."
+    },
+    {
+      "name": "LoadFromMemoryAsync",
+      "description": "Asynchronously load an AssetBundle from a memory region."
+    },
+    {
+      "name": "LoadFromStream",
+      "description": "Synchronously loads an AssetBundle from a managed Stream."
+    },
+    {
+      "name": "LoadFromStreamAsync",
+      "description": "Asynchronously loads an AssetBundle from a managed Stream."
+    },
+    {
+      "name": "RecompressAssetBundleAsync",
+      "description": "Asynchronously recompress a downloaded/stored AssetBundle from one BuildCompression to another."
+    }
+  ]
+}

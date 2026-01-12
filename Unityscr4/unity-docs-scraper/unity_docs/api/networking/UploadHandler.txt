@@ -1,0 +1,19 @@
+// Unity Class: UploadHandler
+// Documentation: https://docs.unity3d.com/ScriptReference/Networking.UploadHandler.html
+
+// Description: Helper object for UnityWebRequests. Manages the buffering and transmission of body data during HTTP requests.
+
+// Properties:
+// - contentType: Determines the default Content-Type header which will be transmitted with the outbound HTTP request.
+// - data: The raw data which will be transmitted to the remote server as body data. (Read Only)
+// - progress: Returns the proportion of data uploaded to the remote server compared to the total amount of data to
+
+// Methods:
+// - Dispose: Signals that this UploadHandler is no longer being used, and should clean up any resources it is usi
+
+public class UploadHandler {
+    public var contentType;
+    public var data;
+    public var progress;
+    public void Dispose();
+}

@@ -1,0 +1,58 @@
+// Unity Class: RenderSettings
+// Documentation: https://docs.unity3d.com/ScriptReference/RenderSettings.html
+
+// Description: The Render Settings contain values for a range of visual elements in your Scene, like fog and ambient light.
+
+// Properties:
+// - hideFlags: Should the object be hidden, saved with the Scene or modifiable by the user?
+// - name: The name of the object.
+
+// Methods:
+// - GetInstanceID: Gets the instance ID of the object.
+// - ToString: Returns the name of the object.
+// - Destroy: Removes a GameObject, component, or asset.
+// - DestroyImmediate: Destroys the specified object immediately. Use with caution and in Edit mode only.
+// - DontDestroyOnLoad: Do not destroy the target Object when loading a new Scene.
+// - FindAnyObjectByType: Retrieves any active loaded object of Type type.
+// - FindFirstObjectByType: Retrieves the first active loaded object of Type type.
+// - FindObjectsByType: Retrieves a list of all loaded objects of Type type.
+// - Instantiate: Clones the object original and returns the clone.
+// - InstantiateAsync: Captures a snapshot of the original object (that must be related to some GameObject) and returns the AsyncInstantiateOperation.
+
+// Code Examples:
+// Example 1:
+//   using UnityEngine;public class FogZone : MonoBehaviour
+//   {
+//       public Camera mainCamera;
+//       public Vector3 zoneCenter = Vector3.zero;
+//       public Vector3 zoneSize = new Vector3(10, 10, 10);
+//       public Color fogColorInside = Color.red;
+//       public Color fogColorOutside = Color.white;
+//       public float transitionRadius = 5.0f;    Bounds zoneBounds;    void Start()
+//       {
+//           // Create a bounds object based on the center and size of the zone
+//           zoneBounds = new Bounds(zoneCenter, zoneSize);
+//       }    void Update()
+//       {
+//           if (mainCamera == null) return;        // Calculate the closest point on the box to the camera
+//           Vector3 closestPoint = zoneBounds.ClosestPoint(mainCamera.transform.position);
+//           float distanceToZone = Vector3.Distance(mainCamera.transform.position, closestPoint);        // Determine the interpolation factor based on the transition radius
+//           float t = Mathf.Clamp01(distanceToZone / transitionRadius);        // Interpolate between the inside and outside fog colors
+//           RenderSettings.fogColor = Color.Lerp(fogColorInside, fogColorOutside, t);
+//       }
+//   }
+
+public class RenderSettings {
+    public var hideFlags; // Should the object be hidden, saved with the Scene or modifiable by the user?
+    public var name; // The name of the object.
+    public void GetInstanceID(); // Gets the instance ID of the object.
+    public void ToString(); // Returns the name of the object.
+    public void Destroy(); // Removes a GameObject, component, or asset.
+    public void DestroyImmediate(); // Destroys the specified object immediately. Use with caution and in Edit mode onl
+    public void DontDestroyOnLoad(); // Do not destroy the target Object when loading a new Scene.
+    public void FindAnyObjectByType(); // Retrieves any active loaded object of Type type.
+    public void FindFirstObjectByType(); // Retrieves the first active loaded object of Type type.
+    public void FindObjectsByType(); // Retrieves a list of all loaded objects of Type type.
+    public void Instantiate(); // Clones the object original and returns the clone.
+    public void InstantiateAsync(); // Captures a snapshot of the original object (that must be related to some GameObj
+}

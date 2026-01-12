@@ -1,0 +1,88 @@
+{
+  "name": "api_physics_Joint",
+  "type": "api",
+  "description": "Joint is the base class for all joints.",
+  "content": "// Unity Class: Joint\n// Documentation: https://docs.unity3d.com/ScriptReference/Joint.html\n\n// Description: Joint is the base class for all joints.\n\n// Properties:\n// - anchor: The Position of the anchor around which the joints motion is constrained.\n// - autoConfigureConnectedAnchor: Should the connectedAnchor be calculated automatically?\n// - axis: The Direction of the axis around which the body is constrained.\n// - breakForce: The force that needs to be applied for this joint to break.\n// - breakTorque: The torque that needs to be applied for this joint to break. To be able to break, a joint must be _Locked_ or _Limited_ on the axis of rotation where the torque is being applied. This means that some joints cannot break, such as an unconstrained Configurable Joint.\n// - connectedAnchor: Position of the anchor relative to the connected Rigidbody.\n// - connectedArticulationBody: A reference to an articulation body this joint connects to.\n// - connectedBody: A reference to another rigidbody this joint connects to.\n// - connectedMassScale: The scale to apply to the inverse mass and inertia tensor of the connected body prior to solving the constraints.\n// - currentForce: The force applied by the solver to satisfy all constraints.\n// - currentTorque: The torque applied by the solver to satisfy all constraints.\n// - enableCollision: Enable collision between bodies connected with the joint.\n// - enablePreprocessing: Toggle preprocessing for this joint.\n// - massScale: The scale to apply to the inverse mass and inertia tensor of the body prior to solving the constraints.\n\n// Methods:\n// - BroadcastMessage: Calls the method named methodName on every MonoBehaviour in this game object or any of its children.\n// - CompareTag: Checks the GameObject's tag against the defined tag.\n// - GetComponent: Gets a reference to a component of type T on the same GameObject as the component specified.\n// - GetComponentInChildren: Gets a reference to a component of type T on the same GameObject as the component specified, or any child of the GameObject.\n// - GetComponentIndex: Gets the index of the component on its parent GameObject.\n// - GetComponentInParent: Gets a reference to a component of type T on the same GameObject as the component specified, or any parent of the GameObject.\n// - GetComponents: Gets references to all components of type T on the same GameObject as the component specified.\n// - GetComponentsInChildren: Gets references to all components of type T on the same GameObject as the component specified, and any child of the GameObject.\n// - GetComponentsInParent: Gets references to all components of type T on the same GameObject as the component specified, and any parent of the GameObject.\n// - SendMessage: Calls the method named methodName on every MonoBehaviour in this game object.\n// - SendMessageUpwards: Calls the method named methodName on every MonoBehaviour in this game object and on every ancestor of the behaviour.\n// - TryGetComponent: Gets the component of the specified type, if it exists.\n// - GetInstanceID: Gets the instance ID of the object.\n// - ToString: Returns the name of the object.\n// - Destroy: Removes a GameObject, component, or asset.\n// - DestroyImmediate: Destroys the specified object immediately. Use with caution and in Edit mode only.\n// - DontDestroyOnLoad: Do not destroy the target Object when loading a new Scene.\n// - FindAnyObjectByType: Retrieves any active loaded object of Type type.\n// - FindFirstObjectByType: Retrieves the first active loaded object of Type type.\n// - FindObjectsByType: Retrieves a list of all loaded objects of Type type.\n// - Instantiate: Clones the object original and returns the clone.\n// - InstantiateAsync: Captures a snapshot of the original object (that must be related to some GameObject) and returns the AsyncInstantiateOperation.\n\npublic class Joint {\n    public var anchor; // The Position of the anchor around which the joints motion is constrained.\n    public var autoConfigureConnectedAnchor; // Should the connectedAnchor be calculated automatically?\n    public var axis; // The Direction of the axis around which the body is constrained.\n    public var breakForce; // The force that needs to be applied for this joint to break.\n    public var breakTorque; // The torque that needs to be applied for this joint to break. To be able to break\n    public var connectedAnchor; // Position of the anchor relative to the connected Rigidbody.\n    public var connectedArticulationBody; // A reference to an articulation body this joint connects to.\n    public var connectedBody; // A reference to another rigidbody this joint connects to.\n    public var connectedMassScale; // The scale to apply to the inverse mass and inertia tensor of the connected body \n    public var currentForce; // The force applied by the solver to satisfy all constraints.\n    public var currentTorque; // The torque applied by the solver to satisfy all constraints.\n    public var enableCollision; // Enable collision between bodies connected with the joint.\n    public var enablePreprocessing; // Toggle preprocessing for this joint.\n    public var massScale; // The scale to apply to the inverse mass and inertia tensor of the body prior to s\n    public void BroadcastMessage(); // Calls the method named methodName on every MonoBehaviour in this game object or \n    public void CompareTag(); // Checks the GameObject's tag against the defined tag.\n    public void GetComponent(); // Gets a reference to a component of type T on the same GameObject as the componen\n    public void GetComponentInChildren(); // Gets a reference to a component of type T on the same GameObject as the componen\n    public void GetComponentIndex(); // Gets the index of the component on its parent GameObject.\n    public void GetComponentInParent(); // Gets a reference to a component of type T on the same GameObject as the componen\n    public void GetComponents(); // Gets references to all components of type T on the same GameObject as the compon\n    public void GetComponentsInChildren(); // Gets references to all components of type T on the same GameObject as the compon\n    public void GetComponentsInParent(); // Gets references to all components of type T on the same GameObject as the compon\n    public void SendMessage(); // Calls the method named methodName on every MonoBehaviour in this game object.\n    public void SendMessageUpwards(); // Calls the method named methodName on every MonoBehaviour in this game object and\n    public void TryGetComponent(); // Gets the component of the specified type, if it exists.\n    public void GetInstanceID(); // Gets the instance ID of the object.\n    public void ToString(); // Returns the name of the object.\n    public void Destroy(); // Removes a GameObject, component, or asset.\n}",
+  "properties": [
+    {
+      "name": "anchor",
+      "description": "The Position of the anchor around which the joints motion is constrained."
+    },
+    {
+      "name": "autoConfigureConnectedAnchor",
+      "description": "Should the connectedAnchor be calculated automatically?"
+    },
+    {
+      "name": "axis",
+      "description": "The Direction of the axis around which the body is constrained."
+    },
+    {
+      "name": "breakForce",
+      "description": "The force that needs to be applied for this joint to break."
+    },
+    {
+      "name": "breakTorque",
+      "description": "The torque that needs to be applied for this joint to break. To be able to break, a joint must be _Locked_ or _Limited_ on the axis of rotation where the torque is being applied. This means that some joints cannot break, such as an unconstrained Configurable Joint."
+    },
+    {
+      "name": "connectedAnchor",
+      "description": "Position of the anchor relative to the connected Rigidbody."
+    },
+    {
+      "name": "connectedArticulationBody",
+      "description": "A reference to an articulation body this joint connects to."
+    },
+    {
+      "name": "connectedBody",
+      "description": "A reference to another rigidbody this joint connects to."
+    },
+    {
+      "name": "connectedMassScale",
+      "description": "The scale to apply to the inverse mass and inertia tensor of the connected body prior to solving the constraints."
+    },
+    {
+      "name": "currentForce",
+      "description": "The force applied by the solver to satisfy all constraints."
+    },
+    {
+      "name": "currentTorque",
+      "description": "The torque applied by the solver to satisfy all constraints."
+    },
+    {
+      "name": "enableCollision",
+      "description": "Enable collision between bodies connected with the joint."
+    },
+    {
+      "name": "enablePreprocessing",
+      "description": "Toggle preprocessing for this joint."
+    },
+    {
+      "name": "massScale",
+      "description": "The scale to apply to the inverse mass and inertia tensor of the body prior to solving the constraints."
+    },
+    {
+      "name": "BroadcastMessage",
+      "description": "Calls the method named methodName on every MonoBehaviour in this game object or any of its children."
+    },
+    {
+      "name": "CompareTag",
+      "description": "Checks the GameObject's tag against the defined tag."
+    },
+    {
+      "name": "GetComponent",
+      "description": "Gets a reference to a component of type T on the same GameObject as the component specified."
+    },
+    {
+      "name": "GetComponentInChildren",
+      "description": "Gets a reference to a component of type T on the same GameObject as the component specified, or any child of the GameObject."
+    },
+    {
+      "name": "GetComponentIndex",
+      "description": "Gets the index of the component on its parent GameObject."
+    },
+    {
+      "name": "GetComponentInParent",
+      "description": "Gets a reference to a component of type T on the same GameObject as the component specified, or any parent of the GameObject."
+    }
+  ]
+}

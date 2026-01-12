@@ -1,0 +1,62 @@
+// Unity Class: Shader
+// Documentation: https://docs.unity3d.com/ScriptReference/Shader.html
+
+// Description: Shader scripts used for all rendering.
+
+// Properties:
+// - isSupported: Can this shader run on the end-users graphics card? (Read Only)
+// - keywordSpace: The local keyword space of this shader.
+// - maximumLOD: Shader LOD level for this shader.
+// - passCount: Returns the number of shader passes on the active SubShader.
+// - renderQueue: The default render queue for this shader. (Read Only)
+// - subshaderCount: Returns the number of SubShaders in this shader.
+
+// Methods:
+// - FindPassTagValue(): Searches for the tag specified by tagName on the shader's active SubShader and returns the value of the tag.
+// - FindPropertyIndex(): Finds the index of a shader property by its name.
+// - FindSubshaderTagValue(): Searches for the tag specified by tagName on the SubShader specified by subshaderIndex and returns the value of the tag.
+// - FindTextureStack(): Find the name of a texture stack a texture belongs too.
+// - GetDependency(): Returns the dependency shader.
+// - GetPassCountInSubshader(): Returns the number of passes in the given SubShader.
+// - GetPropertyAttributes(): Returns an array of strings containing attributes of the shader property at the specified index.
+// - GetPropertyCount(): Returns the number of properties in this Shader.
+// - GetPropertyDefaultFloatValue(): Returns the default float value of the shader property at the specified index.
+// - GetPropertyDefaultIntValue(): Returns the default int value of the shader property at the specified index.
+// - GetPropertyDefaultVectorValue(): Returns the default Vector4 value of the shader property at the specified index.
+// - GetPropertyDescription(): Returns the description string of the shader property at the specified index.
+// - GetPropertyFlags(): Returns the ShaderPropertyFlags of the shader property at the specified index.
+// - GetPropertyName(): Returns the name of the shader property at the specified index.
+// - GetPropertyNameId(): Returns the nameId of the shader property at the specified index.
+// - GetPropertyRangeLimits(): Returns the min and max limits for a Range property at the specified index.
+// - GetPropertyTextureDefaultName(): Returns the default Texture name of a Texture shader property at the specified index.
+// - GetPropertyTextureDimension(): Returns the TextureDimension of a Texture shader property at the specified index.
+// - GetPropertyType(): Returns the ShaderPropertyType of the property at the specified index.
+
+// Pseudo-code representation of Shader
+public class Shader {
+    public var isSupported; // Can this shader run on the end-users graphics card? (Read Only)
+    public var keywordSpace; // The local keyword space of this shader.
+    public var maximumLOD; // Shader LOD level for this shader.
+    public var passCount; // Returns the number of shader passes on the active SubShader.
+    public var renderQueue; // The default render queue for this shader. (Read Only)
+    public var subshaderCount; // Returns the number of SubShaders in this shader.
+    public void FindPassTagValue(); // Searches for the tag specified by tagName on the shader's active SubShader and returns the value of the tag.
+    public void FindPropertyIndex(); // Finds the index of a shader property by its name.
+    public void FindSubshaderTagValue(); // Searches for the tag specified by tagName on the SubShader specified by subshaderIndex and returns the value of the tag.
+    public void FindTextureStack(); // Find the name of a texture stack a texture belongs too.
+    public void GetDependency(); // Returns the dependency shader.
+    public void GetPassCountInSubshader(); // Returns the number of passes in the given SubShader.
+    public void GetPropertyAttributes(); // Returns an array of strings containing attributes of the shader property at the specified index.
+    public void GetPropertyCount(); // Returns the number of properties in this Shader.
+    public void GetPropertyDefaultFloatValue(); // Returns the default float value of the shader property at the specified index.
+    public void GetPropertyDefaultIntValue(); // Returns the default int value of the shader property at the specified index.
+    public void GetPropertyDefaultVectorValue(); // Returns the default Vector4 value of the shader property at the specified index.
+    public void GetPropertyDescription(); // Returns the description string of the shader property at the specified index.
+    public void GetPropertyFlags(); // Returns the ShaderPropertyFlags of the shader property at the specified index.
+    public void GetPropertyName(); // Returns the name of the shader property at the specified index.
+    public void GetPropertyNameId(); // Returns the nameId of the shader property at the specified index.
+    public void GetPropertyRangeLimits(); // Returns the min and max limits for a Range property at the specified index.
+    public void GetPropertyTextureDefaultName(); // Returns the default Texture name of a Texture shader property at the specified index.
+    public void GetPropertyTextureDimension(); // Returns the TextureDimension of a Texture shader property at the specified index.
+    public void GetPropertyType(); // Returns the ShaderPropertyType of the property at the specified index.
+}

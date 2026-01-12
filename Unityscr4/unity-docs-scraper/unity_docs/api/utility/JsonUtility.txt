@@ -1,0 +1,38 @@
+// Unity Class: JsonUtility
+// Documentation: https://docs.unity3d.com/ScriptReference/JsonUtility.html
+
+// Description: Provides functions for converting between objects and JSON data.
+
+// Methods:
+// - FromJson: Create an object from its JSON representation.
+// - FromJsonOverwrite: Overwrite data in an object by reading from its JSON representation.
+// - ToJson: Generate a JSON representation of the public fields of an object.
+
+// Code Examples:
+// Example 1:
+//   using UnityEngine;
+//   using System;
+//   using System.Collections.Generic;[Serializable]
+//   public class GameState
+//   {
+//       public int Lives;
+//       public int Level;
+//       public string CharacterName;
+//       public List<string> ItemsCarried;
+//    
+//       public const string PlayerPrefsKeyName = "SavedGameState";    public void SaveToPlayerPrefs()
+//       {
+//           // Convert this GameState instance to a JSON string
+//           string json = JsonUtility.ToJson(this);        // Save the converted JSON into the PlayerPrefs
+//           PlayerPrefs.SetString(PlayerPrefsKeyName, json);
+//           PlayerPrefs.Save();
+//       }    public static GameState CreateFromPlayerPrefs()
+//       {
+//           // If the game was never saved before, the key will not exist; in this case return null
+//           if(!PlayerPrefs.HasKey(PlayerPrefsKeyName))
+
+public class JsonUtility {
+    public void FromJson(); // Create an object from its JSON representation.
+    public void FromJsonOverwrite(); // Overwrite data in an object by reading from its JSON representation.
+    public void ToJson(); // Generate a JSON representation of the public fields of an object.
+}

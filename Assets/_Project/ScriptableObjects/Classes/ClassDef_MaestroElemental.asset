@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37f03974b9124ab43b17ba8cd8cc5eef, type: 3}
+  m_Name: ClassDef_MaestroElemental
+  m_EditorClassIdentifier: EtherDomes.Data::EtherDomes.Data.ClassDefinition
+  ClassType: 4
+  ClassName: Maestro Elemental
+  Description: "DPS m\xE1gico que domina los elementos con su orbe."
+  Role: 2
+  BaseHealth: 90
+  BaseMana: 120
+  BaseStrength: 5
+  BaseAgility: 8
+  BaseIntellect: 18
+  BaseStamina: 8
+  BaseArmor: 10
+  HealthPerLevel: 8
+  ManaPerLevel: 10
+  StrengthPerLevel: 0.5
+  AgilityPerLevel: 1
+  IntellectPerLevel: 3.5
+  StaminaPerLevel: 1
+  AllowedArmorType: 2
+  AllowedWeaponTypes: 17000000
+  UsesTwoHandedWeapon: 1
+  UsesShield: 0

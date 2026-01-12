@@ -1,0 +1,216 @@
+// Unity Class: Animator
+// Documentation: https://docs.unity3d.com/ScriptReference/Animator.html
+
+// Description: Manages, controls, and evaluates the animation of a GameObject.
+
+// Properties:
+// - angularVelocity: Gets the avatar angular velocity for the last evaluated frame.
+// - animatePhysics: When enabled, the physics system uses animated transforms from GameObjects with kinematic Rigidbody components to influence other GameObjects.
+// - applyRootMotion: Should root motion be applied?
+// - avatar: Gets/Sets the current Avatar.
+// - avatarRoot: Returns the Avatar root Transform.
+// - bodyPosition: The position of the body center of mass.
+// - bodyRotation: The rotation of the body center of mass.
+// - cullingMode: Controls culling of this Animator component.
+// - deltaPosition: Gets the avatar delta position for the last evaluated frame.
+// - deltaRotation: Gets the avatar delta rotation for the last evaluated frame.
+// - feetPivotActive: Blends pivot point between body center of mass and feet pivot.
+// - fireEvents: Sets whether the Animator sends events of type AnimationEvent.
+// - gravityWeight: The current gravity weight based on current animations that are played.
+// - hasBoundPlayables: Returns true if Animator has any playables assigned to it.
+// - hasRootMotion: Returns true if the current rig has root motion.
+// - hasTransformHierarchy: Returns true if the object has a transform hierarchy.
+// - humanScale: Returns the scale of the current Avatar for a humanoid rig, (1 by default if the rig is generic).
+// - isHuman: Returns true if the current rig is humanoid, false if it is generic.
+// - isInitialized: Returns whether the animator is initialized successfully.
+// - isMatchingTarget: If automatic matching is active.
+// - isOptimizable: Returns true if the current rig is optimizable with AnimatorUtility.OptimizeTransformHierarchy.
+// - keepAnimatorStateOnDisable: Controls the behaviour of the Animator component when a GameObject is inactive.
+// - layerCount: Returns the number of layers in the controller.
+// - layersAffectMassCenter: Additional layers affects the center of mass.
+// - leftFeetBottomHeight: Get left foot bottom height.
+// - parameterCount: Returns the number of parameters in the controller.
+// - parameters: The AnimatorControllerParameter list used by the animator. (Read Only)
+// - pivotPosition: Get the current position of the pivot.
+// - pivotWeight: Gets the pivot weight.
+// - playableGraph: The PlayableGraph created by the Animator.
+// - playbackTime: Sets the playback position in the recording buffer.
+// - recorderMode: Gets the mode of the Animator recorder.
+// - recorderStartTime: Start time of the first frame of the buffer relative to the frame at which StartRecording was called.
+// - recorderStopTime: End time of the recorded clip relative to when StartRecording was called.
+// - rightFeetBottomHeight: Get right foot bottom height.
+// - rootPosition: The root position, the position of the game object.
+// - rootRotation: The root rotation, the rotation of the game object.
+// - runtimeAnimatorController: The runtime representation of AnimatorController that controls the Animator.
+// - speed: The playback speed of the Animator. 1 is normal playback speed.
+// - stabilizeFeet: Automatic stabilization of feet during transition and blending.
+// - targetPosition: Returns the position of the target specified by SetTarget.
+// - targetRotation: Returns the rotation of the target specified by SetTarget.
+// - updateMode: Specifies the update mode of the Animator.
+// - velocity: Gets the avatar velocity for the last evaluated frame.
+// - writeDefaultValuesOnDisable: Specifies whether playable graph values are reset or preserved when the Animator is disabled.
+
+// Methods:
+// - ApplyBuiltinRootMotion(): Apply the default Root Motion.
+// - CrossFade(): Creates a crossfade from the current state to any other state using normalized times.
+// - CrossFadeInFixedTime(): Creates a crossfade from the current state to any other state using times in seconds.
+// - GetAnimatorTransitionInfo(): Returns an AnimatorTransitionInfo with the informations on the current transition.
+// - GetBehaviour(): Returns the first StateMachineBehaviour that matches type T or is derived from T. Returns null if none are found.
+// - GetBehaviours(): Returns all StateMachineBehaviour that match type T or are derived from T. Returns null if none are found.
+// - GetBoneTransform(): Retrieves the Transform mapped to a human bone based on its id.
+// - GetBool(): Returns the value of the given boolean parameter.
+// - GetCurrentAnimatorClipInfo(): Returns an array of all the AnimatorClipInfo in the current state of the given layer.
+// - GetCurrentAnimatorClipInfoCount(): Returns the number of AnimatorClipInfo in the current state.
+// - GetCurrentAnimatorStateInfo(): Returns an AnimatorStateInfo with the information on the current state.
+// - GetFloat(): Returns the value of the given float parameter.
+// - GetIKHintPosition(): Gets the position of an IK hint.
+// - GetIKHintPositionWeight(): Gets the translative weight of an IK Hint (0 = at the original animation before IK, 1 = at the hint).
+// - GetIKPosition(): Gets the position of an IK goal.
+// - GetIKPositionWeight(): Gets the translative weight of an IK goal (0 = at the original animation before IK, 1 = at the goal).
+// - GetIKRotation(): Gets the rotation of an IK goal.
+// - GetIKRotationWeight(): Gets the rotational weight of an IK goal (0 = rotation before IK, 1 = rotation at the IK goal).
+// - GetInteger(): Returns the value of the given integer parameter.
+// - GetLayerIndex(): Returns the index of the animation layer with the given name.
+// - GetLayerName(): Returns the layer name.
+// - GetLayerWeight(): Returns the weight of the layer at the specified index.
+// - GetNextAnimatorClipInfo(): Returns an array of all the AnimatorClipInfo in the next state of the given layer.
+// - GetNextAnimatorClipInfoCount(): Returns the number of AnimatorClipInfo in the next state.
+// - GetNextAnimatorStateInfo(): Returns an AnimatorStateInfo with the information on the next state.
+// - GetParameter(): Obtains a reference to the AnimatorControllerParameter at the given index.
+// - HasState(): Returns true if the state exists in this layer, false otherwise.
+// - InterruptMatchTarget(): Interrupts the automatic target matching.
+// - IsInTransition(): Returns true if there is a transition on the given layer, false otherwise.
+// - IsParameterControlledByCurve(): Returns true if the parameter is controlled by a curve, false otherwise.
+// - MatchTarget(): Automatically adjust the GameObject position and rotation.
+// - Play(): Plays a state.
+// - PlayInFixedTime(): Plays a state.
+// - Rebind(): Rebind all the animated properties and mesh data with the Animator.
+// - ResetControllerState(): Resets the AnimatorController to its default state.
+// - ResetTrigger(): Resets the value of the given trigger parameter.
+// - SetBoneLocalRotation(): Sets local rotation of a human bone during a IK pass.
+// - SetBool(): Sets the value of the given boolean parameter.
+// - SetFloat(): Send float values to the Animator to affect transitions.
+// - SetIKHintPosition(): Sets the position of an IK hint.
+// - SetIKHintPositionWeight(): Sets the translative weight of an IK hint (0 = at the original animation before IK, 1 = at the hint).
+// - SetIKPosition(): Sets the position of an IK goal.
+// - SetIKPositionWeight(): Sets the translative weight of an IK goal (0 = at the original animation before IK, 1 = at the goal).
+// - SetIKRotation(): Sets the rotation of an IK goal.
+// - SetIKRotationWeight(): Sets the rotational weight of an IK goal (0 = rotation before IK, 1 = rotation at the IK goal).
+// - SetInteger(): Sets the value of the given integer parameter.
+// - SetLayerWeight(): Changes the weight of the layer at a specific index.
+// - SetLookAtPosition(): Sets the look at position for a character during animations.
+// - SetLookAtWeight(): Set look at weights.
+// - SetTarget(): Sets an AvatarTarget and a targetNormalizedTime for the current state.
+// - SetTrigger(): Sets the value of the given trigger parameter.
+// - StartPlayback(): Sets the animator in playback mode.
+// - StartRecording(): Sets the animator in recording mode, and allocates a circular buffer of size frameCount.
+// - StopPlayback(): Stops the animator playback mode. When playback stops, the avatar resumes getting control from game logic.
+// - StopRecording(): Stops animator record mode.
+// - Update(): Evaluates the animator based on deltaTime.
+// - WriteDefaultValues(): Forces a write of the default values stored in the animator.
+
+// Pseudo-code representation of Animator
+public class Animator {
+    public var angularVelocity; // Gets the avatar angular velocity for the last evaluated frame.
+    public var animatePhysics; // When enabled, the physics system uses animated transforms from GameObjects with kinematic Rigidbody components to influence other GameObjects.
+    public var applyRootMotion; // Should root motion be applied?
+    public var avatar; // Gets/Sets the current Avatar.
+    public var avatarRoot; // Returns the Avatar root Transform.
+    public var bodyPosition; // The position of the body center of mass.
+    public var bodyRotation; // The rotation of the body center of mass.
+    public var cullingMode; // Controls culling of this Animator component.
+    public var deltaPosition; // Gets the avatar delta position for the last evaluated frame.
+    public var deltaRotation; // Gets the avatar delta rotation for the last evaluated frame.
+    public var feetPivotActive; // Blends pivot point between body center of mass and feet pivot.
+    public var fireEvents; // Sets whether the Animator sends events of type AnimationEvent.
+    public var gravityWeight; // The current gravity weight based on current animations that are played.
+    public var hasBoundPlayables; // Returns true if Animator has any playables assigned to it.
+    public var hasRootMotion; // Returns true if the current rig has root motion.
+    public var hasTransformHierarchy; // Returns true if the object has a transform hierarchy.
+    public var humanScale; // Returns the scale of the current Avatar for a humanoid rig, (1 by default if the rig is generic).
+    public var isHuman; // Returns true if the current rig is humanoid, false if it is generic.
+    public var isInitialized; // Returns whether the animator is initialized successfully.
+    public var isMatchingTarget; // If automatic matching is active.
+    public var isOptimizable; // Returns true if the current rig is optimizable with AnimatorUtility.OptimizeTransformHierarchy.
+    public var keepAnimatorStateOnDisable; // Controls the behaviour of the Animator component when a GameObject is inactive.
+    public var layerCount; // Returns the number of layers in the controller.
+    public var layersAffectMassCenter; // Additional layers affects the center of mass.
+    public var leftFeetBottomHeight; // Get left foot bottom height.
+    public var parameterCount; // Returns the number of parameters in the controller.
+    public var parameters; // The AnimatorControllerParameter list used by the animator. (Read Only)
+    public var pivotPosition; // Get the current position of the pivot.
+    public var pivotWeight; // Gets the pivot weight.
+    public var playableGraph; // The PlayableGraph created by the Animator.
+    public var playbackTime; // Sets the playback position in the recording buffer.
+    public var recorderMode; // Gets the mode of the Animator recorder.
+    public var recorderStartTime; // Start time of the first frame of the buffer relative to the frame at which StartRecording was called.
+    public var recorderStopTime; // End time of the recorded clip relative to when StartRecording was called.
+    public var rightFeetBottomHeight; // Get right foot bottom height.
+    public var rootPosition; // The root position, the position of the game object.
+    public var rootRotation; // The root rotation, the rotation of the game object.
+    public var runtimeAnimatorController; // The runtime representation of AnimatorController that controls the Animator.
+    public var speed; // The playback speed of the Animator. 1 is normal playback speed.
+    public var stabilizeFeet; // Automatic stabilization of feet during transition and blending.
+    public var targetPosition; // Returns the position of the target specified by SetTarget.
+    public var targetRotation; // Returns the rotation of the target specified by SetTarget.
+    public var updateMode; // Specifies the update mode of the Animator.
+    public var velocity; // Gets the avatar velocity for the last evaluated frame.
+    public var writeDefaultValuesOnDisable; // Specifies whether playable graph values are reset or preserved when the Animator is disabled.
+    public void ApplyBuiltinRootMotion(); // Apply the default Root Motion.
+    public void CrossFade(); // Creates a crossfade from the current state to any other state using normalized times.
+    public void CrossFadeInFixedTime(); // Creates a crossfade from the current state to any other state using times in seconds.
+    public void GetAnimatorTransitionInfo(); // Returns an AnimatorTransitionInfo with the informations on the current transition.
+    public void GetBehaviour(); // Returns the first StateMachineBehaviour that matches type T or is derived from T. Returns null if none are found.
+    public void GetBehaviours(); // Returns all StateMachineBehaviour that match type T or are derived from T. Returns null if none are found.
+    public void GetBoneTransform(); // Retrieves the Transform mapped to a human bone based on its id.
+    public void GetBool(); // Returns the value of the given boolean parameter.
+    public void GetCurrentAnimatorClipInfo(); // Returns an array of all the AnimatorClipInfo in the current state of the given layer.
+    public void GetCurrentAnimatorClipInfoCount(); // Returns the number of AnimatorClipInfo in the current state.
+    public void GetCurrentAnimatorStateInfo(); // Returns an AnimatorStateInfo with the information on the current state.
+    public void GetFloat(); // Returns the value of the given float parameter.
+    public void GetIKHintPosition(); // Gets the position of an IK hint.
+    public void GetIKHintPositionWeight(); // Gets the translative weight of an IK Hint (0 = at the original animation before IK, 1 = at the hint).
+    public void GetIKPosition(); // Gets the position of an IK goal.
+    public void GetIKPositionWeight(); // Gets the translative weight of an IK goal (0 = at the original animation before IK, 1 = at the goal).
+    public void GetIKRotation(); // Gets the rotation of an IK goal.
+    public void GetIKRotationWeight(); // Gets the rotational weight of an IK goal (0 = rotation before IK, 1 = rotation at the IK goal).
+    public void GetInteger(); // Returns the value of the given integer parameter.
+    public void GetLayerIndex(); // Returns the index of the animation layer with the given name.
+    public void GetLayerName(); // Returns the layer name.
+    public void GetLayerWeight(); // Returns the weight of the layer at the specified index.
+    public void GetNextAnimatorClipInfo(); // Returns an array of all the AnimatorClipInfo in the next state of the given layer.
+    public void GetNextAnimatorClipInfoCount(); // Returns the number of AnimatorClipInfo in the next state.
+    public void GetNextAnimatorStateInfo(); // Returns an AnimatorStateInfo with the information on the next state.
+    public void GetParameter(); // Obtains a reference to the AnimatorControllerParameter at the given index.
+    public void HasState(); // Returns true if the state exists in this layer, false otherwise.
+    public void InterruptMatchTarget(); // Interrupts the automatic target matching.
+    public void IsInTransition(); // Returns true if there is a transition on the given layer, false otherwise.
+    public void IsParameterControlledByCurve(); // Returns true if the parameter is controlled by a curve, false otherwise.
+    public void MatchTarget(); // Automatically adjust the GameObject position and rotation.
+    public void Play(); // Plays a state.
+    public void PlayInFixedTime(); // Plays a state.
+    public void Rebind(); // Rebind all the animated properties and mesh data with the Animator.
+    public void ResetControllerState(); // Resets the AnimatorController to its default state.
+    public void ResetTrigger(); // Resets the value of the given trigger parameter.
+    public void SetBoneLocalRotation(); // Sets local rotation of a human bone during a IK pass.
+    public void SetBool(); // Sets the value of the given boolean parameter.
+    public void SetFloat(); // Send float values to the Animator to affect transitions.
+    public void SetIKHintPosition(); // Sets the position of an IK hint.
+    public void SetIKHintPositionWeight(); // Sets the translative weight of an IK hint (0 = at the original animation before IK, 1 = at the hint).
+    public void SetIKPosition(); // Sets the position of an IK goal.
+    public void SetIKPositionWeight(); // Sets the translative weight of an IK goal (0 = at the original animation before IK, 1 = at the goal).
+    public void SetIKRotation(); // Sets the rotation of an IK goal.
+    public void SetIKRotationWeight(); // Sets the rotational weight of an IK goal (0 = rotation before IK, 1 = rotation at the IK goal).
+    public void SetInteger(); // Sets the value of the given integer parameter.
+    public void SetLayerWeight(); // Changes the weight of the layer at a specific index.
+    public void SetLookAtPosition(); // Sets the look at position for a character during animations.
+    public void SetLookAtWeight(); // Set look at weights.
+    public void SetTarget(); // Sets an AvatarTarget and a targetNormalizedTime for the current state.
+    public void SetTrigger(); // Sets the value of the given trigger parameter.
+    public void StartPlayback(); // Sets the animator in playback mode.
+    public void StartRecording(); // Sets the animator in recording mode, and allocates a circular buffer of size frameCount.
+    public void StopPlayback(); // Stops the animator playback mode. When playback stops, the avatar resumes getting control from game logic.
+    public void StopRecording(); // Stops animator record mode.
+    public void Update(); // Evaluates the animator based on deltaTime.
+    public void WriteDefaultValues(); // Forces a write of the default values stored in the animator.
+}

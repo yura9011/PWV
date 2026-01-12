@@ -1,0 +1,28 @@
+{
+  "name": "api_physics_Ray",
+  "type": "api",
+  "description": "Representation of rays.",
+  "content": "// Unity Class: Ray\n// Documentation: https://docs.unity3d.com/ScriptReference/Ray.html\n\n// Description: Representation of rays.\n\n// Properties:\n// - direction: The direction of the ray.\n// - origin: The origin point of the ray.\n\n// Constructors:\n// - Ray: Creates a ray starting at origin along direction.\n\n// Methods:\n// - GetPoint: Returns a point at distance units along the ray.\n// - ToString: Returns a formatted string for this ray.\n\npublic class Ray {\n    public var direction; // The direction of the ray.\n    public var origin; // The origin point of the ray.\n    public void GetPoint(); // Returns a point at distance units along the ray.\n    public void ToString(); // Returns a formatted string for this ray.\n}",
+  "properties": [
+    {
+      "name": "direction",
+      "description": "The direction of the ray."
+    },
+    {
+      "name": "origin",
+      "description": "The origin point of the ray."
+    },
+    {
+      "name": "Ray",
+      "description": "Creates a ray starting at origin along direction."
+    },
+    {
+      "name": "GetPoint",
+      "description": "Returns a point at distance units along the ray."
+    },
+    {
+      "name": "ToString",
+      "description": "Returns a formatted string for this ray."
+    }
+  ]
+}

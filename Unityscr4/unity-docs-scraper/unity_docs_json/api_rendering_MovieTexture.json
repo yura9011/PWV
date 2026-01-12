@@ -1,0 +1,88 @@
+{
+  "name": "api_rendering_MovieTexture",
+  "type": "api",
+  "description": "MovieTexture has been removed. Use VideoPlayer instead.",
+  "content": "// Unity Class: MovieTexture\n// Documentation: https://docs.unity3d.com/ScriptReference/MovieTexture.html\n\n// Description: MovieTexture has been removed. Use VideoPlayer instead.\n\n// Properties:\n// - hideFlags: Should the object be hidden, saved with the Scene or modifiable by the user?\n// - name: The name of the object.\n// - anisoLevel: Defines the anisotropic filtering level of the Texture.\n// - dimension: Dimensionality (type) of the Texture.\n// - filterMode: Filtering mode of the Texture.\n// - graphicsFormat: Returns the GraphicsFormat format or color format of a Texture object.\n// - graphicsTexture: GraphicsTexture that represents the texture resource uploaded to the graphics device.\n// - height: Height of the Texture in pixels.\n// - imageContentsHash: The hash value of the Texture.\n// - isDataSRGB: Returns true if the texture pixel data is in sRGB color space.\n// - isReadable: Whether Unity stores an additional copy of this texture's pixel data in CPU-addressable memory.\n// - mipMapBias: The mipmap bias of the Texture.\n// - mipmapCount: How many mipmap levels are in this Texture.\n// - updateCount: This counter is incremented when the Texture is updated.\n// - width: Width of the Texture in pixels.\n// - wrapMode: Options for sampling a texture if a texture coordinate is outside the [0, 1] range.\n// - wrapModeU: Options for sampling a texture if the U texture coordinate is outside the [0, 1] range.\n// - wrapModeV: Options for sampling a texture if the V texture coordinate is outside the [0, 1] range.\n// - wrapModeW: Options for sampling a texture if the W coordinate is outside the [0, 1] range.\n\n// Methods:\n// - GetInstanceID: Gets the instance ID of the object.\n// - ToString: Returns the name of the object.\n// - GetNativeTexturePtr: Retrieve a native (underlying graphics API) pointer to the Texture resource.\n// - IncrementUpdateCount: Increment the update counter.\n// - Destroy: Removes a GameObject, component, or asset.\n// - DestroyImmediate: Destroys the specified object immediately. Use with caution and in Edit mode only.\n// - DontDestroyOnLoad: Do not destroy the target Object when loading a new Scene.\n// - FindAnyObjectByType: Retrieves any active loaded object of Type type.\n// - FindFirstObjectByType: Retrieves the first active loaded object of Type type.\n// - FindObjectsByType: Retrieves a list of all loaded objects of Type type.\n// - Instantiate: Clones the object original and returns the clone.\n// - InstantiateAsync: Captures a snapshot of the original object (that must be related to some GameObject) and returns the\n// - SetGlobalAnisotropicFilteringLimits: Sets Anisotropic limits.\n// - SetStreamingTextureMaterialDebugProperties: This function sets mipmap streaming debug properties on all materials known by the mipmap streaming \n\npublic class MovieTexture {\n    public var hideFlags;\n    public var name;\n    public var anisoLevel;\n    public var dimension;\n    public var filterMode;\n    public var graphicsFormat;\n    public var graphicsTexture;\n    public var height;\n    public var imageContentsHash;\n    public var isDataSRGB;\n    public var isReadable;\n    public var mipMapBias;\n    public var mipmapCount;\n    public var updateCount;\n    public var width;\n    public void GetInstanceID();\n    public void ToString();\n    public void GetNativeTexturePtr();\n    public void IncrementUpdateCount();\n    public void Destroy();\n    public void DestroyImmediate();\n    public void DontDestroyOnLoad();\n    public void FindAnyObjectByType();\n    public void FindFirstObjectByType();\n    public void FindObjectsByType();\n    public void Instantiate();\n    public void InstantiateAsync();\n    public void SetGlobalAnisotropicFilteringLimits();\n    public void SetStreamingTextureMaterialDebugProperties();\n}",
+  "properties": [
+    {
+      "name": "hideFlags",
+      "description": "Should the object be hidden, saved with the Scene or modifiable by the user?"
+    },
+    {
+      "name": "name",
+      "description": "The name of the object."
+    },
+    {
+      "name": "anisoLevel",
+      "description": "Defines the anisotropic filtering level of the Texture."
+    },
+    {
+      "name": "dimension",
+      "description": "Dimensionality (type) of the Texture."
+    },
+    {
+      "name": "filterMode",
+      "description": "Filtering mode of the Texture."
+    },
+    {
+      "name": "graphicsFormat",
+      "description": "Returns the GraphicsFormat format or color format of a Texture object."
+    },
+    {
+      "name": "graphicsTexture",
+      "description": "GraphicsTexture that represents the texture resource uploaded to the graphics device."
+    },
+    {
+      "name": "height",
+      "description": "Height of the Texture in pixels."
+    },
+    {
+      "name": "imageContentsHash",
+      "description": "The hash value of the Texture."
+    },
+    {
+      "name": "isDataSRGB",
+      "description": "Returns true if the texture pixel data is in sRGB color space."
+    },
+    {
+      "name": "isReadable",
+      "description": "Whether Unity stores an additional copy of this texture's pixel data in CPU-addressable memory."
+    },
+    {
+      "name": "mipMapBias",
+      "description": "The mipmap bias of the Texture."
+    },
+    {
+      "name": "mipmapCount",
+      "description": "How many mipmap levels are in this Texture."
+    },
+    {
+      "name": "updateCount",
+      "description": "This counter is incremented when the Texture is updated."
+    },
+    {
+      "name": "width",
+      "description": "Width of the Texture in pixels."
+    },
+    {
+      "name": "wrapMode",
+      "description": "Options for sampling a texture if a texture coordinate is outside the [0, 1] range."
+    },
+    {
+      "name": "wrapModeU",
+      "description": "Options for sampling a texture if the U texture coordinate is outside the [0, 1] range."
+    },
+    {
+      "name": "wrapModeV",
+      "description": "Options for sampling a texture if the V texture coordinate is outside the [0, 1] range."
+    },
+    {
+      "name": "wrapModeW",
+      "description": "Options for sampling a texture if the W coordinate is outside the [0, 1] range."
+    },
+    {
+      "name": "GetInstanceID",
+      "description": "Gets the instance ID of the object."
+    }
+  ]
+}

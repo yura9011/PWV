@@ -1,0 +1,88 @@
+{
+  "name": "api_video_VideoClip",
+  "type": "api",
+  "description": "A container for video assets that can be used in the Vide.VideoPlayer component.",
+  "content": "// Unity Class: VideoClip\n// Documentation: https://docs.unity3d.com/ScriptReference/Video.VideoClip.html\n\n// Description: A container for video assets that can be used in the Vide.VideoPlayer component.\n\n// Properties:\n// - audioTrackCount: Gets the number of audio tracks that are embedded in the video clip. (Read Only).\n// - frameCount: The length of the video clip in frames. (Read Only).\n// - frameRate: The frame rate of the clip in frames per second. (Read Only).\n// - height: The height of the images in the video clip in pixels. (Read Only).\n// - length: The length of the video clip in seconds. (Read Only).\n// - originalPath: Gets the original video clip file path as it was imported into Unity. (Read Only).\n// - pixelAspectRatioDenominator: Returns the denominator of the pixel aspect ratio (numerator:denominator). (Read Only).\n// - pixelAspectRatioNumerator: Returns the numerator of the pixel aspect ratio (numerator:denominator). (Read Only).\n// - sRGB: Whether the imported clip contains sRGB color data (Read Only).\n// - width: The width of the images in the video clip in pixels. (Read Only).\n\n// Methods:\n// - GetAudioChannelCount: Returns the number of channels in the audio track. For example, if the audio track is a stereo track\n// - GetAudioLanguage: Gets the language of the video clip’s audio tracks, if the audio tracks have an assigned language.\n// - GetAudioSampleRate: Get the audio track sampling rate in hertz (Hz).\n// - Destroy: Removes a GameObject, component, or asset.\n// - DestroyImmediate: Destroys the specified object immediately. Use with caution and in Edit mode only.\n// - DontDestroyOnLoad: Do not destroy the target Object when loading a new Scene.\n// - FindAnyObjectByType: Retrieves any active loaded object of Type type.\n// - FindFirstObjectByType: Retrieves the first active loaded object of Type type.\n// - FindObjectsByType: Retrieves a list of all loaded objects of Type type.\n// - Instantiate: Clones the object original and returns the clone.\n// - InstantiateAsync: Captures a snapshot of the original object (that must be related to some GameObject) and returns the\n\npublic class VideoClip {\n    public var audioTrackCount;\n    public var frameCount;\n    public var frameRate;\n    public var height;\n    public var length;\n    public var originalPath;\n    public var pixelAspectRatioDenominator;\n    public var pixelAspectRatioNumerator;\n    public var sRGB;\n    public var width;\n    public void GetAudioChannelCount();\n    public void GetAudioLanguage();\n    public void GetAudioSampleRate();\n    public void Destroy();\n    public void DestroyImmediate();\n    public void DontDestroyOnLoad();\n    public void FindAnyObjectByType();\n    public void FindFirstObjectByType();\n    public void FindObjectsByType();\n    public void Instantiate();\n}",
+  "properties": [
+    {
+      "name": "audioTrackCount",
+      "description": "Gets the number of audio tracks that are embedded in the video clip. (Read Only)."
+    },
+    {
+      "name": "frameCount",
+      "description": "The length of the video clip in frames. (Read Only)."
+    },
+    {
+      "name": "frameRate",
+      "description": "The frame rate of the clip in frames per second. (Read Only)."
+    },
+    {
+      "name": "height",
+      "description": "The height of the images in the video clip in pixels. (Read Only)."
+    },
+    {
+      "name": "length",
+      "description": "The length of the video clip in seconds. (Read Only)."
+    },
+    {
+      "name": "originalPath",
+      "description": "Gets the original video clip file path as it was imported into Unity. (Read Only)."
+    },
+    {
+      "name": "pixelAspectRatioDenominator",
+      "description": "Returns the denominator of the pixel aspect ratio (numerator:denominator). (Read Only)."
+    },
+    {
+      "name": "pixelAspectRatioNumerator",
+      "description": "Returns the numerator of the pixel aspect ratio (numerator:denominator). (Read Only)."
+    },
+    {
+      "name": "sRGB",
+      "description": "Whether the imported clip contains sRGB color data (Read Only)."
+    },
+    {
+      "name": "width",
+      "description": "The width of the images in the video clip in pixels. (Read Only)."
+    },
+    {
+      "name": "GetAudioChannelCount",
+      "description": "Returns the number of channels in the audio track. For example, if the audio track is a stereo track"
+    },
+    {
+      "name": "GetAudioLanguage",
+      "description": "Gets the language of the video clip’s audio tracks, if the audio tracks have an assigned language."
+    },
+    {
+      "name": "GetAudioSampleRate",
+      "description": "Get the audio track sampling rate in hertz (Hz)."
+    },
+    {
+      "name": "Destroy",
+      "description": "Removes a GameObject, component, or asset."
+    },
+    {
+      "name": "DestroyImmediate",
+      "description": "Destroys the specified object immediately. Use with caution and in Edit mode only."
+    },
+    {
+      "name": "DontDestroyOnLoad",
+      "description": "Do not destroy the target Object when loading a new Scene."
+    },
+    {
+      "name": "FindAnyObjectByType",
+      "description": "Retrieves any active loaded object of Type type."
+    },
+    {
+      "name": "FindFirstObjectByType",
+      "description": "Retrieves the first active loaded object of Type type."
+    },
+    {
+      "name": "FindObjectsByType",
+      "description": "Retrieves a list of all loaded objects of Type type."
+    },
+    {
+      "name": "Instantiate",
+      "description": "Clones the object original and returns the clone."
+    }
+  ]
+}

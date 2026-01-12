@@ -1,0 +1,88 @@
+{
+  "name": "api_physics_WheelCollider",
+  "type": "api",
+  "description": "A special collider for vehicle wheels.",
+  "content": "// Unity Class: WheelCollider\n// Documentation: https://docs.unity3d.com/ScriptReference/WheelCollider.html\n\n// Description: A special collider for vehicle wheels.\n\n// Properties:\n// - brakeTorque: Brake torque expressed in Newton metres.\n// - center: The center of the wheel, measured in the object's local space.\n// - forceAppPointDistance: Application point of the suspension and tire forces measured from the base of the resting wheel.\n// - forwardFriction: Properties of tire friction in the direction the wheel is pointing in.\n// - isGrounded: Indicates whether the wheel currently collides with something (Read Only).\n// - mass: The mass of the wheel, expressed in kilograms. Must be larger than zero. Typical values would be in \n// - motorTorque: Motor torque on the wheel axle expressed in Newton metres. Positive or negative depending on directi\n// - radius: The radius of the wheel, measured in local space.\n// - rotationSpeed: Rotation speed of the wheel, measured in degrees per second.\n// - rpm: Current wheel axle rotation speed, in rotations per minute (Read Only).\n// - sidewaysFriction: Properties of tire friction in the sideways direction.\n// - sprungMass: The mass supported by this WheelCollider.\n// - steerAngle: Steering angle in degrees, always around the local y-axis.\n// - suspensionDistance: Maximum extension distance of wheel suspension, measured in local space.\n// - suspensionExpansionLimited: Limits the expansion velocity of the Wheel Collider's suspension. If you set this property on a Rigi\n// - suspensionSpring: The parameters of wheel's suspension. The suspension attempts to reach a target position by applying\n// - wheelDampingRate: The damping rate of the wheel. Must be larger than zero.\n\n// Methods:\n// - ConfigureVehicleSubsteps: Configure vehicle sub-stepping parameters.\n// - GetGroundHit: Gets ground collision data for the wheel.\n// - GetWorldPose: Gets the world space pose of the wheel accounting for ground contact, suspension limits, steer angle\n// - ResetSprungMasses: Reset the sprung masses of the vehicle.\n// - Destroy: Removes a GameObject, component, or asset.\n// - DestroyImmediate: Destroys the specified object immediately. Use with caution and in Edit mode only.\n// - DontDestroyOnLoad: Do not destroy the target Object when loading a new Scene.\n// - FindAnyObjectByType: Retrieves any active loaded object of Type type.\n// - FindFirstObjectByType: Retrieves the first active loaded object of Type type.\n// - FindObjectsByType: Retrieves a list of all loaded objects of Type type.\n// - Instantiate: Clones the object original and returns the clone.\n// - InstantiateAsync: Captures a snapshot of the original object (that must be related to some GameObject) and returns the\n\npublic class WheelCollider {\n    public var brakeTorque;\n    public var center;\n    public var forceAppPointDistance;\n    public var forwardFriction;\n    public var isGrounded;\n    public var mass;\n    public var motorTorque;\n    public var radius;\n    public var rotationSpeed;\n    public var rpm;\n    public var sidewaysFriction;\n    public var sprungMass;\n    public var steerAngle;\n    public var suspensionDistance;\n    public var suspensionExpansionLimited;\n    public void ConfigureVehicleSubsteps();\n    public void GetGroundHit();\n    public void GetWorldPose();\n    public void ResetSprungMasses();\n    public void Destroy();\n    public void DestroyImmediate();\n    public void DontDestroyOnLoad();\n    public void FindAnyObjectByType();\n    public void FindFirstObjectByType();\n    public void FindObjectsByType();\n    public void Instantiate();\n    public void InstantiateAsync();\n}",
+  "properties": [
+    {
+      "name": "brakeTorque",
+      "description": "Brake torque expressed in Newton metres."
+    },
+    {
+      "name": "center",
+      "description": "The center of the wheel, measured in the object's local space."
+    },
+    {
+      "name": "forceAppPointDistance",
+      "description": "Application point of the suspension and tire forces measured from the base of the resting wheel."
+    },
+    {
+      "name": "forwardFriction",
+      "description": "Properties of tire friction in the direction the wheel is pointing in."
+    },
+    {
+      "name": "isGrounded",
+      "description": "Indicates whether the wheel currently collides with something (Read Only)."
+    },
+    {
+      "name": "mass",
+      "description": "The mass of the wheel, expressed in kilograms. Must be larger than zero. Typical values would be in "
+    },
+    {
+      "name": "motorTorque",
+      "description": "Motor torque on the wheel axle expressed in Newton metres. Positive or negative depending on directi"
+    },
+    {
+      "name": "radius",
+      "description": "The radius of the wheel, measured in local space."
+    },
+    {
+      "name": "rotationSpeed",
+      "description": "Rotation speed of the wheel, measured in degrees per second."
+    },
+    {
+      "name": "rpm",
+      "description": "Current wheel axle rotation speed, in rotations per minute (Read Only)."
+    },
+    {
+      "name": "sidewaysFriction",
+      "description": "Properties of tire friction in the sideways direction."
+    },
+    {
+      "name": "sprungMass",
+      "description": "The mass supported by this WheelCollider."
+    },
+    {
+      "name": "steerAngle",
+      "description": "Steering angle in degrees, always around the local y-axis."
+    },
+    {
+      "name": "suspensionDistance",
+      "description": "Maximum extension distance of wheel suspension, measured in local space."
+    },
+    {
+      "name": "suspensionExpansionLimited",
+      "description": "Limits the expansion velocity of the Wheel Collider's suspension. If you set this property on a Rigi"
+    },
+    {
+      "name": "suspensionSpring",
+      "description": "The parameters of wheel's suspension. The suspension attempts to reach a target position by applying"
+    },
+    {
+      "name": "wheelDampingRate",
+      "description": "The damping rate of the wheel. Must be larger than zero."
+    },
+    {
+      "name": "ConfigureVehicleSubsteps",
+      "description": "Configure vehicle sub-stepping parameters."
+    },
+    {
+      "name": "GetGroundHit",
+      "description": "Gets ground collision data for the wheel."
+    },
+    {
+      "name": "GetWorldPose",
+      "description": "Gets the world space pose of the wheel accounting for ground contact, suspension limits, steer angle"
+    }
+  ]
+}

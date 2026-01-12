@@ -1,0 +1,88 @@
+{
+  "name": "api_physics2d_CompositeCollider2D",
+  "type": "api",
+  "description": "A Collider that can merge other Colliders together.",
+  "content": "// Unity Class: CompositeCollider2D\n// Documentation: https://docs.unity3d.com/ScriptReference/CompositeCollider2D.html\n\n// Description: A Collider that can merge other Colliders together.\n\n// Properties:\n// - edgeRadius: Controls the radius of all edges created by the Collider.\n// - generationType: Specifies when to generate the Composite Collider geometry.\n// - geometryType: Specifies the type of geometry the Composite Collider should generate.\n// - offsetDistance: Vertices are offset by this distance when compositing multiple physic shapes. Any vertices between s\n// - pathCount: The number of paths in the Collider.\n// - pointCount: Gets the total number of points in all the paths within the Collider.\n// - useDelaunayMesh: When the value is true, the Collider uses an additional Delaunay triangulation step to produce the C\n// - vertexDistance: Controls the minimum distance allowed between generated vertices.\n\n// Methods:\n// - GenerateGeometry: Regenerates the Composite Collider geometry.\n// - GetCompositedColliders: When any Collider2D is using any composite operation other than Collider2D.CompositeOperation.None t\n// - GetPath: Gets a path from the Collider by its index.\n// - GetPathPointCount: Gets the number of points in the specified path from the Collider by its index.\n// - Destroy: Removes a GameObject, component, or asset.\n// - DestroyImmediate: Destroys the specified object immediately. Use with caution and in Edit mode only.\n// - DontDestroyOnLoad: Do not destroy the target Object when loading a new Scene.\n// - FindAnyObjectByType: Retrieves any active loaded object of Type type.\n// - FindFirstObjectByType: Retrieves the first active loaded object of Type type.\n// - FindObjectsByType: Retrieves a list of all loaded objects of Type type.\n// - Instantiate: Clones the object original and returns the clone.\n// - InstantiateAsync: Captures a snapshot of the original object (that must be related to some GameObject) and returns the\n\npublic class CompositeCollider2D {\n    public var edgeRadius;\n    public var generationType;\n    public var geometryType;\n    public var offsetDistance;\n    public var pathCount;\n    public var pointCount;\n    public var useDelaunayMesh;\n    public var vertexDistance;\n    public void GenerateGeometry();\n    public void GetCompositedColliders();\n    public void GetPath();\n    public void GetPathPointCount();\n    public void Destroy();\n    public void DestroyImmediate();\n    public void DontDestroyOnLoad();\n    public void FindAnyObjectByType();\n    public void FindFirstObjectByType();\n    public void FindObjectsByType();\n    public void Instantiate();\n    public void InstantiateAsync();\n}",
+  "properties": [
+    {
+      "name": "edgeRadius",
+      "description": "Controls the radius of all edges created by the Collider."
+    },
+    {
+      "name": "generationType",
+      "description": "Specifies when to generate the Composite Collider geometry."
+    },
+    {
+      "name": "geometryType",
+      "description": "Specifies the type of geometry the Composite Collider should generate."
+    },
+    {
+      "name": "offsetDistance",
+      "description": "Vertices are offset by this distance when compositing multiple physic shapes. Any vertices between s"
+    },
+    {
+      "name": "pathCount",
+      "description": "The number of paths in the Collider."
+    },
+    {
+      "name": "pointCount",
+      "description": "Gets the total number of points in all the paths within the Collider."
+    },
+    {
+      "name": "useDelaunayMesh",
+      "description": "When the value is true, the Collider uses an additional Delaunay triangulation step to produce the C"
+    },
+    {
+      "name": "vertexDistance",
+      "description": "Controls the minimum distance allowed between generated vertices."
+    },
+    {
+      "name": "GenerateGeometry",
+      "description": "Regenerates the Composite Collider geometry."
+    },
+    {
+      "name": "GetCompositedColliders",
+      "description": "When any Collider2D is using any composite operation other than Collider2D.CompositeOperation.None t"
+    },
+    {
+      "name": "GetPath",
+      "description": "Gets a path from the Collider by its index."
+    },
+    {
+      "name": "GetPathPointCount",
+      "description": "Gets the number of points in the specified path from the Collider by its index."
+    },
+    {
+      "name": "Destroy",
+      "description": "Removes a GameObject, component, or asset."
+    },
+    {
+      "name": "DestroyImmediate",
+      "description": "Destroys the specified object immediately. Use with caution and in Edit mode only."
+    },
+    {
+      "name": "DontDestroyOnLoad",
+      "description": "Do not destroy the target Object when loading a new Scene."
+    },
+    {
+      "name": "FindAnyObjectByType",
+      "description": "Retrieves any active loaded object of Type type."
+    },
+    {
+      "name": "FindFirstObjectByType",
+      "description": "Retrieves the first active loaded object of Type type."
+    },
+    {
+      "name": "FindObjectsByType",
+      "description": "Retrieves a list of all loaded objects of Type type."
+    },
+    {
+      "name": "Instantiate",
+      "description": "Clones the object original and returns the clone."
+    },
+    {
+      "name": "InstantiateAsync",
+      "description": "Captures a snapshot of the original object (that must be related to some GameObject) and returns the"
+    }
+  ]
+}

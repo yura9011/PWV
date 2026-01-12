@@ -1,0 +1,45 @@
+// Unity Manual: Environment and tools
+// Section: Scripting
+// URL: https://docs.unity3d.com/Manual/environment-and-tools.html
+
+// Content:
+Programming in Unity
+Environment and tools
+Inspecting scripts
+Integrated development environment (IDE) support
+Environment and tools
+Configure your local environment and development tools for coding and testing in Unity and understand the .NET platform versions and components that Unity supports.
+Topic
+Description
+Integrated development environment (IDE) support
+Choose one of the major code editors with integrated support for Unity projects to use as the development environment for your
+scripts
+A piece of code that allows you to create your own Components, trigger game events, modify Component properties over time and respond to user input in any way you like.
+More info
+See in
+Glossary
+.
+Unity .NET features
+Learn about the specific details and limitations of Unity’s support for the .NET platform.
+Version control
+A system for managing file changes. You can use Unity in conjunction with most common version control tools, including Perforce, Git, Mercurial and PlasticSCM.
+More info
+See in
+Glossary
+Understand Unity’s version control integration options.
+Additional resources
+Unity Test Framework
+Inspecting scripts
+Integrated development environment (IDE) support
+Copyright ©2005-2026 Unity Technologies. All rights reserved. Built from 6000.3.5f1 (9e864d5a2e6f). Built on: 2026-01-09.
+Tutorials
+Community Answers
+Knowledge Base
+Forums
+Asset Store
+Terms of use
+Legal
+Privacy Policy
+Cookies
+Do Not Sell or Share My Personal Information
+Your Privacy Choices (Cookie Settings)

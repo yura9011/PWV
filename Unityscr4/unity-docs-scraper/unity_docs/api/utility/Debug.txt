@@ -1,0 +1,8 @@
+// Unity Class: Debug
+// Documentation: https://docs.unity3d.com/ScriptReference/Debug.html
+
+// Description: Class containing methods to ease debugging while developing a game.
+
+// Pseudo-code representation of Debug
+public class Debug {
+}

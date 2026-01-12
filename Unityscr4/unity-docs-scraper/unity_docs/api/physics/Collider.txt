@@ -1,0 +1,48 @@
+// Unity Class: Collider
+// Documentation: https://docs.unity3d.com/ScriptReference/Collider.html
+
+// Description: A base class of all colliders.
+
+// Properties:
+// - attachedArticulationBody: The articulation body the collider is attached to.
+// - attachedRigidbody: The rigidbody the collider is attached to.
+// - bounds: The world space bounding volume of the collider (Read Only).
+// - contactOffset: Contact offset value of this collider.
+// - enabled: Enabled Colliders will collide with other Colliders, disabled Colliders won't.
+// - excludeLayers: The additional layers that this Collider should exclude when deciding if the Collider can contact another Collider.
+// - GeometryHolder: The structure holding the geometric shape of the collider and its type. (Read Only)
+// - hasModifiableContacts: Specify whether this Collider's contacts are modifiable or not.
+// - includeLayers: The additional layers that this Collider should include when deciding if the Collider can contact another Collider.
+// - isTrigger: Specify if this collider is configured as a trigger.
+// - layerOverridePriority: A decision priority assigned to this Collider used when there is a conflicting decision on whether a Collider can contact another Collider.
+// - material: The material used by the collider.
+// - providesContacts: Whether or not this Collider generates contacts for Physics.ContactEvent.
+// - sharedMaterial: The shared physics material of this collider.
+
+// Methods:
+// - ClosestPoint(): The closest point on the collider given a specified location.
+// - ClosestPointOnBounds(): The closest point to the bounding box of the attached collider.
+// - GetGeometry(): Returns the geometric shape of the collider of the requested type.
+// - Raycast(): Casts a Ray that ignores all Colliders except this one.
+
+// Pseudo-code representation of Collider
+public class Collider {
+    public var attachedArticulationBody; // The articulation body the collider is attached to.
+    public var attachedRigidbody; // The rigidbody the collider is attached to.
+    public var bounds; // The world space bounding volume of the collider (Read Only).
+    public var contactOffset; // Contact offset value of this collider.
+    public var enabled; // Enabled Colliders will collide with other Colliders, disabled Colliders won't.
+    public var excludeLayers; // The additional layers that this Collider should exclude when deciding if the Collider can contact another Collider.
+    public var GeometryHolder; // The structure holding the geometric shape of the collider and its type. (Read Only)
+    public var hasModifiableContacts; // Specify whether this Collider's contacts are modifiable or not.
+    public var includeLayers; // The additional layers that this Collider should include when deciding if the Collider can contact another Collider.
+    public var isTrigger; // Specify if this collider is configured as a trigger.
+    public var layerOverridePriority; // A decision priority assigned to this Collider used when there is a conflicting decision on whether a Collider can contact another Collider.
+    public var material; // The material used by the collider.
+    public var providesContacts; // Whether or not this Collider generates contacts for Physics.ContactEvent.
+    public var sharedMaterial; // The shared physics material of this collider.
+    public void ClosestPoint(); // The closest point on the collider given a specified location.
+    public void ClosestPointOnBounds(); // The closest point to the bounding box of the attached collider.
+    public void GetGeometry(); // Returns the geometric shape of the collider of the requested type.
+    public void Raycast(); // Casts a Ray that ignores all Colliders except this one.
+}

@@ -1,0 +1,88 @@
+{
+  "name": "api_2d_SpriteMask",
+  "type": "api",
+  "description": "A component for masking Sprites and Particles.",
+  "content": "// Unity Class: SpriteMask\n// Documentation: https://docs.unity3d.com/ScriptReference/SpriteMask.html\n\n// Description: A component for masking Sprites and Particles.\n\n// Properties:\n// - alphaCutoff: The minimum alpha value used by the mask to select the area of influence defined over the mask's spr\n// - backSortingLayerID: Unique ID of the sorting layer defining the end of the custom range.\n// - backSortingOrder: Order within the back sorting layer defining the end of the custom range.\n// - frontSortingLayerID: Unique ID of the sorting layer defining the start of the custom range.\n// - frontSortingOrder: Order within the front sorting layer defining the start of the custom range.\n// - isCustomRangeActive: Mask sprites from front to back sorting values only.\n// - maskSource: The source used for generating the mask for this SpriteMask.\n// - sprite: The Sprite used to define the mask.\n// - spriteSortPoint: Determines the position of the Sprite used for sorting the SpriteMask.\n\n// Methods:\n// - BroadcastMessage: Calls the method named methodName on every MonoBehaviour in this game object or any of its children.\n// - CompareTag: Checks the GameObject's tag against the defined tag.\n// - GetComponent: Gets a reference to a component of type T on the same GameObject as the component specified.\n// - GetComponentInChildren: Gets a reference to a component of type T on the same GameObject as the component specified, or any \n// - GetComponentIndex: Gets the index of the component on its parent GameObject.\n// - GetComponentInParent: Gets a reference to a component of type T on the same GameObject as the component specified, or any \n// - GetComponents: Gets references to all components of type T on the same GameObject as the component specified.\n// - GetComponentsInChildren: Gets references to all components of type T on the same GameObject as the component specified, and a\n// - GetComponentsInParent: Gets references to all components of type T on the same GameObject as the component specified, and a\n// - SendMessage: Calls the method named methodName on every MonoBehaviour in this game object.\n// - SendMessageUpwards: Calls the method named methodName on every MonoBehaviour in this game object and on every ancestor o\n// - TryGetComponent: Gets the component of the specified type, if it exists.\n// - GetInstanceID: Gets the instance ID of the object.\n// - ToString: Returns the name of the object.\n// - GetClosestReflectionProbes: Returns an array of closest reflection probes with weights, weight shows how much influence the prob\n// - GetMaterials: Returns all the instantiated materials of this object.\n// - GetPropertyBlock: Get per-Renderer or per-Material property block.\n// - GetSharedMaterials: Returns all the shared materials of this object.\n// - HasPropertyBlock: Returns true if the Renderer has a material property block attached via SetPropertyBlock.\n// - ResetBounds: Reset custom world space bounds.\n// - ResetLocalBounds: Reset custom local space bounds.\n// - SetMaterials: Assigns the shared materials of this renderer using the list of materials provided.\n// - SetPropertyBlock: Lets you set or clear per-renderer or per-material parameter overrides.\n// - SetSharedMaterials: Assigns the shared materials of this renderer using the list of materials provided.\n// - Destroy: Removes a GameObject, component, or asset.\n\npublic class SpriteMask {\n    public var alphaCutoff;\n    public var backSortingLayerID;\n    public var backSortingOrder;\n    public var frontSortingLayerID;\n    public var frontSortingOrder;\n    public var isCustomRangeActive;\n    public var maskSource;\n    public var sprite;\n    public var spriteSortPoint;\n    public void BroadcastMessage();\n    public void CompareTag();\n    public void GetComponent();\n    public void GetComponentInChildren();\n    public void GetComponentIndex();\n    public void GetComponentInParent();\n    public void GetComponents();\n    public void GetComponentsInChildren();\n    public void GetComponentsInParent();\n    public void SendMessage();\n    public void SendMessageUpwards();\n    public void TryGetComponent();\n    public void GetInstanceID();\n    public void ToString();\n    public void GetClosestReflectionProbes();\n}",
+  "properties": [
+    {
+      "name": "alphaCutoff",
+      "description": "The minimum alpha value used by the mask to select the area of influence defined over the mask's spr"
+    },
+    {
+      "name": "backSortingLayerID",
+      "description": "Unique ID of the sorting layer defining the end of the custom range."
+    },
+    {
+      "name": "backSortingOrder",
+      "description": "Order within the back sorting layer defining the end of the custom range."
+    },
+    {
+      "name": "frontSortingLayerID",
+      "description": "Unique ID of the sorting layer defining the start of the custom range."
+    },
+    {
+      "name": "frontSortingOrder",
+      "description": "Order within the front sorting layer defining the start of the custom range."
+    },
+    {
+      "name": "isCustomRangeActive",
+      "description": "Mask sprites from front to back sorting values only."
+    },
+    {
+      "name": "maskSource",
+      "description": "The source used for generating the mask for this SpriteMask."
+    },
+    {
+      "name": "sprite",
+      "description": "The Sprite used to define the mask."
+    },
+    {
+      "name": "spriteSortPoint",
+      "description": "Determines the position of the Sprite used for sorting the SpriteMask."
+    },
+    {
+      "name": "BroadcastMessage",
+      "description": "Calls the method named methodName on every MonoBehaviour in this game object or any of its children."
+    },
+    {
+      "name": "CompareTag",
+      "description": "Checks the GameObject's tag against the defined tag."
+    },
+    {
+      "name": "GetComponent",
+      "description": "Gets a reference to a component of type T on the same GameObject as the component specified."
+    },
+    {
+      "name": "GetComponentInChildren",
+      "description": "Gets a reference to a component of type T on the same GameObject as the component specified, or any "
+    },
+    {
+      "name": "GetComponentIndex",
+      "description": "Gets the index of the component on its parent GameObject."
+    },
+    {
+      "name": "GetComponentInParent",
+      "description": "Gets a reference to a component of type T on the same GameObject as the component specified, or any "
+    },
+    {
+      "name": "GetComponents",
+      "description": "Gets references to all components of type T on the same GameObject as the component specified."
+    },
+    {
+      "name": "GetComponentsInChildren",
+      "description": "Gets references to all components of type T on the same GameObject as the component specified, and a"
+    },
+    {
+      "name": "GetComponentsInParent",
+      "description": "Gets references to all components of type T on the same GameObject as the component specified, and a"
+    },
+    {
+      "name": "SendMessage",
+      "description": "Calls the method named methodName on every MonoBehaviour in this game object."
+    },
+    {
+      "name": "SendMessageUpwards",
+      "description": "Calls the method named methodName on every MonoBehaviour in this game object and on every ancestor o"
+    }
+  ]
+}

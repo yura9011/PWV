@@ -1,0 +1,36 @@
+{
+  "name": "api_animation_AnimatorTransitionInfo",
+  "type": "api",
+  "description": "Information about the current transition on a specific state machine layer.",
+  "content": "// Unity Class: AnimatorTransitionInfo\n// Documentation: https://docs.unity3d.com/ScriptReference/AnimatorTransitionInfo.html\n\n// Description: Information about the current transition on a specific state machine layer.\n\n// Properties:\n// - anyState: Returns true if the transition is from an AnyState node, or from Animator.CrossFade.\n// - duration: Duration of the transition.\n// - durationUnit: The unit of the transition duration.\n// - fullPathHash: The hash name of the Transition.\n// - nameHash: The simplified name of the Transition.\n// - normalizedTime: Normalized time of the Transition.\n// - userNameHash: The user-specified name of the Transition.\n\n// Methods:\n// - IsName(): Does name match the name of the active Transition.\n// - IsUserName(): Does userName match the name of the active Transition.\n\n// Code Examples:\n// Example 1:\n//   using UnityEngine;\n\n//   \n\n//   // MonoBehaviour that sets the IK position and weight of the right hand when the character transitions to a \"Grab\" animation\n\n//   // state.\n\n//   [RequireComponent(typeof(Animator))]\n\n//   public class GrabBehaviour : MonoBehaviour\n\n//   {\n\n//       private Animator m_Animator;\n\n//   \n\n//       public Transform grabTarget;\n\n//   \n\n//       void Start()\n\n//       {\n\n//           m_Animator = GetComponent<Animator>();\n\n//       }\n\n//   \n\n//       void OnAnimatorIK(int layerIndex)\n\n//       {\n\n//           float ikWeight;\n\n//   \n\n//           var transitionInfo = m_Animator.GetAnimatorTransitionInfo(0);\n\n//           if (transitionInfo.IsName(\"Locomotion -> Grab\"))\n\n//           {\n\n//               // When the character transitions from \"Locomotion\" to \"Grab\" state, do not immediately \n\n//               // set the IK weight from 0 to 1 to avoid the hand instantly snapping to the target.\n\n//               // The IK weight changes at the same rate as the animation state. For example, when the\n\n//               // transition is halfway through, the IK weight is 0.5.\n\n//               ikWeight = transitionInfo.normalizedTime;\n\n//           }\n\n//           else\n\n//           {\n\n//               // The IK weight is 0 when the \"Locomotion\" state is active and 1 when the \"Graph\" state is active.\n\n//               ikWeight = m_Animator.GetCurrentAnimatorStateInfo(0).IsName(\"Grab\") ? 1f : 0f;\n\n//           }\n\n//   \n\n//           m_Animator.SetIKPositionWeight(AvatarIKGoal.RightHand, ikWeight);\n\n//           if (ikWeight > 0f)\n\n//           {\n\n//               m_Animator.SetIKPosition(AvatarIKGoal.RightHand, grabTarget.position);\n\n//           }\n\n//       }\n\n//   }\n\n// Pseudo-code representation of AnimatorTransitionInfo\npublic class AnimatorTransitionInfo {\n    public var anyState; // Returns true if the transition is from an AnyState node, or from Animator.CrossFade.\n    public var duration; // Duration of the transition.\n    public var durationUnit; // The unit of the transition duration.\n    public var fullPathHash; // The hash name of the Transition.\n    public var nameHash; // The simplified name of the Transition.\n    public var normalizedTime; // Normalized time of the Transition.\n    public var userNameHash; // The user-specified name of the Transition.\n    public void IsName(); // Does name match the name of the active Transition.\n    public void IsUserName(); // Does userName match the name of the active Transition.\n}",
+  "properties": [
+    {
+      "name": "anyState",
+      "description": "Returns true if the transition is from an AnyState node, or from Animator.CrossFade."
+    },
+    {
+      "name": "duration",
+      "description": "Duration of the transition."
+    },
+    {
+      "name": "durationUnit",
+      "description": "The unit of the transition duration."
+    },
+    {
+      "name": "fullPathHash",
+      "description": "The hash name of the Transition."
+    },
+    {
+      "name": "nameHash",
+      "description": "The simplified name of the Transition."
+    },
+    {
+      "name": "normalizedTime",
+      "description": "Normalized time of the Transition."
+    },
+    {
+      "name": "userNameHash",
+      "description": "The user-specified name of the Transition."
+    }
+  ]
+}

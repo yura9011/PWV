@@ -1,0 +1,7 @@
+{
+  "name": "api_utility_Screen",
+  "type": "api",
+  "description": "Provides access to display information.",
+  "content": "// Unity Class: Screen\n// Documentation: https://docs.unity3d.com/ScriptReference/Screen.html\n\n// Description: Provides access to display information.\n\n// Pseudo-code representation of Screen\npublic class Screen {\n}",
+  "properties": []
+}

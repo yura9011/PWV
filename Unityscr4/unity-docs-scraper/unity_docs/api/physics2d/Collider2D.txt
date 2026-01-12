@@ -1,0 +1,89 @@
+// Unity Class: Collider2D
+// Documentation: https://docs.unity3d.com/ScriptReference/Collider2D.html
+
+// Description: The parent class for collider types used with 2D gameplay. Provides methods to defines the shape and physical behavior for 2D object interactions, used to detect collisions, and trigger events in 2D game environments.
+
+// Properties:
+// - attachedRigidbody: The Rigidbody2D attached to the Collider2D.
+// - bounceCombine: The bounciness combine mode used by the Collider2D.
+// - bounciness: The bounciness used by the Collider2D.
+// - bounds: The world space bounding area of the collider.
+// - callbackLayers: The Layers that this Collider2D will report collision or trigger callbacks for during a contact with another Collider2D.
+// - composite: Get the CompositeCollider2D that is available to be attached to the collider.
+// - compositeCapable: Indicates if this Collider2D is capable of being composited by the CompositeCollider2D.
+// - compositeOperation: The composite operation to be used by a CompositeCollider2D.
+// - compositeOrder: The composite operation order to be used when a CompositeCollider2D is used.
+// - contactCaptureLayers: The layers of other Collider2D involved in contacts with this Collider2D that will be captured.
+// - contactMask: Calculates the effective LayerMask that the Collider2D will use when determining if it can contact another Collider2D.
+// - density: The density of the collider used to calculate its mass (when auto mass is enabled).
+// - errorState: The error state that indicates the state of the physics shapes the 2D Collider tried to create. (Read Only)
+// - excludeLayers: The additional Layers that this Collider2D should exclude when deciding if a contact with another Collider2D should happen or not.
+// - forceReceiveLayers: The Layers that this Collider2D can receive forces from during a Collision contact with another Collider2D.
+// - forceSendLayers: The Layers that this Collider2D is allowed to send forces to during a Collision contact with another Collider2D.
+// - friction: The friction used by the Collider2D.
+// - frictionCombine: The friction combine mode used by the Collider2D.
+// - includeLayers: The additional Layers that this Collider2D should include when deciding if a contact with another Collider2D should happen or not.
+// - isTrigger: Is this collider configured as a trigger?
+// - layerOverridePriority: A decision priority assigned to this Collider2D used when there is a conflicting decision on whether a contact between itself and another Collision2D should happen or not.
+// - localToWorldMatrix: The transformation matrix used to transform the Collider physics shapes to world space.
+// - offset: The local offset of the collider geometry.
+// - shapeCount: The number of active PhysicsShape2D the Collider2D is currently using.
+// - sharedMaterial: The PhysicsMaterial2D that is applied to this collider.
+// - usedByEffector: Whether the collider is used by an attached effector or not.
+
+// Methods:
+// - CanContact: This method determines if both Colliders can ever come into contact.
+// - Cast: Casts the Collider shape into the Scene starting at the Collider position ignoring the Collider itself.
+// - ClosestPoint: Returns a point on the perimeter of this Collider that is closest to the specified position.
+// - CreateMesh: Creates a planar Mesh that is identical to the area defined by the Collider2D geometry.
+// - Distance: Calculates the minimum separation of this collider against another collider.
+// - GetContacts: Retrieves all contact points for this Collider.
+// - GetShapeBounds: Retrieves a list of Bounds for all PhysicsShape2D created by this Collider2D, and returns the combined Bounds of the retrieved list.
+// - GetShapeHash: Generates a simple hash value based upon the geometry of the Collider2D.
+// - GetShapes: Gets all the PhysicsShape2D used by the Collider2D.
+// - IsTouching: Check whether this collider is touching the collider or not.
+// - IsTouchingLayers: Checks whether this collider is touching any colliders on the specified layerMask or not.
+// - Overlap: Get a list of all Colliders that overlap this Collider.
+// - OverlapPoint: Check if a collider overlaps a point in space.
+// - Raycast: Casts a ray into the Scene that starts at the Collider position and ignores the Collider itself.
+// - Destroy: Removes a GameObject, component, or asset.
+// - DestroyImmediate: Destroys the specified object immediately. Use with caution and in Edit mode only.
+// - DontDestroyOnLoad: Do not destroy the target Object when loading a new Scene.
+// - FindAnyObjectByType: Retrieves any active loaded object of Type type.
+// - FindFirstObjectByType: Retrieves the first active loaded object of Type type.
+// - FindObjectsByType: Retrieves a list of all loaded objects of Type type.
+// - Instantiate: Clones the object original and returns the clone.
+// - InstantiateAsync: Captures a snapshot of the original object (that must be related to some GameObject) and returns the AsyncInstantiateOperation.
+
+public class Collider2D {
+    public var attachedRigidbody; // The Rigidbody2D attached to the Collider2D.
+    public var bounceCombine; // The bounciness combine mode used by the Collider2D.
+    public var bounciness; // The bounciness used by the Collider2D.
+    public var bounds; // The world space bounding area of the collider.
+    public var callbackLayers; // The Layers that this Collider2D will report collision or trigger callbacks for d
+    public var composite; // Get the CompositeCollider2D that is available to be attached to the collider.
+    public var compositeCapable; // Indicates if this Collider2D is capable of being composited by the CompositeColl
+    public var compositeOperation; // The composite operation to be used by a CompositeCollider2D.
+    public var compositeOrder; // The composite operation order to be used when a CompositeCollider2D is used.
+    public var contactCaptureLayers; // The layers of other Collider2D involved in contacts with this Collider2D that wi
+    public var contactMask; // Calculates the effective LayerMask that the Collider2D will use when determining
+    public var density; // The density of the collider used to calculate its mass (when auto mass is enable
+    public var errorState; // The error state that indicates the state of the physics shapes the 2D Collider t
+    public var excludeLayers; // The additional Layers that this Collider2D should exclude when deciding if a con
+    public var forceReceiveLayers; // The Layers that this Collider2D can receive forces from during a Collision conta
+    public void CanContact(); // This method determines if both Colliders can ever come into contact.
+    public void Cast(); // Casts the Collider shape into the Scene starting at the Collider position ignori
+    public void ClosestPoint(); // Returns a point on the perimeter of this Collider that is closest to the specifi
+    public void CreateMesh(); // Creates a planar Mesh that is identical to the area defined by the Collider2D ge
+    public void Distance(); // Calculates the minimum separation of this collider against another collider.
+    public void GetContacts(); // Retrieves all contact points for this Collider.
+    public void GetShapeBounds(); // Retrieves a list of Bounds for all PhysicsShape2D created by this Collider2D, an
+    public void GetShapeHash(); // Generates a simple hash value based upon the geometry of the Collider2D.
+    public void GetShapes(); // Gets all the PhysicsShape2D used by the Collider2D.
+    public void IsTouching(); // Check whether this collider is touching the collider or not.
+    public void IsTouchingLayers(); // Checks whether this collider is touching any colliders on the specified layerMas
+    public void Overlap(); // Get a list of all Colliders that overlap this Collider.
+    public void OverlapPoint(); // Check if a collider overlaps a point in space.
+    public void Raycast(); // Casts a ray into the Scene that starts at the Collider position and ignores the 
+    public void Destroy(); // Removes a GameObject, component, or asset.
+}

@@ -1,0 +1,13 @@
+// Unity Class: LoadSceneMode
+// Documentation: https://docs.unity3d.com/ScriptReference/SceneManagement.LoadSceneMode.html
+
+// Description: Used when loading a Scene in a player.
+
+// Properties:
+// - Single: Closes all current loaded Scenes and loads a Scene.
+// - Additive: Adds the Scene to the current loaded Scenes.
+
+public class LoadSceneMode {
+    public var Single;
+    public var Additive;
+}

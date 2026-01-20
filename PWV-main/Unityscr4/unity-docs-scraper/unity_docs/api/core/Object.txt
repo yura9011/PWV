@@ -1,0 +1,20 @@
+// Unity Class: Object
+// Documentation: https://docs.unity3d.com/ScriptReference/Object.html
+
+// Description: Base class for all objects Unity can reference.
+
+// Properties:
+// - hideFlags: Should the object be hidden, saved with the Scene or modifiable by the user?
+// - name: The name of the object.
+
+// Methods:
+// - GetInstanceID(): Gets the instance ID of the object.
+// - ToString(): Returns the name of the object.
+
+// Pseudo-code representation of Object
+public class Object {
+    public var hideFlags; // Should the object be hidden, saved with the Scene or modifiable by the user?
+    public var name; // The name of the object.
+    public void GetInstanceID(); // Gets the instance ID of the object.
+    public void ToString(); // Returns the name of the object.
+}

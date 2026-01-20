@@ -1,0 +1,41 @@
+// Unity Class: Quaternion
+// Documentation: https://docs.unity3d.com/ScriptReference/Quaternion.html
+
+// Description: Quaternions are used to represent rotations.
+
+// Properties:
+// - eulerAngles: Returns or sets the euler angle representation of the rotation in degrees.
+// - normalized: Returns this quaternion with a magnitude of 1 (Read Only).
+// - this[int]: Access the x, y, z, w components using [0], [1], [2], [3] respectively.
+// - w: W component of the Quaternion. Do not directly modify quaternions.
+// - x: X component of the Quaternion. Don't modify this directly unless you know quaternions inside out.
+// - y: Y component of the Quaternion. Don't modify this directly unless you know quaternions inside out.
+// - z: Z component of the Quaternion. Don't modify this directly unless you know quaternions inside out.
+
+// Constructors:
+// - Quaternion(): Constructs new Quaternion with given x,y,z,w components.
+
+// Methods:
+// - Equals(): Performs exact binary comparison of each Quaternion component (x, y, z, w).
+// - Set(): Set x, y, z and w components of an existing Quaternion.
+// - SetFromToRotation(): Creates a rotation which rotates from fromDirection to toDirection.
+// - SetLookRotation(): Creates a rotation with the specified forward and upwards directions.
+// - ToAngleAxis(): Converts a rotation to angle-axis representation.
+// - ToString(): Returns a formatted string for this quaternion.
+
+// Pseudo-code representation of Quaternion
+public class Quaternion {
+    public var eulerAngles; // Returns or sets the euler angle representation of the rotation in degrees.
+    public var normalized; // Returns this quaternion with a magnitude of 1 (Read Only).
+    public var this[int]; // Access the x, y, z, w components using [0], [1], [2], [3] respectively.
+    public var w; // W component of the Quaternion. Do not directly modify quaternions.
+    public var x; // X component of the Quaternion. Don't modify this directly unless you know quaternions inside out.
+    public var y; // Y component of the Quaternion. Don't modify this directly unless you know quaternions inside out.
+    public var z; // Z component of the Quaternion. Don't modify this directly unless you know quaternions inside out.
+    public void Equals(); // Performs exact binary comparison of each Quaternion component (x, y, z, w).
+    public void Set(); // Set x, y, z and w components of an existing Quaternion.
+    public void SetFromToRotation(); // Creates a rotation which rotates from fromDirection to toDirection.
+    public void SetLookRotation(); // Creates a rotation with the specified forward and upwards directions.
+    public void ToAngleAxis(); // Converts a rotation to angle-axis representation.
+    public void ToString(); // Returns a formatted string for this quaternion.
+}

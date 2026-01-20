@@ -1,0 +1,111 @@
+// Unity Manual: XR_SDK
+// URL: https://docs.unity3d.com/Manual/XR.html
+
+XR
+AI menu reference
+Overview
+XR
+Important
+: A critical security vulnerability has been identified affecting games and applications built with Unity 2017.1 and later for Android, Windows, macOS, and Linux. To learn more about this vulnerability and the action you must take, refer to
+Unity Platform Protection: Developer Remediation Guide
+.
+XR is an umbrella term that includes the following types of applications:
+Virtual Reality
+Virtual Reality (VR) immerses users in an artificial 3D world of realistic images and sounds, using a headset and motion tracking.
+More info
+See in
+Glossary
+(VR): The application simulates a self-contained environment around the user.
+Mixed Reality
+Mixed Reality (MR) combines its own virtual environment with the user’s real-world environment and allows them to interact with each other.
+See in
+Glossary
+(MR): The application combines its own environment with the user’s real-world environment and allows them to interact with each other.
+Augmented Reality
+Augmented Reality (AR) uses computer graphics or video composited on top of a live video feed to augment the view and create interaction with real and virtual objects.
+More info
+See in
+Glossary
+(AR): The application layers content over a view of the real world.
+The span between virtual to augmented reality is a continuum, with mixed reality falling somewhere in the middle, depending on the capabilities of a particular device and the intent of your application.
+Sample XR scene view
+This documentation discusses how to develop
+XR
+applications in Unity:
+Topic
+Description
+Overview
+An overview of how Unity supports XR development.
+Set up an XR Project
+How to set up a project for an XR game or application.
+Set up an XR scene
+How to add the
+GameObjects
+The fundamental object in Unity scenes, which can represent characters, props, scenery, cameras, waypoints, and more. A GameObject’s functionality is defined by the Components attached to it.
+More info
+See in
+Glossary
+and components needed by an XR
+scene
+A Scene contains the environments and menus of your game. Think of each unique Scene file as a unique level. In each Scene, you place your environments, obstacles, and decorations, essentially designing and building your game in pieces.
+More info
+See in
+Glossary
+.
+Run an XR application
+How to build and run Unity XR projects during development.
+XR graphics
+XR-specific graphics topics.
+XR audio
+Understand audio for XR projects.
+Additional resources and examples
+⚙️
+Sample project
+:
+XR Interaction Toolkit samples
+⚙️
+Sample project
+:
+AR Foundation Samples
+💡
+Resources
+:
+Build for XR and spatial computing
+💡
+Resources
+:
+Unity Learn XR resources
+👥
+Community
+:
+Join the conversation on Unity Discussions for XR
+💡
+Resources
+:
+Unity Blog XR posts
+💡
+Resources
+:
+XR Glossary
+📖
+E-Book
+:
+Create virtual and mixed reality experiences in Unity
+📺
+Video
+:
+Worldbuilding in VR with Unity’s XR Interaction Toolkit
+📺
+Video
+:
+Optimization for web, XR & mobile games in Unity 6
+📖
+E-Book
+:
+Optimize your game performance for mobile, XR, and Web in Unity
+📖
+E-Book
+:
+Optimize your game performance for consoles and PCs in Unity
+AI menu reference
+Overview

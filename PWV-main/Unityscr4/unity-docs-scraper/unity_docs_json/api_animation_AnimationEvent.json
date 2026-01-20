@@ -1,0 +1,56 @@
+{
+  "name": "api_animation_AnimationEvent",
+  "type": "api",
+  "description": "AnimationEvent lets you call a script function similar to SendMessage as part of playing back an animation.",
+  "content": "// Unity Class: AnimationEvent\n// Documentation: https://docs.unity3d.com/ScriptReference/AnimationEvent.html\n\n// Description: AnimationEvent lets you call a script function similar to SendMessage as part of playing back an animation.\n\n// Properties:\n// - animationState: The animation state that fired this event (Read Only).\n// - animatorClipInfo: The animator clip info related to this event (Read Only).\n// - animatorStateInfo: The animator state info related to this event (Read Only).\n// - floatParameter: Float parameter that is stored in the event and will be sent to the function.\n// - functionName: The name of the function that will be called.\n// - intParameter: Int parameter that is stored in the event and will be sent to the function.\n// - isFiredByAnimator: Returns true if this Animation event has been fired by an Animator component.\n// - isFiredByLegacy: Returns true if this Animation event has been fired by an Animation component.\n// - messageOptions: Function call options.\n// - objectReferenceParameter: Object reference parameter that is stored in the event and will be sent to the function.\n// - stringParameter: String parameter that is stored in the event and will be sent to the function.\n// - time: The time at which the event will be fired off.\n\n// Constructors:\n// - AnimationEvent(): Creates a new animation event.\n\n// Code Examples:\n// Example 1:\n//   // Animation Event example\n\n//   // Small example that can be called on each specified frame.\n\n//   // The code is executed once per animation loop.using UnityEngine;\n\n//   using System.Collections;public class Example : MonoBehaviour\n\n//   {\n\n//       public void PrintEvent()\n\n//       {\n\n//           Debug.Log(\"PrintEvent\");\n\n//       }\n\n//   }\n\n// Example 2:\n//   // Add an Animation Event to a GameObject that has an Animator\n\n//   using UnityEngine;\n\n//   using System.Collections;public class Example : MonoBehaviour\n\n//   {\n\n//       public void Start()\n\n//       {\n\n//           // existing components on the GameObject\n\n//           AnimationClip clip;\n\n//           Animator anim;        // new event created\n\n//           AnimationEvent evt;\n\n//           evt = new AnimationEvent();        // put some parameters on the AnimationEvent\n\n//           //  - call the function called PrintEvent()\n\n//           //  - the animation on this object lasts 2 seconds\n\n//           //    and the new animation created here is\n\n//           //    set up to happen 1.3s into the animation\n\n//           evt.intParameter = 12345;\n\n//           evt.time = 1.3f;\n\n//           evt.functionName = \"PrintEvent\";        // get the animation clip and add the AnimationEvent\n\n//           anim = GetComponent<Animator>();\n\n//           clip = anim.runtimeAnimatorController.animationClips[0];\n\n//           clip.AddEvent(evt);\n\n//       }    // the function to be called as an event\n\n//       public void PrintEvent(int i)\n\n//       {\n\n//           print(\"PrintEvent: \" + i + \" called at: \" + Time.time);\n\n//       }\n\n//   }\n\n// Pseudo-code representation of AnimationEvent\npublic class AnimationEvent {\n    public var animationState; // The animation state that fired this event (Read Only).\n    public var animatorClipInfo; // The animator clip info related to this event (Read Only).\n    public var animatorStateInfo; // The animator state info related to this event (Read Only).\n    public var floatParameter; // Float parameter that is stored in the event and will be sent to the function.\n    public var functionName; // The name of the function that will be called.\n    public var intParameter; // Int parameter that is stored in the event and will be sent to the function.\n    public var isFiredByAnimator; // Returns true if this Animation event has been fired by an Animator component.\n    public var isFiredByLegacy; // Returns true if this Animation event has been fired by an Animation component.\n    public var messageOptions; // Function call options.\n    public var objectReferenceParameter; // Object reference parameter that is stored in the event and will be sent to the function.\n    public var stringParameter; // String parameter that is stored in the event and will be sent to the function.\n    public var time; // The time at which the event will be fired off.\n}",
+  "properties": [
+    {
+      "name": "animationState",
+      "description": "The animation state that fired this event (Read Only)."
+    },
+    {
+      "name": "animatorClipInfo",
+      "description": "The animator clip info related to this event (Read Only)."
+    },
+    {
+      "name": "animatorStateInfo",
+      "description": "The animator state info related to this event (Read Only)."
+    },
+    {
+      "name": "floatParameter",
+      "description": "Float parameter that is stored in the event and will be sent to the function."
+    },
+    {
+      "name": "functionName",
+      "description": "The name of the function that will be called."
+    },
+    {
+      "name": "intParameter",
+      "description": "Int parameter that is stored in the event and will be sent to the function."
+    },
+    {
+      "name": "isFiredByAnimator",
+      "description": "Returns true if this Animation event has been fired by an Animator component."
+    },
+    {
+      "name": "isFiredByLegacy",
+      "description": "Returns true if this Animation event has been fired by an Animation component."
+    },
+    {
+      "name": "messageOptions",
+      "description": "Function call options."
+    },
+    {
+      "name": "objectReferenceParameter",
+      "description": "Object reference parameter that is stored in the event and will be sent to the function."
+    },
+    {
+      "name": "stringParameter",
+      "description": "String parameter that is stored in the event and will be sent to the function."
+    },
+    {
+      "name": "time",
+      "description": "The time at which the event will be fired off."
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "name": "api_math_Vector3",
+  "type": "api",
+  "description": "Representation of 3D vectors and points.",
+  "content": "// Unity Class: Vector3\n// Documentation: https://docs.unity3d.com/ScriptReference/Vector3.html\n\n// Description: Representation of 3D vectors and points.\n\n// Properties:\n// - magnitude: Returns the length of this vector (Read Only).\n// - normalized: The unit vector in the direction of the current vector.\n// - sqrMagnitude: Returns the squared length of this vector (Read Only).\n// - this[int]: Access the x, y, z components using [0], [1], [2] respectively.\n// - x: X component of the vector.\n// - y: Y component of the vector.\n// - z: Z component of the vector.\n\n// Constructors:\n// - Vector3(): Creates a new three-dimensional vector or point.\n\n// Methods:\n// - Equals(): Returns true if the given vector is exactly equal to this vector.\n// - Set(): Set x, y and z components of an existing Vector3.\n// - ToString(): Returns a formatted string for this vector.\n\n// Pseudo-code representation of Vector3\npublic class Vector3 {\n    public var magnitude; // Returns the length of this vector (Read Only).\n    public var normalized; // The unit vector in the direction of the current vector.\n    public var sqrMagnitude; // Returns the squared length of this vector (Read Only).\n    public var this[int]; // Access the x, y, z components using [0], [1], [2] respectively.\n    public var x; // X component of the vector.\n    public var y; // Y component of the vector.\n    public var z; // Z component of the vector.\n    public void Equals(); // Returns true if the given vector is exactly equal to this vector.\n    public void Set(); // Set x, y and z components of an existing Vector3.\n    public void ToString(); // Returns a formatted string for this vector.\n}",
+  "properties": [
+    {
+      "name": "magnitude",
+      "description": "Returns the length of this vector (Read Only)."
+    },
+    {
+      "name": "normalized",
+      "description": "The unit vector in the direction of the current vector."
+    },
+    {
+      "name": "sqrMagnitude",
+      "description": "Returns the squared length of this vector (Read Only)."
+    },
+    {
+      "name": "x",
+      "description": "X component of the vector."
+    },
+    {
+      "name": "y",
+      "description": "Y component of the vector."
+    },
+    {
+      "name": "z",
+      "description": "Z component of the vector."
+    }
+  ]
+}

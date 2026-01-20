@@ -1,0 +1,17 @@
+{
+    "name": "EtherDomes.Persistence",
+    "rootNamespace": "EtherDomes.Persistence",
+    "references": [
+        "EtherDomes.Data",
+        "EtherDomes.World"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

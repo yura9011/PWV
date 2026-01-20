@@ -1,0 +1,22 @@
+// Unity Class: Input
+// Documentation: https://docs.unity3d.com/ScriptReference/Input.html
+
+// Description: Interface into the Legacy Input system.
+
+// Code Examples:
+// Example 1:
+//   using UnityEngine;
+//   using System.Collections;public class ExampleClass : MonoBehaviour
+//   {
+//       public void Update()
+//       {
+//           if (Input.GetButtonDown("Fire1"))
+//           {
+//               Debug.Log(Input.mousePosition);
+//           }
+//       }
+//   }
+
+// Pseudo-code representation of Input
+public class Input {
+}

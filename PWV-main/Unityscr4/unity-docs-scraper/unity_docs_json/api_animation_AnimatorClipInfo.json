@@ -1,0 +1,16 @@
+{
+  "name": "api_animation_AnimatorClipInfo",
+  "type": "api",
+  "description": "Information about clip being played and blended by the Animator.",
+  "content": "// Unity Class: AnimatorClipInfo\n// Documentation: https://docs.unity3d.com/ScriptReference/AnimatorClipInfo.html\n\n// Description: Information about clip being played and blended by the Animator.\n\n// Properties:\n// - clip: Returns the animation clip played by the Animator.\n// - weight: Returns the blending weight used by the Animator to blend this clip.\n\n// Code Examples:\n// Example 1:\n//   //Create a GameObject and attach an Animator component (Click the Add Component button in the Inspector of the GameObject and go to Miscellaneous>Animator). Set up the Animator how you would like.\n\n//   //Attach this script to the GameObject//This script outputs the current clip from the Animator to the console\n\n//   using UnityEngine;public class AnimationClipInfoClipExample : MonoBehaviour\n\n//   {\n\n//       Animator m_Animator;\n\n//       AnimatorClipInfo[] m_AnimatorClipInfo;    // Use this for initialization\n\n//       void Start()\n\n//       {\n\n//           //Fetch the Animator component from the GameObject\n\n//           m_Animator = GetComponent<Animator>();\n\n//           //Get the animator clip information from the Animator Controller\n\n//           m_AnimatorClipInfo = m_Animator.GetCurrentAnimatorClipInfo(0);\n\n//           //Output the name of the starting clip\n\n//           Debug.Log(\"Starting clip : \" + m_AnimatorClipInfo[0].clip);\n\n//       }\n\n//   }\n\n// Pseudo-code representation of AnimatorClipInfo\npublic class AnimatorClipInfo {\n    public var clip; // Returns the animation clip played by the Animator.\n    public var weight; // Returns the blending weight used by the Animator to blend this clip.\n}",
+  "properties": [
+    {
+      "name": "clip",
+      "description": "Returns the animation clip played by the Animator."
+    },
+    {
+      "name": "weight",
+      "description": "Returns the blending weight used by the Animator to blend this clip."
+    }
+  ]
+}

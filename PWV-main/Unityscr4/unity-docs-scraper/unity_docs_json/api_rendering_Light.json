@@ -1,0 +1,88 @@
+{
+  "name": "api_rendering_Light",
+  "type": "api",
+  "description": "Script interface for light components.",
+  "content": "// Unity Class: Light\n// Documentation: https://docs.unity3d.com/ScriptReference/Light.html\n\n// Description: Script interface for light components.\n\n// Properties:\n// - areaSize: The size of the area light.\n// - bakingOutput: This property describes the output of the last Global Illumination bake.\n// - bounceIntensity: The multiplier that defines the strength of the bounce lighting.\n// - boundingSphereOverride: Bounding sphere used to override the regular light bounding sphere during culling.\n// - color: Specifies the color emitted by the light.\n// - colorTemperature: The color temperature of the light. Correlated Color Temperature (abbreviated as CCT) is multiplied with the color filter when calculating the final color of a light source. The color temperature of the electromagnetic radiation emitted from an ideal black body is defined as its surface temperature in Kelvin. White is 6500K according to the D65 standard. A candle light is 1800K and a soft warm light bulb is 2700K. If you want to use colorTemperature, GraphicsSettings.lightsUseLinearIntensity and Light.useColorTemperature has to be enabled. Additional resources: GraphicsSettings.lightsUseLinearIntensity, GraphicsSettings.useColorTemperature.\n// - commandBufferCount: Number of command buffers set up on this light (Read Only).\n// - cookie: The cookie texture projected by the light.\n// - cookieSize2D: The size of a directional light's cookie.\n// - cullingMask: This is used to light certain objects in the Scene selectively.\n// - dilatedRange: The maximum distance the emitted light might travel from the position of the light. This property does not apply to directional lights.\n// - enableSpotReflector: Wether a Spot Light should simulate having a reflector.\n// - flare: The flare asset to use for this light.\n// - forceVisible: Force a light to be visible even if outside the view frustum.\n// - innerSpotAngle: The angle of the spot light's inner cone in degrees.\n// - intensity: The Intensity of a light is multiplied with the Light color.\n// - layerShadowCullDistances: Per-light, per-layer shadow culling distances. Directional lights only.\n// - lightmapBakeType: This property describes what part of a light's contribution can be baked (Editor only).\n// - lightShadowCasterMode: Allows you to override the global Shadowmask Mode per light. Only use this with render pipelines that can handle per light Shadowmask modes. Incompatible with the legacy renderers.\n// - lightUnit: The unit Light.intensity should be displayed in.\n// - luxAtDistance: How far away to measure LightUnit.Lux from.\n// - range: The maximum distance that light travels from a point of emission. This property does not apply to directional lights.\n// - renderingLayerMask: Determines which rendering LayerMask this Light affects.\n// - renderMode: Controls how often the light's contribution is calculated during rendering.\n// - shadowAngle: Controls the amount of artificial softening applied to the edges of shadows cast by directional lights (Editor only).\n// - shadowBias: Shadow mapping constant bias.\n// - shadowCustomResolution: The custom resolution of the shadow map.\n// - shadowMatrixOverride: Matrix that overrides the regular light projection matrix during shadow culling. Unity uses this matrix if you set Light.useShadowMatrixOverride to true.\n// - shadowNearPlane: Near plane value to use for shadow frustums.\n// - shadowNormalBias: Shadow mapping normal-based bias.\n// - shadowRadius: Controls the amount of artificial softening applied to the edges of shadows cast by the Point or Spot light (Editor only).\n// - shadowResolution: The resolution of the shadow map. Change it to balance shadow visual quality and performance.\n// - shadows: Determines if this light will cast soft or hard shadows, or not cast shadows at all.\n// - shadowStrength: Strength of light's shadows.\n// - spotAngle: The angle of the spot light's cone in degrees.\n// - type: The type of the light.\n// - useBoundingSphereOverride: Set to true to override light bounding sphere for culling.\n// - useColorTemperature: Set to true to use the color temperature.\n// - useShadowMatrixOverride: Set to true to enable custom matrix for culling during shadows.\n// - useViewFrustumForShadowCasterCull: Whether to cull shadows for this Light when the Light is outside of the view frustum.\n\n// Methods:\n// - AddCommandBuffer(): Add a command buffer to be executed at a specified place.\n// - AddCommandBufferAsync(): Adds a command buffer to the GPU's async compute queues and executes that command buffer when graphics processing reaches a given point.\n// - GetCommandBuffers(): Get command buffers to be executed at a specified place.\n// - RemoveAllCommandBuffers(): Remove all command buffers set on this light.\n// - RemoveCommandBuffer(): Remove command buffer from execution at a specified place.\n// - RemoveCommandBuffers(): Remove command buffers from execution at a specified place.\n// - Reset(): Revert all light parameters to default.\n// - SetLightDirty(): Sets a light dirty to notify the light baking backends to update their internal light representation (Editor only).\n\n// Code Examples:\n// Example 1:\n//   using UnityEngine;public class Example : MonoBehaviour\n\n//   {\n\n//       void Start()\n\n//       {\n\n//           // Make a game object\n\n//           GameObject lightGameObject = new GameObject(\"The Light\");        // Add the light component\n\n//           Light lightComp = lightGameObject.AddComponent<Light>();        // Set color and position\n\n//           lightComp.color = Color.blue;        // Set the position (or any transform property)\n\n//           lightGameObject.transform.position = new Vector3(0, 5, 0);\n\n//       }\n\n//   }\n\n// Pseudo-code representation of Light\npublic class Light {\n    public var areaSize; // The size of the area light.\n    public var bakingOutput; // This property describes the output of the last Global Illumination bake.\n    public var bounceIntensity; // The multiplier that defines the strength of the bounce lighting.\n    public var boundingSphereOverride; // Bounding sphere used to override the regular light bounding sphere during culling.\n    public var color; // Specifies the color emitted by the light.\n    public var colorTemperature; // The color temperature of the light. Correlated Color Temperature (abbreviated as CCT) is multiplied with the color filter when calculating the final color of a light source. The color temperature of the electromagnetic radiation emitted from an ideal black body is defined as its surface temperature in Kelvin. White is 6500K according to the D65 standard. A candle light is 1800K and a soft warm light bulb is 2700K. If you want to use colorTemperature, GraphicsSettings.lightsUseLinearIntensity and Light.useColorTemperature has to be enabled. Additional resources: GraphicsSettings.lightsUseLinearIntensity, GraphicsSettings.useColorTemperature.\n    public var commandBufferCount; // Number of command buffers set up on this light (Read Only).\n    public var cookie; // The cookie texture projected by the light.\n    public var cookieSize2D; // The size of a directional light's cookie.\n    public var cullingMask; // This is used to light certain objects in the Scene selectively.\n    public var dilatedRange; // The maximum distance the emitted light might travel from the position of the light. This property does not apply to directional lights.\n    public var enableSpotReflector; // Wether a Spot Light should simulate having a reflector.\n    public var flare; // The flare asset to use for this light.\n    public var forceVisible; // Force a light to be visible even if outside the view frustum.\n    public var innerSpotAngle; // The angle of the spot light's inner cone in degrees.\n    public var intensity; // The Intensity of a light is multiplied with the Light color.\n    public var layerShadowCullDistances; // Per-light, per-layer shadow culling distances. Directional lights only.\n    public var lightmapBakeType; // This property describes what part of a light's contribution can be baked (Editor only).\n    public var lightShadowCasterMode; // Allows you to override the global Shadowmask Mode per light. Only use this with render pipelines that can handle per light Shadowmask modes. Incompatible with the legacy renderers.\n    public var lightUnit; // The unit Light.intensity should be displayed in.\n    public var luxAtDistance; // How far away to measure LightUnit.Lux from.\n    public var range; // The maximum distance that light travels from a point of emission. This property does not apply to directional lights.\n    public var renderingLayerMask; // Determines which rendering LayerMask this Light affects.\n    public var renderMode; // Controls how often the light's contribution is calculated during rendering.\n    public var shadowAngle; // Controls the amount of artificial softening applied to the edges of shadows cast by directional lights (Editor only).\n    public var shadowBias; // Shadow mapping constant bias.\n    public var shadowCustomResolution; // The custom resolution of the shadow map.\n    public var shadowMatrixOverride; // Matrix that overrides the regular light projection matrix during shadow culling. Unity uses this matrix if you set Light.useShadowMatrixOverride to true.\n    public var shadowNearPlane; // Near plane value to use for shadow frustums.\n    public var shadowNormalBias; // Shadow mapping normal-based bias.\n    public var shadowRadius; // Controls the amount of artificial softening applied to the edges of shadows cast by the Point or Spot light (Editor only).\n    public var shadowResolution; // The resolution of the shadow map. Change it to balance shadow visual quality and performance.\n    public var shadows; // Determines if this light will cast soft or hard shadows, or not cast shadows at all.\n    public var shadowStrength; // Strength of light's shadows.\n    public var spotAngle; // The angle of the spot light's cone in degrees.\n    public var type; // The type of the light.\n    public var useBoundingSphereOverride; // Set to true to override light bounding sphere for culling.\n    public var useColorTemperature; // Set to true to use the color temperature.\n    public var useShadowMatrixOverride; // Set to true to enable custom matrix for culling during shadows.\n    public var useViewFrustumForShadowCasterCull; // Whether to cull shadows for this Light when the Light is outside of the view frustum.\n    public void AddCommandBuffer(); // Add a command buffer to be executed at a specified place.\n    public void AddCommandBufferAsync(); // Adds a command buffer to the GPU's async compute queues and executes that command buffer when graphics processing reaches a given point.\n    public void GetCommandBuffers(); // Get command buffers to be executed at a specified place.\n    public void RemoveAllCommandBuffers(); // Remove all command buffers set on this light.\n    public void RemoveCommandBuffer(); // Remove command buffer from execution at a specified place.\n    public void RemoveCommandBuffers(); // Remove command buffers from execution at a specified place.\n    public void Reset(); // Revert all light parameters to default.\n    public void SetLightDirty(); // Sets a light dirty to notify the light baking backends to update their internal light representation (Editor only).\n}",
+  "properties": [
+    {
+      "name": "areaSize",
+      "description": "The size of the area light."
+    },
+    {
+      "name": "bakingOutput",
+      "description": "This property describes the output of the last Global Illumination bake."
+    },
+    {
+      "name": "bounceIntensity",
+      "description": "The multiplier that defines the strength of the bounce lighting."
+    },
+    {
+      "name": "boundingSphereOverride",
+      "description": "Bounding sphere used to override the regular light bounding sphere during culling."
+    },
+    {
+      "name": "color",
+      "description": "Specifies the color emitted by the light."
+    },
+    {
+      "name": "colorTemperature",
+      "description": "The color temperature of the light. Correlated Color Temperature (abbreviated as CCT) is multiplied with the color filter when calculating the final color of a light source. The color temperature of the electromagnetic radiation emitted from an ideal black body is defined as its surface temperature in Kelvin. White is 6500K according to the D65 standard. A candle light is 1800K and a soft warm light bulb is 2700K. If you want to use colorTemperature, GraphicsSettings.lightsUseLinearIntensity and Light.useColorTemperature has to be enabled. Additional resources: GraphicsSettings.lightsUseLinearIntensity, GraphicsSettings.useColorTemperature."
+    },
+    {
+      "name": "commandBufferCount",
+      "description": "Number of command buffers set up on this light (Read Only)."
+    },
+    {
+      "name": "cookie",
+      "description": "The cookie texture projected by the light."
+    },
+    {
+      "name": "cookieSize2D",
+      "description": "The size of a directional light's cookie."
+    },
+    {
+      "name": "cullingMask",
+      "description": "This is used to light certain objects in the Scene selectively."
+    },
+    {
+      "name": "dilatedRange",
+      "description": "The maximum distance the emitted light might travel from the position of the light. This property does not apply to directional lights."
+    },
+    {
+      "name": "enableSpotReflector",
+      "description": "Wether a Spot Light should simulate having a reflector."
+    },
+    {
+      "name": "flare",
+      "description": "The flare asset to use for this light."
+    },
+    {
+      "name": "forceVisible",
+      "description": "Force a light to be visible even if outside the view frustum."
+    },
+    {
+      "name": "innerSpotAngle",
+      "description": "The angle of the spot light's inner cone in degrees."
+    },
+    {
+      "name": "intensity",
+      "description": "The Intensity of a light is multiplied with the Light color."
+    },
+    {
+      "name": "layerShadowCullDistances",
+      "description": "Per-light, per-layer shadow culling distances. Directional lights only."
+    },
+    {
+      "name": "lightmapBakeType",
+      "description": "This property describes what part of a light's contribution can be baked (Editor only)."
+    },
+    {
+      "name": "lightShadowCasterMode",
+      "description": "Allows you to override the global Shadowmask Mode per light. Only use this with render pipelines that can handle per light Shadowmask modes. Incompatible with the legacy renderers."
+    },
+    {
+      "name": "lightUnit",
+      "description": "The unit Light.intensity should be displayed in."
+    }
+  ]
+}

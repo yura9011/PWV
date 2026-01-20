@@ -1,0 +1,88 @@
+{
+  "name": "api_ui_GUI",
+  "type": "api",
+  "description": "The GUI class is the interface for Unity's GUI with manual positioning.",
+  "content": "// Unity Class: GUI\n// Documentation: https://docs.unity3d.com/ScriptReference/GUI.html\n\n// Description: The GUI class is the interface for Unity's GUI with manual positioning.\n\n// Methods:\n// - BeginGroup: Begin a group. Must be matched with a call to EndGroup.\n// - BeginScrollView: Begin a scrolling view inside your GUI.\n// - Box: Create a Box on the GUI Layer.\n// - BringWindowToBack: Bring a specific window to back of the floating windows.\n// - BringWindowToFront: Bring a specific window to front of the floating windows.\n// - Button: Make a single press button. The user clicks them and something happens immediately.\n// - DragWindow: Make a window draggable.\n// - DrawTexture: Draw a texture within a rectangle.\n// - DrawTextureWithTexCoords: Draw a texture within a rectangle with the given texture coordinates.\n// - EndGroup: End a group.\n// - EndScrollView: Ends a scrollview started with a call to BeginScrollView.\n// - FocusControl: Move keyboard focus to a named control.\n// - FocusWindow: Make a window become the active window.\n// - GetNameOfFocusedControl: Get the name of named control that has focus.\n// - HorizontalScrollbar: Make a horizontal scrollbar. Scrollbars are what you use to scroll through a document. Most likely, you want to use scrollViews instead.\n// - HorizontalSlider: A horizontal slider the user can drag to change a value between a min and a max.\n// - Label: Make a text or texture label on screen.\n// - ModalWindow: Show a Modal Window.\n// - PasswordField: Make a text field where the user can enter a password.\n// - RepeatButton: Make a button that is active as long as the user holds it down.\n// - ScrollTo: Scrolls all enclosing scrollviews so they try to make position visible.\n// - SelectionGrid: Make a grid of buttons.\n// - SetNextControlName: Set the name of the next control.\n// - TextArea: Make a Multi-line text area where the user can edit a string.\n// - TextField: Make a single-line text field where the user can edit a string.\n// - Toggle: Make an on/off toggle button.\n// - Toolbar: Make a toolbar.\n// - UnfocusWindow: Remove focus from all windows.\n// - VerticalScrollbar: Make a vertical scrollbar. Scrollbars are what you use to scroll through a document. Most likely, you want to use scrollViews instead.\n// - VerticalSlider: A vertical slider the user can drag to change a value between a min and a max.\n// - Window: Make a popup window.\n\npublic class GUI {\n    public void BeginGroup(); // Begin a group. Must be matched with a call to EndGroup.\n    public void BeginScrollView(); // Begin a scrolling view inside your GUI.\n    public void Box(); // Create a Box on the GUI Layer.\n    public void BringWindowToBack(); // Bring a specific window to back of the floating windows.\n    public void BringWindowToFront(); // Bring a specific window to front of the floating windows.\n    public void Button(); // Make a single press button. The user clicks them and something happens immediate\n    public void DragWindow(); // Make a window draggable.\n    public void DrawTexture(); // Draw a texture within a rectangle.\n    public void DrawTextureWithTexCoords(); // Draw a texture within a rectangle with the given texture coordinates.\n    public void EndGroup(); // End a group.\n    public void EndScrollView(); // Ends a scrollview started with a call to BeginScrollView.\n    public void FocusControl(); // Move keyboard focus to a named control.\n    public void FocusWindow(); // Make a window become the active window.\n    public void GetNameOfFocusedControl(); // Get the name of named control that has focus.\n    public void HorizontalScrollbar(); // Make a horizontal scrollbar. Scrollbars are what you use to scroll through a doc\n}",
+  "properties": [
+    {
+      "name": "BeginGroup",
+      "description": "Begin a group. Must be matched with a call to EndGroup."
+    },
+    {
+      "name": "BeginScrollView",
+      "description": "Begin a scrolling view inside your GUI."
+    },
+    {
+      "name": "Box",
+      "description": "Create a Box on the GUI Layer."
+    },
+    {
+      "name": "BringWindowToBack",
+      "description": "Bring a specific window to back of the floating windows."
+    },
+    {
+      "name": "BringWindowToFront",
+      "description": "Bring a specific window to front of the floating windows."
+    },
+    {
+      "name": "Button",
+      "description": "Make a single press button. The user clicks them and something happens immediately."
+    },
+    {
+      "name": "DragWindow",
+      "description": "Make a window draggable."
+    },
+    {
+      "name": "DrawTexture",
+      "description": "Draw a texture within a rectangle."
+    },
+    {
+      "name": "DrawTextureWithTexCoords",
+      "description": "Draw a texture within a rectangle with the given texture coordinates."
+    },
+    {
+      "name": "EndGroup",
+      "description": "End a group."
+    },
+    {
+      "name": "EndScrollView",
+      "description": "Ends a scrollview started with a call to BeginScrollView."
+    },
+    {
+      "name": "FocusControl",
+      "description": "Move keyboard focus to a named control."
+    },
+    {
+      "name": "FocusWindow",
+      "description": "Make a window become the active window."
+    },
+    {
+      "name": "GetNameOfFocusedControl",
+      "description": "Get the name of named control that has focus."
+    },
+    {
+      "name": "HorizontalScrollbar",
+      "description": "Make a horizontal scrollbar. Scrollbars are what you use to scroll through a document. Most likely, you want to use scrollViews instead."
+    },
+    {
+      "name": "HorizontalSlider",
+      "description": "A horizontal slider the user can drag to change a value between a min and a max."
+    },
+    {
+      "name": "Label",
+      "description": "Make a text or texture label on screen."
+    },
+    {
+      "name": "ModalWindow",
+      "description": "Show a Modal Window."
+    },
+    {
+      "name": "PasswordField",
+      "description": "Make a text field where the user can enter a password."
+    },
+    {
+      "name": "RepeatButton",
+      "description": "Make a button that is active as long as the user holds it down."
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+Lee los siguientes archivos antes de comenzar:
+1. .kiro/steering/00-onboarding.md
+2. docs/PROYECTO_ESTADO.md
+3. docs/TODO.md
+Estos contienen las reglas del proyecto, el estado actual y las tareas pendientes.
+
+
+Actualiza los archivos PRoyecto_Estado.md , 00onboarding.md y TODO.md

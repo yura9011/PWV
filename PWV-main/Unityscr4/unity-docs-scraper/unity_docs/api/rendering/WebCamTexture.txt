@@ -1,0 +1,62 @@
+// Unity Class: WebCamTexture
+// Documentation: https://docs.unity3d.com/ScriptReference/WebCamTexture.html
+
+// Description: WebCam Textures are textures onto which the live video input is rendered.
+
+// Properties:
+// - autoFocusPoint: This property allows you to set/get the auto focus point of the camera. This works only on Android a
+// - deviceName: Set this to specify the name of the device to use.
+// - didUpdateThisFrame: Did the video buffer update this frame?
+// - isDepth: This property is true if the texture is based on depth data.
+// - isPlaying: Returns if the camera is currently playing.
+// - requestedFPS: Set the requested frame rate of the camera device (in frames per second).
+// - requestedHeight: Set the requested height of the camera device.
+// - requestedWidth: Set the requested width of the camera device.
+// - videoRotationAngle: Returns an clockwise angle (in degrees), which can be used to rotate a polygon so camera contents ar
+// - videoVerticallyMirrored: Returns if the texture image is vertically flipped.
+
+// Methods:
+// - GetPixel: Gets the pixel color at coordinates (x, y).
+// - GetPixels: Gets the pixel color data for a mipmap level as Color structs.
+// - GetPixels32: Gets the pixel color data for a mipmap level as Color32 structs.
+// - Pause: Pauses the camera.
+// - Play: Starts the camera.
+// - Stop: Stops the camera.
+// - Destroy: Removes a GameObject, component, or asset.
+// - DestroyImmediate: Destroys the specified object immediately. Use with caution and in Edit mode only.
+// - DontDestroyOnLoad: Do not destroy the target Object when loading a new Scene.
+// - FindAnyObjectByType: Retrieves any active loaded object of Type type.
+// - FindFirstObjectByType: Retrieves the first active loaded object of Type type.
+// - FindObjectsByType: Retrieves a list of all loaded objects of Type type.
+// - Instantiate: Clones the object original and returns the clone.
+// - InstantiateAsync: Captures a snapshot of the original object (that must be related to some GameObject) and returns the
+// - SetGlobalAnisotropicFilteringLimits: Sets Anisotropic limits.
+// - SetStreamingTextureMaterialDebugProperties: This function sets mipmap streaming debug properties on all materials known by the mipmap streaming 
+
+public class WebCamTexture {
+    public var autoFocusPoint;
+    public var deviceName;
+    public var didUpdateThisFrame;
+    public var isDepth;
+    public var isPlaying;
+    public var requestedFPS;
+    public var requestedHeight;
+    public var requestedWidth;
+    public var videoRotationAngle;
+    public var videoVerticallyMirrored;
+    public void GetPixel();
+    public void GetPixels();
+    public void GetPixels32();
+    public void Pause();
+    public void Play();
+    public void Stop();
+    public void Destroy();
+    public void DestroyImmediate();
+    public void DontDestroyOnLoad();
+    public void FindAnyObjectByType();
+    public void FindFirstObjectByType();
+    public void FindObjectsByType();
+    public void Instantiate();
+    public void InstantiateAsync();
+    public void SetGlobalAnisotropicFilteringLimits();
+}

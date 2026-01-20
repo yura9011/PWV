@@ -1,0 +1,106 @@
+// Unity Class: Renderer
+// Documentation: https://docs.unity3d.com/ScriptReference/Renderer.html
+
+// Description: General functionality for all renderers.
+
+// Properties:
+// - allowOcclusionWhenDynamic: Controls if dynamic occlusion culling should be performed for this renderer.
+// - bounds: The bounding box of the renderer in world space.
+// - enabled: Makes the rendered 3D object visible if enabled.
+// - forceMeshLod: Force a specific Mesh LOD level for this renderer if the mesh has Mesh LODs. If the value is -1, Unity uses the default Mesh LOD selection method.
+// - forceRenderingOff: Allows turning off rendering for a specific component.
+// - isLOD0: Is the renderer the first LOD level in its group.
+// - isPartOfStaticBatch: Indicates whether the renderer is part of a static batch with other renderers.
+// - isVisible: Is this renderer visible in any camera? (Read Only)
+// - lightmapIndex: The index of the baked lightmap applied to this renderer.
+// - lightmapScaleOffset: The UV scale & offset used for a lightmap.
+// - lightProbeProxyVolumeOverride: If set, the Renderer will use the Light Probe Proxy Volume component attached to the source GameObject.
+// - lightProbeUsage: The light probe interpolation type.
+// - localBounds: The bounding box of the renderer in local space.
+// - localToWorldMatrix: Matrix that transforms a point from local space into world space (Read Only).
+// - LODGroup: The LODGroup for this Renderer.
+// - material: Returns the first instantiated Material assigned to the renderer.
+// - materials: Returns all the instantiated materials of this object.
+// - meshLodSelectionBias: Bias to add to the calculated value when selecting a Mesh LOD level.
+// - motionVectorGenerationMode: Specifies the mode for motion vector rendering.
+// - probeAnchor: If set, Renderer will use this Transform's position to find the light or reflection probe.
+// - rayTracingAccelerationStructureBuildFlags: The flags Unity uses when it builds acceleration structures associated with geometry used by renderers.
+// - rayTracingAccelerationStructureBuildFlagsOverride: Whether to override the default build flags specified when creating a RayTracingAccelerationStructure.
+// - rayTracingMode: Describes how this renderer is updated for ray tracing.
+// - realtimeLightmapIndex: The index of the real-time lightmap applied to this renderer.
+// - realtimeLightmapScaleOffset: The UV scale & offset used for a real-time lightmap.
+// - receiveShadows: Does this object receive shadows?
+// - reflectionProbeUsage: Should reflection probes be used for this Renderer?
+// - rendererPriority: This value sorts renderers by priority. Lower values are rendered first and higher values are rendered last.
+// - renderingLayerMask: Determines which rendering layer this renderer lives on, if you use a scriptable render pipeline.
+// - shadowCastingMode: Does this object cast shadows?
+// - sharedMaterial: The shared material of this object.
+// - sharedMaterials: All the shared materials of this object.
+// - sortingLayerID: Unique ID of the Renderer's sorting layer.
+// - sortingLayerName: Name of the Renderer's sorting layer.
+// - sortingOrder: Renderer's order within a sorting layer.
+// - staticShadowCaster: Is this renderer a static shadow caster?
+// - worldToLocalMatrix: Matrix that transforms a point from world space into local space (Read Only).
+
+// Methods:
+// - GetClosestReflectionProbes(): Returns an array of closest reflection probes with weights, weight shows how much influence the probe has on the renderer, this value is also used when blending between reflection probes occur.
+// - GetMaterials(): Returns all the instantiated materials of this object.
+// - GetPropertyBlock(): Get per-Renderer or per-Material property block.
+// - GetSharedMaterials(): Returns all the shared materials of this object.
+// - HasPropertyBlock(): Returns true if the Renderer has a material property block attached via SetPropertyBlock.
+// - ResetBounds(): Reset custom world space bounds.
+// - ResetLocalBounds(): Reset custom local space bounds.
+// - SetMaterials(): Assigns the shared materials of this renderer using the list of materials provided.
+// - SetPropertyBlock(): Lets you set or clear per-renderer or per-material parameter overrides.
+// - SetSharedMaterials(): Assigns the shared materials of this renderer using the list of materials provided.
+
+// Pseudo-code representation of Renderer
+public class Renderer {
+    public var allowOcclusionWhenDynamic; // Controls if dynamic occlusion culling should be performed for this renderer.
+    public var bounds; // The bounding box of the renderer in world space.
+    public var enabled; // Makes the rendered 3D object visible if enabled.
+    public var forceMeshLod; // Force a specific Mesh LOD level for this renderer if the mesh has Mesh LODs. If the value is -1, Unity uses the default Mesh LOD selection method.
+    public var forceRenderingOff; // Allows turning off rendering for a specific component.
+    public var isLOD0; // Is the renderer the first LOD level in its group.
+    public var isPartOfStaticBatch; // Indicates whether the renderer is part of a static batch with other renderers.
+    public var isVisible; // Is this renderer visible in any camera? (Read Only)
+    public var lightmapIndex; // The index of the baked lightmap applied to this renderer.
+    public var lightmapScaleOffset; // The UV scale & offset used for a lightmap.
+    public var lightProbeProxyVolumeOverride; // If set, the Renderer will use the Light Probe Proxy Volume component attached to the source GameObject.
+    public var lightProbeUsage; // The light probe interpolation type.
+    public var localBounds; // The bounding box of the renderer in local space.
+    public var localToWorldMatrix; // Matrix that transforms a point from local space into world space (Read Only).
+    public var LODGroup; // The LODGroup for this Renderer.
+    public var material; // Returns the first instantiated Material assigned to the renderer.
+    public var materials; // Returns all the instantiated materials of this object.
+    public var meshLodSelectionBias; // Bias to add to the calculated value when selecting a Mesh LOD level.
+    public var motionVectorGenerationMode; // Specifies the mode for motion vector rendering.
+    public var probeAnchor; // If set, Renderer will use this Transform's position to find the light or reflection probe.
+    public var rayTracingAccelerationStructureBuildFlags; // The flags Unity uses when it builds acceleration structures associated with geometry used by renderers.
+    public var rayTracingAccelerationStructureBuildFlagsOverride; // Whether to override the default build flags specified when creating a RayTracingAccelerationStructure.
+    public var rayTracingMode; // Describes how this renderer is updated for ray tracing.
+    public var realtimeLightmapIndex; // The index of the real-time lightmap applied to this renderer.
+    public var realtimeLightmapScaleOffset; // The UV scale & offset used for a real-time lightmap.
+    public var receiveShadows; // Does this object receive shadows?
+    public var reflectionProbeUsage; // Should reflection probes be used for this Renderer?
+    public var rendererPriority; // This value sorts renderers by priority. Lower values are rendered first and higher values are rendered last.
+    public var renderingLayerMask; // Determines which rendering layer this renderer lives on, if you use a scriptable render pipeline.
+    public var shadowCastingMode; // Does this object cast shadows?
+    public var sharedMaterial; // The shared material of this object.
+    public var sharedMaterials; // All the shared materials of this object.
+    public var sortingLayerID; // Unique ID of the Renderer's sorting layer.
+    public var sortingLayerName; // Name of the Renderer's sorting layer.
+    public var sortingOrder; // Renderer's order within a sorting layer.
+    public var staticShadowCaster; // Is this renderer a static shadow caster?
+    public var worldToLocalMatrix; // Matrix that transforms a point from world space into local space (Read Only).
+    public void GetClosestReflectionProbes(); // Returns an array of closest reflection probes with weights, weight shows how much influence the probe has on the renderer, this value is also used when blending between reflection probes occur.
+    public void GetMaterials(); // Returns all the instantiated materials of this object.
+    public void GetPropertyBlock(); // Get per-Renderer or per-Material property block.
+    public void GetSharedMaterials(); // Returns all the shared materials of this object.
+    public void HasPropertyBlock(); // Returns true if the Renderer has a material property block attached via SetPropertyBlock.
+    public void ResetBounds(); // Reset custom world space bounds.
+    public void ResetLocalBounds(); // Reset custom local space bounds.
+    public void SetMaterials(); // Assigns the shared materials of this renderer using the list of materials provided.
+    public void SetPropertyBlock(); // Lets you set or clear per-renderer or per-material parameter overrides.
+    public void SetSharedMaterials(); // Assigns the shared materials of this renderer using the list of materials provided.
+}

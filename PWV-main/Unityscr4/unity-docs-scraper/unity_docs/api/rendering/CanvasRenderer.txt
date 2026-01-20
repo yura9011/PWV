@@ -1,0 +1,74 @@
+// Unity Class: CanvasRenderer
+// Documentation: https://docs.unity3d.com/ScriptReference/CanvasRenderer.html
+
+// Description: A component that will render to the screen after all normal rendering has completed when attached to a Canvas. Designed for GUI application.
+
+// Properties:
+// - absoluteDepth: Depth of the renderer relative to the root canvas.
+// - clippingSoftness: The clipping softness to apply to the renderer.
+// - cull: Indicates whether geometry emitted by this renderer is ignored.
+// - cullTransparentMesh: Indicates whether geometry emitted by this renderer can be ignored when the vertex color alpha is close to zero for every vertex of the mesh.
+// - hasMoved: True if any change has occured that would invalidate the positions of generated geometry.
+// - hasPopInstruction: Enable 'render stack' pop draw call.
+// - hasRectClipping: True if rect clipping has been enabled on this renderer. Additional resources: CanvasRenderer.EnableRectClipping, CanvasRenderer.DisableRectClipping.
+// - materialCount: The number of materials usable by this renderer.
+// - popMaterialCount: The number of materials usable by this renderer. Used internally for masking.
+// - relativeDepth: Depth of the renderer realative to the parent canvas.
+
+// Methods:
+// - Clear(): Remove all cached vertices.
+// - DisableRectClipping(): Disables rectangle clipping for this CanvasRenderer.
+// - EnableRectClipping(): Enables rect clipping on the CanvasRendered. Geometry outside of the specified rect will be clipped (not rendered).
+// - GetAlpha(): Get the current alpha of the renderer.
+// - GetColor(): Get the current color of the renderer.
+// - GetInheritedAlpha(): Get the final inherited alpha calculated by including all the parent alphas from included parent CanvasGroups.
+// - GetMaterial(): Gets the current Material assigned to the CanvasRenderer.
+// - GetMesh(): Returns the current mesh used to render the canvas content into.
+// - GetPopMaterial(): Gets the current Material assigned to the CanvasRenderer. Used internally for masking.
+// - GetSecondaryTexture(): Get the secondary texture at the specifed index.
+// - GetSecondaryTextureCount(): Get the number of secondary textures usable by this renderer.
+// - GetSecondaryTextureName(): Get the shader property name of the secondary texture at the specifed index.
+// - SetAlpha(): Set the alpha of the renderer. Will be multiplied with the UIVertex alpha and the Canvas alpha.
+// - SetAlphaTexture(): The Alpha Texture that will be passed to the Shader under the _AlphaTex property.
+// - SetColor(): Set the color of the renderer. Will be multiplied with the UIVertex color and the Canvas color.
+// - SetMaterial(): Set the material for the canvas renderer. If a texture is specified then it will be used as the 'MainTex' instead of the material's 'MainTex'. Additional resources: CanvasRenderer.materialCount, CanvasRenderer.SetTexture.
+// - SetMesh(): Sets the Mesh used by this renderer. Note the Mesh must be read/write enabled.
+// - SetPopMaterial(): Set the material for the canvas renderer. Used internally for masking.
+// - SetSecondaryTexture(): Sets the secondary texture usable by this renderer at the specified index with the specified shader property name.
+// - SetSecondaryTextureCount(): Set the number of secondary textures usable by this renderer. If the size is increased then the new data is initialized with default empty values.
+// - SetTexture(): Sets the texture used by this renderer's material.
+
+// Pseudo-code representation of CanvasRenderer
+public class CanvasRenderer {
+    public var absoluteDepth; // Depth of the renderer relative to the root canvas.
+    public var clippingSoftness; // The clipping softness to apply to the renderer.
+    public var cull; // Indicates whether geometry emitted by this renderer is ignored.
+    public var cullTransparentMesh; // Indicates whether geometry emitted by this renderer can be ignored when the vertex color alpha is close to zero for every vertex of the mesh.
+    public var hasMoved; // True if any change has occured that would invalidate the positions of generated geometry.
+    public var hasPopInstruction; // Enable 'render stack' pop draw call.
+    public var hasRectClipping; // True if rect clipping has been enabled on this renderer. Additional resources: CanvasRenderer.EnableRectClipping, CanvasRenderer.DisableRectClipping.
+    public var materialCount; // The number of materials usable by this renderer.
+    public var popMaterialCount; // The number of materials usable by this renderer. Used internally for masking.
+    public var relativeDepth; // Depth of the renderer realative to the parent canvas.
+    public void Clear(); // Remove all cached vertices.
+    public void DisableRectClipping(); // Disables rectangle clipping for this CanvasRenderer.
+    public void EnableRectClipping(); // Enables rect clipping on the CanvasRendered. Geometry outside of the specified rect will be clipped (not rendered).
+    public void GetAlpha(); // Get the current alpha of the renderer.
+    public void GetColor(); // Get the current color of the renderer.
+    public void GetInheritedAlpha(); // Get the final inherited alpha calculated by including all the parent alphas from included parent CanvasGroups.
+    public void GetMaterial(); // Gets the current Material assigned to the CanvasRenderer.
+    public void GetMesh(); // Returns the current mesh used to render the canvas content into.
+    public void GetPopMaterial(); // Gets the current Material assigned to the CanvasRenderer. Used internally for masking.
+    public void GetSecondaryTexture(); // Get the secondary texture at the specifed index.
+    public void GetSecondaryTextureCount(); // Get the number of secondary textures usable by this renderer.
+    public void GetSecondaryTextureName(); // Get the shader property name of the secondary texture at the specifed index.
+    public void SetAlpha(); // Set the alpha of the renderer. Will be multiplied with the UIVertex alpha and the Canvas alpha.
+    public void SetAlphaTexture(); // The Alpha Texture that will be passed to the Shader under the _AlphaTex property.
+    public void SetColor(); // Set the color of the renderer. Will be multiplied with the UIVertex color and the Canvas color.
+    public void SetMaterial(); // Set the material for the canvas renderer. If a texture is specified then it will be used as the 'MainTex' instead of the material's 'MainTex'. Additional resources: CanvasRenderer.materialCount, CanvasRenderer.SetTexture.
+    public void SetMesh(); // Sets the Mesh used by this renderer. Note the Mesh must be read/write enabled.
+    public void SetPopMaterial(); // Set the material for the canvas renderer. Used internally for masking.
+    public void SetSecondaryTexture(); // Sets the secondary texture usable by this renderer at the specified index with the specified shader property name.
+    public void SetSecondaryTextureCount(); // Set the number of secondary textures usable by this renderer. If the size is increased then the new data is initialized with default empty values.
+    public void SetTexture(); // Sets the texture used by this renderer's material.
+}

@@ -1,0 +1,88 @@
+{
+  "name": "api_math_Vector4",
+  "type": "api",
+  "description": "Representation of four-dimensional vectors.",
+  "content": "// Unity Class: Vector4\n// Documentation: https://docs.unity3d.com/ScriptReference/Vector4.html\n\n// Description: Representation of four-dimensional vectors.\n\n// Properties:\n// - magnitude: Returns the length of this vector (Read Only).\n// - normalized: Returns a normalized vector based on the current vector. The normalized vector has a magnitude of 1 \n// - sqrMagnitude: Returns the squared length of this vector (Read Only).\n// - this[int]: Access the x, y, z, w components using [0], [1], [2], [3] respectively.\n// - w: W component of the vector.\n// - x: X component of the vector.\n// - y: Y component of the vector.\n// - z: Z component of the vector.\n\n// Methods:\n// - Equals: Returns true if the given vector is exactly equal to this vector.\n// - Set: Set x, y, z and w components of an existing Vector4.\n// - ToString: Returns a formatted string for this vector.\n// - Distance: Returns the distance between a and b.\n// - Dot: Dot Product of two vectors.\n// - Lerp: Linearly interpolates between two vectors.\n// - LerpUnclamped: Linearly interpolates between two vectors.\n// - Max: Returns a vector that is made from the largest components of two vectors.\n// - Min: Returns a vector that is made from the smallest components of two vectors.\n// - MoveTowards: Moves a point current towards target.\n// - Normalize: Makes this vector have a magnitude of 1.\n// - Project: Projects a vector onto another vector.\n// - Scale: Multiplies two vectors component-wise.\n\npublic class Vector4 {\n    public var magnitude;\n    public var normalized;\n    public var sqrMagnitude;\n    public var this[int];\n    public var w;\n    public var x;\n    public var y;\n    public var z;\n    public void Equals();\n    public void Set();\n    public void ToString();\n    public void Distance();\n    public void Dot();\n    public void Lerp();\n    public void LerpUnclamped();\n    public void Max();\n    public void Min();\n    public void MoveTowards();\n    public void Normalize();\n    public void Project();\n    public void Scale();\n}",
+  "properties": [
+    {
+      "name": "magnitude",
+      "description": "Returns the length of this vector (Read Only)."
+    },
+    {
+      "name": "normalized",
+      "description": "Returns a normalized vector based on the current vector. The normalized vector has a magnitude of 1 "
+    },
+    {
+      "name": "sqrMagnitude",
+      "description": "Returns the squared length of this vector (Read Only)."
+    },
+    {
+      "name": "w",
+      "description": "W component of the vector."
+    },
+    {
+      "name": "x",
+      "description": "X component of the vector."
+    },
+    {
+      "name": "y",
+      "description": "Y component of the vector."
+    },
+    {
+      "name": "z",
+      "description": "Z component of the vector."
+    },
+    {
+      "name": "Equals",
+      "description": "Returns true if the given vector is exactly equal to this vector."
+    },
+    {
+      "name": "Set",
+      "description": "Set x, y, z and w components of an existing Vector4."
+    },
+    {
+      "name": "ToString",
+      "description": "Returns a formatted string for this vector."
+    },
+    {
+      "name": "Distance",
+      "description": "Returns the distance between a and b."
+    },
+    {
+      "name": "Dot",
+      "description": "Dot Product of two vectors."
+    },
+    {
+      "name": "Lerp",
+      "description": "Linearly interpolates between two vectors."
+    },
+    {
+      "name": "LerpUnclamped",
+      "description": "Linearly interpolates between two vectors."
+    },
+    {
+      "name": "Max",
+      "description": "Returns a vector that is made from the largest components of two vectors."
+    },
+    {
+      "name": "Min",
+      "description": "Returns a vector that is made from the smallest components of two vectors."
+    },
+    {
+      "name": "MoveTowards",
+      "description": "Moves a point current towards target."
+    },
+    {
+      "name": "Normalize",
+      "description": "Makes this vector have a magnitude of 1."
+    },
+    {
+      "name": "Project",
+      "description": "Projects a vector onto another vector."
+    },
+    {
+      "name": "Scale",
+      "description": "Multiplies two vectors component-wise."
+    }
+  ]
+}

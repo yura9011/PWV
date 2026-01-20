@@ -1,0 +1,39 @@
+// Unity Class: LightProbes
+// Documentation: https://docs.unity3d.com/ScriptReference/LightProbes.html
+
+// Description: Stores light probe data for all currently loaded Scenes.
+
+// Properties:
+// - bakedProbes: Coefficients of baked light probes.
+// - cellCount: The number of cells space is divided into (Read Only).
+// - cellCountSelf: The number of cells space is divided into for this LightProbes object (Read Only).
+// - count: The number of light probes (Read Only).
+// - countSelf: The number of light probes stored in this LightProbes object (Read Only).
+// - positions: Positions of the baked light probes (Read Only).
+
+// Methods:
+// - GetPositionsSelf: Gets the positions of the baked light probes stored in this LightProbes object.
+// - SetPositionsSelf: Sets the positions of the baked light probes stored in this LightProbes object.
+// - CalculateInterpolatedLightAndOcclusionProbes: Calculate light probes and occlusion probes at the given world space positions.
+// - GetInstantiatedLightProbesForScene: Gets an instantiated clone of the LightProbes object for a specific scene.
+// - GetInterpolatedProbe: Returns an interpolated probe for the given position for both real-time and baked light probes combi
+// - GetSharedLightProbesForScene: Gets the shared LightProbes object for a specific scene.
+// - Tetrahedralize: Synchronously tetrahedralize the currently loaded LightProbe positions.
+// - TetrahedralizeAsync: Asynchronously tetrahedralize all currently loaded LightProbe positions.
+
+public class LightProbes {
+    public var bakedProbes;
+    public var cellCount;
+    public var cellCountSelf;
+    public var count;
+    public var countSelf;
+    public var positions;
+    public void GetPositionsSelf();
+    public void SetPositionsSelf();
+    public void CalculateInterpolatedLightAndOcclusionProbes();
+    public void GetInstantiatedLightProbesForScene();
+    public void GetInterpolatedProbe();
+    public void GetSharedLightProbesForScene();
+    public void Tetrahedralize();
+    public void TetrahedralizeAsync();
+}

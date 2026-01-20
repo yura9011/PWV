@@ -1,0 +1,88 @@
+{
+  "name": "api_editor_Editor",
+  "type": "api",
+  "description": "Derive from this base class to create a custom inspector or editor for your custom object.",
+  "content": "// Unity Class: Editor\n// Documentation: https://docs.unity3d.com/ScriptReference/Editor.html\n\n// Description: Derive from this base class to create a custom inspector or editor for your custom object.\n\n// Properties:\n// - hasUnsavedChanges: This property specifies whether the Editor prompts the user to save or discard unsaved changes befor\n// - saveChangesMessage: The message that displays to the user if they are prompted to save.\n// - serializedObject: A SerializedObject representing the object or objects being inspected.\n// - target: The object being inspected.\n// - targets: An array of all the object being inspected.\n\n// Methods:\n// - CreateInspectorGUI: Implement this method to make a custom UIElements inspector.\n// - CreatePreview: Implement this method to make a custom UIElements inspector preview.\n// - DiscardChanges: Discards unsaved changes to the contents of the editor.\n// - DrawDefaultInspector: Draws the built-in Inspector.\n// - DrawHeader: Call this function to draw the header of the editor.\n// - DrawPreview: The first entry point for Preview Drawing.\n// - GetInfoString: Implement this method to show asset information on top of the asset preview.\n// - GetPreviewTitle: Override this method if you want to change the label of the Preview area.\n// - HasPreviewGUI: Override this method in subclasses if you implement OnPreviewGUI.\n// - OnInspectorGUI: Implement this function to make a custom inspector.\n// - OnInteractivePreviewGUI: Implement to create your own interactive custom preview. Interactive custom previews are used in the\n// - OnPreviewGUI: Creates a custom preview for the preview area of the Inspector, the headers of the primary Editor, a\n// - OnPreviewSettings: Override this method if you want to show custom controls in the preview header.\n// - RenderStaticPreview: Override this method if you want to render a static preview.\n// - Repaint: Redraw any inspectors that shows this editor.\n// - RequiresConstantRepaint: Checks if this editor requires constant repaints in its current state.\n// - SaveChanges: Performs a save action on the contents of the editor.\n// - UseDefaultMargins: Override this method in subclasses to return false if you don't want default margins.\n// - CreateCachedEditor: On return previousEditor is an editor for targetObject or targetObjects. The function either returns\n// - CreateCachedEditorWithContext: Creates a cached editor using a context object.\n// - CreateEditor: Make a custom editor for targetObject or targetObjects.\n// - CreateEditorWithContext: Make a custom editor for targetObject or targetObjects with a context object.\n// - DrawFoldoutInspector: Draws the inspector GUI with a foldout header for target.\n\npublic class Editor {\n    public var hasUnsavedChanges;\n    public var saveChangesMessage;\n    public var serializedObject;\n    public var target;\n    public var targets;\n    public void CreateInspectorGUI();\n    public void CreatePreview();\n    public void DiscardChanges();\n    public void DrawDefaultInspector();\n    public void DrawHeader();\n    public void DrawPreview();\n    public void GetInfoString();\n    public void GetPreviewTitle();\n    public void HasPreviewGUI();\n    public void OnInspectorGUI();\n    public void OnInteractivePreviewGUI();\n    public void OnPreviewGUI();\n    public void OnPreviewSettings();\n    public void RenderStaticPreview();\n    public void Repaint();\n}",
+  "properties": [
+    {
+      "name": "hasUnsavedChanges",
+      "description": "This property specifies whether the Editor prompts the user to save or discard unsaved changes befor"
+    },
+    {
+      "name": "saveChangesMessage",
+      "description": "The message that displays to the user if they are prompted to save."
+    },
+    {
+      "name": "serializedObject",
+      "description": "A SerializedObject representing the object or objects being inspected."
+    },
+    {
+      "name": "target",
+      "description": "The object being inspected."
+    },
+    {
+      "name": "targets",
+      "description": "An array of all the object being inspected."
+    },
+    {
+      "name": "CreateInspectorGUI",
+      "description": "Implement this method to make a custom UIElements inspector."
+    },
+    {
+      "name": "CreatePreview",
+      "description": "Implement this method to make a custom UIElements inspector preview."
+    },
+    {
+      "name": "DiscardChanges",
+      "description": "Discards unsaved changes to the contents of the editor."
+    },
+    {
+      "name": "DrawDefaultInspector",
+      "description": "Draws the built-in Inspector."
+    },
+    {
+      "name": "DrawHeader",
+      "description": "Call this function to draw the header of the editor."
+    },
+    {
+      "name": "DrawPreview",
+      "description": "The first entry point for Preview Drawing."
+    },
+    {
+      "name": "GetInfoString",
+      "description": "Implement this method to show asset information on top of the asset preview."
+    },
+    {
+      "name": "GetPreviewTitle",
+      "description": "Override this method if you want to change the label of the Preview area."
+    },
+    {
+      "name": "HasPreviewGUI",
+      "description": "Override this method in subclasses if you implement OnPreviewGUI."
+    },
+    {
+      "name": "OnInspectorGUI",
+      "description": "Implement this function to make a custom inspector."
+    },
+    {
+      "name": "OnInteractivePreviewGUI",
+      "description": "Implement to create your own interactive custom preview. Interactive custom previews are used in the"
+    },
+    {
+      "name": "OnPreviewGUI",
+      "description": "Creates a custom preview for the preview area of the Inspector, the headers of the primary Editor, a"
+    },
+    {
+      "name": "OnPreviewSettings",
+      "description": "Override this method if you want to show custom controls in the preview header."
+    },
+    {
+      "name": "RenderStaticPreview",
+      "description": "Override this method if you want to render a static preview."
+    },
+    {
+      "name": "Repaint",
+      "description": "Redraw any inspectors that shows this editor."
+    }
+  ]
+}

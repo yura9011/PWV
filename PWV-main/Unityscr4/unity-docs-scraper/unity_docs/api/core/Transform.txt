@@ -1,0 +1,122 @@
+// Unity Class: Transform
+// Documentation: https://docs.unity3d.com/ScriptReference/Transform.html
+
+// Description: Position, rotation and scale of an object.
+
+// Properties:
+// - childCount: The number of children the parent Transform has.
+// - eulerAngles: The rotation as Euler angles in degrees.
+// - forward: Returns a normalized vector representing the blue axis of the transform in world space.
+// - hasChanged: Has the transform changed since the last time the flag was set to 'false'?
+// - hierarchyCapacity: The transform capacity of the transform's hierarchy data structure.
+// - hierarchyCount: The number of transforms in the transform's hierarchy data structure.
+// - localEulerAngles: The rotation as Euler angles in degrees relative to the parent transform's rotation.
+// - localPosition: Position of the transform relative to the parent transform.
+// - localRotation: The rotation of the transform relative to the transform rotation of the parent.
+// - localScale: The scale of the transform relative to the GameObjects parent.
+// - localToWorldMatrix: Matrix that transforms a point from local space into world space (Read Only).
+// - lossyScale: The global scale of the object (Read Only).
+// - parent: The parent of the transform.
+// - position: The world space position of the Transform.
+// - right: The red axis of the transform in world space.
+// - root: Returns the topmost transform in the hierarchy.
+// - rotation: A Quaternion that stores the rotation of the Transform in world space.
+// - up: The green axis of the transform in world space.
+// - worldToLocalMatrix: Matrix that transforms a point from world space into local space (Read Only).
+
+// Methods:
+// - DetachChildren(): Unparents all of the target object's children.
+// - Find(): Finds a child by name n and returns it.
+// - GetChild(): Returns a transform child by index.
+// - GetLocalPositionAndRotation(): Updates the value of the out parameters localPosition and localRotation with the transform's current position and rotation in local space (that is, relative to its parent's transform).
+// - GetPositionAndRotation(): Updates the value of the out parameters position and rotation with the transform's current position and rotation in world space (that is, relative to the scene's origin coordinates).
+// - GetSiblingIndex(): Gets the index of this Transform, relative to its siblings.
+// - InverseTransformDirection(): Transforms a direction from world space to local space. The opposite of Transform.TransformDirection.
+// - InverseTransformDirections(): Transforms multiple directions from world space to local space overwriting each original position with the transformed version. The opposite of Transform.TransformDirections.
+// - InverseTransformPoint(): Transforms position from world space to local space.
+// - InverseTransformPoints(): Transforms multiple positions from world space to local space overwriting each original position with the transformed version.
+// - InverseTransformVector(): Transforms a vector from world space to local space. The opposite of Transform.TransformVector.
+// - InverseTransformVectors(): Transforms multiple vectors from world space to local space overwriting each original position with the transformed version. The opposite of Transform.TransformVectors.
+// - IsChildOf(): Is this transform a child of parent?
+// - LookAt(): Rotates the transform so the forward vector points at /target/'s current position.
+// - Rotate(): Use Transform.Rotate to rotate GameObjects in a variety of ways. The rotation is often provided as an Euler angle and not a Quaternion.
+// - RotateAround(): Rotates the transform about axis passing through point in world coordinates by angle degrees.
+// - SetAsFirstSibling(): Move the transform to the start of the local transform list.
+// - SetAsLastSibling(): Move the transform to the end of the local transform list.
+// - SetLocalPositionAndRotation(): Sets the position and rotation of the Transform component in local space (i.e. relative to its parent transform).
+// - SetParent(): Set the parent of the transform.
+// - SetPositionAndRotation(): Sets the world space position and rotation of the Transform component.
+// - SetSiblingIndex(): Sets the sibling index.
+// - TransformDirection(): Transforms direction from local space to world space.
+// - TransformDirections(): Transforms multiple directions from local space to world space overwriting each original direction with the transformed version.
+// - TransformPoint(): Transforms position from local space to world space.
+// - TransformPoints(): Transforms multiple points from local space to world space overwriting each original point with the transformed version.
+// - TransformVector(): Transforms vector from local space to world space.
+// - TransformVectors(): Transforms multiple vectors from local space to world space overwriting each original vector with the transformed version.
+// - Translate(): Moves the transform along its x, y, and z axes by the values of the translation parameter's x, y, and z components respectively.
+
+// Code Examples:
+// Example 1:
+//   using UnityEngine;public class Example : MonoBehaviour
+//   {
+//       // Moves all transform children 10 units upwards!
+//       void Start()
+//       {
+//           foreach (Transform child in transform)
+//           {
+//               child.position += Vector3.up * 10.0f;
+//           }
+//       }
+//   }
+
+// Pseudo-code representation of Transform
+public class Transform {
+    public var childCount; // The number of children the parent Transform has.
+    public var eulerAngles; // The rotation as Euler angles in degrees.
+    public var forward; // Returns a normalized vector representing the blue axis of the transform in world space.
+    public var hasChanged; // Has the transform changed since the last time the flag was set to 'false'?
+    public var hierarchyCapacity; // The transform capacity of the transform's hierarchy data structure.
+    public var hierarchyCount; // The number of transforms in the transform's hierarchy data structure.
+    public var localEulerAngles; // The rotation as Euler angles in degrees relative to the parent transform's rotation.
+    public var localPosition; // Position of the transform relative to the parent transform.
+    public var localRotation; // The rotation of the transform relative to the transform rotation of the parent.
+    public var localScale; // The scale of the transform relative to the GameObjects parent.
+    public var localToWorldMatrix; // Matrix that transforms a point from local space into world space (Read Only).
+    public var lossyScale; // The global scale of the object (Read Only).
+    public var parent; // The parent of the transform.
+    public var position; // The world space position of the Transform.
+    public var right; // The red axis of the transform in world space.
+    public var root; // Returns the topmost transform in the hierarchy.
+    public var rotation; // A Quaternion that stores the rotation of the Transform in world space.
+    public var up; // The green axis of the transform in world space.
+    public var worldToLocalMatrix; // Matrix that transforms a point from world space into local space (Read Only).
+    public void DetachChildren(); // Unparents all of the target object's children.
+    public void Find(); // Finds a child by name n and returns it.
+    public void GetChild(); // Returns a transform child by index.
+    public void GetLocalPositionAndRotation(); // Updates the value of the out parameters localPosition and localRotation with the transform's current position and rotation in local space (that is, relative to its parent's transform).
+    public void GetPositionAndRotation(); // Updates the value of the out parameters position and rotation with the transform's current position and rotation in world space (that is, relative to the scene's origin coordinates).
+    public void GetSiblingIndex(); // Gets the index of this Transform, relative to its siblings.
+    public void InverseTransformDirection(); // Transforms a direction from world space to local space. The opposite of Transform.TransformDirection.
+    public void InverseTransformDirections(); // Transforms multiple directions from world space to local space overwriting each original position with the transformed version. The opposite of Transform.TransformDirections.
+    public void InverseTransformPoint(); // Transforms position from world space to local space.
+    public void InverseTransformPoints(); // Transforms multiple positions from world space to local space overwriting each original position with the transformed version.
+    public void InverseTransformVector(); // Transforms a vector from world space to local space. The opposite of Transform.TransformVector.
+    public void InverseTransformVectors(); // Transforms multiple vectors from world space to local space overwriting each original position with the transformed version. The opposite of Transform.TransformVectors.
+    public void IsChildOf(); // Is this transform a child of parent?
+    public void LookAt(); // Rotates the transform so the forward vector points at /target/'s current position.
+    public void Rotate(); // Use Transform.Rotate to rotate GameObjects in a variety of ways. The rotation is often provided as an Euler angle and not a Quaternion.
+    public void RotateAround(); // Rotates the transform about axis passing through point in world coordinates by angle degrees.
+    public void SetAsFirstSibling(); // Move the transform to the start of the local transform list.
+    public void SetAsLastSibling(); // Move the transform to the end of the local transform list.
+    public void SetLocalPositionAndRotation(); // Sets the position and rotation of the Transform component in local space (i.e. relative to its parent transform).
+    public void SetParent(); // Set the parent of the transform.
+    public void SetPositionAndRotation(); // Sets the world space position and rotation of the Transform component.
+    public void SetSiblingIndex(); // Sets the sibling index.
+    public void TransformDirection(); // Transforms direction from local space to world space.
+    public void TransformDirections(); // Transforms multiple directions from local space to world space overwriting each original direction with the transformed version.
+    public void TransformPoint(); // Transforms position from local space to world space.
+    public void TransformPoints(); // Transforms multiple points from local space to world space overwriting each original point with the transformed version.
+    public void TransformVector(); // Transforms vector from local space to world space.
+    public void TransformVectors(); // Transforms multiple vectors from local space to world space overwriting each original vector with the transformed version.
+    public void Translate(); // Moves the transform along its x, y, and z axes by the values of the translation parameter's x, y, and z components respectively.
+}

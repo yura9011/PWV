@@ -1,0 +1,70 @@
+// Unity Class: UnityWebRequest
+// Documentation: https://docs.unity3d.com/ScriptReference/Networking.UnityWebRequest.html
+
+// Description: Provides methods to communicate with web servers.
+
+// Properties:
+// - certificateHandler: Holds a reference to a CertificateHandler object, which manages certificate validation for this Unit
+// - disposeCertificateHandlerOnDispose: If true, any CertificateHandler attached to this UnityWebRequest will have CertificateHandler.Dispos
+// - disposeDownloadHandlerOnDispose: If true, any DownloadHandler attached to this UnityWebRequest will have DownloadHandler.Dispose call
+// - disposeUploadHandlerOnDispose: If true, any UploadHandler attached to this UnityWebRequest will have UploadHandler.Dispose called a
+// - downloadedBytes: Returns the number of bytes of body data the system has downloaded from the remote server. (Read Onl
+// - downloadHandler: Holds a reference to a DownloadHandler object, which manages body data received from the remote serv
+// - downloadProgress: Returns a floating-point value between 0.0 and 1.0, indicating the progress of downloading body data
+// - error: A human-readable string describing any system errors encountered by this UnityWebRequest object whil
+// - isDone: Returns true after the UnityWebRequest has finished communicating with the remote server. (Read Only
+// - isModifiable: Returns true while a UnityWebRequest’s configuration properties can be altered. (Read Only)
+// - method: Defines the HTTP verb used by this UnityWebRequest, such as GET or POST.
+// - redirectLimit: Indicates the number of redirects that this UnityWebRequest follows before halting with a Redirect L
+// - responseCode: The numeric HTTP response code returned by the server, such as 200, 404 or 500. (Read Only)
+// - result: The result of this UnityWebRequest.
+// - timeout: The number of seconds after which UnityWebRequest attempts to abort the request if no response is re
+// - uploadedBytes: Returns the number of bytes of body data the system has uploaded to the remote server. (Read Only)
+// - uploadHandler: Holds a reference to the UploadHandler object which manages body data to be uploaded to the remote s
+// - uploadProgress: Returns a floating-point value between 0.0 and 1.0, indicating the progress of uploading body data t
+// - uri: Defines the target URI for the UnityWebRequest to communicate with.
+// - url: Defines the target URL for the UnityWebRequest to communicate with.
+
+// Methods:
+// - Abort: If in progress, halts the UnityWebRequest as soon as possible.
+// - Dispose: Signals that this UnityWebRequest is no longer being used, and should clean up any resources it is u
+// - GetRequestHeader: Retrieves the value of a custom request header.
+// - GetResponseHeader: Retrieves the value of a response header from the latest HTTP response received.
+// - GetResponseHeaders: Retrieves a dictionary containing all the response headers received by this UnityWebRequest in the l
+// - SendWebRequest: Begin communicating with the remote server.
+// - SetRequestHeader: Set a HTTP request header to a custom value.
+// - ClearCookieCache: Clears stored cookies from the cache.
+// - Delete: Creates a UnityWebRequest configured for HTTP DELETE.
+// - EscapeURL: Escapes characters in a string to ensure they are URL-friendly.
+// - GenerateBoundary: Generate a random 40-byte array for use as a multipart form boundary.
+// - Get: Create a UnityWebRequest for HTTP GET.
+// - Head: Creates a UnityWebRequest configured to send a HTTP HEAD request.
+// - Post: Creates a UnityWebRequest configured to send form data to a server via HTTP POST.
+// - PostWwwForm: Creates a UnityWebRequest configured to send form data to a server via HTTP POST.
+// - Put: Creates a UnityWebRequest configured to upload raw data to a remote server via HTTP PUT.
+// - SerializeFormSections: Converts a List of IMultipartFormSection objects into a byte array containing raw multipart form dat
+// - SerializeSimpleForm: Serialize a dictionary of strings into a byte array containing URL-encoded UTF8 characters.
+// - UnEscapeURL: Converts URL-friendly escape sequences back to normal text.
+
+public class UnityWebRequest {
+    public var certificateHandler;
+    public var disposeCertificateHandlerOnDispose;
+    public var disposeDownloadHandlerOnDispose;
+    public var disposeUploadHandlerOnDispose;
+    public var downloadedBytes;
+    public var downloadHandler;
+    public var downloadProgress;
+    public var error;
+    public var isDone;
+    public var isModifiable;
+    public void Abort();
+    public void Dispose();
+    public void GetRequestHeader();
+    public void GetResponseHeader();
+    public void GetResponseHeaders();
+    public void SendWebRequest();
+    public void SetRequestHeader();
+    public void ClearCookieCache();
+    public void Delete();
+    public void EscapeURL();
+}

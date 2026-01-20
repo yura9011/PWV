@@ -1,0 +1,42 @@
+// Unity Class: LayerMask
+// Documentation: https://docs.unity3d.com/ScriptReference/LayerMask.html
+
+// Description: Specifies Layers to use in a Physics.Raycast.
+
+// Properties:
+// - value: Converts a layer mask value to an integer value.
+
+// Methods:
+// - GetMask: Given a set of layer names as defined by either a Builtin or a User Layer in the Tags and Layers manager, returns the equivalent layer mask for all of them.
+// - LayerToName: Given a layer number, returns the name of the layer as defined in either a Builtin or a User Layer in the Tags and Layers manager.
+// - NameToLayer: Given a layer name, returns the layer index as defined by either a Builtin or a User Layer in the Tags and Layers manager.
+
+// Code Examples:
+// Example 1:
+//   using UnityEngine;// Fire a gun at 3 walls in the scene.
+//   //
+//   // The Raycast will be aimed in the range of -45 to 45 degrees. If the Ray hits any of the
+//   // walls true will be returned . The three walls all have a Wall Layer attached.  The left
+//   // and right keys, and the space key, are all used to aim and fire.
+//   //
+//   // Quad floor based at (0, -0.5, 0), rotated in x by 90 degrees, scale (8, 8, 8).
+//   // ZCube wall at (0, 0.5, 6), scale (3, 2, 0.5).
+//   // LCube wall at (-3, 0, 3), scale (0.5, 1, 4).
+//   // RCube wall at (3, 1.5, 3), scale (1, 4, 4).public class ExampleScript : MonoBehaviour
+//   {
+//       private float cameraRotation;    void Start()
+//       {
+//           Camera.main.transform.position = new Vector3(0, 0.5f, 0);
+//           cameraRotation = 0.0f;
+//       }    // Rotate the camera based on what the user wants to look at.
+//       // Avoid rotating more than +/-45 degrees.
+//       void Update()
+//       {
+//           if (Input.GetKey("left"))
+
+public class LayerMask {
+    public var value; // Converts a layer mask value to an integer value.
+    public void GetMask(); // Given a set of layer names as defined by either a Builtin or a User Layer in the
+    public void LayerToName(); // Given a layer number, returns the name of the layer as defined in either a Built
+    public void NameToLayer(); // Given a layer name, returns the layer index as defined by either a Builtin or a 
+}

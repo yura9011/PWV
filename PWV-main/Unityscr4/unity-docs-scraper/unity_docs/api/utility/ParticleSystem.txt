@@ -1,0 +1,120 @@
+// Unity Class: ParticleSystem
+// Documentation: https://docs.unity3d.com/ScriptReference/ParticleSystem.html
+
+// Description: Script interface for the Built-in Particle System. Unity's powerful and versatile particle system implementation.
+
+// Properties:
+// - collision: Script interface for the CollisionModule of a Particle System.
+// - colorBySpeed: Script interface for the ColorByLifetimeModule of a Particle System.
+// - colorOverLifetime: Script interface for the ColorOverLifetimeModule of a Particle System.
+// - customData: Script interface for the CustomDataModule of a Particle System.
+// - emission: Script interface for the EmissionModule of a Particle System.
+// - externalForces: Script interface for the ExternalForcesModule of a Particle System.
+// - forceOverLifetime: Script interface for the ForceOverLifetimeModule of a Particle System.
+// - has3DParticleRotations: Determines whether the Particle System rotates its particles around only the Z axis, or whether the system specifies separate values for the X, Y and Z axes.
+// - hasNonUniformParticleSizes: Determines whether the Particle System uses a single value for the width and height (and depth, when using meshes), or if the system specifies different values for each axis.
+// - inheritVelocity: Script interface for the InheritVelocityModule of a Particle System.
+// - isEmitting: Determines whether the Particle System is emitting particles. A Particle System may stop emitting when its emission module has finished, it has been paused or if the system has been stopped using Stop with the StopEmitting flag. Resume emitting by calling Play.
+// - isPaused: Determines whether the Particle System is paused.
+// - isPlaying: Determines whether the Particle System is playing.
+// - isStopped: Determines whether the Particle System is in the stopped state.
+// - lifetimeByEmitterSpeed: Script interface for the Particle System Lifetime By Emitter Speed module.
+// - lights: Script interface for the LightsModule of a Particle System.
+// - limitVelocityOverLifetime: Script interface for the LimitVelocityOverLifetimeModule of a Particle System. .
+// - main: Access the main Particle System settings.
+// - noise: Script interface for the NoiseModule of a Particle System.
+// - particleCount: The current number of particles (Read Only). The number doesn't include particles of child Particle Systems
+// - proceduralSimulationSupported: Determines whether this system supports Procedural Simulation.
+// - randomSeed: Override the random seed used for the Particle System emission.
+// - rotationBySpeed: Script interface for the RotationBySpeedModule of a Particle System.
+// - rotationOverLifetime: Script interface for the RotationOverLifetimeModule of a Particle System.
+// - shape: Script interface for the ShapeModule of a Particle System.
+// - sizeBySpeed: Script interface for the SizeBySpeedModule of a Particle System.
+// - sizeOverLifetime: Script interface for the SizeOverLifetimeModule of a Particle System.
+// - subEmitters: Script interface for the SubEmittersModule of a Particle System.
+// - textureSheetAnimation: Script interface for the TextureSheetAnimationModule of a Particle System.
+// - time: Playback position in seconds.
+// - totalTime: Total playback time in seconds, including the Start Delay setting.
+// - trails: Script interface for the TrailsModule of a Particle System.
+// - trigger: Script interface for the TriggerModule of a Particle System.
+// - useAutoRandomSeed: Controls whether the Particle System uses an automatically-generated random number to seed the random number generator.
+// - velocityOverLifetime: Script interface for the VelocityOverLifetimeModule of a Particle System.
+
+// Methods:
+// - AllocateAxisOfRotationAttribute(): Ensures that the axisOfRotations particle attribute array is allocated.
+// - AllocateCustomDataAttribute(): Ensures that the customData1 and customData2 particle attribute arrays are allocated.
+// - AllocateMeshIndexAttribute(): Ensures that the meshIndices particle attribute array is allocated.
+// - Clear(): Remove all particles in the Particle System.
+// - Emit(): Emit count particles immediately.
+// - GetCustomParticleData(): Get a stream of custom per-particle data.
+// - GetParticles(): Gets the particles of this Particle System.
+// - GetPlaybackState(): Returns all the data that relates to the current internal state of the Particle System.
+// - GetTrails(): Returns all the data relating to the current internal state of the Particle System Trails.
+// - IsAlive(): Does the Particle System contain any live particles, or will it produce more?
+// - Pause(): Pauses the system so no new particles are emitted and the existing particles are not updated.
+// - Play(): Starts the Particle System and resets its playback time to 0.
+// - SetCustomParticleData(): Set a stream of custom per-particle data.
+// - SetParticles(): Sets the particles of this Particle System.
+// - SetParticlesAndTrails(): Sets the particles and the trails of this Particle System.
+// - SetPlaybackState(): Use this method with the results of an earlier call to ParticleSystem.GetPlaybackState, in order to restore the Particle System to the state stored in the playbackState object.
+// - Simulate(): Fast-forwards the Particle System by simulating particles over the given period of time, then pauses it.
+// - Stop(): Stops playing the Particle System using the supplied stop behaviour.
+// - TriggerSubEmitter(): Triggers the specified sub emitter on all particles of the Particle System.
+
+// Pseudo-code representation of ParticleSystem
+public class ParticleSystem {
+    public var collision; // Script interface for the CollisionModule of a Particle System.
+    public var colorBySpeed; // Script interface for the ColorByLifetimeModule of a Particle System.
+    public var colorOverLifetime; // Script interface for the ColorOverLifetimeModule of a Particle System.
+    public var customData; // Script interface for the CustomDataModule of a Particle System.
+    public var emission; // Script interface for the EmissionModule of a Particle System.
+    public var externalForces; // Script interface for the ExternalForcesModule of a Particle System.
+    public var forceOverLifetime; // Script interface for the ForceOverLifetimeModule of a Particle System.
+    public var has3DParticleRotations; // Determines whether the Particle System rotates its particles around only the Z axis, or whether the system specifies separate values for the X, Y and Z axes.
+    public var hasNonUniformParticleSizes; // Determines whether the Particle System uses a single value for the width and height (and depth, when using meshes), or if the system specifies different values for each axis.
+    public var inheritVelocity; // Script interface for the InheritVelocityModule of a Particle System.
+    public var isEmitting; // Determines whether the Particle System is emitting particles. A Particle System may stop emitting when its emission module has finished, it has been paused or if the system has been stopped using Stop with the StopEmitting flag. Resume emitting by calling Play.
+    public var isPaused; // Determines whether the Particle System is paused.
+    public var isPlaying; // Determines whether the Particle System is playing.
+    public var isStopped; // Determines whether the Particle System is in the stopped state.
+    public var lifetimeByEmitterSpeed; // Script interface for the Particle System Lifetime By Emitter Speed module.
+    public var lights; // Script interface for the LightsModule of a Particle System.
+    public var limitVelocityOverLifetime; // Script interface for the LimitVelocityOverLifetimeModule of a Particle System. .
+    public var main; // Access the main Particle System settings.
+    public var noise; // Script interface for the NoiseModule of a Particle System.
+    public var particleCount; // The current number of particles (Read Only). The number doesn't include particles of child Particle Systems
+    public var proceduralSimulationSupported; // Determines whether this system supports Procedural Simulation.
+    public var randomSeed; // Override the random seed used for the Particle System emission.
+    public var rotationBySpeed; // Script interface for the RotationBySpeedModule of a Particle System.
+    public var rotationOverLifetime; // Script interface for the RotationOverLifetimeModule of a Particle System.
+    public var shape; // Script interface for the ShapeModule of a Particle System.
+    public var sizeBySpeed; // Script interface for the SizeBySpeedModule of a Particle System.
+    public var sizeOverLifetime; // Script interface for the SizeOverLifetimeModule of a Particle System.
+    public var subEmitters; // Script interface for the SubEmittersModule of a Particle System.
+    public var textureSheetAnimation; // Script interface for the TextureSheetAnimationModule of a Particle System.
+    public var time; // Playback position in seconds.
+    public var totalTime; // Total playback time in seconds, including the Start Delay setting.
+    public var trails; // Script interface for the TrailsModule of a Particle System.
+    public var trigger; // Script interface for the TriggerModule of a Particle System.
+    public var useAutoRandomSeed; // Controls whether the Particle System uses an automatically-generated random number to seed the random number generator.
+    public var velocityOverLifetime; // Script interface for the VelocityOverLifetimeModule of a Particle System.
+    public void AllocateAxisOfRotationAttribute(); // Ensures that the axisOfRotations particle attribute array is allocated.
+    public void AllocateCustomDataAttribute(); // Ensures that the customData1 and customData2 particle attribute arrays are allocated.
+    public void AllocateMeshIndexAttribute(); // Ensures that the meshIndices particle attribute array is allocated.
+    public void Clear(); // Remove all particles in the Particle System.
+    public void Emit(); // Emit count particles immediately.
+    public void GetCustomParticleData(); // Get a stream of custom per-particle data.
+    public void GetParticles(); // Gets the particles of this Particle System.
+    public void GetPlaybackState(); // Returns all the data that relates to the current internal state of the Particle System.
+    public void GetTrails(); // Returns all the data relating to the current internal state of the Particle System Trails.
+    public void IsAlive(); // Does the Particle System contain any live particles, or will it produce more?
+    public void Pause(); // Pauses the system so no new particles are emitted and the existing particles are not updated.
+    public void Play(); // Starts the Particle System and resets its playback time to 0.
+    public void SetCustomParticleData(); // Set a stream of custom per-particle data.
+    public void SetParticles(); // Sets the particles of this Particle System.
+    public void SetParticlesAndTrails(); // Sets the particles and the trails of this Particle System.
+    public void SetPlaybackState(); // Use this method with the results of an earlier call to ParticleSystem.GetPlaybackState, in order to restore the Particle System to the state stored in the playbackState object.
+    public void Simulate(); // Fast-forwards the Particle System by simulating particles over the given period of time, then pauses it.
+    public void Stop(); // Stops playing the Particle System using the supplied stop behaviour.
+    public void TriggerSubEmitter(); // Triggers the specified sub emitter on all particles of the Particle System.
+}

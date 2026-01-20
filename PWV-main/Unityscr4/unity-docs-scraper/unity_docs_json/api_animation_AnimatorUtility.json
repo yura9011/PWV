@@ -1,0 +1,7 @@
+{
+  "name": "api_animation_AnimatorUtility",
+  "type": "api",
+  "description": "Various utilities for animator manipulation.",
+  "content": "// Unity Class: AnimatorUtility\n// Documentation: https://docs.unity3d.com/ScriptReference/AnimatorUtility.html\n\n// Description: Various utilities for animator manipulation.\n\n// Pseudo-code representation of AnimatorUtility\npublic class AnimatorUtility {\n}",
+  "properties": []
+}

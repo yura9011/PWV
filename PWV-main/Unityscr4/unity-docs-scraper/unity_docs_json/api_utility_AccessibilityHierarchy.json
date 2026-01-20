@@ -1,0 +1,52 @@
+{
+  "name": "api_utility_AccessibilityHierarchy",
+  "type": "api",
+  "description": "The hierarchy data model that the screen reader uses to navigate and interact with a Unity application.",
+  "content": "// Unity Class: AccessibilityHierarchy\n// Documentation: https://docs.unity3d.com/ScriptReference/Accessibility.AccessibilityHierarchy.html\n\n// Description: The hierarchy data model that the screen reader uses to navigate and interact with a Unity application.\n\n// Properties:\n// - rootNodes: The root nodes of the hierarchy.\n\n// Methods:\n// - AddNode: Creates a new AccessibilityNode with the given label and adds it to the hierarchy under the given pa\n// - Clear: Resets the hierarchy to an empty state, removing all nodes and the screen reader focus.\n// - ContainsNode: Verifies whether the given node exists in the accessibility hierarchy.\n// - GetLowestCommonAncestor: Retrieves the lowest common ancestor of two nodes in the accessibility hierarchy.\n// - InsertNode: Creates a new AccessibilityNode with the given label and inserts it at the given index in the hierar\n// - MoveNode: Moves the node elsewhere in the accessibility hierarchy. For example, under a different parent or at\n// - RefreshNodeFrames: Refreshes the AccessibilityNode.frame of all nodes in the accessibility hierarchy.\n// - RemoveNode: Removes the node from the accessibility hierarchy and removes or re-parents its descendants.\n// - TryGetNode: Tries to retrieve the AccessibilityNode with the given ID in the hierarchy.\n// - TryGetNodeAt: Tries to retrieve the AccessibilityNode at the given screen coordinates.\n\npublic class AccessibilityHierarchy {\n    public var rootNodes;\n    public void AddNode();\n    public void Clear();\n    public void ContainsNode();\n    public void GetLowestCommonAncestor();\n    public void InsertNode();\n    public void MoveNode();\n    public void RefreshNodeFrames();\n    public void RemoveNode();\n    public void TryGetNode();\n    public void TryGetNodeAt();\n}",
+  "properties": [
+    {
+      "name": "rootNodes",
+      "description": "The root nodes of the hierarchy."
+    },
+    {
+      "name": "AddNode",
+      "description": "Creates a new AccessibilityNode with the given label and adds it to the hierarchy under the given pa"
+    },
+    {
+      "name": "Clear",
+      "description": "Resets the hierarchy to an empty state, removing all nodes and the screen reader focus."
+    },
+    {
+      "name": "ContainsNode",
+      "description": "Verifies whether the given node exists in the accessibility hierarchy."
+    },
+    {
+      "name": "GetLowestCommonAncestor",
+      "description": "Retrieves the lowest common ancestor of two nodes in the accessibility hierarchy."
+    },
+    {
+      "name": "InsertNode",
+      "description": "Creates a new AccessibilityNode with the given label and inserts it at the given index in the hierar"
+    },
+    {
+      "name": "MoveNode",
+      "description": "Moves the node elsewhere in the accessibility hierarchy. For example, under a different parent or at"
+    },
+    {
+      "name": "RefreshNodeFrames",
+      "description": "Refreshes the AccessibilityNode.frame of all nodes in the accessibility hierarchy."
+    },
+    {
+      "name": "RemoveNode",
+      "description": "Removes the node from the accessibility hierarchy and removes or re-parents its descendants."
+    },
+    {
+      "name": "TryGetNode",
+      "description": "Tries to retrieve the AccessibilityNode with the given ID in the hierarchy."
+    },
+    {
+      "name": "TryGetNodeAt",
+      "description": "Tries to retrieve the AccessibilityNode at the given screen coordinates."
+    }
+  ]
+}

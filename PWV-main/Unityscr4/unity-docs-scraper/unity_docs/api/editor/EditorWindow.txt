@@ -1,0 +1,83 @@
+// Unity Class: EditorWindow
+// Documentation: https://docs.unity3d.com/ScriptReference/EditorWindow.html
+
+// Description: Derive from this class to create a custom Editor window.
+
+// Properties:
+// - autoRepaintOnSceneChange: Enable this property to automatically repaint the window when the SceneView is modified.
+// - dataModeController: An instance of IDataModeController to handle DataMode functionalities for the current window.
+// - docked: Returns true if EditorWindow is docked.
+// - EditorWindow: Dockarea we're inside.
+// - hasFocus: Returns true if EditorWindow is focused.
+// - hasUnsavedChanges: This property specifies whether the Editor prompts the user to save or discard unsaved changes befor
+// - maximized: Whether or not this window is maximized?
+// - maxSize: The maximum size of this window when it is floating or modal. The maximum size is not used when the 
+// - minSize: The minimum size of this window when it is floating or modal. The minimum size is not used when the 
+// - overlayCanvas: The OverlayCanvas for this window.
+// - position: The desired position of the window in screen space.
+// - rootVisualElement: Retrieves the root visual element of this window hierarchy.
+// - saveChangesMessage: The message that displays to the user if they are prompted to save
+// - titleContent: The GUIContent used for drawing the title of EditorWindows.
+// - wantsLessLayoutEvents: Specifies whether a layout pass is performed before all user events (for example, EventType.MouseDow
+// - wantsMouseEnterLeaveWindow: Checks whether MouseEnterWindow and MouseLeaveWindow events are received in the GUI in this Editor w
+// - wantsMouseMove: Checks whether MouseMove events are received in the GUI in this Editor window.
+
+// Methods:
+// - BeginWindows: Mark the beginning area of all popup windows.
+// - Close: Close the editor window.
+// - DiscardChanges: Discards unsaved changes to the contents of the window.
+// - EndWindows: Close a window group started with EditorWindow.BeginWindows.
+// - Focus: Moves keyboard focus to another EditorWindow.
+// - GetExtraPaneTypes: Gets the extra types of EditorWindow associated with the current window.
+// - RemoveNotification: Stop showing notification message.
+// - Repaint: Make the window repaint. This queues a command to render the window on the next frame.
+// - SaveChanges: Performs a save action on the contents of the window.
+// - SendEvent: Sends an Event to a window.
+// - Show: Show the EditorWindow window.
+// - ShowAsDropDown: Shows a window with dropdown behaviour and styling.
+// - ShowAuxWindow: Show the editor window in the auxiliary window.
+// - ShowModal: Show modal editor window.
+// - ShowModalUtility: Shows the EditorWindow as a floating modal window.
+// - ShowNotification: Show a notification message.
+// - ShowPopup: Shows an Editor window using popup-style framing.
+// - ShowTab: Shows a docked Editor window.
+// - ShowUtility: Show the EditorWindow as a floating utility window.
+// - TryGetOverlay: Get an Overlay with matching ID from an EditorWindow canvas.
+// - CreateWindow: Creates an EditorWindow of type T.
+// - FocusWindowIfItsOpen: Focuses the first found EditorWindow of specified type if it is open.
+// - GetWindow: Returns the first EditorWindow of type windowType which is currently on the screen.
+// - GetWindowWithRect: Returns the first EditorWindow of type t which is currently on the screen.
+// - HasOpenInstances: Checks if an editor window is open.
+
+public class EditorWindow {
+    public var autoRepaintOnSceneChange;
+    public var dataModeController;
+    public var docked;
+    public var EditorWindow;
+    public var hasFocus;
+    public var hasUnsavedChanges;
+    public var maximized;
+    public var maxSize;
+    public var minSize;
+    public var overlayCanvas;
+    public var position;
+    public var rootVisualElement;
+    public var saveChangesMessage;
+    public var titleContent;
+    public var wantsLessLayoutEvents;
+    public void BeginWindows();
+    public void Close();
+    public void DiscardChanges();
+    public void EndWindows();
+    public void Focus();
+    public void GetExtraPaneTypes();
+    public void RemoveNotification();
+    public void Repaint();
+    public void SaveChanges();
+    public void SendEvent();
+    public void Show();
+    public void ShowAsDropDown();
+    public void ShowAuxWindow();
+    public void ShowModal();
+    public void ShowModalUtility();
+}

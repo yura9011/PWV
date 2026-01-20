@@ -1,0 +1,31 @@
+{
+  "mcpServers": {
+    "unityMCP": {
+      "url": "http://localhost:8080/mcp",
+      "disabled": false,
+      "autoApprove": [
+        "manage_editor",
+        "manage_scene",
+        "execute_menu_item",
+        "read_console",
+        "find_gameobjects",
+        "manage_components",
+        "manage_gameobject"
+      ]
+    },
+    "unity-docs": {
+      "command": "node",
+      "args": ["C:/Users/Martin/smart-coding-mcp/index.js"],
+      "env": {
+        "WORKSPACE_PATH": "C:/Users/Martin/Desktop/Paragit/PWV-main/unityscr4/unity-docs-scraper/unity_docs_json",
+        "NODE_OPTIONS": "--max-old-space-size=4096"
+      },
+      "disabled": true,
+      "autoApprove": [
+        "a_semantic_search",
+        "b_index_codebase",
+        "c_clear_cache"
+      ]
+    }
+  }
+}

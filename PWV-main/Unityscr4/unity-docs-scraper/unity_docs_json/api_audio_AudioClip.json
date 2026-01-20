@@ -1,0 +1,44 @@
+{
+  "name": "api_audio_AudioClip",
+  "type": "api",
+  "description": "A container for audio data.",
+  "content": "// Unity Class: AudioClip\n// Documentation: https://docs.unity3d.com/ScriptReference/AudioClip.html\n\n// Description: A container for audio data.\n\n// Properties:\n// - ambisonic: Returns true if this audio clip is ambisonic (read-only).\n// - channels: The number of channels in the audio clip. (Read Only)\n// - frequency: The sample frequency of the clip in Hertz. (Read Only)\n// - length: The length of the audio clip in seconds. (Read Only)\n// - loadInBackground: Enable this property to load the AudioClip asynchronously in the background instead of on the main thread. Set this property in the Inspector (Read Only).\n// - loadState: Returns the current load state of the audio data associated with an AudioClip.\n// - loadType: The load type of the clip (read-only).\n// - preloadAudioData: Enable this property in the Inspector to preload audio data from the audio clip when loading the clip Asset (Read Only).\n// - samples: The length of the audio clip in samples. (Read Only)\n\n// Methods:\n// - GetData(): Fills an array with sample data from the audio clip.\n// - LoadAudioData(): Loads the asset data of an AudioClip into memory, so it will immediately be ready to play.\n// - SetData(): Fills an audio clip with sample data from an array or Span. Overwrites existing data if necessary.\n// - UnloadAudioData(): Unloads the audio data associated with the clip. This works only for AudioClips that are based on actual sound file assets.\n\n// Pseudo-code representation of AudioClip\npublic class AudioClip {\n    public var ambisonic; // Returns true if this audio clip is ambisonic (read-only).\n    public var channels; // The number of channels in the audio clip. (Read Only)\n    public var frequency; // The sample frequency of the clip in Hertz. (Read Only)\n    public var length; // The length of the audio clip in seconds. (Read Only)\n    public var loadInBackground; // Enable this property to load the AudioClip asynchronously in the background instead of on the main thread. Set this property in the Inspector (Read Only).\n    public var loadState; // Returns the current load state of the audio data associated with an AudioClip.\n    public var loadType; // The load type of the clip (read-only).\n    public var preloadAudioData; // Enable this property in the Inspector to preload audio data from the audio clip when loading the clip Asset (Read Only).\n    public var samples; // The length of the audio clip in samples. (Read Only)\n    public void GetData(); // Fills an array with sample data from the audio clip.\n    public void LoadAudioData(); // Loads the asset data of an AudioClip into memory, so it will immediately be ready to play.\n    public void SetData(); // Fills an audio clip with sample data from an array or Span. Overwrites existing data if necessary.\n    public void UnloadAudioData(); // Unloads the audio data associated with the clip. This works only for AudioClips that are based on actual sound file assets.\n}",
+  "properties": [
+    {
+      "name": "ambisonic",
+      "description": "Returns true if this audio clip is ambisonic (read-only)."
+    },
+    {
+      "name": "channels",
+      "description": "The number of channels in the audio clip. (Read Only)"
+    },
+    {
+      "name": "frequency",
+      "description": "The sample frequency of the clip in Hertz. (Read Only)"
+    },
+    {
+      "name": "length",
+      "description": "The length of the audio clip in seconds. (Read Only)"
+    },
+    {
+      "name": "loadInBackground",
+      "description": "Enable this property to load the AudioClip asynchronously in the background instead of on the main thread. Set this property in the Inspector (Read Only)."
+    },
+    {
+      "name": "loadState",
+      "description": "Returns the current load state of the audio data associated with an AudioClip."
+    },
+    {
+      "name": "loadType",
+      "description": "The load type of the clip (read-only)."
+    },
+    {
+      "name": "preloadAudioData",
+      "description": "Enable this property in the Inspector to preload audio data from the audio clip when loading the clip Asset (Read Only)."
+    },
+    {
+      "name": "samples",
+      "description": "The length of the audio clip in samples. (Read Only)"
+    }
+  ]
+}

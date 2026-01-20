@@ -1,0 +1,24 @@
+{
+  "name": "api_math_LayerMask",
+  "type": "api",
+  "description": "Specifies Layers to use in a Physics.Raycast.",
+  "content": "// Unity Class: LayerMask\n// Documentation: https://docs.unity3d.com/ScriptReference/LayerMask.html\n\n// Description: Specifies Layers to use in a Physics.Raycast.\n\n// Properties:\n// - value: Converts a layer mask value to an integer value.\n\n// Methods:\n// - GetMask: Given a set of layer names as defined by either a Builtin or a User Layer in the Tags and Layers manager, returns the equivalent layer mask for all of them.\n// - LayerToName: Given a layer number, returns the name of the layer as defined in either a Builtin or a User Layer in the Tags and Layers manager.\n// - NameToLayer: Given a layer name, returns the layer index as defined by either a Builtin or a User Layer in the Tags and Layers manager.\n\n// Code Examples:\n// Example 1:\n//   using UnityEngine;// Fire a gun at 3 walls in the scene.\n\n//   //\n\n//   // The Raycast will be aimed in the range of -45 to 45 degrees. If the Ray hits any of the\n\n//   // walls true will be returned . The three walls all have a Wall Layer attached.  The left\n\n//   // and right keys, and the space key, are all used to aim and fire.\n\n//   //\n\n//   // Quad floor based at (0, -0.5, 0), rotated in x by 90 degrees, scale (8, 8, 8).\n\n//   // ZCube wall at (0, 0.5, 6), scale (3, 2, 0.5).\n\n//   // LCube wall at (-3, 0, 3), scale (0.5, 1, 4).\n\n//   // RCube wall at (3, 1.5, 3), scale (1, 4, 4).public class ExampleScript : MonoBehaviour\n\n//   {\n\n//       private float cameraRotation;    void Start()\n\n//       {\n\n//           Camera.main.transform.position = new Vector3(0, 0.5f, 0);\n\n//           cameraRotation = 0.0f;\n\n//       }    // Rotate the camera based on what the user wants to look at.\n\n//       // Avoid rotating more than +/-45 degrees.\n\n//       void Update()\n\n//       {\n\n//           if (Input.GetKey(\"left\"))\n\n\npublic class LayerMask {\n    public var value; // Converts a layer mask value to an integer value.\n    public void GetMask(); // Given a set of layer names as defined by either a Builtin or a User Layer in the\n    public void LayerToName(); // Given a layer number, returns the name of the layer as defined in either a Built\n    public void NameToLayer(); // Given a layer name, returns the layer index as defined by either a Builtin or a \n}",
+  "properties": [
+    {
+      "name": "value",
+      "description": "Converts a layer mask value to an integer value."
+    },
+    {
+      "name": "GetMask",
+      "description": "Given a set of layer names as defined by either a Builtin or a User Layer in the Tags and Layers manager, returns the equivalent layer mask for all of them."
+    },
+    {
+      "name": "LayerToName",
+      "description": "Given a layer number, returns the name of the layer as defined in either a Builtin or a User Layer in the Tags and Layers manager."
+    },
+    {
+      "name": "NameToLayer",
+      "description": "Given a layer name, returns the layer index as defined by either a Builtin or a User Layer in the Tags and Layers manager."
+    }
+  ]
+}

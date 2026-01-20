@@ -1,0 +1,88 @@
+{
+  "name": "api_2d_Sprite",
+  "type": "api",
+  "description": "Represents a Sprite object for use in 2D gameplay.",
+  "content": "// Unity Class: Sprite\n// Documentation: https://docs.unity3d.com/ScriptReference/Sprite.html\n\n// Description: Represents a Sprite object for use in 2D gameplay.\n\n// Properties:\n// - associatedAlphaSplitTexture: Returns the Texture that contains the alpha channel from the source Texture. Unity generates this Texture under the hood for Sprites that have alpha in the source, and need to be compressed using techniques like ETC1.Returns NULL if there is no associated alpha Texture for the source Sprite. This is the case if the Sprite has not been setup to use ETC1 compression.\n// - border: Returns the border sizes of the Sprite.\n// - bounds: Bounds of the Sprite, specified by its center and extents in world space units.\n// - packed: Returns true if this Sprite is packed in an atlas.\n// - packingMode: If Sprite is packed (see Sprite.packed), returns its SpritePackingMode.\n// - packingRotation: If Sprite is packed (see Sprite.packed), returns its SpritePackingRotation.\n// - pivot: Location of the Sprite's pivot point in the Rect on the original Texture, specified in pixels.\n// - pixelsPerUnit: The number of pixels in the Sprite that correspond to one unit in world space. (Read Only)\n// - rect: Location of the Sprite on the original Texture, specified in pixels.\n// - spriteAtlasTextureScale: The Variant scale of Texture used by the Sprite. This is useful to check when a Variant SpriteAtlas is being used by Sprites.\n// - texture: Get the reference to the used Texture. If packed this will point to the atlas, if not packed will point to the source Sprite.\n// - textureRect: Get the rectangle this Sprite uses on its Texture. Raises an exception if this Sprite is tightly packed in an atlas.\n// - textureRectOffset: Gets the offset of the rectangle this Sprite uses on its Texture to the original Sprite bounds. If Sprite mesh type is FullRect, offset is zero.\n// - triangles: Returns a copy of the array containing Sprite mesh triangles.\n// - uv: The base Texture coordinates of the Sprite mesh.\n// - vertices: Returns a copy of the array containing Sprite mesh vertex positions.\n\n// Methods:\n// - AddScriptableObject: Adds a ScriptableObject reference to the sprite.\n// - GetPhysicsShape: Gets a physics shape from the Sprite by its index.\n// - GetPhysicsShapeCount: The number of physics shapes for the Sprite.\n// - GetPhysicsShapePointCount: Retrieves the number of points in the selected physics shape for the sprite.\n// - GetScriptableObjects: Retrieves an array of ScriptableObject referenced by the sprite.\n// - GetScriptableObjectsCount: Gets the number of ScriptableObject that the sprite references.\n// - GetSecondaryTextureCount: Gets the number of Secondary Textures that the Sprite is using.\n// - GetSecondaryTextures: Retrieves an array of SecondarySpriteTexture used by the Sprite.\n// - OverrideGeometry: Sets up new Sprite geometry.\n// - OverridePhysicsShape: Sets up a new Sprite physics shape.\n// - RemoveScriptableObjectAt: Removes the ScriptableObject reference from the sprite.\n// - SetScriptableObjectAt: Replace the ScriptableObject reference from the sprite.\n// - Create: Create a new Sprite object.\n\npublic class Sprite {\n    public var associatedAlphaSplitTexture; // Returns the Texture that contains the alpha channel from the source Texture. Uni\n    public var border; // Returns the border sizes of the Sprite.\n    public var bounds; // Bounds of the Sprite, specified by its center and extents in world space units.\n    public var packed; // Returns true if this Sprite is packed in an atlas.\n    public var packingMode; // If Sprite is packed (see Sprite.packed), returns its SpritePackingMode.\n    public var packingRotation; // If Sprite is packed (see Sprite.packed), returns its SpritePackingRotation.\n    public var pivot; // Location of the Sprite's pivot point in the Rect on the original Texture, specif\n    public var pixelsPerUnit; // The number of pixels in the Sprite that correspond to one unit in world space. (\n    public var rect; // Location of the Sprite on the original Texture, specified in pixels.\n    public var spriteAtlasTextureScale; // The Variant scale of Texture used by the Sprite. This is useful to check when a \n    public var texture; // Get the reference to the used Texture. If packed this will point to the atlas, i\n    public var textureRect; // Get the rectangle this Sprite uses on its Texture. Raises an exception if this S\n    public var textureRectOffset; // Gets the offset of the rectangle this Sprite uses on its Texture to the original\n    public var triangles; // Returns a copy of the array containing Sprite mesh triangles.\n    public var uv; // The base Texture coordinates of the Sprite mesh.\n    public void AddScriptableObject(); // Adds a ScriptableObject reference to the sprite.\n    public void GetPhysicsShape(); // Gets a physics shape from the Sprite by its index.\n    public void GetPhysicsShapeCount(); // The number of physics shapes for the Sprite.\n    public void GetPhysicsShapePointCount(); // Retrieves the number of points in the selected physics shape for the sprite.\n    public void GetScriptableObjects(); // Retrieves an array of ScriptableObject referenced by the sprite.\n    public void GetScriptableObjectsCount(); // Gets the number of ScriptableObject that the sprite references.\n    public void GetSecondaryTextureCount(); // Gets the number of Secondary Textures that the Sprite is using.\n    public void GetSecondaryTextures(); // Retrieves an array of SecondarySpriteTexture used by the Sprite.\n    public void OverrideGeometry(); // Sets up new Sprite geometry.\n    public void OverridePhysicsShape(); // Sets up a new Sprite physics shape.\n    public void RemoveScriptableObjectAt(); // Removes the ScriptableObject reference from the sprite.\n    public void SetScriptableObjectAt(); // Replace the ScriptableObject reference from the sprite.\n    public void Create(); // Create a new Sprite object.\n}",
+  "properties": [
+    {
+      "name": "associatedAlphaSplitTexture",
+      "description": "Returns the Texture that contains the alpha channel from the source Texture. Unity generates this Texture under the hood for Sprites that have alpha in the source, and need to be compressed using techniques like ETC1.Returns NULL if there is no associated alpha Texture for the source Sprite. This is the case if the Sprite has not been setup to use ETC1 compression."
+    },
+    {
+      "name": "border",
+      "description": "Returns the border sizes of the Sprite."
+    },
+    {
+      "name": "bounds",
+      "description": "Bounds of the Sprite, specified by its center and extents in world space units."
+    },
+    {
+      "name": "packed",
+      "description": "Returns true if this Sprite is packed in an atlas."
+    },
+    {
+      "name": "packingMode",
+      "description": "If Sprite is packed (see Sprite.packed), returns its SpritePackingMode."
+    },
+    {
+      "name": "packingRotation",
+      "description": "If Sprite is packed (see Sprite.packed), returns its SpritePackingRotation."
+    },
+    {
+      "name": "pivot",
+      "description": "Location of the Sprite's pivot point in the Rect on the original Texture, specified in pixels."
+    },
+    {
+      "name": "pixelsPerUnit",
+      "description": "The number of pixels in the Sprite that correspond to one unit in world space. (Read Only)"
+    },
+    {
+      "name": "rect",
+      "description": "Location of the Sprite on the original Texture, specified in pixels."
+    },
+    {
+      "name": "spriteAtlasTextureScale",
+      "description": "The Variant scale of Texture used by the Sprite. This is useful to check when a Variant SpriteAtlas is being used by Sprites."
+    },
+    {
+      "name": "texture",
+      "description": "Get the reference to the used Texture. If packed this will point to the atlas, if not packed will point to the source Sprite."
+    },
+    {
+      "name": "textureRect",
+      "description": "Get the rectangle this Sprite uses on its Texture. Raises an exception if this Sprite is tightly packed in an atlas."
+    },
+    {
+      "name": "textureRectOffset",
+      "description": "Gets the offset of the rectangle this Sprite uses on its Texture to the original Sprite bounds. If Sprite mesh type is FullRect, offset is zero."
+    },
+    {
+      "name": "triangles",
+      "description": "Returns a copy of the array containing Sprite mesh triangles."
+    },
+    {
+      "name": "uv",
+      "description": "The base Texture coordinates of the Sprite mesh."
+    },
+    {
+      "name": "vertices",
+      "description": "Returns a copy of the array containing Sprite mesh vertex positions."
+    },
+    {
+      "name": "AddScriptableObject",
+      "description": "Adds a ScriptableObject reference to the sprite."
+    },
+    {
+      "name": "GetPhysicsShape",
+      "description": "Gets a physics shape from the Sprite by its index."
+    },
+    {
+      "name": "GetPhysicsShapeCount",
+      "description": "The number of physics shapes for the Sprite."
+    },
+    {
+      "name": "GetPhysicsShapePointCount",
+      "description": "Retrieves the number of points in the selected physics shape for the sprite."
+    }
+  ]
+}

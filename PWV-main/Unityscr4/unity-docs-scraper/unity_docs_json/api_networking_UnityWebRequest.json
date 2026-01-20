@@ -1,0 +1,88 @@
+{
+  "name": "api_networking_UnityWebRequest",
+  "type": "api",
+  "description": "Provides methods to communicate with web servers.",
+  "content": "// Unity Class: UnityWebRequest\n// Documentation: https://docs.unity3d.com/ScriptReference/Networking.UnityWebRequest.html\n\n// Description: Provides methods to communicate with web servers.\n\n// Properties:\n// - certificateHandler: Holds a reference to a CertificateHandler object, which manages certificate validation for this Unit\n// - disposeCertificateHandlerOnDispose: If true, any CertificateHandler attached to this UnityWebRequest will have CertificateHandler.Dispos\n// - disposeDownloadHandlerOnDispose: If true, any DownloadHandler attached to this UnityWebRequest will have DownloadHandler.Dispose call\n// - disposeUploadHandlerOnDispose: If true, any UploadHandler attached to this UnityWebRequest will have UploadHandler.Dispose called a\n// - downloadedBytes: Returns the number of bytes of body data the system has downloaded from the remote server. (Read Onl\n// - downloadHandler: Holds a reference to a DownloadHandler object, which manages body data received from the remote serv\n// - downloadProgress: Returns a floating-point value between 0.0 and 1.0, indicating the progress of downloading body data\n// - error: A human-readable string describing any system errors encountered by this UnityWebRequest object whil\n// - isDone: Returns true after the UnityWebRequest has finished communicating with the remote server. (Read Only\n// - isModifiable: Returns true while a UnityWebRequest’s configuration properties can be altered. (Read Only)\n// - method: Defines the HTTP verb used by this UnityWebRequest, such as GET or POST.\n// - redirectLimit: Indicates the number of redirects that this UnityWebRequest follows before halting with a Redirect L\n// - responseCode: The numeric HTTP response code returned by the server, such as 200, 404 or 500. (Read Only)\n// - result: The result of this UnityWebRequest.\n// - timeout: The number of seconds after which UnityWebRequest attempts to abort the request if no response is re\n// - uploadedBytes: Returns the number of bytes of body data the system has uploaded to the remote server. (Read Only)\n// - uploadHandler: Holds a reference to the UploadHandler object which manages body data to be uploaded to the remote s\n// - uploadProgress: Returns a floating-point value between 0.0 and 1.0, indicating the progress of uploading body data t\n// - uri: Defines the target URI for the UnityWebRequest to communicate with.\n// - url: Defines the target URL for the UnityWebRequest to communicate with.\n\n// Methods:\n// - Abort: If in progress, halts the UnityWebRequest as soon as possible.\n// - Dispose: Signals that this UnityWebRequest is no longer being used, and should clean up any resources it is u\n// - GetRequestHeader: Retrieves the value of a custom request header.\n// - GetResponseHeader: Retrieves the value of a response header from the latest HTTP response received.\n// - GetResponseHeaders: Retrieves a dictionary containing all the response headers received by this UnityWebRequest in the l\n// - SendWebRequest: Begin communicating with the remote server.\n// - SetRequestHeader: Set a HTTP request header to a custom value.\n// - ClearCookieCache: Clears stored cookies from the cache.\n// - Delete: Creates a UnityWebRequest configured for HTTP DELETE.\n// - EscapeURL: Escapes characters in a string to ensure they are URL-friendly.\n// - GenerateBoundary: Generate a random 40-byte array for use as a multipart form boundary.\n// - Get: Create a UnityWebRequest for HTTP GET.\n// - Head: Creates a UnityWebRequest configured to send a HTTP HEAD request.\n// - Post: Creates a UnityWebRequest configured to send form data to a server via HTTP POST.\n// - PostWwwForm: Creates a UnityWebRequest configured to send form data to a server via HTTP POST.\n// - Put: Creates a UnityWebRequest configured to upload raw data to a remote server via HTTP PUT.\n// - SerializeFormSections: Converts a List of IMultipartFormSection objects into a byte array containing raw multipart form dat\n// - SerializeSimpleForm: Serialize a dictionary of strings into a byte array containing URL-encoded UTF8 characters.\n// - UnEscapeURL: Converts URL-friendly escape sequences back to normal text.\n\npublic class UnityWebRequest {\n    public var certificateHandler;\n    public var disposeCertificateHandlerOnDispose;\n    public var disposeDownloadHandlerOnDispose;\n    public var disposeUploadHandlerOnDispose;\n    public var downloadedBytes;\n    public var downloadHandler;\n    public var downloadProgress;\n    public var error;\n    public var isDone;\n    public var isModifiable;\n    public void Abort();\n    public void Dispose();\n    public void GetRequestHeader();\n    public void GetResponseHeader();\n    public void GetResponseHeaders();\n    public void SendWebRequest();\n    public void SetRequestHeader();\n    public void ClearCookieCache();\n    public void Delete();\n    public void EscapeURL();\n}",
+  "properties": [
+    {
+      "name": "certificateHandler",
+      "description": "Holds a reference to a CertificateHandler object, which manages certificate validation for this Unit"
+    },
+    {
+      "name": "disposeCertificateHandlerOnDispose",
+      "description": "If true, any CertificateHandler attached to this UnityWebRequest will have CertificateHandler.Dispos"
+    },
+    {
+      "name": "disposeDownloadHandlerOnDispose",
+      "description": "If true, any DownloadHandler attached to this UnityWebRequest will have DownloadHandler.Dispose call"
+    },
+    {
+      "name": "disposeUploadHandlerOnDispose",
+      "description": "If true, any UploadHandler attached to this UnityWebRequest will have UploadHandler.Dispose called a"
+    },
+    {
+      "name": "downloadedBytes",
+      "description": "Returns the number of bytes of body data the system has downloaded from the remote server. (Read Onl"
+    },
+    {
+      "name": "downloadHandler",
+      "description": "Holds a reference to a DownloadHandler object, which manages body data received from the remote serv"
+    },
+    {
+      "name": "downloadProgress",
+      "description": "Returns a floating-point value between 0.0 and 1.0, indicating the progress of downloading body data"
+    },
+    {
+      "name": "error",
+      "description": "A human-readable string describing any system errors encountered by this UnityWebRequest object whil"
+    },
+    {
+      "name": "isDone",
+      "description": "Returns true after the UnityWebRequest has finished communicating with the remote server. (Read Only"
+    },
+    {
+      "name": "isModifiable",
+      "description": "Returns true while a UnityWebRequest’s configuration properties can be altered. (Read Only)"
+    },
+    {
+      "name": "method",
+      "description": "Defines the HTTP verb used by this UnityWebRequest, such as GET or POST."
+    },
+    {
+      "name": "redirectLimit",
+      "description": "Indicates the number of redirects that this UnityWebRequest follows before halting with a Redirect L"
+    },
+    {
+      "name": "responseCode",
+      "description": "The numeric HTTP response code returned by the server, such as 200, 404 or 500. (Read Only)"
+    },
+    {
+      "name": "result",
+      "description": "The result of this UnityWebRequest."
+    },
+    {
+      "name": "timeout",
+      "description": "The number of seconds after which UnityWebRequest attempts to abort the request if no response is re"
+    },
+    {
+      "name": "uploadedBytes",
+      "description": "Returns the number of bytes of body data the system has uploaded to the remote server. (Read Only)"
+    },
+    {
+      "name": "uploadHandler",
+      "description": "Holds a reference to the UploadHandler object which manages body data to be uploaded to the remote s"
+    },
+    {
+      "name": "uploadProgress",
+      "description": "Returns a floating-point value between 0.0 and 1.0, indicating the progress of uploading body data t"
+    },
+    {
+      "name": "uri",
+      "description": "Defines the target URI for the UnityWebRequest to communicate with."
+    },
+    {
+      "name": "url",
+      "description": "Defines the target URL for the UnityWebRequest to communicate with."
+    }
+  ]
+}

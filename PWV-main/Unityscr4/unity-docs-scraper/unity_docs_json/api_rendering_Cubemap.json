@@ -1,0 +1,88 @@
+{
+  "name": "api_rendering_Cubemap",
+  "type": "api",
+  "description": "Class for handling cube maps, Use this to create or modify existing cube map assets.",
+  "content": "// Unity Class: Cubemap\n// Documentation: https://docs.unity3d.com/ScriptReference/Cubemap.html\n\n// Description: Class for handling cube maps, Use this to create or modify existing cube map assets.\n\n// Properties:\n// - desiredMipmapLevel: The mipmap level that the streaming system would load before memory budgets are applied.\n// - format: The format of the pixel data in the texture (Read Only).\n// - loadedMipmapLevel: The mipmap level that is currently loaded by the streaming system.\n// - loadingMipmapLevel: The mipmap level that the mipmap streaming system is in the process of loading.\n// - requestedMipmapLevel: The mipmap level to load.\n// - streamingMipmaps: Determines whether mipmap streaming is enabled for this Texture.\n// - streamingMipmapsPriority: Sets the relative priority for this Texture when reducing memory size to fit within the memory budget.\n\n// Constructors:\n// - Cubemap: Create a new empty cubemap texture.\n\n// Methods:\n// - Apply: Copies changes you've made in a CPU texture to the GPU.\n// - ClearRequestedMipmapLevel: Resets the requestedMipmapLevel field.\n// - CopyPixels: Copies pixel data from another texture on the CPU.\n// - GetPixel: Gets the pixel color at coordinates (x, y).\n// - GetPixelData: Gets the raw data from a texture.\n// - GetPixels: Gets the pixel color data for a mipmap level of a face as Color structs.\n// - IsRequestedMipmapLevelLoaded: Checks to see whether the mipmap level set by requestedMipmapLevel has finished loading.\n// - SetPixel: Sets the pixel color at coordinates (x,y).\n// - SetPixelData: Sets the raw data of an entire mipmap level of a face directly in CPU memory.\n// - SetPixels: Sets the pixel colors of an entire mipmap level of a face.\n// - SmoothEdges: Performs smoothing of near edge regions.\n// - UpdateExternalTexture: Updates Unity cubemap to use different native cubemap texture object.\n// - CreateExternalTexture: Creates a Unity cubemap out of an externally created native cubemap object.\n\npublic class Cubemap {\n    public var desiredMipmapLevel; // The mipmap level that the streaming system would load before memory budgets are \n    public var format; // The format of the pixel data in the texture (Read Only).\n    public var loadedMipmapLevel; // The mipmap level that is currently loaded by the streaming system.\n    public var loadingMipmapLevel; // The mipmap level that the mipmap streaming system is in the process of loading.\n    public var requestedMipmapLevel; // The mipmap level to load.\n    public var streamingMipmaps; // Determines whether mipmap streaming is enabled for this Texture.\n    public var streamingMipmapsPriority; // Sets the relative priority for this Texture when reducing memory size to fit wit\n    public void Apply(); // Copies changes you've made in a CPU texture to the GPU.\n    public void ClearRequestedMipmapLevel(); // Resets the requestedMipmapLevel field.\n    public void CopyPixels(); // Copies pixel data from another texture on the CPU.\n    public void GetPixel(); // Gets the pixel color at coordinates (x, y).\n    public void GetPixelData(); // Gets the raw data from a texture.\n    public void GetPixels(); // Gets the pixel color data for a mipmap level of a face as Color structs.\n    public void IsRequestedMipmapLevelLoaded(); // Checks to see whether the mipmap level set by requestedMipmapLevel has finished \n    public void SetPixel(); // Sets the pixel color at coordinates (x,y).\n    public void SetPixelData(); // Sets the raw data of an entire mipmap level of a face directly in CPU memory.\n    public void SetPixels(); // Sets the pixel colors of an entire mipmap level of a face.\n    public void SmoothEdges(); // Performs smoothing of near edge regions.\n    public void UpdateExternalTexture(); // Updates Unity cubemap to use different native cubemap texture object.\n    public void CreateExternalTexture(); // Creates a Unity cubemap out of an externally created native cubemap object.\n}",
+  "properties": [
+    {
+      "name": "desiredMipmapLevel",
+      "description": "The mipmap level that the streaming system would load before memory budgets are applied."
+    },
+    {
+      "name": "format",
+      "description": "The format of the pixel data in the texture (Read Only)."
+    },
+    {
+      "name": "loadedMipmapLevel",
+      "description": "The mipmap level that is currently loaded by the streaming system."
+    },
+    {
+      "name": "loadingMipmapLevel",
+      "description": "The mipmap level that the mipmap streaming system is in the process of loading."
+    },
+    {
+      "name": "requestedMipmapLevel",
+      "description": "The mipmap level to load."
+    },
+    {
+      "name": "streamingMipmaps",
+      "description": "Determines whether mipmap streaming is enabled for this Texture."
+    },
+    {
+      "name": "streamingMipmapsPriority",
+      "description": "Sets the relative priority for this Texture when reducing memory size to fit within the memory budget."
+    },
+    {
+      "name": "Cubemap",
+      "description": "Create a new empty cubemap texture."
+    },
+    {
+      "name": "Apply",
+      "description": "Copies changes you've made in a CPU texture to the GPU."
+    },
+    {
+      "name": "ClearRequestedMipmapLevel",
+      "description": "Resets the requestedMipmapLevel field."
+    },
+    {
+      "name": "CopyPixels",
+      "description": "Copies pixel data from another texture on the CPU."
+    },
+    {
+      "name": "GetPixel",
+      "description": "Gets the pixel color at coordinates (x, y)."
+    },
+    {
+      "name": "GetPixelData",
+      "description": "Gets the raw data from a texture."
+    },
+    {
+      "name": "GetPixels",
+      "description": "Gets the pixel color data for a mipmap level of a face as Color structs."
+    },
+    {
+      "name": "IsRequestedMipmapLevelLoaded",
+      "description": "Checks to see whether the mipmap level set by requestedMipmapLevel has finished loading."
+    },
+    {
+      "name": "SetPixel",
+      "description": "Sets the pixel color at coordinates (x,y)."
+    },
+    {
+      "name": "SetPixelData",
+      "description": "Sets the raw data of an entire mipmap level of a face directly in CPU memory."
+    },
+    {
+      "name": "SetPixels",
+      "description": "Sets the pixel colors of an entire mipmap level of a face."
+    },
+    {
+      "name": "SmoothEdges",
+      "description": "Performs smoothing of near edge regions."
+    },
+    {
+      "name": "UpdateExternalTexture",
+      "description": "Updates Unity cubemap to use different native cubemap texture object."
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "name": "api_networking_DownloadHandler",
+  "type": "api",
+  "description": "Manage and process HTTP response body data received from a remote server.",
+  "content": "// Unity Class: DownloadHandler\n// Documentation: https://docs.unity3d.com/ScriptReference/Networking.DownloadHandler.html\n\n// Description: Manage and process HTTP response body data received from a remote server.\n\n// Properties:\n// - data: Returns the raw bytes downloaded from the remote server, or null. (Read Only)\n// - error: Error message describing a failure that occurred inside the download handler.\n// - isDone: Returns true if this DownloadHandler has been informed by its parent UnityWebRequest that all data h\n// - nativeData: Provides direct access to downloaded data.\n// - text: Convenience property. Returns the bytes from data interpreted as a UTF8 string. (Read Only)\n\n// Methods:\n// - Dispose: Signals that this DownloadHandler is no longer being used, and should clean up any resources it is u\n\npublic class DownloadHandler {\n    public var data;\n    public var error;\n    public var isDone;\n    public var nativeData;\n    public var text;\n    public void Dispose();\n}",
+  "properties": [
+    {
+      "name": "data",
+      "description": "Returns the raw bytes downloaded from the remote server, or null. (Read Only)"
+    },
+    {
+      "name": "error",
+      "description": "Error message describing a failure that occurred inside the download handler."
+    },
+    {
+      "name": "isDone",
+      "description": "Returns true if this DownloadHandler has been informed by its parent UnityWebRequest that all data h"
+    },
+    {
+      "name": "nativeData",
+      "description": "Provides direct access to downloaded data."
+    },
+    {
+      "name": "text",
+      "description": "Convenience property. Returns the bytes from data interpreted as a UTF8 string. (Read Only)"
+    },
+    {
+      "name": "Dispose",
+      "description": "Signals that this DownloadHandler is no longer being used, and should clean up any resources it is u"
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "name": "api_input_Gyroscope",
+  "type": "api",
+  "description": "Interface into the Gyroscope.",
+  "content": "// Unity Class: Gyroscope\n// Documentation: https://docs.unity3d.com/ScriptReference/Gyroscope.html\n\n// Description: Interface into the Gyroscope.\n\n// Properties:\n// - attitude: Returns the attitude (ie, orientation in space) of the device.\n// - enabled: Sets or retrieves the enabled status of this gyroscope.\n// - gravity: Returns the gravity acceleration vector expressed in the device's reference frame.\n// - rotationRate: Returns rotation rate as measured by the device's gyroscope.\n// - rotationRateUnbiased: Returns unbiased rotation rate as measured by the device's gyroscope.\n// - updateInterval: Sets or retrieves gyroscope interval in seconds.\n// - userAcceleration: Returns the acceleration that the user is giving to the device.\n\npublic class Gyroscope {\n    public var attitude;\n    public var enabled;\n    public var gravity;\n    public var rotationRate;\n    public var rotationRateUnbiased;\n    public var updateInterval;\n    public var userAcceleration;\n}",
+  "properties": [
+    {
+      "name": "attitude",
+      "description": "Returns the attitude (ie, orientation in space) of the device."
+    },
+    {
+      "name": "enabled",
+      "description": "Sets or retrieves the enabled status of this gyroscope."
+    },
+    {
+      "name": "gravity",
+      "description": "Returns the gravity acceleration vector expressed in the device's reference frame."
+    },
+    {
+      "name": "rotationRate",
+      "description": "Returns rotation rate as measured by the device's gyroscope."
+    },
+    {
+      "name": "rotationRateUnbiased",
+      "description": "Returns unbiased rotation rate as measured by the device's gyroscope."
+    },
+    {
+      "name": "updateInterval",
+      "description": "Sets or retrieves gyroscope interval in seconds."
+    },
+    {
+      "name": "userAcceleration",
+      "description": "Returns the acceleration that the user is giving to the device."
+    }
+  ]
+}

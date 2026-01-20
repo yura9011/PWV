@@ -1,0 +1,69 @@
+// Unity Class: GUIStyle
+// Documentation: https://docs.unity3d.com/ScriptReference/GUIStyle.html
+
+// Description: Styling information for GUI elements.
+
+// Properties:
+// - active: Rendering settings for when the control is pressed down.
+// - alignment: Text alignment.
+// - border: The borders of all background images.
+// - clipping: What to do when the contents to be rendered is too large to fit within the area given.
+// - contentOffset: Pixel offset to apply to the content of this GUIstyle.
+// - fixedHeight: If non-0, any GUI elements rendered with this style will have the height specified here.
+// - fixedWidth: If non-0, any GUI elements rendered with this style will have the width specified here.
+// - focused: Rendering settings for when the element has keyboard focus.
+// - font: The font to use for rendering. If null, the default font for the current GUISkin is used instead.
+// - fontSize: The font size to use (for dynamic fonts).
+// - fontStyle: The font style to use (for dynamic fonts).
+// - hover: Rendering settings for when the mouse is hovering over the control.
+// - imagePosition: How image and text of the GUIContent is combined.
+// - lineHeight: The height of one line of text with this style, measured in pixels. (Read Only)
+// - margin: The margins between elements rendered in this style and any other GUI elements.
+// - name: The name of this GUIStyle. Used for getting them based on name.
+// - normal: Rendering settings for when the component is displayed normally.
+// - onActive: Rendering settings for when the element is turned on and pressed down.
+// - onFocused: Rendering settings for when the element has keyboard and is turned on.
+// - onHover: Rendering settings for when the control is turned on and the mouse is hovering it.
+// - onNormal: Rendering settings for when the control is turned on.
+// - overflow: Extra space to be added to the background image.
+// - padding: Space from the edge of GUIStyle to the start of the contents.
+// - richText: Enable HTML-style tags for Text Formatting Markup.
+// - stretchHeight: Can GUI elements of this style be stretched vertically for better layout?
+
+// Methods:
+// - CalcHeight: How tall this element will be when rendered with content and a specific width.
+// - CalcMinMaxWidth: Calculate the minimum and maximum widths for this style rendered with content.
+// - CalcScreenSize: Calculate the size of an element formatted with this style, and a given space to content.
+// - CalcSize: Calculate the size of some content if it is rendered with this style.
+// - Draw: Draw this GUIStyle on to the screen, internal version.
+// - DrawCursor: Draw this GUIStyle with selected content.
+// - DrawWithTextSelection: Draw this GUIStyle with selected content.
+// - GetCursorPixelPosition: Get the pixel position of a given string index.
+// - GetCursorStringIndex: Get the cursor position (indexing into contents.text) when the user clicked at cursorPixelPosition.
+
+public class GUIStyle {
+    public var active;
+    public var alignment;
+    public var border;
+    public var clipping;
+    public var contentOffset;
+    public var fixedHeight;
+    public var fixedWidth;
+    public var focused;
+    public var font;
+    public var fontSize;
+    public var fontStyle;
+    public var hover;
+    public var imagePosition;
+    public var lineHeight;
+    public var margin;
+    public void CalcHeight();
+    public void CalcMinMaxWidth();
+    public void CalcScreenSize();
+    public void CalcSize();
+    public void Draw();
+    public void DrawCursor();
+    public void DrawWithTextSelection();
+    public void GetCursorPixelPosition();
+    public void GetCursorStringIndex();
+}

@@ -1,0 +1,44 @@
+{
+  "name": "api_core_GameObject",
+  "type": "api",
+  "description": "Base class for all objects that can exist in a scene. Add components to a GameObject to control its appearance and behavior.",
+  "content": "// Unity Class: GameObject\n// Documentation: https://docs.unity3d.com/ScriptReference/GameObject.html\n\n// Description: Base class for all objects that can exist in a scene. Add components to a GameObject to control its appearance and behavior.\n\n// Properties:\n// - activeInHierarchy: The active state of the GameObject in the Scene hierarchy. True if active, false if inactive. (Read Only)\n// - activeSelf: The local active state of the GameObject. True if active, false if inactive. (Read Only)\n// - isStatic: Whether there are any Static Editor Flags set for the GameObject.\n// - layer: Integer identifying the layer the GameObject is assigned to.\n// - scene: The Scene that contains the GameObject.\n// - sceneCullingMask: The Scene culling mask defined for the GameObject. (Read Only)\n// - tag: The tag assigned to the GameObject.\n// - transform: The Transform attached to the GameObject (Read Only).\n// - transformHandle: The TransformHandle of the GameObject (Read Only).\n\n// Constructors:\n// - GameObject(): Creates a new GameObject, with optional parameters to specify a name and set of components to attach.\n\n// Methods:\n// - AddComponent(): Adds a component of the specified type to the GameObject.\n// - BroadcastMessage(): Calls the specified method on every MonoBehaviour attached to the GameObject or any of its children.\n// - CompareTag(): Checks if the specified tag is attached to the GameObject.\n// - GetComponent(): Retrieves a reference to a component of the specified type, by providing the component type as a type parameter to the generic method.\n// - GetComponentAtIndex(): Retrieves a reference to a component at a specified index of the GameObject's array of components.\n// - GetComponentCount(): Retrieves the total number of components currently attached to the GameObject.\n// - GetComponentInChildren(): Retrieves a reference to a component of type T on the specified GameObject, or any child of the GameObject.\n// - GetComponentIndex(): Retrieves the index of the specified component in the array of components attached to the GameObject.\n// - GetComponentInParent(): Retrieves a reference to a component of type T on the specified GameObject, or any parent of the GameObject.\n// - GetComponents(): Retrieves references to all components of type T on the specified GameObject.\n// - GetComponentsInChildren(): Retrieves references to all components of type T on the specified GameObject, and any child of the GameObject.\n// - GetComponentsInParent(): Retrieves references to all components of type T on the specified GameObject, and any parent of the GameObject.\n// - SendMessage(): Calls the specified method on every MonoBehaviour attached to the GameObject.\n// - SendMessageUpwards(): Calls the specified method on every MonoBehaviour attached to the GameObject and on every ancestor of the behaviour.\n// - SetActive(): Activates or deactivates the GameObject locally, according to the value of the supplied parameter.\n// - TryGetComponent(): Retrieves the component of the specified type, if it exists.\n\n// Code Examples:\n// Example 1:\n//   using UnityEngine;  public class Example_GameObject : MonoBehaviour\n\n//     {\n\n//         private void Start()\n\n//         {\n\n//             GameObject myExampleGO = new GameObject(\"myExampleGO\", typeof(AudioSource));\n\n//         }\n\n//     }\n\n// Pseudo-code representation of GameObject\npublic class GameObject {\n    public var activeInHierarchy; // The active state of the GameObject in the Scene hierarchy. True if active, false if inactive. (Read Only)\n    public var activeSelf; // The local active state of the GameObject. True if active, false if inactive. (Read Only)\n    public var isStatic; // Whether there are any Static Editor Flags set for the GameObject.\n    public var layer; // Integer identifying the layer the GameObject is assigned to.\n    public var scene; // The Scene that contains the GameObject.\n    public var sceneCullingMask; // The Scene culling mask defined for the GameObject. (Read Only)\n    public var tag; // The tag assigned to the GameObject.\n    public var transform; // The Transform attached to the GameObject (Read Only).\n    public var transformHandle; // The TransformHandle of the GameObject (Read Only).\n    public void AddComponent(); // Adds a component of the specified type to the GameObject.\n    public void BroadcastMessage(); // Calls the specified method on every MonoBehaviour attached to the GameObject or any of its children.\n    public void CompareTag(); // Checks if the specified tag is attached to the GameObject.\n    public void GetComponent(); // Retrieves a reference to a component of the specified type, by providing the component type as a type parameter to the generic method.\n    public void GetComponentAtIndex(); // Retrieves a reference to a component at a specified index of the GameObject's array of components.\n    public void GetComponentCount(); // Retrieves the total number of components currently attached to the GameObject.\n    public void GetComponentInChildren(); // Retrieves a reference to a component of type T on the specified GameObject, or any child of the GameObject.\n    public void GetComponentIndex(); // Retrieves the index of the specified component in the array of components attached to the GameObject.\n    public void GetComponentInParent(); // Retrieves a reference to a component of type T on the specified GameObject, or any parent of the GameObject.\n    public void GetComponents(); // Retrieves references to all components of type T on the specified GameObject.\n    public void GetComponentsInChildren(); // Retrieves references to all components of type T on the specified GameObject, and any child of the GameObject.\n    public void GetComponentsInParent(); // Retrieves references to all components of type T on the specified GameObject, and any parent of the GameObject.\n    public void SendMessage(); // Calls the specified method on every MonoBehaviour attached to the GameObject.\n    public void SendMessageUpwards(); // Calls the specified method on every MonoBehaviour attached to the GameObject and on every ancestor of the behaviour.\n    public void SetActive(); // Activates or deactivates the GameObject locally, according to the value of the supplied parameter.\n    public void TryGetComponent(); // Retrieves the component of the specified type, if it exists.\n}",
+  "properties": [
+    {
+      "name": "activeInHierarchy",
+      "description": "The active state of the GameObject in the Scene hierarchy. True if active, false if inactive. (Read Only)"
+    },
+    {
+      "name": "activeSelf",
+      "description": "The local active state of the GameObject. True if active, false if inactive. (Read Only)"
+    },
+    {
+      "name": "isStatic",
+      "description": "Whether there are any Static Editor Flags set for the GameObject."
+    },
+    {
+      "name": "layer",
+      "description": "Integer identifying the layer the GameObject is assigned to."
+    },
+    {
+      "name": "scene",
+      "description": "The Scene that contains the GameObject."
+    },
+    {
+      "name": "sceneCullingMask",
+      "description": "The Scene culling mask defined for the GameObject. (Read Only)"
+    },
+    {
+      "name": "tag",
+      "description": "The tag assigned to the GameObject."
+    },
+    {
+      "name": "transform",
+      "description": "The Transform attached to the GameObject (Read Only)."
+    },
+    {
+      "name": "transformHandle",
+      "description": "The TransformHandle of the GameObject (Read Only)."
+    }
+  ]
+}

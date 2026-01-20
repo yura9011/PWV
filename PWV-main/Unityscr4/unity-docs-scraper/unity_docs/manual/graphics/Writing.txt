@@ -1,0 +1,63 @@
+// Unity Manual: Shaders_Writing
+// URL: https://docs.unity3d.com/Manual/SL-Reference.html
+
+Materials and shaders
+Custom shaders
+Shader languages reference
+ShaderLab language reference
+Shader languages reference
+Shader in ShaderLab reference
+ShaderLab language reference
+Find the blocks, directives, and commands you need to write a shader in
+ShaderLab
+Unity’s language for defining the structure of Shader objects.
+More info
+See in
+Glossary
+.
+Page
+Description
+Shader
+A program that runs on the GPU.
+More info
+See in
+Glossary
+Explore the
+Shader
+block in ShaderLab to create a shader, and add material properties, custom editors and a fallback shader.
+SubShader
+Explore the
+SubShader
+block in ShaderLab to create a subshader, and add
+LOD
+The
+Level Of Detail
+(LOD) technique is an optimization that reduces the number of triangles that Unity has to render for a GameObject when its distance from the Camera increases.
+More info
+See in
+Glossary
+values, tags, or a
+UsePass
+or
+GrabPass
+directive.
+Pass
+Explore the
+Pass
+block in ShaderLab to create a shader pass, and add a name, tags, and shader code blocks.
+GPU render state commands
+Find the commands in ShaderLab you need to change the render state on the GPU, such as
+Blend
+,
+Cull
+and
+ZWrite
+.
+PackageRequirements block
+Explore the
+PackageRequirements
+block in ShaderLab to specify required packages for a subshader or shader pass.
+ShaderLab legacy functionality reference
+Explore the ShaderLab commands that allow you to write shaders without using any HLSL code.
+Shader languages reference
+Shader in ShaderLab reference

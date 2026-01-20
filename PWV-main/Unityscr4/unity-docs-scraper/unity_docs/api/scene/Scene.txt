@@ -1,0 +1,31 @@
+// Unity Class: Scene
+// Documentation: https://docs.unity3d.com/ScriptReference/SceneManagement.Scene.html
+
+// Description: The runtime data structure for a scene.
+
+// Properties:
+// - buildIndex: Return the index of the Scene in the Build Settings.
+// - handle: A unique identifier for a loaded scene.
+// - isDirty: Returns true if the Scene is modified.
+// - isLoaded: IsLoaded is set to true after loading has completed and objects have been enabled.
+// - isSubScene: Whether this scene is a subscene.
+// - name: Returns the name of the Scene that is currently active in the game or app.
+// - path: Returns the relative path of the Scene. For example: "Assets/MyScenes/MyScene.unity".
+// - rootCount: The number of root transforms of this Scene.
+
+// Methods:
+// - GetRootGameObjects: Returns all the root game objects in the Scene.
+// - IsValid: Whether this is a valid Scene. A Scene may be invalid if, for example, you tried to open a Scene tha
+
+public class Scene {
+    public var buildIndex;
+    public var handle;
+    public var isDirty;
+    public var isLoaded;
+    public var isSubScene;
+    public var name;
+    public var path;
+    public var rootCount;
+    public void GetRootGameObjects();
+    public void IsValid();
+}

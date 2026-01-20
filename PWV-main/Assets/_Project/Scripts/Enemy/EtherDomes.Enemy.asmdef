@@ -1,0 +1,18 @@
+{
+    "name": "EtherDomes.Enemy",
+    "rootNamespace": "EtherDomes.Enemy",
+    "references": [
+        "EtherDomes.Combat",
+        "EtherDomes.Data",
+        "Unity.Netcode.Runtime"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

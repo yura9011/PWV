@@ -1,0 +1,7 @@
+{
+  "name": "api_ui_Toggle",
+  "type": "api",
+  "description": "A standard toggle that has an on / off state.",
+  "content": "// Unity Class: Toggle\n// Documentation: https://docs.unity3d.com/Packages/com.unity.ugui@1.0/api/UnityEngine.UI.Toggle.html\n\n// Description: A standard toggle that has an on / off state.\n\npublic class Toggle {\n}",
+  "properties": []
+}

@@ -1,0 +1,72 @@
+{
+  "name": "api_scene_SceneManager",
+  "type": "api",
+  "description": "Manage scenes in the Player and in Play mode in the Editor.",
+  "content": "// Unity Class: SceneManager\n// Documentation: https://docs.unity3d.com/ScriptReference/SceneManagement.SceneManager.html\n\n// Description: Manage scenes in the Player and in Play mode in the Editor.\n\n// Methods:\n// - CreateScene: Create an empty new Scene at runtime with the given name.\n// - GetActiveScene: Gets the currently active Scene.\n// - GetSceneAt: Gets the scene at the specified index in the SceneManager's scene list. This includes scenes that ar\n// - GetSceneByBuildIndex: Get a Scene struct from a build index.\n// - GetSceneByName: Searches through the Scenes loaded for a Scene with the given name.\n// - GetSceneByPath: Searches all Scenes loaded for a Scene that has the given asset path.\n// - LoadScene: Loads the Scene by its name or index in Build Settings.\n// - LoadSceneAsync: Loads the Scene asynchronously in the background.\n// - MergeScenes: This will merge the source Scene into the destinationScene.\n// - MoveGameObjectsToScene: Move multiple GameObjects, represented by a NativeArray of instance IDs, from their current Scene to\n// - MoveGameObjectToScene: Move a GameObject from its current Scene to a new Scene.\n// - SetActiveScene: Set the Scene to be active.\n// - UnloadSceneAsync: Destroys all GameObjects associated with the given Scene and removes the Scene from the SceneManager\n\n// Events:\n// - activeSceneChanged: Subscribe to this event to get notified when the active Scene has changed.\n// - sceneLoaded: Assign a custom callback to this event to get notifications when a Scene has loaded.\n// - sceneUnloaded: Add a delegate to this to get notifications when a Scene has unloaded.\n\npublic class SceneManager {\n    public void CreateScene();\n    public void GetActiveScene();\n    public void GetSceneAt();\n    public void GetSceneByBuildIndex();\n    public void GetSceneByName();\n    public void GetSceneByPath();\n    public void LoadScene();\n    public void LoadSceneAsync();\n    public void MergeScenes();\n    public void MoveGameObjectsToScene();\n}",
+  "properties": [
+    {
+      "name": "CreateScene",
+      "description": "Create an empty new Scene at runtime with the given name."
+    },
+    {
+      "name": "GetActiveScene",
+      "description": "Gets the currently active Scene."
+    },
+    {
+      "name": "GetSceneAt",
+      "description": "Gets the scene at the specified index in the SceneManager's scene list. This includes scenes that ar"
+    },
+    {
+      "name": "GetSceneByBuildIndex",
+      "description": "Get a Scene struct from a build index."
+    },
+    {
+      "name": "GetSceneByName",
+      "description": "Searches through the Scenes loaded for a Scene with the given name."
+    },
+    {
+      "name": "GetSceneByPath",
+      "description": "Searches all Scenes loaded for a Scene that has the given asset path."
+    },
+    {
+      "name": "LoadScene",
+      "description": "Loads the Scene by its name or index in Build Settings."
+    },
+    {
+      "name": "LoadSceneAsync",
+      "description": "Loads the Scene asynchronously in the background."
+    },
+    {
+      "name": "MergeScenes",
+      "description": "This will merge the source Scene into the destinationScene."
+    },
+    {
+      "name": "MoveGameObjectsToScene",
+      "description": "Move multiple GameObjects, represented by a NativeArray of instance IDs, from their current Scene to"
+    },
+    {
+      "name": "MoveGameObjectToScene",
+      "description": "Move a GameObject from its current Scene to a new Scene."
+    },
+    {
+      "name": "SetActiveScene",
+      "description": "Set the Scene to be active."
+    },
+    {
+      "name": "UnloadSceneAsync",
+      "description": "Destroys all GameObjects associated with the given Scene and removes the Scene from the SceneManager"
+    },
+    {
+      "name": "activeSceneChanged",
+      "description": "Subscribe to this event to get notified when the active Scene has changed."
+    },
+    {
+      "name": "sceneLoaded",
+      "description": "Assign a custom callback to this event to get notifications when a Scene has loaded."
+    },
+    {
+      "name": "sceneUnloaded",
+      "description": "Add a delegate to this to get notifications when a Scene has unloaded."
+    }
+  ]
+}

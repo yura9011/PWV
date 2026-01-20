@@ -1,0 +1,84 @@
+{
+  "name": "api_core_Transform",
+  "type": "api",
+  "description": "Position, rotation and scale of an object.",
+  "content": "// Unity Class: Transform\n// Documentation: https://docs.unity3d.com/ScriptReference/Transform.html\n\n// Description: Position, rotation and scale of an object.\n\n// Properties:\n// - childCount: The number of children the parent Transform has.\n// - eulerAngles: The rotation as Euler angles in degrees.\n// - forward: Returns a normalized vector representing the blue axis of the transform in world space.\n// - hasChanged: Has the transform changed since the last time the flag was set to 'false'?\n// - hierarchyCapacity: The transform capacity of the transform's hierarchy data structure.\n// - hierarchyCount: The number of transforms in the transform's hierarchy data structure.\n// - localEulerAngles: The rotation as Euler angles in degrees relative to the parent transform's rotation.\n// - localPosition: Position of the transform relative to the parent transform.\n// - localRotation: The rotation of the transform relative to the transform rotation of the parent.\n// - localScale: The scale of the transform relative to the GameObjects parent.\n// - localToWorldMatrix: Matrix that transforms a point from local space into world space (Read Only).\n// - lossyScale: The global scale of the object (Read Only).\n// - parent: The parent of the transform.\n// - position: The world space position of the Transform.\n// - right: The red axis of the transform in world space.\n// - root: Returns the topmost transform in the hierarchy.\n// - rotation: A Quaternion that stores the rotation of the Transform in world space.\n// - up: The green axis of the transform in world space.\n// - worldToLocalMatrix: Matrix that transforms a point from world space into local space (Read Only).\n\n// Methods:\n// - DetachChildren(): Unparents all of the target object's children.\n// - Find(): Finds a child by name n and returns it.\n// - GetChild(): Returns a transform child by index.\n// - GetLocalPositionAndRotation(): Updates the value of the out parameters localPosition and localRotation with the transform's current position and rotation in local space (that is, relative to its parent's transform).\n// - GetPositionAndRotation(): Updates the value of the out parameters position and rotation with the transform's current position and rotation in world space (that is, relative to the scene's origin coordinates).\n// - GetSiblingIndex(): Gets the index of this Transform, relative to its siblings.\n// - InverseTransformDirection(): Transforms a direction from world space to local space. The opposite of Transform.TransformDirection.\n// - InverseTransformDirections(): Transforms multiple directions from world space to local space overwriting each original position with the transformed version. The opposite of Transform.TransformDirections.\n// - InverseTransformPoint(): Transforms position from world space to local space.\n// - InverseTransformPoints(): Transforms multiple positions from world space to local space overwriting each original position with the transformed version.\n// - InverseTransformVector(): Transforms a vector from world space to local space. The opposite of Transform.TransformVector.\n// - InverseTransformVectors(): Transforms multiple vectors from world space to local space overwriting each original position with the transformed version. The opposite of Transform.TransformVectors.\n// - IsChildOf(): Is this transform a child of parent?\n// - LookAt(): Rotates the transform so the forward vector points at /target/'s current position.\n// - Rotate(): Use Transform.Rotate to rotate GameObjects in a variety of ways. The rotation is often provided as an Euler angle and not a Quaternion.\n// - RotateAround(): Rotates the transform about axis passing through point in world coordinates by angle degrees.\n// - SetAsFirstSibling(): Move the transform to the start of the local transform list.\n// - SetAsLastSibling(): Move the transform to the end of the local transform list.\n// - SetLocalPositionAndRotation(): Sets the position and rotation of the Transform component in local space (i.e. relative to its parent transform).\n// - SetParent(): Set the parent of the transform.\n// - SetPositionAndRotation(): Sets the world space position and rotation of the Transform component.\n// - SetSiblingIndex(): Sets the sibling index.\n// - TransformDirection(): Transforms direction from local space to world space.\n// - TransformDirections(): Transforms multiple directions from local space to world space overwriting each original direction with the transformed version.\n// - TransformPoint(): Transforms position from local space to world space.\n// - TransformPoints(): Transforms multiple points from local space to world space overwriting each original point with the transformed version.\n// - TransformVector(): Transforms vector from local space to world space.\n// - TransformVectors(): Transforms multiple vectors from local space to world space overwriting each original vector with the transformed version.\n// - Translate(): Moves the transform along its x, y, and z axes by the values of the translation parameter's x, y, and z components respectively.\n\n// Code Examples:\n// Example 1:\n//   using UnityEngine;public class Example : MonoBehaviour\n\n//   {\n\n//       // Moves all transform children 10 units upwards!\n\n//       void Start()\n\n//       {\n\n//           foreach (Transform child in transform)\n\n//           {\n\n//               child.position += Vector3.up * 10.0f;\n\n//           }\n\n//       }\n\n//   }\n\n// Pseudo-code representation of Transform\npublic class Transform {\n    public var childCount; // The number of children the parent Transform has.\n    public var eulerAngles; // The rotation as Euler angles in degrees.\n    public var forward; // Returns a normalized vector representing the blue axis of the transform in world space.\n    public var hasChanged; // Has the transform changed since the last time the flag was set to 'false'?\n    public var hierarchyCapacity; // The transform capacity of the transform's hierarchy data structure.\n    public var hierarchyCount; // The number of transforms in the transform's hierarchy data structure.\n    public var localEulerAngles; // The rotation as Euler angles in degrees relative to the parent transform's rotation.\n    public var localPosition; // Position of the transform relative to the parent transform.\n    public var localRotation; // The rotation of the transform relative to the transform rotation of the parent.\n    public var localScale; // The scale of the transform relative to the GameObjects parent.\n    public var localToWorldMatrix; // Matrix that transforms a point from local space into world space (Read Only).\n    public var lossyScale; // The global scale of the object (Read Only).\n    public var parent; // The parent of the transform.\n    public var position; // The world space position of the Transform.\n    public var right; // The red axis of the transform in world space.\n    public var root; // Returns the topmost transform in the hierarchy.\n    public var rotation; // A Quaternion that stores the rotation of the Transform in world space.\n    public var up; // The green axis of the transform in world space.\n    public var worldToLocalMatrix; // Matrix that transforms a point from world space into local space (Read Only).\n    public void DetachChildren(); // Unparents all of the target object's children.\n    public void Find(); // Finds a child by name n and returns it.\n    public void GetChild(); // Returns a transform child by index.\n    public void GetLocalPositionAndRotation(); // Updates the value of the out parameters localPosition and localRotation with the transform's current position and rotation in local space (that is, relative to its parent's transform).\n    public void GetPositionAndRotation(); // Updates the value of the out parameters position and rotation with the transform's current position and rotation in world space (that is, relative to the scene's origin coordinates).\n    public void GetSiblingIndex(); // Gets the index of this Transform, relative to its siblings.\n    public void InverseTransformDirection(); // Transforms a direction from world space to local space. The opposite of Transform.TransformDirection.\n    public void InverseTransformDirections(); // Transforms multiple directions from world space to local space overwriting each original position with the transformed version. The opposite of Transform.TransformDirections.\n    public void InverseTransformPoint(); // Transforms position from world space to local space.\n    public void InverseTransformPoints(); // Transforms multiple positions from world space to local space overwriting each original position with the transformed version.\n    public void InverseTransformVector(); // Transforms a vector from world space to local space. The opposite of Transform.TransformVector.\n    public void InverseTransformVectors(); // Transforms multiple vectors from world space to local space overwriting each original position with the transformed version. The opposite of Transform.TransformVectors.\n    public void IsChildOf(); // Is this transform a child of parent?\n    public void LookAt(); // Rotates the transform so the forward vector points at /target/'s current position.\n    public void Rotate(); // Use Transform.Rotate to rotate GameObjects in a variety of ways. The rotation is often provided as an Euler angle and not a Quaternion.\n    public void RotateAround(); // Rotates the transform about axis passing through point in world coordinates by angle degrees.\n    public void SetAsFirstSibling(); // Move the transform to the start of the local transform list.\n    public void SetAsLastSibling(); // Move the transform to the end of the local transform list.\n    public void SetLocalPositionAndRotation(); // Sets the position and rotation of the Transform component in local space (i.e. relative to its parent transform).\n    public void SetParent(); // Set the parent of the transform.\n    public void SetPositionAndRotation(); // Sets the world space position and rotation of the Transform component.\n    public void SetSiblingIndex(); // Sets the sibling index.\n    public void TransformDirection(); // Transforms direction from local space to world space.\n    public void TransformDirections(); // Transforms multiple directions from local space to world space overwriting each original direction with the transformed version.\n    public void TransformPoint(); // Transforms position from local space to world space.\n    public void TransformPoints(); // Transforms multiple points from local space to world space overwriting each original point with the transformed version.\n    public void TransformVector(); // Transforms vector from local space to world space.\n    public void TransformVectors(); // Transforms multiple vectors from local space to world space overwriting each original vector with the transformed version.\n    public void Translate(); // Moves the transform along its x, y, and z axes by the values of the translation parameter's x, y, and z components respectively.\n}",
+  "properties": [
+    {
+      "name": "childCount",
+      "description": "The number of children the parent Transform has."
+    },
+    {
+      "name": "eulerAngles",
+      "description": "The rotation as Euler angles in degrees."
+    },
+    {
+      "name": "forward",
+      "description": "Returns a normalized vector representing the blue axis of the transform in world space."
+    },
+    {
+      "name": "hasChanged",
+      "description": "Has the transform changed since the last time the flag was set to 'false'?"
+    },
+    {
+      "name": "hierarchyCapacity",
+      "description": "The transform capacity of the transform's hierarchy data structure."
+    },
+    {
+      "name": "hierarchyCount",
+      "description": "The number of transforms in the transform's hierarchy data structure."
+    },
+    {
+      "name": "localEulerAngles",
+      "description": "The rotation as Euler angles in degrees relative to the parent transform's rotation."
+    },
+    {
+      "name": "localPosition",
+      "description": "Position of the transform relative to the parent transform."
+    },
+    {
+      "name": "localRotation",
+      "description": "The rotation of the transform relative to the transform rotation of the parent."
+    },
+    {
+      "name": "localScale",
+      "description": "The scale of the transform relative to the GameObjects parent."
+    },
+    {
+      "name": "localToWorldMatrix",
+      "description": "Matrix that transforms a point from local space into world space (Read Only)."
+    },
+    {
+      "name": "lossyScale",
+      "description": "The global scale of the object (Read Only)."
+    },
+    {
+      "name": "parent",
+      "description": "The parent of the transform."
+    },
+    {
+      "name": "position",
+      "description": "The world space position of the Transform."
+    },
+    {
+      "name": "right",
+      "description": "The red axis of the transform in world space."
+    },
+    {
+      "name": "root",
+      "description": "Returns the topmost transform in the hierarchy."
+    },
+    {
+      "name": "rotation",
+      "description": "A Quaternion that stores the rotation of the Transform in world space."
+    },
+    {
+      "name": "up",
+      "description": "The green axis of the transform in world space."
+    },
+    {
+      "name": "worldToLocalMatrix",
+      "description": "Matrix that transforms a point from world space into local space (Read Only)."
+    }
+  ]
+}

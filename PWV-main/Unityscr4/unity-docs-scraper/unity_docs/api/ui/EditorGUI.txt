@@ -1,0 +1,94 @@
+// Unity Class: EditorGUI
+// Documentation: https://docs.unity3d.com/ScriptReference/EditorGUI.html
+
+// Description: These work pretty much like the normal GUI functions - and also have matching implementations in EditorGUILayout.
+
+// Methods:
+// - BeginChangeCheck: Starts a new code block to check for GUI changes.
+// - BeginDisabledGroup: Create a group of controls that can be disabled.
+// - BeginFoldoutHeaderGroup: Make a label with a foldout arrow to the left of it.
+// - BeginProperty: Create a Property wrapper, useful for making regular GUI controls work with SerializedProperty.
+// - BoundsField: Makes Center and Extents field for entering a Bounds.
+// - BoundsIntField: Makes Position and Size field for entering a BoundsInt.
+// - ColorField: Makes a field for selecting a Color.
+// - CurveField: Makes a field for editing an AnimationCurve.
+// - DelayedDoubleField: Makes a delayed text field for entering doubles.
+// - DelayedFloatField: Makes a delayed text field for entering floats.
+// - DelayedIntField: Makes a delayed text field for entering integers.
+// - DelayedTextField: Makes a delayed text field.
+// - DoubleField: Makes a text field for entering doubles.
+// - DrawPreviewTexture: Draws the texture within a rectangle.
+// - DrawRect: Draws a filled rectangle of color at the specified position and size within the current editor window.
+// - DrawTextureAlpha: Draws the alpha channel of a texture within a rectangle.
+// - DropdownButton: Makes a button that reacts to mouse down, for displaying your own dropdown content.
+// - DropShadowLabel: Draws a label with a drop shadow.
+// - EndChangeCheck: Ends a code block and checks for any GUI changes.
+// - EndDisabledGroup: Ends a disabled group started with BeginDisabledGroup.
+// - EndFoldoutHeaderGroup: Closes a group started with BeginFoldoutHeaderGroup. Additional resources: EditorGUILayout.BeginFoldoutHeaderGroup.
+// - EndProperty: Ends a Property wrapper started with BeginProperty.
+// - EnumFlagsField: Displays a menu with an option for every value of the enum type when clicked. An option for the value 0 with name "Nothing" and an option for the value ~0 (that is, all bits set) with the name "Everything" are always displayed at the top of the menu. The names for the values 0 and ~0 can be overriden by defining these values in the enum type.
+// - EnumPopup: Makes an enum popup selection field.
+// - FloatField: Makes a text field for entering floats.
+// - FocusTextInControl: Move keyboard focus to a named text field and begin editing of the content.
+// - Foldout: Makes a label with a foldout arrow to the left of it.
+// - GetPropertyHeight: Get the height needed for a PropertyField control.
+// - GradientField: Makes a field for editing a Gradient.
+// - HandlePrefixLabel: Makes a label for some control.
+// - HelpBox: Makes a help box with a message to the user.
+// - InspectorTitlebar: Makes an inspector-window-like titlebar.
+// - IntField: Makes a text field for entering integers.
+// - IntPopup: Makes an integer popup selection field.
+// - IntSlider: Makes a slider the user can drag to change an integer value between a min and a max.
+// - LabelField: Makes a label field. (Useful for showing read-only info.)
+// - LargeSplitButtonWithDropdownList: Creates a large button that contains a regular button section and an arrow to open a dropdown menu.
+// - LayerField: Makes a layer selection field.
+// - LinkButton: Make a clickable link label.
+// - LogarithmicIntSlider: Makes a text field for entering an integer on a logarithmic scale.
+// - LongField: Makes a text field for entering long integers.
+// - MaskField: Makes a field for masks.
+// - MinMaxSlider: Makes a special slider the user can use to specify a range between a min and a max.
+// - MultiFloatField: Makes a multi-control with text fields for entering multiple floats in the same line.
+// - MultiIntField: Makes a multi-control with text fields for entering multiple integers in the same line.
+// - MultiPropertyField: Makes a multi-control with several property fields in the same line.
+// - ObjectField: Makes an object field. You can assign objects either by drag and drop objects or by selecting an object using the Object Picker.
+// - PasswordField: Makes a text field where the user can enter a password.
+// - Popup: Makes a generic popup selection field.
+// - PrefixLabel: Makes a label in front of some control.
+// - ProgressBar: Makes a progress bar.
+// - PropertyField: Use this to make a field for a SerializedProperty in the Editor.
+// - RectField: Makes an X, Y, W, and H field for entering a Rect.
+// - RectIntField: Makes an X, Y, W, and H field for entering a RectInt.
+// - RenderingLayerMaskField: Makes a rendering layer selection field.
+// - SelectableLabel: Makes a selectable label field. (Useful for showing read-only info that can be copy-pasted.)
+// - Slider: Makes a slider the user can drag to change a value between a min and a max.
+// - TagField: Makes a tag selection field.
+// - TextArea: Makes a text area.
+// - TextField: Makes a text field.
+// - Toggle: Makes a toggle.
+// - ToggleLeft: Makes a toggle field where the toggle is to the left and the label immediately to the right of it.
+// - Vector2Field: Makes an X and Y field for entering a Vector2.
+// - Vector2IntField: Makes an X and Y integer field for entering a Vector2Int.
+// - Vector3Field: Makes an X, Y, and Z field for entering a Vector3.
+// - Vector3IntField: Makes an X, Y, and Z integer field for entering a Vector3Int.
+// - Vector4Field: Makes an X, Y, Z, and W field for entering a Vector4.
+
+// Events:
+// - hyperLinkClicked: Event used to react on clicks on a text hyperlink part.
+
+public class EditorGUI {
+    public void BeginChangeCheck(); // Starts a new code block to check for GUI changes.
+    public void BeginDisabledGroup(); // Create a group of controls that can be disabled.
+    public void BeginFoldoutHeaderGroup(); // Make a label with a foldout arrow to the left of it.
+    public void BeginProperty(); // Create a Property wrapper, useful for making regular GUI controls work with Seri
+    public void BoundsField(); // Makes Center and Extents field for entering a Bounds.
+    public void BoundsIntField(); // Makes Position and Size field for entering a BoundsInt.
+    public void ColorField(); // Makes a field for selecting a Color.
+    public void CurveField(); // Makes a field for editing an AnimationCurve.
+    public void DelayedDoubleField(); // Makes a delayed text field for entering doubles.
+    public void DelayedFloatField(); // Makes a delayed text field for entering floats.
+    public void DelayedIntField(); // Makes a delayed text field for entering integers.
+    public void DelayedTextField(); // Makes a delayed text field.
+    public void DoubleField(); // Makes a text field for entering doubles.
+    public void DrawPreviewTexture(); // Draws the texture within a rectangle.
+    public void DrawRect(); // Draws a filled rectangle of color at the specified position and size within the 
+}

@@ -1,0 +1,79 @@
+using UnityEngine;
+using Unity.Netcode;
+using Unity.Cinemachine;
+
+namespace EtherDomes.Camera
+{
+    /// <summary>
+    /// Assigns Cinemachine camera to follow the local player.
+    /// Attach to the player prefab.
+    /// Adapted for Unity Netcode for GameObjects (NGO).
+    /// </summary>
+    public class CinemachinePlayerFollow : NetworkBehaviour
+    {
+        [Header("Settings")]
+        [SerializeField] private Vector3 _lookAtOffset = new Vector3(0, 1.5f, 0);
+        
+        private Transform _lookAtTarget;
+        
+        public override void OnNetworkSpawn()
+        {
+             if (IsOwner)
+             {
+                 SetupCamera();
+             }
+        }
+
+        private void SetupCamera()
+        {
+            // [FIX] Disabled to prevent conflict with ThirdPersonCameraController
+            // We are using a manual camera script now.
+            Debug.Log("[CinemachinePlayerFollow] Logic disabled to allow ThirdPersonCameraController control.");
+            return;
+
+            /*
+            Debug.Log("[CinemachinePlayerFollow] SetupCamera called for local player");
+            
+            // Create look-at target with offset
+            var lookAtGO = new GameObject("LookAtTarget");
+            lookAtGO.transform.SetParent(transform);
+            lookAtGO.transform.localPosition = _lookAtOffset;
+            _lookAtTarget = lookAtGO.transform;
+            
+            // Find any CinemachineCamera in scene (Cinemachine 3.x)
+            var cinemachineCamera = FindFirstObjectByType<CinemachineCamera>();
+            if (cinemachineCamera != null)
+            {
+                cinemachineCamera.Follow = transform;
+                cinemachineCamera.LookAt = _lookAtTarget;
+                Debug.Log($"[CinemachinePlayerFollow] CinemachineCamera '{cinemachineCamera.name}' assigned to local player at {transform.position}");
+                return;
+            }
+            
+            // Fallback: Try to use main camera directly
+            var mainCamera = UnityEngine.Camera.main;
+            if (mainCamera != null)
+            {
+                Debug.Log("[CinemachinePlayerFollow] No CinemachineCamera found, using Main Camera fallback");
+                // Position camera behind player
+                mainCamera.transform.position = transform.position + new Vector3(0, 5, -10);
+                mainCamera.transform.LookAt(transform.position + Vector3.up);
+            }
+            else
+            {
+                Debug.LogError("[CinemachinePlayerFollow] No camera found at all!");
+            }
+            
+            Debug.LogWarning("[CinemachinePlayerFollow] No CinemachineCamera found in scene. Create one via EtherDomes > Create Cinemachine Camera");
+            */
+        }
+
+        public override void OnNetworkDespawn()
+        {
+            if (_lookAtTarget != null)
+            {
+                Destroy(_lookAtTarget.gameObject);
+            }
+        }
+    }
+}

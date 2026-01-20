@@ -1,0 +1,23 @@
+// Unity Class: DownloadHandler
+// Documentation: https://docs.unity3d.com/ScriptReference/Networking.DownloadHandler.html
+
+// Description: Manage and process HTTP response body data received from a remote server.
+
+// Properties:
+// - data: Returns the raw bytes downloaded from the remote server, or null. (Read Only)
+// - error: Error message describing a failure that occurred inside the download handler.
+// - isDone: Returns true if this DownloadHandler has been informed by its parent UnityWebRequest that all data h
+// - nativeData: Provides direct access to downloaded data.
+// - text: Convenience property. Returns the bytes from data interpreted as a UTF8 string. (Read Only)
+
+// Methods:
+// - Dispose: Signals that this DownloadHandler is no longer being used, and should clean up any resources it is u
+
+public class DownloadHandler {
+    public var data;
+    public var error;
+    public var isDone;
+    public var nativeData;
+    public var text;
+    public void Dispose();
+}

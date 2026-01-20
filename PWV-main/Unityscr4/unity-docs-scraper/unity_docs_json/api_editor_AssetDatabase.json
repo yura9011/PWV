@@ -1,0 +1,88 @@
+{
+  "name": "api_editor_AssetDatabase",
+  "type": "api",
+  "description": "An Interface for accessing assets and performing operations on assets.",
+  "content": "// Unity Class: AssetDatabase\n// Documentation: https://docs.unity3d.com/ScriptReference/AssetDatabase.html\n\n// Description: An Interface for accessing assets and performing operations on assets.\n\n// Methods:\n// - AddObjectToAsset: Adds objectToAdd to an existing asset at path.\n// - AllowAutoRefresh: Decrements an internal counter which Unity uses to determine whether to allow automatic AssetDatabase refreshing behavior.\n// - AssetPathExists: Check whether an asset exists at the given path in the database.\n// - AssetPathToGUID: Get the GUID for the asset at path.\n// - CanConnectToCacheServer: Checks the availability of the Cache Server.\n// - CanOpenAssetInEditor: Checks if Unity can open an asset in the Editor.\n// - CanOpenForEdit: Query whether an Asset file can be opened for editing in version control and is not exclusively locked by another user or otherwise unavailable.\n// - ClearImporterOverride: Clears the importer override for the asset.\n// - ClearLabels: Removes all labels attached to an asset.\n// - CloseCacheServerConnection: Closes an active cache server connection. If no connection is active, then it does nothing.\n// - Contains: Checks whether a given object is an asset.\n// - CopyAsset: Duplicates the asset at path and stores it at newPath.\n// - CopyAssets: Duplicates assets in paths and stores them in newPaths.\n// - CreateAsset: Creates a new asset in a native Unity format.\n// - CreateFolder: Creates a new folder, in the specified parent folder.The parent folder string must start with the \"Assets\" folder, and all folders within the parent folder string must already exist. For example, when specifying \"Assets/ParentFolder1/Parentfolder2/\", the new folder will be created in \"ParentFolder2\" only if ParentFolder1 and ParentFolder2 already exist.\n// - DeleteAsset: Deletes the specified asset or folder.\n// - DeleteAssets: Lets you delete multiple assets or folders at once with performance benefits under version control.\n// - DisallowAutoRefresh: Increments an internal counter which Unity uses to determine whether to allow automatic AssetDatabase refreshing behavior.\n// - EntityIdsToGUIDs: Sets a NativeArray of UnityEditor.GUIDs for every valid EntityId that is an asset.\n// - ExportPackage: Exports the assets identified by assetPathNames to a unitypackage file in fileName.\n// - ExtractAsset: Creates an external Asset from an object (such as a Material) by extracting it from within an imported asset (such as an FBX file).\n// - FindAssetGUIDs: Searches the asset database with a filter string and returns an array of GUIDs.\n// - FindAssets: Search the asset database using the search filter string.\n// - ForceReserializeAssets: Forcibly load and re-serialize the given assets, flushing any outstanding data changes to disk.\n// - ForceToDesiredWorkerCount: Forces the Editor to use the desired amount of worker processes. Unity will either spawn new worker processes or shut down idle worker processes to reach the desired number.\n// - GenerateUniqueAssetPath: Creates a new unique path for an asset.\n// - GetAllAssetBundleNames: Obtain all the AssetBundle names registered in the Asset Database.\n// - GetAssetBundleDependencies: Given an assetBundleName, returns the list of AssetBundles that it depends on.\n// - GetAssetDependencyHash: Returns the hash of all the dependencies of an asset.\n// - GetAssetOrScenePath: Returns the path name relative to the project folder where the asset or scene is stored.\n// - GetAssetPath: Returns the path name relative to the project folder where the asset is stored.\n// - GetAssetPathFromTextMetaFilePath: Gets the path to the asset file associated with a text .meta file.\n// - GetAssetPathsFromAssetBundle: Returns an array containing the paths of all assets marked with the specified AssetBundle name.\n// - GetAssetPathsFromAssetBundleAndAssetName: Get the Asset paths for all Assets tagged with assetBundleName and named assetName.\n// - GetAvailableImporters: Gets the importer types associated with a given Asset path.\n// - GetCachedIcon: Retrieves an icon for the asset at the given asset path.\n// - GetCacheServerAddress: Gets the IP address of the Cache Server in Editor Settings.\n// - GetCacheServerEnableDownload: Gets the Cache Server Download option from Editor Settings.\n// - GetCacheServerEnableUpload: Gets the Cache Server Upload option from Editor Settings.\n// - GetCacheServerNamespacePrefix: Gets the Cache Server Namespace prefix set in Editor Settings.\n// - GetCacheServerPort: Gets the Port number of the Cache Server in Editor Settings.\n// - GetCurrentCacheServerIp: Gets the IP address of the Cache Server currently in use by the Editor.\n// - GetDefaultImporter: Returns the Default Importer associated with the asset located at the supplied path. When no Importer override is set, then the default importer is used. Additional resources: AssetDatabase.GetImporterOverride, AssetDatabase.ClearImporterOverride.\n// - GetDependencies: Returns an array of all the assets that are dependencies of the asset at the specified pathName.Note: GetDependencies() gets the Assets that are referenced by other Assets. For example, a Scene could contain many GameObjects with a Material attached to them. In this case, GetDependencies() will return the path to the Material Assets, but not the GameObjects as those are not Assets on your disk.\n// - GetImplicitAssetBundleName: Returns the name of the AssetBundle that a given asset belongs to.\n// - GetImplicitAssetBundleVariantName: Returns the name of the AssetBundle Variant that a given asset belongs to.\n// - GetImporterOverride: Returns the type of the override importer.\n// - GetImporterType: Returns the type of importer associated with an asset without loading the asset.\n// - GetImporterTypes: Returns the types of importers associated with the specified array of assets, without loading those assets.\n// - GetLabels: Obtains all labels of a given asset.\n// - GetMainAssetTypeAtPath: Obtains the type of the main asset object.\n// - GetMainAssetTypeFromGUID: Obtains the type of the main object of a given asset.\n// - GetScriptableObjectsWithMissingScriptCount: Checks how many unloadable ScriptableObject instances are present in the specified asset.\n// - GetSubFolders: Obtains the subdirectories of a given directory in the Assets folder.\n// - GetTextMetaFilePathFromAssetPath: Gets the path to the text .meta file associated with an asset.\n// - GetTypeFromPathAndFileID: Gets an object's type from an Asset path and a local file identifier.\n// - GetUnusedAssetBundleNames: Obtains any unused AssetBundle names in the Asset Database.\n// - GUIDFromAssetPath: Get the GUID for the asset at path.\n// - GUIDToAssetPath: Gets the corresponding asset path for the supplied GUID, or an empty string if the GUID can't be found.\n// - ImportAsset: Import asset at path.\n// - ImportPackage: Imports the package at packagePath into the current project.\n// - IsAssetImportWorkerProcess: Determines whether the current process is an Asset Import Worker process.\n// - IsCacheServerEnabled: Checks whether the Cache Server is enabled in Project Settings.\n// - IsConnectedToCacheServer: Checks connection status of the Cache Server.\n// - IsDirectoryMonitoringEnabled: Reports whether Directory Monitoring is enabled.\n// - IsForeignAsset: Determines whether a given asset is an external asset, also known as a foreign asset.\n// - IsMainAsset: Checks whether the asset is a main asset in the Project window.\n// - IsMainAssetAtPathLoaded: Checks whether the main asset object at assetPath is loaded in memory.\n// - IsMetaFileOpenForEdit: Query whether an asset's metadata (.meta) file is open for edit in version control.\n// - IsNativeAsset: Determines whether the asset is a native asset.\n// - IsOpenForEdit: Query whether an Asset file is open for editing in version control.\n// - IsSubAsset: Checks whether the asset is part of another asset.\n// - IsValidFolder: Given a path to a folder, returns true if it exists, false otherwise.\n// - LoadAllAssetRepresentationsAtPath: Obtains all sub-assets at assetPath.\n// - LoadAllAssetsAtPath: Obtains an array of all assets at assetPath.\n// - LoadAssetAtPath: Returns the first asset object of type type at given path assetPath.\n// - LoadAssetByGUID: Loads an asset object of type type by given GUID assetGUID.\n// - LoadMainAssetAtPath: Obtains the main asset object at assetPath.\n// - LoadObjectAsync: Loads a specific Object and its dependencies from an Asset file asynchronously.\n// - MakeEditable: Makes a file open for editing in version control.\n// - MoveAsset: Move an asset file (or folder) from one folder to another.\n// - MoveAssetsToTrash: Lets you move multiple assets or folders to trash at once with performance benefits under version control.\n// - MoveAssetToTrash: Moves the specified asset or folder to the OS trash.\n// - OpenAsset: Opens the asset with associated application.\n// - Refresh: Import any changed assets.\n// - RefreshSettings: Apply pending Editor Settings changes to the Asset pipeline.\n// - RegisterCustomDependency: Allows you to register a custom dependency that Assets can be dependent on. If you register a custom dependency, and specify that an Asset is dependent on it, then the Asset will get re-imported if the custom dependency changes.\n// - ReleaseCachedFileHandles: Calling this function will release file handles internally cached by Unity. This allows modifying asset or meta files safely thus avoiding potential file sharing IO errors.\n// - RemoveAssetBundleName: Remove the AssetBundle name from the Asset Database.\n// - RemoveObjectFromAsset: Removes object from its asset (Additional resources: AssetDatabase.AddObjectToAsset).\n// - RemoveScriptableObjectsWithMissingScript: Removes any ScriptableObject instances from the given asset file which cannot be loaded because their scripts could not be found.\n// - RemoveUnusedAssetBundleNames: Remove all the unused AssetBundle names in the Asset Database.\n// - RenameAsset: Rename an asset file.\n// - ResetCacheServerReconnectTimer: Resets the internal cache server connection reconnect timer values. The default delay timer value is 1 second, and the max delay value is 5 minutes. Everytime a connection attempt fails it will double the delay timer value, until a maximum time of the max value.\n// - SaveAssetIfDirty: Writes all unsaved changes to the specified asset to disk.\n// - SaveAssets: Writes all unsaved asset changes to disk.\n// - SetImporterOverride: Sets a specific importer to use for the asset.\n// - SetLabels: Replaces the list of labels on an asset.\n// - SetMainObject: Specifies which object in the asset file should become the main object after the next import.\n// - StartAssetEditing: Pauses automatic asset import, allowing you to group several asset imports together into one larger import.\n// - StopAssetEditing: Ends the Asset Database's temporary paused state, allowing it to resume normal automatic imports.\n// - TryGetAssetFolderInfo: Get AssetDatabase specific information about a folder.\n// - TryGetGUIDAndLocalFileIdentifier: Get the GUID and local file id from an object instance id.\n// - UnregisterCustomDependencyPrefixFilter: Removes custom dependencies that match the prefixFilter.\n// - ValidateMoveAsset: Checks if an asset file can be moved from one folder to another. (Without actually moving the file).\n// - WriteImportSettingsIfDirty: Writes the import settings to disk.\n\n// Events:\n// - cacheServerConnectionChanged: Unity raises this event when Cache Server connection is changed.\n// - importPackageCancelled: Callback raised whenever a package import is cancelled by the user.\n// - importPackageCompleted: Callback raised whenever a package import successfully completes.\n// - importPackageFailed: Callback raised whenever a package import failed.\n// - importPackageStarted: Callback raised whenever a package import starts.\n\npublic class AssetDatabase {\n    public void AddObjectToAsset(); // Adds objectToAdd to an existing asset at path.\n    public void AllowAutoRefresh(); // Decrements an internal counter which Unity uses to determine whether to allow au\n    public void AssetPathExists(); // Check whether an asset exists at the given path in the database.\n    public void AssetPathToGUID(); // Get the GUID for the asset at path.\n    public void CanConnectToCacheServer(); // Checks the availability of the Cache Server.\n    public void CanOpenAssetInEditor(); // Checks if Unity can open an asset in the Editor.\n    public void CanOpenForEdit(); // Query whether an Asset file can be opened for editing in version control and is \n    public void ClearImporterOverride(); // Clears the importer override for the asset.\n    public void ClearLabels(); // Removes all labels attached to an asset.\n    public void CloseCacheServerConnection(); // Closes an active cache server connection. If no connection is active, then it do\n    public void Contains(); // Checks whether a given object is an asset.\n    public void CopyAsset(); // Duplicates the asset at path and stores it at newPath.\n    public void CopyAssets(); // Duplicates assets in paths and stores them in newPaths.\n    public void CreateAsset(); // Creates a new asset in a native Unity format.\n    public void CreateFolder(); // Creates a new folder, in the specified parent folder.The parent folder string mu\n}",
+  "properties": [
+    {
+      "name": "AddObjectToAsset",
+      "description": "Adds objectToAdd to an existing asset at path."
+    },
+    {
+      "name": "AllowAutoRefresh",
+      "description": "Decrements an internal counter which Unity uses to determine whether to allow automatic AssetDatabase refreshing behavior."
+    },
+    {
+      "name": "AssetPathExists",
+      "description": "Check whether an asset exists at the given path in the database."
+    },
+    {
+      "name": "AssetPathToGUID",
+      "description": "Get the GUID for the asset at path."
+    },
+    {
+      "name": "CanConnectToCacheServer",
+      "description": "Checks the availability of the Cache Server."
+    },
+    {
+      "name": "CanOpenAssetInEditor",
+      "description": "Checks if Unity can open an asset in the Editor."
+    },
+    {
+      "name": "CanOpenForEdit",
+      "description": "Query whether an Asset file can be opened for editing in version control and is not exclusively locked by another user or otherwise unavailable."
+    },
+    {
+      "name": "ClearImporterOverride",
+      "description": "Clears the importer override for the asset."
+    },
+    {
+      "name": "ClearLabels",
+      "description": "Removes all labels attached to an asset."
+    },
+    {
+      "name": "CloseCacheServerConnection",
+      "description": "Closes an active cache server connection. If no connection is active, then it does nothing."
+    },
+    {
+      "name": "Contains",
+      "description": "Checks whether a given object is an asset."
+    },
+    {
+      "name": "CopyAsset",
+      "description": "Duplicates the asset at path and stores it at newPath."
+    },
+    {
+      "name": "CopyAssets",
+      "description": "Duplicates assets in paths and stores them in newPaths."
+    },
+    {
+      "name": "CreateAsset",
+      "description": "Creates a new asset in a native Unity format."
+    },
+    {
+      "name": "CreateFolder",
+      "description": "Creates a new folder, in the specified parent folder.The parent folder string must start with the \"Assets\" folder, and all folders within the parent folder string must already exist. For example, when specifying \"Assets/ParentFolder1/Parentfolder2/\", the new folder will be created in \"ParentFolder2\" only if ParentFolder1 and ParentFolder2 already exist."
+    },
+    {
+      "name": "DeleteAsset",
+      "description": "Deletes the specified asset or folder."
+    },
+    {
+      "name": "DeleteAssets",
+      "description": "Lets you delete multiple assets or folders at once with performance benefits under version control."
+    },
+    {
+      "name": "DisallowAutoRefresh",
+      "description": "Increments an internal counter which Unity uses to determine whether to allow automatic AssetDatabase refreshing behavior."
+    },
+    {
+      "name": "EntityIdsToGUIDs",
+      "description": "Sets a NativeArray of UnityEditor.GUIDs for every valid EntityId that is an asset."
+    },
+    {
+      "name": "ExportPackage",
+      "description": "Exports the assets identified by assetPathNames to a unitypackage file in fileName."
+    }
+  ]
+}

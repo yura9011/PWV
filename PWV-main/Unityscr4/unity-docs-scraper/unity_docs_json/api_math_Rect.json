@@ -1,0 +1,88 @@
+{
+  "name": "api_math_Rect",
+  "type": "api",
+  "description": "A 2D Rectangle defined by X and Y position, width and height.",
+  "content": "// Unity Class: Rect\n// Documentation: https://docs.unity3d.com/ScriptReference/Rect.html\n\n// Description: A 2D Rectangle defined by X and Y position, width and height.\n\n// Properties:\n// - center: The position of the center of the rectangle.\n// - height: The height of the rectangle, measured from the Y position.\n// - max: The position of the maximum corner of the rectangle.\n// - min: The position of the minimum corner of the rectangle.\n// - position: The X and Y position of the rectangle.\n// - size: The width and height of the rectangle.\n// - width: The width of the rectangle, measured from the X position.\n// - x: The X coordinate of the rectangle.\n// - xMax: The maximum X coordinate of the rectangle.\n// - xMin: The minimum X coordinate of the rectangle.\n// - y: The Y coordinate of the rectangle.\n// - yMax: The maximum Y coordinate of the rectangle.\n// - yMin: The minimum Y coordinate of the rectangle.\n\n// Methods:\n// - Contains: Returns true if the x and y components of point is a point inside this rectangle. If allowInverse is\n// - Overlaps: Returns true if the other rectangle overlaps this one. If allowInverse is present and true, the widt\n// - Set: Set components of an existing Rect.\n// - ToString: Returns a formatted string for this Rect.\n// - MinMaxRect: Creates a rectangle from min/max coordinate values.\n// - NormalizedToPoint: Returns a point inside a rectangle, given normalized coordinates.\n// - PointToNormalized: Returns the normalized coordinates corresponding to the point.\n\npublic class Rect {\n    public var center;\n    public var height;\n    public var max;\n    public var min;\n    public var position;\n    public var size;\n    public var width;\n    public var x;\n    public var xMax;\n    public var xMin;\n    public var y;\n    public var yMax;\n    public var yMin;\n    public void Contains();\n    public void Overlaps();\n    public void Set();\n    public void ToString();\n    public void MinMaxRect();\n    public void NormalizedToPoint();\n    public void PointToNormalized();\n}",
+  "properties": [
+    {
+      "name": "center",
+      "description": "The position of the center of the rectangle."
+    },
+    {
+      "name": "height",
+      "description": "The height of the rectangle, measured from the Y position."
+    },
+    {
+      "name": "max",
+      "description": "The position of the maximum corner of the rectangle."
+    },
+    {
+      "name": "min",
+      "description": "The position of the minimum corner of the rectangle."
+    },
+    {
+      "name": "position",
+      "description": "The X and Y position of the rectangle."
+    },
+    {
+      "name": "size",
+      "description": "The width and height of the rectangle."
+    },
+    {
+      "name": "width",
+      "description": "The width of the rectangle, measured from the X position."
+    },
+    {
+      "name": "x",
+      "description": "The X coordinate of the rectangle."
+    },
+    {
+      "name": "xMax",
+      "description": "The maximum X coordinate of the rectangle."
+    },
+    {
+      "name": "xMin",
+      "description": "The minimum X coordinate of the rectangle."
+    },
+    {
+      "name": "y",
+      "description": "The Y coordinate of the rectangle."
+    },
+    {
+      "name": "yMax",
+      "description": "The maximum Y coordinate of the rectangle."
+    },
+    {
+      "name": "yMin",
+      "description": "The minimum Y coordinate of the rectangle."
+    },
+    {
+      "name": "Contains",
+      "description": "Returns true if the x and y components of point is a point inside this rectangle. If allowInverse is"
+    },
+    {
+      "name": "Overlaps",
+      "description": "Returns true if the other rectangle overlaps this one. If allowInverse is present and true, the widt"
+    },
+    {
+      "name": "Set",
+      "description": "Set components of an existing Rect."
+    },
+    {
+      "name": "ToString",
+      "description": "Returns a formatted string for this Rect."
+    },
+    {
+      "name": "MinMaxRect",
+      "description": "Creates a rectangle from min/max coordinate values."
+    },
+    {
+      "name": "NormalizedToPoint",
+      "description": "Returns a point inside a rectangle, given normalized coordinates."
+    },
+    {
+      "name": "PointToNormalized",
+      "description": "Returns the normalized coordinates corresponding to the point."
+    }
+  ]
+}

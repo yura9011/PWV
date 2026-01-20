@@ -1,0 +1,67 @@
+// Unity Class: WheelCollider
+// Documentation: https://docs.unity3d.com/ScriptReference/WheelCollider.html
+
+// Description: A special collider for vehicle wheels.
+
+// Properties:
+// - brakeTorque: Brake torque expressed in Newton metres.
+// - center: The center of the wheel, measured in the object's local space.
+// - forceAppPointDistance: Application point of the suspension and tire forces measured from the base of the resting wheel.
+// - forwardFriction: Properties of tire friction in the direction the wheel is pointing in.
+// - isGrounded: Indicates whether the wheel currently collides with something (Read Only).
+// - mass: The mass of the wheel, expressed in kilograms. Must be larger than zero. Typical values would be in 
+// - motorTorque: Motor torque on the wheel axle expressed in Newton metres. Positive or negative depending on directi
+// - radius: The radius of the wheel, measured in local space.
+// - rotationSpeed: Rotation speed of the wheel, measured in degrees per second.
+// - rpm: Current wheel axle rotation speed, in rotations per minute (Read Only).
+// - sidewaysFriction: Properties of tire friction in the sideways direction.
+// - sprungMass: The mass supported by this WheelCollider.
+// - steerAngle: Steering angle in degrees, always around the local y-axis.
+// - suspensionDistance: Maximum extension distance of wheel suspension, measured in local space.
+// - suspensionExpansionLimited: Limits the expansion velocity of the Wheel Collider's suspension. If you set this property on a Rigi
+// - suspensionSpring: The parameters of wheel's suspension. The suspension attempts to reach a target position by applying
+// - wheelDampingRate: The damping rate of the wheel. Must be larger than zero.
+
+// Methods:
+// - ConfigureVehicleSubsteps: Configure vehicle sub-stepping parameters.
+// - GetGroundHit: Gets ground collision data for the wheel.
+// - GetWorldPose: Gets the world space pose of the wheel accounting for ground contact, suspension limits, steer angle
+// - ResetSprungMasses: Reset the sprung masses of the vehicle.
+// - Destroy: Removes a GameObject, component, or asset.
+// - DestroyImmediate: Destroys the specified object immediately. Use with caution and in Edit mode only.
+// - DontDestroyOnLoad: Do not destroy the target Object when loading a new Scene.
+// - FindAnyObjectByType: Retrieves any active loaded object of Type type.
+// - FindFirstObjectByType: Retrieves the first active loaded object of Type type.
+// - FindObjectsByType: Retrieves a list of all loaded objects of Type type.
+// - Instantiate: Clones the object original and returns the clone.
+// - InstantiateAsync: Captures a snapshot of the original object (that must be related to some GameObject) and returns the
+
+public class WheelCollider {
+    public var brakeTorque;
+    public var center;
+    public var forceAppPointDistance;
+    public var forwardFriction;
+    public var isGrounded;
+    public var mass;
+    public var motorTorque;
+    public var radius;
+    public var rotationSpeed;
+    public var rpm;
+    public var sidewaysFriction;
+    public var sprungMass;
+    public var steerAngle;
+    public var suspensionDistance;
+    public var suspensionExpansionLimited;
+    public void ConfigureVehicleSubsteps();
+    public void GetGroundHit();
+    public void GetWorldPose();
+    public void ResetSprungMasses();
+    public void Destroy();
+    public void DestroyImmediate();
+    public void DontDestroyOnLoad();
+    public void FindAnyObjectByType();
+    public void FindFirstObjectByType();
+    public void FindObjectsByType();
+    public void Instantiate();
+    public void InstantiateAsync();
+}

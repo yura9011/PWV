@@ -1,0 +1,1791 @@
+Card ID,Card Name,Card URL,Card Description,Labels,Members,Due Date,Attachment Count,Attachment Links,Checklist Item Total Count,Checklist Item Completed Count,Vote Count,Comment Count,Last Activity Date,List ID,List Name,Board ID,Board Name,Archived,Start Date,Due Complete,Due Reminder
+695e7e7da9db78600b6bb419,"Fase 4: La ""Santa Trinidad"" y la IA (Mes 3)",https://trello.com/c/0T353r1z/28-fase-4-la-santa-trinidad-y-la-ia-mes-3,"_Objetivo: Un tanque aguanta, un DPS pega y un enemigo reacciona._",,,,0,,0,0,0,0,2026-01-07T15:40:53.763Z,695e6258209e2ab72be6c01e,Pendiente,695e60ec35ff28d544289011,Proyecto Juego RPG,false,,false,
+695e7e978a53fd240bf3b7c8,Fase 4.1 Tablas de Amenaza (Aggro Tables):,https://trello.com/c/i5W5loKD/29-fase-41-tablas-de-amenaza-aggro-tables,"'- Cada enemigo debe tener una lista: `Dictionary<PlayerID, int> ThreatAmount`.
+- El Tanque genera x2 de amenaza. El Healer genera amenaza al curar.
+- La IA ataca siempre al que tenga más amenaza.",,,,0,,0,0,0,0,2026-01-07T15:49:02.471Z,695e6258209e2ab72be6c01e,Pendiente,695e60ec35ff28d544289011,Proyecto Juego RPG,false,,false,
+695e7e9a344fa7389d0a53d6,Fase 4.2 Estados de la IA (State Machine):,https://trello.com/c/gjk2IhvD/30-fase-42-estados-de-la-ia-state-machine,"'- Idle (Patrulla).
+- Chase (Perseguir objetivo).
+- Combat (Usar habilidades de jefe).
+- Reset (Si el jugador se aleja demasiado o muere, el enemigo vuelve y se cura).",,,,0,,0,0,0,0,2026-01-07T15:53:27.298Z,695e6258209e2ab72be6c01e,Pendiente,695e60ec35ff28d544289011,Proyecto Juego RPG,false,,false,
+695e7e9b9853d22a8890fc89,Fase 4.3 Interacción de Clases:,https://trello.com/c/0SdZld3o/31-fase-43-interacci%C3%B3n-de-clases,"'- Implementar una habilidad de cura, una de taunt (provocación) y una de daño directo para probar las sinergias.",,,,0,,0,0,0,0,2026-01-07T15:53:47.208Z,695e6258209e2ab72be6c01e,Pendiente,695e60ec35ff28d544289011,Proyecto Juego RPG,false,,false,
+695e7eab57baef1fbb3be749,Fase 5: Estructura del Mundo y Mazmorras (Mes 4),https://trello.com/c/OpL83IX1/32-fase-5-estructura-del-mundo-y-mazmorras-mes-4,"_Objetivo: Viajar del ""Bosque"" a una ""Mazmorra"" y que funcione el instanciado._",,,,0,,0,0,0,0,2026-01-07T15:41:41.887Z,695e6258209e2ab72be6c01e,Pendiente,695e60ec35ff28d544289011,Proyecto Juego RPG,false,,false,
+695e7ec27ca177278221ec3b,Fase 5.1 Gestión de Escenas:,https://trello.com/c/phLYD0sJ/33-fase-51-gesti%C3%B3n-de-escenas,"'- Carga aditiva de escenas o cambio de escena para mazmorras.
+- Puntos de Spawn definidos.",,,,0,,0,0,0,0,2026-01-07T15:54:07.625Z,695e6258209e2ab72be6c01e,Pendiente,695e60ec35ff28d544289011,Proyecto Juego RPG,false,,false,
+695e7ec7d8635c3764fc0f9d,Fase 5.2 Portales e Instancias:,https://trello.com/c/Fc6VhMSu/34-fase-52-portales-e-instancias,"'- Trigger que al entrar, mueve al grupo (Network) a la escena de la mazmorra.
+- Sistema de ""Muros invisibles"" basado en Nivel/Quest (según tu diseño).",,,,0,,0,0,0,0,2026-01-07T15:54:17.916Z,695e6258209e2ab72be6c01e,Pendiente,695e60ec35ff28d544289011,Proyecto Juego RPG,false,,false,
+695e7eccc947a29ca7f62edb,Fase 5.3 Loot y Economía Básica:,https://trello.com/c/SMGbkKAT/35-fase-53-loot-y-econom%C3%ADa-b%C3%A1sica,"'- Al morir un enemigo, generar un objeto.
+- Lógica de `BoE` (Bind on Equip).
+- UI de Inventario básica.",,,,0,,0,0,0,0,2026-01-07T15:54:30.571Z,695e6258209e2ab72be6c01e,Pendiente,695e60ec35ff28d544289011,Proyecto Juego RPG,false,,false,
+695e9d93b9af262bb213d294,Fase 6 Progresión y Especialización (Mes 5),https://trello.com/c/zwrY82WG/67-fase-6-progresi%C3%B3n-y-especializaci%C3%B3n-mes-5,"_Objetivo: Que subir de nivel tenga sentido. El jugador deja de ser genérico y empieza a definir su ""Build""._",,,,0,,0,0,0,0,2026-01-07T17:53:31.690Z,695e6258209e2ab72be6c01e,Pendiente,695e60ec35ff28d544289011,Proyecto Juego RPG,false,,false,
+695e9da881701fa66c138dad,Fase 6.1 Árbol de Talentos (Talent System),https://trello.com/c/6KrxbM4G/68-fase-61-%C3%A1rbol-de-talentos-talent-system,"'- **UI:** Ventana de Talentos (tecla `N`). Árboles visuales con conectores.
+- **Backend:** Sistema de puntos (1 punto por nivel).
+- **Efectos:**
+  - _Pasivos:_ ""Aumenta Fuerza en 5%"" (Modifica stats base).
+  - _Activos:_ Desbloquea nuevas habilidades en el `Spellbook`.
+  - _Modificadores:_ ""Tu Bola de Fuego ahora quema"" (Cambia la lógica del hechizo).",,,,0,,0,0,0,0,2026-01-07T17:53:57.247Z,695e6258209e2ab72be6c01e,Pendiente,695e60ec35ff28d544289011,Proyecto Juego RPG,false,,false,
+695e9dc3df859d0617b411d7,Fase 6.2 Sistema de Crafting (Artesanía),https://trello.com/c/HzOrTWEL/69-fase-62-sistema-de-crafting-artesan%C3%ADa,"'- **Recetas:** ScriptableObjects (`Materiales requeridos` -> `Item resultante`).
+- **Estaciones de Trabajo:** El jugador debe estar cerca de un objeto ""Yunque"" o ""Mesa de Alquimia"" para fabricar.
+- **Lógica:** Chequeo de inventario -> Consumo de items -> Generación de item nuevo + XP de Crafting.",,,,0,,0,0,0,0,2026-01-07T17:54:20.218Z,695e6258209e2ab72be6c01e,Pendiente,695e60ec35ff28d544289011,Proyecto Juego RPG,false,,false,
+695e9dd9a79a01212d407a39,Fase 6.3 Entrenadores y Libros de Hechizos,https://trello.com/c/aLzaQWkK/70-fase-63-entrenadores-y-libros-de-hechizos,"'- **Progresión de Skills:** Las habilidades no aparecen solas. Hay que comprarlas con Oro a NPCs instructores según el nivel.
+- **Spellbook UI:** Ventana para ver skills aprendidas y arrastrarlas a la barra de acción.",,,,0,,0,0,0,0,2026-01-07T17:54:39.588Z,695e6258209e2ab72be6c01e,Pendiente,695e60ec35ff28d544289011,Proyecto Juego RPG,false,,false,
+695e9df3899b9439c20f030d,Fase 7: Herramientas Sociales y de Grupo (Mes 6),https://trello.com/c/dicX7bp9/71-fase-7-herramientas-sociales-y-de-grupo-mes-6,"_Objetivo: Darle al Healer y al Tanque las herramientas para coordinarse. Sin esto, la ""Trinidad"" es injugable._",,,,0,,0,0,0,0,2026-01-07T17:55:22.829Z,695e6258209e2ab72be6c01e,Pendiente,695e60ec35ff28d544289011,Proyecto Juego RPG,false,,false,
+695e9e056f84c17be15b56db,Fase 7.1 Marcos de Unidad de Grupo (Party/Raid Frames),https://trello.com/c/ndoOzL29/72-fase-71-marcos-de-unidad-de-grupo-party-raid-frames,"'- **Vital:** El Healer necesita ver las barras de vida de sus 4 compañeros en la pantalla estáticas (no solo sobre sus cabezas en 3D).
+- **Funcionalidad:** Clic en la barra de vida = Seleccionar a ese compañero (para curarlo).
+- **Estados:** Mostrar debuffs importantes sobre la barra (ej. ""Envenenado"" para que el Healer lo limpie).",,,,0,,0,0,0,0,2026-01-07T17:55:34.024Z,695e6258209e2ab72be6c01e,Pendiente,695e60ec35ff28d544289011,Proyecto Juego RPG,false,,false,
+695e9e25f0935467496dbe19,Fase 7.2 Sistema de Chat y Comunicación,https://trello.com/c/suDkxOc2/73-fase-72-sistema-de-chat-y-comunicaci%C3%B3n,"'- **Canales:** General (Zona), Grupo (Solo party), Susurro (Privado).
+- **Comandos:** `/invitar Nombre`, `/salir`.
+- **Combat Log:** Ventana de texto que muestra: _""Orco te golpea por 50 daño (Mitigado 10)""_. Esencial para que el Tanque entienda por qué murió.",,,,0,,0,0,0,0,2026-01-07T17:56:01.784Z,695e6258209e2ab72be6c01e,Pendiente,695e60ec35ff28d544289011,Proyecto Juego RPG,false,,false,
+695e9e3ece2ec815140d30f0,Fase 7.3 Sistema de Grupo (Party Logic),https://trello.com/c/JMlWAX64/74-fase-73-sistema-de-grupo-party-logic,"'- **Líder de Grupo:** Capacidad de invitar, expulsar y marcar objetivos (poner un icono de ""Calavera"" sobre un enemigo).
+- **Compartir Misiones:** Si el líder acepta una misión, se ofrece a los miembros (si cumplen requisitos).",,,,0,,0,0,0,0,2026-01-07T17:56:19.595Z,695e6258209e2ab72be6c01e,Pendiente,695e60ec35ff28d544289011,Proyecto Juego RPG,false,,false,
+695e9e54b4a99a396487b305,"Fase 8 Creación de Contenido y ""Level Design"" (Mes 7-8)",https://trello.com/c/meuTDBuz/75-fase-8-creaci%C3%B3n-de-contenido-y-level-design-mes-7-8,_Objetivo: Dejar de usar cubos grises y construir el juego real. Esta fase es menos código y más arte/diseño._,,,,0,,0,0,0,0,2026-01-07T17:57:12.576Z,695e6258209e2ab72be6c01e,Pendiente,695e60ec35ff28d544289011,Proyecto Juego RPG,false,,false,
+695e9e8704b2d521a2b8383c,Fase 8.1 Pipeline de Biomas,https://trello.com/c/OoiiSDUM/76-fase-81-pipeline-de-biomas,"'- Construcción de las 5 regiones (Terreno, Iluminación, Decoración).
+- Configuración de Spawners de enemigos (Zonas de respawn).",,,,0,,0,0,0,0,2026-01-07T17:57:32.956Z,695e6258209e2ab72be6c01e,Pendiente,695e60ec35ff28d544289011,Proyecto Juego RPG,false,,false,
+695e9e9b5afe057416530bce,Fase 8.2 Scripting de Encuentros (Jefes),https://trello.com/c/0jE5Tdx1/77-fase-82-scripting-de-encuentros-jefes,"'- Programar la lógica específica de los 5 Jefes de Mazmorra Grande.
+- _Ejemplo Boss:_ ""Al 50% de vida, se vuelve inmune y convoca 4 esbirros que el Tanque debe agarrar"".
+- Esto requiere extender la IA de la Fase 4 para soportar fases personalizadas.",,,,0,,0,0,0,0,2026-01-07T17:58:00.155Z,695e6258209e2ab72be6c01e,Pendiente,695e60ec35ff28d544289011,Proyecto Juego RPG,false,,false,
+695e9ebc07407f71377857c6,Fase 8.3 Cinemáticas y Narrativa,https://trello.com/c/2FZao9hP/78-fase-83-cinem%C3%A1ticas-y-narrativa,"'- Diálogos con NPCs (Sistema de Quest Text).
+- Cinemática de entrada a Bosses (Timeline de Unity).",,,,0,,0,0,0,0,2026-01-07T17:58:23.249Z,695e6258209e2ab72be6c01e,Pendiente,695e60ec35ff28d544289011,Proyecto Juego RPG,false,,false,
+695e9ed5f4190c2dca9bc0f5,"Fase 9 Pulido, UX y End-Game (Mes 9)",https://trello.com/c/PxNq2IuK/79-fase-9-pulido-ux-y-end-game-mes-9,_Objetivo: Convertir el proyecto en un producto profesional listo para Steam._,,,,0,,0,0,0,0,2026-01-07T17:58:51.507Z,695e6258209e2ab72be6c01e,Pendiente,695e60ec35ff28d544289011,Proyecto Juego RPG,false,,false,
+695e9ee9b1c3b7179aa13d9c,Fase 9.1 Menús de Configuración (Settings),https://trello.com/c/WwCu0Kqu/80-fase-91-men%C3%BAs-de-configuraci%C3%B3n-settings,"'- **Gráficos:** Resolución, Calidad de Sombras, Pantalla completa/Ventana.
+- **Audio:** Sliders para Música, FX, Voces.
+- **Keybindings (Reasignación de Teclas):** **Crucial para PC.** Permitir que el jugador cambie `W` por `Z` o sus habilidades",,,,0,,0,0,0,0,2026-01-07T17:59:17.168Z,695e6258209e2ab72be6c01e,Pendiente,695e60ec35ff28d544289011,Proyecto Juego RPG,false,,false,
+695e9f0a766ffb487336ac35,Fase 9.2 Audio Implementation,https://trello.com/c/ELELspB4/81-fase-92-audio-implementation,"'- Integrar música adaptativa (Cambia al entrar en combate).
+- Sonidos de impacto, pasos, UI, ambiente.",,,,0,,0,0,0,0,2026-01-07T17:59:47.764Z,695e6258209e2ab72be6c01e,Pendiente,695e60ec35ff28d544289011,Proyecto Juego RPG,false,,false,
+695e9f2f9b661e5ebfd8af21,"Fase 9.3 El ""True Form"" (End-Game)",https://trello.com/c/HvzWcmbd/82-fase-93-el-true-form-end-game,"'- Implementar el modo ""New Game+"" o Dificultad Heroica para las mazmorras existentes (Escalado numérico de stats).",,,,0,,0,0,0,0,2026-01-07T18:00:25.154Z,695e6258209e2ab72be6c01e,Pendiente,695e60ec35ff28d544289011,Proyecto Juego RPG,false,,false,
+695e9f5d1ed137287da3c458,Fase 10: Lanzamiento y Operaciones (Mes 10+),https://trello.com/c/klt6LX1l/83-fase-10-lanzamiento-y-operaciones-mes-10,"'- Integración con Steamworks (Logros, Amigos de Steam).
+- Bug fixing masivo (Beta cerrada).
+- Optimización de red (Reducir el ancho de banda).",,,,0,,0,0,0,0,2026-01-07T18:01:08.059Z,695e6258209e2ab72be6c01e,Pendiente,695e60ec35ff28d544289011,Proyecto Juego RPG,false,,false,
+695e7ddda7b7281ad1b2d188,Fase 1.3 Sistema de Lobby (Valheim Style),https://trello.com/c/u4TePCum/19-fase-13-sistema-de-lobby-valheim-style,"'- Implementar **Unity Relay** y **Lobby** (servicios gratuitos de Unity Gaming Services para pruebas) para evitar abrir puertos en el router.
+- Crear una UI simple: ""Crear Sala"", ""Unirse con Código"".",,,,0,,0,0,0,0,2026-01-10T06:15:03.709Z,695e732c0a88a78a649c74f8,Verificacion Test,695e60ec35ff28d544289011,Proyecto Juego RPG,false,,false,
+695e7e29941d45ad22d93b48,Fase 2.1 Estructura de Datos (ScriptableObjects & Classes):,https://trello.com/c/8KkccucX/21-fase-21-estructura-de-datos-scriptableobjects-classes,"'- Definir la clase `CharacterData` (Nivel, XP, Clase, InventarioIDs).
+- Definir las `BaseStats` (Fuerza, Intelecto, Aguante) usando ScriptableObjects para configurar las clases (Guerrero/Mago).",,,,0,,0,0,0,0,2026-01-12T01:06:46.429Z,695e732c0a88a78a649c74f8,Verificacion Test,695e60ec35ff28d544289011,Proyecto Juego RPG,false,,false,
+695e7e2c05ca27141cddd3ab,Fase 2.2 Sistema de Guardado/Carga (JSON + AES),https://trello.com/c/lWPTOzmZ/22-fase-22-sistema-de-guardado-carga-json-aes,"'- Crear el `SaveManager`.
+- Serializar la clase `CharacterData` a JSON.
+- **Crucial:** Implementar la encriptación AES antes de escribir en disco para cumplir con tu requisito de seguridad anti-trampas.",,,,0,,0,0,0,0,2026-01-12T01:06:48.378Z,695e732c0a88a78a649c74f8,Verificacion Test,695e60ec35ff28d544289011,Proyecto Juego RPG,false,,false,
+695e7e326e2ac23586a2a614,Fase 2.3 Validación Server-Side (Handshake):,https://trello.com/c/p7oK8r8o/23-fase-23-validaci%C3%B3n-server-side-handshake,"'- Cuando un jugador se une, el servidor debe leer sus datos y validar que no tenga ""99999 de fuerza"" (Integrity Check).",,,,0,,0,0,0,0,2026-01-12T01:06:52.427Z,695e732c0a88a78a649c74f8,Verificacion Test,695e60ec35ff28d544289011,Proyecto Juego RPG,false,,false,
+695e7e4d354898112a4cc33a,"Fase 3: El Núcleo de Combate y ""Tab Targeting"" (Mes 2)",https://trello.com/c/9Kqdl6ox/24-fase-3-el-n%C3%BAcleo-de-combate-y-tab-targeting-mes-2,,,,,0,,0,0,0,0,2026-01-12T04:32:29.807Z,695e732c0a88a78a649c74f8,Verificacion Test,695e60ec35ff28d544289011,Proyecto Juego RPG,false,,false,
+695e7e5697f03e3c072d584a,Fase 3.1 Sistema de Selección (Targeting System):,https://trello.com/c/FAJPLA53/25-fase-31-sistema-de-selecci%C3%B3n-targeting-system,"'- Lógica de `Tab`: Raycast o SphereCast frente al jugador para seleccionar al enemigo más cercano.
+- UI de Target: Mostrar el marco de unidad del objetivo seleccionado (Vida, Nombre).",,,,0,,0,0,0,0,2026-01-12T04:32:32.118Z,695e732c0a88a78a649c74f8,Verificacion Test,695e60ec35ff28d544289011,Proyecto Juego RPG,false,,false,
+695e7e5c1774c92047f8e284,Fase 3.2 Sistema de Habilidades (Abilities Architecture):,https://trello.com/c/f5pazOvi/26-fase-32-sistema-de-habilidades-abilities-architecture,"'- Crear un sistema modular (ScriptableObjects) para habilidades.
+- Propiedades: `CastTime`, `Cooldown`, `Range`, `Damage`, `Cost`.
+- Implementar la lógica de ""Casteo"" (Barra de progreso).",,,,0,,0,0,0,0,2026-01-12T04:32:33.526Z,695e732c0a88a78a649c74f8,Verificacion Test,695e60ec35ff28d544289011,Proyecto Juego RPG,false,,false,
+695e7e5fe4114b87d6c2b58c,Fase 3.3 Networking de Combate:,https://trello.com/c/48qBVGRD/27-fase-33-networking-de-combate,"'- Uso de `ServerRPC` para pedir permiso de atacar.
+- Uso de `ClientRPC` para mostrar efectos visuales/partículas a todos.
+- Cálculo de daño **siempre en el servidor**.",,,,0,,0,0,0,0,2026-01-12T04:32:34.877Z,695e732c0a88a78a649c74f8,Verificacion Test,695e60ec35ff28d544289011,Proyecto Juego RPG,false,,false,
+695e6249073b6006ec3bf471,Fase 1: El Esqueleto de Red y Movimiento (Semana 1-2),https://trello.com/c/eh4RJxuq/8-fase-1-el-esqueleto-de-red-y-movimiento-semana-1-2,"_Objetivo: Un cubo se mueve en la pantalla de dos jugadores distintos y se ven mutuamente._
+
+Antes de hacer hechizos o inventarios, necesitamos que el multijugador funcione.",,,,0,,0,0,0,0,2026-01-09T02:09:31.113Z,695e625065b372428e6d5013,Terminado,695e60ec35ff28d544289011,Proyecto Juego RPG,false,,true,
+695e7d1d740634a8e3c15f67,Fase 1.1 Configuración de Netcode for GameObjects (NGO):,https://trello.com/c/zGNzpxkt/17-fase-11-configuraci%C3%B3n-de-netcode-for-gameobjects-ngo,"'- Instalar el paquete `com.unity.netcode.gameobjects`.
+- Crear el `NetworkManager`.
+- Configurar el transporte (recomiendo **Unity Transport**).
+- _Meta:_ Lograr conectar un ""Host"" y un ""Cliente"" en local.",,,,0,,0,0,0,0,2026-01-08T04:13:16.344Z,695e625065b372428e6d5013,Terminado,695e60ec35ff28d544289011,Proyecto Juego RPG,false,,true,
+695e7d31a0584f78791334f9,Fase 1.2 Controlador de Personaje Básico (Greybox),https://trello.com/c/xg0b9ZZP/18-fase-12-controlador-de-personaje-b%C3%A1sico-greybox,"'- Usar un modelo cápsula.
+- Implementar movimiento en tercera persona (WASD + Salto).
+- Cámara (Cinemachine es ideal aquí).
+- Sincronización de red: `NetworkTransform` para que los jugadores vean moverse a los otros.",,,,0,,0,0,0,1,2026-01-09T02:09:31.318Z,695e625065b372428e6d5013,Terminado,695e60ec35ff28d544289011,Proyecto Juego RPG,false,,true,
+695e7e15a26069dec808dfbc,Fase 2: Persistencia y Datos del Jugador (Semana 3-4),https://trello.com/c/T0JTrW8H/20-fase-2-persistencia-y-datos-del-jugador-semana-3-4,"_Objetivo: Crear un personaje, guardar sus stats en un archivo encriptado y cargarlo en otra sesión._
+
+Este es el pilar de tu diseño ""Cross-World"".",,,,0,,0,0,0,0,2026-01-11T02:12:48.196Z,695e625065b372428e6d5013,Terminado,695e60ec35ff28d544289011,Proyecto Juego RPG,false,,true,
+695e7362fac2bfd5a768e535,1. Vision General,https://trello.com/c/4A6NFlrR/9-1-vision-general,"Un Micro-MMORPG cooperativo para 1 a 10 jugadores. Combina la ""Santa Trinidad"" de WoW con la portabilidad de servidor de Valheim.",,,,0,,0,0,0,0,2026-01-07T14:56:06.392Z,695e7349582c067e3cd88315,Documento de Especificación Técnica y de Diseño v1.2,695e60ec35ff28d544289011,Proyecto Juego RPG,false,,false,
+695e73f7531e97bc30bc7dc5,2. Arquitectura Tecnica,https://trello.com/c/i42lFGUk/10-2-arquitectura-tecnica,"Modelo de Red: Híbrido Host-Play (P2P con Host) / Servidor Dedicado (Headless).
+
+Datos de Personaje: Persistencia Local (Cliente) con encriptación para evitar trampas. Permite viajar entre mundos con el mismo personaje (""Cross-World"").
+
+Seguridad: Validación server-side al conectar (Checkeo de integridad de stats del equipo).",,,,0,,0,0,0,0,2026-01-07T14:56:20.332Z,695e7349582c067e3cd88315,Documento de Especificación Técnica y de Diseño v1.2,695e60ec35ff28d544289011,Proyecto Juego RPG,false,,false,
+695e742008d716bf9df80b1c,3. Clases y Combate,https://trello.com/c/0E0OF4LV/11-3-clases-y-combate,"3\.1 Sistema
+
+Inputs: 20 habilidades activas (Barra principal 1-0, secundaria Ctrl + 1-0). Asignación libre de teclas.
+
+Sin Colisión: Los jugadores no colisionan entre sí.
+
+3\.2 Roles y Balance (La Trinidad Definida)
+
+Cada personaje elige UNA clase única (ej. Guerrero O Mago).
+
+Jerarquía de Daño (DPS): DPS Dedicado > Tanque/Sanador.
+
+Jerarquía de Aguante (Mitigación): Tanque Dedicado > DPS/Sanador.
+
+Jerarquía de Curación (Sustain): Sanador Dedicado > Tanque/DPS.
+
+Nota: Las clases híbridas tienen capacidades de autosuficiencia para contenido en solitario, pero sus números nunca igualarán al especialista en un entorno grupal.
+
+3\.3 Progresión
+
+Árbol de Talentos: Puntos por nivel para especialización.
+
+Tope de Nivel: 100.",,,,0,,0,0,0,0,2026-01-12T05:45:24.456Z,695e7349582c067e3cd88315,Documento de Especificación Técnica y de Diseño v1.2,695e60ec35ff28d544289011,Proyecto Juego RPG,false,,false,
+695e7444fb59b189b65f4d69,4. Estructura del Mundo,https://trello.com/c/btjTpIcJ/12-4-estructura-del-mundo,"5 Regiones (Biomas) instanciadas conectadas linealmente.
+
+Bosque Exuberante.
+
+Arrecife de Coral.
+
+Llanura Dorada.
+
+Cordillera Montañosa.
+
+Ciudadela Dorada.",,,,0,,0,0,0,0,2026-01-07T14:57:17.712Z,695e7349582c067e3cd88315,Documento de Especificación Técnica y de Diseño v1.2,695e60ec35ff28d544289011,Proyecto Juego RPG,false,,false,
+695e7c754c074afa278b2017,5. Mazmorras y Encuentro,https://trello.com/c/whSH8a0F/13-5-mazmorras-y-encuentro,"El contenido PvE principal está fuertemente estructurado.
+
+5\.1 Distribución del Contenido
+
+Cada una de las 5 Regiones contiene:
+
+3 Mazmorras Pequeñas (3 Jefes cada una).
+
+1 Mazmorra Grande (5 Jefes, contiene el jefe de historia de la zona).
+
+Total del juego: 15 Mazmorras Pequeñas + 5 Grandes.
+
+5\.2 Mecánicas
+
+Escalado Flex:
+
+Numérico (Vida/Daño) según número de jugadores.
+
+Mecánico (Habilidades complejas requieren más jugadores o se simplifican para solos).
+
+Wipes y Respawn:
+
+Mazmorra Pequeña: Respawn al inicio.
+
+Mazmorra Grande: Puntos de control (Checkpoints) tras ciertos jefes.
+
+Muerte en combate: Se debe esperar el final del encuentro.",,,,0,,0,0,0,0,2026-01-07T15:32:34.996Z,695e7349582c067e3cd88315,Documento de Especificación Técnica y de Diseño v1.2,695e60ec35ff28d544289011,Proyecto Juego RPG,false,,false,
+695e7caea080ff18807fef30,6. Economia y Sistemas,https://trello.com/c/R7I1lhC1/14-6-economia-y-sistemas,"6\.1 Loot y Comercio
+
+Reparto: Configurable (Personal Loot / Need or Greed).
+
+Regla de Vinculación (Binding): ""Ligado al Equipar"" (BoE).
+
+Si el ítem cae y lo guardas en la mochila: Es Comerciable.
+
+Si te equipas el ítem (lo usas): Queda Ligado al Personaje (Intransferible).
+
+Esto permite comercio libre pero evita el ""préstamo infinito"" de equipo de alto nivel.
+
+6\.2 Crafting
+
+Universal (sin clases de oficio).
+
+Aprendizaje por Instructores (NPC) + Práctica.
+
+Recetas desbloqueadas por nivel y región.
+
+6\.3 Muerte y Desgaste
+
+Mundo: Corpse run (fantasma).
+
+Desgaste: Equipo pierde durabilidad al morir. Si llega a 0, pierde stats hasta reparar con Oro.",,,,0,,0,0,0,0,2026-01-07T15:33:17.826Z,695e7349582c067e3cd88315,Documento de Especificación Técnica y de Diseño v1.2,695e60ec35ff28d544289011,Proyecto Juego RPG,false,,false,
+695e7cc4bb851e554e83413a,7. Questing,https://trello.com/c/RWOqhzUQ/15-7-questing,"Sincronización: Misión debe estar activa en el diario personal para contar.
+
+Objetivos: Completar un objetivo (ej. matar jefe) cuenta para todo el grupo simultáneamente si tienen la misión.",,,,0,,0,0,0,0,2026-01-07T15:33:40.103Z,695e7349582c067e3cd88315,Documento de Especificación Técnica y de Diseño v1.2,695e60ec35ff28d544289011,Proyecto Juego RPG,false,,false,
+695e7ccacaba7365b745fa91,8. End-game,https://trello.com/c/EFCnHMjy/16-8-end-game,"Al llegar al Nivel 100 y completar la Ciudadela:
+
+Dificultad Aumentada: Rejugar mazmorras en modo difícil para loot Tier Máximo.
+
+Mazmorra Final ""True Form"": Nueva dificultad para la última mazmorra grande con una fase oculta del Jefe Final y cinemática verdadera (True Ending).
+
+Contenido Abierto: Finalización de misiones secundarias y coleccionismo en el mundo.",,,,0,,0,0,0,0,2026-01-07T15:33:55.447Z,695e7349582c067e3cd88315,Documento de Especificación Técnica y de Diseño v1.2,695e60ec35ff28d544289011,Proyecto Juego RPG,false,,false,
+695e822f6501ebc9cb76ab49,1. Visión de la Fase,https://trello.com/c/9rHKaTlM/36-1-visi%C3%B3n-de-la-fase,"El objetivo es establecer la arquitectura de red y el ""Game Feel"" del movimiento. Al finalizar, dos o más jugadores podrán conectarse vía internet, elegir una visualización básica (Clase A/B), aparecer en el mundo en su última posición conocida y moverse con controles estilo MMORPG clásico, viéndose mutuamente con fluidez.",,,,0,,0,0,0,0,2026-01-07T15:57:03.781Z,695e821aa81519bcc6a7e2f5,Documento de Especificación Técnica - Fase 1: Core de Red y Locomoción V1.0 Motor: Unity 6 | Stack: Netcode for GameObjects (NGO),695e60ec35ff28d544289011,Proyecto Juego RPG,false,,false,
+695e823789d5e9042f00d860,2. Arquitectura de Red (Netcode),https://trello.com/c/5K4eSXd2/37-2-arquitectura-de-red-netcode,"#### 2.1 Configuración General
+
+- **Topología:** Host-Server (Un jugador es Servidor + Cliente, los demás son Clientes)y Servidor dedicado.
+- **Transporte:** Unity Transport (UTP).
+- **Servicios:** Unity Relay (para conexión remota sin puertos) + Unity Lobby (para descubrimiento de partidas).
+
+#### 2.2 Autoridad y Sincronización
+
+- **Transform Authority:** `ClientNetworkTransform`.
+  - _Decisión:_ El cliente tiene autoridad sobre su posición. Esto elimina el lag de input (movimiento instantáneo al pulsar tecla).
+- **Interpolación:** Agresiva / Alta.
+  - _Configuración:_ En el componente `NetworkTransform`, habilitar interpolación. Si hay pérdida de paquetes, el personaje remoto se deslizará suavemente hacia su nueva posición en lugar de teletransportarse, priorizando la estética sobre la precisión milimétrica.
+
+#### 2.3 Flujo de Conexión (Payload)
+
+Para cumplir con el requisito de ""Spawnear donde se desconectó"" (Opción C), utilizaremos el **Connection Payload**.
+
+1. El Cliente lee su posición guardada localmente (PlayerPrefs temporalmente).
+2. Al solicitar conexión, envía un `byte[] payload` conteniendo: `Vector3 LastPosition` y `int ClassSelectionID`.
+3. El Servidor lee el payload y mueve al jugador a esa posición inmediatamente después de instanciarlo.
+
+---",,,,0,,0,0,0,0,2026-01-08T03:17:23.979Z,695e821aa81519bcc6a7e2f5,Documento de Especificación Técnica - Fase 1: Core de Red y Locomoción V1.0 Motor: Unity 6 | Stack: Netcode for GameObjects (NGO),695e60ec35ff28d544289011,Proyecto Juego RPG,false,,false,
+695e823d23083ab5bc6a7d6c,3. Controlador de Personaje (Player Controller),https://trello.com/c/qJ3T04zX/38-3-controlador-de-personaje-player-controller,"#### 3.1 Inputs (New Input System)
+
+- **Ejes de Movimiento:** `Vector2` (W/S para Z, A/D para X).
+- **Botones:**
+  - `Space`: Salto.
+  - `Mouse Right (Hold)`: Modo Combate/Cámara bloqueada.
+  - `Mouse Left`: Selección (sin función en Fase 1, pero reservado).
+
+#### 3.2 Lógica de Movimiento ""Híbrido WoW""
+
+El script de movimiento debe comportarse diferente según el estado del mouse:
+
+- **Estado A: Mouse Libre (Clic Derecho NO presionado)**
+  - **W / S:** Mueve al personaje adelante/atrás respecto a la cámara.
+  - **A / D:** **Rota** al personaje sobre su eje Y (Giro).
+  - **Cursor:** Visible y desbloqueado (puede salir de la ventana o clicar UI).
+- **Estado B: Mouse Bloqueado (Clic Derecho MANTENIDO)**
+  - **Cursor:** Oculto y bloqueado en el centro.
+  - **Cámara:** La rotación del mouse rota al personaje.
+  - **A / D:** Se convierten en **Strafe** (paso lateral izquierda/derecha).
+  - **Q / E (Opcional):** Strafe directo.
+
+#### 3.3 Físicas y Salto
+
+- **Componente:** `CharacterController` (Unity nativo) o `Rigidbody` cinemático.
+- **Air Control:** **Falso (Bloqueado).**
+  - Al pulsar `Espacio`, se calcula el vector de velocidad actual.
+  - Mientras `isGrounded` sea falso, el jugador no puede alterar su vector de velocidad X/Z (inercia preservada).",,,,0,,0,0,0,0,2026-01-07T16:02:29.980Z,695e821aa81519bcc6a7e2f5,Documento de Especificación Técnica - Fase 1: Core de Red y Locomoción V1.0 Motor: Unity 6 | Stack: Netcode for GameObjects (NGO),695e60ec35ff28d544289011,Proyecto Juego RPG,false,,false,
+695e823fa1c5c0aa7303e3fd,4. Sistema de Cámara (Cinemachine),https://trello.com/c/a4BVibDe/39-4-sistema-de-c%C3%A1mara-cinemachine,"'- **Componente:** `CinemachineFreeLook`.
+- **Configuración:**
+  - **Rigs:** 3 Anillos (Top, Middle, Bottom) para orbitar.
+  - **Input Axis Control:**
+    - La cámara siempre escucha el movimiento del mouse.
+    - El personaje **NO** rota con la cámara a menos que se cumpla la condición de ""Clic Derecho presionado"" (ver 3.2).
+  - **Colisiones:** `CinemachineCollider` para evitar que la cámara atraviese paredes.
+
+---",,,,0,,0,0,0,0,2026-01-07T16:02:37.850Z,695e821aa81519bcc6a7e2f5,Documento de Especificación Técnica - Fase 1: Core de Red y Locomoción V1.0 Motor: Unity 6 | Stack: Netcode for GameObjects (NGO),695e60ec35ff28d544289011,Proyecto Juego RPG,false,,false,
+695e82441e060194794ca5d6,5. Flujo de Usuario (UX) - Fase 1,https://trello.com/c/lkIDwbMZ/40-5-flujo-de-usuario-ux-fase-1,"#### 5.1 Escena 1: Menú Principal & Selección (Bootstrap)
+
+No entraremos directo al gameplay.
+
+1. **UI Inicial:** Botones ""Host Game"" / ""Join Game"".
+2. **Selector de Clase (Visual):**
+   - Dos botones simples: ""Guerrero (Rojo)"" / ""Mago (Azul)"".
+   - Guarda la selección en una variable estática o `DontDestroyOnLoad`.
+3. **Lobby (Invisible):** Al crear/unir, se conecta a Unity Relay.
+
+#### 5.2 Transición
+
+- Carga de escena asíncrona hacia `GameScene`.
+
+#### 5.3 Escena 2: Mundo de Juego (GameScene)
+
+- **Spawn:** El `NetworkManager` instancia el prefab del jugador.
+- **Inicialización:**
+  - El script del jugador lee el `ClassSelectionID` y cambia el color del material (MeshRenderer) a Rojo o Azul.
+  - El script lee la posición enviada en el Payload y ubica al personaje.",,,,0,,0,0,0,0,2026-01-07T16:02:59.446Z,695e821aa81519bcc6a7e2f5,Documento de Especificación Técnica - Fase 1: Core de Red y Locomoción V1.0 Motor: Unity 6 | Stack: Netcode for GameObjects (NGO),695e60ec35ff28d544289011,Proyecto Juego RPG,false,,false,
+695e83c6d195bf3da2a39f93,6. Estructura de Scripts Sugerida (Roadmap de Código),https://trello.com/c/GbTdUn6W/41-6-estructura-de-scripts-sugerida-roadmap-de-c%C3%B3digo,"Para mantener el orden, crea estas carpetas y scripts:
+
+1. `Scripts/Network`
+   - `RelayManager.cs`: Maneja la creación y unión a Relay.
+   - `ConnectionPayload.cs`: Estructura de datos (Posición + Clase) para enviar al conectar.
+2. `Scripts/Player`
+   - `PlayerController.cs`: Lee inputs y mueve el `CharacterController`. Contiene la lógica de ""Rotar vs Strafe"".
+   - `PlayerNetworkState.cs`: Sincroniza variables visuales (Color) usando `NetworkVariable`.
+3. `Scripts/Input`
+   - `InputReader.cs`: ScriptableObject que sirve de puente entre el Input System y los scripts del jugador (Buena práctica).
+
+### ¿Cuál es el siguiente paso?
+
+Ya tienes la especificación. Ahora toca ensuciarse las manos.
+
+**Tarea Inmediata (Hoy/Mañana):**
+Configurar Unity, instalar paquetes y **lograr que un cubo se conecte a otro en una pantalla vacía**.",,,,0,,0,0,0,0,2026-01-07T16:53:07.485Z,695e821aa81519bcc6a7e2f5,Documento de Especificación Técnica - Fase 1: Core de Red y Locomoción V1.0 Motor: Unity 6 | Stack: Netcode for GameObjects (NGO),695e60ec35ff28d544289011,Proyecto Juego RPG,false,,false,
+695e843e1c19dff3db4022ed,1. Visión de la Fase,https://trello.com/c/mp9xZMgh/42-1-visi%C3%B3n-de-la-fase,"El objetivo es implementar un sistema de persistencia local seguro. Los jugadores podrán crear hasta 12 personajes, viajar entre mundos (Hosts) llevando todo su inventario y estado actual (vida/buffs). La integridad de estos datos será garantizada por una validación matemática estricta en el servidor (Host) y una clave de encriptación entregada remotamente.",,,,0,,0,0,0,0,2026-01-07T16:08:56.223Z,695e8435b9908c3545b75d9d,"Documento de Especificación Técnica - Fase 2: Persistencia, Seguridad y Datos V1.0 Enfoque: Seguridad Estricta & Cross-World Universal",695e60ec35ff28d544289011,Proyecto Juego RPG,false,,false,
+695e85265204a031fe626bd3,2. Estructura de Datos (Data Model),https://trello.com/c/oSgoKjfS/43-2-estructura-de-datos-data-model,"Para soportar 12 slots y validación estricta, separaremos los datos estáticos (Configuración) de los dinámicos (Guardado).
+
+#### 2.1 Datos Estáticos (ScriptableObjects - ""La Verdad Inmutable"")
+
+Estos datos residen en el build del juego y el Host los usa para validar.
+
+- `ClassDefinition`**:** Define los stats base y coeficientes de crecimiento.
+  - `BaseHealth`, `BaseMana`, `BaseStr`, `BaseInt`.
+  - `StrPerLevel`, `IntPerLevel`.
+- `ItemDatabase`**:** Diccionario maestro de todos los items (`ItemID` -> `ItemStats`).
+
+#### 2.2 Datos Dinámicos (Clases Serializables)
+
+Esta es la estructura que se convertirá a JSON.
+
+codeC#
+
+```
+[Serializable]
+public class SaveFile
+{
+    public string AccountID;
+    public List<CharacterData> Characters = new List<CharacterData>(12); // Los 12 Slots
+}
+
+[Serializable]
+public class CharacterData
+{
+    public string Name;
+    public int ClassID; // Referencia a ClassDefinition
+    public int Level;
+    public float CurrentXP;
+
+    // Estado Snapshot (Opción A)
+    public float CurrentHP;
+    public float CurrentMana;
+    public List<ActiveStatusEffect> StatusEffects; // Venenos, Buffs persistentes
+
+    // Inventario Universal (Opción A)
+    // Incluye llaves de misión y equipo
+    public List<InventorySlot> Inventory;
+    public List<int> EquippedItemIDs; // Referencia a ItemDatabase
+}
+```",,,,0,,0,0,0,0,2026-01-07T16:12:19.395Z,695e8435b9908c3545b75d9d,"Documento de Especificación Técnica - Fase 2: Persistencia, Seguridad y Datos V1.0 Enfoque: Seguridad Estricta & Cross-World Universal",695e60ec35ff28d544289011,Proyecto Juego RPG,false,,false,
+695e85ef5193c0b001ddd909,3. Seguridad y Encriptación (AES + Key Server),https://trello.com/c/oZ3f8boh/44-3-seguridad-y-encriptaci%C3%B3n-aes-key-server,"Has elegido la **Opción B (Server Handshake)**. Esto implica una arquitectura de ""Inicio de Sesión"".
+
+#### 3.1 Flujo de Autenticación
+
+1. **Inicio:** El jugador abre el juego.
+2. **Request:** El cliente envía una solicitud HTTPS a tu API de Autenticación (puede ser un simple Azure Function, AWS Lambda o servidor web básico).
+3. **Response:** Si es válido, la API devuelve la **Clave AES (Session Key)** en memoria RAM.
+   - _Nota:_ La clave **nunca** se escribe en el disco duro del jugador. Solo vive en la RAM mientras el juego está abierto.
+4. **Descifrado:** El `SaveManager` usa esa clave en RAM para leer/escribir el archivo `.ted` (The Ether Domes file).
+
+#### 3.2 Implementación AES
+
+- **Algoritmo:** AES-256 en modo CBC con PKCS7 Padding.
+- **Vector de Inicialización (IV):** Se genera aleatoriamente en cada guardado y se pre-pende al inicio del archivo cifrado.",,,,0,,0,0,0,0,2026-01-07T16:12:44.236Z,695e8435b9908c3545b75d9d,"Documento de Especificación Técnica - Fase 2: Persistencia, Seguridad y Datos V1.0 Enfoque: Seguridad Estricta & Cross-World Universal",695e60ec35ff28d544289011,Proyecto Juego RPG,false,,false,
+695e86131a96c694e92b62b9,4. Validación y Sanitización (Host Authority),https://trello.com/c/Pl6pt8nB/45-4-validaci%C3%B3n-y-sanitizaci%C3%B3n-host-authority,"El Host actúa como ""Aduana"". No confía en los datos que envía el Cliente.
+
+#### 4.1 Proceso de Conexión (Connection Approval)
+
+1. El Cliente envía su `CharacterData` (JSON plano) dentro del payload de conexión de Netcode.
+2. El Host recibe los datos y ejecuta el **Integrity Check**.
+
+#### 4.2 Algoritmo de Validación Estricta
+
+El Host recalcula lo que el jugador _debería_ tener:
+
+codeC#
+
+```
+// Pseudo-código de lógica en el Host
+int expectedStr = ClassDef.BaseStr + (ClassDef.StrPerLevel * clientData.Level);
+
+foreach (int itemId in clientData.EquippedItemIDs) {
+    expectedStr += ItemDatabase.Get(itemId).BonusStr;
+}
+
+if (clientData.TotalStr != expectedStr) {
+    // DETECCIÓN DE TRAMPA O CORRUPCIÓN
+    // Acción: Sanitización Forzada (Opción B)
+    clientData.TotalStr = expectedStr; // Corregimos el valor
+    MarkForSaveUpdate(clientId); // Avisamos que hay que sobrescribir el save del cliente
+}
+```
+
+#### 4.3 Sanitización
+
+Si hubo discrepancia, una vez que el jugador entra al mundo, el Host envía un `ClientRPC` inmediato: ""Actualiza tus datos locales con estos valores corregidos y guarda en disco ahora mismo"".",,,,0,,0,0,0,0,2026-01-07T16:14:00.184Z,695e8435b9908c3545b75d9d,"Documento de Especificación Técnica - Fase 2: Persistencia, Seguridad y Datos V1.0 Enfoque: Seguridad Estricta & Cross-World Universal",695e60ec35ff28d544289011,Proyecto Juego RPG,false,,false,
+695e88378b4a12880e8a64f6,5. Lógica Cross-World y Snapshot,https://trello.com/c/neUiOzeC/46-5-l%C3%B3gica-cross-world-y-snapshot,"#### 5.1 Persistencia de Estado (Snapshot)
+
+- Al desconectar, se guarda `CurrentHP`.
+- Al conectar, en el `OnNetworkSpawn`, el Host aplica ese `CurrentHP`.
+- _Caso Borde:_ Si `CurrentHP <= 0` al conectar (se desconectó muerto), el sistema debe forzar el estado de ""Fantasma"" o respawnearlo en el punto de inicio.
+
+#### 5.2 Inventario Universal
+
+- No hay filtrado de items. Si tienes la ""Llave del Rey"" del Mundo A, y vas al Mundo B, puedes abrir la puerta del Rey inmediatamente.
+- _Diseño:_ Esto fomenta el ""Carry"" (jugadores veteranos ayudando a novatos), lo cual es coherente con un cooperativo.",,,,0,,0,0,0,0,2026-01-07T16:22:23.220Z,695e8435b9908c3545b75d9d,"Documento de Especificación Técnica - Fase 2: Persistencia, Seguridad y Datos V1.0 Enfoque: Seguridad Estricta & Cross-World Universal",695e60ec35ff28d544289011,Proyecto Juego RPG,false,,false,
+695e8849658d2353654856a9,6. Roadmap de Implementación - Fase 2,https://trello.com/c/ZkfaV02u/47-6-roadmap-de-implementaci%C3%B3n-fase-2,"#### Semana 3: Sistema de Archivos y Datos
+
+1. **ScriptableObjects:** Crear `CharacterClassSO` y `ItemSO`.
+2. **Serialización:** Implementar `SaveManager` que convierta clases a JSON (usando `Newtonsoft.Json`).
+3. **UI de Selección:** Crear el menú para visualizar los 12 slots (Vacío / Crear / Jugar).
+
+#### Semana 4: Seguridad y Red
+
+1. **Encriptación:** Implementar la envoltura AES en el `SaveManager`.
+   - _Dev Mode:_ Usar una clave hardcodeada por ahora (""1234567890123456"") para probar sin servidor web.
+2. **Handshake de Red:** Modificar el `NetworkManager` para enviar el JSON del personaje al conectar.
+3. **Script de ""Aduana"" (Sanitizer):** Escribir la lógica matemática que suma stats y compara.
+
+### ¿Cómo procedemos?
+
+Ya tienes la especificación completa para la persistencia.
+
+**Sugerencia:**
+Para no bloquearte configurando un servidor web real para la clave AES ahora mismo, te recomiendo empezar trabajando en **Modo Desarrollo** (Clave local fija) y centrarte en la lógica de **Sanitización Matemática**, que es la parte más compleja del código.
+
+¿Quieres que te genere el esqueleto del script `CharacterData.cs` y el `ValidationService.cs` (la lógica matemática)?",,,,0,,0,0,0,0,2026-01-07T16:23:10.075Z,695e8435b9908c3545b75d9d,"Documento de Especificación Técnica - Fase 2: Persistencia, Seguridad y Datos V1.0 Enfoque: Seguridad Estricta & Cross-World Universal",695e60ec35ff28d544289011,Proyecto Juego RPG,false,,false,
+695e8df17c02551032b7445c,1. Visión de la Fase,https://trello.com/c/7uuCgz1b/48-1-visi%C3%B3n-de-la-fase,"El objetivo es implementar un ciclo de combate ""Tab-Targeting"" profesional. El jugador podrá seleccionar enemigos inteligentemente, encadenar habilidades con fluidez gracias al sistema de cola (Spell Queue) y experimentar mecánicas distintas según su clase (Mago estático vs. Arquero móvil), todo sincronizado vía `Netcode for GameObjects`.",,,,0,,0,0,0,0,2026-01-07T16:46:43.632Z,695e8de3f10819600ce2ef01,Documento de Especificación Técnica - Fase 3: Sistema de Combate y Habilidades V1.0 Enfoque: Responsividad (Input Buffering) y Validación de Red,695e60ec35ff28d544289011,Proyecto Juego RPG,false,,false,
+695e8e037a052636deedc1b3,2. Sistema de Selección (Targeting Intelligence),https://trello.com/c/k1WjDTAX/49-2-sistema-de-selecci%C3%B3n-targeting-intelligence,"#### 2.1 Algoritmo ""Tab"" (Cono de Visión)
+
+Al pulsar `Tab`, el sistema no elige al más cercano ciegamente, sino al **más relevante** para la cámara.
+
+- **Lógica de Filtro:**
+  1. `Physics.OverlapSphere`: Obtener todos los enemigos en radio X (ej. 40m).
+  2. **Culling de Pantalla:** Descartar enemigos que no estén dentro del frustum de la cámara (lo que el jugador no ve).
+  3. **Prioridad Central:** Calcular el producto punto (Dot Product) entre el vector `Camera.forward` y la dirección al enemigo. Cuanto más cerca del centro de la pantalla (1.0), mayor prioridad.
+  4. **Line of Sight (LoS):** Raycast rápido para asegurar que no haya paredes en medio.
+
+#### 2.2 Cambio Automático (Auto-Switch)
+
+- **Evento:** `OnEnemyDeath`.
+- **Lógica:** Si mi objetivo actual muere:
+  1. Buscar enemigos en un radio corto (ej. 10m) alrededor del cadáver.
+  2. Priorizar: Enemigo que ya me esté atacando (Threat Table > 0) > Enemigo más cercano.
+  3. Si no hay nadie, limpiar target.",,,,0,,0,0,0,0,2026-01-07T16:47:07.901Z,695e8de3f10819600ce2ef01,Documento de Especificación Técnica - Fase 3: Sistema de Combate y Habilidades V1.0 Enfoque: Responsividad (Input Buffering) y Validación de Red,695e60ec35ff28d544289011,Proyecto Juego RPG,false,,false,
+695e8e308979c1397da37dbe,3. Arquitectura de Habilidades (ScriptableObjects),https://trello.com/c/ZGIX9cvm/50-3-arquitectura-de-habilidades-scriptableobjects,"Para soportar el sistema híbrido (Mago Torreta / Arquero Móvil / Off-GCD), la estructura de datos debe ser flexible.
+
+#### 3.1 `AbilityDefinitionSO`
+
+codeC#
+
+```
+public class AbilityDefinitionSO : ScriptableObject
+{
+    [Header(""Identidad"")]
+    public int ID;
+    public string Name;
+    public Sprite Icon;
+
+    [Header(""Costes y Tiempos"")]
+    public float CastTime;       // 0 = Instantáneo
+    public float Cooldown;
+    public float Range;
+    public int ManaCost;
+
+    [Header(""Comportamiento"")]
+    public bool RequiresStationary; // TRUE: Cancela si mueves. FALSE: Puedes moverte (Arquero).
+    public bool TriggersGCD;        // TRUE: Activa el CD global. FALSE: Se puede usar siempre (Defensivo).
+    public bool IsOffensive;        // TRUE: Requiere enemigo. FALSE: Self-cast/Aliado.
+
+    [Header(""Visual"")]
+    public GameObject ProjectilePrefab; // Si es null, es daño instantáneo (Hitscan)
+    public float ProjectileSpeed;
+}
+```",,,,0,,0,0,0,0,2026-01-07T16:47:59.020Z,695e8de3f10819600ce2ef01,Documento de Especificación Técnica - Fase 3: Sistema de Combate y Habilidades V1.0 Enfoque: Responsividad (Input Buffering) y Validación de Red,695e60ec35ff28d544289011,Proyecto Juego RPG,false,,false,
+695e8e4da8d5f041455aeb0c,"4. Lógica de Combate y ""Game Feel""",https://trello.com/c/xIzhOPCR/51-4-l%C3%B3gica-de-combate-y-game-feel,"#### 4.1 Máquina de Estados del Jugador (CombatState)
+
+- **Idle:** Listo para actuar.
+- **Casting:** Barra de progreso llenándose.
+  - Si `RequiresStationary == true` y `Input.Move != 0` -> **Interrumpir**.
+- **GlobalCooldown (GCD):** Estado breve (ej. 1.5s) donde no se permiten habilidades con `TriggersGCD = true`.
+- **Locked:** Stunneado/Silenciado.
+
+#### 4.2 Sistema de Cola (Spell Queue / Input Buffering)
+
+Para mitigar el lag y permitir combos rápidos.
+
+- **Ventana de Buffer:** 400ms (Configurable).
+- **Funcionamiento:** Si el jugador presiona una tecla mientras está en `Casting` o `GCD`, y falta menos de 400ms para terminar, la acción se guarda en `NextAbility`.
+- **Ejecución:** En el frame exacto en que termina el estado actual, si `NextAbility != null`, se dispara automáticamente el RPC al servidor.",,,,0,,0,0,0,0,2026-01-07T16:50:57.564Z,695e8de3f10819600ce2ef01,Documento de Especificación Técnica - Fase 3: Sistema de Combate y Habilidades V1.0 Enfoque: Responsividad (Input Buffering) y Validación de Red,695e60ec35ff28d544289011,Proyecto Juego RPG,false,,false,
+695e8efc9c611a9e6af48cc7,5. Flujo de Red (Networking),https://trello.com/c/uVE7Td7l/52-5-flujo-de-red-networking,"El combate debe ser ""Server Authoritative"" para el daño, pero ""Client Responsive"" para la UI.
+
+#### 5.1 Secuencia de Disparo (Casting Flow)
+
+1. **Cliente (Input):** Jugador pulsa '1'. Cliente chequea Cooldown local y Maná (Predicción).
+2. **Cliente -> Servidor (**`RequestCastServerRPC`**):** Envía `AbilityID` y `TargetNetworkObjectID`.
+3. **Servidor (Validación):**
+   - ¿Tiene maná?
+   - ¿Está el target vivo y en rango?
+   - ¿Pasó el Cooldown?
+   - _Si falla:_ Retorna `ClientRPC` de error (""Fuera de rango"").
+4. **Servidor (Ejecución):**
+   - Consume Maná.
+   - Si `CastTime > 0`: Inicia corrutina de espera.
+   - Si el jugador se mueve (y la skill es estática): Cancela corrutina.
+5. **Servidor -> Clientes (**`BroadcastVisualsClientRPC`**):**
+   - Todos los clientes reproducen la animación de ataque y muestran la barra de cast (si aplica).
+
+#### 5.2 Impacto y Daño
+
+1. **Finalización:** Al terminar el tiempo de cast.
+2. **Proyectil (Visual Homing):**
+   - El servidor instancia un objeto lógico (o calcula tiempo de vuelo).
+   - Envía RPC para que los clientes spawneen la bola de fuego visual que persigue al target.
+3. **Cálculo de Daño:**
+   - El Servidor calcula: `(BaseDmg * Stats) - Mitigación`.
+   - Aplica `Target.ReceiveDamage()`.
+   - Actualiza `NetworkVariable<Health>`.",,,,0,,0,0,0,0,2026-01-07T16:51:27.492Z,695e8de3f10819600ce2ef01,Documento de Especificación Técnica - Fase 3: Sistema de Combate y Habilidades V1.0 Enfoque: Responsividad (Input Buffering) y Validación de Red,695e60ec35ff28d544289011,Proyecto Juego RPG,false,,false,
+695e8f18d1fa9ea16375ccd1,6. Roadmap de Implementación - Fase 3,https://trello.com/c/xSFsLQty/53-6-roadmap-de-implementaci%C3%B3n-fase-3,"#### Semana 5: Cimientos y Selección
+
+1. **Targeting System:** Implementar la lógica de Tab con cono de visión y UI de Target Frame (Vida/Nombre).
+2. **Ability Data:** Crear los ScriptableObjects y configurar 3 habilidades de prueba:
+   - _Bola de Fuego_ (Mago: Cast 2s, Estático, Daño alto).
+   - _Disparo Rápido_ (Arquero: Instant, Móvil, Daño medio).
+   - _Escudo de Hielo_ (Defensivo: Instant, Off-GCD, Self-buff).
+
+#### Semana 6: Lógica de Casteo Local
+
+1. **Combat Controller:** Implementar la máquina de estados (Casting, GCD).
+2. **Input Buffering:** Crear el sistema de cola de 400ms.
+3. **Interrupción:** Conectar el `MovementScript` para que avise al `CombatScript` si el jugador camina.
+
+#### Semana 7: Networking y Daño
+
+1. **RPCs:** Conectar la petición del cliente con la validación del servidor.
+2. **Health System:** Sincronizar la vida de los enemigos y muerte.
+3. **Visuales:** Instanciación de proyectiles que siguen al objetivo (`Vector3.MoveTowards`).
+
+#### Semana 8: Polish
+
+1. **Auto-Switch:** Implementar lógica al morir un enemigo.
+2. **Feedback:** Números de daño flotantes (Floating Combat Text).
+
+### ¿Cómo procedemos?
+
+Esta fase es densa en código.
+
+**Sugerencia:**
+Empieza por lo que el jugador ""ve"". Antes de programar el servidor, asegúrate de que **pulsar TAB seleccione correctamente al enemigo que estás mirando**.",,,,0,,0,0,0,0,2026-01-07T16:51:55.430Z,695e8de3f10819600ce2ef01,Documento de Especificación Técnica - Fase 3: Sistema de Combate y Habilidades V1.0 Enfoque: Responsividad (Input Buffering) y Validación de Red,695e60ec35ff28d544289011,Proyecto Juego RPG,false,,false,
+695e93e91735bfa9b73c9eea,1. Visión de la Fase,https://trello.com/c/ReAuMuOZ/54-1-visi%C3%B3n-de-la-fase,"El objetivo es transformar los NPCs en enemigos reactivos que respeten la ""Santa Trinidad"". El Tanque podrá mantener la atención del enemigo mediante multiplicadores de amenaza y provocaciones forzadas. Los DPS deberán controlar su daño para no superar el umbral del 110%/130%. El Sanador tendrá que gestionar su maná y posición, sabiendo que curar genera amenaza dividida entre todos los enemigos activos.",,,,0,,0,0,0,0,2026-01-07T17:12:20.935Z,695e93e3b9269cb5ae2cf32e,"Documento de Especificación Técnica - Fase 4: IA, Amenaza y la Santa Trinidad V1.0 Enfoque: Estabilidad de Aggro y Roles Definidos",695e60ec35ff28d544289011,Proyecto Juego RPG,false,,false,
+695e93ff74b614cda81804ad,2. Arquitectura de IA (State Machine),https://trello.com/c/Vdsl1nAL/55-2-arquitectura-de-ia-state-machine,"a IA vivirá exclusivamente en el **Servidor** (Server Authoritative). Los clientes solo reciben posición, rotación y animaciones.
+
+#### 2.1 Máquina de Estados Finita (FSM)
+
+- **Idle / Patrol:**
+  - El enemigo se mueve entre `Waypoints` usando `NavMeshAgent`.
+  - Tiene un `DetectionRadius` (ej. 15m). Si un jugador entra -> Transición a **Chase**.
+- **Chase (Persecución):**
+  - Se mueve hacia el jugador con mayor amenaza.
+  - Si llega a rango de ataque (ej. 2m Melee) -> Transición a **Combat**.
+  - Si el objetivo se aleja más allá del `LeashRange` (ej. 60m del spawn) -> Transición a **Reset**.
+- **Combat (Combate):**
+  - El enemigo está estático (o moviéndose lentamente) y rota para mirar al objetivo.
+  - Ejecuta auto-ataques cada X segundos.
+  - Chequea la Tabla de Amenaza cada 0.5s para ver si debe cambiar de objetivo.
+- **Reset (Evade Mode - Decisión C1):**
+  - **Flags:** `IsInvulnerable = true`, `IsActive = false`.
+  - **Acción:** `NavMeshAgent.speed` se duplica. Regresa al punto de origen.
+  - **Llegada:** Al tocar el spawn, `CurrentHP = MaxHP` (Instántaneo), limpia la Tabla de Amenaza y vuelve a **Idle**.
+
+---",,,,0,,0,0,0,0,2026-01-07T17:12:46.408Z,695e93e3b9269cb5ae2cf32e,"Documento de Especificación Técnica - Fase 4: IA, Amenaza y la Santa Trinidad V1.0 Enfoque: Estabilidad de Aggro y Roles Definidos",695e60ec35ff28d544289011,Proyecto Juego RPG,false,,false,
+695e94200e167e7bf4167f5c,3. Sistema de Amenaza (Threat System),https://trello.com/c/SpJQ9opd/56-3-sistema-de-amenaza-threat-system,"#### 3.1 Estructura de Datos
+
+Cada enemigo tiene un componente `AggroController`:
+
+codeC#
+
+```
+// Key: ClientID del Jugador, Value: Puntos de Amenaza
+private Dictionary<ulong, int> threatTable = new Dictionary<ulong, int>();
+private ulong currentTargetID;
+```
+
+#### 3.2 Lógica de ""Robar Aggro"" (Decisión A1)
+
+Para evitar que el jefe cambie de objetivo erráticamente (""Ping-Pong""), se aplica histeresis:
+
+- **Caso Melee:** Un jugador a < 5m debe superar la amenaza del objetivo actual en un **110%** (Factor 1.1).
+- **Caso Ranged:** Un jugador a > 5m debe superar la amenaza actual en un **130%** (Factor 1.3).
+
+codeC#
+
+```
+// Ejemplo de chequeo
+if (newPlayerThreat > currentTargetThreat * 1.1f) {
+    SwitchTarget(newPlayerID);
+}
+```
+
+#### 3.3 Generación de Amenaza (Decisión A2 y B1)
+
+- **Daño:** 1 daño = 1 amenaza (Base).
+- **Modificadores de Tanque:**
+  - ""Actitud Defensiva"": Multiplicador x5 (1 daño = 5 amenaza).
+- **Curación (Split Threat):**
+  - Si el Healer cura 100 HP y hay 4 enemigos en combate:
+  - Amenaza por enemigo = `100 / 4 = 25`.
+  - _Nota:_ Esto evita que el Healer muera instantáneamente en pulls grandes (AOE).
+- **Taunt (Hard Fixate):**
+  - Aplica estado `Fixated` por 3 segundos (La IA ignora la tabla y ataca al Tanque).
+  - Iguala la amenaza del Tanque a la del líder actual + 10%",,,,0,,0,0,0,0,2026-01-07T17:13:16.255Z,695e93e3b9269cb5ae2cf32e,"Documento de Especificación Técnica - Fase 4: IA, Amenaza y la Santa Trinidad V1.0 Enfoque: Estabilidad de Aggro y Roles Definidos",695e60ec35ff28d544289011,Proyecto Juego RPG,false,,false,
+695e944302bb4874ec265bd1,4. Habilidades de Clase (Prototipo Trinidad),https://trello.com/c/icL31Euz/57-4-habilidades-de-clase-prototipo-trinidad,"Para probar esto, necesitamos 3 habilidades arquetípicas:
+
+#### 4.1 Guerrero (Tanque)
+
+- **Habilidad:** _Golpe de Escudo_.
+- **Efecto:** Daño bajo, pero Generación de Amenaza Alta (Bonus +500 threat plano).
+- **Taunt:** _Grito Desafiante_ (Lógica descrita en 3.3).
+
+#### 4.2 Mago (DPS)
+
+- **Habilidad:** _Bola de Fuego_.
+- **Efecto:** Daño alto. Generación de amenaza 1:1.
+- **Riesgo:** Si critea mucho al inicio, puede superar el 130% y morir.
+
+#### 4.3 Clérigo (Healer) - (Decisión D1)
+
+- **Habilidad:** _Destello de Luz_.
+- **Targeting:**
+  - Si objetivo es Aliado -> Cura al Aliado.
+  - Si objetivo es Enemigo -> Error / Nada (Opcional).
+  - Si **no hay objetivo** o objetivo inválido -> **Auto-Self Cast** (Se cura a sí mismo).",,,,0,,0,0,0,0,2026-01-07T17:13:52.100Z,695e93e3b9269cb5ae2cf32e,"Documento de Especificación Técnica - Fase 4: IA, Amenaza y la Santa Trinidad V1.0 Enfoque: Estabilidad de Aggro y Roles Definidos",695e60ec35ff28d544289011,Proyecto Juego RPG,false,,false,
+695e9463de69e33409c9fddf,5. Sincronización de Red (Networking),https://trello.com/c/BuXWcwoM/58-5-sincronizaci%C3%B3n-de-red-networking,"#### 5.1 ¿Qué viaja por la red?
+
+- **Posición/Rotación:** `NetworkTransform` en el enemigo.
+- **Animaciones:** `NetworkAnimator` (Attack, Run, Idle, Death).
+- **Target Actual:** `NetworkVariable<ulong> CurrentTargetID`.
+  - _Uso:_ Los clientes necesitan saber a quién mira el jefe para dibujar una línea roja o poner un icono de ""Ojo"" sobre la cabeza del jugador perseguido.
+
+#### 5.2 ¿Qué NO viaja?
+
+- **Tabla de Amenaza Completa:** Es demasiada información. Solo el servidor sabe los números exactos.
+- _(Opcional Future Feature):_ Se puede enviar el % de amenaza del jugador local para mostrar un ""Omen"" (Medidor de Aggro) personal.",,,,0,,0,0,0,0,2026-01-07T17:14:13.741Z,695e93e3b9269cb5ae2cf32e,"Documento de Especificación Técnica - Fase 4: IA, Amenaza y la Santa Trinidad V1.0 Enfoque: Estabilidad de Aggro y Roles Definidos",695e60ec35ff28d544289011,Proyecto Juego RPG,false,,false,
+695e9485e3a61aa9c4e20fa1,6. Roadmap de Implementación - Fase 4,https://trello.com/c/GkZwHQ7T/59-6-roadmap-de-implementaci%C3%B3n-fase-4,"#### Semana 9: Cerebro Básico (NavMesh)
+
+1. **Setup:** Configurar `NavMeshSurface` en el terreno.
+2. **Script IA:** Crear `EnemyAI.cs`. Implementar detección de rango y movimiento hacia el jugador más cercano (sin aggro complejo aún).
+3. **Reset:** Implementar la lógica de ""volver a casa"" si se aleja mucho.
+
+#### Semana 10: El Controlador de Aggro
+
+1. **Math:** Programar el `AggroController.cs` (Diccionario, Multiplicadores, Regla del 110%).
+2. **Integración:** Conectar el sistema de Daño (Fase 3) para que al recibir daño, se sume amenaza.
+3. **Taunt:** Programar el efecto de `Fixate` que sobreescribe temporalmente la IA.
+
+#### Semana 11: Pruebas de Estrés (La Trinidad)
+
+1. **Test 1 (Ping-Pong):** Dos jugadores DPS pegando alternadamente para ver si el jefe se marea o respeta el 130%.
+2. **Test 2 (Tanking):** Un Tanque haciendo poco daño pero mucha amenaza vs un DPS haciendo mucho daño.
+3. **Test 3 (Healing):** Un Healer curando masivamente para ver si los enemigos se le tiran encima (debería ser difícil gracias al Split Threat).
+
+---
+
+### ¿Cómo procedemos?
+
+Con la Fase 4 definida, tenemos el ciclo completo de un RPG.
+
+**Sugerencia:**
+La IA en multijugador es tramposa. Si no tienes cuidado, el enemigo se verá ""deslizando"" o lagueado.",,,,0,,0,0,0,0,2026-01-07T17:15:15.487Z,695e93e3b9269cb5ae2cf32e,"Documento de Especificación Técnica - Fase 4: IA, Amenaza y la Santa Trinidad V1.0 Enfoque: Estabilidad de Aggro y Roles Definidos",695e60ec35ff28d544289011,Proyecto Juego RPG,false,,false,
+695e9c444d167569f23c88e0,1. Visión de la Fase,https://trello.com/c/Kt4HeZ7e/60-1-visi%C3%B3n-de-la-fase,"El objetivo es conectar los sistemas de combate y movimiento en un flujo de juego coherente. Implementaremos un sistema de gestión de escenas avanzado que permite al Host simular múltiples biomas simultáneamente (""Mundo Dividido""). Se establecerá la economía de objetos mediante reglas de Loot configurables (Personal vs Need/Greed) y un sistema de comercio seguro entre jugadores.",,,,0,,0,0,0,0,2026-01-07T17:47:53.402Z,695e9c3de8f9dc61ac3288fb,"Documento de Especificación Técnica - Fase 5: Estructura del Mundo, Loot y Economía V1.0 Multiverso Local (Escenas Aditivas) y Gestión de Inventario",695e60ec35ff28d544289011,Proyecto Juego RPG,false,,false,
+695e9c50d4870c346067843e,"2. Gestión de Escenas (Arquitectura ""Mundo Dividido"")",https://trello.com/c/xu5SuUbv/61-2-gesti%C3%B3n-de-escenas-arquitectura-mundo-dividido,"Dado que el Host procesa todo, pero los clientes pueden estar en lugares distintos, abandonamos la carga de escena simple (`LoadSceneMode.Single`) por la carga aditiva.
+
+#### 2.1 NetworkSceneManager
+
+- **Host Logic:**
+  - El Host mantiene cargada la escena ""Mundo Abierto"" siempre.
+  - Cuando un jugador entra a una Mazmorra, el Host carga esa escena de forma **Aditiva** (`LoadSceneMode.Additive`).
+  - _Optimización:_ El Host desactiva Cámaras, Luces y MeshRenderers de la escena de la Mazmorra en su propia pantalla (si él no está ahí), pero mantiene activas las Físicas y la IA para que el Cliente remoto pueda jugar.
+- **Client Logic:**
+  - El Cliente recibe la instrucción de cargar _solo_ la escena donde está su personaje.
+  - Descarga las otras escenas para ahorrar memoria.
+
+#### 2.2 Portales y Transiciones
+
+- **Trigger de Entrada:**
+  - Verifica requisitos (Nivel/Quest). Si falla -> Empuje físico hacia atrás + Mensaje UI (Opción E1).
+  - Si cumple -> Envía `RequestChangeSceneServerRPC`.
+- **Puntos de Spawn:**
+  - Cada escena tiene una lista de `NetworkObject` llamados `SpawnPoint` (ID 0: Inicio, ID 1: Entrada Boss, etc.).",,,,0,,0,0,0,0,2026-01-07T17:48:17.538Z,695e9c3de8f9dc61ac3288fb,"Documento de Especificación Técnica - Fase 5: Estructura del Mundo, Loot y Economía V1.0 Multiverso Local (Escenas Aditivas) y Gestión de Inventario",695e60ec35ff28d544289011,Proyecto Juego RPG,false,,false,
+695e9c69227f2af8c4ce9dc8,3. Persistencia de Instancia (Dungeon State),https://trello.com/c/XBl1yi7p/62-3-persistencia-de-instancia-dungeon-state,"ara cumplir con la Opción D1 (Persistencia Temporal), el servidor no puede olvidar el estado de la mazmorra al vaciarse.
+
+#### 3.1 DungeonStateManager
+
+Diccionario en el Servidor: `Dictionary<string, InstanceState>` (Key: NombreMazmorra).
+
+codeC#
+
+```
+public class InstanceState
+{
+    public bool[] BossesDead; // [true, false, false]
+    public List<string> OpenedChests;
+    public float LastPlayerExitTime; // Para el Timer de Reset
+}
+```
+
+#### 3.2 Ciclo de Vida
+
+1. **Entrada:** Al entrar, el Host chequea si existe un `InstanceState` activo. Si existe, sincroniza el estado (borra los bosses ya muertos).
+2. **Salida:** Cuando el último jugador sale, se marca `LastPlayerExitTime`.
+3. **Soft Reset:** Si alguien vuelve a entrar antes de 30 minutos, se retoma.
+4. **Hard Reset:** Si pasan > 30 minutos sin jugadores, se borra el `InstanceState` y la mazmorra se reinicia.",,,,0,,0,0,0,0,2026-01-07T17:48:59.496Z,695e9c3de8f9dc61ac3288fb,"Documento de Especificación Técnica - Fase 5: Estructura del Mundo, Loot y Economía V1.0 Multiverso Local (Escenas Aditivas) y Gestión de Inventario",695e60ec35ff28d544289011,Proyecto Juego RPG,false,,false,
+695e9c935fa48080c4726947,4. Sistema de Loot y Economía,https://trello.com/c/BTXsafVS/63-4-sistema-de-loot-y-econom%C3%ADa,"#### 4.1 Definición de Items (BoE)
+
+En el `ItemDataSO`, añadimos:
+
+- `IsSoulbound`: Bool.
+- `BindType`: Enum (None, OnPickup, OnEquip).
+- _Lógica:_ Al equipar un item con `BindType.OnEquip`, el sistema marca la instancia única del item (GUID) como `BoundToPlayerID`. Un item vinculado no puede entrar en la ventana de comercio.
+
+#### 4.2 Distribución de Botín (Híbrido)
+
+El `LootManager` gestiona el evento `OnDeath` de un Jefe.
+
+- **Modo A: Personal Loot (Entrega Directa)**
+  - El servidor calcula RNG para cada jugador por separado.
+  - Si hay éxito, envía `GiveItemClientRPC` directo al inventario.
+  - _Visual:_ UI Flotante (""Has recibido: Casco de Hierro"").
+- **Modo B: Need / Greed (Interacción)**
+  - El Jefe se convierte en un contenedor ""Lootable"".
+  - Jugador interactúa (F). Se abre UI de Grupo.
+  - **Fase de Roll:** Botones (Necesidad [Dados] / Codicia [Moneda] / Pasar).
+  - **Resolución:** El servidor espera X segundos o a que todos voten. El ganador recibe el item automáticamente.",,,,0,,0,0,0,0,2026-01-07T17:49:19.357Z,695e9c3de8f9dc61ac3288fb,"Documento de Especificación Técnica - Fase 5: Estructura del Mundo, Loot y Economía V1.0 Multiverso Local (Escenas Aditivas) y Gestión de Inventario",695e60ec35ff28d544289011,Proyecto Juego RPG,false,,false,
+695e9ca9f93b3b8f935eabf6,5. Comercio Seguro (Trading System),https://trello.com/c/97oueGBV/64-5-comercio-seguro-trading-system,"Implementación de la Opción C1 (Comercio Seguro de Ventana Doble) para evitar estafas.
+
+#### 5.1 Máquina de Estados de Comercio
+
+1. **Request:** Jugador A solicita comercio a Jugador B. B acepta.
+2. **Session Open:** Se abre UI. El movimiento se bloquea.
+3. **Offer:** Ambos arrastran items a su ""Grid de Oferta"".
+   - _Validación:_ No se pueden poner items Vinculados (Soulbound).
+4. **Lock (Bloqueo):** Ambos pulsan ""Bloquear Oferta"".
+   - La UI se pone gris. Ya no se pueden modificar items.
+5. **Confirm (Confirmación Final):** Ambos pulsan ""Confirmar Intercambio"".
+6. **Swap (Transacción Atómica):**
+   - El Servidor ejecuta el intercambio de inventarios en el mismo frame.
+   - Si uno falla (ej. inventario lleno), se cancela todo.",,,,0,,0,0,0,0,2026-01-07T17:49:44.059Z,695e9c3de8f9dc61ac3288fb,"Documento de Especificación Técnica - Fase 5: Estructura del Mundo, Loot y Economía V1.0 Multiverso Local (Escenas Aditivas) y Gestión de Inventario",695e60ec35ff28d544289011,Proyecto Juego RPG,false,,false,
+695e9cdad79343e411bc5dcc,6. UI de Inventario y Contenedores,https://trello.com/c/3IdNsU4K/65-6-ui-de-inventario-y-contenedores,"'- **Grid System:** Inventario basado en slots.
+- **Drag & Drop:** Mover items, equipar, tirar al suelo (con confirmación de destrucción o modelo 3D según performance).
+- **Tooltips:** Al pasar el mouse, comparar stats con el item equipado (Shift para comparar).",,,,0,,0,0,0,0,2026-01-07T17:50:23.219Z,695e9c3de8f9dc61ac3288fb,"Documento de Especificación Técnica - Fase 5: Estructura del Mundo, Loot y Economía V1.0 Multiverso Local (Escenas Aditivas) y Gestión de Inventario",695e60ec35ff28d544289011,Proyecto Juego RPG,false,,false,
+695e9cf12b6398c63b918282,7. Roadmap de Implementación - Fase 5,https://trello.com/c/F9BxdIQg/66-7-roadmap-de-implementaci%C3%B3n-fase-5,"#### Semana 13: El Multiverso (Escenas)
+
+1. **Scene Management:** Implementar la carga aditiva y el `SceneVisibilityManager` para el Host (ocultar lo que no ve).
+2. **Portales:** Crear el prefab `PortalTrigger` con lógica de requisitos (Level Check).
+3. **Persistencia:** Programar el `DungeonStateManager` para recordar bosses muertos.
+
+#### Semana 14: Inventario y Loot
+
+1. **UI Base:** Crear el Canvas de Inventario y el sistema de Slots.
+2. **Loot Tables:** ScriptableObjects que definen qué tira cada mob (`DropRate`).
+3. **Need/Greed UI:** La ventana emergente de votación de dados.
+
+#### Semana 15: Comercio y Vinculación
+
+1. **Binding:** Lógica de `OnEquip` que cambia el estado del item a ""Soulbound"".
+2. **Trade System:** Script de sesión de comercio (Handshake -> Lock -> Swap).
+3. **Polish:** Tooltips y sonidos de ""Moneda"" al lootear.
+
+---
+
+### CONCLUSIÓN DEL ROADMAP TÉCNICO
+
+¡Felicidades! Hemos completado la especificación de las 5 Fases críticas.
+
+1. **Fase 1:** Red y Movimiento (Cimientos).
+2. **Fase 2:** Datos y Persistencia (Seguridad).
+3. **Fase 3:** Combate y Habilidades (Core Loop).
+4. **Fase 4:** IA y Trinidad (Roles).
+5. **Fase 5:** Mundo y Economía (Estructura).",,,,0,,0,0,0,0,2026-01-07T17:50:58.200Z,695e9c3de8f9dc61ac3288fb,"Documento de Especificación Técnica - Fase 5: Estructura del Mundo, Loot y Economía V1.0 Multiverso Local (Escenas Aditivas) y Gestión de Inventario",695e60ec35ff28d544289011,Proyecto Juego RPG,false,,false,
+695ea4fb63c6e1db40439dd9,1. Visión de la Fase,https://trello.com/c/0r0qPIs4/84-1-visi%C3%B3n-de-la-fase,"El objetivo es implementar los sistemas que permiten al jugador definir su identidad mecánica. Se desarrollará un sistema de Talentos dinámico basado en modificadores (Decoradores), un sistema de adquisición de habilidades simplificado (Escalado automático) y un sistema de Crafting determinista que exige gestión de inventario y ubicación física.",,,,0,,0,0,0,0,2026-01-07T18:25:09.897Z,695ea4f565821fd21e69c04d,"Documento de Especificación Técnica - Fase 6: Progresión, Talentos y Crafting V1.0 Personalización Flexible y Escalabilidad",695e60ec35ff28d544289011,Proyecto Juego RPG,false,,false,
+695ea50ec70d4baccd3a50a1,2. Sistema de Talentos (Architecture),https://trello.com/c/lfca1aFw/85-2-sistema-de-talentos-architecture,"#### 2.1 Estructura de Datos (Grafos)
+
+Los árboles no son lineales. Usaremos un sistema de Nodos.
+
+- `TalentNodeSO` **(ScriptableObject):**
+  - `ID`, `Icon`, `Description`.
+  - `MaxPoints` (ej. 3/3).
+  - `Prerequisites`: Lista de `TalentNodeSO` padres (debe tener X puntos en el padre para desbloquear este).
+  - `Cost`: 1 punto por nivel.
+
+#### 2.2 Motor de Modificadores (Decorator Pattern)
+
+Dado que elegiste la **Opción B (Decorador)**, no crearemos copias de habilidades. Implementaremos un ""Pipeline de Cálculo"".
+
+- **Tipos de Modificadores:**
+  1. **Stat Modifier:** `StatType.Strength`, `Value: +5`, `Mode: Percentage`.
+  2. **Ability Modifier:** `TargetAbilityID: Fireball`, `Effect: AddBurn`.
+- **Flujo de Cálculo (Server-Side):**
+  Cuando el jugador lanza una habilidad, el servidor ejecuta:
+  codeC#
+  ```
+  // 1. Obtener datos base
+  float damage = ability.BaseDamage;
+
+  // 2. Aplicar modificadores de Talentos activos
+  foreach (var talent in player.ActiveTalents) {
+      if (talent.Modifies(ability.ID)) {
+           damage = talent.ApplyModification(damage);
+           // O inyectar efecto secundario (Burn)
+           if (talent.HasSideEffect) ability.AddSideEffect(talent.SideEffect);
+      }
+  }
+  ```
+
+#### 2.3 Respec (Libertad Total)
+
+- **UI:** Botón ""Reiniciar Talentos"" en la ventana `N`.
+- **Lógica:**
+  - Verifica que el jugador no esté en combate.
+  - Limpia la lista `ActiveTalents`.
+  - Devuelve `PointsSpent` a `AvailablePoints`.
+  - Recalcula todos los Stats inmediatamente.",,,,0,,0,0,0,0,2026-01-07T18:25:30.577Z,695ea4f565821fd21e69c04d,"Documento de Especificación Técnica - Fase 6: Progresión, Talentos y Crafting V1.0 Personalización Flexible y Escalabilidad",695e60ec35ff28d544289011,Proyecto Juego RPG,false,,false,
+695ea52735ccab8e98f2a080,3. Entrenadores y Spellbook,https://trello.com/c/CrBx7ucp/86-3-entrenadores-y-spellbook,"#### 3.1 Adquisición de Habilidades
+
+- **Trainer NPC:** Tiene una lista de `AbilityDefinitionSO`.
+- **Filtro:** Muestra solo habilidades de la clase del jugador.
+- **Estado:**
+  - _Gris:_ Nivel insuficiente.
+  - _Verde:_ Disponible para comprar (Cuesta Oro).
+  - _Oculto/Check:_ Ya aprendida.
+
+#### 3.2 Escalado Automático (Math)
+
+No existen los ""Rangos"". La fórmula de daño es dinámica:
+
+- `TotalDamage = BaseDamage + (PlayerLevel * LevelScaling) + (PlayerStat * StatCoefficient)`.
+- _Ventaja:_ Esto mantiene las habilidades relevantes desde el nivel 1 al 100 sin necesidad de actualizar la base de datos.
+
+#### 3.3 Spellbook & Hotbar
+
+- `LearnedAbilities`**:** Lista de IDs en el `PlayerData`.
+- **Drag & Drop:** El jugador arrastra el icono del libro a la barra.
+- **Hotbar System:** Guarda la referencia `(Slot 1 -> AbilityID 5)` en los datos del jugador.",,,,0,,0,0,0,0,2026-01-07T20:17:50.972Z,695ea4f565821fd21e69c04d,"Documento de Especificación Técnica - Fase 6: Progresión, Talentos y Crafting V1.0 Personalización Flexible y Escalabilidad",695e60ec35ff28d544289011,Proyecto Juego RPG,false,,false,
+695ea53a7e33aed2011268ff,4. Sistema de Crafting (Artesanía),https://trello.com/c/2EmXSEGQ/87-4-sistema-de-crafting-artesan%C3%ADa,"#### 4.1 Definición de Recetas (`RecipeSO`)
+
+- `ResultItem`: ItemSO (ej. Espada de Hierro).
+- `Amount`: int (ej. 1).
+- `Ingredients`: List `<ItemSO, Quantity>` (ej. 2 Hierro, 1 Madera).
+- `WorkstationType`: Enum (Yunque, Alquimia, Hoguera).
+- `LevelRequired`: int (Nivel del Personaje, Opción C2).
+- `CraftTime`: float (ej. 2.0s).
+
+#### 4.2 Lógica de Fabricación (Server Authoritative)
+
+1. **Validación de Ubicación:** El servidor verifica `Vector3.Distance(Player, Workstation) < 3.0f`.
+2. **Validación de Inventario (Opción D1):**
+   - El servidor busca en `PlayerInventory` si tiene los materiales requeridos.
+3. **Proceso:**
+   - Cliente muestra barra de progreso (2s).
+   - Si se mueve -> Cancela.
+4. **Resultado (Determinista - Opción C1):**
+   - Al terminar, el servidor resta materiales y suma el item resultado.
+   - **Sin fallo:** Siempre éxito.",,,,0,,0,0,0,0,2026-01-07T18:26:16.134Z,695ea4f565821fd21e69c04d,"Documento de Especificación Técnica - Fase 6: Progresión, Talentos y Crafting V1.0 Personalización Flexible y Escalabilidad",695e60ec35ff28d544289011,Proyecto Juego RPG,false,,false,
+695ea71e07cb08a2415c4b3f,5. Interfaz de Usuario (UI),https://trello.com/c/QeWESRPn/88-5-interfaz-de-usuario-ui,"'- **Talent Tree:** Panel con Scroll, líneas dibujadas dinámicamente entre nodos padres e hijos. Tooltips que explican el beneficio actual y el siguiente rango.
+- **Crafting UI:** Lista de recetas a la izquierda. Detalles a la derecha (Iconos de materiales requeridos en Rojo/Verde según disponibilidad). Botón ""Fabricar"".
+
+---",,,,0,,0,0,0,0,2026-01-07T18:34:10.710Z,695ea4f565821fd21e69c04d,"Documento de Especificación Técnica - Fase 6: Progresión, Talentos y Crafting V1.0 Personalización Flexible y Escalabilidad",695e60ec35ff28d544289011,Proyecto Juego RPG,false,,false,
+695ea72c3acd138b9ba43d8e,6. Roadmap de Implementación - Fase 6,https://trello.com/c/5gluu9fN/89-6-roadmap-de-implementaci%C3%B3n-fase-6,"#### Semana 17: Talentos (Backend & UI)
+
+1. **Data:** Crear `TalentNodeSO` y el gestor de puntos.
+2. **Logic:** Implementar el `ModifierSystem` para que los Stats se recalculen al gastar puntos.
+3. **UI:** Construir el visualizador del árbol (Graph View básico en Canvas).
+
+#### Semana 18: Entrenadores y Escalado
+
+1. **Skills:** Modificar el cálculo de daño (Fase 3) para incluir la fórmula de escalado por nivel.
+2. **Shop:** Crear la lógica de ""Trainer"" que desbloquea IDs en la lista del jugador a cambio de Oro.
+
+#### Semana 19: Crafting
+
+1. **Recipes:** Crear base de datos de recetas iniciales.
+2. **Stations:** Crear triggers ""Area de Crafting"" (Yunque).
+3. **Interaction:** UI de crafting que filtra recetas según la estación cercana.
+
+---
+
+### ¿Cómo procedemos?
+
+Esta fase requiere mucha estructura de datos (ScriptableObjects).
+
+**Sugerencia:**
+Lo más difícil aquí es el **Sistema de Modificadores de Talentos** para que sea limpio y no un montón de `if/else` en el código de combate.",,,,0,,0,0,0,0,2026-01-07T18:34:38.418Z,695ea4f565821fd21e69c04d,"Documento de Especificación Técnica - Fase 6: Progresión, Talentos y Crafting V1.0 Personalización Flexible y Escalabilidad",695e60ec35ff28d544289011,Proyecto Juego RPG,false,,false,
+695eae135afe057416657ee5,1. Visión de la Fase,https://trello.com/c/gHW0ZEYY/90-1-visi%C3%B3n-de-la-fase,"El objetivo es transformar a los jugadores individuales en una unidad cohesiva. Se implementará una gestión de grupo robusta con reglas de proximidad para evitar abusos (Power Leveling), una interfaz de sanación reactiva que filtra el ""ruido visual"" y un sistema de chat inmersivo con burbujas de texto.",,,,0,,0,0,0,0,2026-01-07T19:03:55.196Z,695eae0d8b437d8bdcf1724d,Documento de Especificación Técnica - Fase 7: Herramientas Sociales y de Grupo V1.0 Enfoque: Coordinación Táctica y Feedback Visual,695e60ec35ff28d544289011,Proyecto Juego RPG,false,,false,
+695eae21718dbbe59e5c25ff,2. Sistema de Grupo (Party Backend),https://trello.com/c/4HJK6dJN/91-2-sistema-de-grupo-party-backend,"#### 2.1 Estructura de Datos
+
+Utilizaremos `NetworkList` para sincronizar la membresía del grupo.
+
+- `PartyManager` **(Singleton en Host):**
+  - `NetworkList<ulong> MemberClientIDs;`
+  - `NetworkVariable<ulong> LeaderID;`
+  - `int MaxMembers = 5;`
+
+#### 2.2 Lógica de Gestión (Opción B2 - Sucesión)
+
+- **Creación:** Al invitar al primer jugador.
+- **Abandono/Desconexión:**
+  - Si un miembro sale, se elimina de la lista y se actualiza la UI de todos.
+  - Si el **Líder** sale, el sistema ejecuta `PromoteLeader()`: Selecciona al `MemberClientIDs[0]` (el más antiguo restante) como nuevo líder automáticamente.
+
+#### 2.3 Reglas de Compartición (Opción B1 - Proximidad)
+
+- **Evento:** `OnEnemyDeath`.
+- **Validación:**
+  1. Calcular XP total.
+  2. Iterar sobre miembros del grupo.
+  3. `if (Vector3.Distance(EnemyPos, MemberPos) < 100f)`: El miembro recibe XP y derecho a Loot.
+  4. `else`: Mensaje de sistema ""Estás demasiado lejos para recibir recompensa""",,,,0,,0,0,0,0,2026-01-07T20:17:38.441Z,695eae0d8b437d8bdcf1724d,Documento de Especificación Técnica - Fase 7: Herramientas Sociales y de Grupo V1.0 Enfoque: Coordinación Táctica y Feedback Visual,695e60ec35ff28d544289011,Proyecto Juego RPG,false,,false,
+695eae35fecbf6a28341ccf2,3. Interfaz de Unidad (Party Frames),https://trello.com/c/iphHbr5l/92-3-interfaz-de-unidad-party-frames,"Esta es la herramienta principal del Healer. Debe ser eficiente (Low CPU cost).
+
+#### 3.1 Componentes Visuales
+
+- Prefab `PartyMemberFrame`:
+  - Barra de Vida (Verde -> Roja).
+  - Barra de Recurso (Azul/Amarilla/Roja según clase).
+  - Nombre.
+  - Contenedor de Iconos (Debuffs).
+
+#### 3.2 Feedback de Rango (Opción A1 - Alpha Fading)
+
+- **Script:** `RangeAlphaChanger.cs` en cada Frame de la UI.
+- **Lógica:**
+  - En `Update()` (o corrutina cada 0.2s):
+  - Calcular distancia entre `LocalPlayer` y `TargetMember`.
+  - Si `Distancia > 40m`: `CanvasGroup.alpha = 0.5f;`
+  - Si `Distancia <= 40m`: `CanvasGroup.alpha = 1.0f;`
+
+#### 3.3 Sistema de Debuffs Inteligente (Opción A2)
+
+- **Prioridad de Visualización:**
+  1. **Dispellable:** Debuffs que MI clase puede limpiar (ej. Veneno si soy Druida). -> **Icono Grande + Borde Brillante.**
+  2. **Critical:** Mecánicas de Boss (ej. ""Bomba de Tiempo""). -> **Icono Grande.**
+  3. **Standard:** Otros debuffs. -> **Icono Pequeño.**
+  4. **Ignored:** Buffs irrelevantes o debuffs de ambiente menores. -> **Oculto.**
+- **Implementación:** El `PartyFrame` recibe la lista de estados del miembro, la filtra según la clase del jugador local y ordena los iconos de izquierda a derecha por prioridad.",,,,0,,0,0,0,0,2026-01-07T19:04:34.689Z,695eae0d8b437d8bdcf1724d,Documento de Especificación Técnica - Fase 7: Herramientas Sociales y de Grupo V1.0 Enfoque: Coordinación Táctica y Feedback Visual,695e60ec35ff28d544289011,Proyecto Juego RPG,false,,false,
+695eae4b84e0da2e60e2faa0,4. Sistema de Comunicación (Chat),https://trello.com/c/4kKuCZGI/93-4-sistema-de-comunicaci%C3%B3n-chat,"#### 4.1 Estructura de Canales
+
+- **Enum:** `ChatChannel { Global, Zone, Party, Whisper, System, Combat }`.
+- **UI:** Ventana de Chat con pestañas configurables (ej. una pestaña solo para ""Combate"" para leer el log).
+
+#### 4.2 Burbujas de Chat (Opción C2 - Inmersión)
+
+- **World Space UI:** Canvas flotante sobre el `PlayerHeadBone`.
+- **Object Pooling:** **CRÍTICO.** No instanciar y destruir burbujas. Tener un ""Pool"" de 20 burbujas ocultas y reciclarlas.
+- **Comportamiento:**
+  - Jugador escribe: ""¡Ayuda!"".
+  - Aparece burbuja sobre su cabeza.
+  - La burbuja mira siempre a la cámara (`Billboard`).
+  - Desaparece tras 5 segundos o si se escribe otro mensaje.
+
+#### 4.3 Combat Log
+
+- **Formato:** Texto enriquecido (Rich Text) para colorear.
+  - Daño Físico: Blanco/Rojo.
+  - Daño Mágico: Color de la escuela (Fuego = Naranja).
+  - Curación: Verde.
+- **String:** `""[Fuente] golpea a [Objetivo] por <color=red>50</color> (<color=grey>10 Mitigado</color>)""`.",,,,0,,0,0,0,0,2026-01-07T19:04:53.374Z,695eae0d8b437d8bdcf1724d,Documento de Especificación Técnica - Fase 7: Herramientas Sociales y de Grupo V1.0 Enfoque: Coordinación Táctica y Feedback Visual,695e60ec35ff28d544289011,Proyecto Juego RPG,false,,false,
+695eae5e206928f0781e6820,5. Marcadores Tácticos (Opción C1 - Híbrido,https://trello.com/c/GS5NzHLG/94-5-marcadores-t%C3%A1cticos-opci%C3%B3n-c1-h%C3%ADbrido,"Herramienta del Líder para coordinar focus.
+
+#### 5.1 Sincronización
+
+- Enemigos tienen `NetworkVariable<int> MarkerIndex` (-1 = Ninguno, 0 = Calavera, 1 = Cruz...).
+- Solo el Líder puede escribir en esta variable (ServerRPC con validación de liderazgo).
+
+#### 5.2 Visualización Híbrida
+
+1. **Mundo 3D:** Un Sprite Render flotando 2 metros sobre la cabeza del enemigo.
+2. **Target Frame (UI):** Si seleccionas al enemigo, el icono de la Calavera aparece al lado de su nombre en la interfaz 2D.",,,,0,,0,0,0,0,2026-01-07T19:05:12.776Z,695eae0d8b437d8bdcf1724d,Documento de Especificación Técnica - Fase 7: Herramientas Sociales y de Grupo V1.0 Enfoque: Coordinación Táctica y Feedback Visual,695e60ec35ff28d544289011,Proyecto Juego RPG,false,,false,
+695eae722242365e468395ff,6. Roadmap de Implementación - Fase 7,https://trello.com/c/nHhluHOg/95-6-roadmap-de-implementaci%C3%B3n-fase-7,"#### Semana 21: Backend de Grupo
+
+1. **Party Manager:** Script de invitación, aceptación y lista sincronizada.
+2. **Logica de Sucesión:** Probar qué pasa si el líder desconecta el cable de red.
+3. **Distance Check:** Implementar la restricción de XP por distancia.
+
+#### Semana 22: UI de Grupo (Frames)
+
+1. **Prefab Design:** Diseñar la barra de vida y el grid de debuffs.
+2. **Smart Filter:** Programar la lógica que decide qué iconos mostrar y qué tamaño darles.
+3. **Click-to-Cast:** Asegurar que hacer clic en la barra selecciona al miembro en el `TargetingSystem`.
+
+#### Semana 23: Chat y Marcadores
+
+1. **Chat System:** Ventana básica y canales.
+2. **Bubbles:** Implementar el Pool de burbujas flotantes.
+3. **Markers:** Sistema de iconos sincronizados sobre enemigos.
+
+---
+
+### ¿Cómo procedemos?
+
+Con esto, la base social está lista.
+
+**Sugerencia:**
+El **Combat Log** suele ser subestimado, pero es lo primero que programaría porque es la herramienta de ""Debugging"" definitiva para ti como desarrollador. Si algo no muere o el daño no cuadra, el Combat Log te dirá la verdad matemática.",,,,0,,0,0,0,0,2026-01-07T19:05:36.082Z,695eae0d8b437d8bdcf1724d,Documento de Especificación Técnica - Fase 7: Herramientas Sociales y de Grupo V1.0 Enfoque: Coordinación Táctica y Feedback Visual,695e60ec35ff28d544289011,Proyecto Juego RPG,false,,false,
+695eb0c06a0fd661eb1e9d67,1. Visión de la Fase,https://trello.com/c/TNF83HbQ/96-1-visi%C3%B3n-de-la-fase,"El objetivo es vestir el juego. Reemplazaremos los prototipos grises con arte final, aprovechando la iluminación pre-calculada para lograr una atmósfera de alta calidad sin coste de CPU. Los Jefes serán entidades únicas programadas a medida (`Classes` derivadas) para ofrecer mecánicas complejas. Las cinemáticas respetarán la experiencia del veterano (Auto-Skip) y la curiosidad del novato.",,,,0,,0,0,0,0,2026-01-07T19:15:22.902Z,695eb0a5b92d22cbfe4dbb92,"Documento de Especificación Técnica - Fase 8: Contenido, Jefes y Narrativa V1.0 Enfoque: Atmósfera Estática, Jefes Únicos y Narrativa Sincronizada",695e60ec35ff28d544289011,Proyecto Juego RPG,false,,false,
+695eb0d2ab2f7bd78c82d228,2. Pipeline de Entornos (Environment Tech),https://trello.com/c/YUWyALrB/97-2-pipeline-de-entornos-environment-tech,"#### 2.1 Iluminación (Baked Global Illumination)
+
+Dado que los biomas tienen iluminación fija (Atardecer/Mediodía/Noche):
+
+- **Workflow:**
+  - Todos los objetos estáticos (Árboles, Ruinas, Suelo) marcados como `Static`.
+  - **Lightmaps:** Hornear luces en texturas.
+  - **Light Probes:** Colocar redes de sondas densas en zonas jugables para que los personajes (Dinámicos) reciban la luz y el color del entorno estático correctamente.
+- **Gestión de Escenas:** Cada escena aditiva (Mazmorra) tiene su propio `LightingSettings`. Al cargar la escena, Unity gestiona el cambio de Skybox y Fog automáticamente.
+
+#### 2.2 Navegación (NavMesh Fragmentado)
+
+- **Componente:** `NavMeshSurface` (Unity AI Navigation package).
+- **Segmentación:**
+  - Una `NavMeshSurface` por cada ""Isla"" o zona de combate.
+  - **No hay puentes de navegación** entre el Bosque y la Mazmorra. Los enemigos no pueden salir de su zona lógica.
+- **Baking:** Se realiza en tiempo de edición, guardando la data en la escena.",,,,0,,0,0,0,0,2026-01-07T19:15:38.090Z,695eb0a5b92d22cbfe4dbb92,"Documento de Especificación Técnica - Fase 8: Contenido, Jefes y Narrativa V1.0 Enfoque: Atmósfera Estática, Jefes Únicos y Narrativa Sincronizada",695e60ec35ff28d544289011,Proyecto Juego RPG,false,,false,
+695eb0e2ed4c07f353a21470,3. Arquitectura de Encuentros (Boss Scripting),https://trello.com/c/xxzqj5DK/98-3-arquitectura-de-encuentros-boss-scripting,"Optamos por la flexibilidad del código puro (`Hardcoded C#`).
+
+#### 3.1 Clase Base: `BossBaseController`
+
+Clase abstracta que maneja lo común:
+
+- **Stats:** Vida, Mana, Tabla de Amenaza (Fase 4).
+- **Eventos:** `OnAggro`, `OnDeath`, `OnReset`.
+- **Reset Lógico (Hard Reset):**
+  - Si no hay jugadores en la `BossRoomTrigger`:
+  - `Transform.position = SpawnPoint`.
+  - `CurrentHP = MaxHP`.
+  - `Minions.Clear()` (Destruir invocaciones).
+  - `ThreatTable.Clear()`.
+
+#### 3.2 Implementación Específica (Ejemplo: `SkeletonKing.cs`)
+
+Hereda de `BossBaseController`. Usa una Máquina de Estados interna simple (`switch/case`).
+
+- **Fase 1 (100% - 50% HP):**
+  - Ataque básico y ""Golpe de Escudo"" (CD 10s).
+- **Transición (50% HP):**
+  - Vuelve inmune (`IsInvulnerable = true`).
+  - Camina al centro de la sala.
+  - Invoca 4 `SkeletonMinion`.
+- **Fase 2 (Esbirros muertos):**
+  - Pierde inmunidad.
+  - Gana buff ""Enrage"" (+50% Daño).",,,,0,,0,0,0,0,2026-01-07T19:16:02.124Z,695eb0a5b92d22cbfe4dbb92,"Documento de Especificación Técnica - Fase 8: Contenido, Jefes y Narrativa V1.0 Enfoque: Atmósfera Estática, Jefes Únicos y Narrativa Sincronizada",695e60ec35ff28d544289011,Proyecto Juego RPG,false,,false,
+695eb0fbba3953755497917d,4. Sistema de Cinemáticas (Timeline + Netcode),https://trello.com/c/sk5EeKVm/99-4-sistema-de-cinem%C3%A1ticas-timeline-netcode,"#### 4.1 Intro del Jefe (Sincronizada)
+
+- **Trigger:** Al entrar el primer jugador a la sala del jefe.
+- **Check de ""Visto"" (Auto-Skip):**
+  - El Servidor consulta: `bool allHaveSeen = true;`
+  - Revisa el `PlayerData.HasSeenBossIntro[BossID]` de todos los conectados.
+  - **Si TODOS true:** Salta la cinemática e inicia combate directo.
+  - **Si ALGUIEN false:** Inicia modo Cinemática.
+- **Modo Cinemática (Votación):**
+  - **Input:** Bloqueado (Nadie se mueve).
+  - **UI:** Botón ""Saltar (F1)"".
+  - **Lógica:** Si `Votes >= Players / 2 + 1` -> El servidor corta el Timeline y activa al Jefe.
+
+#### 4.2 Outro del Jefe (Muerte)
+
+- **Trigger:** `OnDeath` del Jefe.
+- **Lógica (Individual):**
+  - El servidor dispara `ClientRPC: PlayOutro()`.
+  - Cada cliente reproduce su Timeline localmente.
+  - **Input:** Jugador se queda en estado `Idle` (congelado).
+  - **Skip:** Si el jugador presiona Esc/Saltar, su cámara vuelve al juego y recupera control. Puede ver a los demás personajes quietos (aún viendo el video).",,,,0,,0,0,0,0,2026-01-07T19:16:28.904Z,695eb0a5b92d22cbfe4dbb92,"Documento de Especificación Técnica - Fase 8: Contenido, Jefes y Narrativa V1.0 Enfoque: Atmósfera Estática, Jefes Únicos y Narrativa Sincronizada",695e60ec35ff28d544289011,Proyecto Juego RPG,false,,false,
+695eb1179a37dda6e024fbf9,5. Narrativa y Diálogos,https://trello.com/c/LlRz8cTy/100-5-narrativa-y-di%C3%A1logos,"'- **Sistema de Burbujas:** Reutilizamos el sistema de Chat de la Fase 7.
+- **NPCs de Quest:**
+  - Trigger de Proximidad.
+  - Al interactuar (F), muestra ventana de texto con botones ""Aceptar / Rechazar"".
+  - El texto se lee de un `DialogueSO` (ScriptableObject) para fácil localización/traducción.",,,,0,,0,0,0,0,2026-01-07T19:16:50.261Z,695eb0a5b92d22cbfe4dbb92,"Documento de Especificación Técnica - Fase 8: Contenido, Jefes y Narrativa V1.0 Enfoque: Atmósfera Estática, Jefes Únicos y Narrativa Sincronizada",695e60ec35ff28d544289011,Proyecto Juego RPG,false,,false,
+695eb13f04968c4f7a50764d,6. Roadmap de Implementación - Fase 8,https://trello.com/c/M5q4dvgA/101-6-roadmap-de-implementaci%C3%B3n-fase-8,"#### Semana 25: Arte y Atmósfera (El ""Look"")
+
+1. **Baking:** Configurar la iluminación de la escena ""Bosque"" y ""Mazmorra 1"". Ajustar las Light Probes para que los personajes no se vean oscuros.
+2. **NavMesh:** Hornear las superficies de navegación separadas.
+3. **Spawners:** Colocar los puntos de aparición de enemigos y configurar sus rutas de patrulla visuales.
+
+#### Semana 26: El Primer Jefe Real (`SkeletonKing`)
+
+1. **Scripting:** Programar `BossBaseController` y la lógica específica del Rey Esqueleto.
+2. **Fases:** Implementar la lógica de inmunidad y chequeo de esbirros muertos.
+3. **Reset:** Probar exhaustivamente que el jefe vuelva a su sitio y se cure si los jugadores intentan hacer trampas.
+
+#### Semana 27: Cinemáticas y UX
+
+1. **Timeline:** Crear la secuencia de entrada (Cámara moviéndose, Jefe gritando).
+2. **Cutscene Manager:** Implementar la lógica de red para pausar a los jugadores y gestionar la votación de salto.
+3. **Persistencia:** Guardar en el `SaveFile` (Fase 2) el array de `HasSeenBossIntro`.
+
+---
+
+### CONCLUSIÓN DEL PLAN MAESTRO
+
+Hemos recorrido el camino completo desde ""Mover un cubo"" hasta ""Matar al Rey Esqueleto con cinemáticas y votación"".
+
+Has definido:
+
+1. **Arquitectura:** P2P robusta con Host-Play.
+2. **Datos:** Seguros, encriptados y persistentes.
+3. **Combate:** Tab-Targeting clásico y responsivo.
+4. **Rol:** Trinidad sagrada (Tanque/Healer/DPS) forzada por mecánicas de Aggro.
+5. **Mundo:** Instanciado, con economía de loot y crafting.
+6. **Contenido:** Jefes complejos y narrativa respetuosa.",,,,0,,0,0,0,0,2026-01-07T19:17:24.875Z,695eb0a5b92d22cbfe4dbb92,"Documento de Especificación Técnica - Fase 8: Contenido, Jefes y Narrativa V1.0 Enfoque: Atmósfera Estática, Jefes Únicos y Narrativa Sincronizada",695e60ec35ff28d544289011,Proyecto Juego RPG,false,,false,
+695eba10eff2af92ace01dcd,1. Visión de la Fase,https://trello.com/c/xccWrTnx/102-1-visi%C3%B3n-de-la-fase,"El objetivo es elevar el estándar del producto final. Implementaremos un sistema de configuración robusto y portátil para PC, una arquitectura de audio inteligente que prioriza la claridad sobre el caos, y un modo ""Heroico"" que reutiliza los assets existentes para duplicar las horas de juego mediante retos mecánicos y recompensas visuales exclusivas (Recolors).",,,,0,,0,0,0,0,2026-01-07T19:55:01.349Z,695eb94b9dbc9c379c57cf02,"Documento de Especificación Técnica - Fase 9: Pulido, UX y End-Game V1.0",695e60ec35ff28d544289011,Proyecto Juego RPG,false,,false,
+695eba2d218fbf11f8afa8b5,2. Sistema de Configuración (Settings & Input),https://trello.com/c/6Q595rQJ/103-2-sistema-de-configuraci%C3%B3n-settings-input,"#### 2.1 Persistencia (JSON Local)
+
+- **Archivo:** `Application.persistentDataPath + ""/user_config.json""`.
+- **Estructura:**
+  codeJSON
+  ```
+  {
+    ""Graphics"": { ""Resolution"": ""1920x1080"", ""Fullscreen"": true, ""ShadowQuality"": 2 },
+    ""Audio"": { ""MasterVolume"": 0.8, ""MusicVolume"": 0.6, ""SFXVolume"": 1.0 },
+    ""Keybindings"": [
+      { ""Action"": ""Attack"", ""Key"": ""Z"" },
+      { ""Action"": ""Interact"", ""Key"": ""F"" }
+    ]
+  }
+  ```
+- **Carga:** Se lee en el `Awake()` del `GameManager`. Si no existe, crea uno por defecto.
+
+#### 2.2 Reasignación de Teclas (Input Remapping)
+
+- **Tecnología:** Unity Input System (`InputActionAsset`).
+- **Lógica de Conflicto (Swap Inteligente):**
+  - Evento: Jugador intenta asignar `Q` a ""Atacar"".
+  - Check: ¿`Q` está en uso? -> Sí, en ""Caminar Izquierda"".
+  - Acción:
+    1. Desasignar `Q` de ""Caminar Izquierda"".
+    2. Asignar `Q` a ""Atacar"".
+    3. (Opcional) Asignar la tecla vieja de ""Atacar"" (ej. `Z`) a ""Caminar Izquierda"".
+    4. Actualizar UI inmediatamente para reflejar el cambio.",,,,0,,0,0,0,0,2026-01-07T19:55:42.203Z,695eb94b9dbc9c379c57cf02,"Documento de Especificación Técnica - Fase 9: Pulido, UX y End-Game V1.0",695e60ec35ff28d544289011,Proyecto Juego RPG,false,,false,
+695eba46968083c33033cd73,3. Arquitectura de Audio (Audio Manager),https://trello.com/c/qZIhXkmx/104-3-arquitectura-de-audio-audio-manager,"#### 3.1 Música (Ambiental vs Jefe)
+
+- **Mundo Abierto / Mazmorra:**
+  - Lista de reproducción (`Playlist`) que hace loop con `Crossfade` suave. No reacciona al combate básico (""Trash mobs"") para evitar cortes molestos.
+- **Jefes (Boss Music):**
+  - `AudioManager` escucha el evento `OnBossAggro`.
+  - Hace fade-out de la música ambiental -> Fade-in ""Tema del Jefe"".
+  - **Cooldown de Tensión (Opción B1):** Al morir el jefe, la música de tensión sigue 5 segundos, luego fade-out lento hacia la música ambiental.
+
+#### 3.2 Prioridad de SFX (Voice Stealing)
+
+- **Problema:** 10 Bolas de fuego suenan a la vez = Ruido blanco.
+- **Solución:** Sistema de prioridad dinámica en `SoundEmitter`.
+  - `MaxVoices = 3` (para hechizos repetitivos).
+  - Antes de `Play()`, calcular distancia a la `Camera.main`.
+  - Si hay más de 3 sonidos iguales sonando, detener el más lejano y reproducir el nuevo (o simplemente no reproducir el nuevo si está lejos).",,,,0,,0,0,0,0,2026-01-07T19:55:59.832Z,695eb94b9dbc9c379c57cf02,"Documento de Especificación Técnica - Fase 9: Pulido, UX y End-Game V1.0",695e60ec35ff28d544289011,Proyecto Juego RPG,false,,false,
+695ebb9280ca864f57ce43a7,4. End-Game: Selector de Dificultad y Seguridad de Instancia,https://trello.com/c/jdJbMgAe/105-4-end-game-selector-de-dificultad-y-seguridad-de-instancia,"En lugar de una configuración global, la dificultad es una propiedad mutable de cada Mazmorra específica, controlada por el Líder del Grupo.
+
+#### 4.1 Selector de Dificultad (Por Portal)
+
+- **UI del Portal:** Al interactuar con el portal de entrada de una Mazmorra Grande:
+  - Si eres Miembro: Solo ves el estado actual (""Dificultad: Normal"").
+  - Si eres **Líder**: Ves un Dropdown/Selector (""Normal"" / ""Heroico"").
+- **Validación de Cambio (**`CanChangeDifficulty`**):**
+  - El Líder intenta cambiar a Heroico.
+  - El Servidor chequea: `ActivePlayersInDungeonCount`.
+  - **Si Count == 0:** El cambio se aplica. El `DungeonStateManager` actualiza la flag `IsHeroic = true`.
+  - **Si Count > 0:** Error en pantalla: _""No se puede cambiar la dificultad mientras hay jugadores (o desconectados recientes) dentro.""_
+
+#### 4.2 Lógica de Desconexión en Instancia (The ""Ghost Timer"")
+
+El sistema debe diferenciar entre ""Caída de internet breve"" y ""Abandono"", evitando que un jugador desconectado bloquee el cambio de dificultad para siempre.
+
+- **Estado:** `DisconnectedInside`
+  - Cuando un jugador pierde la conexión dentro de una escena de Mazmorra, el Host **NO** lo elimina inmediatamente de la lista `ActivePlayersInDungeon`.
+  - El personaje desaparece visualmente, pero su ""Slot"" lógico sigue ocupando la instancia.
+- **El Temporizador (2 Minutos):**
+  - Al desconectar, el Host inicia una Corrutina: `StartDisconnectTimer(PlayerID, 120f)`.
+  - **Caso A: Reconexión Rápida (< 120s):**
+    - El jugador vuelve. El Host detiene el timer.
+    - El jugador respawnea en su última posición guardada dentro de la mazmorra. (Sigue jugando normal).
+  - **Caso B: Tiempo Agotado (> 120s):**
+    - El Host ejecuta `ForceKickFromDungeon(PlayerID)`.
+    - **Acción de Datos:** Modifica el archivo de guardado del jugador (en memoria del servidor o disco): `Position = DungeonEntrancePoint` (Afuera en el mundo abierto).
+    - **Acción de Estado:** Resta 1 al `ActivePlayersInDungeonCount`.
+    - _Resultado:_ Ahora el contador es 0 y el Líder puede cambiar la dificultad.
+
+#### 4.3 Implementación en `DungeonManager`
+
+codeC#
+
+```
+public class DungeonInstance
+{
+    public Difficulty CurrentDifficulty;
+    public List<ulong> PlayersInside;
+    public Dictionary<ulong, Coroutine> DisconnectTimers; // ID -> Timer
+
+    public void OnPlayerDisconnect(ulong clientId) {
+        // No lo sacamos de PlayersInside todavía
+        // Iniciamos cuenta regresiva
+        DisconnectTimers[clientId] = StartCoroutine(KickRoutine(clientId, 120f));
+    }
+
+    private IEnumerator KickRoutine(ulong clientId, float duration) {
+        yield return new WaitForSeconds(duration);
+
+        // Se acabó el tiempo
+        PlayersInside.Remove(clientId);
+        SaveSystem.ForceMovePlayerToEntrance(clientId);
+        DisconnectTimers.Remove(clientId);
+
+        // Notificar al Líder que la mazmorra está libre
+        CheckIdeallyEmpty();
+    }
+}
+```
+
+4\.4 Lógica del Jefe Final (Scripting Extendido)
+
+Extendemos el script del Jefe (Fase 8) para soportar el flujo del 20%.
+
+codeC#
+
+```
+public override void TakeDamage(float amount) {
+    base.TakeDamage(amount);
+
+    // Check de Fase Final
+    if (currentHP <= maxHP * 0.20f) {
+        if (GameDifficulty == Difficulty.Normal) {
+            // VICTORIA NARRATIVA
+            StartCoroutine(PlayVictoryCinematic()); // El jefe huye o se rinde
+            EndEncounter(win: true);
+        }
+        else if (GameDifficulty == Difficulty.Heroic && !isInTrueForm) {
+            // ACTIVAR FASE OCULTA
+            EnterTrueForm(); // Sana un poco, cambia modelo, nuevas skills
+        }
+    }
+
+    // Muerte Real (Solo Heroico)
+    if (isInTrueForm && currentHP <= maxHP * 0.001f) {
+         DieForReal();
+    }
+}
+```
+
+#### 4.5 Loot Heroico (Variantes Visuales)
+
+- **Data:** `ItemSO` tiene un campo `HeroicVariant` (referencia a otro `ItemSO`).
+- **Arte:**
+  - **Normal:** ""Espada del Rey"" (Filo plateado).
+  - **Heroico:** ""Espada del Rey Caído"" (Filo rojo brillante, mismo modelo 3D, diferente Material/Textura).
+- **Stats:** Escalado numérico simple (+20% Stats).
+
+---",,,,0,,0,0,0,0,2026-01-07T20:04:17.019Z,695eb94b9dbc9c379c57cf02,"Documento de Especificación Técnica - Fase 9: Pulido, UX y End-Game V1.0",695e60ec35ff28d544289011,Proyecto Juego RPG,false,,false,
+695ebbae6ffb56f65cc8da0e,5. Integración Final y Red,https://trello.com/c/PsU3kITA/106-5-integraci%C3%B3n-final-y-red,"'- **Steamworks:** Se inicializa solo para Overlay y Logros.
+- **Conexión:** Se mantiene el sistema de **Unity Relay (Código)** definido en la Fase 1. Esto asegura que la conexión funcione siempre, independientemente de si la API de amigos de Steam falla o si decides portar a otras tiendas (Epic/Itch) en el futuro.",,,,0,,0,0,0,0,2026-01-07T20:01:55.315Z,695eb94b9dbc9c379c57cf02,"Documento de Especificación Técnica - Fase 9: Pulido, UX y End-Game V1.0",695e60ec35ff28d544289011,Proyecto Juego RPG,false,,false,
+695ebbbd2b6398c63bbd8d3c,6. Roadmap de Implementación - Fase 9,https://trello.com/c/mDtxS8bu/107-6-roadmap-de-implementaci%C3%B3n-fase-9,"### 6. Roadmap de Implementación - Fase 9
+
+#### Semana 29: Settings y JSON
+
+1. **Backend:** Crear `ConfigManager.cs` que serializa/deserializa el JSON.
+2. **UI:** Construir el menú de opciones.
+3. **Input:** Implementar la lógica de ""Rebind"" con intercambio de teclas.
+
+#### Semana 30: Audio System
+
+1. **Mixer:** Configurar canales (Master, Music, SFX) en Unity Audio Mixer.
+2. **Manager:** Script que gestiona las listas de reproducción y el cambio de estado en Bosses.
+3. **Optimization:** Implementar el chequeo de distancia para sonidos repetitivos.
+
+#### Semana 31: Heroic Mode
+
+1. **Loot:** Duplicar los ScriptableObjects de items Tier Máximo, cambiarles el nombre y asignarles un Material tintado.
+2. **Boss Logic:** Modificar el script del Jefe Final para incluir el `if (Heroic)` y la fase ""True Form"".
+3. **Portal UI:** Crear el menú emergente del portal que solo el Líder puede editar.
+4. **Disconnect Logic:** Implementar el `DisconnectTimer` en el Host. Es vital probar esto desconectando el cable de red simulado (Unity Editor) y esperando 2 minutos para ver si el servidor libera el bloqueo de dificultad.
+5. **Heroic Toggle:** Conectar la variable `IsHeroic` para que cambie las tablas de loot y la vida de los enemigos al spawnear.
+
+#### Semana 32: Pulido Final (Gold Master)
+
+1. **Créditos:** Pantalla de créditos.
+2. **Bug Fixing:** Semana dedicada exclusivamente a cerrar tickets de Trello.
+3. **Build:** Generar la versión 1.0 Release.
+
+---
+
+### RESUMEN GLOBAL DEL PROYECTO ""THE ETHER DOMES""
+
+Has completado la especificación de un MMORPG Cooperativo completo.
+
+- **Core:** P2P, Movimiento WoW-like, Persistencia segura.
+- **Loop:** Tab-Targeting, Trinidad (Tank/Healer/DPS), Crafting.
+- **Contenido:** 5 Biomas, Jefes con Fases, Modo Heroico.
+- **Tech:** Unity 6 + Netcode for GameObjects + JSON Configs.",,,,0,,0,0,0,0,2026-01-07T20:05:11.727Z,695eb94b9dbc9c379c57cf02,"Documento de Especificación Técnica - Fase 9: Pulido, UX y End-Game V1.0",695e60ec35ff28d544289011,Proyecto Juego RPG,false,,false,
+695ebec25030b3c418517960,1. Visión de la Fase,https://trello.com/c/m8qVWTjf/108-1-visi%C3%B3n-de-la-fase,"El objetivo es preparar el ejecutable para el consumo público. Se implementarán barreras de entrada (Control de Versiones) para evitar incompatibilidades, se integrará la API de Steam para persistencia y logros, y se optimizará agresivamente el tráfico de red mediante ""Interest Management"" para que el juego sea jugable incluso con conexiones modestas.",,,,0,,0,0,0,0,2026-01-07T20:15:03.747Z,695ebebd2584c301159debe1,"Documento de Especificación Técnica - Fase 10: Lanzamiento, Operaciones y Steam V1.0 Enfoque: Estabilidad de Red, Integración de Plataforma y Mantenibilidad",695e60ec35ff28d544289011,Proyecto Juego RPG,false,,false,
+695ebed4e2425c48a63a3e15,2. Integración con Steamworks,https://trello.com/c/nHciCWuC/109-2-integraci%C3%B3n-con-steamworks,"#### 2.1 Autenticación e Identidad
+
+Reemplazamos el sistema de IDs de desarrollo por SteamID.
+
+- **Inicialización:** Al arrancar, `SteamAPI.Init()`. Si falla, cerrar el juego (DRM básico).
+- **Save File:** El nombre del archivo de guardado incluirá el SteamID64 (`save_76561198000000000.ted`).
+- **Cloud Sync:**
+  - Configuración en Steamworks Dashboard: ""Auto-Cloud"" apuntando a `Application.persistentDataPath`.
+  - **Resolución de Conflictos:** Delegamos en la lógica nativa de Steam (Timestamp Check). Si el archivo local es más viejo que el de la nube, Steam lo descarga antes de que el juego arranque.
+
+#### 2.2 Logros (Achievements)
+
+- **Manager:** `AchievementManager` (Singleton).
+- **Lógica:** Escucha eventos del juego.
+  - `OnBossDeath(BossID)` -> `SteamUserStats.SetAchievement(""KILL_"" + BossID)`.
+  - `OnLevelUp(100)` -> `SteamUserStats.SetAchievement(""MAX_LEVEL"")`.
+- **Sincronización:** Llamar a `SteamUserStats.StoreStats()` al guardar la partida o desbloquear un logro.",,,,0,,0,0,0,0,2026-01-07T20:15:25.853Z,695ebebd2584c301159debe1,"Documento de Especificación Técnica - Fase 10: Lanzamiento, Operaciones y Steam V1.0 Enfoque: Estabilidad de Red, Integración de Plataforma y Mantenibilidad",695e60ec35ff28d544289011,Proyecto Juego RPG,false,,false,
+695ebee6059bde51cb784cc0,3. Optimización de Red (Netcode Tuning),https://trello.com/c/sbLvgkfK/110-3-optimizaci%C3%B3n-de-red-netcode-tuning,"#### 3.1 Tick Rate (Opción C2)
+
+Reducimos la frecuencia de actualización para ahorrar CPU y Ancho de Banda.
+
+- **Configuración NGO:** `NetworkTickSystem.TickRate = 30` (30 veces por segundo).
+- **Interpolación:** El componente `ClientNetworkTransform` interpolará visualmente entre esos 30 ticks para que el movimiento se vea suave a 60/144 FPS.
+
+#### 3.2 Interest Management (Opción C1 - Spatial Hashing)
+
+El Host no enviará datos de entidades lejanas.
+
+- **Implementación:** Usaremos el delegado `CheckObjectVisibility` de Netcode for GameObjects.
+- **Lógica de Visibilidad:**
+  1. **Check de Escena:** Si el Jugador A está en ""Mazmorra"" y el Enemigo B está en ""Bosque"" -> **Oculto**.
+  2. **Check de Distancia:** Si están en la misma escena, calcular `Vector3.Distance`.
+     - Si Distancia > 80m -> **Oculto**.
+     - Si Distancia <= 80m -> **Visible**.
+- **Frecuencia:** Este chequeo se ejecuta cada 1.0 segundos (no en cada frame) para ahorrar CPU.",,,,0,,0,0,0,0,2026-01-07T20:15:50.215Z,695ebebd2584c301159debe1,"Documento de Especificación Técnica - Fase 10: Lanzamiento, Operaciones y Steam V1.0 Enfoque: Estabilidad de Red, Integración de Plataforma y Mantenibilidad",695e60ec35ff28d544289011,Proyecto Juego RPG,false,,false,
+695ebf018dc98f56782d277d,4. Control de Versiones (Handshake),https://trello.com/c/FzxR2efi/111-4-control-de-versiones-handshake,"#### 4.1 Validación Estricta (Opción A1)
+
+- **Build Settings:** Definir `PlayerSettings.bundleVersion` (ej. ""1.0.2"").
+- **Connection Payload:** Añadir campo `string Version`.
+- **Lógica de Aprobación (Server-Side):**
+  codeC#
+  ```
+  if (connectionData.Version != Application.version) {
+      response.Approved = false;
+      response.Reason = $""Versión Incorrecta. Host: {Application.version}, Tú: {connectionData.Version}"";
+  }
+  ```",,,,0,,0,0,0,0,2026-01-07T20:16:08.602Z,695ebebd2584c301159debe1,"Documento de Especificación Técnica - Fase 10: Lanzamiento, Operaciones y Steam V1.0 Enfoque: Estabilidad de Red, Integración de Plataforma y Mantenibilidad",695e60ec35ff28d544289011,Proyecto Juego RPG,false,,false,
+695ebf0e3b258b2ec91888cb,5. Arquitectura de Datos y Parches,https://trello.com/c/0Mpob801/112-5-arquitectura-de-datos-y-parches,"#### 5.1 Balanceo Retroactivo (Opción D1)
+
+- **Principio:** El archivo de guardado (`.ted`) es ""ligero"".
+- **Estructura JSON:**
+  codeJSON
+  ```
+  ""Inventory"": [
+      { ""ItemID"": 105, ""Quantity"": 1 }, // Espada de Fuego
+      { ""ItemID"": 202, ""Quantity"": 5 }  // Pociones
+  ]
+  ```
+- **Carga:** El juego lee ID 105 -> Busca en `ItemDatabaseSO` -> Lee `Damage: 30`.
+- **Actualización:** Si lanzas el Parche 1.1 y cambias el daño de la Espada (ID 105) a 25 en el ScriptableObject, todos los jugadores tendrán automáticamente 25 de daño al cargar, sin necesidad de migrar sus archivos de guardado.",,,,0,,0,0,0,0,2026-01-07T20:16:34.314Z,695ebebd2584c301159debe1,"Documento de Especificación Técnica - Fase 10: Lanzamiento, Operaciones y Steam V1.0 Enfoque: Estabilidad de Red, Integración de Plataforma y Mantenibilidad",695e60ec35ff28d544289011,Proyecto Juego RPG,false,,false,
+695ebf29173b78dfc80d906b,6. Roadmap de Implementación - Fase 10,https://trello.com/c/KFcqxH4c/113-6-roadmap-de-implementaci%C3%B3n-fase-10,"#### Semana 33: Optimización de Red
+
+1. **Tick Rate:** Ajustar configuración y probar suavidad de movimiento.
+2. **Visibility Check:** Implementar el script que oculta objetos lejanos. Verificar con el Profiler de Unity que el ancho de banda baja drásticamente al alejarse.
+
+#### Semana 34: Steamworks SDK
+
+1. **Import:** Instalar paquete `Steamworks.NET`.
+2. **Auth:** Reemplazar el login genérico por `SteamUser.GetSteamID()`.
+3. **Achievements:** Conectar los eventos de muerte de jefes a la API.
+
+#### Semana 35: Beta Cerrada (Bug Fixing)
+
+1. **Freeze:** No se añade ninguna feature nueva.
+2. **Stress Test:** Conectar 10 clientes (simulados o amigos) y saturar el combate para ver si el Host aguanta.
+3. **Version Check:** Probar a conectar un cliente viejo a un host nuevo para verificar el rechazo.
+
+#### Semana 36: Release Candidate
+
+1. **Build Final:** Compilación en modo ""Release"" (sin logs de depuración).
+2. **Upload:** Subida a Steamworks pipe.
+
+---
+
+### ¡ROADMAP COMPLETO FINALIZADO!
+
+Hemos cubierto el ciclo de vida entero de **""THE ETHER DOMES""**.
+
+Tienes en tus manos (y en tu historial de chat) la documentación completa para:
+
+1. **Core Loop:** Combate Tab-Targeting y Movimiento.
+2. **Meta-Game:** Progresión, Loot y Economía.
+3. **Social:** Party, Chat y Roles (Trinidad).
+4. **Tech:** Persistencia segura, Netcode optimizado y Steam.",,,,0,,0,0,0,0,2026-01-07T20:17:04.910Z,695ebebd2584c301159debe1,"Documento de Especificación Técnica - Fase 10: Lanzamiento, Operaciones y Steam V1.0 Enfoque: Estabilidad de Red, Integración de Plataforma y Mantenibilidad",695e60ec35ff28d544289011,Proyecto Juego RPG,false,,false,
+6961acc55b18395b724f361d,Diagrama del menu,https://trello.com/c/uMlBYhk6/114-diagrama-del-menu,"El Menu debera seguir una logica parecida a valheim pero de la siguiente manera
+
+1. Menu principal
+
+- Boton Empezar Partida (Se mueve al menu 2)
+- Boton Ajustes (Abre el menu de configuracion y ajustes)
+- Boton Salir (Sale de la aplicacion)
+
+2  Menu de forma de juego
+
+- Boton Crear Partida (Se mueve al menu 3)
+- Boton Unirse a Partida (Se mueve al menu 5)
+- Boton Atras (Se mueve al menu 1)
+
+3 Menu de Crear Partida
+
+- Listado de las partidas/mundos creados (Permite seleccionar)
+- Boton Nuevo mundo (Crea una nueva partida)
+- Boton de Borrar mundo (Genera el sub menu “¿Esta seguro que desea borrar este mundo?” con los botones Si y No, en caso de que no, cierra este sub menu, en caso de que si, elimina el mundo que tenia seleccionado)
+- Campo de Texto “Contrasela” para crear una contraseña de acceso al servidor que se esta creando
+- Boton de Atras (Se mueve al menu 2)
+- Boton de Iniciar servidor (Se mueve al menu 4, Tiene que validar seleccion de mundo, tiene que asignar la contraseña del campo de texto “Contraseña”)
+- Boton de Iniciar servidor dedicado (Inicia la partida sin crear personaje, Tiene que validar seleccion de mundo,  tiene que asignar la contraseña del campo de texto “Contraseña)
+
+4 Menu de seleccion de personaje
+
+- Lista de personajes a la izquierda para seleccionar (Debe tener Nombre, Nivel y Clase)
+- Boton de crear nuevo personaje (Debe abrir un sub menu para ingresar el nombre, tiene que tener 3 letras o mas, no puede repetirse la misma letra 3 veces o mas, no debe contener caracteres especiales y el boton aceptar. Al aceptar agrega un nuevo personaje a la lista Lvl 1 con el modelo inicial, sin clase )
+- En el centro se mostrara el modelo del personaje creado
+- Se puede agregar un fondo de pantalla detras del personaje y los botones y listas
+- Boton de eliminar personaje (Genera el sub menu de “¿Esta seguro que desea eliminar este personaje?” con los botones si y no, en caso de que no, cierra este sub menu, en caso de que si, elimina el personaje que tenia seleccionado
+- 
+  Boton de atras (Vuelve al menu 3)
+- Boton de Iniciar partida(Ingresa al juego)
+
+5 Menu Unirse a partida
+
+- Listado de Servidores recientes
+- Listado de Servidores de amigos de steam
+- Listado de Servidores publicos
+- Solo se puede seleccionar 1 servidor al mismo tiempo de entre los 3 listados
+- Boton de atras (vuelve al menu 2)
+- Boton de Entrar al mundo (Debe tener un seleccionado un mundo de las 3 listas para validar, en caso de que el servidor tenga una contraseña, Generar un sub menu con ingresar contraseña y el campo de texto para ingresarla)
+- Boton de Ingresar codigo Relay (Abre un sub menu para ingresar el codigo Relay, debe tener el boton aceptar, al hacer click en aceptar Debe validar el codigo con el host, si no lo valida en 10 segundos debe dar time out y salir del sub menu, e informar en la parte inferior del menu 2 “Error Time Out Servidor no disponible”. Si valida se mueve al menu 4)
+
+![image.png](https://trello.com/1/cards/6961acc55b18395b724f361d/attachments/6961d0bc93851f76e8bb039b/download/image.png)
+
+![image.png](https://trello.com/1/cards/6961acc55b18395b724f361d/attachments/6961acdad7371e44d2afe448/download/image.png)",,,,6,"https://trello.com/1/cards/6961acc55b18395b724f361d/attachments/6961acdad7371e44d2afe448/download/image.png, https://trello.com/1/cards/6961acc55b18395b724f361d/attachments/6961acf883670d6c7b5f5abc/download/image.png, https://trello.com/1/cards/6961acc55b18395b724f361d/attachments/6961ad0b88d96e099e42a584/download/image.png, https://trello.com/1/cards/6961acc55b18395b724f361d/attachments/6961ad186ce6fb74aa5c04f4/download/image.png, https://trello.com/1/cards/6961acc55b18395b724f361d/attachments/6961d0a8b40c99010308d613/download/image.png, https://trello.com/1/cards/6961acc55b18395b724f361d/attachments/6961d0bc93851f76e8bb039b/download/image.png",0,0,0,0,2026-01-10T05:09:13.338Z,6961acbc045855681bd0673f,Menu Inicio Diagrama de Flujo,695e60ec35ff28d544289011,Proyecto Juego RPG,false,,false,
+6964404e8ccb0d3996e7fd0b,Generacion de 8 clases y objetos. 3 tipos de armaduras para 6 piezas de set. 3 objetos para todas las clases y 10 tipos de armas,https://trello.com/c/xuCnZzL5/115-generacion-de-8-clases-y-objetos-3-tipos-de-armaduras-para-6-piezas-de-set-3-objetos-para-todas-las-clases-y-10-tipos-de-armas,"Tanques Cruzado, Protector, Para los DPS fisico Berserker, Arquero, para los DPS magicos Maestro elemental, Caballero Runico, Para los healers Clerigo, Medico Brujo, con respecto a los items, vamos a generar basico nivel 1 para las pruebas, el set constara de Cabeza/Casco, Hombros/Hombreras, Pecho/Pechera,  Manos/Guantes, Piernas/Pantalones, Pies/Botas, Espalda/Capa-Alas, Dedo/Anillo, Abalorio, Arma, tenemos las clasificacion de las armas de las siguientes manera, arma de 2 manos, arma de 1 mano, escudo de 1 mano,
+En relación a las armas, las clases podrán utilizar las siguientes armas
+Cruzado Arma de 1 mano + escudo
+Protector Arma de 1 mano + escudo
+Berserker Arma de 2 manos
+Arquero Arma de 2 manos
+Caballero Runico Arma de 2 manos
+Maestro elemental Arma de 2 manos
+Medico Brujo Arma de 2 manos
+Clerigo Arma de 2 manos
+Los tipos de armaduras para
+casco, hombros, pecho, manos, piernas,pies sera Armadura Pesada, Armadura Ligera, Armadura encantada
+Cruzado, Protector, Berserker y caballero rúnico usaran armadura pesada. Arquero y medico brujo armadura ligera. Clerigo y maestro elemental armadura encantada
+La capa/alas/espalda,anillo,abalorio será para todas las clases con estadísticas según sirve para la clase
+El cruzado utilizara escudo mágico y maza de una mano
+El protector utilizara escudo y espada de una mano
+El Berserker utilizara espada de 2 manos
+El arquero utilizara arco de 2 manos
+El Caballero rúnico utilizara espada mágica de 2 manos
+El Maestro elemental utilizara Orbe de 2 manos
+El Medico Brujo utilizara Baculo de 2 manos
+El clerigo utilizara Libro Sagrado de 2 manos
+Generemos los siguientes ítems
+1 Casco por cada tipo de armadura (1 armadura pesada, 1 armadura ligera, 1 armadura encantanda)
+1 Pechera por cada tipo de armadura
+1 Hombreras por cada tipo de armadura
+1 Guantes por cada tipo de armadura
+1 Pantalones por cada tipo de armadura
+1 Botas por cada tipo de armadura
+1 Capa
+1 Anillo
+1 Abalorio
+1 Espada de 2 manos, 1 espada de una mano, 1 escudo mágico, 1 maza de una mano, 1 escudo, 1 arco de 2 manos, 1 espada mágica de 2 manos, 1 orbe de 2 manos, 1 baculo de 2 manos y 1 libro sagrado de 2 manos
+Asignales el nombre, para las partes de armadura partedelcuerpo+tipodearmadura+test ejemplo PecheraArmaduraLigeraTest
+Para los objetos para todas las clases usa los nombres CapaTest AnilloTest AbalorioTest
+Para las armas usa los nombres del tipodearma+numerodemanos+test ejemplo EspadaMagica2ManosTest
+
+‌
+
+Cruzado, Maestro Elemental, Clerigo y Medico Brujo usan mana
+Caballero rúnico usa energía rúnica y runas
+Arquero utiliza energía
+Protector y Berserker usan colera",,,,0,,0,0,0,0,2026-01-12T01:20:29.878Z,69644004e51a21c187e4bb0c,Prompt de clases y objetos,695e60ec35ff28d544289011,Proyecto Juego RPG,false,,false,
+69646bcb9526ed5cadd55733,Protector,https://trello.com/c/Xr4qygnj/116-protector,"### 1. Protector (Tanque Físico - Espada y Escudo)
+
+**Recurso:** Cólera (Se genera al recibir daño y con ataques básicos).
+**Estilo:** Mitigación activa. Si no gasta Cólera en defensa, muere.
+
+**Activas (Ofensivas / Generadoras de Cólera)**
+
+1. **Golpe de Escudo:** Un golpe seco que aturde (stun) 1s y genera mucha Cólera.
+2. **Tajo Provocador:** Daña a un enemigo y lo obliga a atacarte (Taunt) durante 3s.
+3. **Barrido de Acero:** Golpeas las piernas de los enemigos en un cono frontal, ralentizándolos.
+4. **Embestida Blindada:** Usas tu peso para cargar contra un enemigo, interrumpiedo su casteo.
+5. **Revancha:** Solo se puede usar después de bloquear un ataque. Devuelve el 150% del daño del arma instantáneamente.
+
+**Activas (Defensivas / Gastan Cólera)**
+
+1. **Muro de Hierro:** (Gasta Cólera por segundo) Levantas el escudo. Bloqueas el 100% de ataques frontales, pero no puedes atacar y te mueves lento.
+2. **Piel de Acero:** Gasta 30 Cólera. Reduce todo el daño físico recibido un 40% por 5 segundos.
+3. **Ignorar Dolor:** Gasta toda la Cólera. Te otorga un escudo de vida temporal igual a la Cólera gastada.
+4. **Último Bastión:** (Cooldown largo) Tu vida no puede bajar de 1 durante 5 segundos. Al terminar, pierdes toda tu Cólera.
+
+
+10\. **Intervenir:** Saltas hacia un aliado y recibes el siguiente ataque físico dirigido a él.
+
+**Pasivas**
+11\. **Fortaleza Viviente:** Tu armadura aumenta un 1% por cada 5% de vida que te falte.
+12\. **Cólera Reactiva:** Recibir un golpe crítico te genera el doble de Cólera.
+13\. **Placas Pesadas:** Reduces el daño de ataques a distancia (flechas) de forma pasiva.
+14\. **Contraataque:** 10% de probabilidad de golpear automáticamente con la espada al bloquear.
+15\. **Inamovible:** Eres inmune a empujones (knockback).
+
+**Utilidad / Otras**
+16\. **Grito de Guerra:** Reduce el daño físico de los enemigos cercanos un 10%.
+17\. **Romper Guardia:** Un ataque que elimina escudos o barreras del enemigo.
+18\. **Golpe de Pomos:** Silencia al objetivo (no puede usar magia) por 2s.
+19\. **Formación Testudo:** Aumenta la probabilidad de bloqueo de los aliados detrás de ti.
+20\. **Peso del Deber:** Tu velocidad de movimiento es menor, pero tienes más salud base.",,,,0,,0,0,0,0,2026-01-12T03:37:17.928Z,69646ba15fa0252a55fabc58,Habilidades de Clases,695e60ec35ff28d544289011,Proyecto Juego RPG,false,,false,
+69646be2c8211dcfef5202b4,Cruzado,https://trello.com/c/2VATcvlY/117-cruzado,"### 2. Cruzado (Tanque Mágico - Maza y Escudo Mágico)
+
+**Recurso:** Maná.
+**Estilo:** Paladín de aguante. Se cura a sí mismo para sobrevivir picos de daño y cura un poco en área.
+
+**Activas (Defensivas y Curación Personal)**
+
+1. **Égida de Luz:** Levantas el escudo mágico. Absorbe daño mágico y lo convierte en maná.
+2. **Toque de Gracia:** Te curas instantáneamente un 20% de tu vida máxima (Coste alto de maná).
+3. **Suelo Consagrado:** Creas un área de luz. Daña enemigos y cura poco a poco a los aliados que estén dentro (incluido tú).
+4. **Sentencia Divina:** Golpeas con la maza. El daño infligido te cura por la misma cantidad.
+5. **Bautismo de Fuego:** Te purgas de todos los venenos y enfermedades, pero pierdes un poco de vida al hacerlo.
+
+**Activas (Ofensivas y Utilidad)**
+
+1. **Martillo de Justicia:** Lanzas un martillo de luz que aturde a distancia.
+2. **Cadenas de Luz:** Atas a los enemigos cercanos a ti. Si se alejan, reciben daño y quedan aturdidos.
+3. **Fulgor Cegador:** Un flash de luz desde tu escudo que reduce la precisión de los enemigos cercanos.
+4. **Bendición de Sacrificio:** Reduces el daño que reciben tus aliados cercanos un 20%, pero tú recibes ese 20% como daño (mitigable).
+
+
+10\. **Ascensión:** Te transformas en un avatar de luz. Tu armadura y resistencias aumentan drásticamente.
+
+**Pasivas**
+11\. **Fevor:** Tus autoataques restauran una pequeña cantidad de maná.
+12\. **Aura de Devoción:** Aumenta pasivamente la armadura de todo el grupo.
+13\. **Voluntad Inquebrantable:** Si recibes un golpe que te mataría, te quedas a 1 HP y te vuelves invulnerable 2 segundos (Cooldown muy largo).
+14\. **Escudo Espejo:** 15% de probabilidad de reflejar hechizos enemigos.
+15\. **Luz Rebosante:** Si te curas y estás al 100% de vida, el exceso se convierte en un escudo temporal.
+
+**Utilidad**
+16\. **Resurrección de Batalla:** Puedes revivir a un aliado en combate (tarda mucho en castear).
+17\. **Golpe Cruzado:** Ataque básico que aumenta el daño sagrado que recibe el objetivo.
+18\. **Muro de Fe:** Creas una barrera translúcida que bloquea proyectiles enemigos.
+19\. **Limpieza:** Eliminas un efecto mágico negativo de un aliado.
+20\. **Peso de la Culpa:** Los enemigos que te atacan ven su velocidad de ataque reducida.",,,,0,,0,0,0,0,2026-01-12T03:37:31.832Z,69646ba15fa0252a55fabc58,Habilidades de Clases,695e60ec35ff28d544289011,Proyecto Juego RPG,false,,false,
+69646be74ce4bb0aba513048,Berserker,https://trello.com/c/JKKeOqDV/118-berserker,"### 3. Berserker (DPS Físico - Espadón 2 Manos)
+
+**Recurso:** Cólera.
+**Estilo:** Rotación simple, daño bruto, armadura pesada (off-tank posible). Daño sostenido.
+
+**Activas (Generadores)**
+
+1. **Tajo Brutal:** Ataque básico pesado. Genera Cólera.
+2. **Carga Temeraria:** Te lanzas hacia el enemigo. Genera Cólera.
+3. **Grito de Furia:** Genera Cólera instantánea y aumenta tu daño un 10% por 5s.
+
+**Activas (Consumidores - Daño)**
+
+1. **Decapitar:** Consume mucha Cólera. Daño masivo. Si el enemigo muere, recuperas la Cólera.
+2. **Torbellino:** Giras con la espada. Consume Cólera por segundo. Daño en área constante.
+3. **Golpe Sísmico:** Golpeas el suelo en un cono. Daño y derribo.
+4. **Rompe-huesos:** Un golpe que reduce la armadura del enemigo (Stackeable).
+5. **Ejecución:** Solo usable en enemigos con <20% vida. Daño crítico garantizado.
+
+**Activas (Buffs y Supervivencia)**
+
+1. **Sed de Sangre:** Durante 10s, un % de tu daño te cura.
+
+
+10\. **Frenesí:** Aumenta tu velocidad de ataque un 50%, pero recibes 10% más de daño.
+11\. **Ignorar el Dolor:** Te quitas todos los efectos de ralentización y control.
+
+**Pasivas**
+12\. **Cicatricez de Batalla:** Cuanta menos vida tienes, más daño haces.
+13\. **Mano Pesada:** Tus ataques tienen probabilidad de aturdir brevemente (micro-stun).
+14\. **Momentum:** Cada golpe consecutivo al mismo objetivo aumenta tu velocidad de ataque.
+15\. **Armadura Ofensiva:** Un porcentaje de tu valor de Armadura se convierte en Poder de Ataque.
+16\. **Críticos Desgarradores:** Tus críticos causan sangrado adicional.
+
+**Otras**
+17\. **Salto Heroico:** Saltas una gran distancia para caer sobre un enemigo.
+18\. **Intimidar:** Los enemigos débiles huyen de ti por miedo.
+19\. **Lanzamiento de Arma:** Lanzas tu espada (daño a distancia) y la recoges mágicamente o corres hacia ella.
+20\. **Muerte Retardada:** Puedes seguir luchando 5 segundos después de morir antes de caer al suelo.",,,,0,,0,0,0,0,2026-01-12T03:37:52.447Z,69646ba15fa0252a55fabc58,Habilidades de Clases,695e60ec35ff28d544289011,Proyecto Juego RPG,false,,false,
+69646beb08bb10a038bb5017,Arquero,https://trello.com/c/3IlHF1HM/119-arquero,"### 4. Arquero (DPS Rango - Arco 2 Manos)
+
+**Recurso:** Energía.
+**Estilo:** ""Caster"" físico móvil. Puede cargar sus disparos potentes sin dejar de moverse (aunque quizás más lento).
+
+**Activas (Disparos)**
+
+1. **Disparo Certero (Cargado):** Se puede cargar mientras caminas. A mayor carga, más daño y alcance.
+2. **Lluvia de Flechas:** Canalizado en movimiento. Disparas al aire y caen flechas en un área seleccionada.
+3. **Flecha Perforante:** Disparo lineal que atraviesa enemigos y escudos.
+4. **Disparo Rápido:** Vacía tu barra de energía disparando 5 flechas en 1 segundo.
+5. **Disparo a la Pierna:** Daño bajo, pero inmoviliza al objetivo 2s.
+
+**Activas (Movilidad y Utilidad)**
+
+1. **Retirada Táctica:** Saltas hacia atrás mientras disparas una flecha que ralentiza.
+2. **Camuflaje:** Te vuelves invisible por 5s o hasta que ataques. Aumenta la regeneración de energía.
+3. **Bengala:** Revela enemigos invisibles en un área.
+4. **Disparo de Distracción:** Genera mucho ""agro"" en un punto lejano para que los monstruos vayan allí.
+
+**Flechas Especiales (Consumen energía)**
+10\. **Flecha Explosiva:** Daño de fuego en área al impactar.
+11\. **Flecha Venenosa:** Daño en el tiempo (DoT) acumulable.
+12\. **Flecha de Hielo:** Ralentiza la velocidad de movimiento y ataque del enemigo.
+
+**Pasivas**
+13\. **Tirador en Movimiento:** No tienes penalización de puntería por moverte.
+14\. **Ojo de Halcón:** Tu rango de ataque es mayor que el de los casters mágicos.
+15\. **Puntos Vitales:** Probabilidad de crítico aumenta cuanto más lejos estés del objetivo.
+16\. **Adrenalina:** Recuperas energía cada vez que esquivas un ataque o matas un enemigo.
+17\. **Cuerda Tensa:** Tus habilidades de carga (Casteo) hacen más daño si se sueltan en el momento justo (mini-juego de timing).
+
+**Otras**
+18\. **Viento de Cola:** Pasiva que aumenta la velocidad de movimiento de tu grupo.
+19\. **Disparo Silenciador:** Interrumpe el casteo de magia enemigo.
+20\. **Concentración:** Activa: Tu energía no se gasta durante 5 segundos, permitiendo spam de habilidades.",,,,0,,0,0,0,0,2026-01-12T03:38:15.246Z,69646ba15fa0252a55fabc58,Habilidades de Clases,695e60ec35ff28d544289011,Proyecto Juego RPG,false,,false,
+69646bf554649f9c9c1b64d7,Caballero Runico,https://trello.com/c/ZNPu4bjG/120-caballero-runico,"### Mecánica Única Sugerida: ""Sobrecarga Rúnica""
+
+Antes de las habilidades, imagina que el personaje tiene un recurso llamado **Energía Rúnica** o simplemente **Runas** grabadas en la hoja. Usar habilidades gasta runas, pero los ataques básicos las recargan.
+
+---
+
+### Habilidades Activas: Ofensivas (La Espada Mágica)
+
+1. **Hoja del Vacío (Void Blade):** Imbuye el espadón con energía oscura. El siguiente ataque básico tiene un rango aumentado (la espada se ""alarga"" con magia) e ignora el 50% de la armadura del enemigo.
+2. **Corte de la Grieta:** Realiza un tajo vertical tan fuerte que abre una grieta mágica en el suelo frente al personaje. La grieta explota después de 1 segundo, dañando a todos los enemigos en línea recta.
+3. **Tifón Arcano:** El caballero gira sobre sí mismo (tipo torbellino) con el espadón. Cada golpe libera proyectiles de magia residual que golpean a enemigos lejanos aleatorios.
+4. **Estocada Relámpago:** Una carga instantánea hacia adelante. Al impactar, atraviesa al enemigo y lo deja ""electrificado"" (aturdido o recibiendo daño en el tiempo). Ideal para cerrar distancias debido a la armadura pesada.
+5. **Ejecución Rúnica:** Un golpe descendente brutal. Si el enemigo tiene menos del 30% de vida, el daño se convierte en daño verdadero y si mata al objetivo, restaura un porcentaje de tu maná/energía.
+6. **Onda de Choque Gravitacional:** Clava la espada en el suelo. Todos los enemigos en un radio medio son atraídos violentamente hacia el caballero y ralentizados (perfecto para controlar grupos y aprovechar la armadura pesada).
+7. **Sello Explosivo:** Golpeas a un enemigo y le grabas una runa brillante. Si golpeas esa runa 3 veces más con ataques básicos, esta detona causando daño masivo en área.
+8. **Filo Fantasma:** Lanzas un corte al aire que proyecta una copia etérea gigante de tu espada hacia adelante, dañando y empujando a los enemigos (knockback).
+
+### Habilidades Activas: Defensivas y Utilidad (La Armadura Pesada)
+
+1. **Baluarte de Runas:** Activa las inscripciones de la armadura pesada. Durante 5 segundos, absorbe el 100% del daño mágico recibido y te cura por una parte de ese daño al finalizar el efecto.
+2. **Piel de Hierro Negro:** Te vuelves inamovible. Tu velocidad de movimiento se reduce a 0, pero tu defensa física aumenta drásticamente y eres inmune a efectos de control (aturdimientos, empujes) durante unos segundos.
+3. **Reflejo Prismático:** Levantas la espada en posición de bloqueo (Parry). Si recibes un hechizo o proyectil en ese momento, lo devuelves al lanzador con daño extra.
+4. **Suelo Consagrado:** Creas un círculo de runas a tus pies. Mientras estés dentro del círculo, ganas regeneración de vida y tus ataques con el espadón hacen daño de área (cleave).
+5. **Anclaje de Alma:** Lanzas cadenas mágicas desde tu mano libre a 3 enemigos cercanos. No pueden alejarse de ti más de 5 metros (les obliga a pelear cuerpo a cuerpo contra ti).
+
+### Habilidades Pasivas (Sinergias)
+
+1. **Peso del Conocimiento:** Tu Inteligencia (o estadística mágica) se suma a tu Fuerza para calcular el daño de tus ataques básicos. Esto justifica usar una espada mágica.
+2. **Placas Resonantes:** Cada vez que recibes un golpe físico en tu armadura, tienes un 20% de probabilidad de liberar una pequeña descarga estática que daña al atacante.
+3. **Inercia Arcana:** Blandir el espadón de dos manos es lento, pero cada ataque básico exitoso aumenta tu velocidad de ataque un 5% (acumulable hasta 5 veces). Si fallas o dejas de atacar, se reinicia.
+4. **Guardia de Mago:** Al estar equipado con armadura pesada, el costo de maná de tus hechizos aumenta un poco, pero todos tus hechizos ganan ""Interrupción"" (pueden cortar el casteo de los enemigos).
+5. **Filo Sediento:** El daño mágico extra infligido por tu espada te otorga un pequeño escudo temporal (barrera) en lugar de curarte vida.
+6. **Runas de Peso:** Tus ataques básicos reducen la velocidad de movimiento y de ataque del enemigo un 10% durante 2 segundos (la espada se siente ""pesada"" sobre ellos).
+7. **Voluntad del Titán:** Si tu salud baja del 25%, tu armadura brilla intensamente y todas tus habilidades activas reducen su tiempo de enfriamiento (cooldown) a la mitad instantáneamente.
+
+### Sugerencia de estilo de juego
+
+Con estas habilidades, el Caballero Rúnico no es un personaje que esquiva. Es un personaje que **entra, aguanta el castigo con su armadura y responde con golpes lentos pero nucleares**. La rotación ideal sería:
+
+1. Atraer enemigos (_Onda de Choque Gravitacional_).
+2. Aguantar el primer impacto (_Baluarte de Runas_).
+3. Destrozar al grupo (_Tifón Arcano_ o _Corte de la Grieta_).",,,,0,,0,0,0,0,2026-01-12T03:36:02.678Z,69646ba15fa0252a55fabc58,Habilidades de Clases,695e60ec35ff28d544289011,Proyecto Juego RPG,false,,false,
+69646bfb448d37fd315202b8,Maestro Elemental,https://trello.com/c/hngQ5zKt/121-maestro-elemental,"### Habilidades Activas: Fuego (Daño Explosivo y en Área)
+
+_El objetivo es borrar grupos de enemigos._
+
+1. **Estrella de Neutrones:** El orbe brilla al rojo vivo y dispara una pequeña esfera concentrada que viaja lento. Al impactar o reactivar la habilidad, explota en un área masiva dejando el suelo quemado.
+2. **Aliento de Dragón (Canalizado):** Mientras mantienes la tecla, el orbe proyecta un cono continuo de llamas frente a ti. Puedes moverte lentamente mientras lo haces (ideal para cuando te persiguen).
+3. **Fénix Buscador:** Creas un ave de fuego que persigue al enemigo con menos vida en pantalla. Si lo mata, explota y el tiempo de reutilización se reinicia.
+4. **Marca de Ceniza:** Maldices a un enemigo. Si recibe daño de cualquier otra fuente elemental en los próximos 5 segundos, la marca detona causando daño crítico.
+
+### Habilidades Activas: Agua y Hielo (Control y Supervivencia)
+
+_El objetivo es mantener a los enemigos lejos de tu armadura ligera._
+
+1. **Lanza de Hielo Cero:** Dispara un proyectil rapidísimo a larga distancia. Si golpea a un enemigo a más de 15 metros, lo congela (stun) por 2 segundos.
+2. **Muro de Niebla:** Creas una pared de vapor denso. Los enemigos no pueden ver a través de ella (no pueden atacarte a distancia) y si la cruzan, se ralentizan un 60%.
+3. **Burbuja de Reflejo:** Te envuelves en una esfera de agua. El siguiente ataque físico que recibas se absorbe y explota hacia afuera, empujando a los enemigos cercanos (Knockback).
+4. **Géiser Hidráulico:** Invocas un chorro de agua bajo los pies de un enemigo, lanzándolo por los aires (interrupción).
+
+### Habilidades Activas: Aire y Rayo (Movilidad y Daño Rápido)
+
+_El objetivo es posicionarte y golpear sin ser tocado._
+
+1. **Paso de Céfiro:** Te teletransportas instantáneamente a una ubicación cercana, dejando una copia de aire de ti mismo. Si un enemigo golpea la copia, esta explota con electricidad.
+2. **Cadena de Alto Voltaje:** Un rayo que golpea a un objetivo y salta a otros 4 enemigos. Cada salto reduce el daño, pero aumenta la velocidad de lanzamiento de tu siguiente hechizo.
+3. **Vórtice de Vacío:** El orbe aspira el aire en un punto, agrupando a todos los enemigos en el centro (ideal para luego lanzar un ataque de fuego en área).
+4. **Sobrecarga Estática:** Te ""cargas"" de energía. Durante 10 segundos, tus ataques básicos con el orbe son instantáneos (sin tiempo de viaje) y atraviesan enemigos.
+
+### Habilidades Activas: Tierra (Defensa y Daño Físico)
+
+_El objetivo es mitigar el daño y bloquear caminos._
+
+1. **Pilares de Obsidiana:** Golpeas el orbe y del suelo surgen tres picos de roca alrededor de ti, creando una barrera física que los enemigos no pueden cruzar (te da tiempo para castear hechizos largos).
+2. **Petrificación:** Conviertes la piel del enemigo en piedra. Recibe menos daño físico, pero recibe un 50% extra de daño mágico y no puede moverse ni atacar.
+3. **Terremoto Focalizado:** Un daño en área constante alrededor de un objetivo lejano que también reduce la armadura del enemigo con cada ""tic"" de daño.
+
+### Habilidades Activas: Combinadas (Maestría del Orbe)
+
+1. **Caos Primordial (Ultimate):** El orbe gira violentamente y disparas un rayo que mezcla los 4 elementos. Quema, congela, electrocuta y aplasta al objetivo simultáneamente.
+
+### Habilidades Pasivas (Sinergias)
+
+1. **Levitación Elemental:** Gracias a tu dominio del aire, no tocas el suelo. Eres inmune a trampas de suelo (como ácido o pinchos) y tienes un 10% extra de velocidad de movimiento.
+2. **Resonancia de Cristal:** Como usas armadura ligera, no tienes defensa física. Esta pasiva convierte el 20% de tu Maná Máximo en un Escudo de Energía permanente que se regenera si no recibes daño.
+3. **Choque Térmico:** Si golpeas con Fuego a un enemigo que está Congelado (o con Hielo a uno Quemado), el efecto se consume para causar un 200% de daño instantáneo.
+4. **Conductividad:** Si golpeas con Rayo a un enemigo ""Mojado"" (afectado por agua), el rayo aturde (stun) y se propaga al doble de distancia.
+
+### Estilo de Juego Sugerido
+
+El Maestro Elemental con Orbe y Armadura Ligera es un **""Kiter""** (golpear y correr).
+
+1. Inicias con **Lanza de Hielo** para congelar o **Vórtice** para agrupar.
+2. Lanzas tu combo de daño masivo (**Estrella de Neutrones** o **Cadena de Voltaje**).
+3. Si se acercan, usas **Paso de Céfiro** o **Pilares de Obsidiana** para huir y reposicionarte.
+4. Nunca te quedas quieto (""Turret mode"" es muerte segura con armadura ligera).",,,,0,,0,0,0,0,2026-01-12T03:36:54.986Z,69646ba15fa0252a55fabc58,Habilidades de Clases,695e60ec35ff28d544289011,Proyecto Juego RPG,false,,false,
+69646bfec9df626706fad9cf,Clerigo,https://trello.com/c/AEsaVbeF/122-clerigo,"### 5. Clérigo (Healer Sagrado - Libro 2 Manos)
+
+**Recurso:** Maná.
+**Estilo:** Curación clásica fuerte, escudos preventivos y daño sagrado decente para solear. Armadura de tela (frágil).
+
+**Activas (Curación)**
+
+1. **Palabra de Alivio:** Cura pequeña e instantánea. Bajo coste.
+2. **Lectura Sagrada (Casteo):** Cura grande y lenta. Debes quedarte quieto leyendo el libro.
+3. **Círculo de Sanación:** Cura de área alrededor del objetivo seleccionado.
+4. **Rezo de Mending:** Colocas un hechizo en un aliado; la próxima vez que reciba daño, se cura automáticamente.
+
+**Activas (Mitigación / Escudos)**
+
+1. **Escudo de Fe:** Pone una barrera de luz sobre un aliado que absorbe X daño.
+2. **Cúpula Divina:** Creas una zona donde los aliados reciben 30% menos de daño y son inmunes a interrupciones.
+3. **Guardián Espiritual:** Invocas un ángel estático que redirige el 20% del daño de los aliados cercanos hacia él mismo hasta morir.
+
+**Activas (Ofensivas - Daño Sagrado)**
+
+1. **Castigo (Smite):** Rayo de luz directo. Daño moderado.
+2. **Fuego Sagrado:** Daño inicial + daño en el tiempo (DoT).
+
+
+10\. **Nova Sagrada:** Explosión alrededor del clérigo. Daña enemigos y cura aliados cercanos (ideal si se te acercan).
+11\. **Condena:** El enemigo recibe daño cada vez que intenta atacar durante 5s.
+12\. **Exorcismo:** Daño masivo, solo funciona contra No-Muertos o Demonios.
+
+**Pasivas**
+13\. **Armadura de Fe:** Tu Poder de Curación se suma a tu resistencia mágica.
+14\. **Segunda Oportunidad:** Si un aliado con tu Escudo muere, el escudo explota curando a los cercanos.
+15\. **Erudito:** Regeneración de maná aumentada al equipar Libro a dos manos.
+16\. **Luz Guiadora:** Tus hechizos de daño marcan al enemigo. Los aliados que lo ataquen se curan un poco.
+
+**Utilidad**
+17\. **Levitar:** Te permite flotar para evitar daño de suelo (ácido/lava).
+18\. **Silencio:** Impide que los enemigos en un área lancen hechizos.
+19\. **Bendición de Sabiduría:** Buff de regeneración de maná para el grupo.
+20\. **Himno de Esperanza (Ultimate):** Canalizado. Mientras lees, nadie en tu grupo puede morir (sus vidas no bajan de 1).",,,,0,,0,0,0,0,2026-01-12T03:38:31.669Z,69646ba15fa0252a55fabc58,Habilidades de Clases,695e60ec35ff28d544289011,Proyecto Juego RPG,false,,false,
+69646c025b7fa5b7876bcfaf,Medico Brujo,https://trello.com/c/Y5uTpBF9/123-medico-brujo,"### 6. Médico Brujo (Healer/Support Caótico - Báculo 2 Manos)
+
+**Recurso:** Maná + Componentes (o Cooldowns).
+**Estilo:** Pociones, Auras (Tótems/Calderos) y Maldiciones. Mecánica de ""Riesgo/Recompensa"".
+
+**Activas (Curación Caótica)**
+
+1. **Poción de Vigor:** Lanzas una botella. Cura en área al impactar.
+   - _Efecto secundario:_ Los aliados curados se vuelven un poco más grandes (más fáciles de golpear).
+2. **Brebaje Experimental:** Cura una cantidad masiva a un solo objetivo.
+   - _Riesgo:_ 20% de probabilidad de que el objetivo quede ""Borracho"" (pantalla borrosa/camina raro) o se duerma 1s.
+3. **Nube Medicinal:** Creas un humo verde. Cura a todos dentro (aliados y enemigos). Debes posicionarlo bien.
+4. **Transfusión de Vida:** Drenas vida de un enemigo para curar a un aliado.
+5. **Sanguijuelas Curativas:** Pegas sanguijuelas a un aliado. Cura mucho en el tiempo (HoT), pero reduce su armadura levemente.
+
+**Activas (Maldiciones y Debuffs)**
+
+1. **Muñeco Vudú:** Vinculas tu muñeco a un enemigo. Golpeas al muñeco y el enemigo recibe el daño amplificado.
+2. **Maleficio (Hex):** Conviertes al enemigo en una rana inofensiva por 3s. Si le pegan, vuelve a su forma.
+3. **Lluvia Ácida:** Reduce la armadura de los enemigos en un área.
+4. **Peste Contagiosa:** Daño en el tiempo que salta a otros enemigos cercanos si el portador muere.
+
+**Activas (Auras / Tótems / Calderos)**
+10\. **Caldero de Guerra:** Colocas un caldero. Los aliados pueden hacer clic para beber y ganar Daño, pero pierden 5% de vida por sorbo.
+11\. **Aura de Terror:** Los enemigos que te golpean cuerpo a cuerpo tienen probabilidad de salir corriendo asustados.
+12\. **Espíritus Ancestrales:** Invocas fantasmas que orbitan al grupo, bloqueando proyectiles aleatorios.
+
+**Pasivas**
+13\. **Alquimia Inestable:** Tus curas críticas aplican un buff aleatorio (Velocidad, Daño o Defensa).
+14\. **Pacto de Sangre:** Si mueres, explotas en una nube curativa gigante para tu grupo.
+15\. **Inmunidad Tóxica:** Eres inmune a tus propios venenos y efectos de área negativos.
+16\. **Mala Suerte:** Los enemigos cercanos a ti tienen más probabilidad de fallar sus ataques (Miss).
+
+**Otras**
+17\. **Zombie Servidor:** Invocas un zombie tonto que no ataca, solo sirve para que los enemigos lo golpeen a él (distracción).
+18\. **Intercambio:** Cambias tu % de vida con el de un aliado (Salvavidas extremo).
+19\. **Poción de Adrenalina:** Aumenta la velocidad de ataque del grupo un 30%, pero al terminar el efecto quedan ralentizados 2s.
+20\. **Cosecha de Almas:** Recuperas maná cuando mueren enemigos cerca de ti.",,,,0,,0,0,0,0,2026-01-12T03:38:45.427Z,69646ba15fa0252a55fabc58,Habilidades de Clases,695e60ec35ff28d544289011,Proyecto Juego RPG,false,,false,
+69656e35303c06f61721046e,Ideas de mapa general,https://trello.com/c/UapRzuGD/124-ideas-de-mapa-general,,,,,1,https://trello.com/1/cards/69656e35303c06f61721046e/attachments/696570dbb0b24cfc456a559a/download/Mapa_Mayor_vista_superior.jpg,0,0,0,0,2026-01-12T22:08:28.116Z,69656e0d123b47c1f7480246,"Mapa, Zonas y Sub Zonas",695e60ec35ff28d544289011,Proyecto Juego RPG,false,,false,
+69656e3dff1071f42416598e,Idea de mapa de cada region,https://trello.com/c/1rbZtXuz/125-idea-de-mapa-de-cada-region,,,,,0,,0,0,0,0,2026-01-12T21:57:17.058Z,69656e0d123b47c1f7480246,"Mapa, Zonas y Sub Zonas",695e60ec35ff28d544289011,Proyecto Juego RPG,false,,false,
+696570f21c6202a2ac75f28c,Zona inicial Bahia/Puerto de Almas,https://trello.com/c/nvixrbs7/130-zona-inicial-bahia-puerto-de-almas,"Es donde comienza el juego, aca llega tu alma y te recibe un NPC (que sera importante en la trama) el mismo te da una explicacion de que moriste mientras te guia por la bahia, al 1/3 de la bahia hay una pequeña choza/casa donde elegis el modelo de tu personaje, en la 2/3 de la bahia hay un pequeño edificio como barracon o cuartel donde elegis tu clase.
+
+Al final hay un portal que conecta con la primer zona, el bosque, una vez dentro del bosque el jugador no puede volver a la bahia, el NPC cruzara con el para las primeras misiones",,,,0,,0,0,0,0,2026-01-12T22:11:53.919Z,69656e0d123b47c1f7480246,"Mapa, Zonas y Sub Zonas",695e60ec35ff28d544289011,Proyecto Juego RPG,false,,false,
+69656e469c10245af5acce14,Bosque Exuberante,https://trello.com/c/h3s5jvos/126-bosque-exuberante,,,,,0,,0,0,0,0,2026-01-12T21:57:26.612Z,69656e0d123b47c1f7480246,"Mapa, Zonas y Sub Zonas",695e60ec35ff28d544289011,Proyecto Juego RPG,false,,false,
+69656e4ca0e3dfc8958b85ba,Arrecife de Coral,https://trello.com/c/vUnzfz1Z/127-arrecife-de-coral,,,,,0,,0,0,0,0,2026-01-12T21:57:32.702Z,69656e0d123b47c1f7480246,"Mapa, Zonas y Sub Zonas",695e60ec35ff28d544289011,Proyecto Juego RPG,false,,false,
+69656e50ee3de4c86d2010bb,Llanura,https://trello.com/c/vsxOukkc/128-llanura,,,,,0,,0,0,0,0,2026-01-12T21:58:14.622Z,69656e0d123b47c1f7480246,"Mapa, Zonas y Sub Zonas",695e60ec35ff28d544289011,Proyecto Juego RPG,false,,false,
+69656e7177d0f66ca084304e,Montaña,https://trello.com/c/PdGCtm5S/129-monta%C3%B1a,,,,,0,,0,0,0,0,2026-01-12T21:58:09.726Z,69656e0d123b47c1f7480246,"Mapa, Zonas y Sub Zonas",695e60ec35ff28d544289011,Proyecto Juego RPG,false,,false,
+696570fc4755502efd1be6d9,Ciudadela,https://trello.com/c/GhgdvYad/131-ciudadela,,,,,0,,0,0,0,0,2026-01-12T22:09:00.793Z,69656e0d123b47c1f7480246,"Mapa, Zonas y Sub Zonas",695e60ec35ff28d544289011,Proyecto Juego RPG,false,,false,

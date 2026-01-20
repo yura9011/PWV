@@ -1,0 +1,88 @@
+{
+  "name": "api_core_RectTransform",
+  "type": "api",
+  "description": "Position, size, anchor and pivot information for a rectangle.",
+  "content": "// Unity Class: RectTransform\n// Documentation: https://docs.unity3d.com/ScriptReference/RectTransform.html\n\n// Description: Position, size, anchor and pivot information for a rectangle.\n\n// Properties:\n// - anchoredPosition: The position of the pivot of this RectTransform relative to the anchor reference point.\n// - anchoredPosition3D: The 3D position of the pivot of this RectTransform relative to the anchor reference point.\n// - anchorMax: The normalized position in the parent RectTransform that the upper right corner is anchored to.\n// - anchorMin: The normalized position in the parent RectTransform that the lower left corner is anchored to.\n// - drivenByObject: The object that is driving the values of this RectTransform. Value is null if not driven.\n// - offsetMax: The offset of the upper right corner of the rectangle relative to the upper right anchor.\n// - offsetMin: The offset of the lower left corner of the rectangle relative to the lower left anchor.\n// - pivot: The normalized position in this RectTransform that it rotates around.\n// - rect: The calculated rectangle in the local space of the Transform.\n// - sendChildDimensionsChange: Whether the RectTransform notifies components when a child RectTransform changes dimensions.\n// - sizeDelta: The size of this RectTransform relative to the distances between the anchors.\n\n// Methods:\n// - ForceUpdateRectTransforms: Force the recalculation of RectTransforms internal data.\n// - GetLocalCorners: Get the corners of the calculated rectangle in the local space of its Transform.\n// - GetWorldCorners: Get the corners of the calculated rectangle in world space.\n// - SetInsetAndSizeFromParentEdge: Set the distance of this rectangle relative to a specified edge of the parent rectangle, while also setting its size.\n// - SetSizeWithCurrentAnchors: Makes the RectTransform calculated rect be a given size on the specified axis.\n// - Destroy: Removes a GameObject, component, or asset.\n// - DestroyImmediate: Destroys the specified object immediately. Use with caution and in Edit mode only.\n// - DontDestroyOnLoad: Do not destroy the target Object when loading a new Scene.\n// - FindAnyObjectByType: Retrieves any active loaded object of Type type.\n// - FindFirstObjectByType: Retrieves the first active loaded object of Type type.\n// - FindObjectsByType: Retrieves a list of all loaded objects of Type type.\n// - Instantiate: Clones the object original and returns the clone.\n// - InstantiateAsync: Captures a snapshot of the original object (that must be related to some GameObject) and returns the AsyncInstantiateOperation.\n\n// Events:\n// - reapplyDrivenProperties: Event that is invoked for RectTransforms that need to have their driven properties reapplied.\n\npublic class RectTransform {\n    public var anchoredPosition; // The position of the pivot of this RectTransform relative to the anchor reference\n    public var anchoredPosition3D; // The 3D position of the pivot of this RectTransform relative to the anchor refere\n    public var anchorMax; // The normalized position in the parent RectTransform that the upper right corner \n    public var anchorMin; // The normalized position in the parent RectTransform that the lower left corner i\n    public var drivenByObject; // The object that is driving the values of this RectTransform. Value is null if no\n    public var offsetMax; // The offset of the upper right corner of the rectangle relative to the upper righ\n    public var offsetMin; // The offset of the lower left corner of the rectangle relative to the lower left \n    public var pivot; // The normalized position in this RectTransform that it rotates around.\n    public var rect; // The calculated rectangle in the local space of the Transform.\n    public var sendChildDimensionsChange; // Whether the RectTransform notifies components when a child RectTransform changes\n    public var sizeDelta; // The size of this RectTransform relative to the distances between the anchors.\n    public void ForceUpdateRectTransforms(); // Force the recalculation of RectTransforms internal data.\n    public void GetLocalCorners(); // Get the corners of the calculated rectangle in the local space of its Transform.\n    public void GetWorldCorners(); // Get the corners of the calculated rectangle in world space.\n    public void SetInsetAndSizeFromParentEdge(); // Set the distance of this rectangle relative to a specified edge of the parent re\n    public void SetSizeWithCurrentAnchors(); // Makes the RectTransform calculated rect be a given size on the specified axis.\n    public void Destroy(); // Removes a GameObject, component, or asset.\n    public void DestroyImmediate(); // Destroys the specified object immediately. Use with caution and in Edit mode onl\n    public void DontDestroyOnLoad(); // Do not destroy the target Object when loading a new Scene.\n    public void FindAnyObjectByType(); // Retrieves any active loaded object of Type type.\n    public void FindFirstObjectByType(); // Retrieves the first active loaded object of Type type.\n    public void FindObjectsByType(); // Retrieves a list of all loaded objects of Type type.\n    public void Instantiate(); // Clones the object original and returns the clone.\n    public void InstantiateAsync(); // Captures a snapshot of the original object (that must be related to some GameObj\n}",
+  "properties": [
+    {
+      "name": "anchoredPosition",
+      "description": "The position of the pivot of this RectTransform relative to the anchor reference point."
+    },
+    {
+      "name": "anchoredPosition3D",
+      "description": "The 3D position of the pivot of this RectTransform relative to the anchor reference point."
+    },
+    {
+      "name": "anchorMax",
+      "description": "The normalized position in the parent RectTransform that the upper right corner is anchored to."
+    },
+    {
+      "name": "anchorMin",
+      "description": "The normalized position in the parent RectTransform that the lower left corner is anchored to."
+    },
+    {
+      "name": "drivenByObject",
+      "description": "The object that is driving the values of this RectTransform. Value is null if not driven."
+    },
+    {
+      "name": "offsetMax",
+      "description": "The offset of the upper right corner of the rectangle relative to the upper right anchor."
+    },
+    {
+      "name": "offsetMin",
+      "description": "The offset of the lower left corner of the rectangle relative to the lower left anchor."
+    },
+    {
+      "name": "pivot",
+      "description": "The normalized position in this RectTransform that it rotates around."
+    },
+    {
+      "name": "rect",
+      "description": "The calculated rectangle in the local space of the Transform."
+    },
+    {
+      "name": "sendChildDimensionsChange",
+      "description": "Whether the RectTransform notifies components when a child RectTransform changes dimensions."
+    },
+    {
+      "name": "sizeDelta",
+      "description": "The size of this RectTransform relative to the distances between the anchors."
+    },
+    {
+      "name": "ForceUpdateRectTransforms",
+      "description": "Force the recalculation of RectTransforms internal data."
+    },
+    {
+      "name": "GetLocalCorners",
+      "description": "Get the corners of the calculated rectangle in the local space of its Transform."
+    },
+    {
+      "name": "GetWorldCorners",
+      "description": "Get the corners of the calculated rectangle in world space."
+    },
+    {
+      "name": "SetInsetAndSizeFromParentEdge",
+      "description": "Set the distance of this rectangle relative to a specified edge of the parent rectangle, while also setting its size."
+    },
+    {
+      "name": "SetSizeWithCurrentAnchors",
+      "description": "Makes the RectTransform calculated rect be a given size on the specified axis."
+    },
+    {
+      "name": "Destroy",
+      "description": "Removes a GameObject, component, or asset."
+    },
+    {
+      "name": "DestroyImmediate",
+      "description": "Destroys the specified object immediately. Use with caution and in Edit mode only."
+    },
+    {
+      "name": "DontDestroyOnLoad",
+      "description": "Do not destroy the target Object when loading a new Scene."
+    },
+    {
+      "name": "FindAnyObjectByType",
+      "description": "Retrieves any active loaded object of Type type."
+    }
+  ]
+}

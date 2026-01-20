@@ -1,0 +1,24 @@
+// Unity Manual: BestPractices_Memory
+// URL: https://docs.unity3d.com/Manual/BestPracticeUnderstandingPerformanceInUnity4.html
+
+Assets and media
+Analyzing asset processes
+Remove local asset packages
+Collect asset loading metrics
+Analyzing asset processes
+Optimize and measure the performance of assets in your project. The Asset Loading Profiler module and the
+AsyncReadManagerMetrics
+API allow you to measure how quickly Unity loads the assets in your project. You can also use the Import Activity window to measure import timings.
+Topic
+Description
+Collect asset loading metrics
+Monitor asset loading at runtime.
+Asset Loading Profiler module reference
+Visualize the number of read operations on the assets in your project.
+Analyze the import process
+Analyze and debug asset importers.
+Additional resources
+Unity Profiler
+Scripting with assets
+Remove local asset packages
+Collect asset loading metrics

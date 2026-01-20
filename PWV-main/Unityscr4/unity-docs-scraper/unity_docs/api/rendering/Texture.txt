@@ -1,0 +1,50 @@
+// Unity Class: Texture
+// Documentation: https://docs.unity3d.com/ScriptReference/Texture.html
+
+// Description: Base class for Texture handling.
+
+// Properties:
+// - anisoLevel: Defines the anisotropic filtering level of the Texture.
+// - dimension: Dimensionality (type) of the Texture.
+// - filterMode: Filtering mode of the Texture.
+// - graphicsFormat: Returns the GraphicsFormat format or color format of a Texture object.
+// - graphicsTexture: GraphicsTexture that represents the texture resource uploaded to the graphics device.
+// - height: Height of the Texture in pixels.
+// - imageContentsHash: The hash value of the Texture.
+// - isDataSRGB: Returns true if the texture pixel data is in sRGB color space.
+// - isReadable: Whether Unity stores an additional copy of this texture's pixel data in CPU-addressable memory.
+// - mipMapBias: The mipmap bias of the Texture.
+// - mipmapCount: How many mipmap levels are in this Texture.
+// - updateCount: This counter is incremented when the Texture is updated.
+// - width: Width of the Texture in pixels.
+// - wrapMode: Options for sampling a texture if a texture coordinate is outside the [0, 1] range.
+// - wrapModeU: Options for sampling a texture if the U texture coordinate is outside the [0, 1] range.
+// - wrapModeV: Options for sampling a texture if the V texture coordinate is outside the [0, 1] range.
+// - wrapModeW: Options for sampling a texture if the W coordinate is outside the [0, 1] range.
+
+// Methods:
+// - GetNativeTexturePtr(): Retrieve a native (underlying graphics API) pointer to the Texture resource.
+// - IncrementUpdateCount(): Increment the update counter.
+
+// Pseudo-code representation of Texture
+public class Texture {
+    public var anisoLevel; // Defines the anisotropic filtering level of the Texture.
+    public var dimension; // Dimensionality (type) of the Texture.
+    public var filterMode; // Filtering mode of the Texture.
+    public var graphicsFormat; // Returns the GraphicsFormat format or color format of a Texture object.
+    public var graphicsTexture; // GraphicsTexture that represents the texture resource uploaded to the graphics device.
+    public var height; // Height of the Texture in pixels.
+    public var imageContentsHash; // The hash value of the Texture.
+    public var isDataSRGB; // Returns true if the texture pixel data is in sRGB color space.
+    public var isReadable; // Whether Unity stores an additional copy of this texture's pixel data in CPU-addressable memory.
+    public var mipMapBias; // The mipmap bias of the Texture.
+    public var mipmapCount; // How many mipmap levels are in this Texture.
+    public var updateCount; // This counter is incremented when the Texture is updated.
+    public var width; // Width of the Texture in pixels.
+    public var wrapMode; // Options for sampling a texture if a texture coordinate is outside the [0, 1] range.
+    public var wrapModeU; // Options for sampling a texture if the U texture coordinate is outside the [0, 1] range.
+    public var wrapModeV; // Options for sampling a texture if the V texture coordinate is outside the [0, 1] range.
+    public var wrapModeW; // Options for sampling a texture if the W coordinate is outside the [0, 1] range.
+    public void GetNativeTexturePtr(); // Retrieve a native (underlying graphics API) pointer to the Texture resource.
+    public void IncrementUpdateCount(); // Increment the update counter.
+}

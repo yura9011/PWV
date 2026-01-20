@@ -1,0 +1,28 @@
+{
+  "name": "api_input_TouchPhase",
+  "type": "api",
+  "description": "Describes phase of a finger touch.",
+  "content": "// Unity Class: TouchPhase\n// Documentation: https://docs.unity3d.com/ScriptReference/TouchPhase.html\n\n// Description: Describes phase of a finger touch.\n\n// Properties:\n// - Began: A finger touched the screen.\n// - Moved: A finger moved on the screen.\n// - Stationary: A finger is touching the screen but hasn't moved.\n// - Ended: A finger was lifted from the screen. This is the final phase of a touch.\n// - Canceled: The system cancelled tracking for the touch.\n\n// Code Examples:\n// Example 1:\n//   //Attach this script to an empty GameObject\n\n//   //Create some UI Text by going to Create>UI>Text.\n\n//   //Drag this GameObject into the Text field to the Inspector window of your GameObject.using UnityEngine;\n\n//   using System.Collections;\n\n//   using UnityEngine.UI;public class TouchPhaseExample : MonoBehaviour\n\n//   {\n\n//       public Vector2 startPos;\n\n//       public Vector2 direction;    public Text m_Text;\n\n//       string message;    void Update()\n\n//       {\n\n//           //Update the Text on the screen depending on current TouchPhase, and the current direction vector\n\n//           m_Text.text = \"Touch : \" + message + \"in direction\" + direction;        // Track a single touch as a direction control.\n\n//           if (Input.touchCount > 0)\n\n//           {\n\n//               Touch touch = Input.GetTouch(0);            // Handle finger movements based on TouchPhase\n\n//               switch (touch.phase)\n\n//               {\n\n//                   //When a touch has first been detected, change the message and record the starting position\n\n//                   case TouchPhase.Began:\n\n//                       // Record initial touch position.\n\n\npublic class TouchPhase {\n    public var Began; // A finger touched the screen.\n    public var Moved; // A finger moved on the screen.\n    public var Stationary; // A finger is touching the screen but hasn't moved.\n    public var Ended; // A finger was lifted from the screen. This is the final phase of a touch.\n    public var Canceled; // The system cancelled tracking for the touch.\n}",
+  "properties": [
+    {
+      "name": "Began",
+      "description": "A finger touched the screen."
+    },
+    {
+      "name": "Moved",
+      "description": "A finger moved on the screen."
+    },
+    {
+      "name": "Stationary",
+      "description": "A finger is touching the screen but hasn't moved."
+    },
+    {
+      "name": "Ended",
+      "description": "A finger was lifted from the screen. This is the final phase of a touch."
+    },
+    {
+      "name": "Canceled",
+      "description": "The system cancelled tracking for the touch."
+    }
+  ]
+}

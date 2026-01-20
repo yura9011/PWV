@@ -1,0 +1,38 @@
+// Unity Class: AsyncOperation
+// Documentation: https://docs.unity3d.com/ScriptReference/AsyncOperation.html
+
+// Description: Suspends a coroutine until an asynchronous operation completes.
+
+// Properties:
+// - allowSceneActivation: Allow Scenes to be activated as soon as it is ready.
+// - isDone: Has the operation finished? (Read Only)
+// - priority: Priority lets you tweak in which order async operation calls will be performed.
+// - progress: What's the operation's progress. (Read Only)
+
+// Code Examples:
+// Example 1:
+//   using System.Collections;
+//   using UnityEngine;public class ExampleClass : MonoBehaviour
+//   {
+//       public void Start()
+//       {
+//           StartCoroutine(Example_AsyncTests());
+//       }    public IEnumerator Example_AsyncTests()
+//       {
+//           Debug.Log("Start of AsyncLoad Example");
+//           
+//           var load = UnityEngine.Resources.LoadAsync("");
+//           yield return load;
+//           yield return null;
+//           
+//           Debug.Log("End of AsyncLoad Example");
+//       }
+//   }
+
+// Pseudo-code representation of AsyncOperation
+public class AsyncOperation {
+    public var allowSceneActivation; // Allow Scenes to be activated as soon as it is ready.
+    public var isDone; // Has the operation finished? (Read Only)
+    public var priority; // Priority lets you tweak in which order async operation calls will be performed.
+    public var progress; // What's the operation's progress. (Read Only)
+}
